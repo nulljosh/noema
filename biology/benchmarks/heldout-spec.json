@@ -1,0 +1,18 @@
+{
+  "suite": "hbb-heldout-v1",
+  "declared": "2026-10-26, before ClinVar labels were fetched",
+  "inputs": "ClinVar records for HBB whose title is a single NM_000518.5 coding substitution c.<pos><ref>><alt>. Consequence is recomputed by evidna.analyze and must agree with ClinVar's protein change.",
+  "labels": {
+    "1": ["Pathogenic", "Likely pathogenic", "Pathogenic/Likely pathogenic"],
+    "0": ["Benign", "Likely benign", "Benign/Likely benign"],
+    "excluded": "every other classification, including uncertain and conflicting"
+  },
+  "split": "Sort labeled records by VCV accession number. The highest 30 percent (newest) are held out; the rest are development. Scores on the held-out set are the headline.",
+  "predictor_v0": {
+    "stop gained": 1, "stop lost": 1, "start-codon change": 1, "synonymous": 0,
+    "missense": "1 if BLOSUM62(reference, mutant) <= -2, else 0"
+  },
+  "baselines": ["majority class of the development set", "every non-synonymous change predicted 1"],
+  "metric": "balanced accuracy, with the confusion matrix and counts",
+  "rule": "Do not change predictor_v0 or the split after seeing labels. Any new predictor is v1 and is scored on the same held-out set, reported next to v0."
+}
