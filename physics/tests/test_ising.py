@@ -44,6 +44,16 @@ class IsingTests(unittest.TestCase):
         self.assertEqual([ising.no_mono_triangle_count(L) for L in range(2, 8)], counts)  # second method
         self.assertEqual(ising.no_mono_triangle_count(10), 44898196092066)
 
+    def test_closed_form_matches_transfer_counts(self):
+        for n in range(2, 12):
+            self.assertEqual(ising.triangular_ground_states_formula(n), ising.no_mono_triangle_count(n))
+
+    def test_divisibility_by_2n_plus_1(self):
+        for n in range(2, 61):
+            p = 2 * n + 1
+            if all(p % d for d in range(2, int(p ** 0.5) + 1)):
+                self.assertEqual(ising.triangular_ground_states_formula(n) % p ** (-(-n // 2) - 1), 0, n)
+
     def test_specific_heat_peak_falls_toward_onsager(self):
         peaks = [ising.specific_heat_peak(ising.density_of_states(L))[0] for L in range(4, 8)]
         self.assertEqual(peaks, sorted(peaks, reverse=True))

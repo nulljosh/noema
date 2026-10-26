@@ -185,6 +185,44 @@ def no_mono_triangle_count(L):
     return total
 
 
+
+def _det(M):
+    """Exact integer determinant (Bareiss, fraction-free)."""
+    M = [row[:] for row in M]
+    n, sign, prev = len(M), 1, 1
+    for k in range(n - 1):
+        if M[k][k] == 0:
+            swap = next((i for i in range(k + 1, n) if M[i][k]), None)
+            if swap is None:
+                return 0
+            M[k], M[swap], sign = M[swap], M[k], -sign
+        for i in range(k + 1, n):
+            for j in range(k + 1, n):
+                M[i][j] = (M[i][j] * M[k][k] - M[i][k] * M[k][j]) // prev
+        prev = M[k][k]
+    return sign * M[-1][-1]
+
+
+def _torus_product(n, s, t):
+    """P(s, t) = product of (1 + a + b) over a^n = s and b^n = t, as an exact integer.
+    The inner product over b is (1 + a)^n - (-1)^n t, so P is the determinant of
+    multiplication by h(x) = (1 + x)^n - (-1)^n t on Z[x] / (x^n - s)."""
+    h = [math.comb(n, i) for i in range(n + 1)]
+    h[0] -= (-1) ** n * t
+    h = [h[i] + (s * h[n] if i == 0 else 0) for i in range(n)]  # x^n = s
+    cols = []
+    for _ in range(n):
+        cols.append(h)
+        h = [s * h[-1]] + h[:-1]  # times x, wrapping x^n to s
+    return _det([[cols[j][i] for j in range(n)] for i in range(n)])
+
+
+def triangular_ground_states_formula(n):
+    """Closed form found by fitting the dimer (Kasteleyn) torus products to the exact counts:
+    a(n) = ((-1)^n P(1, 1) + 3 P(-1, 1)) / 2. Agrees with no_mono_triangle_count for n = 2..15."""
+    return ((-1) ** n * _torus_product(n, 1, 1) + 3 * _torus_product(n, -1, 1)) // 2
+
+
 if __name__ == "__main__":
     if sys.argv[1:2] == ["tri"]:
         for L in range(2, int(sys.argv[2]) + 1 if sys.argv[2:] else 9):
