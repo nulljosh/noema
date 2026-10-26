@@ -12,6 +12,7 @@ A small lab for every STEM field, one lane at a time. Exact questions, fixed bou
 | [cs](cs) | Busy Beaver: the longest-running small Turing machines, reproduced through four states. Standard library only. | `cd cs && python3 -m unittest discover -s tests` |
 | [physics](physics) | Exact 2D Ising energy counts on wrapped grids up to 10x10, checked against Kaufman's formula. Standard library only. | `cd physics && python3 -m unittest discover -s tests` |
 | [chemistry](chemistry) | Alkane isomer counts to 100 carbons, checked against OEIS A000602. Standard library only. | `cd chemistry && python3 -m unittest discover -s tests` |
+| [medicine](medicine) | Landmark trials recomputed from their printed counts, starting with ISIS-2. Standard library only. | `cd medicine && python3 -m unittest discover -s tests` |
 | [biology](biology) | Every one-base change in human beta-globin (HBB), checked against UniProt. Python 3.13, Biopython. | `cd biology && uv run python -m unittest discover -s tests` |
 
 Results so far are in the discovery ledger in [roadmap.md](roadmap.md). Every row so far reproduces known work, which is how each engine earns trust before it is pointed at anything new.
