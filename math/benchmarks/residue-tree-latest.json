@@ -1,0 +1,194 @@
+{
+  "suite": "residue-tree-v1",
+  "updated_at": "2026-10-26T08:51:23.628901+00:00",
+  "levels": [
+    {
+      "level": 1,
+      "modulus": 2,
+      "open": 1,
+      "closed": 1,
+      "open_fraction": 0.5,
+      "closed_steps": {
+        "1": 1
+      }
+    },
+    {
+      "level": 2,
+      "modulus": 4,
+      "open": 1,
+      "closed": 1,
+      "open_fraction": 0.25,
+      "closed_steps": {
+        "3": 1
+      }
+    },
+    {
+      "level": 3,
+      "modulus": 8,
+      "open": 2,
+      "closed": 0,
+      "open_fraction": 0.25,
+      "closed_steps": {}
+    },
+    {
+      "level": 4,
+      "modulus": 16,
+      "open": 3,
+      "closed": 1,
+      "open_fraction": 0.1875,
+      "closed_steps": {
+        "6": 1
+      }
+    },
+    {
+      "level": 5,
+      "modulus": 32,
+      "open": 4,
+      "closed": 2,
+      "open_fraction": 0.125,
+      "closed_steps": {
+        "8": 2
+      }
+    },
+    {
+      "level": 6,
+      "modulus": 64,
+      "open": 8,
+      "closed": 0,
+      "open_fraction": 0.125,
+      "closed_steps": {}
+    },
+    {
+      "level": 7,
+      "modulus": 128,
+      "open": 13,
+      "closed": 3,
+      "open_fraction": 0.1015625,
+      "closed_steps": {
+        "11": 3
+      }
+    },
+    {
+      "level": 8,
+      "modulus": 256,
+      "open": 19,
+      "closed": 7,
+      "open_fraction": 0.07421875,
+      "closed_steps": {
+        "13": 7
+      }
+    },
+    {
+      "level": 9,
+      "modulus": 512,
+      "open": 38,
+      "closed": 0,
+      "open_fraction": 0.07421875,
+      "closed_steps": {}
+    },
+    {
+      "level": 10,
+      "modulus": 1024,
+      "open": 64,
+      "closed": 12,
+      "open_fraction": 0.0625,
+      "closed_steps": {
+        "16": 12
+      }
+    },
+    {
+      "level": 11,
+      "modulus": 2048,
+      "open": 128,
+      "closed": 0,
+      "open_fraction": 0.0625,
+      "closed_steps": {}
+    },
+    {
+      "level": 12,
+      "modulus": 4096,
+      "open": 226,
+      "closed": 30,
+      "open_fraction": 0.05517578125,
+      "closed_steps": {
+        "19": 30
+      }
+    },
+    {
+      "level": 13,
+      "modulus": 8192,
+      "open": 367,
+      "closed": 85,
+      "open_fraction": 0.0447998046875,
+      "closed_steps": {
+        "21": 85
+      }
+    },
+    {
+      "level": 14,
+      "modulus": 16384,
+      "open": 734,
+      "closed": 0,
+      "open_fraction": 0.0447998046875,
+      "closed_steps": {}
+    },
+    {
+      "level": 15,
+      "modulus": 32768,
+      "open": 1295,
+      "closed": 173,
+      "open_fraction": 0.039520263671875,
+      "closed_steps": {
+        "24": 173
+      }
+    },
+    {
+      "level": 16,
+      "modulus": 65536,
+      "open": 2114,
+      "closed": 476,
+      "open_fraction": 0.032257080078125,
+      "closed_steps": {
+        "26": 476
+      }
+    },
+    {
+      "level": 17,
+      "modulus": 131072,
+      "open": 4228,
+      "closed": 0,
+      "open_fraction": 0.032257080078125,
+      "closed_steps": {}
+    },
+    {
+      "level": 18,
+      "modulus": 262144,
+      "open": 7495,
+      "closed": 961,
+      "open_fraction": 0.028591156005859375,
+      "closed_steps": {
+        "29": 961
+      }
+    },
+    {
+      "level": 19,
+      "modulus": 524288,
+      "open": 14990,
+      "closed": 0,
+      "open_fraction": 0.028591156005859375,
+      "closed_steps": {}
+    },
+    {
+      "level": 20,
+      "modulus": 1048576,
+      "open": 27328,
+      "closed": 2652,
+      "open_fraction": 0.02606201171875,
+      "closed_steps": {
+        "32": 2652
+      }
+    }
+  ],
+  "reference": "OEIS A076227, surviving Collatz residues mod 2^n",
+  "limits": "Counts residue classes whose forced prefix has not yet descended. Open classes are not counterexamples. Known sequence, reproduced."
+}

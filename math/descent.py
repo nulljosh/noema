@@ -85,6 +85,37 @@ def study(limit):
                                for m, rows in groups.items()}}
 
 
+def residue_tree(max_level=20):
+    """Split starts by remainder mod 2^m. A class closes when its forced affine prefix
+    first falls below the start for every member (start 1 and 0 excluded)."""
+    if type(max_level) is not int or not 1 <= max_level <= 24:
+        raise ValueError('Use an integer level from one through 24.')
+    levels, open_classes = [], [0, 1]
+    for level in range(1, max_level + 1):
+        modulus, still_open, closed = 2 ** level, [], {}
+        for r in open_classes:
+            a, b, k0, steps = modulus, r, 1 if r < 2 else 0, 0
+            start = modulus * k0 + r
+            while a % 2 == 0:
+                a, b = (a // 2, b // 2) if b % 2 == 0 else (3 * a, 3 * b + 1)
+                steps += 1
+                if a <= modulus and a * k0 + b < start:
+                    closed[r] = steps
+                    break
+            else:
+                still_open.append(r)
+        levels.append({'level': level, 'modulus': modulus, 'open': len(still_open),
+                       'closed': len(closed), 'open_fraction': len(still_open) / modulus,
+                       'closed_steps': dict(sorted({str(v): list(closed.values()).count(v)
+                                                    for v in set(closed.values())}.items(),
+                                                   key=lambda kv: int(kv[0])))})
+        if level < max_level:
+            open_classes = still_open + [r + modulus for r in still_open]
+            open_classes.sort()
+        levels[-1]['_open'], levels[-1]['_closed'] = still_open, closed
+    return levels
+
+
 def run():
     started = time.monotonic()
     report = {'suite': 'first-descent-v3', 'status': 'complete',
@@ -111,7 +142,22 @@ def run():
     return report
 
 
+def tree_report(max_level=20):
+    levels = [{k: v for k, v in level.items() if not k.startswith('_')}
+              for level in residue_tree(max_level)]
+    report = {'suite': 'residue-tree-v1', 'updated_at': datetime.now(timezone.utc).isoformat(),
+              'levels': levels, 'reference': 'OEIS A076227, surviving Collatz residues mod 2^n',
+              'limits': 'Counts residue classes whose forced prefix has not yet descended. '
+                        'Open classes are not counterexamples. Known sequence, reproduced.'}
+    atomic_write(ROOT / 'benchmarks/residue-tree-latest.json', json.dumps(report, indent=2) + '\n')
+    return report
+
+
 if __name__ == '__main__':
+    import sys
+    if sys.argv[1:] == ['tree']:
+        print(json.dumps([(l['modulus'], l['open']) for l in tree_report()['levels']]))
+        raise SystemExit
     report = run()
     print(json.dumps({'suite': report['suite'], 'seconds': report['seconds'],
                       'stages': [{'limit': s['limit'], 'checked': s['starts_checked'],

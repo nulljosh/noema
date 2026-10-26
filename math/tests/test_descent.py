@@ -1,5 +1,5 @@
 import unittest
-from descent import first_descent, accelerated_check, study
+from descent import first_descent, accelerated_check, study, residue_tree
 
 
 class DescentTests(unittest.TestCase):
@@ -66,3 +66,18 @@ class DescentTests(unittest.TestCase):
         for k in range(100):
             for r in (11,23):
                 self.assertEqual(first_descent(32*k+r)['steps'], 8)
+
+
+class ResidueTreeTests(unittest.TestCase):
+    # OEIS A076227 a(1)..a(20), fetched 2026-10-26 from oeis.org.
+    A076227 = [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495, 14990, 27328]
+
+    def test_matches_oeis(self):
+        self.assertEqual([l['open'] for l in residue_tree(20)], self.A076227)
+
+    def test_closed_classes_descend_numerically(self):
+        for level in residue_tree(12):
+            m = level['modulus']
+            for r, steps in level['_closed'].items():
+                for n in range(r if r >= 2 else r + m, 60000, m * 7):
+                    self.assertLessEqual(first_descent(n)['steps'], steps, (m, r, n))

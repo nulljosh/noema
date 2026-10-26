@@ -4,6 +4,18 @@
 
 A finite foreground cycle. State one exact question, compute inside a fixed bound, check a second way, keep failures and baselines visible, separate what was observed from what was proved. Stop when the cycle's work is done. No paid models, background jobs or automatic pushes. Run one lane per cycle and alternate lanes between cycles so neither goes stale.
 
+## Tick protocol (every loop tick, in order)
+
+1. Read `roadmap.md`. Alternate lanes: if the last ledger row is math, take biology next, unless that lane is blocked.
+2. Run the lane's tests before touching anything. A red baseline is the tick's only job.
+3. Do one bounded study: an exact question, a fixed bound, a stop condition.
+4. Check it a second way: an independent implementation, a numeric check of a symbolic result, or a primary source (OEIS, the paper, UniProt, ClinVar).
+5. Search the literature before thinking it is new. A match means "reproduced", which is still a win and becomes a regression test.
+6. Write the ledger row (claim, level, second check, literature, status). Mark the roadmap item done and add the one to three sharper questions the result raised to Frontier or the lane roadmap.
+7. Commit and push only the lab's paths. Then re-arm.
+
+**Discovery gate.** A row may say "candidate" only if it is reproducible from a committed command, passes a second check, and has no match after a real literature search. It may say "breakthrough" only after that, plus a written or machine-checked argument for anything universal, plus a written description someone outside the lab could check. Finite checks never become universal claims.
+
 ## Where things stand
 
 Math: SAT checked 18,069 formulas; Goldbach and Collatz stopping cover 10,000; first descent covers starts 2 through 1,000,000 with two implementations agreeing (max 287 steps at 626,331). Written algebra covers 28 of 32 classes modulo 32; Lean 4.35.0 checks three of those lemmas (4k+1, 32k+11, 32k+23). Lean comes from `brew install elan-init`; `lake build` in `math/proofs` fetches the pinned toolchain. Sixteen tests.

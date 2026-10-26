@@ -36,6 +36,8 @@ Modulo-32 splits and the first small Lean proof are complete. Written first-desc
 - [x] Formalize the two exact eight-step lemmas, 32k+11 and 32k+23, in Lean using the ordinary map and all earlier steps (2026-10-26, only propext and Quot.sound).
 - [ ] Formalize the remaining written first-descent arguments (even starts, 16k+3, and the others) in Lean, one at a time.
 - [x] Derive forced prefixes for the four remaining groups modulo 64 (2026-10-26, symbolic). Result: none of the eight classes (7, 39, 15, 47, 27, 59, 31, 63) resolves. Each runs 10 to 12 forced steps, then reaches coefficient 81, 243 or 729 with parity depending on k, still above the start. Observation from algebra, not a Collatz result.
-- [ ] Automate the split as a tested study in descent.py: depth-first over 2^m, record at which m each class resolves or stays open, up to m = 20. Report the open fraction per level, nothing more.
-- [ ] Compare the open fraction against the known stopping-time density results from the literature before calling anything new.
+- [x] Automate the split (`python3 descent.py tree`, 2026-10-26). Open classes mod 2^m for m = 1..20 match OEIS A076227 term for term (27,328 open at 2^20). Known sequence reproduced; it is now a regression test.
+- [ ] Push the tree to m = 24 and compare with A076227's later terms. Memory and runtime stay bounded; stop if a level takes over a minute.
+- [ ] Tabulate closed classes by descent step per level and search OEIS for that triangle before calling it new.
+- [ ] Ask a sharper question of the open set: which open residues mod 2^20 have the longest forced prefixes, and do they share a pattern in binary?
 - [ ] Keep proof-assistant status separate from bounded software checks and written algebra in every public claim.
