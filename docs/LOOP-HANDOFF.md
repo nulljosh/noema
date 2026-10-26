@@ -11,7 +11,7 @@ A finite foreground cycle. State one exact question, compute inside a fixed boun
 3. Do one bounded study: an exact question, a fixed bound, a stop condition.
 4. Check it a second way: an independent implementation, a numeric check of a symbolic result, or a primary source (OEIS, the paper, UniProt, ClinVar).
 5. Search the literature before thinking it is new. A match means "reproduced", which is still a win and becomes a regression test.
-6. Write the ledger row (claim, level, second check, literature, status). Mark the roadmap item done and add the one to three sharper questions the result raised to Frontier or the lane roadmap.
+6. Write the ledger row in `ledger.md` (claim, level, second check, literature, status). Mark the roadmap item done and add the one to three sharper questions the result raised to Frontier or the lane roadmap.
 7. Commit and push only the lab's paths. Then re-arm.
 
 **Discovery gate.** A row may say "candidate" only if it is reproducible from a committed command, passes a second check, and has no match after a real literature search. It may say "breakthrough" only after that, plus a written or machine-checked argument for anything universal, plus a written description someone outside the lab could check. Finite checks never become universal claims.

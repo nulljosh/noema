@@ -16,7 +16,7 @@ A small lab for every STEM field, one lane at a time. Exact questions, fixed bou
 | [statistics](statistics) | The birthday problem and coupon collector, exact fractions checked by simulation. Standard library only. | `cd statistics && python3 -m unittest discover -s tests` |
 | [biology](biology) | Every one-base change in human beta-globin (HBB), checked against UniProt. Python 3.13, Biopython. | `cd biology && uv run python -m unittest discover -s tests` |
 
-Results so far are in the discovery ledger in [roadmap.md](roadmap.md). Every row so far reproduces known work, which is how each engine earns trust before it is pointed at anything new.
+Results so far are in the discovery ledger, [ledger.md](ledger.md). Every row so far reproduces known work, which is how each engine earns trust before it is pointed at anything new.
 
 Every lane runs the same loop: state one question, compute inside a fixed bound, check a second way, keep failures visible, and say what was observed apart from what was proved. No model calls, no background jobs, no automatic pushes. Read [roadmap.md](roadmap.md) for what is next and [docs/LOOP-HANDOFF.md](docs/LOOP-HANDOFF.md) to restart a loop.
 
