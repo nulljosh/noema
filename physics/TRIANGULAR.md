@@ -22,7 +22,7 @@ Let P(s, t) be the product of (1 + a + b) over all a with a^n = s and all b with
 
 a(n) = ((-1)^n P(1, 1) + 3 P(-1, 1)) / 2.
 
-This has the shape of a Kasteleyn torus formula for dimers on the dual honeycomb lattice: each ground-state pair is one perfect matching, and the torus splits matchings into parity sectors. The coefficients were found by fitting and then hold exactly for all 14 known values with no free parameters left. It is not derived here yet. `triangular_ground_states_formula(n)` computes it with exact integers in milliseconds.
+This has the shape of a Kasteleyn torus formula for dimers on the dual honeycomb lattice: each ground-state pair is one perfect matching, and the torus splits matchings into parity sectors. The coefficients were found by fitting and then hold exactly for all 14 known values with no free parameters left. It is proved below. `triangular_ground_states_formula(n)` computes it with exact integers in milliseconds.
 
 ## Proof of the closed form
 
@@ -32,7 +32,7 @@ This has the shape of a Kasteleyn torus formula for dimers on the dual honeycomb
 
 3. **Reference matching.** The n^2 diagonal bonds (r, c)-(r+1, c-1) form a perfect matching M0: each diagonal is the shared bond of one up and one down triangle. M0 meets neither γ1 nor γ2. So the parity class of M relative to M0 is (|M ∩ γ1|, |M ∩ γ2|) mod 2.
 
-4. **The determinant counts matchings with known signs.** Label up triangles U(r, c) and down triangles D(r, c). U(r, c) touches D(r, c) through its diagonal, D(r-1, c) through its horizontal bond and D(r, c-1) through its vertical bond. Let K(s, t) = I + sX + tY, where X sends (r, c) to (r-1, c), Y sends (r, c) to (r, c-1), and the weight s (or t) is picked up only on a step that wraps from row 0 (or column 0). A perfect matching is a permutation σ of the n^2 sites with every σ(x) - x in {0, -e_r, -e_c}, so det K(s, t) is the sum over matchings of sgn(σ) times its weight.
+4. **The determinant counts matchings with known signs.** Let U(r, c) be the up triangle with sites (r, c), (r, c-1), (r+1, c-1), and D(r, c) the down triangle with sites (r, c), (r+1, c), (r+1, c-1). U(r, c) touches D(r, c) through its diagonal, D(r-1, c) through its horizontal bond and D(r, c-1) through its vertical bond. Let K(s, t) = I + X_s + Y_t. Here X_s sends (r, c) to (r-1, c) with weight 1, except that the step from row 0 to row n-1 has weight s. Y_t does the same for columns, with weight t on the step from column 0. The weight sits only on wrapping entries, so X_s^n = sI and Y_t^n = tI. A perfect matching is a permutation σ of the n^2 sites with every σ(x) - x in {0, -e_r, -e_c}, so det K(s, t) is the sum over matchings of sgn(σ) times its weight.
 
    Fixed points of σ are diagonal bonds, the reference M0. The other points form cycles that step only by -e_r and -e_c. So each cycle is a closed lattice path winding u >= 0 times around one way and v >= 0 times around the other, with (u, v) not (0, 0), and its length is n(u + v). Different cycles share no vertex, and grid edges meet only at vertices, so the cycles are disjoint simple closed curves on the torus. Disjoint non-contractible simple curves are parallel, so all k cycles have the same primitive class (u, v).
 
@@ -40,7 +40,7 @@ This has the shape of a Kasteleyn torus formula for dimers on the dual honeycomb
 
    Reading off the classes: k = 0 or k even gives (0, 0) with sign +1. k odd gives (p, q) = (u, v) mod 2. Class (1, 0) or (0, 1) has u + v odd and sign (-1)^(n+1). Class (1, 1) has u + v even and sign -1. So e(0, 0) = +1, e(0, 1) = e(1, 0) = (-1)^(n+1) and e(1, 1) = -1. This is the classical Kasteleyn torus sign pattern (Kasteleyn 1961), derived here for this lattice. The direct class counts for n = 2..5 (`honeycomb_matchings_by_class`) match it class by class. Inverting over s, t in {1, -1} gives N(p, q) = e(p, q) / 4 times the sum over s, t of s^p t^q det K(s, t).
 
-5. **Diagonalising.** X and Y commute, X^n = sI and Y^n = tI, and they act on separate coordinates. So the eigenvalues of K(s, t) are 1 + a + b over every a with a^n = s and every b with b^n = t, and det K(s, t) = P(s, t). Swapping the roles of a and b gives P(1, -1) = P(-1, 1). Writing 1 + a + b = a(1 + a^-1 + b a^-1) maps the pairs for (-1, -1) one to one onto the pairs for (-1, 1). The leftover factor is (product of the a)^n = ((-1)^n)^n = (-1)^n, so P(-1, -1) = (-1)^n P(-1, 1).
+5. **Diagonalising.** X_s and Y_t commute, X_s^n = sI and Y_t^n = tI, and they act on separate coordinates. So the eigenvalues of K(s, t) are 1 + a + b over every a with a^n = s and every b with b^n = t, and det K(s, t) = P(s, t). Swapping the roles of a and b gives P(1, -1) = P(-1, 1). Writing 1 + a + b = a(1 + a^-1 + b a^-1) maps the pairs for (-1, -1) one to one onto the pairs for (-1, 1). The leftover factor is (product of the a)^n = ((-1)^n)^n = (-1)^n, so P(-1, -1) = (-1)^n P(-1, 1).
 
 6. **Assembling.** For even n, take class (0, 0), where e = +1: N(0, 0) = (A + B + B + B) / 4, so a(n) = (A + 3B) / 2. For odd n, take class (1, 1), where e = -1: N(1, 1) = -(A - B - B - B) / 4, so a(n) = (-A + 3B) / 2. Together, a(n) = ((-1)^n A + 3B) / 2.
 
@@ -61,7 +61,7 @@ These are Gauss's cyclotomic numbers of order 2. Since -1 is a square exactly wh
 
 Since p >= 5, 2 and 3 are units at p. So v_p(a(n)) >= min(v_p(A), v_p(B)) >= ceil(n/2) - 1.
 
-**Check.** Every prime p = 2n + 1 with n <= 90 satisfies the bound. v_p(A) equals N_A exactly in every case where A is nonzero. v_p(B) equals N_B except at n = 29, 41 and 89, where it is larger.
+**Check.** Every prime p = 2n + 1 with n <= 120 satisfies the bound (independent referee run, REVIEW.md). The proof needs only the inequalities. Equality v_p(A) = N_A and v_p(B) = N_B holds often but not always: B is larger at n = 29, 41, 89 and 96, and A at n = 113.
 
 ## What is missing
 
