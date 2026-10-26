@@ -156,3 +156,11 @@ The median initial cycle is about 0.72 seconds on the development Mac.
 Timing is informational; shared CI runners do not gate on wall-clock speed.
 The public landing displays these results and preserves the unmatched cases.
 This is software and sequence-concordance evidence, not a hypothesis-quality score.
+
+## Held-out ClinVar benchmark (October 26, 2026)
+
+The rule was written down and committed before any labels were fetched (`benchmarks/heldout-spec.json`). Inputs are ClinVar HBB records whose title is a single NM_000518.5 coding substitution. Pathogenic and likely pathogenic count as 1, benign and likely benign as 0, and everything else is excluded. Records are sorted by VCV accession, and the newest 30 percent are held out. Predictor v0 calls stop gains, stop losses and start-codon changes 1, synonymous changes 0, and a missense change 1 when its BLOSUM62 score is -2 or lower.
+
+Of 1,972 pinned records, 93 qualify. Most HBB records are intronic, untranslated or larger changes, which this version excludes. The engine's translation agreed with ClinVar's stated protein change on all 93. On the 28 held-out records (24 positive, 4 negative), v0 reaches 0.67 balanced accuracy: sensitivity 0.58 and specificity 0.75. Both baselines score 0.50. With only four negatives, that difference is weak evidence. It sets a baseline for later predictors, which must be scored on the same split next to v0.
+
+ClinVar classifications are submitter assertions, not measurements, and one gene says nothing about others.

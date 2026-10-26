@@ -28,3 +28,5 @@ Read [WHITEPAPER.md](WHITEPAPER.md), [research and sources](docs/RESEARCH.md), [
 First descent now covers starts 2 through 1,000,000. Every start descended, and two implementations agreed on the ordinary-step counts and endpoints. This is a bounded result. [Brand system](landing/brand.html) · [QA and limitations](docs/design/QA.md).
 
 Modulo-32 studies now isolate four remaining classes. Written algebra covers first descent in 28 of 32 classes. Lean 4.35.0 verifies three exact first-descent lemmas (4k+1, 32k+11, 32k+23); see [proofs/README.md](proofs/README.md). No general Collatz termination claim follows.
+
+`python3 descent.py tree` splits every start by remainder mod 2^m up to 2^20 and counts the classes no forced prefix has closed yet. The counts match OEIS A076227 exactly, which checks the engine against the published record.

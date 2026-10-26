@@ -100,3 +100,7 @@ The foreground queue cross-checks the reference, scans every single-base CDS sub
 Each run saves JSON/JSONL files under ignored `runs/`, adds a summary to the local notebook, and updates the marked research section of the whitepaper. Ctrl-C saves an interrupted summary. Complete runs also update [benchmark history](benchmarks/history.jsonl). There is no timer service, daemon, cron job, or automatic Git push.
 
 The first three scored cycles agree: 1,332 substitutions, 256 protein annotations reproduced, two outside a single-base explanation, and three complex annotations excluded. Repetition measures reproducibility, not new biological evidence. [Benchmark definitions and limits](benchmarks/README.md).
+
+## Held-out benchmark
+
+`uv run heldout.py` scores a rule declared in advance (`benchmarks/heldout-spec.json`) against the newest 30 percent of pinned ClinVar HBB records. Version 0 reaches 0.67 balanced accuracy on 28 held-out records, against 0.50 for both baselines. The set is small, so this is a baseline, not a finding. `uv run heldout.py fetch` refreshes the pinned data by hand; tests never use the network.
