@@ -60,4 +60,4 @@ Since p >= 5, 2 and 3 are units at p. So v_p(a(n)) >= min(v_p(A), v_p(B)) >= cei
 ## What is missing
 
 1. An outside reader to check the proof, especially the cycle-sign step 4.
-2. A literature check. Exact ground-state enumeration on finite triangular domains exists (Computer Physics Communications, 2006, "Exact enumeration of the ground states of a triangular Ising antiferromagnet"), and it may contain these torus counts. The divisibility bound was not found anywhere.
+2. A literature check. Found so far: M. J. Krawczyk, "Wandering in the state space", arXiv:1004.1070 (2010), gives 3630 and 263640 for the periodic 5x5 and 6x6 triangular lattices, matching a(5) and a(6). No closed form or divisibility result appears there. Still to read: Exact ground-state enumeration on finite triangular domains exists (Computer Physics Communications, 2006, "Exact enumeration of the ground states of a triangular Ising antiferromagnet"), and it may contain these torus counts. The divisibility bound was not found anywhere.

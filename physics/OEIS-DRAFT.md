@@ -16,4 +16,6 @@ Not submitted. Joshua reviews it first.
 
 **Program.** Python, `noema/physics/ising.py`: `python3 ising.py tri 12`.
 
+**References.** M. J. Krawczyk, "Wandering in the state space", arXiv:1004.1070 (2010), gives 3630 and 263640 for the periodic 5x5 and 6x6 triangular lattices, matching a(5) and a(6).
+
 **Literature search (2026-10-26).** No OEIS entry for these terms and no published table found by web search for the exact torus counts. The limit is classical (Wannier 1950; Houtappel 1950; Stephenson 1964 via dimers).
