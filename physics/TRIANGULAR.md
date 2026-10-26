@@ -26,13 +26,13 @@ This has the shape of a Kasteleyn torus formula for dimers on the dual honeycomb
 
 3. **Reference matching.** The n^2 diagonal bonds (r, c)-(r+1, c-1) form a perfect matching M0: each diagonal is the shared bond of one up and one down triangle. M0 meets neither γ1 nor γ2. So the parity class of M relative to M0 is (|M ∩ γ1|, |M ∩ γ2|) mod 2.
 
-4. **Kasteleyn on the torus.** Hexagons have length 6 ≡ 2 (mod 4), so all-positive weights are a Kasteleyn weighting of the honeycomb. Put a twist s on the edges crossing one seam and t on the other. Kasteleyn's torus theorem, in Kenyon's form ("Lectures on dimers", 2009), says det K(s, t) is the sum over M of (-1)^(pq+p+q) s^p t^q, where (p, q) is the parity class of M relative to M0. The sign also carries a global sign of M0, which the checks below fix at +1. Inverting over s, t in {1, -1} gives N(p, q) = (-1)^(pq+p+q) / 4 times the sum over s, t of s^p t^q det K(s, t). Summing over all four classes recovers the standard Z = (-P(1,1) + P(-1,1) + P(1,-1) + P(-1,-1)) / 2.
+4. **Kasteleyn on the torus.** Hexagons have length 6 ≡ 2 (mod 4), so all-positive weights are a Kasteleyn weighting of the honeycomb. Put a twist s on the edges crossing one seam and t on the other. Kasteleyn's torus theorem (Kasteleyn 1961; Kenyon, "Lectures on dimers", 2009) says det K(s, t) is the sum over M of e(p, q) s^p t^q. Here (p, q) is the parity class of M relative to M0, and e(p, q) = c (-1)^((p+a)(q+b)), with constants a, b and c fixed by the reference matching and the seams. Counting matchings in every class directly, for n = 2..5 (`honeycomb_matchings_by_class`), fixes the constants: e = -(-1)^((p+1)(q+1)) for even n and e = (-1)^(pq) for odd n. Every class then matches, in size and in sign. Inverting over s, t in {1, -1} gives N(p, q) = e(p, q) / 4 times the sum over s, t of s^p t^q det K(s, t).
 
 5. **Diagonalising.** Each up triangle meets the down triangles at three offsets, so K = I + T1 + T2, where T1 and T2 are the two translations and wrapping picks up s or t. Its eigenvalues are 1 + a + b over a^n = s and b^n = t, so det K(s, t) = P(s, t). By the 120 degree symmetry, P(1, -1) = P(-1, 1), and P(-1, -1) = (-1)^n P(-1, 1).
 
-6. **Assembling.** For even n, take class (0, 0): a(n) = 2 N(0, 0) = (A + B + B + B) / 2 = (A + 3B) / 2. For odd n, take class (1, 1): the sign (-1)^3 = -1 gives a(n) = -(A - B - B - B) / 2 = (-A + 3B) / 2. Together, a(n) = ((-1)^n A + 3B) / 2.
+6. **Assembling.** For even n, take class (0, 0), where e = +1: N(0, 0) = (A + B + B + B) / 4, so a(n) = (A + 3B) / 2. For odd n, take class (1, 1), where e = -1: N(1, 1) = -(A - B - B - B) / 4, so a(n) = (-A + 3B) / 2. Together, a(n) = ((-1)^n A + 3B) / 2.
 
-The convention-dependent signs (the global sign of M0, and which seam carries s) are pinned by the 14 exact counts for n = 2..15. A wrong convention would fail at least one of them.
+The constants in e depend on conventions, so they are pinned by data: the direct class counts for n = 2..5 and the 14 ground-state counts for n = 2..15. A wrong constant would fail at least one of them. What remains is a proof that the constants follow the parity of n for every n, which needs the sign of M0 and of the seam permutation worked out by hand.
 
 ## Divisibility (written argument)
 

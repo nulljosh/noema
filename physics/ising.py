@@ -186,6 +186,32 @@ def no_mono_triangle_count(L):
 
 
 
+def honeycomb_matchings_by_class(n):
+    """Perfect matchings of the dual honeycomb, by parity of crossings with row 0 (horizontal
+    bonds) and column 0 (vertical bonds). Backtracking, so only for small n. Checks the
+    Kasteleyn signs in TRIANGULAR.md class by class."""
+    def up(r, c):  # up triangle {(r,c), (r,c-1), (r+1,c-1)}: bonds h(r,c-1), v(r,c-1), d(r,c)
+        return [("h", r, (c - 1) % n), ("v", r, (c - 1) % n), ("d", r, c)]
+    down = {}
+    for r in range(n):
+        for c in range(n):  # down triangle {(r,c), (r+1,c), (r+1,c-1)}
+            for b in (("v", r, c), ("d", r, c), ("h", (r + 1) % n, (c - 1) % n)):
+                down[b] = (r, c)
+    ups, used, chosen, count = [(r, c) for r in range(n) for c in range(n)], set(), [], {}
+
+    def rec(i):
+        if i == len(ups):
+            key = (sum(b[0] == "h" and b[1] == 0 for b in chosen) % 2, sum(b[0] == "v" and b[2] == 0 for b in chosen) % 2)
+            count[key] = count.get(key, 0) + 1
+            return
+        for b in up(*ups[i]):
+            if down[b] not in used:
+                used.add(down[b]); chosen.append(b)
+                rec(i + 1)
+                chosen.pop(); used.discard(down[b])
+    rec(0)
+    return count
+
 def _det(M):
     """Exact integer determinant (Bareiss, fraction-free)."""
     M = [row[:] for row in M]

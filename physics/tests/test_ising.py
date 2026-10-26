@@ -48,6 +48,15 @@ class IsingTests(unittest.TestCase):
         for n in range(2, 12):
             self.assertEqual(ising.triangular_ground_states_formula(n), ising.no_mono_triangle_count(n))
 
+    def test_kasteleyn_signs_class_by_class(self):
+        for n in range(2, 6):
+            direct = ising.honeycomb_matchings_by_class(n)
+            P = {(s, t): ising._torus_product(n, s, t) for s in (1, -1) for t in (1, -1)}
+            for (p, q), count in direct.items():
+                e = -(-1) ** ((p + 1) * (q + 1)) if n % 2 == 0 else (-1) ** (p * q)
+                self.assertEqual(e * sum(s ** p * t ** q * P[s, t] for s in (1, -1) for t in (1, -1)), 4 * count)
+            self.assertEqual(2 * direct[n % 2, n % 2], ising.no_mono_triangle_count(n))
+
     def test_divisibility_by_2n_plus_1(self):
         for n in range(2, 61):
             p = 2 * n + 1
