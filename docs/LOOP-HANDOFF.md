@@ -6,7 +6,7 @@ A finite foreground cycle. State one exact question, compute inside a fixed boun
 
 ## Tick protocol (every loop tick, in order)
 
-1. Read `roadmap.md`. Rotate lanes in ledger order (math, cs, biology, then any queued field): take the lane whose last ledger row is oldest. Starting a queued field counts as that lane's tick.
+1. Read `roadmap.md`. Rotate lanes in ledger order (math, cs, physics, chemistry, medicine, statistics, biology, then any queued field): take the lane whose last ledger row is oldest. Starting a queued field counts as that lane's tick.
 2. Run the lane's tests before touching anything. A red baseline is the tick's only job.
 3. Do one bounded study: an exact question, a fixed bound, a stop condition.
 4. Check it a second way: an independent implementation, a numeric check of a symbolic result, or a primary source (OEIS, the paper, UniProt, ClinVar).
@@ -41,5 +41,5 @@ Continue Noema's biology lane. Read CLAUDE.md, biology/CLAUDE.md, biology/WHITEP
 Cross-lab (use when both lanes are quiet):
 
 ```text
-Continue Noema across both labs. Read CLAUDE.md and roadmap.md. Build the claims ledger: a claims.json in math/ and in biology/ with claim, exact domain, bound, level (observed, written, machine-checked, literature) and source, then make each landing page render its claims from it. Add the Fieldbook links. Run both test suites and ./deploy.sh's checks, but do not deploy without Joshua's yes. Stop at the end of the cycle.
+Continue Noema across every lane. Read CLAUDE.md and roadmap.md. Build the claims ledger: a claims.json in each lane with claim, exact domain, bound, level (observed, written, machine-checked, literature) and source, then make each landing page render its claims from it. Add the Fieldbook links. Run every lane's tests and ./deploy.sh's checks, but do not deploy without Joshua's yes. Stop at the end of the cycle.
 ```

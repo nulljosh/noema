@@ -76,7 +76,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
 - [ ] **Medicine:** read the ISIS-2 full text to see whether the combination's SD 5 comes from a stratified analysis, then recompute the 1954 Salk polio trial from the Francis report's own table.
 - [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
-- [ ] **Hub:** add physics and chemistry cards to the landing page and deploy.
+- [x] **Hub:** cards for physics, chemistry, medicine and statistics, deployed 2026-10-26.
 
 ## Not doing
 

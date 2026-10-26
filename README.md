@@ -20,7 +20,7 @@ Results so far are in the discovery ledger in [roadmap.md](roadmap.md). Every ro
 
 Every lane runs the same loop: state one question, compute inside a fixed bound, check a second way, keep failures visible, and say what was observed apart from what was proved. No model calls, no background jobs, no automatic pushes. Read [roadmap.md](roadmap.md) for what is next and [docs/LOOP-HANDOFF.md](docs/LOOP-HANDOFF.md) to restart a loop.
 
-`./deploy.sh` tests both labs, assembles one site (hub, `/math`, `/biology`) and deploys it with wrangler. Git pushes do not deploy.
+`./deploy.sh` tests every lane, assembles one site (hub, `/math`, `/biology`) and deploys it with wrangler. Git pushes do not deploy.
 
 For the plain-language background on fields like these, see [Fieldbook](../fieldbook).
 
