@@ -1,5 +1,5 @@
 import unittest
-from busy import enumerate_machines, simulate
+from busy import backward, closed_block, closed_tape, enumerate_machines, simulate
 
 
 class BusyBeaverTests(unittest.TestCase):
@@ -27,6 +27,33 @@ class BusyBeaverTests(unittest.TestCase):
         machine = {(0, 0): (1, 1, 1), (0, 1): (1, 1, 0), (1, 0): (1, -1, 0)}
         self.assertEqual(simulate(machine, 100), ('translated', None, 5, 3))
 
-    def test_three_state_holdouts_after_translated_cyclers(self):
-        # Translated cyclers decide 3,027 of the 3,119 holdouts. The other 92 are unchanged at caps 200, 400 and 1000.
-        self.assertEqual(enumerate_machines(3, 200)['holdouts_at_cap'], 92)
+    def test_three_state_holdouts(self):
+        # Translated cyclers leave 92. Backward reasoning proves 55, the closed tape 28 and the block tape 5, leaving 4.
+        result = enumerate_machines(3, 200)
+        self.assertEqual((result['holdouts_at_cap'], result['backward_proved'], result['closed_tape_proved'],
+                          result['block_tape_proved']), (4, 55, 28, 5))
+
+    def test_block_tape_proves_parity_machine(self):
+        # A run of ones alternates states C and A cell by cell, so a cell-run tape loses the parity and fails.
+        # Blocks of two cells keep it, and the block tape proves non-halting.
+        machine = {(0, 0): (1, 1, 1), (0, 1): (1, -1, 2), (1, 0): (1, -1, 2), (1, 1): (1, 1, 1), (2, 1): (1, -1, 0)}
+        self.assertFalse(closed_tape(machine))
+        self.assertTrue(closed_block(machine, 2))
+
+    def test_deciders_prove_a_non_halting_machine(self):
+        # A0 -> 1RB, A1 -> 1RA, B0 -> 1LA, B1 undefined never halts (the translated cycler above).
+        machine = {(0, 0): (1, 1, 1), (0, 1): (1, 1, 0), (1, 0): (1, -1, 0)}
+        self.assertTrue(closed_tape(machine))
+
+    def test_deciders_refuse_a_halting_machine(self):
+        # A0 -> 1RB, B0 -> 1RC, C0 undefined: halts after three steps, so neither decider may prove it.
+        machine = {(0, 0): (1, 1, 1), (1, 0): (1, 1, 2)}
+        self.assertEqual(simulate(machine, 100)[0], 'undefined')
+        self.assertFalse(backward(machine, 3))
+        self.assertFalse(closed_tape(machine))
+        self.assertFalse(closed_block(machine, 2))
+        # The two-state champion halts, so both deciders must also refuse it.
+        champion = {(0, 0): (1, 1, 1), (0, 1): (1, -1, 1), (1, 0): (1, -1, 0)}
+        self.assertFalse(backward(champion, 2))
+        self.assertFalse(closed_tape(champion))
+        self.assertFalse(closed_block(champion, 2))

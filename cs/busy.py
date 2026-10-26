@@ -42,10 +42,150 @@ def simulate(machine, cap):
     return 'cap', None, cap, sum(tape.values())
 
 
-def enumerate_machines(states, cap):
+def backward(machine, states, width=8, limit=50000):
+    """Backward reasoning over patterns. A pattern (state, cells) stands for every configuration in that state
+    whose cells at the listed offsets from the head hold the listed symbols; every other cell is arbitrary.
+    Start from each configuration that reads an undefined transition, then add every predecessor under the
+    defined rules until nothing new appears. Truncating a pattern only widens it, so the closure contains every
+    configuration that can reach an undefined transition. If the blank tape matches none of them, the run from
+    blank never reaches one, so it never halts however the undefined transitions are later completed.
+    Returns True when proved, False when the blank tape matches a pattern or the closure grows past limit."""
+    frontier = [(state, ((0, symbol),)) for state in range(states) for symbol in (0, 1)
+                if (state, symbol) not in machine]
+    seen = set(frontier)
+    while frontier:
+        state, cells = frontier.pop()
+        known = dict(cells)
+        if state == 0 and not any(known.values()):
+            return False
+        for (prev, read), (write, move, nxt) in machine.items():
+            if nxt != state:
+                continue
+            anchor = -move
+            if known.get(anchor, write) != write:
+                continue
+            new = {x - anchor: s for x, s in known.items() if x != anchor and abs(x - anchor) <= width}
+            new[0] = read
+            pattern = (prev, tuple(sorted(new.items())))
+            if pattern not in seen:
+                if len(seen) >= limit:
+                    return False
+                seen.add(pattern)
+                frontier.append(pattern)
+    return True
+
+
+def _canon(tokens):
+    """Merge a run-length tape. Each merge only widens the tapes it covers, so the check stays sound."""
+    toks = list(tokens)
+    changed = True
+    while changed:
+        changed = False
+        out = []
+        for word, mode in toks:
+            if out and out[-1][0] == word:
+                out[-1] = (word, 'star' if (out[-1][1] == 'star' and mode == 'star') else 'plus')
+                changed = True
+            else:
+                out.append((word, mode))
+        toks = out
+        for i in range(len(toks) - 1):
+            (a, am), (b, bm) = toks[i], toks[i + 1]
+            if am == bm == 'one' and len(a) == 1 and len(b) == 1 and a != b:
+                toks[i:i + 2] = [(a + b, 'one')]
+                changed = True
+                break
+    while toks and toks[-1] == ((0,), 'star'):
+        toks.pop()
+    return tuple(toks)
+
+
+def _enter(tokens, blank=0):
+    """Yield (symbol under the head, remaining tokens) for each way the head can step onto the first symbol."""
+    if not tokens:
+        yield blank, ()
+        return
+    (word, mode), rest = tokens[0], tokens[1:]
+    head, tail = word[0], word[1:]
+    if mode == 'one':
+        yield head, _canon((((tail, 'one'),) if tail else ()) + rest)
+        return
+    yield head, _canon((((tail, 'one'),) if tail else ()) + ((word, 'star'),) + rest)
+    if mode == 'star':
+        yield from _enter(rest, blank)
+
+
+def closed_tape(machine, max_tokens=6, limit=20000):
+    """Closed tape: the run-length tapes reachable from blank. A token is one copy of a word of one or two
+    symbols ('one'), one or more copies ('plus') or zero or more copies ('star'); cells past the tokens are
+    zeros. Every reachable tape is covered by some reachable abstract configuration, so if none of them
+    reads an undefined transition, the run from blank never halts. Returns True when proved."""
+    start = (0, 0, (), ())
+    seen, stack = {start}, [start]
+    while stack:
+        state, sym, left, right = stack.pop()
+        rule = machine.get((state, sym))
+        if rule is None:
+            return False
+        write, move, nxt = rule
+        if move > 0:
+            new_left = _canon((((write,), 'one'),) + left)
+            options = [(ns, new_left, rem) for ns, rem in _enter(right)]
+        else:
+            new_right = _canon((((write,), 'one'),) + right)
+            options = [(ns, rem, new_right) for ns, rem in _enter(left)]
+        for ns, l2, r2 in options:
+            if len(l2) > max_tokens or len(r2) > max_tokens:
+                return False
+            new = (nxt, ns, l2, r2)
+            if new not in seen:
+                if len(seen) >= limit:
+                    return False
+                seen.add(new)
+                stack.append(new)
+    return True
+
+
+def closed_block(machine, k=2, max_tokens=6, limit=50000):
+    """Block-aligned closed tape: the same run-length tapes, cut into absolutely aligned blocks of k cells, so a
+    run of identical blocks keeps the parity of its cells. The head is one cell inside a block; a symbol is a
+    block (a k-tuple). Same soundness argument as closed_tape. Returns True when proved."""
+    blank = (0,) * k
+    start = (0, blank, 0, (), ())  # state, current block, offset in block, left tokens, right tokens
+    seen, stack = {start}, [start]
+    while stack:
+        state, block, off, left, right = stack.pop()
+        rule = machine.get((state, block[off]))
+        if rule is None:
+            return False
+        write, move, nxt = rule
+        cells = block[:off] + (write,) + block[off + 1:]
+        off2 = off + move
+        if 0 <= off2 < k:
+            options = [(nxt, cells, off2, left, right)]
+        elif move > 0:
+            new_left = _canon((((cells,), 'one'),) + left)
+            options = [(nxt, b, 0, new_left, rem) for b, rem in _enter(right, blank)]
+        else:
+            new_right = _canon((((cells,), 'one'),) + right)
+            options = [(nxt, b, k - 1, rem, new_right) for b, rem in _enter(left, blank)]
+        for cand in options:
+            if len(cand[3]) > max_tokens or len(cand[4]) > max_tokens:
+                return False
+            if cand not in seen:
+                if len(seen) >= limit:
+                    return False
+                seen.add(cand)
+                stack.append(cand)
+    return True
+
+
+def enumerate_machines(states, cap, flagged=None):
     """Every machine reachable this way is distinct in behaviour from a blank tape.
-    The first move is fixed to the right; the mirror image behaves the same."""
+    The first move is fixed to the right; the mirror image behaves the same.
+    Machines the backward, closed-tape and block-tape deciders prove non-halting are appended to flagged, when given."""
     best_steps, best_ones, halters, holdouts, cycles, translated = 0, 0, 0, 0, 0, 0
+    backwards, tapes, blocks = 0, 0, 0
     stack = [{}]
     while stack:
         machine = stack.pop()
@@ -57,7 +197,17 @@ def enumerate_machines(states, cap):
             translated += 1
             continue
         if outcome == 'cap':
-            holdouts += 1
+            if backward(machine, states):
+                backwards += 1
+            elif closed_tape(machine):
+                tapes += 1
+            elif closed_block(machine):
+                blocks += 1
+            else:
+                holdouts += 1
+                continue
+            if flagged is not None:
+                flagged.append(dict(machine))
             continue
         # Halt on this undefined transition (writing 1 maximises the ones count).
         halters += 1
@@ -74,7 +224,7 @@ def enumerate_machines(states, cap):
                     stack.append({**machine, key: (write, move, nxt)})
     return {'states': states, 'cap': cap, 'max_steps': best_steps, 'max_ones': best_ones,
             'halting_branches': halters, 'cycles_proved': cycles, 'translated_cyclers': translated,
-            'holdouts_at_cap': holdouts}
+            'backward_proved': backwards, 'closed_tape_proved': tapes, 'block_tape_proved': blocks, 'holdouts_at_cap': holdouts}
 
 
 if __name__ == '__main__':
