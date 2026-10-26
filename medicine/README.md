@@ -49,7 +49,7 @@ Across the same 235,860 abstracts there are 31,021 ratios with an interval. 68 s
 
 ## Are flagged papers retracted more often?
 
-No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
+No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. The slips also do not cluster: of 440 abstracts flagged by any check, only one (PMID 39086232) fails two. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
 
 ```sh
 python3 pvalues.py CACHE_DIR    # a folder of {pmid: abstract} JSON files from percents.fetch or fetch_epmc
