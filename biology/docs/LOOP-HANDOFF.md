@@ -6,7 +6,7 @@ A finite foreground computational research queue. It checks the pinned HBB refer
 
 ## Where things stand
 
-Public site: https://evidna.jaybulb.com. Mobile-first CSS and proportional fonts. Findings include the full substitution counts, repeat-run agreement, known-case score, and a sourced explanation of Hb Bristol. The code reproduces 256 annotations; two are outside a one-base explanation and three complex annotations are excluded. The whitepaper records the limits. Eleven tests pass. Research history and landing findings are updated by complete runs.
+Public site: https://noema.jaybulb.com/biology/ (evidna.jaybulb.com serves the same site). Mobile-first CSS and proportional fonts. Findings include the full substitution counts, repeat-run agreement, known-case score, and a sourced explanation of Hb Bristol. The code reproduces 256 annotations; two are outside a one-base explanation and three complex annotations are excluded. The whitepaper records the limits. Eleven tests pass. Research history and landing findings are updated by complete runs.
 
 ## Next, in order
 

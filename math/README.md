@@ -6,7 +6,7 @@
 
 A mathematics research lab. Start small. Check carefully. Ask a harder question.
 
-[Open Noema](https://noema.jaybulb.com) · [Brand kit](https://noema.jaybulb.com/brand.html)
+[Open Noema](https://noema.jaybulb.com/math/) · [Brand kit](https://noema.jaybulb.com/math/brand.html)
 
 Inspired by Evidna's finite evidence loop. Independent and unaffiliated with Anthropic or Apple. Noema is a name, not a claim of trademark availability.
 

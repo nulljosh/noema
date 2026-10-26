@@ -1,7 +1,0 @@
-name = "evidna"
-compatibility_date = "2026-10-13"
-workers_dev = true
-routes = [{ pattern = "evidna.jaybulb.com", custom_domain = true }]
-
-[assets]
-directory = "landing"

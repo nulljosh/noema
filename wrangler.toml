@@ -1,0 +1,10 @@
+name = "noema"
+compatibility_date = "2026-10-13"
+workers_dev = true
+routes = [
+  { pattern = "noema.jaybulb.com", custom_domain = true },
+  { pattern = "evidna.jaybulb.com", custom_domain = true },
+]
+
+[assets]
+directory = "dist"

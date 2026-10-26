@@ -1,0 +1,29 @@
+# Noema roadmap
+
+> Priority tier 5: exploratory. Each lane keeps its detailed queue in `math/roadmap.md` and `biology/roadmap.md`. This file is the order across both. Raise one study's scope at a time.
+
+## Now
+
+- [ ] **Math:** formalize the exact eight-step lemmas for 32k+11 and 32k+23 in Lean. Then 28 of 32 classes have a machine-checked or written first descent; 7, 15, 27 and 31 remain.
+- [ ] **Biology:** review `benchmarks/latest.json`, then read the two annotations no one-base change explains and the original Hb Bristol paper.
+- [ ] **Both:** ship the merged site. Run `./deploy.sh`, move the noema.jaybulb.com DNS from the Sites CNAME to the wrangler custom domain, and check that evidna.jaybulb.com still opens.
+
+## Next
+
+- [ ] **Math:** split classes 7, 15, 27 and 31 modulo 64. Derive the forced prefixes before computing anything, and keep the bound at one million.
+- [ ] **Biology:** write the held-out hypothesis-quality benchmark with predeclared scoring, before claiming any improvement.
+- [ ] **Biology:** add a second public gene, but only with expected cases someone else specified.
+- [ ] **Both:** one claims ledger. A small `claims.json` per lab: claim, exact domain, bound, level (observed, written, machine-checked, literature), source. The landing pages render from it, so no page can state more than the ledger holds.
+- [ ] **Both:** link each study to its Fieldbook entry (Collatz and number theory, genetics and molecular biology), one line each.
+
+## Later
+
+- [ ] **Math:** tiny pigeonhole formulas with DPLL node counts, and prime gaps on disjoint intervals with checked endpoints.
+- [ ] **Math:** read Barina's 2025 verification methods and reproduce one tiny congruence-class example before trusting any literature lead.
+- [ ] **Biology:** evidence-file fingerprints, so observations cannot inform a revision until the file checks out.
+- [ ] **Biology:** test the workbench on Safari, Android hardware and a screen reader.
+- [ ] **Biology:** a human-reviewed experiment record (controls, units, outcomes, provenance). No instrument code without a qualified lab partner, simulated commands and explicit human sign-off.
+
+## Not doing
+
+Riemann stays literature-only. No structure prediction, model training, autonomous experiments or instrument control. No universal claim from a finite check.

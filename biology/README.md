@@ -4,7 +4,7 @@
 
 ![Version](https://img.shields.io/badge/version-0.1.0-9e4f36) ![License](https://img.shields.io/badge/license-MIT-53694b) ![Tests](https://github.com/nulljosh/evidna/actions/workflows/test.yml/badge.svg)
 
-[Explore the lab](https://evidna.jaybulb.com)
+[Explore the lab](https://noema.jaybulb.com/biology/)
 
 An open-source biology lab. Real DNA, reproducible analysis, and AI questions grounded in evidence.
 
@@ -65,7 +65,7 @@ Sequence translation tells us what a codon encodes. It does not measure folding,
 uv run python -m unittest discover -s tests -v
 uv run evidna.py export-demo
 python3 -m http.server 8080 --directory landing --bind 127.0.0.1
-./deploy.sh
+../deploy.sh
 ```
 
 The browser workbench uses three precomputed variants from the Python engine. Switching variants and downloading reports run in the browser; the landing page does not execute Python or AI. It makes no paid model calls. Deployment uses your Cloudflare Wrangler login and the declared custom domain. Tests cover known biology, invalid variants, start/stop changes, evidence persistence, and revision boundaries. AI calls are mocked in unit tests; generated biology still requires human review.
