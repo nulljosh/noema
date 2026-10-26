@@ -253,7 +253,7 @@ if __name__ == "__main__":
     if sys.argv[1:2] == ["tri"]:
         for L in range(2, int(sys.argv[2]) + 1 if sys.argv[2:] else 9):
             count = no_mono_triangle_count(L)
-            print(f"L={L}  ground states {count}  entropy per spin {math.log(count) / (L * L):.5f} (Wannier 0.33831)", flush=True)
+            print(f"L={L}  ground states {count}  entropy per spin {math.log(count) / (L * L):.5f} (limit 0.32307, Wannier 1973 erratum)", flush=True)
         raise SystemExit
     sizes = [int(a) for a in sys.argv[1:]] or list(range(2, 9))
     rows = study(sizes)
