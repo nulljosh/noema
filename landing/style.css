@@ -138,3 +138,8 @@ a.cell:hover { background: var(--surface); }
   .band h2 { margin-top: -2vw; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .cell { transition: none; } }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.cta-big { margin-top: var(--sp-2); }
+.cta-big .btn { height: 56px; padding: 0 var(--sp-6); font-size: 14px; }
+.cta-big .btn { white-space: nowrap; }
+@media (max-width: 600px) { .cta-big .btn { height: 48px; padding: 0 var(--sp-4); font-size: 12px; } }
