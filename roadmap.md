@@ -50,6 +50,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | cs | Wider block n-gram deciders cut 4-state holdouts 643 to 41 (32 counter-like, 7 square-root growth, 2 other); run 24 s; maxima still 107 steps, 13 ones | machine-decided (sound deciders, Python) | all 20,528 flagged 4-state machines rerun 100,000 steps with no decider, none halt | Brady (1983) BB(4) = 107; bbchallenge CPS | reproduced, 41 to go |
 | 2026-10-26 | physics | Ground states of the triangular Ising antiferromagnet on L x L tori, L = 2..9: 6, 42, 42, 3630, 263640, 2620800, 906124242, 547003370634; entropy per spin 0.3337 at L = 9, toward Wannier's 0.3383 | observed (exact counts) | brute force L <= 4 and a separate numpy listing of all 2^25 states at L = 5 | Wannier (1950) limit matches; no OEIS entry and no exact torus table found in one search | candidate for an OEIS entry, not a breakthrough |
 | 2026-10-26 | physics | Same ground states recounted a second way (2-colourings of the triangular torus with no one-colour triangle, 0/1 row transfer), extended to n = 10: 44898196092066 | observed (exact counts) | agrees with the full energy polynomial for n = 2..9 and with listing all states for n <= 5 | no OEIS entry; no published torus table found in two web searches | candidate (new OEIS sequence, draft in physics/OEIS-DRAFT.md awaiting Joshua) |
+| 2026-10-26 | physics | Triangular ground-state counts extended to n = 15 (8.79e31 at n = 15). Pattern: for odd n with 2n+1 prime (n = 3, 5, 9, 11, 15), (2n+1)^((n-1)/2) exactly divides a(n) | observed (exact counts; pattern on 5 cases) | counts from the 0/1 transfer, which agrees with the polynomial method to n = 9 | no OEIS entry; pattern not found in literature yet | candidate pattern, needs a product formula to test large n |
 
 ## Fields
 
@@ -80,6 +81,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
 - [x] **Physics:** triangular antiferromagnet ground states to 9x9 (2026-10-26), heading toward Wannier's 0.3383.
+- [ ] **Physics:** test the (2n+1)^((n-1)/2) pattern far past n = 15 with an exact Kasteleyn-style product formula for honeycomb dimers on the torus (each ground state pair is one dimer covering), checked against the counts we have.
 - [ ] **Physics:** a deeper literature search (Blote and Nightingale, dimer counts on the honeycomb torus) for the triangular counts, then an independent check by Pfaffian dimer counting, then an OEIS draft for Joshua.
 - [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
 - [ ] **Medicine:** read the ISIS-2 full text to see whether the combination's SD 5 comes from a stratified analysis, then recompute the 1954 Salk polio trial from the Francis report's own table.
