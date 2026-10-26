@@ -1,6 +1,12 @@
 # Triangular antiferromagnet ground states on the n x n torus
 
-Status: candidate with a complete written proof (closed form and divisibility bound), checked numerically far past where it was found. Novelty is not yet confirmed: the counts, or the closed form, may already be published.
+Status: candidate. The closed form has a complete written proof. Its two ingredients turn out to be Wendt's binomial circulant determinant, classical from work on Fermat's Last Theorem. So the 2n+1 divisibility is most likely a corollary of known Wendt results (Fee and Granville 1991; Ford and Jha 1993). The candidate new part is the bridge itself: frustrated-magnet ground states are counted by Wendt determinants.
+
+**The bridge.** (-1)^n P(1, 1) is OEIS A096964 (Wendt's determinant). For odd n, P(-1, 1) is OEIS A048954 (the binomial circulant determinant); for even n, A048954 equals P(1, 1) instead. So for odd n:
+
+a(n) = (A096964(n) + 3 A048954(n)) / 2,
+
+checked against the OEIS terms for n = 3..13. Neither OEIS entry mentions dimers, Ising models, matchings or the torus.
 
 ## The count
 

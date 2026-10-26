@@ -12,6 +12,8 @@ Not submitted. Joshua reviews it first.
 
 **Observed pattern (n <= 15 only, not proved).** The terms factor smoothly, with large powers of 2n+1: 11^2 | a(5), 13^3 | a(6), 17^3 | a(8), 19^4 | a(9), 23^5 | a(11), 29^6 | a(14), 31^7 | a(15). For odd n with 2n+1 prime (n = 3, 5, 9, 11, 15), the exact power of 2n+1 dividing a(n) is (n-1)/2 in every case. A product formula over roots of unity, as in Kasteleyn's dimer counts, would likely explain it.
 
+**Formula.** a(n) = ((-1)^n P(1,1) + 3 P(-1,1))/2, where P(s,t) is the product of (1+x+y) over x^n = s, y^n = t (proof in noema/physics/TRIANGULAR.md). For odd n, a(n) = (A096964(n) + 3*A048954(n))/2.
+
 **Checks.** Two independent programs agree for n = 2..9: a full energy polynomial by row transfer (`ising.py`, `density_of_states(n, triangular=True)`) and a 0/1 transfer over rows with no monochromatic triangle (`no_mono_triangle_count`). Listing all 2^n^2 colorings agrees for n <= 5.
 
 **Program.** Python, `noema/physics/ising.py`: `python3 ising.py tri 12`.
