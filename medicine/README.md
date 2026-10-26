@@ -17,6 +17,8 @@ One small thing does not line up. The paper gives the combination's uncertainty 
 
 First scan: the 6,000 newest randomized-trial abstracts from each of 2022, 2023 and 2024. That is 18,000 abstracts with 1,256 checkable pairs. 23 pairs fail. Reading each abstract by hand, 17 pairs in 16 abstracts are clear mismatches, about 1 in 74. The other 6 are probably shares of a different total. Several of the clear mismatches can be traced: one abstract prints 24/73 and 8/70 for arms of 72 and 71 women, and 24/72 and 8/71 give exactly the printed 33.3% and 11.3%. Another prints 6/18 (66.6%), where 12/18 would be 66.7%. Every flagged pair, with its PubMed ID and the reason, is in `percents-2022-2024.json`.
 
+Full scan: the same check over all 235,860 randomized-trial abstracts from 2015 to 2024 finds 15,347 pairs, and 387 of them fail (in 283 abstracts). That is too many to read one by one, so a random 40 were read by hand. 33 are clear mismatches, 5 are ambiguous (two percentages, or a share of another total) and 1 was a false alarm that is now filtered out. So roughly 330 of the 387 are clear mismatches, about 1 in 47 pairs, with a 95% range of about 270 to 360. The rows and the labeled sample are in `percents-2015-2024.json`.
+
 These are slips in abstracts, and the full papers may print the right numbers. Each is an open note until the paper is read, not a claim that a result is wrong.
 
 ```sh

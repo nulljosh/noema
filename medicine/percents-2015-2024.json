@@ -1,0 +1,3470 @@
+{
+ "source": "randomized controlled trial abstracts 2015 to 2024, PubMed E-utilities (2024) and Europe PMC (2015 to 2023), fetched 2026-10-26",
+ "abstracts": 235860,
+ "pairs": 15347,
+ "flagged": 387,
+ "sample_size": 40,
+ "sample_clear": 33,
+ "sample": [
+  {
+   "pmid": "37393022",
+   "x": 13,
+   "n": 67,
+   "printed": "18",
+   "exact": 19.403,
+   "snippet": "e centers required resubmission more often (44/136 [33%] vs 13/67 [18%]; P = .07",
+   "review": "clear"
+  },
+  {
+   "pmid": "26618547",
+   "x": 957,
+   "n": 1104,
+   "printed": "89.7",
+   "exact": 86.685,
+   "snippet": "by 976 of 1108 (90.8%) women receiving Lifestyle Advice and 957 of 1104 (89.7%) women re",
+   "review": "clear"
+  },
+  {
+   "pmid": "36066264",
+   "x": 336,
+   "n": 2587,
+   "printed": "43.2",
+   "exact": 12.988,
+   "snippet": "0.12), while the proportion receiving HFNC increased (2014, 336/2587 (43.2%); 2017, 6",
+   "review": "ambiguous: share of another total"
+  },
+  {
+   "pmid": "27401352",
+   "x": 11,
+   "n": 102,
+   "printed": "7",
+   "exact": 10.784,
+   "snippet": "0-33.9) for mean cannulation time. In the bevel-down group, 11 of 102 (7 %; 95 % CI",
+   "review": "ambiguous: printed with an interval"
+  },
+  {
+   "pmid": "32483939",
+   "x": 2,
+   "n": 7,
+   "printed": "15",
+   "exact": 28.571,
+   "snippet": "and 3/5 (23%/38%) in the non-Glue group, and 5/7 (38%/54%), 2/7 (15%/54%) and",
+   "review": "ambiguous: two percentages"
+  },
+  {
+   "pmid": "33301738",
+   "x": 35,
+   "n": 83,
+   "printed": "44",
+   "exact": 42.169,
+   "snippet": "0 (48%) of 83 patients in the 20 mg twice weekly group, and 35 (44%) of 83 patients",
+   "review": "clear"
+  },
+  {
+   "pmid": "33894832",
+   "x": 23,
+   "n": 53,
+   "printed": "47",
+   "exact": 43.396,
+   "snippet": "lly meaningful response on the FMA-UE score was achieved in 23 (47%) of 53 patients",
+   "review": "clear"
+  },
+  {
+   "pmid": "39196526",
+   "x": 37,
+   "n": 75,
+   "printed": "36.0",
+   "exact": 49.333,
+   "snippet": "t achieved DAS28-CRP ≤ 2.6 at W24 induced ACR70 response in 37/75 (36.0%), DAS28-C",
+   "review": "clear"
+  },
+  {
+   "pmid": "26075931",
+   "x": 5,
+   "n": 38,
+   "printed": "11",
+   "exact": 13.158,
+   "snippet": "LESS-TLH group was higher than that in the LESS-LAVH group (5/38 [11%] versus 0",
+   "review": "clear"
+  },
+  {
+   "pmid": "36594947",
+   "x": 408,
+   "n": 575,
+   "printed": "71.6",
+   "exact": 70.957,
+   "snippet": "n 374 of 575 patients (66.1%) in the remifentanil group and 408 of 575 (71.6%) in the n",
+   "review": "clear"
+  },
+  {
+   "pmid": "32032196",
+   "x": 9,
+   "n": 35,
+   "printed": "25.9",
+   "exact": 25.714,
+   "snippet": "ltados a largo plazo de acuerdo con los datos del registro, 9/35 (25.9%) sujetos",
+   "review": "clear"
+  },
+  {
+   "pmid": "39086232",
+   "x": 1,
+   "n": 14,
+   "printed": "0.3",
+   "exact": 7.143,
+   "snippet": "on stroke were included. mRS 0-1 at 90 days was achieved in 1/14 (0.3%), 43/160",
+   "review": "ambiguous: shares of another total"
+  },
+  {
+   "pmid": "37417229",
+   "x": 85,
+   "n": 367,
+   "printed": "25",
+   "exact": 23.161,
+   "snippet": "atients, 84 of 372 patients (24.3%) had died in the NEO and 85 of 367 (25%) in the S",
+   "review": "clear"
+  },
+  {
+   "pmid": "34241947",
+   "x": 31,
+   "n": 401,
+   "printed": "8.0",
+   "exact": 7.731,
+   "snippet": "rial. At 1 year, the primary safety endpoint was reached by 31/401 (8.0%) of patie",
+   "review": "clear"
+  },
+  {
+   "pmid": "34875556",
+   "x": 23,
+   "n": 147,
+   "printed": "16.3",
+   "exact": 15.646,
+   "snippet": "responders and another 11 women returned the kit. In total, 23/147 (16.3%) of retur",
+   "review": "clear"
+  },
+  {
+   "pmid": "32185660",
+   "x": 8,
+   "n": 27,
+   "printed": "35",
+   "exact": 29.63,
+   "snippet": "ore likely among MAPS patients (15/21 [65%]) than controls (8/27 [35%]). Logist",
+   "review": "clear"
+  },
+  {
+   "pmid": "27707686",
+   "x": 88,
+   "n": 99,
+   "printed": "82",
+   "exact": 88.889,
+   "snippet": "ived the allocated intervention (MMR+WEB: n=55; MMR: n=44); 88 of 99 (82%) complete",
+   "review": "clear"
+  },
+  {
+   "pmid": "35609642",
+   "x": 5,
+   "n": 85,
+   "printed": "6.8",
+   "exact": 5.882,
+   "snippet": "retreatment with either pessary or surgery within 2 years (5 of 85 [6.8%] vs 0 of",
+   "review": "clear"
+  },
+  {
+   "pmid": "32483939",
+   "x": 3,
+   "n": 5,
+   "printed": "23",
+   "exact": 60.0,
+   "snippet": "ative days 1, 2 and 3 was 6/10 (46%/77%), 6/9 (46%/69%) and 3/5 (23%/38%) in t",
+   "review": "ambiguous: two percentages"
+  },
+  {
+   "pmid": "27993811",
+   "x": 4,
+   "n": 219,
+   "printed": "1.85",
+   "exact": 1.826,
+   "snippet": ".15%), and 100-day mortality post-ASCT was 7/88 (8.06%) and 4/219 (1.85%). Conclus",
+   "review": "clear"
+  },
+  {
+   "pmid": "31053405",
+   "x": 17,
+   "n": 253,
+   "printed": "6.4",
+   "exact": 6.719,
+   "snippet": "spectively). Second primary malignancies were identified in 17/253 (6.4%) and 19/2",
+   "review": "clear"
+  },
+  {
+   "pmid": "37023559",
+   "x": 5,
+   "n": 17,
+   "printed": "29.6",
+   "exact": 29.412,
+   "snippet": "ment was achieved in 15 of 15 (100%) in the AG group versus 5 of 17 (29.6%) in the p",
+   "review": "clear"
+  },
+  {
+   "pmid": "35658604",
+   "x": 11,
+   "n": 26,
+   "printed": "95",
+   "exact": 42.308,
+   "snippet": "led. The objective response rate (modified RECIST) was 42% (11/26 [95% confidenc",
+   "review": "false alarm: a 95% confidence interval"
+  },
+  {
+   "pmid": "38626750",
+   "x": 40,
+   "n": 41,
+   "printed": "17.0",
+   "exact": 97.561,
+   "snippet": "AFs for severe diarrhea were rotavirus (23.5%), adenovirus 40/41 (17.0%), Shigell",
+   "review": "false alarm: adenovirus types 40/41"
+  },
+  {
+   "pmid": "34802113",
+   "x": 6,
+   "n": 87,
+   "printed": "6.5",
+   "exact": 6.897,
+   "snippet": "cally significant difference in involved resection margins (6/87 [6.5%] vs. 16/1",
+   "review": "clear"
+  },
+  {
+   "pmid": "28333292",
+   "x": 70,
+   "n": 225,
+   "printed": "31.3",
+   "exact": 31.111,
+   "snippet": "ng pregnancy rate [60/225 (26.7%) in the treatment group vs 70/225 (31.3%) in the c",
+   "review": "clear"
+  },
+  {
+   "pmid": "26373676",
+   "x": 37,
+   "n": 51,
+   "printed": "74",
+   "exact": 72.549,
+   "snippet": "re predominantly of the germinal center B-cell-like subtype 37/51 (74%) with no",
+   "review": "clear"
+  },
+  {
+   "pmid": "25616927",
+   "x": 2,
+   "n": 14,
+   "printed": "14.0",
+   "exact": 14.286,
+   "snippet": "ge: 1.9 to 2.8 h). Patients with AST had less hypertension (2 of 14 [14.0%] vs. 961",
+   "review": "clear"
+  },
+  {
+   "pmid": "26813209",
+   "x": 98,
+   "n": 405,
+   "printed": "24.3",
+   "exact": 24.198,
+   "snippet": "red eighteen children developed asthma or recurrent wheeze: 98 of 405 (24.3%; 95% CI,",
+   "review": "clear"
+  },
+  {
+   "pmid": "33646286",
+   "x": 2,
+   "n": 115,
+   "printed": "2.7",
+   "exact": 1.739,
+   "snippet": "uencies of intensive care unit transfer: 1 of 114 (0.9%) vs 2 of 115 (2.7%) (P = .76",
+   "review": "clear"
+  },
+  {
+   "pmid": "32032196",
+   "x": 9,
+   "n": 35,
+   "printed": "25.9",
+   "exact": 25.714,
+   "snippet": "screened for long-term results according to register data, 9 of 35 (25.9%) subjects",
+   "review": "clear"
+  },
+  {
+   "pmid": "31251550",
+   "x": 257,
+   "n": 363,
+   "printed": "70.2",
+   "exact": 70.799,
+   "snippet": "population: 196/363 (54.0%) females; 167/363 46.0%) males; (257/363 (70.2%) were whi",
+   "review": "clear"
+  },
+  {
+   "pmid": "30264242",
+   "x": 12,
+   "n": 25,
+   "printed": "49",
+   "exact": 48.0,
+   "snippet": "ll survival rates in the ankle debridement alone group were 12 of 25 (49%) and 9 of",
+   "review": "clear"
+  },
+  {
+   "pmid": "33295965",
+   "x": 424,
+   "n": 717,
+   "printed": "59.9",
+   "exact": 59.135,
+   "snippet": "k patients did not differ between the randomized arms (GRS: 424 of 717 [59.9%] vs contr",
+   "review": "clear"
+  },
+  {
+   "pmid": "38108829",
+   "x": 799,
+   "n": 1105,
+   "printed": "72.1",
+   "exact": 72.308,
+   "snippet": "tomatic > 50% carotid stenosis and extracranial dissection, 799/1105 (72.1%) patients",
+   "review": "clear"
+  },
+  {
+   "pmid": "36863328",
+   "x": 7,
+   "n": 93,
+   "printed": "12.1",
+   "exact": 7.527,
+   "snippet": "001), and less often large-vessel occlusion on initial MRI (7/93 [12.1%] versus 4",
+   "review": "clear"
+  },
+  {
+   "pmid": "27941394",
+   "x": 64,
+   "n": 77,
+   "printed": "87",
+   "exact": 83.117,
+   "snippet": "al 0.75-1.18). In the per-protocol analysis, responses were 64 of 77 (87%) versus 2",
+   "review": "clear"
+  },
+  {
+   "pmid": "32940765",
+   "x": 25,
+   "n": 75,
+   "printed": "33.8",
+   "exact": 33.333,
+   "snippet": "3%) vs 28/66 (42.4%) at C2. And the culture was positive at 25/75 (33.8%) vs 46/72",
+   "review": "clear"
+  },
+  {
+   "pmid": "25398971",
+   "x": 48,
+   "n": 290,
+   "printed": "17.3",
+   "exact": 16.552,
+   "snippet": "erstimulation syndrome (OHSS). Ongoing pregnancy rates were 48/290 (17.3%) in the r",
+   "review": "clear"
+  },
+  {
+   "pmid": "34133820",
+   "x": 45,
+   "n": 62,
+   "printed": "71",
+   "exact": 72.581,
+   "snippet": "en 38 of 61 (62%), ketorolac 47 of 59 (80%), and diclofenac 45 of 62 (71%; 95% CI f",
+   "review": "clear"
+  }
+ ],
+ "rows": [
+  {
+   "pmid": "38479955",
+   "x": 463,
+   "n": 942,
+   "printed": "48.6",
+   "exact": 49.151,
+   "snippet": "50.4%], respectively). One or more readmissions occurred in 463 of 942 (48.6%) PCI pati"
+  },
+  {
+   "pmid": "38479955",
+   "x": 388,
+   "n": 940,
+   "printed": "41.8",
+   "exact": 41.277,
+   "snippet": "readmissions occurred in 463 of 942 (48.6%) PCI patients vs 388 of 940 (41.8%) CABG pat"
+  },
+  {
+   "pmid": "38479953",
+   "x": 412,
+   "n": 550,
+   "printed": "74.5",
+   "exact": 74.909,
+   "snippet": "se ≥0.3 mg/dL within 48 hours after CM exposure. There were 412 of 550 (74.5%) particip"
+  },
+  {
+   "pmid": "38483534",
+   "x": 15,
+   "n": 276,
+   "printed": "5.6",
+   "exact": 5.435,
+   "snippet": "ion cutoffs in posttransfusion recipients (0/85 [0%] versus 15/276 [5.6%]; P = 0.0"
+  },
+  {
+   "pmid": "38483534",
+   "x": 15,
+   "n": 267,
+   "printed": "5.4",
+   "exact": 5.618,
+   "snippet": "276 [5.6%]; P = 0.03) or ROC-based cutoff (0/94 [0%] versus 15/267 [5.4%]; P = 0.0"
+  },
+  {
+   "pmid": "38489057",
+   "x": 152,
+   "n": 166,
+   "printed": "92.0",
+   "exact": 91.566,
+   "snippet": "with a somewhat higher success rate of chloroprocaine gel: 152/166 (92.0%) chloropr"
+  },
+  {
+   "pmid": "38489057",
+   "x": 153,
+   "n": 172,
+   "printed": "90.5",
+   "exact": 88.953,
+   "snippet": "f chloroprocaine gel: 152/166 (92.0%) chloroprocaine versus 153/172 (90.5%) tetracai"
+  },
+  {
+   "pmid": "38265835",
+   "x": 103,
+   "n": 180,
+   "printed": "54",
+   "exact": 57.222,
+   "snippet": "deaths in individuals with HFimpEF were noncardiovascular (103 of 180 [54%]). For ca"
+  },
+  {
+   "pmid": "38389078",
+   "x": 59,
+   "n": 79,
+   "printed": "60.8",
+   "exact": 74.684,
+   "snippet": "P = 0.433. Six-month mortality occurred in 53/102 (52%) and 59/79 (60.8%) in group"
+  },
+  {
+   "pmid": "38324024",
+   "x": 23,
+   "n": 92,
+   "printed": "28",
+   "exact": 25.0,
+   "snippet": "fference between both methods in late physician evaluation. 23/92 (28%) of paren"
+  },
+  {
+   "pmid": "38349247",
+   "x": 21,
+   "n": 422,
+   "printed": "5.1",
+   "exact": 4.976,
+   "snippet": "of 409 [2.4%] to 23 of 697 [3.3%]; ICA, 26 of 661 [3.9%] to 21 of 422 [5.1%]) and maj"
+  },
+  {
+   "pmid": "38165690",
+   "x": 76,
+   "n": 173,
+   "printed": "43.7",
+   "exact": 43.931,
+   "snippet": "4 to 1.19; eTICI of 2c or greater following the first pass: 76 of 173 [43.7%] vs 74 of"
+  },
+  {
+   "pmid": "38167280",
+   "x": 55,
+   "n": 69,
+   "printed": "78",
+   "exact": 79.71,
+   "snippet": "(of 69 children) took part in the embedded study. Of these, 55/69 (78%) complete"
+  },
+  {
+   "pmid": "38626750",
+   "x": 40,
+   "n": 41,
+   "printed": "17.0",
+   "exact": 97.561,
+   "snippet": "AFs for severe diarrhea were rotavirus (23.5%), adenovirus 40/41 (17.0%), Shigell"
+  },
+  {
+   "pmid": "38108829",
+   "x": 799,
+   "n": 1105,
+   "printed": "72.1",
+   "exact": 72.308,
+   "snippet": "tomatic > 50% carotid stenosis and extracranial dissection, 799/1105 (72.1%) patients"
+  },
+  {
+   "pmid": "38760833",
+   "x": 95,
+   "n": 98,
+   "printed": "98",
+   "exact": 96.939,
+   "snippet": "within 90 days of inclusion were recorded in 98/98 (100%), 95/98 (98%) and 95/9"
+  },
+  {
+   "pmid": "38760833",
+   "x": 95,
+   "n": 98,
+   "printed": "98",
+   "exact": 96.939,
+   "snippet": "of inclusion were recorded in 98/98 (100%), 95/98 (98%) and 95/98 (98%) of parti"
+  },
+  {
+   "pmid": "38698269",
+   "x": 142,
+   "n": 172,
+   "printed": "86.6",
+   "exact": 82.558,
+   "snippet": ", and the patient global impression of improvement (PGI-I). 142 of 172 (86.6%) men were"
+  },
+  {
+   "pmid": "38345793",
+   "x": 28,
+   "n": 105,
+   "printed": "26.9",
+   "exact": 26.667,
+   "snippet": "e more likely to have a documented AD (62 of 104 [59.6%] vs 28 of 105 [26.9%]; P < .00"
+  },
+  {
+   "pmid": "39343051",
+   "x": 12,
+   "n": 16,
+   "printed": "72",
+   "exact": 75.0,
+   "snippet": "t. Of 21 patients, 2 of 5 (40%) undergoing a single EBD and 12 of 16 (72%) undergoi"
+  },
+  {
+   "pmid": "39086232",
+   "x": 1,
+   "n": 14,
+   "printed": "0.3",
+   "exact": 7.143,
+   "snippet": "on stroke were included. mRS 0-1 at 90 days was achieved in 1/14 (0.3%), 43/160"
+  },
+  {
+   "pmid": "39086232",
+   "x": 43,
+   "n": 160,
+   "printed": "14.7",
+   "exact": 26.875,
+   "snippet": "e included. mRS 0-1 at 90 days was achieved in 1/14 (0.3%), 43/160 (14.7%), and 252"
+  },
+  {
+   "pmid": "39086232",
+   "x": 252,
+   "n": 726,
+   "printed": "85.1",
+   "exact": 34.711,
+   "snippet": "at 90 days was achieved in 1/14 (0.3%), 43/160 (14.7%), and 252/726 (85.1%) in the A"
+  },
+  {
+   "pmid": "39237725",
+   "x": 18,
+   "n": 94,
+   "printed": "11",
+   "exact": 19.149,
+   "snippet": "complete one-year follow up. In the prehabilitation group, 18/94 (11%) died or"
+  },
+  {
+   "pmid": "39237725",
+   "x": 19,
+   "n": 88,
+   "printed": "11",
+   "exact": 21.591,
+   "snippet": "(11%) died or experienced cancer recurrence, compared with 19/88 (11%) in the c"
+  },
+  {
+   "pmid": "39237725",
+   "x": 24,
+   "n": 94,
+   "printed": "29",
+   "exact": 25.532,
+   "snippet": "= 0.49). Return to intended oncologic treatment occurred in 24/94 (29%) patients"
+  },
+  {
+   "pmid": "39237725",
+   "x": 18,
+   "n": 94,
+   "printed": "11",
+   "exact": 19.149,
+   "snippet": "t d’un suivi complet à un an. Dans le groupe préadaptation, 18/94 (11%) personne"
+  },
+  {
+   "pmid": "39237725",
+   "x": 19,
+   "n": 88,
+   "printed": "11",
+   "exact": 21.591,
+   "snippet": "s sont décédées ou ont connu une récidive du cancer, contre 19/88 (11 %) dans le"
+  },
+  {
+   "pmid": "39196526",
+   "x": 37,
+   "n": 75,
+   "printed": "36.0",
+   "exact": 49.333,
+   "snippet": "t achieved DAS28-CRP ≤ 2.6 at W24 induced ACR70 response in 37/75 (36.0%), DAS28-C"
+  },
+  {
+   "pmid": "39037800",
+   "x": 586,
+   "n": 973,
+   "printed": "60.1",
+   "exact": 60.226,
+   "snippet": "nalyzed in the induction trial (aged 42.1 [SD, 13.8] years; 586/973 [60.1%] were mal"
+  },
+  {
+   "pmid": "39268864",
+   "x": 31,
+   "n": 201,
+   "printed": "18.5",
+   "exact": 15.423,
+   "snippet": "or's Global Assessment was judged successful at week 12 for 31/201 (18.5%) taking s"
+  },
+  {
+   "pmid": "39268864",
+   "x": 9,
+   "n": 209,
+   "printed": "5.6",
+   "exact": 4.306,
+   "snippet": "ful at week 12 for 31/201 (18.5%) taking spironolactone and 9/209 (5.6%) taking p"
+  },
+  {
+   "pmid": "39162827",
+   "x": 59,
+   "n": 159,
+   "printed": "39.6",
+   "exact": 37.107,
+   "snippet": "nfidence interval (CI) - 3.1 to 3.1]). Mortality at day 28 (59/159 [39.6%] vs 59/15"
+  },
+  {
+   "pmid": "38922632",
+   "x": 16,
+   "n": 251,
+   "printed": "6.6",
+   "exact": 6.375,
+   "snippet": "andard care alone in patients with ACS (functional testing: 16 of 251 [6.6%]; standar"
+  },
+  {
+   "pmid": "38922632",
+   "x": 23,
+   "n": 275,
+   "printed": "8.5",
+   "exact": 8.364,
+   "snippet": "h ACS (functional testing: 16 of 251 [6.6%]; standard care: 23 of 275 [8.5%]; HR, 0.7"
+  },
+  {
+   "pmid": "39206988",
+   "x": 8,
+   "n": 49,
+   "printed": "16.94",
+   "exact": 16.327,
+   "snippet": "88.64%] vs. 23/49 [46.94%]) and grade 4 (27/44 [61.36%] vs. 8/49 [16.94%]) adverse"
+  },
+  {
+   "pmid": "39175843",
+   "x": 4,
+   "n": 617,
+   "printed": "0.60",
+   "exact": 0.648,
+   "snippet": "tricitabine/TDF. Vertical HIV transmission (VT) occurred to 4/617 (0.60%) live-bor"
+  },
+  {
+   "pmid": "38976676",
+   "x": 273,
+   "n": 956,
+   "printed": "28.8",
+   "exact": 28.556,
+   "snippet": "1.02, p = 0.26). In the subgroup, the prevalence of LGA was 273/956 (28.8%) before a"
+  },
+  {
+   "pmid": "38954131",
+   "x": 79,
+   "n": 99,
+   "printed": "79.0",
+   "exact": 79.798,
+   "snippet": ".35). There was significantly more pyuria in the TUC group (79/99 (79.0%) vs. (60/"
+  },
+  {
+   "pmid": "38954131",
+   "x": 60,
+   "n": 109,
+   "printed": "60.9",
+   "exact": 55.046,
+   "snippet": "nificantly more pyuria in the TUC group (79/99 (79.0%) vs. (60/109 (60.9%), 95% CI,"
+  },
+  {
+   "pmid": "39607079",
+   "x": 24,
+   "n": 73,
+   "printed": "33.3",
+   "exact": 32.877,
+   "snippet": "he one-step group than in the two-step group, with rates of 24/73 (33.3%) vs 8/70"
+  },
+  {
+   "pmid": "39607079",
+   "x": 8,
+   "n": 70,
+   "printed": "11.3",
+   "exact": 11.429,
+   "snippet": "than in the two-step group, with rates of 24/73 (33.3%) vs 8/70 (11.3%); P value"
+  },
+  {
+   "pmid": "39799639",
+   "x": 32,
+   "n": 43,
+   "printed": "79",
+   "exact": 74.419,
+   "snippet": "to be approved than pre-accrual (p = 0.016). For planning, 32/43 (79%) pre-accr"
+  },
+  {
+   "pmid": "39446608",
+   "x": 20,
+   "n": 84,
+   "printed": "23.3",
+   "exact": 23.81,
+   "snippet": "esarean rates were 28/103 (27.2%) in the melatonin group vs 20/84 (23.3%) in the p"
+  },
+  {
+   "pmid": "39221516",
+   "x": 27,
+   "n": 67,
+   "printed": "41.8",
+   "exact": 40.299,
+   "snippet": "id-rich lesions, 34 of 55 (61.8%) in the alirocumab arm and 27 of 67 (41.8%) in the p"
+  },
+  {
+   "pmid": "37987842",
+   "x": 6,
+   "n": 18,
+   "printed": "66.6",
+   "exact": 33.333,
+   "snippet": "al flares. In those with histological remission (biopsy 2), 6/18 (66.6%) experien"
+  },
+  {
+   "pmid": "39604861",
+   "x": 12,
+   "n": 30,
+   "printed": "40.7",
+   "exact": 40.0,
+   "snippet": "cantly lower than in the control group (5 of 30 [16.7%] vs. 12 of 30 [40.7%]; P = 0.0"
+  },
+  {
+   "pmid": "39568028",
+   "x": 52,
+   "n": 74,
+   "printed": "82.5",
+   "exact": 70.27,
+   "snippet": "for procedural sedation and analgesia would be accepted by 52/74 (82.5%) children"
+  },
+  {
+   "pmid": "39568028",
+   "x": 65,
+   "n": 74,
+   "printed": "91.5",
+   "exact": 87.838,
+   "snippet": "d analgesia would be accepted by 52/74 (82.5%) children and 65/74 (91.5%) parents"
+  },
+  {
+   "pmid": "39568028",
+   "x": 59,
+   "n": 74,
+   "printed": "88.1",
+   "exact": 79.73,
+   "snippet": "arents in the intranasal dexmedetomidine group respectively 59/74 (88.1%) versus 7"
+  },
+  {
+   "pmid": "39424573",
+   "x": 142,
+   "n": 151,
+   "printed": "91",
+   "exact": 94.04,
+   "snippet": "%) of 300 participants were male and 122 (41%) were female. 142 (91%) of 151 participa"
+  },
+  {
+   "pmid": "39393119",
+   "x": 36,
+   "n": 50,
+   "printed": "76",
+   "exact": 72.0,
+   "snippet": "index were 22.6 ± 6.7 y and 26.1 ± 4.5 kg/m2, respectively. 36/50 (76%) were mal"
+  },
+  {
+   "pmid": "39196580",
+   "x": 27,
+   "n": 61,
+   "printed": "43",
+   "exact": 44.262,
+   "snippet": "rded in 1 of 60 patients (2%) in the mesh group compared to 27 of 61 (43%) in the c"
+  },
+  {
+   "pmid": "39446325",
+   "x": 15,
+   "n": 115,
+   "printed": "11.5",
+   "exact": 13.043,
+   "snippet": "actions after simultaneous administration of RZV and aIIV4 (15 of 115 [11.5%]) was non"
+  },
+  {
+   "pmid": "39446325",
+   "x": 17,
+   "n": 119,
+   "printed": "12.5",
+   "exact": 14.286,
+   "snippet": "was noninferior compared with simultaneous RZV and HD-IIV4 (17 of 119 [12.5%]) (absolu"
+  },
+  {
+   "pmid": "39186288",
+   "x": 31,
+   "n": 60,
+   "printed": "57.1",
+   "exact": 51.667,
+   "snippet": "of 56 [57.1%] in the IER group and from 59 of 68 [86.8%] to 31 of 60 [57.1%] in the C"
+  },
+  {
+   "pmid": "39186288",
+   "x": 60,
+   "n": 137,
+   "printed": "42.6",
+   "exact": 43.796,
+   "snippet": "of dyslipidemia was unchanged between baseline and week 52 (60 of 137 [42.6%] and 37 o"
+  },
+  {
+   "pmid": "39186288",
+   "x": 37,
+   "n": 139,
+   "printed": "27.0",
+   "exact": 26.619,
+   "snippet": "provement in occurrence of impaired hepatic function tests (37 of 139 [27.0%] and 15 o"
+  },
+  {
+   "pmid": "26357697",
+   "x": 1,
+   "n": 24,
+   "printed": "7",
+   "exact": 4.167,
+   "snippet": "= 24) or spontaneous healing (EXT; n = 24). During surgery, 1 (7%) of 24 implants"
+  },
+  {
+   "pmid": "25940520",
+   "x": 25,
+   "n": 4067,
+   "printed": "0.63",
+   "exact": 0.615,
+   "snippet": "o that in patients never interrupting DAPT through 2 years (25/4067 [0.63%] versus 5"
+  },
+  {
+   "pmid": "25940520",
+   "x": 58,
+   "n": 7152,
+   "printed": "0.83",
+   "exact": 0.811,
+   "snippet": "r interrupting DAPT through 2 years (25/4067 [0.63%] versus 58/7152 [0.83%] respecti"
+  },
+  {
+   "pmid": "25461685",
+   "x": 1,
+   "n": 29,
+   "printed": "8.3",
+   "exact": 3.448,
+   "snippet": "rticipants preferred 2D, 16 of 29 (55.2%) preferred 3D, and 1 of 29 (8.3%) had no p"
+  },
+  {
+   "pmid": "25398971",
+   "x": 48,
+   "n": 290,
+   "printed": "17.3",
+   "exact": 16.552,
+   "snippet": "erstimulation syndrome (OHSS). Ongoing pregnancy rates were 48/290 (17.3%) in the r"
+  },
+  {
+   "pmid": "25176293",
+   "x": 1,
+   "n": 3,
+   "printed": "62.9",
+   "exact": 33.333,
+   "snippet": "incision site began at 1/2 the urethral length (83.6%) than 1/3 (62.9%) (P = 0.0"
+  },
+  {
+   "pmid": "26075931",
+   "x": 5,
+   "n": 38,
+   "printed": "11",
+   "exact": 13.158,
+   "snippet": "LESS-TLH group was higher than that in the LESS-LAVH group (5/38 [11%] versus 0"
+  },
+  {
+   "pmid": "25616927",
+   "x": 2,
+   "n": 14,
+   "printed": "14.0",
+   "exact": 14.286,
+   "snippet": "ge: 1.9 to 2.8 h). Patients with AST had less hypertension (2 of 14 [14.0%] vs. 961"
+  },
+  {
+   "pmid": "26445425",
+   "x": 14,
+   "n": 26,
+   "printed": "53.4",
+   "exact": 53.846,
+   "snippet": "Complication rates were 3/26 (11.5 %) in the CRCF group and 14/26 (53.4 %) in the O"
+  },
+  {
+   "pmid": "26581140",
+   "x": 17,
+   "n": 67,
+   "printed": "25.8",
+   "exact": 25.373,
+   "snippet": "s achieved in 11 (16.7%) of 66 patients in the FL group and 17 (25.8%) of 67 patients"
+  },
+  {
+   "pmid": "26185909",
+   "x": 2,
+   "n": 11,
+   "printed": "18.8",
+   "exact": 18.182,
+   "snippet": "ore children treated with thalidomide {10/12 (83.3%) versus 2/11 (18.8%); risk ra"
+  },
+  {
+   "pmid": "26072382",
+   "x": 15,
+   "n": 46,
+   "printed": "15.2",
+   "exact": 32.609,
+   "snippet": ". Of the patients who were not pregnant on the first cycle, 15 of 46 (15.2%) patients"
+  },
+  {
+   "pmid": "26072382",
+   "x": 5,
+   "n": 55,
+   "printed": "5.5",
+   "exact": 9.091,
+   "snippet": "(15.2%) patients assigned to RC discontinued compared with 5 of 55 (5.5%) patients"
+  },
+  {
+   "pmid": "26654738",
+   "x": 17,
+   "n": 31,
+   "printed": "66.7",
+   "exact": 54.839,
+   "snippet": "sis. Of these 15 received PHMB and 16 received RLS. Overall 17 of 31 (66.7% PHMB grou"
+  },
+  {
+   "pmid": "26373676",
+   "x": 37,
+   "n": 51,
+   "printed": "74",
+   "exact": 72.549,
+   "snippet": "re predominantly of the germinal center B-cell-like subtype 37/51 (74%) with no"
+  },
+  {
+   "pmid": "26109117",
+   "x": 24,
+   "n": 68,
+   "printed": "34.3",
+   "exact": 35.294,
+   "snippet": "h worse', 100 mm 'much improved') at weeks 2 and 8. Results 24/68 (34.3%) in the H"
+  },
+  {
+   "pmid": "26049662",
+   "x": 20,
+   "n": 163,
+   "printed": "12.1",
+   "exact": 12.27,
+   "snippet": "0.57), whilst at 1 year it was less for general anaesthesia 20/163(12.1%) versus 3"
+  },
+  {
+   "pmid": "25903509",
+   "x": 41,
+   "n": 72,
+   "printed": "59",
+   "exact": 56.944,
+   "snippet": "d age groups. Results The overall incidence of diarrhea was 41 of 72 (59%) and did"
+  },
+  {
+   "pmid": "25795741",
+   "x": 60,
+   "n": 195,
+   "printed": "29",
+   "exact": 30.769,
+   "snippet": "day mortality in those receiving additional physician care; 60/195 (29%) versus 8"
+  },
+  {
+   "pmid": "26151264",
+   "x": 25,
+   "n": 187,
+   "printed": "13.5",
+   "exact": 13.369,
+   "snippet": "ed in 6 of 184 patients (3.3%) in the warfarin group and in 25 of 187 (13.5%) in the p"
+  },
+  {
+   "pmid": "25656621",
+   "x": 22,
+   "n": 24,
+   "printed": "96",
+   "exact": 91.667,
+   "snippet": "h groups and, at week 48, all patients in the MVC group and 22/24 (96%) in the T"
+  },
+  {
+   "pmid": "25424991",
+   "x": 24,
+   "n": 59,
+   "printed": "43",
+   "exact": 40.678,
+   "snippet": "ir prophylaxis (n=60). Cytomegalovirus DNAemia developed in 24 (43%) of 59 patients"
+  },
+  {
+   "pmid": "25424991",
+   "x": 18,
+   "n": 60,
+   "printed": "31",
+   "exact": 30.0,
+   "snippet": "ed in 24 (43%) of 59 patients in the valacyclovir group and 18 (31%) of 60 patients"
+  },
+  {
+   "pmid": "25726502",
+   "x": 14,
+   "n": 51,
+   "printed": "29",
+   "exact": 27.451,
+   "snippet": ") nor total intracerebral haemorrhage events (8/52 [15%] vs 14/51 [29%], p=0·091"
+  },
+  {
+   "pmid": "26159792",
+   "x": 38,
+   "n": 105,
+   "printed": "34",
+   "exact": 36.19,
+   "snippet": "ith placebo, and in 36 of 100 (36%) men treated with UA and 38 of 105 (34%) treated"
+  },
+  {
+   "pmid": "26056101",
+   "x": 1,
+   "n": 54,
+   "printed": "2.0",
+   "exact": 1.852,
+   "snippet": "icipants discontinuing treatment were similar (respectively 1/54 [2.0%], 1/51 [2"
+  },
+  {
+   "pmid": "27612991",
+   "x": 3,
+   "n": 38,
+   "printed": "76",
+   "exact": 7.895,
+   "snippet": "cy was better in the GrA group, with a reduction from 32 to 3 of 38 (76 %) infants"
+  },
+  {
+   "pmid": "27612991",
+   "x": 5,
+   "n": 45,
+   "printed": "56",
+   "exact": 11.111,
+   "snippet": "3 of 38 (76 %) infants with significant apnea versus 30 to 5 of 45 (56 %) in the G"
+  },
+  {
+   "pmid": "27707686",
+   "x": 88,
+   "n": 99,
+   "printed": "82",
+   "exact": 88.889,
+   "snippet": "ived the allocated intervention (MMR+WEB: n=55; MMR: n=44); 88 of 99 (82%) complete"
+  },
+  {
+   "pmid": "27749549",
+   "x": 7,
+   "n": 49,
+   "printed": "12.24",
+   "exact": 14.286,
+   "snippet": "22%), respectively; in Group G, these recurrence rates were 7/49 (12.24%) and 9/49"
+  },
+  {
+   "pmid": "27749549",
+   "x": 9,
+   "n": 49,
+   "printed": "16.33",
+   "exact": 18.367,
+   "snippet": "; in Group G, these recurrence rates were 7/49 (12.24%) and 9/49 (16.33%, P = 0.03"
+  },
+  {
+   "pmid": "27565897",
+   "x": 5,
+   "n": 8,
+   "printed": "4.8",
+   "exact": 62.5,
+   "snippet": "100 %) and 101/102 (99 %) (p = 0.31), and 5/107 (4.7 %) and 5/8 (4.8 %) (p = 0.9"
+  },
+  {
+   "pmid": "27247166",
+   "x": 31,
+   "n": 55,
+   "printed": "58",
+   "exact": 56.364,
+   "snippet": ". The number of patients who had successful cannulation was 31 of 55 (58%) in the p"
+  },
+  {
+   "pmid": "27052266",
+   "x": 75,
+   "n": 183,
+   "printed": "39.7",
+   "exact": 40.984,
+   "snippet": "y TB patients. The TST and QFT-G were positive (≥ 10 mm) in 75/183 (39.7%) and 45/1"
+  },
+  {
+   "pmid": "26891756",
+   "x": 17,
+   "n": 31,
+   "printed": "48.3",
+   "exact": 54.839,
+   "snippet": "clusion occurred in 7/25 (28.0%) patients on ticagrelor and 17/31 (48.3%) on place"
+  },
+  {
+   "pmid": "27681009",
+   "x": 437,
+   "n": 645,
+   "printed": "65",
+   "exact": 67.752,
+   "snippet": "ysis, youth in \"Housing First\" were stably housed a mean of 437 of 645 (65%) days for"
+  },
+  {
+   "pmid": "27681009",
+   "x": 189,
+   "n": 582,
+   "printed": "31",
+   "exact": 32.474,
+   "snippet": "uth in treatment as usual, who were stably housed a mean of 189 of 582 (31%) days for"
+  },
+  {
+   "pmid": "27225316",
+   "x": 116,
+   "n": 367,
+   "printed": "31.5",
+   "exact": 31.608,
+   "snippet": "allergic disease between the n-3 LCPUFA and control groups (116/367 [31.5%] vs 106/3"
+  },
+  {
+   "pmid": "27059887",
+   "x": 41,
+   "n": 51,
+   "printed": "75",
+   "exact": 80.392,
+   "snippet": "ith placebo (risk ratio 0·63 [95% CI 0·42-0·97]; p=0·0344). 41 (75%) of 51 participa"
+  },
+  {
+   "pmid": "28031210",
+   "x": 121,
+   "n": 148,
+   "printed": "84",
+   "exact": 81.757,
+   "snippet": "(73 intervention group). Age range 19-84 years; 59% female. 121 of 148 (84%; 62 inter"
+  },
+  {
+   "pmid": "27179265",
+   "x": 75,
+   "n": 464,
+   "printed": "16.0",
+   "exact": 16.164,
+   "snippet": "nancy occurred in 94/495 (19.0%) patients in mNC-FET versus 75/464 (16.0%) patients"
+  },
+  {
+   "pmid": "26916176",
+   "x": 30,
+   "n": 83,
+   "printed": "40",
+   "exact": 36.145,
+   "snippet": "weeks gestational age who were treated with hydrocortisone (30 [40%] of 83 vs 21 [23"
+  },
+  {
+   "pmid": "26854486",
+   "x": 27,
+   "n": 51,
+   "printed": "58.3",
+   "exact": 52.941,
+   "snippet": "etinoin- than placebo-treated patients. Rosacea relapsed in 27 (58.3%) of 51 patients"
+  },
+  {
+   "pmid": "26618547",
+   "x": 976,
+   "n": 1108,
+   "printed": "90.8",
+   "exact": 88.087,
+   "snippet": "care. Results One or more questionnaires were completed by 976 of 1108 (90.8%) women re"
+  },
+  {
+   "pmid": "26618547",
+   "x": 957,
+   "n": 1104,
+   "printed": "89.7",
+   "exact": 86.685,
+   "snippet": "by 976 of 1108 (90.8%) women receiving Lifestyle Advice and 957 of 1104 (89.7%) women re"
+  },
+  {
+   "pmid": "26264446",
+   "x": 6,
+   "n": 14,
+   "printed": "42.5",
+   "exact": 42.857,
+   "snippet": "stage disease had breast conservation surgery (BCS) versus 6 (42.5%) of 14 women wit"
+  },
+  {
+   "pmid": "27401352",
+   "x": 11,
+   "n": 102,
+   "printed": "7",
+   "exact": 10.784,
+   "snippet": "0-33.9) for mean cannulation time. In the bevel-down group, 11 of 102 (7 %; 95 % CI"
+  },
+  {
+   "pmid": "26852726",
+   "x": 43,
+   "n": 155,
+   "printed": "10",
+   "exact": 27.742,
+   "snippet": "% CI -5·5 to 6·1). Both drugs had a similar safety profile. 43 (10%) of 155 treatment"
+  },
+  {
+   "pmid": "26852726",
+   "x": 54,
+   "n": 154,
+   "printed": "13",
+   "exact": 35.065,
+   "snippet": "ment-emergent adverse events in the solithromycin group and 54 (13%) of 154 such even"
+  },
+  {
+   "pmid": "26608256",
+   "x": 21,
+   "n": 23,
+   "printed": "81",
+   "exact": 91.304,
+   "snippet": "mptoms, with the exception of gastrointestinal disorders in 21 (81%) of 23 patients"
+  },
+  {
+   "pmid": "26608256",
+   "x": 17,
+   "n": 22,
+   "printed": "65",
+   "exact": 77.273,
+   "snippet": "ers in 21 (81%) of 23 patients in the liraglutide group and 17 (65%) of 22 patients"
+  },
+  {
+   "pmid": "26813209",
+   "x": 98,
+   "n": 405,
+   "printed": "24.3",
+   "exact": 24.198,
+   "snippet": "red eighteen children developed asthma or recurrent wheeze: 98 of 405 (24.3%; 95% CI,"
+  },
+  {
+   "pmid": "26813209",
+   "x": 120,
+   "n": 401,
+   "printed": "30.4",
+   "exact": 29.925,
+   "snippet": "of 405 (24.3%; 95% CI, 18.7%-28.5%) in the 4400-IU group vs 120 of 401 (30.4%, 95% CI,"
+  },
+  {
+   "pmid": "27294349",
+   "x": 1,
+   "n": 2,
+   "printed": "92",
+   "exact": 50.0,
+   "snippet": "significant increase in AUC 0-∞ (75 %), C max (40 %), and t 1/2 (92 %). Slight"
+  },
+  {
+   "pmid": "28333292",
+   "x": 70,
+   "n": 225,
+   "printed": "31.3",
+   "exact": 31.111,
+   "snippet": "ng pregnancy rate [60/225 (26.7%) in the treatment group vs 70/225 (31.3%) in the c"
+  },
+  {
+   "pmid": "28240597",
+   "x": 15,
+   "n": 19,
+   "printed": "79.8",
+   "exact": 78.947,
+   "snippet": ".4% (27/34). SVR 12 was seen in 12/15 (80%) in arm 1 and in 15/19 (79.8%) in arm 2"
+  },
+  {
+   "pmid": "28220514",
+   "x": 16,
+   "n": 23,
+   "printed": "78",
+   "exact": 69.565,
+   "snippet": "ct seen in 25/25 (100%), lowest for the lyophilised product 16/23 (78%; P = 0.02"
+  },
+  {
+   "pmid": "28689520",
+   "x": 2,
+   "n": 3,
+   "printed": "3",
+   "exact": 66.667,
+   "snippet": "4 (4.4%) underwent repeat endoscopy. The Group-Apatient and 2 (3%) of 3 Group-B p"
+  },
+  {
+   "pmid": "28350273",
+   "x": 11,
+   "n": 11,
+   "printed": "95",
+   "exact": 100.0,
+   "snippet": "primary endpoint. In OTSC the success proportion was 100%; 11/11 (95% KI 74.1%"
+  },
+  {
+   "pmid": "28350273",
+   "x": 0,
+   "n": 11,
+   "printed": "95",
+   "exact": 0.0,
+   "snippet": "s 100%; 11/11 (95% KI 74.1% to 100%); in Padlock it was 0%; 0/11 (95% KI 0%-25."
+  },
+  {
+   "pmid": "28372678",
+   "x": 3,
+   "n": 27,
+   "printed": "11.0",
+   "exact": 11.111,
+   "snippet": "perience a clinically significant oxygen desaturation event 3 of 27 (11.0%) versus 1"
+  },
+  {
+   "pmid": "27924392",
+   "x": 29,
+   "n": 144,
+   "printed": "13.9",
+   "exact": 20.139,
+   "snippet": "tients were randomly assigned to undergo either SBTS or ES; 29/144 (13.9%) were exc"
+  },
+  {
+   "pmid": "27717996",
+   "x": 5,
+   "n": 19,
+   "printed": "25.3",
+   "exact": 26.316,
+   "snippet": "of the patient groups was 18/25 (72 %), 15/22 (68.1 %) and 5/19 (25.3 %). There w"
+  },
+  {
+   "pmid": "28617733",
+   "x": 168,
+   "n": 265,
+   "printed": "69.2",
+   "exact": 63.396,
+   "snippet": "dentified through facility-based HTC, and 60 through HIVST; 168/265 (69.2%) and 36/6"
+  },
+  {
+   "pmid": "27993811",
+   "x": 7,
+   "n": 88,
+   "printed": "8.06",
+   "exact": 7.955,
+   "snippet": "60%) and 5/436 (1.15%), and 100-day mortality post-ASCT was 7/88 (8.06%) and 4/21"
+  },
+  {
+   "pmid": "27993811",
+   "x": 4,
+   "n": 219,
+   "printed": "1.85",
+   "exact": 1.826,
+   "snippet": ".15%), and 100-day mortality post-ASCT was 7/88 (8.06%) and 4/219 (1.85%). Conclus"
+  },
+  {
+   "pmid": "28118659",
+   "x": 10,
+   "n": 181,
+   "printed": "5.4",
+   "exact": 5.525,
+   "snippet": "t not with mild to moderate life-threatening complications (10/181 [5.4%] vs 14/18"
+  },
+  {
+   "pmid": "28339993",
+   "x": 84,
+   "n": 1055,
+   "printed": "8.1",
+   "exact": 7.962,
+   "snippet": "ients over 52 weeks in total. Results In the overall study, 84/1055 (8.1%) patients"
+  },
+  {
+   "pmid": "28965718",
+   "x": 13,
+   "n": 35,
+   "printed": "35",
+   "exact": 37.143,
+   "snippet": "group, 13 (35%) of 37 participants in the Vi-TT group, and 13 (35%) of 35 participa"
+  },
+  {
+   "pmid": "28114618",
+   "x": 71,
+   "n": 318,
+   "printed": "23.3",
+   "exact": 22.327,
+   "snippet": "Their TVF rate was higher than that of trial participants (71 of 318 [23.3%] vs 233 o"
+  },
+  {
+   "pmid": "28114618",
+   "x": 233,
+   "n": 1391,
+   "printed": "17.1",
+   "exact": 16.751,
+   "snippet": "igher than that of trial participants (71 of 318 [23.3%] vs 233 of 1391 [17.1%]; P = .02"
+  },
+  {
+   "pmid": "28114618",
+   "x": 23,
+   "n": 318,
+   "printed": "7.7",
+   "exact": 7.233,
+   "snippet": "), which partly reflects a difference in cardiac mortality (23 of 318 [7.7%] vs 60 of"
+  },
+  {
+   "pmid": "28114618",
+   "x": 60,
+   "n": 1391,
+   "printed": "4.5",
+   "exact": 4.313,
+   "snippet": "ects a difference in cardiac mortality (23 of 318 [7.7%] vs 60 of 1391 [4.5%]; P = .03"
+  },
+  {
+   "pmid": "28114618",
+   "x": 91,
+   "n": 1391,
+   "printed": "6.7",
+   "exact": 6.542,
+   "snippet": "Similar 5-year rates were found for myocardial infarction (91 of 1391 [6.7%] vs 22 of"
+  },
+  {
+   "pmid": "28114618",
+   "x": 22,
+   "n": 318,
+   "printed": "7.2",
+   "exact": 6.918,
+   "snippet": "were found for myocardial infarction (91 of 1391 [6.7%] vs 22 of 318 [7.2%]; P = .80"
+  },
+  {
+   "pmid": "28114618",
+   "x": 129,
+   "n": 1391,
+   "printed": "9.7",
+   "exact": 9.274,
+   "snippet": "f 318 [7.2%]; P = .80) and target vessel revascularization (129 of 1391 [9.7%] vs 34 of"
+  },
+  {
+   "pmid": "28114618",
+   "x": 34,
+   "n": 318,
+   "printed": "11.4",
+   "exact": 10.692,
+   "snippet": "and target vessel revascularization (129 of 1391 [9.7%] vs 34 of 318 [11.4%]; P = .36"
+  },
+  {
+   "pmid": "28007790",
+   "x": 40,
+   "n": 80,
+   "printed": "49.4",
+   "exact": 50.0,
+   "snippet": "(50.6%) achieving pregnancy in the EWI group compared with 40/80 (49.4%) in the c"
+  },
+  {
+   "pmid": "28348155",
+   "x": 1,
+   "n": 30,
+   "printed": "35.5",
+   "exact": 3.333,
+   "snippet": "M variants alone (29.7%; 41/138) or in combination with OXA-1/30 (35.5%; 49/138),"
+  },
+  {
+   "pmid": "26918471",
+   "x": 4,
+   "n": 24,
+   "printed": "37.5",
+   "exact": 16.667,
+   "snippet": "operation affected none of the patients in the HA group and 4 of 24 (37.5%) patients"
+  },
+  {
+   "pmid": "28533093",
+   "x": 32,
+   "n": 43,
+   "printed": "78",
+   "exact": 74.419,
+   "snippet": "verse event. 80 (84%) of 95 events in the vaccine group and 32 (78%) of 43 events in"
+  },
+  {
+   "pmid": "28642008",
+   "x": 4,
+   "n": 254,
+   "printed": "3",
+   "exact": 1.575,
+   "snippet": "e-daily group; p=0·85) and grade 3-4 radiation pneumonitis (4 [3%] of 254 vs 4 [2%]"
+  },
+  {
+   "pmid": "28438473",
+   "x": 317,
+   "n": 325,
+   "printed": "96",
+   "exact": 97.538,
+   "snippet": "e safety population (all patients who initiated treatment), 317 (96%) of 325 patients"
+  },
+  {
+   "pmid": "28438473",
+   "x": 282,
+   "n": 332,
+   "printed": "86",
+   "exact": 84.94,
+   "snippet": "d at least one grade 3 or worse adverse event compared with 282 (86%) of 332 in the ch"
+  },
+  {
+   "pmid": "28651865",
+   "x": 30,
+   "n": 447,
+   "printed": "11.6",
+   "exact": 6.711,
+   "snippet": "o differences were found in the 10 year risk of any stroke (30/447 [11.6%] vs. 29/4"
+  },
+  {
+   "pmid": "28651865",
+   "x": 29,
+   "n": 433,
+   "printed": "11.0",
+   "exact": 6.697,
+   "snippet": "found in the 10 year risk of any stroke (30/447 [11.6%] vs. 29/433 [11.0%], p = .90"
+  },
+  {
+   "pmid": "28651865",
+   "x": 85,
+   "n": 447,
+   "printed": "27.9",
+   "exact": 19.016,
+   "snippet": "33 [11.0%], p = .900) or cardiovascular (non-stroke) death (85/447 [27.9%] vs. 93/4"
+  },
+  {
+   "pmid": "28651865",
+   "x": 93,
+   "n": 433,
+   "printed": "32.1",
+   "exact": 21.478,
+   "snippet": "0) or cardiovascular (non-stroke) death (85/447 [27.9%] vs. 93/433 [32.1%], p = .30"
+  },
+  {
+   "pmid": "28126707",
+   "x": 51,
+   "n": 70,
+   "printed": "70",
+   "exact": 72.857,
+   "snippet": "nts, patients were receiving antidepressant therapy, and at 51 of 70 (70%) assessme"
+  },
+  {
+   "pmid": "28007428",
+   "x": 175,
+   "n": 505,
+   "printed": "26",
+   "exact": 34.653,
+   "snippet": "r numbers of patients had adverse events in the two groups (175 [26%] of 505 vs 177 [2"
+  },
+  {
+   "pmid": "28007428",
+   "x": 177,
+   "n": 490,
+   "printed": "26",
+   "exact": 36.122,
+   "snippet": "s had adverse events in the two groups (175 [26%] of 505 vs 177 [26%] of 490, p=0·87),"
+  },
+  {
+   "pmid": "27941394",
+   "x": 64,
+   "n": 77,
+   "printed": "87",
+   "exact": 83.117,
+   "snippet": "al 0.75-1.18). In the per-protocol analysis, responses were 64 of 77 (87%) versus 2"
+  },
+  {
+   "pmid": "29868830",
+   "x": 14,
+   "n": 410,
+   "printed": "3.33",
+   "exact": 3.415,
+   "snippet": "in the periodontal treatment group, and 52/410 (12.68%) and 14/410 (3.33%) respecti"
+  },
+  {
+   "pmid": "30406392",
+   "x": 25,
+   "n": 68,
+   "printed": "36.5",
+   "exact": 36.765,
+   "snippet": "tended to be methane producer more often (13/23 [56.5%] vs. 25/68 [36.5%], p = 0.0"
+  },
+  {
+   "pmid": "29607580",
+   "x": 4,
+   "n": 53,
+   "printed": "8.3",
+   "exact": 7.547,
+   "snippet": "e significantly less likely to develop flatus incontinence [4/53 (8.3%) vs 13/55"
+  },
+  {
+   "pmid": "29607580",
+   "x": 13,
+   "n": 55,
+   "printed": "26.0",
+   "exact": 23.636,
+   "snippet": "less likely to develop flatus incontinence [4/53 (8.3%) vs 13/55 (26.0%); RR: 0.3"
+  },
+  {
+   "pmid": "30610771",
+   "x": 57,
+   "n": 64,
+   "printed": "89.9",
+   "exact": 89.062,
+   "snippet": "atients was significantly higher in the intervention group (57/64 [89.9%] vs 41/61"
+  },
+  {
+   "pmid": "29889843",
+   "x": 105,
+   "n": 110,
+   "printed": "95.51",
+   "exact": 95.455,
+   "snippet": "ontaining regimen than the tetracycline-containing regimen: 105/110 (95.51%; 95% conf"
+  },
+  {
+   "pmid": "29552921",
+   "x": 62,
+   "n": 81,
+   "printed": "72",
+   "exact": 76.543,
+   "snippet": ", retention, data completeness and adherence. Results About 62/81 (72%) of eligi"
+  },
+  {
+   "pmid": "29629665",
+   "x": 820,
+   "n": 906,
+   "printed": "8",
+   "exact": 90.508,
+   "snippet": "and overdiagnosis. Results Screening compliance was 82%, 72,820 (8%) of 906,064 exams"
+  },
+  {
+   "pmid": "30307410",
+   "x": 79,
+   "n": 81,
+   "printed": "96.3",
+   "exact": 97.531,
+   "snippet": "n, patient (PS) and graft (GS) survival. Results At 1 year, 79/81 (96.3%) ATLG and"
+  },
+  {
+   "pmid": "29590407",
+   "x": 119,
+   "n": 173,
+   "printed": "68.6",
+   "exact": 68.786,
+   "snippet": "nalysis clarified in the placebo group that FN incidents of 119/173 (68.6%), the mea"
+  },
+  {
+   "pmid": "29636004",
+   "x": 10,
+   "n": 51,
+   "printed": "20.4",
+   "exact": 19.608,
+   "snippet": "s the hemodynamic changes. Results The incidence of OIC was 10/51 (20.4%) in group"
+  },
+  {
+   "pmid": "29300971",
+   "x": 17,
+   "n": 29,
+   "printed": "55.2",
+   "exact": 58.621,
+   "snippet": "versities Osteoarthritis Index at six months was present in 17 of 29 (55.2%) in the p"
+  },
+  {
+   "pmid": "29926087",
+   "x": 51,
+   "n": 65,
+   "printed": "78.9",
+   "exact": 78.462,
+   "snippet": "atment: suicide attempts (65 [90.3%] of 72 receiving DBT vs 51 [78.9%] of 65 receiving"
+  },
+  {
+   "pmid": "29787937",
+   "x": 452,
+   "n": 1723,
+   "printed": "26.0",
+   "exact": 26.233,
+   "snippet": "problem) at 6 months post randomisation. Results A total of 452 (26.0%) of 1723 children"
+  },
+  {
+   "pmid": "30193571",
+   "x": 21,
+   "n": 32,
+   "printed": "71.8",
+   "exact": 65.625,
+   "snippet": "AW subjects, whereas intraoperative hypothermia occurred in 21/32 (71.8%) of PW pa"
+  },
+  {
+   "pmid": "29915123",
+   "x": 177,
+   "n": 2102,
+   "printed": "8.3",
+   "exact": 8.421,
+   "snippet": "ccurred in 138/2130 (6.5%) of patients on ticagrelor and in 177/2102 (8.3%) on aspir"
+  },
+  {
+   "pmid": "29795579",
+   "x": 238,
+   "n": 1152,
+   "printed": "24.6",
+   "exact": 20.66,
+   "snippet": ". Sixty-seven of 238 (17.4%) control group participants and 238 of 1152 (24.6%) interven"
+  },
+  {
+   "pmid": "29494727",
+   "x": 124,
+   "n": 208,
+   "printed": "59.2",
+   "exact": 59.615,
+   "snippet": "atment. Results Mean (SD) patient age was 62.6 (8.8) years; 124 of 208 (59.2%) were mal"
+  },
+  {
+   "pmid": "29494727",
+   "x": 197,
+   "n": 208,
+   "printed": "94.6",
+   "exact": 94.712,
+   "snippet": "age was 62.6 (8.8) years; 124 of 208 (59.2%) were male and 197 of 208 (94.6%) were whi"
+  },
+  {
+   "pmid": "28985263",
+   "x": 16,
+   "n": 40,
+   "printed": "42",
+   "exact": 40.0,
+   "snippet": "s of postural stability, muscle strength or function. About 16/40 (42%) of patie"
+  },
+  {
+   "pmid": "29269199",
+   "x": 11,
+   "n": 110,
+   "printed": "10.1",
+   "exact": 10.0,
+   "snippet": "omization). Parenteral nutrition associated cholestasis was 11 of 110 (10.1%) in the i"
+  },
+  {
+   "pmid": "29710295",
+   "x": 5,
+   "n": 247,
+   "printed": "1",
+   "exact": 2.024,
+   "snippet": "nd 3/248 [1%] in the nitrofurantoin group vs 5/247 [2%] and 5/247 [1%] in the f"
+  },
+  {
+   "pmid": "29223479",
+   "x": 4,
+   "n": 76,
+   "printed": "5.4",
+   "exact": 5.263,
+   "snippet": "ring post-treatment follow-up, 2/72 (2.8%), 3/75 (4.0%) and 4/76 (5.4%) patients"
+  },
+  {
+   "pmid": "29695348",
+   "x": 334,
+   "n": 663,
+   "printed": "53",
+   "exact": 50.377,
+   "snippet": "ity-of-life questionnaires at baseline 1 were available for 334 (53%) of 663 patients"
+  },
+  {
+   "pmid": "29758184",
+   "x": 95,
+   "n": 194,
+   "printed": "49.5",
+   "exact": 48.969,
+   "snippet": "measures TPK button culture positivity. Results A total of 95 of 194 (49.5%) study pa"
+  },
+  {
+   "pmid": "31601530",
+   "x": 414,
+   "n": 575,
+   "printed": "81",
+   "exact": 72.0,
+   "snippet": "gned to TAU group. Between Jan 1, 2014, and March 31, 2017, 414 (81%) of 575 phase 1 p"
+  },
+  {
+   "pmid": "31486915",
+   "x": 5,
+   "n": 14,
+   "printed": "33",
+   "exact": 35.714,
+   "snippet": "ain medication use at the 2-week postoperative visit versus 5/14 (33%) for bice"
+  },
+  {
+   "pmid": "31387756",
+   "x": 16,
+   "n": 68,
+   "printed": "12.8",
+   "exact": 23.529,
+   "snippet": "after HIPEC administration as compared with surgery alone - 16/68 (12.8%) vs. 39/5"
+  },
+  {
+   "pmid": "31387756",
+   "x": 39,
+   "n": 55,
+   "printed": "27.6",
+   "exact": 70.909,
+   "snippet": "stration as compared with surgery alone - 16/68 (12.8%) vs. 39/55 (27.6%) (p Concl"
+  },
+  {
+   "pmid": "30701368",
+   "x": 4,
+   "n": 80,
+   "printed": "5.1",
+   "exact": 5.0,
+   "snippet": "s Five years after surgery, in group A (mesh) we have found 4/80 (5.1%) incision"
+  },
+  {
+   "pmid": "30264242",
+   "x": 19,
+   "n": 25,
+   "printed": "74",
+   "exact": 76.0,
+   "snippet": "l rates in the debridement and ankle distraction group were 19 of 25 (74%) and 15 o"
+  },
+  {
+   "pmid": "30264242",
+   "x": 15,
+   "n": 25,
+   "printed": "59",
+   "exact": 60.0,
+   "snippet": "idement and ankle distraction group were 19 of 25 (74%) and 15 of 25 (59%) at 3 yea"
+  },
+  {
+   "pmid": "30264242",
+   "x": 12,
+   "n": 25,
+   "printed": "49",
+   "exact": 48.0,
+   "snippet": "ll survival rates in the ankle debridement alone group were 12 of 25 (49%) and 9 of"
+  },
+  {
+   "pmid": "30264242",
+   "x": 9,
+   "n": 25,
+   "printed": "34",
+   "exact": 36.0,
+   "snippet": "n the ankle debridement alone group were 12 of 25 (49%) and 9 of 25 (34%) at 3 yea"
+  },
+  {
+   "pmid": "31840969",
+   "x": 16,
+   "n": 30,
+   "printed": "48",
+   "exact": 53.333,
+   "snippet": "30 and GrB=33). At T0, eye specimen positivity was found in 16/30 (48%) in group"
+  },
+  {
+   "pmid": "31551154",
+   "x": 132,
+   "n": 224,
+   "printed": "60",
+   "exact": 58.929,
+   "snippet": "9 [33%]; ARD = 13; 95% CI, 4-21) and cumulative live birth (132/224 [60%] vs. 97/2"
+  },
+  {
+   "pmid": "30633755",
+   "x": 24,
+   "n": 29,
+   "printed": "80",
+   "exact": 82.759,
+   "snippet": "(92, 100%)) patients in the electric stimulation group and 24 of 29 (80% (63, 91%)"
+  },
+  {
+   "pmid": "30795782",
+   "x": 61,
+   "n": 134,
+   "printed": "43",
+   "exact": 45.522,
+   "snippet": "aged with IC. A total of 114/218 (53%) patients with IC and 61/134 (43%) with SFC"
+  },
+  {
+   "pmid": "31160472",
+   "x": 26,
+   "n": 31,
+   "printed": "84.9",
+   "exact": 83.871,
+   "snippet": "significant result compared with that of the control group (26 of 31 [84.9%]). No sig"
+  },
+  {
+   "pmid": "30500967",
+   "x": 1,
+   "n": 3,
+   "printed": "30.3",
+   "exact": 33.333,
+   "snippet": "racteristics were similar between groups, and approximately 1/3 (30.3%) had myco"
+  },
+  {
+   "pmid": "30776996",
+   "x": 147,
+   "n": 2196,
+   "printed": "6.8",
+   "exact": 6.694,
+   "snippet": "tients with TLD<12 hours, the primary end point occurred in 147/2196 (6.8%) randomiz"
+  },
+  {
+   "pmid": "30508643",
+   "x": 702,
+   "n": 5088,
+   "printed": "13.2",
+   "exact": 13.797,
+   "snippet": "control of asthma symptoms in the previous 4 weeks. Results 702 (13.2%) of 5088 participa"
+  },
+  {
+   "pmid": "31390037",
+   "x": 48,
+   "n": 140,
+   "printed": "34.4",
+   "exact": 34.286,
+   "snippet": "ecrease was significantly higher in the intervention group (48 of 140 [34.4%] to 6 of"
+  },
+  {
+   "pmid": "31390037",
+   "x": 13,
+   "n": 112,
+   "printed": "10.4",
+   "exact": 11.607,
+   "snippet": "4.4%] to 6 of 135 [4.4%] compared with 34 of 133 [25.6%] to 13 of 112 [10.4%], P = .02"
+  },
+  {
+   "pmid": "30683057",
+   "x": 22,
+   "n": 35,
+   "printed": "69",
+   "exact": 62.857,
+   "snippet": "atients. A reliable oxygen saturation trace was obtained in 22/35 (69%) of patie"
+  },
+  {
+   "pmid": "31251550",
+   "x": 257,
+   "n": 363,
+   "printed": "70.2",
+   "exact": 70.799,
+   "snippet": "population: 196/363 (54.0%) females; 167/363 46.0%) males; (257/363 (70.2%) were whi"
+  },
+  {
+   "pmid": "31358540",
+   "x": 1,
+   "n": 2,
+   "printed": "60",
+   "exact": 50.0,
+   "snippet": "fety. Most treatment-related adverse events (AE) were grade 1/2 (60%). Fatigue"
+  },
+  {
+   "pmid": "31340979",
+   "x": 5,
+   "n": 33,
+   "printed": "9",
+   "exact": 15.152,
+   "snippet": "tion of anti-PLA2R1 antibodies at month 6 (4/8 (50%) versus 5/33 (9%) P =0.05)"
+  },
+  {
+   "pmid": "31111862",
+   "x": 46,
+   "n": 496,
+   "printed": "9.5",
+   "exact": 9.274,
+   "snippet": "525 patients (7.0%) treated with sirolimus-eluting stents, 46 of 496 (9.5%) with eve"
+  },
+  {
+   "pmid": "31111862",
+   "x": 48,
+   "n": 485,
+   "printed": "10.0",
+   "exact": 9.897,
+   "snippet": "tents, 46 of 496 (9.5%) with everolimus-eluting stents, and 48 of 485 (10.0%) with zot"
+  },
+  {
+   "pmid": "31279641",
+   "x": 214,
+   "n": 448,
+   "printed": "47.75",
+   "exact": 47.768,
+   "snippet": "ification variables. Results PD-L1 staining was assessed in 214 (47.75%) of 448 patients."
+  },
+  {
+   "pmid": "30704260",
+   "x": 22,
+   "n": 155,
+   "printed": "14.4",
+   "exact": 14.194,
+   "snippet": "iated with lower incidences of cardiogenic pulmonary edema (22/155 [14.4%] vs. 43/1"
+  },
+  {
+   "pmid": "30017404",
+   "x": 8,
+   "n": 127,
+   "printed": "6.5",
+   "exact": 6.299,
+   "snippet": "atic biopsy arm (median, 12 cores; p=0.09). In the MRI arm, 8/127 (6.5%) patients"
+  },
+  {
+   "pmid": "31668850",
+   "x": 45,
+   "n": 92,
+   "printed": "51",
+   "exact": 48.913,
+   "snippet": "atients in the palbociclib plus endocrine therapy group and 45 (51%) of 92 in the ca"
+  },
+  {
+   "pmid": "31575503",
+   "x": 22,
+   "n": 34,
+   "printed": "73",
+   "exact": 64.706,
+   "snippet": "most common treatment-emergent adverse events were anaemia (22 [73%] of 34), neutrop"
+  },
+  {
+   "pmid": "31053405",
+   "x": 17,
+   "n": 253,
+   "printed": "6.4",
+   "exact": 6.719,
+   "snippet": "spectively). Second primary malignancies were identified in 17/253 (6.4%) and 19/2"
+  },
+  {
+   "pmid": "31053405",
+   "x": 19,
+   "n": 263,
+   "printed": "7.0",
+   "exact": 7.224,
+   "snippet": "d primary malignancies were identified in 17/253 (6.4%) and 19/263 (7.0%) of patie"
+  },
+  {
+   "pmid": "30225981",
+   "x": 272,
+   "n": 333,
+   "printed": "82.7",
+   "exact": 81.682,
+   "snippet": "e Hispanic and 64% were breastfeeding. Infant retention was 272/333 (82.7%) at 6 mon"
+  },
+  {
+   "pmid": "30621746",
+   "x": 47,
+   "n": 55,
+   "printed": "83.8",
+   "exact": 85.455,
+   "snippet": "ol subset. Non-inferiority was concluded for LDA at 1 year (47/55 (83.8%) patients"
+  },
+  {
+   "pmid": "30621746",
+   "x": 48,
+   "n": 58,
+   "printed": "81.3",
+   "exact": 82.759,
+   "snippet": "LDA at 1 year (47/55 (83.8%) patients in the full-dose and 48/58 (81.3%) patients"
+  },
+  {
+   "pmid": "30633891",
+   "x": 20,
+   "n": 40,
+   "printed": "66",
+   "exact": 50.0,
+   "snippet": "of their waking hours than children with vision worse than 20/40 (66% vs 42%, P"
+  },
+  {
+   "pmid": "30682576",
+   "x": 5,
+   "n": 24,
+   "printed": "9.4",
+   "exact": 20.833,
+   "snippet": "16; P = .003), less likely to contact staff about symptoms (5/24 [9.4%] vs 27/15"
+  },
+  {
+   "pmid": "33345890",
+   "x": 258,
+   "n": 2241,
+   "printed": "11.8",
+   "exact": 11.513,
+   "snippet": "istic regression. Results Of the original study population, 258 of 2241 (11.8%) subjects"
+  },
+  {
+   "pmid": "32483939",
+   "x": 6,
+   "n": 10,
+   "printed": "46",
+   "exact": 60.0,
+   "snippet": "resting/moving period on postoperative days 1, 2 and 3 was 6/10 (46%/77%), 6/9"
+  },
+  {
+   "pmid": "32483939",
+   "x": 6,
+   "n": 9,
+   "printed": "46",
+   "exact": 66.667,
+   "snippet": "period on postoperative days 1, 2 and 3 was 6/10 (46%/77%), 6/9 (46%/69%) and"
+  },
+  {
+   "pmid": "32483939",
+   "x": 3,
+   "n": 5,
+   "printed": "23",
+   "exact": 60.0,
+   "snippet": "ative days 1, 2 and 3 was 6/10 (46%/77%), 6/9 (46%/69%) and 3/5 (23%/38%) in t"
+  },
+  {
+   "pmid": "32483939",
+   "x": 5,
+   "n": 7,
+   "printed": "38",
+   "exact": 71.429,
+   "snippet": "6/9 (46%/69%) and 3/5 (23%/38%) in the non-Glue group, and 5/7 (38%/54%), 2/7"
+  },
+  {
+   "pmid": "32483939",
+   "x": 2,
+   "n": 7,
+   "printed": "15",
+   "exact": 28.571,
+   "snippet": "and 3/5 (23%/38%) in the non-Glue group, and 5/7 (38%/54%), 2/7 (15%/54%) and"
+  },
+  {
+   "pmid": "32483939",
+   "x": 1,
+   "n": 3,
+   "printed": "8",
+   "exact": 33.333,
+   "snippet": "in the non-Glue group, and 5/7 (38%/54%), 2/7 (15%/54%) and 1/3 (8%/23%) in t"
+  },
+  {
+   "pmid": "32349927",
+   "x": 57,
+   "n": 72,
+   "printed": "78",
+   "exact": 79.167,
+   "snippet": "osterone levels returned to normal values (> 200 ng/mL) for 57 (78%) of 72 evaluable"
+  },
+  {
+   "pmid": "31758571",
+   "x": 54,
+   "n": 157,
+   "printed": "47",
+   "exact": 34.395,
+   "snippet": "herapy (P = 0.42). Side effects of therapy were reported in 54/157 (47%) patients"
+  },
+  {
+   "pmid": "31758571",
+   "x": 62,
+   "n": 156,
+   "printed": "53",
+   "exact": 39.744,
+   "snippet": "/157 (47%) patients taking sequential therapy compared with 62/156 (53%) taking c"
+  },
+  {
+   "pmid": "31758735",
+   "x": 10,
+   "n": 11,
+   "printed": "90.8",
+   "exact": 90.909,
+   "snippet": "90.9%; 95% CI: 62.3%-98.4%) in the 8-week group. At Week 8, 10/11 (90.8%; 95% CI:"
+  },
+  {
+   "pmid": "31719052",
+   "x": 1086,
+   "n": 5624,
+   "printed": "75",
+   "exact": 19.31,
+   "snippet": "EAE of which 150/1449 (10%) were severe (CTCAE grades 3-5). 1086/5624 (75%) were eve"
+  },
+  {
+   "pmid": "32471369",
+   "x": 25,
+   "n": 60,
+   "printed": "64",
+   "exact": 41.667,
+   "snippet": "very 30.7 ± 9.4 vs 29.6 ± 11.5 h p = 0.64, Cesarean section 25/60 (64%) vs 28/64"
+  },
+  {
+   "pmid": "32471369",
+   "x": 28,
+   "n": 64,
+   "printed": "60",
+   "exact": 43.75,
+   "snippet": "vs 29.6 ± 11.5 h p = 0.64, Cesarean section 25/60 (64%) vs 28/64 (60%) RR 0.9 9"
+  },
+  {
+   "pmid": "31900172",
+   "x": 5,
+   "n": 20,
+   "printed": "29",
+   "exact": 25.0,
+   "snippet": "ts 20 G6PD-normal participants were randomized in each arm. 5 (29%) of 20 participa"
+  },
+  {
+   "pmid": "32649617",
+   "x": 5,
+   "n": 13,
+   "printed": "83.3",
+   "exact": 38.462,
+   "snippet": "e frequent in the mesh group compared to the no-mesh group (5 [83.3%] of 13 vs. 1 [14"
+  },
+  {
+   "pmid": "32649617",
+   "x": 1,
+   "n": 13,
+   "printed": "14.3",
+   "exact": 7.692,
+   "snippet": "sh group compared to the no-mesh group (5 [83.3%] of 13 vs. 1 [14.3%] of 13 patients,"
+  },
+  {
+   "pmid": "32146521",
+   "x": 117,
+   "n": 188,
+   "printed": "62.7",
+   "exact": 62.234,
+   "snippet": "c floor muscle training versus usual care. Of 374 subjects, 117/188 (62.7%) in the U"
+  },
+  {
+   "pmid": "31961420",
+   "x": 84,
+   "n": 148,
+   "printed": "56.5",
+   "exact": 56.757,
+   "snippet": "ation, flutter, or tachycardia at 12 months was observed in 84 of 148 (56.5%) of those"
+  },
+  {
+   "pmid": "33050920",
+   "x": 2,
+   "n": 3,
+   "printed": "29.1",
+   "exact": 66.667,
+   "snippet": "f treatment (p = 0.26). However, radiation dermatitis grade 2/3 (29.1% vs. 20.1"
+  },
+  {
+   "pmid": "32333883",
+   "x": 158,
+   "n": 251,
+   "printed": "61",
+   "exact": 62.948,
+   "snippet": "concentration of less than 3·0 mmol/L (166 [69%] of 240 vs 158 [61%] of 251; RR 1·30"
+  },
+  {
+   "pmid": "32876655",
+   "x": 39,
+   "n": 44,
+   "printed": "91",
+   "exact": 88.636,
+   "snippet": "7 [41%]; P = .35) compared with the supervised stage (HIIT, 39 of 44 [91%]; MICT, 3"
+  },
+  {
+   "pmid": "31236782",
+   "x": 12,
+   "n": 28,
+   "printed": "43.0",
+   "exact": 42.857,
+   "snippet": "nting for crossovers, the difference was still significant (12/28 [43.0%] vs. 6/34"
+  },
+  {
+   "pmid": "32740192",
+   "x": 181,
+   "n": 331,
+   "printed": "58",
+   "exact": 54.683,
+   "snippet": "l Scale -1 to +1) over the first 48 hours (229/325 [71%] vs 181/331 [58%]; p = 0.0"
+  },
+  {
+   "pmid": "32237060",
+   "x": 33,
+   "n": 265,
+   "printed": "12.6",
+   "exact": 12.453,
+   "snippet": "vessel failure occurred in 19/252 (7.6%) of the EES and in 33/265 (12.6%) of the Z"
+  },
+  {
+   "pmid": "32237060",
+   "x": 20,
+   "n": 265,
+   "printed": "7.7",
+   "exact": 7.547,
+   "snippet": "was required in EES in 6/252 (2.4%) patients and in ZES in 20/265 (7.7%) patients"
+  },
+  {
+   "pmid": "32043561",
+   "x": 22,
+   "n": 46,
+   "printed": "48.2",
+   "exact": 47.826,
+   "snippet": ". Results At 6 months, 25 of 41 (61.0%) OT participants and 22 of 46 (48.2%) diabetes"
+  },
+  {
+   "pmid": "32032196",
+   "x": 9,
+   "n": 19,
+   "printed": "45.0",
+   "exact": 47.368,
+   "snippet": "0.45). Una hernia parastomal radiológica estuvo presente en 9/19 (45.0%) en el gr"
+  },
+  {
+   "pmid": "32032196",
+   "x": 9,
+   "n": 35,
+   "printed": "25.9",
+   "exact": 25.714,
+   "snippet": "ltados a largo plazo de acuerdo con los datos del registro, 9/35 (25.9%) sujetos"
+  },
+  {
+   "pmid": "32032196",
+   "x": 1,
+   "n": 35,
+   "printed": "2.7",
+   "exact": 2.857,
+   "snippet": "durante el período de seguimiento (p = 0,10). Además, solo 1/35 (2.7%) en el gr"
+  },
+  {
+   "pmid": "32032196",
+   "x": 9,
+   "n": 19,
+   "printed": "45.0",
+   "exact": 47.368,
+   "snippet": "(p = 0.45). A radiological parastomal hernia was present in 9 of 19 (45.0%) subjects"
+  },
+  {
+   "pmid": "32032196",
+   "x": 9,
+   "n": 35,
+   "printed": "25.9",
+   "exact": 25.714,
+   "snippet": "screened for long-term results according to register data, 9 of 35 (25.9%) subjects"
+  },
+  {
+   "pmid": "32032196",
+   "x": 16,
+   "n": 35,
+   "printed": "45.6",
+   "exact": 45.714,
+   "snippet": "gister data, 9 of 35 (25.9%) subjects in the mesh group and 16 of 35 (45.6%) subjects"
+  },
+  {
+   "pmid": "32032196",
+   "x": 1,
+   "n": 35,
+   "printed": "2.7",
+   "exact": 2.857,
+   "snippet": "a during the follow-up period (p = 0.10). In addition, only 1 of 35 (2.7%) subjects"
+  },
+  {
+   "pmid": "33034628",
+   "x": 19,
+   "n": 26,
+   "printed": "8.8",
+   "exact": 73.077,
+   "snippet": "/216 [17.1%]), disease-specific survival (23/227 [10.1%] vs 19/26 [8.8%]), and ov"
+  },
+  {
+   "pmid": "32717180",
+   "x": 12,
+   "n": 71,
+   "printed": "23",
+   "exact": 16.901,
+   "snippet": "bdominal adverse events (haemorrhage, digestive leakage) in 12 (23%) of 71 patients"
+  },
+  {
+   "pmid": "32709643",
+   "x": 14,
+   "n": 21,
+   "printed": "68",
+   "exact": 66.667,
+   "snippet": "all 30-day mortality was 27.3%. Of these deceased patients, 14/21 (68%) either d"
+  },
+  {
+   "pmid": "32840598",
+   "x": 54,
+   "n": 946,
+   "printed": "5.9",
+   "exact": 5.708,
+   "snippet": "OF carriers (4.0%) in the genotype-guided therapy group and 54 of 946 (5.9%) in the c"
+  },
+  {
+   "pmid": "32840598",
+   "x": 113,
+   "n": 2641,
+   "printed": "4.4",
+   "exact": 4.279,
+   "snippet": "all randomized patients, the primary end point occurred in 113 of 2641 (4.4%) in the g"
+  },
+  {
+   "pmid": "32840598",
+   "x": 135,
+   "n": 2635,
+   "printed": "5.3",
+   "exact": 5.123,
+   "snippet": "rred in 113 of 2641 (4.4%) in the genotype-guided group and 135 of 2635 (5.3%) in the c"
+  },
+  {
+   "pmid": "32185660",
+   "x": 15,
+   "n": 21,
+   "printed": "65",
+   "exact": 71.429,
+   "snippet": "4). Suicide discussion was more likely among MAPS patients (15/21 [65%]) than co"
+  },
+  {
+   "pmid": "32185660",
+   "x": 8,
+   "n": 27,
+   "printed": "35",
+   "exact": 29.63,
+   "snippet": "ore likely among MAPS patients (15/21 [65%]) than controls (8/27 [35%]). Logist"
+  },
+  {
+   "pmid": "32847946",
+   "x": 387,
+   "n": 985,
+   "printed": "39.1",
+   "exact": 39.289,
+   "snippet": "5% CI 0.72 to 1.31). For the predictive analysis, among the 387/985 (39.1%) 24-hour"
+  },
+  {
+   "pmid": "31740348",
+   "x": 248,
+   "n": 383,
+   "printed": "66",
+   "exact": 64.752,
+   "snippet": "less than 50 copies per mL than did of the darunavir group (248 [66%] of 383; differen"
+  },
+  {
+   "pmid": "34133820",
+   "x": 45,
+   "n": 62,
+   "printed": "71",
+   "exact": 72.581,
+   "snippet": "en 38 of 61 (62%), ketorolac 47 of 59 (80%), and diclofenac 45 of 62 (71%; 95% CI f"
+  },
+  {
+   "pmid": "34175638",
+   "x": 22,
+   "n": 90,
+   "printed": "25.6",
+   "exact": 24.444,
+   "snippet": "of CPSP at three postoperative months from 46/89 (51.7%) to 22/90 (25.6%), relativ"
+  },
+  {
+   "pmid": "34098039",
+   "x": 146,
+   "n": 166,
+   "printed": "94.0",
+   "exact": 87.952,
+   "snippet": "n-in period of which 166 had complete data. By self-report, 146/166 (94.0%) and 153/"
+  },
+  {
+   "pmid": "33838534",
+   "x": 7,
+   "n": 95,
+   "printed": "8.4",
+   "exact": 7.368,
+   "snippet": "d from the study due to changing FIO 2 during intervention (7/95 (8.4%) vs. 2/95"
+  },
+  {
+   "pmid": "33484158",
+   "x": 28,
+   "n": 79,
+   "printed": "37",
+   "exact": 35.443,
+   "snippet": ".62, P b 5, 95% CI 2.61-12.56, P = 0.004), episiotomy rates 28/79 (37%) versus 4"
+  },
+  {
+   "pmid": "33484158",
+   "x": 40,
+   "n": 77,
+   "printed": "53",
+   "exact": 51.948,
+   "snippet": "2.61-12.56, P = 0.004), episiotomy rates 28/79 (37%) versus 40/77 (53%) (RR 0.72"
+  },
+  {
+   "pmid": "33570801",
+   "x": 28,
+   "n": 50,
+   "printed": "52",
+   "exact": 56.0,
+   "snippet": "ing and verbal counselling with resistance groups which had 28/50 (52%) and 20/5"
+  },
+  {
+   "pmid": "33427091",
+   "x": 21,
+   "n": 54,
+   "printed": "75",
+   "exact": 38.889,
+   "snippet": "al prednisolone after randomisation. Complete resolution in 21/54 (75%) and 7 (2"
+  },
+  {
+   "pmid": "33410359",
+   "x": 3,
+   "n": 79,
+   "printed": "3.9",
+   "exact": 3.797,
+   "snippet": "rm and 96 in the IDM arm. The investigational (SDM) arm had 3/79 (3.9%) conflict"
+  },
+  {
+   "pmid": "33410359",
+   "x": 6,
+   "n": 96,
+   "printed": "6.4",
+   "exact": 6.25,
+   "snippet": "e investigational (SDM) arm had 3/79 (3.9%) conflict versus 6/96 (6.4%) in the c"
+  },
+  {
+   "pmid": "33410359",
+   "x": 66,
+   "n": 79,
+   "printed": "81",
+   "exact": 83.544,
+   "snippet": "rt demonstrated improvement following educational tools for 66/79 (81%) of parti"
+  },
+  {
+   "pmid": "34600123",
+   "x": 183,
+   "n": 207,
+   "printed": "88.3",
+   "exact": 88.406,
+   "snippet": "after to determine RTW status, opioid use and pain. Results 183 of 207 (88.3%) patients"
+  },
+  {
+   "pmid": "32940765",
+   "x": 11,
+   "n": 75,
+   "printed": "14.9",
+   "exact": 14.667,
+   "snippet": "and DQC groups, the microscopic examination was positive at 11/75 (14.9%) vs 18/72"
+  },
+  {
+   "pmid": "32940765",
+   "x": 18,
+   "n": 72,
+   "printed": "25.3",
+   "exact": 25.0,
+   "snippet": "he microscopic examination was positive at 11/75 (14.9%) vs 18/72 (25.3%) at C1 an"
+  },
+  {
+   "pmid": "32940765",
+   "x": 25,
+   "n": 75,
+   "printed": "33.8",
+   "exact": 33.333,
+   "snippet": "3%) vs 28/66 (42.4%) at C2. And the culture was positive at 25/75 (33.8%) vs 46/72"
+  },
+  {
+   "pmid": "32940765",
+   "x": 46,
+   "n": 72,
+   "printed": "65.7",
+   "exact": 63.889,
+   "snippet": "4%) at C2. And the culture was positive at 25/75 (33.8%) vs 46/72 (65.7%) at C1 an"
+  },
+  {
+   "pmid": "32940765",
+   "x": 26,
+   "n": 74,
+   "printed": "36.6",
+   "exact": 35.135,
+   "snippet": "was positive at 25/75 (33.8%) vs 46/72 (65.7%) at C1 and at 26/74 (36.6%) vs 46/66"
+  },
+  {
+   "pmid": "33899093",
+   "x": 73,
+   "n": 108,
+   "printed": "68.0",
+   "exact": 67.593,
+   "snippet": "lol, 3 (2.8%) dronedarone, 50 (46.3%) amiodarone. At 1-year 73 of 108 (68.0%) patients"
+  },
+  {
+   "pmid": "33894832",
+   "x": 23,
+   "n": 53,
+   "printed": "47",
+   "exact": 43.396,
+   "snippet": "lly meaningful response on the FMA-UE score was achieved in 23 (47%) of 53 patients"
+  },
+  {
+   "pmid": "33601004",
+   "x": 14,
+   "n": 107,
+   "printed": "13.3",
+   "exact": 13.084,
+   "snippet": "dure. Results Overall, infectious complications occurred in 14/107 (13.3%) patients"
+  },
+  {
+   "pmid": "33278175",
+   "x": 42,
+   "n": 412,
+   "printed": "10.3",
+   "exact": 10.194,
+   "snippet": "revascularization) occurred in sirolimus-eluting stents in 42/412 (10.3%) and in z"
+  },
+  {
+   "pmid": "33278175",
+   "x": 49,
+   "n": 409,
+   "printed": "12.1",
+   "exact": 11.98,
+   "snippet": "ents in 42/412 (10.3%) and in zotarolimus-eluting stents in 49/409 (12.1%) patients"
+  },
+  {
+   "pmid": "33278175",
+   "x": 40,
+   "n": 415,
+   "printed": "9.8",
+   "exact": 9.639,
+   "snippet": "verolimus-eluting stents, target vessel failure occurred in 40/415 (9.8%) patients"
+  },
+  {
+   "pmid": "32845446",
+   "x": 742,
+   "n": 1162,
+   "printed": "64.0",
+   "exact": 63.855,
+   "snippet": "10 (18.4%), 413/2752 (15.0%), bronchitis: 689/1471 (46.8%), 742/1162 (64.0%), sinusit"
+  },
+  {
+   "pmid": "32498606",
+   "x": 91,
+   "n": 288,
+   "printed": "34",
+   "exact": 31.597,
+   "snippet": "of stroke cases overall). The largest number of exclusions (91/288 (34%)) were du"
+  },
+  {
+   "pmid": "32488368",
+   "x": 24,
+   "n": 33,
+   "printed": "66.71",
+   "exact": 72.727,
+   "snippet": "better tendon healing rates to the bone (34/36 [94.4%] vs. 24/33 [66.71%], p = 0.0"
+  },
+  {
+   "pmid": "33560163",
+   "x": 9,
+   "n": 211,
+   "printed": "4.4",
+   "exact": 4.265,
+   "snippet": ") and amikacin in 13/211 (6.2%) patients. Fever occurred in 9/211 (4.4%) patients"
+  },
+  {
+   "pmid": "33725408",
+   "x": 4,
+   "n": 35,
+   "printed": "13",
+   "exact": 11.429,
+   "snippet": "- and 12-month BPAR rates were higher among LI than SOC/E- (4/35 [13%] vs. 1/43"
+  },
+  {
+   "pmid": "34570182",
+   "x": 55,
+   "n": 176,
+   "printed": "31.0",
+   "exact": 31.25,
+   "snippet": "s ratio, 2.3; 95% CI, 1.22-4.32) and a molecular diagnosis (55 of 176 [31.0%; 95% CI,"
+  },
+  {
+   "pmid": "34570182",
+   "x": 27,
+   "n": 178,
+   "printed": "15.0",
+   "exact": 15.169,
+   "snippet": "ecular diagnosis (55 of 176 [31.0%; 95% CI, 24.5%-38.7%] vs 27 of 178 [15.0%; 95% CI,"
+  },
+  {
+   "pmid": "33248135",
+   "x": 36,
+   "n": 44,
+   "printed": "86",
+   "exact": 81.818,
+   "snippet": "58 (41%) cases remained stable with dual intact survival in 36 of 44 (86%) cases at"
+  },
+  {
+   "pmid": "32896653",
+   "x": 10,
+   "n": 12,
+   "printed": "83.0",
+   "exact": 83.333,
+   "snippet": "), 24/25 (96.0%), 4/5 (80.0%), 24/25 (96.0%), 8/10 (80.0%), 10/12 (83.0%), respect"
+  },
+  {
+   "pmid": "33894169",
+   "x": 16,
+   "n": 68,
+   "printed": "22",
+   "exact": 23.529,
+   "snippet": "0·89 [0·6-1·3]; p=0·55). Serious adverse events occurred in 16 (22%) of 68 patients"
+  },
+  {
+   "pmid": "32629535",
+   "x": 13,
+   "n": 18,
+   "printed": "75",
+   "exact": 72.222,
+   "snippet": "cantly lower in Group TS (Group TS 0/25 [0%] vs. Group Sham 13/18 [75%], P = 0.0"
+  },
+  {
+   "pmid": "33579199",
+   "x": 28,
+   "n": 60,
+   "printed": "48.8",
+   "exact": 46.667,
+   "snippet": "group (7 [11.1%] of 63 patients) than in the control group (28 [48.8%] of 60 patients"
+  },
+  {
+   "pmid": "34058023",
+   "x": 10,
+   "n": 27,
+   "printed": "38.5",
+   "exact": 37.037,
+   "snippet": "(SD = 0.27). In the intention to treat analysis, there were 10 of 27 (38.5%) particip"
+  },
+  {
+   "pmid": "34233921",
+   "x": 21,
+   "n": 105,
+   "printed": "21",
+   "exact": 20.0,
+   "snippet": "of 104 (13%) participants assigned to belatacept/rATG, and 21 of 105 (21%) particip"
+  },
+  {
+   "pmid": "34116873",
+   "x": 4,
+   "n": 133,
+   "printed": "2.3",
+   "exact": 3.008,
+   "snippet": "reported (lot A: 3/134 [2.2%]; lot B: 1/134 [0.8%]; 1A-HBV: 4/133 [2.3%]). One se"
+  },
+  {
+   "pmid": "33827915",
+   "x": 87,
+   "n": 106,
+   "printed": "80.2",
+   "exact": 82.075,
+   "snippet": "own time of stroke onset. CT perfusion was not performed in 87/106 (80.2%) late win"
+  },
+  {
+   "pmid": "33295965",
+   "x": 424,
+   "n": 717,
+   "printed": "59.9",
+   "exact": 59.135,
+   "snippet": "k patients did not differ between the randomized arms (GRS: 424 of 717 [59.9%] vs contr"
+  },
+  {
+   "pmid": "33295965",
+   "x": 864,
+   "n": 1135,
+   "printed": "76.7",
+   "exact": 76.123,
+   "snippet": "ion of 4 of 5 guideline-recommended pharmacotherapies (GRS: 864 of 1135 [76.7%] vs contr"
+  },
+  {
+   "pmid": "33295965",
+   "x": 893,
+   "n": 1183,
+   "printed": "77.5",
+   "exact": 75.486,
+   "snippet": "ded pharmacotherapies (GRS: 864 of 1135 [76.7%] vs control: 893 of 1183 [77.5%]; OR, 0.9"
+  },
+  {
+   "pmid": "33295965",
+   "x": 855,
+   "n": 1135,
+   "printed": "75.1",
+   "exact": 75.33,
+   "snippet": ", 0.97; 95% CI, 0.68-1.38) and cardiac rehabilitation (GRS: 855 of 1135 [75.1%] vs contr"
+  },
+  {
+   "pmid": "32961255",
+   "x": 26,
+   "n": 44,
+   "printed": "21",
+   "exact": 59.091,
+   "snippet": "zumab 100 and 200 mg, respectively, throughout the studies, 26/44 (21%/21%) and"
+  },
+  {
+   "pmid": "33724305",
+   "x": 52,
+   "n": 56,
+   "printed": "33",
+   "exact": 92.857,
+   "snippet": "very (CRi) with CPX-351 (73/153 [48%]) vs conventional 7+3 (52/56 [33%]) on outc"
+  },
+  {
+   "pmid": "33646286",
+   "x": 2,
+   "n": 115,
+   "printed": "2.7",
+   "exact": 1.739,
+   "snippet": "uencies of intensive care unit transfer: 1 of 114 (0.9%) vs 2 of 115 (2.7%) (P = .76"
+  },
+  {
+   "pmid": "33301738",
+   "x": 19,
+   "n": 83,
+   "printed": "24",
+   "exact": 22.892,
+   "snippet": "were thrombocytopenia (33 [42%] of 78, 26 [31%] of 83, and 19 [24%] of 83 patients)"
+  },
+  {
+   "pmid": "33301738",
+   "x": 35,
+   "n": 83,
+   "printed": "44",
+   "exact": 42.169,
+   "snippet": "0 (48%) of 83 patients in the 20 mg twice weekly group, and 35 (44%) of 83 patients"
+  },
+  {
+   "pmid": "33905962",
+   "x": 113,
+   "n": 449,
+   "printed": "25.9",
+   "exact": 25.167,
+   "snippet": "afety and biomarker analysis. Results EU/US subset included 113/449 (25.9%) patients"
+  },
+  {
+   "pmid": "33836161",
+   "x": 23,
+   "n": 28,
+   "printed": "85",
+   "exact": 82.143,
+   "snippet": "eiving benznidazole 150 mg daily for 4 weeks (80% [65-95]), 23 (85%) of 28 receiving"
+  },
+  {
+   "pmid": "34495988",
+   "x": 11,
+   "n": 16,
+   "printed": "63.8",
+   "exact": 68.75,
+   "snippet": "s developed parasitemia (mean 12.0 days). In the CAT group, 11 of 16 (63.8%) immunize"
+  },
+  {
+   "pmid": "34313686",
+   "x": 15,
+   "n": 123,
+   "printed": "12.9",
+   "exact": 12.195,
+   "snippet": "ccurred in 13/131 (9.9%) participants in the 7-day group vs 15/123 (12.9%) in the 1"
+  },
+  {
+   "pmid": "35901954",
+   "x": 2,
+   "n": 36,
+   "printed": "19",
+   "exact": 5.556,
+   "snippet": "in the PIP 10 group (0/36 [0%]) in comparison with PIP 15 (2/36 [19%] and PIP"
+  },
+  {
+   "pmid": "35962638",
+   "x": 33,
+   "n": 60,
+   "printed": "40",
+   "exact": 55.0,
+   "snippet": "y perirenal hematoma compared to placebo (7/60 [11.6%]) vs. 33/60 [40%]; P Concl"
+  },
+  {
+   "pmid": "35287100",
+   "x": 25,
+   "n": 1409,
+   "printed": "2.4",
+   "exact": 1.774,
+   "snippet": "1312 (81.7%) and 810 of 936 (86.5%), respectively. Overall, 25 of 1409 (2.4%) radiomic"
+  },
+  {
+   "pmid": "33885041",
+   "x": 165,
+   "n": 180,
+   "printed": "6.2",
+   "exact": 91.667,
+   "snippet": "s matched based on the risk prediction model. A total of 11,165 (6.2%) of 180,932 patie"
+  },
+  {
+   "pmid": "36569268",
+   "x": 10,
+   "n": 55,
+   "printed": "18.0",
+   "exact": 18.182,
+   "snippet": "of a low or negative serology for CD, FGIDs prevalence was 10/55 (18.0%) in group"
+  },
+  {
+   "pmid": "35068018",
+   "x": 20,
+   "n": 43,
+   "printed": "45",
+   "exact": 46.512,
+   "snippet": "us 22.8 {7.4} h, p = 0.45, and spontaneous vaginal delivery 20/43 (45%) versus 2"
+  },
+  {
+   "pmid": "35063897",
+   "x": 97,
+   "n": 140,
+   "printed": "70.8",
+   "exact": 69.286,
+   "snippet": "I 0.86-1.05), P = 0.404, episiotomy rates 97/140(69.3%) vs. 97/140(70.8%) RR 0.98("
+  },
+  {
+   "pmid": "34875556",
+   "x": 23,
+   "n": 147,
+   "printed": "16.3",
+   "exact": 15.646,
+   "snippet": "responders and another 11 women returned the kit. In total, 23/147 (16.3%) of retur"
+  },
+  {
+   "pmid": "34617309",
+   "x": 19,
+   "n": 32,
+   "printed": "52.8",
+   "exact": 59.375,
+   "snippet": "02) as compared to intermittent-steroid regimen. A total of 19/32 (52.8%) children"
+  },
+  {
+   "pmid": "35441849",
+   "x": 1189,
+   "n": 1476,
+   "printed": "80.4",
+   "exact": 80.556,
+   "snippet": "00; 95% confidence interval 0.93-1.08, p = 0.92). In total, 1189/1476 (80.4%) 1-year s"
+  },
+  {
+   "pmid": "35366848",
+   "x": 66,
+   "n": 79,
+   "printed": "82.5",
+   "exact": 83.544,
+   "snippet": "d to participate in the pilot study and met entry criteria, 66/79 (82.5%) attended"
+  },
+  {
+   "pmid": "35361632",
+   "x": 111,
+   "n": 150,
+   "printed": "75.2",
+   "exact": 74.0,
+   "snippet": "out of 151 patients in the pulse methylprednisolone arm and 111 (75.2%) of 150 in the pl"
+  },
+  {
+   "pmid": "34915576",
+   "x": 10,
+   "n": 149,
+   "printed": "7.1",
+   "exact": 6.711,
+   "snippet": "opulation. Results Positive ADA assay responses occurred in 10/149 (7.1%) patients"
+  },
+  {
+   "pmid": "35609642",
+   "x": 5,
+   "n": 85,
+   "printed": "6.8",
+   "exact": 5.882,
+   "snippet": "retreatment with either pessary or surgery within 2 years (5 of 85 [6.8%] vs 0 of"
+  },
+  {
+   "pmid": "35609642",
+   "x": 3,
+   "n": 30,
+   "printed": "13",
+   "exact": 10.0,
+   "snippet": "(77% vs 91%; P=.03), and had a higher rate of retreatment (3 of 30 [13%] vs 2 of"
+  },
+  {
+   "pmid": "35609642",
+   "x": 2,
+   "n": 131,
+   "printed": "1.7",
+   "exact": 1.527,
+   "snippet": "03), and had a higher rate of retreatment (3 of 30 [13%] vs 2 of 131 [1.7%]; P=.007)"
+  },
+  {
+   "pmid": "33974131",
+   "x": 42,
+   "n": 100,
+   "printed": "38.2",
+   "exact": 42.0,
+   "snippet": "h pain intensity were the least satisfied (p = 0.036). Only 42/100 (38.2%) of the p"
+  },
+  {
+   "pmid": "33974131",
+   "x": 59,
+   "n": 100,
+   "printed": "53.6",
+   "exact": 59.0,
+   "snippet": "of the patients had been vaccinated against pneumococci and 59/100 (53.6%) against"
+  },
+  {
+   "pmid": "33947770",
+   "x": 579,
+   "n": 981,
+   "printed": "59.5",
+   "exact": 59.021,
+   "snippet": "2/115 patients (71.3%) with tandem occlusions compared with 579/981 (59.5%) patients"
+  },
+  {
+   "pmid": "36346050",
+   "x": 142,
+   "n": 1169,
+   "printed": "12.7",
+   "exact": 12.147,
+   "snippet": "ients. The main end point target vessel failure occurred in 142 of 1169 (12.7%) patients"
+  },
+  {
+   "pmid": "36346050",
+   "x": 130,
+   "n": 1172,
+   "printed": "11.6",
+   "exact": 11.092,
+   "snippet": "occurred in 142 of 1169 (12.7%) patients treated with SES, 130 of 1172 (11.6%) treated"
+  },
+  {
+   "pmid": "36346050",
+   "x": 157,
+   "n": 1173,
+   "printed": "14.1",
+   "exact": 13.384,
+   "snippet": "ated with SES, 130 of 1172 (11.6%) treated with EES, versus 157 of 1173 (14.1%) treated"
+  },
+  {
+   "pmid": "36360996",
+   "x": 69,
+   "n": 79,
+   "printed": "75.9",
+   "exact": 87.342,
+   "snippet": "olling for age and CM duration. In total, 45/83 (54.2%) and 69/79 (75.9%) of the p"
+  },
+  {
+   "pmid": "35561721",
+   "x": 22,
+   "n": 136,
+   "printed": "11",
+   "exact": 16.176,
+   "snippet": ") of 136 individuals allocated to the intrathecal group and 22 (11%) of 136 allocated"
+  },
+  {
+   "pmid": "36066264",
+   "x": 336,
+   "n": 2587,
+   "printed": "43.2",
+   "exact": 12.988,
+   "snippet": "0.12), while the proportion receiving HFNC increased (2014, 336/2587 (43.2%); 2017, 6"
+  },
+  {
+   "pmid": "36066264",
+   "x": 609,
+   "n": 3720,
+   "printed": "57.8",
+   "exact": 16.371,
+   "snippet": "ion receiving HFNC increased (2014, 336/2587 (43.2%); 2017, 609/3720 (57.8%); P ≤ 0.0"
+  },
+  {
+   "pmid": "35064733",
+   "x": 82,
+   "n": 90,
+   "printed": "93",
+   "exact": 91.111,
+   "snippet": "Week 12, most patients achieved withdrawal in both groups (82/90 [93%] maximal"
+  },
+  {
+   "pmid": "35064733",
+   "x": 75,
+   "n": 89,
+   "printed": "86",
+   "exact": 84.27,
+   "snippet": "drawal in both groups (82/90 [93%] maximal intervention vs. 75/89 [86%] minimal"
+  },
+  {
+   "pmid": "34802113",
+   "x": 6,
+   "n": 87,
+   "printed": "6.5",
+   "exact": 6.897,
+   "snippet": "cally significant difference in involved resection margins (6/87 [6.5%] vs. 16/1"
+  },
+  {
+   "pmid": "34802113",
+   "x": 16,
+   "n": 101,
+   "printed": "13.7",
+   "exact": 15.842,
+   "snippet": "t difference in involved resection margins (6/87 [6.5%] vs. 16/101 [13.7%], P = 0.0"
+  },
+  {
+   "pmid": "34802113",
+   "x": 13,
+   "n": 82,
+   "printed": "13.7",
+   "exact": 15.854,
+   "snippet": "16/101 [13.7%], P = 0.068) and postoperative complications (13/82 [13.7%] vs. 22/7"
+  },
+  {
+   "pmid": "34802113",
+   "x": 22,
+   "n": 72,
+   "printed": "23.4",
+   "exact": 30.556,
+   "snippet": "= 0.068) and postoperative complications (13/82 [13.7%] vs. 22/72 [23.4%], P = 0.0"
+  },
+  {
+   "pmid": "34802113",
+   "x": 6,
+   "n": 80,
+   "printed": "7.0",
+   "exact": 7.5,
+   "snippet": "outcomes favoured LLETZ-VC with a lower use of analgesics (6/80 [7.0%] vs. 17/8"
+  },
+  {
+   "pmid": "34802113",
+   "x": 17,
+   "n": 87,
+   "printed": "16.3",
+   "exact": 19.54,
+   "snippet": "ed LLETZ-VC with a lower use of analgesics (6/80 [7.0%] vs. 17/87 [16.3%]; P = 0.0"
+  },
+  {
+   "pmid": "35110300",
+   "x": 46,
+   "n": 83,
+   "printed": "63.0",
+   "exact": 55.422,
+   "snippet": "on of suicidal ideas at day 3 than those receiving placebo: 46 (63.0%) of 83 participa"
+  },
+  {
+   "pmid": "35110300",
+   "x": 25,
+   "n": 73,
+   "printed": "31.6",
+   "exact": 34.247,
+   "snippet": "cebo: 46 (63.0%) of 83 participants in the ketamine arm and 25 (31.6%) of 73 in the pl"
+  },
+  {
+   "pmid": "34241947",
+   "x": 31,
+   "n": 401,
+   "printed": "8.0",
+   "exact": 7.731,
+   "snippet": "rial. At 1 year, the primary safety endpoint was reached by 31/401 (8.0%) of patie"
+  },
+  {
+   "pmid": "34241947",
+   "x": 35,
+   "n": 401,
+   "printed": "8.9",
+   "exact": 8.728,
+   "snippet": "31/401 (8.0%) of patients treated with the CoCr-DCS versus 35/401 (8.9%) for the"
+  },
+  {
+   "pmid": "34407970",
+   "x": 1,
+   "n": 16,
+   "printed": "6.7",
+   "exact": 6.25,
+   "snippet": "s [95% confidence interval (CI), 7.0-17.4]. In the N+I arm, 1 of 16 (6.7%) patients"
+  },
+  {
+   "pmid": "35123362",
+   "x": 112,
+   "n": 220,
+   "printed": "55",
+   "exact": 50.909,
+   "snippet": "rated favorably overall (> 80%). CM participants submitted 112/220 (55%) abstinen"
+  },
+  {
+   "pmid": "34971581",
+   "x": 44,
+   "n": 191,
+   "printed": "22",
+   "exact": 23.037,
+   "snippet": "clinically significant improvement than did non-responders (44 [22%] of 191 complete"
+  },
+  {
+   "pmid": "35084480",
+   "x": 24,
+   "n": 51,
+   "printed": "46.0",
+   "exact": 47.059,
+   "snippet": "munosuppressive profile (NLR >5 at day 8, 2 of 52 [3.8%] vs 24 of 51 [46.0%]; P Concl"
+  },
+  {
+   "pmid": "35810751",
+   "x": 23,
+   "n": 45,
+   "printed": "50",
+   "exact": 51.111,
+   "snippet": "%) of 46 patients in the niraparib plus nivolumab group and 23 (50%) of 45 patients"
+  },
+  {
+   "pmid": "37561074",
+   "x": 3,
+   "n": 34,
+   "printed": "9.4",
+   "exact": 8.824,
+   "snippet": "nd it was comparable between the 2 groups (7/34 [20.6%] and 3/34 [9.4%], P = 0.3"
+  },
+  {
+   "pmid": "37739667",
+   "x": 14,
+   "n": 85,
+   "printed": "18.2",
+   "exact": 16.471,
+   "snippet": "diabetes with no differences between the groups. There were 14 of 85 (18.2%) cases of"
+  },
+  {
+   "pmid": "37739667",
+   "x": 26,
+   "n": 84,
+   "printed": "32.5",
+   "exact": 30.952,
+   "snippet": "ion or preeclampsia in the intervention group compared with 26 of 84 (32.5%) in the c"
+  },
+  {
+   "pmid": "37739667",
+   "x": 15,
+   "n": 79,
+   "printed": "19.2",
+   "exact": 18.987,
+   "snippet": "tional age neonates in the intervention group compared with 15 of 79 (19.2%) in the c"
+  },
+  {
+   "pmid": "37268802",
+   "x": 89,
+   "n": 98,
+   "printed": "95",
+   "exact": 90.816,
+   "snippet": "l oxygen saturation Results A respiratory event occurred in 89/98 (95%) patients"
+  },
+  {
+   "pmid": "37268802",
+   "x": 69,
+   "n": 97,
+   "printed": "73",
+   "exact": 71.134,
+   "snippet": "nt occurred in 89/98 (95%) patients in the NIV group and in 69/97 (73%) patients"
+  },
+  {
+   "pmid": "37166257",
+   "x": 33,
+   "n": 42,
+   "printed": "44",
+   "exact": 78.571,
+   "snippet": "h after surgery in the 5-m walk test (VAS > 30/VAS ≤ 30%); 33/42 (44%) vs. 32/4"
+  },
+  {
+   "pmid": "37166257",
+   "x": 32,
+   "n": 43,
+   "printed": "43",
+   "exact": 74.419,
+   "snippet": "in the 5-m walk test (VAS > 30/VAS ≤ 30%); 33/42 (44%) vs. 32/43 (43%), relativ"
+  },
+  {
+   "pmid": "37641267",
+   "x": 1344,
+   "n": 1800,
+   "printed": "71.5",
+   "exact": 74.667,
+   "snippet": "to the CPT for ITS detection following calving. There were 1344/1800 (71.5%) of quart"
+  },
+  {
+   "pmid": "36637147",
+   "x": 29,
+   "n": 32,
+   "printed": "90.5",
+   "exact": 90.625,
+   "snippet": "s with IGA score improvement over the 12-week intervention: 29 of 32 (90.5%) in the p"
+  },
+  {
+   "pmid": "37023559",
+   "x": 5,
+   "n": 17,
+   "printed": "29.6",
+   "exact": 29.412,
+   "snippet": "ment was achieved in 15 of 15 (100%) in the AG group versus 5 of 17 (29.6%) in the p"
+  },
+  {
+   "pmid": "36991299",
+   "x": 155,
+   "n": 166,
+   "printed": "92",
+   "exact": 93.373,
+   "snippet": "jective evaluations were higher than objective measurements 155/166 (92%) of the t"
+  },
+  {
+   "pmid": "38007947",
+   "x": 70,
+   "n": 88,
+   "printed": "81",
+   "exact": 79.545,
+   "snippet": "subjective improvement from baseline at last follow-up and 70/88 (81% [0.70-0.8"
+  },
+  {
+   "pmid": "36973782",
+   "x": 38,
+   "n": 46,
+   "printed": "86",
+   "exact": 82.609,
+   "snippet": "oup, 1/46 (2%) had SSI. Uneventful recovery was reported in 38/46 (86%) in SM gr"
+  },
+  {
+   "pmid": "37641136",
+   "x": 6,
+   "n": 24,
+   "printed": "24",
+   "exact": 25.0,
+   "snippet": "developed ventilator-associated pneumonia (16/25 (64%) vs. 6/24 (24%), p = 0.0"
+  },
+  {
+   "pmid": "36600250",
+   "x": 0,
+   "n": 29,
+   "printed": "100",
+   "exact": 0.0,
+   "snippet": "sion-free survival in prednisolone-treated (A + C) arms was 0/29 (100%) in compa"
+  },
+  {
+   "pmid": "37417229",
+   "x": 85,
+   "n": 367,
+   "printed": "25",
+   "exact": 23.161,
+   "snippet": "atients, 84 of 372 patients (24.3%) had died in the NEO and 85 of 367 (25%) in the S"
+  },
+  {
+   "pmid": "36758710",
+   "x": 25,
+   "n": 91,
+   "printed": "28.0",
+   "exact": 27.473,
+   "snippet": "betes mellitus ascertained (Ns=38/102 [37%] intervention vs 25/91 [28.0%] control;"
+  },
+  {
+   "pmid": "35428739",
+   "x": 3,
+   "n": 12,
+   "printed": "12.0",
+   "exact": 25.0,
+   "snippet": "patients compared with 1/10 (10.0%) patients in the CG1 and 3/12 (12.0%) in the C"
+  },
+  {
+   "pmid": "35341362",
+   "x": 8,
+   "n": 183,
+   "printed": "3",
+   "exact": 4.372,
+   "snippet": ".29). 11/179 (6%) in the 10 mg/mL group vomited compared to 8/183 (3%) in the 1"
+  },
+  {
+   "pmid": "36863328",
+   "x": 7,
+   "n": 93,
+   "printed": "12.1",
+   "exact": 7.527,
+   "snippet": "001), and less often large-vessel occlusion on initial MRI (7/93 [12.1%] versus 4"
+  },
+  {
+   "pmid": "36863328",
+   "x": 40,
+   "n": 291,
+   "printed": "29.9",
+   "exact": 13.746,
+   "snippet": "large-vessel occlusion on initial MRI (7/93 [12.1%] versus 40/291 [29.9%], p = 0.0"
+  },
+  {
+   "pmid": "37120720",
+   "x": 36,
+   "n": 80,
+   "printed": "465.0",
+   "exact": 45.0,
+   "snippet": ", 33-45). 44 of 80 (55.0%) were receiving dolutegravir, and 36 of 80 (465.0%) were rec"
+  },
+  {
+   "pmid": "36284033",
+   "x": 25,
+   "n": 48,
+   "printed": "47",
+   "exact": 52.083,
+   "snippet": "e enrolled from nine countries. In the ischemia-guided arm, 25/48 (47%) patients"
+  },
+  {
+   "pmid": "37260299",
+   "x": 9,
+   "n": 61,
+   "printed": "15.0",
+   "exact": 14.754,
+   "snippet": "oup analyses provided similar results. Relapses occurred in 9/61 (15.0%) and 2/47"
+  },
+  {
+   "pmid": "37393022",
+   "x": 13,
+   "n": 67,
+   "printed": "18",
+   "exact": 19.403,
+   "snippet": "e centers required resubmission more often (44/136 [33%] vs 13/67 [18%]; P = .07"
+  },
+  {
+   "pmid": "37209700",
+   "x": 21,
+   "n": 110,
+   "printed": "10",
+   "exact": 19.091,
+   "snippet": "ctions were also reported: 34 (13 [12%] of 110 children and 21 [10%] of 110 adolescen"
+  },
+  {
+   "pmid": "36352788",
+   "x": 10,
+   "n": 104,
+   "printed": "9.4",
+   "exact": 9.615,
+   "snippet": "oth groups. The two groups did not differ for stage II POP: 10 of 104 (9.4%) in the O"
+  },
+  {
+   "pmid": "36934731",
+   "x": 11,
+   "n": 87,
+   "printed": "14",
+   "exact": 12.644,
+   "snippet": "0·92 [0·60-1·55], p=0·87) or 18 months (nine [11%] of 85 vs 11 [14%] of 87; 0·78 [0·"
+  },
+  {
+   "pmid": "36877964",
+   "x": 15,
+   "n": 97,
+   "printed": "15.6",
+   "exact": 15.464,
+   "snippet": "y assigned treatment and further bleeds, the event rate was 15 of 97 (15.6%) and 6 of"
+  },
+  {
+   "pmid": "37902744",
+   "x": 96,
+   "n": 173,
+   "printed": "55.9",
+   "exact": 55.491,
+   "snippet": ".4%]) utilized screening overall at 6 months than controls (96 of 173 [55.9%]) (adjust"
+  },
+  {
+   "pmid": "37802566",
+   "x": 16,
+   "n": 27,
+   "printed": "58",
+   "exact": 59.259,
+   "snippet": "to Dec 20, 2019. The median age was 26 years (range 19-50), 16 (58%) of 27 participa"
+  },
+  {
+   "pmid": "37061308",
+   "x": 224,
+   "n": 1298,
+   "printed": "16",
+   "exact": 17.257,
+   "snippet": "evel proportion]) of 1388 patients in the control group and 224 (16%) of 1298 in the in"
+  },
+  {
+   "pmid": "36209759",
+   "x": 126,
+   "n": 300,
+   "printed": "45",
+   "exact": 42.0,
+   "snippet": "0 patients (150 per group: median age 56 years [IQR 47-65]; 126 [45%] of 300 male; ski"
+  },
+  {
+   "pmid": "36594947",
+   "x": 408,
+   "n": 575,
+   "printed": "71.6",
+   "exact": 70.957,
+   "snippet": "n 374 of 575 patients (66.1%) in the remifentanil group and 408 of 575 (71.6%) in the n"
+  },
+  {
+   "pmid": "35688623",
+   "x": 638,
+   "n": 1208,
+   "printed": "52.7",
+   "exact": 52.815,
+   "snippet": "for CXR (difference 1.1; 95% lower CI: 0.003). After ULDCT, 638/1208 (52.7%) patients"
+  }
+ ],
+ "flagged_abstracts": 283,
+ "note": "the 40-row sample was drawn before the confidence-interval filter was added; its one interval false alarm is now filtered"
+}

@@ -20,7 +20,7 @@ EUTILS = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/'
 NUM = r'(?<![\w.·/])(\d{1,6})(?![\w.·])'  # a whole number, not part of a name like HPV16 or a decimal
 DEN = r'(\d{1,6})(?![\w.·])'
 # A percentage followed by "CI" or a range dash is an interval, not the fraction's share.
-PCT = r'[(\[]\s*(\d{1,3}(?:\.\d{1,2})?)\s*%(?!\s*(?:CI|[-–]))'
+PCT = r'[(\[]\s*(\d{1,3}(?:\.\d{1,2})?)\s*%(?!\s*(?:CI|conf|[-–]))'
 PATTERNS = [
     (re.compile(NUM + r'\s*/\s*' + DEN + r'\s*' + PCT), 1, 2, 3),         # 12/40 (30%)
     (re.compile(NUM + r'\s+of\s+' + NUM + r'\s*' + PCT), 1, 2, 3),         # 12 of 40 (30%)
