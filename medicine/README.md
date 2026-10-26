@@ -64,3 +64,7 @@ python3 pvalues.py CACHE_DIR    # a folder of {pmid: abstract} JSON files from p
 ```
 
 This recomputes published results. It is arithmetic on public numbers, not medical advice.
+
+## Are flagged papers corrected more often?
+
+At first glance yes. 30 of 659 flagged abstracts carry a PubMed erratum link, 4.6%, against 69 of a random 3,000, 2.3% (Fisher P = 0.002). But flagged abstracts are long and full of numbers, and the journals that print such abstracts also print more corrections. Against 3,000 unflagged abstracts that are just as long and also report a ratio with an interval, the gap is gone: 164 of 3,000 (5.5%) against 17 of the 274 flagged abstracts of that kind (6.2%), Fisher P = 0.58. Most notices that do exist fix other things, like conflict of interest forms or author lists, and PubMed rarely holds their text, so a slip and its fix cannot be paired from here.
