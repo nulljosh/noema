@@ -17,6 +17,12 @@ class RatioTests(unittest.TestCase):
         self.assertEqual(self.kinds('Risk rose (OR 1.5; 95% CI 1.2-1.9; P = 0.30).'), ['verdict'])
         self.assertEqual(self.kinds('No change (HR 0.9, 95% CI 0.7 to 1.2, P = 0.01).'), ['verdict'])
 
+    def test_p_from_interval(self):
+        self.assertEqual(self.kinds('Larger tumors (HR, 2.12; 95% CI, 1.67-2.69; P = .02).'), ['pci'])
+        self.assertEqual(self.kinds('Better survival (HR 2.54; 95% CI, 1.05-5.48; P < .001).'), ['pci'])
+        self.assertEqual(self.kinds('Lower (HR 0.63, 95% CI 0.51 to 0.78, P < 0.001).'), [])
+        self.assertEqual(self.kinds('Sex (p = 0.04; OR 0.704; 95% CI 0.506-0.980) and A (p < 0.001; OR 3.1; 95% CI 1.9-5.0).'), [])
+
     def test_clean_and_borderline(self):
         for text in ('Similar (HR 0.8, 95% CI 0.6-1.1, P = 0.2).', 'Lower (RR 0.7, 95% CI 0.5 to 0.9; P = 0.01).',
                      'Edge (OR 1.4, 95% CI 1.0-2.0, P = 0.08).', 'Edge (OR 1.4, 95% CI 1.1-2.0, P = 0.05).',

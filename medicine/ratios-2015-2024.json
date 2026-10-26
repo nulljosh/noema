@@ -1,534 +1,7 @@
 {
- "source": "randomized controlled trial abstracts 2015 to 2024, PubMed E-utilities (2024) and Europe PMC (2015 to 2023), fetched 2026-10-26",
  "abstracts": 235860,
  "ratios_with_ci": 31021,
- "flags": 132,
- "inside": 68,
- "verdict": 64,
- "sample_size": 40,
- "sample_clear": 28,
- "sample": [
-  {
-   "pmid": "30179656",
-   "kind": "inside",
-   "ratio": "odds ratio",
-   "estimate": "0.217",
-   "ci": [
-    "0.056",
-    "0.085"
-   ],
-   "printed_p": null,
-   "sentence": "The incidences of early-onset (within four days of intubation) and late-onset VAP were 9.2 and 26.9 episodes per 1000 days of mechanical ventilation in the intervention and control groups, respectively (odds ratio: 0.217; 95% confidence interval: 0.056-0.085; P = 0.028).",
-   "review": "clear"
-  },
-  {
-   "pmid": "30971278",
-   "kind": "inside",
-   "ratio": "HR",
-   "estimate": "0.324",
-   "ci": [
-    "0.97",
-    "1.07"
-   ],
-   "printed_p": null,
-   "sentence": "In non-metastatic patients, the median OS was significantly higher in BCc1 nanomedicine (529 days [95% CI 393.245-664.75]) than in placebo (345 days [95% CI 134.85-555.14]); HR: 0.324 [95% CI 0.97-1.07; p = 0.066].",
-   "review": "clear"
-  },
-  {
-   "pmid": "36028920",
-   "kind": "verdict",
-   "ratio": "aOR",
-   "estimate": "2.08",
-   "ci": [
-    "0.33",
-    "3.24"
-   ],
-   "printed_p": "= 0.001",
-   "sentence": "New KS diagnosis rates increased 103% (95% CI: 11-273%), p = 0.02) post-intervention; although paired with an increased odds of incorrectly diagnosing KS (aOR = 2.08 [95% CI: 0.33-3.24], p = 0.001).",
-   "review": "clear"
-  },
-  {
-   "pmid": "39674960",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "903",
-   "ci": [
-    "0.846",
-    "0.965"
-   ],
-   "printed_p": null,
-   "sentence": "Multivariate logistic regression analysis revealed two independent predictors of postoperative blood transfusion: unstable fracture pattern (OR = 0.065, 95% CI 0.007-0.571, p = 0.014), and preoperative haemoglobin level (OR = 903, 95% CI 0.846-0.965, p = 0.003).",
-   "review": "clear"
-  },
-  {
-   "pmid": "26653112",
-   "kind": "inside",
-   "ratio": "odds ratio",
-   "estimate": "3.43",
-   "ci": [
-    "1.06",
-    "1.11"
-   ],
-   "printed_p": null,
-   "sentence": "In a proportional odds model, high-dose vitamin D3 was more likely than low-dose vitamin D3 to decrease CD4+ ATP release (odds ratio, 3.43; 95% confidence interval, 1.06-1.11).",
-   "review": "clear"
-  },
-  {
-   "pmid": "36195055",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "0.97",
-   "ci": [
-    "0.99",
-    "1.12"
-   ],
-   "printed_p": null,
-   "sentence": "The intervention significantly increased RAS in high-risk participants compared with UCG (80.0% vs. 64.0%, respectively; OR = 3.14, 95% CI: 1.25-7.96) but not in average-risk (44.9% vs. 49.5%, respectively; OR = 0.97, 95% CI: 0.99-1.12) or moderate-risk individuals (67.9% vs. 81.1%, respectively; OR = 0.40, 95% CI: 0.12-1.33).",
-   "review": "clear"
-  },
-  {
-   "pmid": "36876480",
-   "kind": "inside",
-   "ratio": "HR",
-   "estimate": "2.0",
-   "ci": [
-    "2.18",
-    "3.12"
-   ],
-   "printed_p": null,
-   "sentence": "In a model adjusted for age, sex, race, ethnicity, education, employment status, history of hypertension, diabetes, hyperlipidemia, myocardial infarction, and intensive blood pressure randomization arm, the risk of major adverse cardiovascular events, and death were higher in the persistent smokers compared with never smokers (HR for major adverse cardiovascular events: 1.56 [95% CI, 1.16-2.09]; H",
-   "review": "ambiguous: parse matched a different ratio in the sentence"
-  },
-  {
-   "pmid": "33820822",
-   "kind": "verdict",
-   "ratio": "HR",
-   "estimate": "0.46",
-   "ci": [
-    "0.21",
-    "1.01"
-   ],
-   "printed_p": "= 0.02",
-   "sentence": "Median PFS with decitabine-plus-camrelizumab therapy was 35.0 months (95% CI not reached) and 15.5 months (95% CI 8.4 to 22.7 months) with camrelizumab monotherapy (HR, 0.46; 95% CI 0.21 to 1.01; p=0.02).",
-   "review": "ambiguous: bound 1.01 is borderline and the P may be log-rank"
-  },
-  {
-   "pmid": "32762882",
-   "kind": "verdict",
-   "ratio": "OR",
-   "estimate": "1.24",
-   "ci": [
-    "1.02",
-    "5.8"
-   ],
-   "printed_p": "= 0.062",
-   "sentence": "Furthermore, a comparison between monotherapy arms revealed that both interventions had similar effects on the overall outcome (OR = 1.24, 95%CI: 1.02-5.8; P = 0.062).",
-   "review": "clear"
-  },
-  {
-   "pmid": "38109995",
-   "kind": "verdict",
-   "ratio": "relative risk",
-   "estimate": "1.65",
-   "ci": [
-    "1.17",
-    "2.33"
-   ],
-   "printed_p": "= .700",
-   "sentence": "Surgical site infection (8 vs 7; P=1.000; relative risk, 1.08; 95% confidence interval, 0.64-1.83), hematoma (1 vs 2; P=.561; relative risk, 0.66; 95% confidence interval, 0.13-3.31), seroma (8 vs 2; P=.052; relative risk, 1.65; 95% confidence interval, 1.17-2.33), need for resuturing (4 vs 3; P=.700; relative risk, 1.15; 95% confidence interval, 0.60-2.22), and need for readmission (4 vs 4; P=1.0",
-   "review": "ambiguous: the P belongs to the next item"
-  },
-  {
-   "pmid": "33894146",
-   "kind": "verdict",
-   "ratio": "odds ratio",
-   "estimate": "0.28",
-   "ci": [
-    "0.09",
-    "81"
-   ],
-   "printed_p": "= .02",
-   "sentence": "Tamsulosin was associated with a lower rate of postoperative urinary retention than placebo (5 patients [8.8%] vs 16 patients [25.8%]; odds ratio, 0.28; 95% confidence interval, 0.09-81; P=.02).",
-   "review": "clear"
-  },
-  {
-   "pmid": "33883301",
-   "kind": "verdict",
-   "ratio": "relative risk",
-   "estimate": "0.17",
-   "ci": [
-    "0.02",
-    "1.12"
-   ],
-   "printed_p": "= .012",
-   "sentence": "Particularly, the medial tibial stress syndrome incidence rate was 5.96 injuries per 1000 hours athlete-exposure in CONV training and 0.82 in NM training (relative risk = 0.17; 95% confidence interval, 0.02 to 1.12; P = .012).",
-   "review": "clear"
-  },
-  {
-   "pmid": "32990630",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "0.06",
-   "ci": [
-    "0.55",
-    "0.65"
-   ],
-   "printed_p": null,
-   "sentence": "Compared with the control group, individuals who received the Hep-Net intervention were more likely to undergo HCV testing (odds ratio [OR] 2.23, 95% CI 1.05-4.74; P=.04) and receive Narcan training (OR 2.25, 95% CI 0.83-6.06; P=.11), and they shared drug equipment less frequently (OR 0.06, 95% CI 0.55-0.65; P Conclusions Implementing computer-based risk reduction interventions in SSPs may reduce ",
-   "review": "clear"
-  },
-  {
-   "pmid": "32534658",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "1.186",
-   "ci": [
-    "1.074",
-    "1.115"
-   ],
-   "printed_p": null,
-   "sentence": "These factors are diabetes (OR 1.186, 95% CI 1.016-1.097, P > .01), body mass index > 30 kg/m 2 (OR 2.36, 95% CI 1.041-1.172, P > .05), sedentary lifestyle (OR 1.091, 95% CI 1.016-1.159, P > .01), and preoperative state anxiety (OR 1.186, 95% CI 1.074-1.115, P > .01).",
-   "review": "clear"
-  },
-  {
-   "pmid": "26307064",
-   "kind": "inside",
-   "ratio": "odds ratio",
-   "estimate": "3.3",
-   "ci": [
-    "1.2",
-    "2.6"
-   ],
-   "printed_p": null,
-   "sentence": "Results Results showed significant associations with the SNP rs6277 and impaired executive function (odds ratio = 3.3, 95% CI 1.2-2.6; p = 0.004) and cognitive flexibility (odds ratio = 1.6, 95% CI 2.0-5.7; p = 0.001).",
-   "review": "clear"
-  },
-  {
-   "pmid": "31918233",
-   "kind": "verdict",
-   "ratio": "HR",
-   "estimate": "0.49",
-   "ci": [
-    "0.23",
-    "1.06"
-   ],
-   "printed_p": "= 0.007",
-   "sentence": "We observed a significant PFS benefit of regorafenib compared with placebo (adjusted HR = 0.33; 95% CI: 0.15-0.74; p = 0.0007 median PFS = 2.1 versus 1.1 months, respectively), and a large and nearly significant overall survival (OS) benefit despite the cross-over (adjusted HR = 0.49; 95% CI: 0.23-1.06; p = 0.007; median OS = 17.8 versus 8.2 months).",
-   "review": "clear"
-  },
-  {
-   "pmid": "30653043",
-   "kind": "verdict",
-   "ratio": "relative risk",
-   "estimate": "3.3",
-   "ci": [
-    "0.7",
-    "10.0"
-   ],
-   "printed_p": "= 0.002",
-   "sentence": "Furthermore, screw fixation was a risk factor for a major reoperation, which was performed in 20% (22) of 110 patients who underwent screw fixation versus 5% (5) of 108 who underwent hemiarthroplasty (relative risk reduction [RRR] = 3.3 [95% CI = 0.7 to 10.0]; number needed to harm [NNH] = 6.5; p = 0.002).",
-   "review": "ambiguous: a risk reduction, not a ratio"
-  },
-  {
-   "pmid": "27569442",
-   "kind": "verdict",
-   "ratio": "hazard ratio",
-   "estimate": "0·98",
-   "ci": [
-    "0·78",
-    "1·23"
-   ],
-   "printed_p": "= 0·0003",
-   "sentence": "Event-free survival did not differ between treatment groups (hazard ratio [HR] 0·98 [95% CI 0·78-1·23]); hazards were non-proportional (p=0·0003).",
-   "review": "ambiguous: the P tests proportional hazards"
-  },
-  {
-   "pmid": "33469752",
-   "kind": "inside",
-   "ratio": "rate ratio",
-   "estimate": "1.0",
-   "ci": [
-    "0.6",
-    "0.8"
-   ],
-   "printed_p": null,
-   "sentence": "Results The combination of municipal support and training did not result in higher coverage than training alone (incidence rate ratio (IRR) = 1.0, 95% CI = 0.6 to 0.8).",
-   "review": "clear"
-  },
-  {
-   "pmid": "37036703",
-   "kind": "inside",
-   "ratio": "HR",
-   "estimate": "1.44",
-   "ci": [
-    "1.46",
-    "2.04"
-   ],
-   "printed_p": null,
-   "sentence": "Weight loss was associated with a higher cancer-specific mortality (>10% decrease among men: HR, 3.49; 95% CI, 2.26-5.40; 5%-10% decrease among women: HR, 1.44; 95% CI, 1.46-2.04; >10% decrease among women: HR, 2.78; 95% CI, 1.82-4.26), CVD-specific mortality (>10% decrease among men: HR, 3.14; 95% CI, 1.63-6.04; >10% decrease among women: HR, 1.92; 95% CI, 1.05-3.51), and noncancer non-CVD-specif",
-   "review": "clear"
-  },
-  {
-   "pmid": "34704720",
-   "kind": "verdict",
-   "ratio": "relative risk",
-   "estimate": "0.37",
-   "ci": [
-    "0.13",
-    "1.02"
-   ],
-   "printed_p": "= 0.039",
-   "sentence": "The incidence of PHN at 12 weeks was significantly lower in the ESPB group (15.4% [4/26]) than in the control group (41.7% [10/24]); relative risk 0.37, 95% confidence interval 0.13-1.02, P = 0.039.",
-   "review": "ambiguous: bound 1.02 is borderline and the P is a different test"
-  },
-  {
-   "pmid": "34951021",
-   "kind": "inside",
-   "ratio": "hazard ratio",
-   "estimate": "0.234",
-   "ci": [
-    "0.264",
-    "2.31"
-   ],
-   "printed_p": null,
-   "sentence": "Compared to the BST group, 105 consecutive patients with severe COVID-19 in the MIP group reported early weaning off ventilation, resolution of chest architecture (computed tomography [CT] scan), a significant increase in SpO 2 levels, and decreased mortality with a hazard ratio: 0.234 (95% confidence interval: 0.264-2.31) (p = 0.001).",
-   "review": "clear"
-  },
-  {
-   "pmid": "25578377",
-   "kind": "verdict",
-   "ratio": "HR",
-   "estimate": "2.80",
-   "ci": [
-    "0.62",
-    "12.64"
-   ],
-   "printed_p": "= 0.0048",
-   "sentence": "For DRFI, tumour size was the only predictor: Hazard ratio (HR) T3 versus T1-2=3.62 (95% CI, 1.66-7.89); HR T4 versus T1-2: HR, 2.80 (95% CI, 0.62-12.64) p=0.0048.",
-   "review": "ambiguous: the P likely covers the whole factor"
-  },
-  {
-   "pmid": "34783404",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "0.151",
-   "ci": [
-    "0.03",
-    "0.068"
-   ],
-   "printed_p": null,
-   "sentence": "Results From all FDI criteria evaluated, the marginal adaptation for the SCR + aPDT group was significantly better in comparison with the SCR group at T0 and T2 in the logistic regression analysis (T0: OR = 0.151; 95% CI = 0.03-0.068, P = .015; and T2: OR = 0.201; 95% CI = 0.05-0.79, P = .022).",
-   "review": "clear"
-  },
-  {
-   "pmid": "33339609",
-   "kind": "inside",
-   "ratio": "hazard ratio",
-   "estimate": "1.61",
-   "ci": [
-    "1.77",
-    "2.81"
-   ],
-   "printed_p": null,
-   "sentence": "Treatment with alfacalcidol was associated with a statistically significant decrease in ICU LOS (hazard ratio = 1.61; 95% CI, 1.77-2.81; P = 0.041) and hospital LOS (hazard ratio = 1.63; 95% CI, 1.04-2.55; P = 0.034).",
-   "review": "clear"
-  },
-  {
-   "pmid": "38529655",
-   "kind": "verdict",
-   "ratio": "hazard ratio",
-   "estimate": "1.33",
-   "ci": [
-    "0.67",
-    "2.63"
-   ],
-   "printed_p": "= 0.037",
-   "sentence": "Comparing the third with the first sample quartile, higher BMP10 levels at 2 months were associated with higher risk of ischemic stroke (hazard ratio [HR], 1.33 [95% CI, 0.67-2.63], P=0.037), heart failure (HR, 1.91 [95% CI, 1.17-3.12], P=0.012) and all-cause death (HR, 1.61 [95% CI, 1.17-2.21], P<0.001).",
-   "review": "clear"
-  },
-  {
-   "pmid": "32716479",
-   "kind": "inside",
-   "ratio": "RR",
-   "estimate": "1.26",
-   "ci": [
-    "1.08",
-    "1.15"
-   ],
-   "printed_p": null,
-   "sentence": "Continuous EEG was associated with increased detection of interictal features and seizures (adjusted RR, 1.26; 95% CI, 1.08-1.15; P = .004 and 3.37; 95% CI, 1.63-7.00; P = .001, respectively) and more frequent adaptations in antiseizure therapy (RR, 1.84; 95% CI, 1.12-3.00; P = .01).",
-   "review": "clear"
-  },
-  {
-   "pmid": "26925155",
-   "kind": "inside",
-   "ratio": "aOR",
-   "estimate": "1.01",
-   "ci": [
-    "1.05",
-    "1.13"
-   ],
-   "printed_p": null,
-   "sentence": "Among the 597 patients who attended the M24 visit, being overweight or obese increased from 20.4 to 24.8 % (p = 0.01) and 7.2 to 9.2 % (p = 0.03) respectively and factor associated with being overweight or obese was immunological response measured as an increase of CD4 cell count between M0-M24 (for +50 cells/mm(3): aOR 1.01; 95 % CI 1.05-1.13, p = 0.01).",
-   "review": "clear"
-  },
-  {
-   "pmid": "25753159",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "0.25",
-   "ci": [
-    "0.68",
-    "0.88"
-   ],
-   "printed_p": null,
-   "sentence": "Treatment based on the new protocol has very high protective effect (OR 0.25, 95 % CI 0.68-0.88) in terms of neonatal hyperbilirubinemia.",
-   "review": "clear"
-  },
-  {
-   "pmid": "38964854",
-   "kind": "verdict",
-   "ratio": "RR",
-   "estimate": "6.77",
-   "ci": [
-    "0.85",
-    "53.9"
-   ],
-   "printed_p": "= 0.034",
-   "sentence": "CSPEB was significantly greater in the H-EMR arm (7/90 (7.8%) vs 1/87 (1.1%); RR 6.77, 95% CI 0.85 to 53.9; p=0.034).",
-   "review": "ambiguous: the interval and the P come from different tests"
-  },
-  {
-   "pmid": "28134943",
-   "kind": "inside",
-   "ratio": "odds ratio",
-   "estimate": "0.167",
-   "ci": [
-    "0.37",
-    "0.75"
-   ],
-   "printed_p": null,
-   "sentence": "Results Postoperative ileus was observed in 6% (2/32) of the gum-chewing group and in 21.8% (7/32) in the standard postoperative recovery group, with an odds ratio of 0.167 (95% CI: 0.37-0.75; p = 0.006).",
-   "review": "clear"
-  },
-  {
-   "pmid": "33343579",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "2.5",
-   "ci": [
-    "2.7",
-    "220.6"
-   ],
-   "printed_p": null,
-   "sentence": "In a comparison between in-patients and home care patients, the HLA-DRB1*08:01 allele was exclusively present in the hospitalized patients [OR > 2.5 (95% CI 2.7-220.6), Pc = 0.024].",
-   "review": "ambiguous: printed as OR > 2.5"
-  },
-  {
-   "pmid": "37254106",
-   "kind": "inside",
-   "ratio": "hazard ratio",
-   "estimate": "2.069",
-   "ci": [
-    "2.187",
-    "3.606"
-   ],
-   "printed_p": null,
-   "sentence": "The time to achieve adequate analgesia was significantly shorter in the intranasal dexmedetomidine group than in the control group (hazard ratio = 2.069; 95% CI, 2.187 to 3.606; P = 0.010).",
-   "review": "clear"
-  },
-  {
-   "pmid": "36622653",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "1.72",
-   "ci": [
-    "0.58",
-    "1.46"
-   ],
-   "printed_p": null,
-   "sentence": "Of those children with data at postintervention, greater clinically significant change was observed at postintervention for children in the iPCIT group (50 [74%]) than for those in the RAU group (30 [42%]), which was maintained at the 6-month but not the 12-month follow-up. iPCIT did not outperform RAU in reducing caregiving stress, but caregivers receiving iPCIT, relative to RAU, showed steeper i",
-   "review": "ambiguous: parse matched a different ratio in the sentence"
-  },
-  {
-   "pmid": "31580800",
-   "kind": "verdict",
-   "ratio": "OR",
-   "estimate": "1.96",
-   "ci": [
-    "0.63",
-    "3.29"
-   ],
-   "printed_p": "= 0.004",
-   "sentence": "In addition, multitarget therapies had more albumin (WMD=3.50, 95%CI: 1.04-5.95, P=0.005), greater albumin increases (OR=1.96, 95%CI: 0.63-3.29, P=0.004) and higher negative rates of ds-DNA (OR=2.13, 95%CI: 1.51-3.01, P﹤0.0001) and ANA (OR=2.82, 95%CI: 1.77-4.50, P﹤0.0001) when compared with the CYC group.",
-   "review": "clear"
-  },
-  {
-   "pmid": "30052729",
-   "kind": "verdict",
-   "ratio": "HR",
-   "estimate": "1.73",
-   "ci": [
-    "1.4",
-    "2.2"
-   ],
-   "printed_p": "> 0.99",
-   "sentence": "The trial did not meet its primary end point of improving OS {median, 4.6 versus 5.0 months; hazard ratio (HR)=1.1 [95% confidence interval (CI) 0.9-1.4]; P = 0.81} or the secondary end points of PFS [median, 1.4 versus 2.7 months; HR=1.73 (95% CI 1.4-2.2); P > 0.99] or ORR (2.2% versus 4.3%) in the avelumab versus chemotherapy arms, respectively.",
-   "review": "ambiguous: likely a one-sided P"
-  },
-  {
-   "pmid": "34872341",
-   "kind": "inside",
-   "ratio": "odds ratio",
-   "estimate": "1.06",
-   "ci": [
-    "1.10",
-    "1.12"
-   ],
-   "printed_p": null,
-   "sentence": "Symptomatic intracranial hemorrhage was associated with higher baseline National Institutes of Health Stroke Scale score (adjusted odds ratio [OR], 1.06 [95% CI, 1.10-1.12]) and higher glucose level at hospital arrival (adjusted OR, 1.14 [95% CI, 1.00-1.29]).",
-   "review": "clear"
-  },
-  {
-   "pmid": "32773226",
-   "kind": "verdict",
-   "ratio": "HR",
-   "estimate": "0.45",
-   "ci": [
-    "0.23",
-    "1.84"
-   ],
-   "printed_p": "= 0.01",
-   "sentence": "Compared with the standard lipid-lowering therapy group, the intensive lipid-lowering therapy group had significantly lower all-cause death (6.9% vs 3.2%; HR, 0.45; 95% CI, 0.23 to 1.84; p = 0.01) and nonfatal stroke (2.9% vs 1.6%; HR, 0.77; 95% CI, 0.62 to 0.97; p = 0.02) rates.",
-   "review": "clear"
-  },
-  {
-   "pmid": "35869690",
-   "kind": "inside",
-   "ratio": "HR",
-   "estimate": "1.12",
-   "ci": [
-    "1.31",
-    "1.54"
-   ],
-   "printed_p": null,
-   "sentence": "The median time to first relapse was longer in the MMF group compared with the CYC group (10.8 vs. 8.0 months; HR, 1.12; 95% CI, 1.31-1.54, p = 0.01), and this was significantly correlated with the median time to B-cell recovery in the two groups (8.6 vs. 5.2 months in MMF and CYC, respectively, p = 0.02).",
-   "review": "clear"
-  },
-  {
-   "pmid": "36622653",
-   "kind": "inside",
-   "ratio": "OR",
-   "estimate": "2.23",
-   "ci": [
-    "0.53",
-    "1.37"
-   ],
-   "printed_p": null,
-   "sentence": "Of those children with data at postintervention, greater clinically significant change was observed at postintervention for children in the iPCIT group (50 [74%]) than for those in the RAU group (30 [42%]), which was maintained at the 6-month but not the 12-month follow-up. iPCIT did not outperform RAU in reducing caregiving stress, but caregivers receiving iPCIT, relative to RAU, showed steeper i",
-   "review": "ambiguous: parse matched a different ratio in the sentence"
-  }
- ],
+ "flags": 243,
  "rows": [
   {
    "pmid": "38749110",
@@ -567,6 +40,42 @@
    "sentence": "We analysed 2999 patients, of whom 116 of 973 (11.9%) receiving dexamethasone reported CPSP, and 380 of 2026 (18.8%) not receiving dexamethasone reported CPSP, unadjusted odds ratio 0.76 (95% confidence interval 0.78-1.00), P=0.052."
   },
   {
+   "pmid": "38551516",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.19",
+   "ci": [
+    "0.08",
+    "0.47"
+   ],
+   "printed_p": "= 0.022",
+   "sentence": "Compared with those receiving physical therapy modalities, the patients receiving therapeutic aquatic exercise had less risk of treatment failure (adjusted OR 0.19, 95% CI 0.08-0.47), and age (P=0.022) was a modifier for this association."
+  },
+  {
+   "pmid": "38444060",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "16.36",
+   "ci": [
+    "3.08",
+    "87.03"
+   ],
+   "printed_p": "< 0.0001",
+   "sentence": "The four intolerant patients and the 17 not responding to optimisation were more likely to require colectomy (odds ratio 16.36; 95% confidence interval 3.08-87.03, p < 0.0001)."
+  },
+  {
+   "pmid": "38552544",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.22",
+   "ci": [
+    "0.09",
+    "0.51"
+   ],
+   "printed_p": "= 0.0290",
+   "sentence": "For patients previously treated with immunotherapy, the median PFS was notably longer at 7.8 vs. 1.7 months (HR = 0.22, 95 % CI: 0.09-0.51, P = 0.0290)."
+  },
+  {
    "pmid": "38529655",
    "kind": "verdict",
    "ratio": "hazard ratio",
@@ -577,6 +86,42 @@
    ],
    "printed_p": "= 0.037",
    "sentence": "Comparing the third with the first sample quartile, higher BMP10 levels at 2 months were associated with higher risk of ischemic stroke (hazard ratio [HR], 1.33 [95% CI, 0.67-2.63], P=0.037), heart failure (HR, 1.91 [95% CI, 1.17-3.12], P=0.012) and all-cause death (HR, 1.61 [95% CI, 1.17-2.21], P<0.001)."
+  },
+  {
+   "pmid": "38583892",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "2.54",
+   "ci": [
+    "1.05",
+    "5.48"
+   ],
+   "printed_p": "< .001",
+   "sentence": "After a 36-month follow-up, the overall survival rate of the observation group was significantly higher than that of the control group (hazard ratio, 2.54; 95% CI, 1.05-5.48; P < .001)."
+  },
+  {
+   "pmid": "38564167",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "4.346",
+   "ci": [
+    "1.671",
+    "7.307"
+   ],
+   "printed_p": "= 0.003",
+   "sentence": "After adjusting for age, gender, and BMI, the control group had a four times higher mortality risk (HR: 4.346, 95% CI 1.671-7.307, P = 0.003)."
+  },
+  {
+   "pmid": "37646410",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "0.26",
+   "ci": [
+    "0.08",
+    "0.80"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "In this study, 28.5% and 5.8% developed SSI in the SSD and PNPWT groups, respectively (relative risk = 0.26; 95% confidence interval = 0.08-0.80; p = 0.001)."
   },
   {
    "pmid": "38165089",
@@ -591,18 +136,6 @@
    "sentence": "Other risk factors included younger age (OR: 1.5, 95% CI: 1.05-2.17), first-time donation (OR: 5.7, 95% CI: 1.66-5.74), prior history of VVR (OR: 2.5, 95% CI: 10.4-101.52)."
   },
   {
-   "pmid": "38109995",
-   "kind": "verdict",
-   "ratio": "relative risk",
-   "estimate": "1.65",
-   "ci": [
-    "1.17",
-    "2.33"
-   ],
-   "printed_p": "= .700",
-   "sentence": "Surgical site infection (8 vs 7; P=1.000; relative risk, 1.08; 95% confidence interval, 0.64-1.83), hematoma (1 vs 2; P=.561; relative risk, 0.66; 95% confidence interval, 0.13-3.31), seroma (8 vs 2; P=.052; relative risk, 1.65; 95% confidence interval, 1.17-2.33), need for resuturing (4 vs 3; P=.700; relative risk, 1.15; 95% confidence interval, 0.60-2.22), and need for readmission (4 vs 4; P=1.0"
-  },
-  {
    "pmid": "38183110",
    "kind": "inside",
    "ratio": "OR",
@@ -613,6 +146,66 @@
    ],
    "printed_p": null,
    "sentence": "Univariate and multivariate logistic regression analysis identified the American Society of Anesthesiology (ASA) class (odds ratio [OR] 1.564 [95% confidence interval (CI) 1.029-5.99, P = 0.046]), operative time (OR 1.003 [95% CI 1.006-1.019, P < 0.001]), and D-dimer level (OR 1.055 [95% CI 1.022-1.29, P = 0.046]) as risk factors for postoperative SSI."
+  },
+  {
+   "pmid": "39620369",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.43",
+   "ci": [
+    "0.32",
+    "0.80"
+   ],
+   "printed_p": "= 0.008",
+   "sentence": "Postprandial IAUC GLP-2 predicted the presence of CKD in MASH (OR = 0.43, 95%CI:0.32-0.80, p = 0.008) independently of liver histology and traditional risk factors."
+  },
+  {
+   "pmid": "38061346",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "2.6",
+   "ci": [
+    "1.9",
+    "3.0"
+   ],
+   "printed_p": "= 0.01",
+   "sentence": "However, VExUS improved more than twice the odds to achieve decongestion (odds ratio [OR]: 2.6, 95% CI: 1.9-3.0, p = 0.01) and the odds to reach a decrease of BNP &gt;30% (OR: 2.4, 95% CI: 1.3-4.1, p = 0.01)."
+  },
+  {
+   "pmid": "37732877",
+   "kind": "pci",
+   "ratio": "rate ratio",
+   "estimate": "0.87",
+   "ci": [
+    "0.81",
+    "0.95"
+   ],
+   "printed_p": "= 0.030",
+   "sentence": "Women who breastfed had lower risk of being \"unwell\" compared with women who never breastfed (adjusted rate ratio 0.87, 95% CI: 0.81 to 0.95 P = 0.030)."
+  },
+  {
+   "pmid": "38614444",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "4.85",
+   "ci": [
+    "3.02",
+    "7.80"
+   ],
+   "printed_p": "= .001",
+   "sentence": "A similar higher risk for kidney events was seen in HF patients (with HF, quartile 4 HR 6.94 [95% CI, 2.66-18.08]; P = .001; without HF, quartile 4 HR 4.85 [95% CI, 3.02-7.80]; P = .001)."
+  },
+  {
+   "pmid": "38768800",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "13.6",
+   "ci": [
+    "1.92",
+    "96.6"
+   ],
+   "printed_p": "= .0002",
+   "sentence": "Patients who underwent onabotulinumtoxinA injection were significantly less likely to receive retreatment within 6 to 9 months compared to patients who received bladder instillations (relative risk 13.6; 95% CI, 1.92-96.6; P=.0002)."
   },
   {
    "pmid": "38833658",
@@ -639,6 +232,18 @@
    "sentence": "The length of hospital stay for the developmental care group was 65 % as long as that for the control group (HR: 0.65, 95 % CI, 0.451-0936, p = 0.021)."
   },
   {
+   "pmid": "38943155",
+   "kind": "pci",
+   "ratio": "IRR",
+   "estimate": "0.45",
+   "ci": [
+    "0.33",
+    "0.97"
+   ],
+   "printed_p": "= 0.053",
+   "sentence": "Malaria incidence was also consistently lower in too-torn PBO-PY LLIN (IRR = 0.37 [95% CI 0.19-0.72], p = 0.003) and chlorfenapyr-PY LLIN (IRR = 0.45 [95% CI 0.33-0.97], p = 0.053) compared to an intact PY-only LLIN during the first year of follow up."
+  },
+  {
    "pmid": "38896837",
    "kind": "inside",
    "ratio": "odds ratio",
@@ -651,6 +256,90 @@
    "sentence": "The variables groups (adjusted odds ratio [AOR] 1.714, 95% CI 2.387-3.825), time (AOR 1.837, 95% CI 1.625-2.754), and age (AOR 1.618, 95% CI 0.225-1.699) significantly contributed (P<.001) to medication adherence."
   },
   {
+   "pmid": "38916510",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "8.0",
+   "ci": [
+    "5.0",
+    "12.6"
+   ],
+   "printed_p": "= .03",
+   "sentence": "The ORs of osteoporosis diagnosis were increased in screening group participants who did not meet formalized criteria for DXA compared with those who did (OR, 23.2 [95% CI: 10.2, 53.1] vs OR, 8.0 [95% CI: 5.0, 12.6]; interactive P = .03)."
+  },
+  {
+   "pmid": "38639358",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.5496",
+   "ci": [
+    "0.44",
+    "0.69"
+   ],
+   "printed_p": "= 0.0001",
+   "sentence": "Top proteins in the adjusted analysis included ANGPTL2 (angiopoietin-like protein 2) (hazard ratio [HR], 0.5731 [95% CI, 0.47-0.7]; P=3.13E-05), AMY2A (α amylase 2A) (HR, 0.5496 [95% CI, 0.44-0.69]; P=0.0001), and DNASE1 (deoxyribonuclease-1) (HR, 0.5704 [95% CI, 0.46-0.71]; P=0.0002)."
+  },
+  {
+   "pmid": "38639358",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.5704",
+   "ci": [
+    "0.46",
+    "0.71"
+   ],
+   "printed_p": "= 0.0002",
+   "sentence": "Top proteins in the adjusted analysis included ANGPTL2 (angiopoietin-like protein 2) (hazard ratio [HR], 0.5731 [95% CI, 0.47-0.7]; P=3.13E-05), AMY2A (α amylase 2A) (HR, 0.5496 [95% CI, 0.44-0.69]; P=0.0001), and DNASE1 (deoxyribonuclease-1) (HR, 0.5704 [95% CI, 0.46-0.71]; P=0.0002)."
+  },
+  {
+   "pmid": "38692082",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "8.10",
+   "ci": [
+    "1.1",
+    "59.1"
+   ],
+   "printed_p": "< 0.0001",
+   "sentence": "The 60-month DMFS for patients in the EPCL and EPCH groups was 100% and 94%, respectively (adjusted HR 8.10, 95% CI 1.1-59.1, P < 0.0001)."
+  },
+  {
+   "pmid": "38031258",
+   "kind": "pci",
+   "ratio": "IRR",
+   "estimate": "0.22",
+   "ci": [
+    "0.15",
+    "0.32"
+   ],
+   "printed_p": "= .001",
+   "sentence": "The results revealed a decrease in fall rate (n = 4 per 1000 patient-days vs 1.34 per 1000 patient-days, incidence rate ratio (IRR) = 0.19 [95% confidence interval (CI), 0.14-0.26]; P = .001) and injuries (n = 2.4 per 1000 patient-days vs 0.79 per 1000 patient-days, IRR = 0.22 [95% CI, 0.15-0.32]; P = .001) in exposed compared with unexposed phases."
+  },
+  {
+   "pmid": "39091047",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "3.83",
+   "ci": [
+    "1.68",
+    "5.97"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "The intervention group demonstrated higher scores for self-care behaviours (adjusted odds ratio = 3.83 [95%CI = 1.68-5.97], p = 0.001) and not skipping medications (adjusted odds ratio = 2.32 [95%CI = 1.09-4.97], p = 0.030) at 12 months.DiscussionThe OPTIMUM HTM system enabled patients to maintain their glycaemic control beyond the intervention period."
+  },
+  {
+   "pmid": "39301921",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.35",
+   "ci": [
+    "0.19",
+    "0.63"
+   ],
+   "printed_p": "= 0.0162",
+   "sentence": "Moreover, 32 patients treated with modified doses showed a significantly better time to PSA progression (TTPP) and overall survival (OS) compared with the 152 patients treated with a standard dose (HR 0.47, 95%CI 0.27-0.83, p = 0.0379, and HR 0.35, 95%CI 0.19-0.63, p = 0.0162)."
+  },
+  {
    "pmid": "39173098",
    "kind": "verdict",
    "ratio": "HR",
@@ -661,6 +350,18 @@
    ],
    "printed_p": "= .0362",
    "sentence": "At FA, the median OS was 15.9 versus 14.7 months, respectively (HR, 0.84 [95% CI, 0.69 to 1.02]; P = .0362)."
+  },
+  {
+   "pmid": "39004217",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "0.6",
+   "ci": [
+    "0.06",
+    "0.93"
+   ],
+   "printed_p": "= .025",
+   "sentence": "Dexmedetomidine reduced the epinephrine infusion rescue (relative risk reduction, 0.6; 95% CI, 0.06-0.93; P = .025)."
   },
   {
    "pmid": "39245314",
@@ -687,6 +388,18 @@
    "sentence": "The existing EI exhibited significant associations: the click depth index (hazard ratio [HR] 0.49, 95% CI 0.29-0.84; P<.001) and loyalty index (HR 0.17, 95% CI 0.09-0.31; P<.001) were significantly associated with improved survival, whereas the recency index exhibited no significant association (HR 1.30, 95% CI 1.70-2.42; P=.41)."
   },
   {
+   "pmid": "39102832",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "0·36",
+   "ci": [
+    "0·23",
+    "0·57"
+   ],
+   "printed_p": "= 0·0005",
+   "sentence": "In the dMMR population, median progression-free survival was not estimable (95% CI 12·4 months-not estimable [NE]) in the atezolizumab group and 6·9 months (6·3-10·1) in the placebo group (hazard ratio [HR] 0·36, 95% CI 0·23-0·57; p=0·0005)."
+  },
+  {
    "pmid": "38072761",
    "kind": "verdict",
    "ratio": "HR",
@@ -697,6 +410,18 @@
    ],
    "printed_p": "= 0.007",
    "sentence": "Men aged <75 versus ≥75 yr had longer OS (enzalutamide plus ADT: hazard ratio [HR] 0.66; 95% confidence interval [CI] 0.47-0.91; p = 0.02; placebo plus ADT: HR 0.81; 95% CI 0.60-1.09; p = 0.13) and rPFS (enzalutamide plus ADT: HR 0.78; 95% CI 0.58-1.04; p = 0.12; placebo plus ADT: HR 0.98; 95% CI 0.74-1.30; p = 0.007)."
+  },
+  {
+   "pmid": "38776097",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "6.7",
+   "ci": [
+    "3.3",
+    "13.6"
+   ],
+   "printed_p": "= .01",
+   "sentence": "Dual cardioversion predicted success (odds ratio, 6.7; 95% CI, 3.3-13.6; P = .01)."
   },
   {
    "pmid": "39674960",
@@ -711,6 +436,54 @@
    "sentence": "Multivariate logistic regression analysis revealed two independent predictors of postoperative blood transfusion: unstable fracture pattern (OR = 0.065, 95% CI 0.007-0.571, p = 0.014), and preoperative haemoglobin level (OR = 903, 95% CI 0.846-0.965, p = 0.003)."
   },
   {
+   "pmid": "39697171",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "5.870",
+   "ci": [
+    "1.957",
+    "12.331"
+   ],
+   "printed_p": "= 0.012",
+   "sentence": "A higher proportion of patients in the intervention group were prescribed an OAC compared with the control group at 6 months (odds ratio, 5.870 [95% CI, 1.957-12.331]; P=0.012)."
+  },
+  {
+   "pmid": "39520630",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.51",
+   "ci": [
+    "0.43",
+    "0.82"
+   ],
+   "printed_p": "= 0.004",
+   "sentence": "A total of 57 (12.7%) patients in ticagrelor group and 80 (17.8%) patients in clopidogrel group experienced composite of new stroke, myocardial infarction (MI), or death due to vascular insults (HR 0.51; 95% CI 0.43-0.82; P value = 0.004)."
+  },
+  {
+   "pmid": "39725897",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "4.700",
+   "ci": [
+    "2.430",
+    "9.089"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "The MACE rate was higher in patients with a low ΔQFR increase compared to those with high ΔQFR (4.4% vs. 20.2%, HR: 4.700, 95%CI: 2.430 to 9.089, P = 0.001)."
+  },
+  {
+   "pmid": "38828555",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "16.61",
+   "ci": [
+    "2.86",
+    "181.36"
+   ],
+   "printed_p": "= .0003",
+   "sentence": "Paltusotine was also superior to placebo for all secondary endpoints: mean (± SE) change in IGF-I of 0.04 ± 0.09× ULN vs 0.83 ± 0.1× ULN (P < .0001); mean (± SE) change in Acromegaly Symptom Diary score of -0.6 ± 1.5 vs 4.6 ± 1.6 (P = .02); mean GH maintained at <1.0 ng/mL in 20/23 (87.0%) vs 5/18 (27.8%) patients (odds ratio, 16.61; 95% CI, 2.86-181.36; P = .0003)."
+  },
+  {
    "pmid": "39415097",
    "kind": "inside",
    "ratio": "OR",
@@ -721,6 +494,18 @@
    ],
    "printed_p": null,
    "sentence": "Additionally, an elevated CGRP level was found to increase the odds of having a FIH [OR = 1.32; 95%CI 1.06-1.22]."
+  },
+  {
+   "pmid": "39396349",
+   "kind": "pci",
+   "ratio": "rate ratio",
+   "estimate": "3·10",
+   "ci": [
+    "1·53",
+    "6·29"
+   ],
+   "printed_p": "< 0·0001",
+   "sentence": "Compared with the recent-TCV group, the previous-TCV group had an increased risk of typhoid fever between 2021-23, with an adjusted incidence rate ratio of 3·10 (95% CI 1·53 to 6·29; p<0·0001), indicating a decline in the protection of a single-dose of TCV 3-5 years after vaccination."
   },
   {
    "pmid": "38964854",
@@ -735,6 +520,30 @@
    "sentence": "CSPEB was significantly greater in the H-EMR arm (7/90 (7.8%) vs 1/87 (1.1%); RR 6.77, 95% CI 0.85 to 53.9; p=0.034)."
   },
   {
+   "pmid": "26330362",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "7.837",
+   "ci": [
+    "3.845",
+    "15.333"
+   ],
+   "printed_p": "= 0.004",
+   "sentence": "Multivariate regression analysis showed that sorafenib (OR 7.837; 95 % CI 3.845-15.333; p = 0.004), antiviral therapy (OR 3.871; 95 % CI 1.572-9.569; p = 0.044) and hepatoprotective drug (OR 3.007; 95 % CI 1.321-6.308; p = 0.046) played important roles in clinical outcome."
+  },
+  {
+   "pmid": "26330362",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "3.871",
+   "ci": [
+    "1.572",
+    "9.569"
+   ],
+   "printed_p": "= 0.044",
+   "sentence": "Multivariate regression analysis showed that sorafenib (OR 7.837; 95 % CI 3.845-15.333; p = 0.004), antiviral therapy (OR 3.871; 95 % CI 1.572-9.569; p = 0.044) and hepatoprotective drug (OR 3.007; 95 % CI 1.321-6.308; p = 0.046) played important roles in clinical outcome."
+  },
+  {
    "pmid": "26224129",
    "kind": "verdict",
    "ratio": "risk ratio",
@@ -745,6 +554,18 @@
    ],
    "printed_p": "= 0.036",
    "sentence": "Methods In this study conducted from May 2012 to July 2013 in the neonatal intensive care unit (NICU) of a tertiary care hospital, inborn asymptomatic neonates, Results Incidence of first episode of culture-proven LOS was significantly lower in the BLF group vs. placebo [2/63 (3.2%) vs. 9/67(13.4%); risk ratio, 0.211; 95% CI, 0.044-1.019; p = 0.036]."
+  },
+  {
+   "pmid": "26048388",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.01",
+   "ci": [
+    "0.01",
+    "0.16"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "Greater eccentricity index predicted difficulty in isolating LIPV, OR 40.33 (95% CI 1.40 to 1160, p = 0.03) and smaller eccentricity index predicted PN injury in RSPV, OR 0.01 (95% CI 0.01-0.16, p = 0.001)."
   },
   {
    "pmid": "25753159",
@@ -769,6 +590,54 @@
    ],
    "printed_p": "= 0.035",
    "sentence": "In group 1, elimination of high-energy refined grains increased the probability of having normal fasting glucose (relative risk, 1.514; 95% CI, 0.989-2.316; P = 0.035)."
+  },
+  {
+   "pmid": "26182172",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "2.12",
+   "ci": [
+    "1.67",
+    "2.69"
+   ],
+   "printed_p": "= .02",
+   "sentence": "Obesity grade 2 plus 3 was also associated with advanced disease, including larger tumor size (HR, 2.12; 95% CI, 1.67-2.69; P = .02), positive lymph nodes (HR, 1.89; 95% CI, 1.46-2.45; P = .06), regional and/or distant stage (HR, 1.94; 95% CI, 1.52-2.47; P = .05), and deaths after breast cancer (HR, 2.11; 95% CI, 1.57-2.84; P Conclusions and relevance Obesity is associated with increased invasive "
+  },
+  {
+   "pmid": "26182172",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "1.89",
+   "ci": [
+    "1.46",
+    "2.45"
+   ],
+   "printed_p": "= .06",
+   "sentence": "Obesity grade 2 plus 3 was also associated with advanced disease, including larger tumor size (HR, 2.12; 95% CI, 1.67-2.69; P = .02), positive lymph nodes (HR, 1.89; 95% CI, 1.46-2.45; P = .06), regional and/or distant stage (HR, 1.94; 95% CI, 1.52-2.47; P = .05), and deaths after breast cancer (HR, 2.11; 95% CI, 1.57-2.84; P Conclusions and relevance Obesity is associated with increased invasive "
+  },
+  {
+   "pmid": "26182172",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "1.94",
+   "ci": [
+    "1.52",
+    "2.47"
+   ],
+   "printed_p": "= .05",
+   "sentence": "Obesity grade 2 plus 3 was also associated with advanced disease, including larger tumor size (HR, 2.12; 95% CI, 1.67-2.69; P = .02), positive lymph nodes (HR, 1.89; 95% CI, 1.46-2.45; P = .06), regional and/or distant stage (HR, 1.94; 95% CI, 1.52-2.47; P = .05), and deaths after breast cancer (HR, 2.11; 95% CI, 1.57-2.84; P Conclusions and relevance Obesity is associated with increased invasive "
+  },
+  {
+   "pmid": "25945019",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.13",
+   "ci": [
+    "1.97",
+    "2.29"
+   ],
+   "printed_p": "= 0.004",
+   "sentence": "In multivariate analysis, advanced age (≥ 60 years) was a significant independent factor related to the eradication failure in the CLA-ST group (adjusted OR = 2.13, 95%CI: 1.97-2.29, P = 0.004), whereas there was no significance in the MOX-ST group."
   },
   {
    "pmid": "25853935",
@@ -807,6 +676,66 @@
    "sentence": "Results Results showed significant associations with the SNP rs6277 and impaired executive function (odds ratio = 3.3, 95% CI 1.2-2.6; p = 0.004) and cognitive flexibility (odds ratio = 1.6, 95% CI 2.0-5.7; p = 0.001)."
   },
   {
+   "pmid": "26307064",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "3.5",
+   "ci": [
+    "1.5",
+    "5.5"
+   ],
+   "printed_p": "= 0.008",
+   "sentence": "The results were further stratified by race and sex and significant results were seen in males (odds ratio = 3.5, 95% CI 1.5-5.5; p = 0.008) and in African Americans (odds ratio = 3.1, 95% CI 2.3-3.5; p = 0.01)."
+  },
+  {
+   "pmid": "26307064",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "3.1",
+   "ci": [
+    "2.3",
+    "3.5"
+   ],
+   "printed_p": "= 0.01",
+   "sentence": "The results were further stratified by race and sex and significant results were seen in males (odds ratio = 3.5, 95% CI 1.5-5.5; p = 0.008) and in African Americans (odds ratio = 3.1, 95% CI 2.3-3.5; p = 0.01)."
+  },
+  {
+   "pmid": "26863333",
+   "kind": "pci",
+   "ratio": "aOR",
+   "estimate": "0.86",
+   "ci": [
+    "0.44",
+    "0.97"
+   ],
+   "printed_p": "= 0.03",
+   "sentence": "Cesareans were performed less frequently in whites (29 %) and Hispanics (24.5 %) compared to blacks (32.7 %) (adjusted odds ratio (aOR) 0.87, 95 % confidence interval (CI) 0.47-0.97, p = 0.03 and aOR 0.86, 95 % CI 0.44-0.97, p = 0.03, respectively)."
+  },
+  {
+   "pmid": "25856211",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.20",
+   "ci": [
+    "0.08",
+    "0.52"
+   ],
+   "printed_p": "= .02",
+   "sentence": "Couples in which both partners smoked had a lower chance of live birth vs nonsmokers (OR = 0.20; 95 % CI, 0.08-0.52; P = .02), whereas there was not a significant effect of female or male smoking alone."
+  },
+  {
+   "pmid": "25888011",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "1.50",
+   "ci": [
+    "1.36",
+    "1.56"
+   ],
+   "printed_p": "= 0.043",
+   "sentence": "In the multivariable analysis, severe (odds ratio (OR), 1.50; 95% CI, 1.36 to 1.56; P =0.043) and multiple hypoglycemic events (OR, 1.76, 95% CI, 1.31 to 3.37; P Conclusion In a large cohort of ICU patients, severe hypoglycemia and multiple hypoglycemic events were associated with increased 90-day mortality."
+  },
+  {
    "pmid": "25175629",
    "kind": "inside",
    "ratio": "OR",
@@ -829,6 +758,30 @@
    ],
    "printed_p": "= 0.01",
    "sentence": "Vitamin C/E was protective for placental abruption in smokers (relative risk [RR] 0.09; 95% CI 0.00-0.87], but not in nonsmokers (RR 0.92; 95% CI 0.52-1.62) (P = 0.01), and for preterm birth in smokers (RR 0.76; 95% CI 0.58-0.99) but not in nonsmokers (RR 1.03; 95% CI 0.90-1.17) (P = 0.046)."
+  },
+  {
+   "pmid": "25516497",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "1.03",
+   "ci": [
+    "0.90",
+    "1.17"
+   ],
+   "printed_p": "= 0.046",
+   "sentence": "Vitamin C/E was protective for placental abruption in smokers (relative risk [RR] 0.09; 95% CI 0.00-0.87], but not in nonsmokers (RR 0.92; 95% CI 0.52-1.62) (P = 0.01), and for preterm birth in smokers (RR 0.76; 95% CI 0.58-0.99) but not in nonsmokers (RR 1.03; 95% CI 0.90-1.17) (P = 0.046)."
+  },
+  {
+   "pmid": "26231455",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "18·0",
+   "ci": [
+    "2·3",
+    "140·9"
+   ],
+   "printed_p": "= 0·0004",
+   "sentence": "In the double-blind period, three patients discontinued treatment because of adverse events: two patients in the eltrombopag group withdrew because of increased liver aminotransferases and one in the placebo group withdrew because of abdominal haemorrhage. 25 (40%) patients who received eltrombopag compared with one (3%) patient who received placebo achieved the primary outcome of platelet counts "
   },
   {
    "pmid": "25578377",
@@ -867,6 +820,66 @@
    "sentence": "Results Postoperative ileus was observed in 6% (2/32) of the gum-chewing group and in 21.8% (7/32) in the standard postoperative recovery group, with an odds ratio of 0.167 (95% CI: 0.37-0.75; p = 0.006)."
   },
   {
+   "pmid": "27221862",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.11",
+   "ci": [
+    "0.10",
+    "0.23"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "After conducting a logistic regression analysis, it was observed that female gender (OR=0.28; 95% CI=0.14-0.57; P=0.001), being unmarried (OR=0.11; 95% CI=0.10-0.23; P=0.001), lower levels of education (OR=0.36; 95% CI=0.16-0.82; P=0.015), and having no relatives with CRC (OR=0.30; 95% CI=0.17-0.56; P=0.001) were significantly associated with a lower CRCS uptake."
+  },
+  {
+   "pmid": "27449273",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "1.88",
+   "ci": [
+    "1.59",
+    "2.22"
+   ],
+   "printed_p": "= 0.0035",
+   "sentence": "Subjects carrying the T allele were also more likely to have abstinent weeks over the course of the trial compared to those with the C/C genotype (RR=1.88, 95% CI=1.59-2.22, p=0.0035)."
+  },
+  {
+   "pmid": "27412145",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "2.78",
+   "ci": [
+    "1.97",
+    "3.92"
+   ],
+   "printed_p": "= 0.00001",
+   "sentence": "Performance of CXR was independently associated with door-to-needle time ≥60 minutes (odds ratio 2.78, 95% confidence interval 1.97-3.92; p = 0.00001)."
+  },
+  {
+   "pmid": "27231800",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "2.18",
+   "ci": [
+    "1.4",
+    "3.4"
+   ],
+   "printed_p": "= 0.018",
+   "sentence": "However, the risk of RE was greater in patients with ECOG ≥ 2 (RR = 2.18, 95% CI = 1.4-3.4; P = 0.018) and among patients with major poly-medication (RR = 2.49, 95% CI = 1.52-4.09; P Conclusions Medication reconciliation results in a marked decrease in RERP in cancer patients."
+  },
+  {
+   "pmid": "27476789",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "0·53",
+   "ci": [
+    "0·28",
+    "1·00"
+   ],
+   "printed_p": "= 0·0007",
+   "sentence": "Recurrent venous thromboembolism occurred in 14 (4%) of 378 patients given edoxaban and in 28 (7%) of 393 patients given warfarin (hazard ratio [HR] 0·53, 95% CI 0·28-1·00; p=0·0007)."
+  },
+  {
    "pmid": "26925155",
    "kind": "inside",
    "ratio": "aOR",
@@ -877,6 +890,18 @@
    ],
    "printed_p": null,
    "sentence": "Among the 597 patients who attended the M24 visit, being overweight or obese increased from 20.4 to 24.8 % (p = 0.01) and 7.2 to 9.2 % (p = 0.03) respectively and factor associated with being overweight or obese was immunological response measured as an increase of CD4 cell count between M0-M24 (for +50 cells/mm(3): aOR 1.01; 95 % CI 1.05-1.13, p = 0.01)."
+  },
+  {
+   "pmid": "27751846",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0·46",
+   "ci": [
+    "0·46",
+    "0·80"
+   ],
+   "printed_p": "= 0·0045",
+   "sentence": "In the leiomyosarcoma cohort, progression-free survival was 3·7 months (95% CI 2·5-5·0) with regorafenib versus 1·8 (1·0-2·8) months with placebo (HR 0·46 [95% CI 0·46-0·80] p=0·0045)."
   },
   {
    "pmid": "27772661",
@@ -903,6 +928,18 @@
    "sentence": "The intervention group was significantly more satisfied with the overall care they received for breastfeeding compared to the control group (OR = 1.96; 95% CI: 3.50-6.88))."
   },
   {
+   "pmid": "26747850",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "1.53",
+   "ci": [
+    "1.34",
+    "1.75"
+   ],
+   "printed_p": "= 0.006",
+   "sentence": "Compared with women not at high ATR, those at high ATR had significantly higher risk of major adverse cardiovascular events (15.8% versus 10.6%; adjusted hazard ratio: 1.53; 95% confidence interval: 1.34-1.75; P=0.006) and all-cause mortality."
+  },
+  {
    "pmid": "27569442",
    "kind": "verdict",
    "ratio": "hazard ratio",
@@ -915,6 +952,18 @@
    "sentence": "Event-free survival did not differ between treatment groups (hazard ratio [HR] 0·98 [95% CI 0·78-1·23]); hazards were non-proportional (p=0·0003)."
   },
   {
+   "pmid": "26803236",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "2.23",
+   "ci": [
+    "1.09",
+    "6.33"
+   ],
+   "printed_p": "= 0.003",
+   "sentence": "At multivariable analysis, female gender (HR: 3.42; 95% CI 1.32-8.85; p=0.011 and HR 2.28; 95% CI 1.09-4.75; p=0.027) and insulin-treated diabetes mellitus (HR: 2.62; 95% CI 1.15-6.75; p=0.004 and HR: 2.23; 95% CI 1.09-6.33; p=0.003) were independent predictors of both primary and secondary endpoint."
+  },
+  {
    "pmid": "26653112",
    "kind": "inside",
    "ratio": "odds ratio",
@@ -925,6 +974,90 @@
    ],
    "printed_p": null,
    "sentence": "In a proportional odds model, high-dose vitamin D3 was more likely than low-dose vitamin D3 to decrease CD4+ ATP release (odds ratio, 3.43; 95% confidence interval, 1.06-1.11)."
+  },
+  {
+   "pmid": "28585750",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "0.19",
+   "ci": [
+    "0.18",
+    "0.33"
+   ],
+   "printed_p": "= .0001",
+   "sentence": "The incidence of fluid intake during the first 6 postoperative hours was significantly higher in the restricted group patients; 60 (83%) children in the restricted group complained of thirst as compared to 12 (17%) children in the liberal group (RR 0.19, 95% CI: 0.18-0.33, P=.0001)."
+  },
+  {
+   "pmid": "28400487",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "11.8",
+   "ci": [
+    "4.1",
+    "34.1"
+   ],
+   "printed_p": "= 0.035",
+   "sentence": "The DWI+ risk in CAS increased further over CEA if the largest internal carotid artery angle was ≥60° (OR, 11.8; 95% CI, 4.1-34.1) than if it was P =0.035)."
+  },
+  {
+   "pmid": "28347792",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "1.002",
+   "ci": [
+    "1.003",
+    "1.061"
+   ],
+   "printed_p": "= 0.037",
+   "sentence": "Cox proportional hazards regression models showed that the predictors of recurrence included AF history (relative risk RR 1.002, 95% CI 1.003-1.061, P =0.037) and the left atrial diameter (RR 1.131, 95% CI 1.029-1.242, P = 0.010)."
+  },
+  {
+   "pmid": "28244124",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "2.1",
+   "ci": [
+    "1.5",
+    "3.0"
+   ],
+   "printed_p": "= 0.012",
+   "sentence": "Regardless of treatment, all subjects with visceral adipose tissue/height 2 >1.5 times the gender-specific mean experienced endoscopic recurrence at 18 months (compared to 47%) [relative risk 2.1, 95% CI 1.5-3.0, P = 0.012]."
+  },
+  {
+   "pmid": "28028723",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.973",
+   "ci": [
+    "0.890",
+    "0.987"
+   ],
+   "printed_p": "= 0.014",
+   "sentence": "The amplitude elevated TNF-α 72 h after admission was an independent risk factor of in-hospital MACCE events (OR 0.973, 95% CI 0.890-0.987, P=0.014) in patients with STEMI and CS."
+  },
+  {
+   "pmid": "27931951",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "2.78",
+   "ci": [
+    "1.35",
+    "5.15"
+   ],
+   "printed_p": "= .0001",
+   "sentence": "After controlling for endoscopist, patient age and/or sex, Boston Bowel Preparation Scale score, and size and/or location and/or morphology of adenoma, the AMR remained significantly higher in the 3-minute withdrawal group (odds ratio, 2.78; 95% confidence interval, 1.35-5.15; P = .0001)."
+  },
+  {
+   "pmid": "29065390",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "0.57",
+   "ci": [
+    "0.18",
+    "0.70"
+   ],
+   "printed_p": "= 0.0024",
+   "sentence": "The adapted treatment significantly reduced the days to relapse for the two lowest socioeconomic groups: SES1: M=76.6 (SD 72.9) vs. 38.3 (SD 60.1) days to relapse (RR=0.63 95% CI, 0.45, 0.88, p=0.0013); SES2: M=88.2 (SD 67.3) vs. 40.1 (SD 62.6 days to relapse (RR=0.57 95% CI, 0.18, 0.70, p=0.0024)."
   },
   {
    "pmid": "26786294",
@@ -949,6 +1082,30 @@
    ],
    "printed_p": null,
    "sentence": "Readmission at 30days was significantly lower in the intervention group compared to the control group (n=10, 9% vs. n=20, 19% respectively, OR=0.40, 95% CI=0.02, 0.10, p=0.02)."
+  },
+  {
+   "pmid": "28739492",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.75",
+   "ci": [
+    "0.69",
+    "0.91"
+   ],
+   "printed_p": "= .02",
+   "sentence": "Results Citalopram treatment (30±5.8 mg/d) resulted in similar 6-month efficacy compared to both quetiapine (94.0±40.4 mg/d) and olanzapine (5.2±1.6 mg/d), lower occurrence of falls than olanzapine [odds ratio (OR) = 0.81, 95% confidence interval (CI) = 0.68-0.97, P = .012], lower incidence of orthostatic hypotension than both quetiapine (OR = 0.80, 95% CI = 0.66-0.95, P = .032) and olanzapine (OR"
+  },
+  {
+   "pmid": "28739492",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.92",
+   "ci": [
+    "0.88",
+    "0.95"
+   ],
+   "printed_p": "= .016",
+   "sentence": "Results Citalopram treatment (30±5.8 mg/d) resulted in similar 6-month efficacy compared to both quetiapine (94.0±40.4 mg/d) and olanzapine (5.2±1.6 mg/d), lower occurrence of falls than olanzapine [odds ratio (OR) = 0.81, 95% confidence interval (CI) = 0.68-0.97, P = .012], lower incidence of orthostatic hypotension than both quetiapine (OR = 0.80, 95% CI = 0.66-0.95, P = .032) and olanzapine (OR"
   },
   {
    "pmid": "28700482",
@@ -999,6 +1156,30 @@
    "sentence": "The risk of cerebral palsy was lower among survivors in the treatment group (risk ratio, 0.52; 95% CI 0.25 to 1.03; P=0.04) and lesser number of babies were on anticonvulsants at assessment (risk ratio, 0.47; 95% CI 0.20 to 1.01; P=0.03)."
   },
   {
+   "pmid": "28236919",
+   "kind": "pci",
+   "ratio": "risk ratio",
+   "estimate": "0.2",
+   "ci": [
+    "0.12",
+    "0.56"
+   ],
+   "printed_p": "= .02",
+   "sentence": "Patients were excluded if they had active systemic sepsis, no anatomically suitable vessels, or an anticipated life expectancy Results Culture-proven bacteremia developed in 10 patients (16.4%) in the TCVC arm ≤6 months compared with two (3.3%) in the ecAVG+/-AVF arm (risk ratio, 0.2; 95% confidence interval, 0.12-0.56; P = .02)."
+  },
+  {
+   "pmid": "28710339",
+   "kind": "pci",
+   "ratio": "aOR",
+   "estimate": "2.29",
+   "ci": [
+    "1.62",
+    "3.22"
+   ],
+   "printed_p": "= 0.007",
+   "sentence": "Intervention participants who needed additional clinical investigation were more likely to quit in the longer term compared with the control group (aOR 2.29, 95% CI 1.62 to 3.22, p=0.007) and those receiving a negative result (aOR 2.43, 95% CI 1.54 to 3.84, p Conclusions CT lung cancer screening for high-risk participants presents a teachable moment for smoking cessation, especially among those wh"
+  },
+  {
    "pmid": "28645737",
    "kind": "inside",
    "ratio": "HR",
@@ -1035,6 +1216,18 @@
    "sentence": "In addition, high OPN mRNA expression was significantly associated with reduced DFS (HR 1.26, 95% CI 1.00-1.59, Wald's p = 0.050) and OS (HR 1.37, 95% CI 1.05-1.78, p = 0.019), while it retained its prognostic significance for both DFS (HR 1.39, 95% CI 1.10-1.77, p = 0.007) and OS (HR 1.54, 95% CI 1.61-2.05, p = 0.003) in the multivariate analysis."
   },
   {
+   "pmid": "29980989",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "4.75",
+   "ci": [
+    "2.1",
+    "10.8"
+   ],
+   "printed_p": "= 0.029",
+   "sentence": "Hospital discharge during the first 48 h after surgery was possible in 52.9% of the patients in PSI and 71% in TAP-lap (OR 4.75; 95% CI 2.1-10.8; p = 0.029)."
+  },
+  {
    "pmid": "29494423",
    "kind": "verdict",
    "ratio": "odds ratio",
@@ -1059,6 +1252,18 @@
    "sentence": "In multivariate analysis, age 12- 17 years was significantly, inversely associated with frequent binge drinking in the crude logit model but not in the adjusted logit model (crude odds ratio [COR] 0.21, 95%CI= 0.6- 0.66; adjusted odds ratio [AOR] = 0.51, 95%CI= 0.12- 2.13 respectively)."
   },
   {
+   "pmid": "29682715",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.75",
+   "ci": [
+    "1.72",
+    "5.48"
+   ],
+   "printed_p": "= 0.014",
+   "sentence": "Multivariate analyses showed that the lack of reinforcing sutures was an independent risk factor for anastomotic leakage (OR=2.75; 95%CI, 1.72-5.48; P=0.014)."
+  },
+  {
    "pmid": "30184562",
    "kind": "inside",
    "ratio": "HR",
@@ -1081,6 +1286,30 @@
    ],
    "printed_p": null,
    "sentence": "Four independent predictors were chosen to construct the MetS risk score, including BMI (HR=1.906, 95% CI: 1.040-1.155), FPG (HR=1.507, 95% CI: 1.305-1.741), DBP (HR=1.061, 95% CI: 1.002-1.031), HDL-C (HR=0.539, 95% CI: 0.303-0.959)."
+  },
+  {
+   "pmid": "29107078",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "5.186",
+   "ci": [
+    "1.736",
+    "5.489"
+   ],
+   "printed_p": "= 0.003",
+   "sentence": "Non-nasal MRSA colonization was significantly associated with persistent nasal colonization (odds ratio: 5.186; 95% CI: 1.736-5.489; P = 0.003)."
+  },
+  {
+   "pmid": "29059442",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "7.28",
+   "ci": [
+    "2.89",
+    "18.3"
+   ],
+   "printed_p": "= .004",
+   "sentence": "Incentive arm participants (N = 25) could earn escalating $15-$35 rewards for brief smoking abstinence (exhaled carbon monoxide Results Compared to control, incentive arm participants were more likely to achieve brief abstinence overall (odds ratio 7.28, 95% confidence interval 2.89 to 18.3) and at 8 weeks (48% vs. 8%, p = .004)."
   },
   {
    "pmid": "30052729",
@@ -1117,6 +1346,18 @@
    ],
    "printed_p": null,
    "sentence": "Logistic regression analysis showed that primary heart rate (increase of 10 bpm, OR= 1.568, 95 %CI : 1.039-1.238, P= 0.027), primary APACHEⅡ ( OR= 1.134, 95 %CI : 1.026-1.239, P= 0.005), integral heart rate (per 10 bpm, OR= 2.207, 95 %CI : 1.400-3.479, P= 0.001) were independent risk factors for 28 d mortality."
+  },
+  {
+   "pmid": "30993350",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "1.9",
+   "ci": [
+    "1.4",
+    "2.7"
+   ],
+   "printed_p": "= 0.03",
+   "sentence": "The incidences of stridor and laryngospasm of group L were significantly lower than those of group S (1/45, 2% vs. 8/45, 18%, respectively; relative risk 1.9, 95% CI 1.4-2.7, p = 0.03)."
   },
   {
    "pmid": "31580800",
@@ -1215,6 +1456,18 @@
    "sentence": "Higher SAPS II was consistently associated with increased risk of CIB (hazard ratio (HR) 1.03, 95% confidence interval (CI) 1.01-1.05 in the earlier period vs HR 1.02, 95% CI 1.01-1.03 in the later period; P = .37); university hospital admission was associated with decreased risk of earlier CIB (HR 0.30, 95% CI 0.14-0.63); this significantly increased in the later period (to HR 0.85, 95% CI 0.53-1"
   },
   {
+   "pmid": "30772342",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "0.12",
+   "ci": [
+    "0.13",
+    "1.26"
+   ],
+   "printed_p": "= .12",
+   "sentence": "Moderate to severe pancreatitis developed in 4 patients (0.9%) in the combination group, and 10 patients (2.3%) in the diclofenac-alone group (relative risk 0.12; 95% confidence interval 0.13-1.26; P = .12)."
+  },
+  {
    "pmid": "31507001",
    "kind": "inside",
    "ratio": "hazard ratio",
@@ -1239,6 +1492,18 @@
    "sentence": "Patients randomized to ticagrelor had lower risk of the composite end point regardless of HF status: hazard ratio (HR) 0.87 (95% CI: 0.73-1.03) in patients with HF and HR 0.84 (95% CI: 0.75-0.93) in patients with no HF (P = .76)."
   },
   {
+   "pmid": "31522849",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "12·7",
+   "ci": [
+    "1·8",
+    "554·8"
+   ],
+   "printed_p": "= 0·0024",
+   "sentence": "Findings Between April 15, 2014, and March 2, 2016, of 152 individuals assessed, we enrolled 120 participants, who were randomly assigned to the peanut-0 (n=60), peanut-300 (n=35), and placebo groups (n=25). 21 (35%) of peanut-0 group participants and one (4%) placebo group participant passed the 4000 mg challenge at both 104 and 117 weeks (odds ratio [OR] 12·7, 95% CI 1·8-554·8; p=0·0024)."
+  },
+  {
    "pmid": "31327687",
    "kind": "verdict",
    "ratio": "hazard ratio",
@@ -1251,6 +1516,30 @@
    "sentence": "Median progression-free survival was 5·6 months (95% CI 3·7-7·5) in the pembrolizumab plus pomalidomide and dexamethasone group versus 8·4 months (5·9-not reached) in the pomalidomide and dexamethasone group; progression-free survival estimates at 6 months were 48% (95% CI 37-58) versus 60% (49-69) at 6 months (hazard ratio [HR] 1·53; 95% CI 1·05-2·22; p=0·98)."
   },
   {
+   "pmid": "30880285",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "0.178",
+   "ci": [
+    "0.077",
+    "0.411"
+   ],
+   "printed_p": "= 0.029",
+   "sentence": "Fewer patients in the CRP group were treated with antibiotics compared to the GOLD group (31.7% versus 46.2%, p=0.028; adjusted odds ratio (OR) 0.178, 95% CI 0.077-0.411, p=0.029)."
+  },
+  {
+   "pmid": "31558473",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "2.13",
+   "ci": [
+    "1.37",
+    "3.36"
+   ],
+   "printed_p": "= 0.013",
+   "sentence": "Elevated baseline VEGFA was independently associated with poor prognosis for progression-free survival [PFS; HR = 1.82; 95% confidence interval (CI), 1.38-2.44; P = 0.0007], overall survival (HR = 2.13; 95% CI, 1.37-3.36; P = 0.013), and disease-control rate (DCR; OR = 0.30; P = 0.009)."
+  },
+  {
    "pmid": "31365109",
    "kind": "verdict",
    "ratio": "OR",
@@ -1261,6 +1550,30 @@
    ],
    "printed_p": "= .005",
    "sentence": "Early antihypertensive treatment was associated with different rates of 3-month recurrent stroke (patients with hypertension: OR, 0.44; 95% CI, 0.25-0.77 vs without hypertension: OR, 3.43; 95% CI, 0.94-12.55; P = .005 for homogeneity) and vascular events (patients with hypertension: OR, 0.66; 95% CI, 0.43-1.02 vs those without hypertension: OR, 1.91; 95% CI, 0.75-4.83; P = .04 for homogeneity) by "
+  },
+  {
+   "pmid": "31220256",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "4.58",
+   "ci": [
+    "1.29",
+    "16.33"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "The short-term intestinal eradication was marginal at day 6 (verum group 15/18, 83.3% versus placebo 2/11, 18.2%; relative risk 4.58, 95% CI 1.29-16.33; Fisher's exact test P = 0.001) and not evident at later timepoints."
+  },
+  {
+   "pmid": "30689736",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.13",
+   "ci": [
+    "0.054",
+    "0.31"
+   ],
+   "printed_p": "= 0.015",
+   "sentence": "In the validation cohort, increasing irPR score associated with objective response (P = 0.009) and MPRbx associated with increased overall survival (n = 51; HR 0.13; 95%CI, 0.054-0.31, P = 0.015)."
   },
   {
    "pmid": "32762882",
@@ -1347,6 +1660,18 @@
    "sentence": "Patients with meth-ctDNA had significantly worse 5-year OS (47% vs. 69%), even when controlling for other prognostic factors (hazard ratio=2.08; 95% confidence interval, 1.23-1.51)."
   },
   {
+   "pmid": "33087047",
+   "kind": "pci",
+   "ratio": "aOR",
+   "estimate": "0.003",
+   "ci": [
+    "0.001",
+    "0.815"
+   ],
+   "printed_p": "= 0.042",
+   "sentence": "Multivariate regression analysis demonstrated that administration of IVIg did indeed have a significant impact on mortality rate (aOR = 0.003 [95% CI: 0.001-0.815]; P = 0.042)."
+  },
+  {
    "pmid": "32965224",
    "kind": "verdict",
    "ratio": "odds ratio",
@@ -1383,6 +1708,42 @@
    "sentence": "Intravitreal triamcinolone acetonide steroid-induced ocular hypertension was less likely to develop in Group A (prednisolone acetate provocative test non-steroid-induced ocular hypertension, n = 32, 31.25%) than in group B (n = 24, 54.2%) (p = 0.006, odds ratio: 0.178, 95% CI: 0.53-0.596)."
   },
   {
+   "pmid": "32272959",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "0.15",
+   "ci": [
+    "0.02",
+    "0.97"
+   ],
+   "printed_p": "= 0.002",
+   "sentence": "Results The frequency of tachysystole was lower in the group using 12.5 μg misoprostol sublingually compared to the group using 25 μg misoprostol vaginally (RR = 0.15; 95%CI: 0.02-0.97; p = 0.002)."
+  },
+  {
+   "pmid": "31895407",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.61",
+   "ci": [
+    "0.49",
+    "0.77"
+   ],
+   "printed_p": "= .03",
+   "sentence": "Compared with the placebo arm, the reduction in the hazard of recurrence or death in the pembrolizumab arm was greater after the onset of an irAE than without or before an irAE (HR, 0.37; 95% CI, 0.24-0.57 vs HR, 0.61; 95% CI, 0.49-0.77, respectively; P = .03)."
+  },
+  {
+   "pmid": "31813531",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "3.09",
+   "ci": [
+    "1.56",
+    "3.6"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "By multivariable analysis, time-updated postdischarge AF was an independent predictor of 3-year cardiovascular death (HR 4.91, 95% CI 1.92 to 12.60, p = 0.0009), stroke (HR 4.87, 95% CI 1.12 to 21.12, p = 0.035), and the composite outcome of death, stroke or myocardial infarction (HR 3.09, 95% CI 1.56 to 3.6-6.11, p = 0.001)."
+  },
+  {
    "pmid": "31820219",
    "kind": "inside",
    "ratio": "OR",
@@ -1407,6 +1768,30 @@
    "sentence": "Cox proportional regression analyses showed that EN+TEC was associated with improved OS (hazard ratio, 0.377; 95% CI, 0.418-0.959; P =0 .041)."
   },
   {
+   "pmid": "31756389",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "2.83",
+   "ci": [
+    "1.91",
+    "4.18"
+   ],
+   "printed_p": "= .0106",
+   "sentence": "HF increment by 2 classes increased total mortality (HR 2.83, 95% CI 1.91-4.18, P 80 beats/min (P = .0106), and higher frequency of recorded AF in the rhythm arm (25%-75% vs 75% vs Conclusions (1) In AF patients without HF, symptomatic HF emergence was more frequent with rate control than with rhythm control."
+  },
+  {
+   "pmid": "32396775",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "1.07",
+   "ci": [
+    "1.00",
+    "1.13"
+   ],
+   "printed_p": "= 0.70",
+   "sentence": "OR, 1.07; 95% CI, 1.00-1.13; P = 0.70), free cortisol (OR, 1.20; 95% CI, 1.04-1.38 vs."
+  },
+  {
    "pmid": "32396775",
    "kind": "verdict",
    "ratio": "OR",
@@ -1419,6 +1804,18 @@
    "sentence": "OR, 1.16; 95% CI, 1.02-1.32; P = 0.75), aldosterone (OR, 1.01; 95% CI, 0.97-1.05 vs."
   },
   {
+   "pmid": "32709710",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.1",
+   "ci": [
+    "1.5",
+    "2.7"
+   ],
+   "printed_p": "= 0.008",
+   "sentence": "Results At 12 months, we found higher primary patency among patients receiving regional versus local anesthesia (50 of 63 [79%] versus 37 of 63 [59%] patients; odds ratio [OR], 2.7; 95% confidence interval [95% CI], 1.6 to 3.8; P =0.02) as well as higher functional patency (43 of 63 [68%] versus 31 of 63 [49%] patients; OR, 2.1; 95% CI, 1.5 to 2.7; P =0.008)."
+  },
+  {
    "pmid": "32773226",
    "kind": "verdict",
    "ratio": "HR",
@@ -1429,6 +1826,18 @@
    ],
    "printed_p": "= 0.01",
    "sentence": "Compared with the standard lipid-lowering therapy group, the intensive lipid-lowering therapy group had significantly lower all-cause death (6.9% vs 3.2%; HR, 0.45; 95% CI, 0.23 to 1.84; p = 0.01) and nonfatal stroke (2.9% vs 1.6%; HR, 0.77; 95% CI, 0.62 to 0.97; p = 0.02) rates."
+  },
+  {
+   "pmid": "32773223",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "1.038",
+   "ci": [
+    "1.004",
+    "1.072"
+   ],
+   "printed_p": "< 0.001",
+   "sentence": "In fully adjusted analyses, every 50 mg/dL increase in TG level was associated with a 3.8% (HR 1.038, 95%CI 1.004-1.072, p <0.001) increase in the primary composite outcome and a 6.4% (HR 1.064 95%CI 1.018-1.113, p <0.001) increase in the secondary outcome."
   },
   {
    "pmid": "32493335",
@@ -1455,6 +1864,18 @@
    "sentence": "In a comparison between in-patients and home care patients, the HLA-DRB1*08:01 allele was exclusively present in the hospitalized patients [OR > 2.5 (95% CI 2.7-220.6), Pc = 0.024]."
   },
   {
+   "pmid": "32334702",
+   "kind": "pci",
+   "ratio": "rate ratio",
+   "estimate": "0·52",
+   "ci": [
+    "0·16",
+    "0·88"
+   ],
+   "printed_p": "= 0·009",
+   "sentence": "After adjusting for imbalances in baseline and implementation factors, the incidence of malaria was lower in clusters receiving rfMDA than in those receiving RACD (adjusted incidence rate ratio 0·52 [95% CI 0·16-0·88], p=0·009), lower in clusters receiving RAVC than in those that did not (0·48 [0·16-0·80], p=0·002), and lower in clusters that received rfMDA plus RAVC than in those receiving RACD o"
+  },
+  {
    "pmid": "32020287",
    "kind": "verdict",
    "ratio": "OR",
@@ -1468,6 +1889,18 @@
   },
   {
    "pmid": "32020287",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "1.336",
+   "ci": [
+    "1.016",
+    "1.756"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "Results The NIRF imaging method was associated with less blood loss (OR 1.004, 95% CI 0.999-1.010; P = 0.016), briefer hospitalization (OR 1.336, 95% CI 1.016-1.756; P = 0.001), lower rates of margins with dilated bile ducts (OR 1.278, 95% CI 1.030-1.585; P = 0.023), lower postoperative white blood cell counts (OR 1.262, 95% CI 0.931-1.712; P = 0.038), lower procalcitonin levels (OR 1.316, 95% CI "
+  },
+  {
+   "pmid": "32020287",
    "kind": "verdict",
    "ratio": "OR",
    "estimate": "1.262",
@@ -1477,6 +1910,18 @@
    ],
    "printed_p": "= 0.038",
    "sentence": "Results The NIRF imaging method was associated with less blood loss (OR 1.004, 95% CI 0.999-1.010; P = 0.016), briefer hospitalization (OR 1.336, 95% CI 1.016-1.756; P = 0.001), lower rates of margins with dilated bile ducts (OR 1.278, 95% CI 1.030-1.585; P = 0.023), lower postoperative white blood cell counts (OR 1.262, 95% CI 0.931-1.712; P = 0.038), lower procalcitonin levels (OR 1.316, 95% CI "
+  },
+  {
+   "pmid": "32704168",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.8",
+   "ci": [
+    "1.99",
+    "4.04"
+   ],
+   "printed_p": "= 0.032",
+   "sentence": "For this study, traditional multivariate logistic regression (LR) identified seven predictors of burn sepsis when controlled for age and burn size (OR 2.8, 95% CI 1.99-4.04, P = 0.032)."
   },
   {
    "pmid": "32990630",
@@ -1599,6 +2044,30 @@
    "sentence": "Treatment with alfacalcidol was associated with a statistically significant decrease in ICU LOS (hazard ratio = 1.61; 95% CI, 1.77-2.81; P = 0.041) and hospital LOS (hazard ratio = 1.63; 95% CI, 1.04-2.55; P = 0.034)."
   },
   {
+   "pmid": "34103393",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.43",
+   "ci": [
+    "1.74",
+    "3.38"
+   ],
+   "printed_p": "= 0.007",
+   "sentence": "Predictors of 3-month mRS ≤1 were no medical history of hypertension (OR 2.43; 95% CI 1.74 to 3.38; p=0.007); no current smoking (OR 2.76; 95% CI 1.79 to 4.26; p=0.02); onset-to-IVT time (OR 0.47 per hour increase; 95% CI 0.23 to 0.78; p=0.003); diffusion-weighted imaging (DWI) volume (OR 0.78 per 10 mL increase; 95% CI 0.68 to 0.89; p=0.0004); presence of susceptibility vessel sign (SVS) (OR 7.89"
+  },
+  {
+   "pmid": "34103393",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.76",
+   "ci": [
+    "1.79",
+    "4.26"
+   ],
+   "printed_p": "= 0.02",
+   "sentence": "Predictors of 3-month mRS ≤1 were no medical history of hypertension (OR 2.43; 95% CI 1.74 to 3.38; p=0.007); no current smoking (OR 2.76; 95% CI 1.79 to 4.26; p=0.02); onset-to-IVT time (OR 0.47 per hour increase; 95% CI 0.23 to 0.78; p=0.003); diffusion-weighted imaging (DWI) volume (OR 0.78 per 10 mL increase; 95% CI 0.68 to 0.89; p=0.0004); presence of susceptibility vessel sign (SVS) (OR 7.89"
+  },
+  {
    "pmid": "32592481",
    "kind": "verdict",
    "ratio": "HR",
@@ -1611,6 +2080,30 @@
    "sentence": "Over 24 months there was a significant differential impact for ECI vs CM for reducing the risk of a CD-related complication between patients with colonic CD and ileal CD (colonic CD hazard ratio [HR] = 0.51; 95% CI, 0.30-0.85 vs ileal CD HR = 0.79; 95% CI, 0.57-1.10; P = 0.033)."
   },
   {
+   "pmid": "33630199",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.75",
+   "ci": [
+    "1.35",
+    "4.67"
+   ],
+   "printed_p": "= 0.020",
+   "sentence": "Participants randomized to the Stronger Together arm had a significantly greater odds of being prescribed and currently taking ART over time than those in the SOC arm (at 12 months OR 2.75, 95%CI 1.35-4.67, p-value 0.020, and at 18 months OR 2.91, 95%CI 1.61-4.88, p-value 0.013)."
+  },
+  {
+   "pmid": "33630199",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "2.91",
+   "ci": [
+    "1.61",
+    "4.88"
+   ],
+   "printed_p": "= 0.013",
+   "sentence": "Participants randomized to the Stronger Together arm had a significantly greater odds of being prescribed and currently taking ART over time than those in the SOC arm (at 12 months OR 2.75, 95%CI 1.35-4.67, p-value 0.020, and at 18 months OR 2.91, 95%CI 1.61-4.88, p-value 0.013)."
+  },
+  {
    "pmid": "33300296",
    "kind": "verdict",
    "ratio": "OR",
@@ -1621,6 +2114,18 @@
    ],
    "printed_p": "= 0.64",
    "sentence": "Use of Syntometrine reduced non-drug PPH treatments compared with oxytocin (OR 0.64, 95% CI 0.42-0.97) but not carbetocin (P = 0.64)."
+  },
+  {
+   "pmid": "34736737",
+   "kind": "pci",
+   "ratio": "relative risk",
+   "estimate": "7.8",
+   "ci": [
+    "1.3",
+    "14.9"
+   ],
+   "printed_p": "= 0.021",
+   "sentence": "The Acculink significantly increased the risk for multiple (≥5) cerebral lesions (relative risk: 7.8; 95% CI: 1.3-14.9; P = 0.021)."
   },
   {
    "pmid": "34704720",
@@ -1647,6 +2152,30 @@
    "sentence": "In adjusted analyses, patients with AF had a higher risk for the composite outcome of death, stroke or rehospitalization (hazard ratio [HR] 1.80, 95% confidence interval [CI] 1.20-2.71, p = 0.0046) and rehospitalization alone (HR 1.8, 95% CI 0.12-2.9, p = 0.015), but not death or stroke."
   },
   {
+   "pmid": "34015036",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.52",
+   "ci": [
+    "0.40",
+    "0.65"
+   ],
+   "printed_p": "= 0.017",
+   "sentence": "The dead space to tidal volume ratios at 30 (20.5±6.4% vs. 26.3±6.0%, p = 0.042) and 60 min (19.6±5.1% vs. 24.8±5.5%, p = 0.007) and the incidence of bronchospasm (odds ratio [OR] 0.45, 95% confidence interval [CI] 0.23-0.67, p = 0.023) and respiratory infiltration (OR 0.52, 95% CI, 0.40-0.65, p = 0.017) were lower in the salbutamol group."
+  },
+  {
+   "pmid": "33893337",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "1.147",
+   "ci": [
+    "1.002",
+    "1.624"
+   ],
+   "printed_p": "< 0.0001",
+   "sentence": "Kaplan-Meier survival analysis showed better survival in Dexamethasone group compared with TCZ (P = 0.002), patients didn't need vasopressor at admission (P 2 /FiO 2 , 2 days after treatment, (HR = 1.147, 95% CI, 1.002-1.624, P < 0.0001) independently predicted higher probability of mortality."
+  },
+  {
    "pmid": "33894146",
    "kind": "verdict",
    "ratio": "odds ratio",
@@ -1669,6 +2198,18 @@
    ],
    "printed_p": null,
    "sentence": "Those randomized to n-3 fatty acids had a non-significantly lower risk of functional limitations (OR 0.55, 95% CI 0.28, 1.09) and physical disability (Rosow-Breslau scale: OR 0.56, 95% CI 0.31, 1.02; Katz sclae: OR 0.32, 95% CI 0.50, 1.67)."
+  },
+  {
+   "pmid": "33834643",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.306",
+   "ci": [
+    "0.213",
+    "0.894"
+   ],
+   "printed_p": "= 0.021",
+   "sentence": "Combination therapy was significantly associated with treatment success at 3 months after treatment initiation (odds ratio [OR], 3.527; 95% confidence interval [CI], 1.203-6.983; p=0.011) and decreased risk of relapse at 6 months after treatment cessation (OR, 0.306; 95% CI, 0.213-0.894; p=0.021), by multivariable analysis."
   },
   {
    "pmid": "33469752",
@@ -1695,6 +2236,30 @@
    "sentence": "The risk of caries incidence in non-sealed teeth was almost three times more than sealed teeth (RR = 2.88, 95% CI: 1.4-1.97, p = 0.002) and the NNT was 10 (95% CI: 6-26)."
   },
   {
+   "pmid": "34014451",
+   "kind": "pci",
+   "ratio": "IRR",
+   "estimate": "3.1",
+   "ci": [
+    "1.16",
+    "3.14"
+   ],
+   "printed_p": "= 0.025",
+   "sentence": "When analyzing women who completed the intervention (13 of 17 subjects), the intervention was associated with three times higher nature visits compared to control (IRR 3.1, 95%CI 1.16-3.14, p = 0.025)."
+  },
+  {
+   "pmid": "34108127",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "0.28",
+   "ci": [
+    "0.17",
+    "0.47"
+   ],
+   "printed_p": "= .0002",
+   "sentence": "After an 8.2-month median follow-up, D-Vd significantly prolonged PFS versus Vd (median, not reached vs. 6.3 months; hazard ratio, 0.28; 95% confidence interval, 0.17-0.47; P -5 sensitivity; 22% vs. 3%; P = .0002)."
+  },
+  {
    "pmid": "33820822",
    "kind": "verdict",
    "ratio": "HR",
@@ -1717,6 +2282,18 @@
    ],
    "printed_p": null,
    "sentence": "In both years the risk of current asthma was reduced by growing up on a farm (aOR 0.26, 95% CI 0.81-0.84 and aOR 0.47, 95% CI 0.23-0.996), independent of a family history of asthma or allergy."
+  },
+  {
+   "pmid": "33087330",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "20.50",
+   "ci": [
+    "3.88",
+    "96.85"
+   ],
+   "printed_p": "= 0.0038",
+   "sentence": "More NRAS than KRAS mutations were low MAF (OR, 20.50; 95% CI, 3.88-96.85; P = 0.0038)."
   },
   {
    "pmid": "36195055",
@@ -1746,18 +2323,6 @@
    "pmid": "35050948",
    "kind": "verdict",
    "ratio": "OR",
-   "estimate": "0.55",
-   "ci": [
-    "0.37",
-    "0.80"
-   ],
-   "printed_p": "= 1.00",
-   "sentence": "Subgroup analysis showed a decrease in all-cause mortality and poor neurological outcomes with TH in shockable rhythms (OR, 0.55; 95% CI, 0.37-0.80; P = 1.00; I2 = 0% and OR, 0.48; 95% CI, 0.32-0.72; P = 0.92; I2 = 0%, respectively)."
-  },
-  {
-   "pmid": "35050948",
-   "kind": "verdict",
-   "ratio": "OR",
    "estimate": "0.48",
    "ci": [
     "0.32",
@@ -1777,18 +2342,6 @@
    ],
    "printed_p": "= 0.886",
    "sentence": "Bleeding complications occurred in 8 patients in the dabigatran group (annualized rate, 3.9%) and in 7 patients in the aspirin group (annualized rate, 3.5%) (hazard ratio, 1.24; 95% confidence interval, 1.01-1.52; P = 0.886)."
-  },
-  {
-   "pmid": "34851445",
-   "kind": "verdict",
-   "ratio": "OR",
-   "estimate": "8.56",
-   "ci": [
-    "0.99",
-    "73.9"
-   ],
-   "printed_p": "= 0.022",
-   "sentence": "Patients with Aristotle score < 10.0 (low risk) receiving T3 had faster extubation than placebo patients (p = 0.021, HR of 1.90, 95% CI: 1.10-3.28) and were significantly less likely to require CPR or experience infection (p = 0.027, OR 8.56, 95% CI:0.99-73.9 and p = 0.022, OR 4.09 95% CI: 1.16-14.4, respectively)."
   },
   {
    "pmid": "35869690",
@@ -1815,6 +2368,18 @@
    "sentence": "The median time to first relapse was longer in the MMF group compared with the CYC group (10.8 vs. 8.0 months; HR, 1.12; 95% CI, 1.31-1.54, p = 0.01), and this was significantly correlated with the median time to B-cell recovery in the two groups (8.6 vs. 5.2 months in MMF and CYC, respectively, p = 0.02)."
   },
   {
+   "pmid": "34358344",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "2.32",
+   "ci": [
+    "1.16",
+    "2.73"
+   ],
+   "printed_p": "= 0.006",
+   "sentence": "The controls were however twice more likely to deliver by cesarean section than the treatment group (39% versus 21%, RR 2.32, 95% CI 1.16-2.73, P = 0.006)."
+  },
+  {
    "pmid": "35476249",
    "kind": "inside",
    "ratio": "hazard ratio",
@@ -1825,6 +2390,18 @@
    ],
    "printed_p": null,
    "sentence": "Cox proportional hazards regression analysis indicated that left atrial dimension was the only risk factor for atrial fibrillation recurrence (hazard ratio: 1.106, 95% confidence interval 1.017-1.024, P = .019)."
+  },
+  {
+   "pmid": "33879015",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "13.09",
+   "ci": [
+    "1.83",
+    "93.4"
+   ],
+   "printed_p": "= .0001",
+   "sentence": "Fourteen neonates developed hypernatremia in the isotonic group and one in hypotonic group at 24 h (RR = 13.09; 95% CI = 1.83 - 93.4; p = .0001)."
   },
   {
    "pmid": "34951021",
@@ -1887,6 +2464,18 @@
    "sentence": "At final analysis (median follow-up of 44·5 months [IQR 39·7-49·8]), median overall survival was not reached (NR; 95% CI 49·2-NR) with pembrolizumab vs 36·7 months (27·6-NR) with chemotherapy (hazard ratio [HR] 0·74; 95% CI 0·53-1·03; p=0·036)."
   },
   {
+   "pmid": "35175284",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "1.49",
+   "ci": [
+    "1.10",
+    "2.99"
+   ],
+   "printed_p": "= .009",
+   "sentence": "In multivariate models, Black race compared with White race was associated with statistically significant shorter relapse-free interval (hazard ratio [HR], 1.39; 95% CI, 1.05-1.84; P = .02) and overall survival (HR, 1.49; 95% CI, 1.10-2.99; P = .009), adjusting for insurance and NDI level at study entry and other factors."
+  },
+  {
    "pmid": "34801508",
    "kind": "verdict",
    "ratio": "odds ratio",
@@ -1899,6 +2488,54 @@
    "sentence": "The simulator group was less likely to mistake the location of a macular scar in 1 patient (odds ratio: 0.28, 95% confidence interval: 0.056-1.35, P = .013)."
   },
   {
+   "pmid": "34728131",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "1.020",
+   "ci": [
+    "1.010",
+    "1.030"
+   ],
+   "printed_p": "= 0.023",
+   "sentence": "Baseline dyspnoea was associated with a higher incidence of grade ≥3 toxicity (hazard ratio 1.020, 95% confidence interval 1.010-1.030, P = 0.023)."
+  },
+  {
+   "pmid": "35685210",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "8.141",
+   "ci": [
+    "2.170",
+    "10.542"
+   ],
+   "printed_p": "= 0.002",
+   "sentence": "The MLR showed that the probability of live birth was significantly correlated with age [odds ratio (OR), 3.465; 95% confidence interval (CI), 1.215-9.885, P = 0.020], uterine volume (OR, 8.141; 95% CI, 2.170-10.542; P = 0.002), blastocyst transfer (OR, 3.231; 95% CI, 1.065-8.819, P = 0.023), twin pregnancy (OR, 0.328; 95% CI, 0.104-0.344, P = 0.005), and protocol in FET ( P Conclusions This visua"
+  },
+  {
+   "pmid": "35685210",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.328",
+   "ci": [
+    "0.104",
+    "0.344"
+   ],
+   "printed_p": "= 0.005",
+   "sentence": "The MLR showed that the probability of live birth was significantly correlated with age [odds ratio (OR), 3.465; 95% confidence interval (CI), 1.215-9.885, P = 0.020], uterine volume (OR, 8.141; 95% CI, 2.170-10.542; P = 0.002), blastocyst transfer (OR, 3.231; 95% CI, 1.065-8.819, P = 0.023), twin pregnancy (OR, 0.328; 95% CI, 0.104-0.344, P = 0.005), and protocol in FET ( P Conclusions This visua"
+  },
+  {
+   "pmid": "35440464",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "0.63",
+   "ci": [
+    "0.51",
+    "0.78"
+   ],
+   "printed_p": "= 0.002",
+   "sentence": "At the interim analysis, sintilimab with chemotherapy showed better overall survival compared with placebo and chemotherapy in all patients (median 16.7 v 12.5 months, hazard ratio 0.63, 95% confidence interval 0.51 to 0.78, P v 13.6 months, 0.64, 0.48 to 0.85, P=0.002)."
+  },
+  {
    "pmid": "34872341",
    "kind": "inside",
    "ratio": "odds ratio",
@@ -1909,6 +2546,42 @@
    ],
    "printed_p": null,
    "sentence": "Symptomatic intracranial hemorrhage was associated with higher baseline National Institutes of Health Stroke Scale score (adjusted odds ratio [OR], 1.06 [95% CI, 1.10-1.12]) and higher glucose level at hospital arrival (adjusted OR, 1.14 [95% CI, 1.00-1.29])."
+  },
+  {
+   "pmid": "35279081",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "15.4",
+   "ci": [
+    "1.9",
+    "716.7"
+   ],
+   "printed_p": "= 0.0037",
+   "sentence": "Individuals with culture conversion by study treatment month 6 were more likely to have a screening TTP > 5 days compared to those who did not achieve culture conversion (OR 15.4, 95% CI 1.9, 716.7, p = 0.0037) and had increasing TTPs over time."
+  },
+  {
+   "pmid": "34100234",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.17",
+   "ci": [
+    "0.05",
+    "0.29"
+   ],
+   "printed_p": "= 0.007",
+   "sentence": "Moderation analyses indicated that among participants with high primary care use, ElderTree (vs. control) led to better trajectories for mental quality of life (OR=0.32, 95% CI 0.10-0.54, P=0.005), social support received (OR=0.17, 95% CI 0.05-0.29, P=0.007), social support provided (OR=0.29, 95% CI 0.13-0.45, P Limitations Once randomized, participants were not blind to the condition; self-report"
+  },
+  {
+   "pmid": "34905388",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.323",
+   "ci": [
+    "0.186",
+    "0.560"
+   ],
+   "printed_p": "= .002",
+   "sentence": "At data cutoff (October 31, 2020), median OS was 13.9 months for HAIC-FO and 8.2 for sorafenib (hazard ratio [HR] 0.408; 95% CI, 0.301 to 0.552; P v 5.7 months; HR 0.343; 95% CI, 0.219 to 0.538; P v 10.6 months; HR 0.323; 95% CI, 0.186 to 0.560; P = .002)."
   },
   {
    "pmid": "32359899",
@@ -1935,6 +2608,18 @@
    "sentence": "One patient in the dexamethasone group and 7 patients in the placebo group died during hospitalization (1.3% [1/80] vs 8.8% [7/80], relative risk = 0.92, 95% confidence interval = 0.86 to 0.99; P = .07)."
   },
   {
+   "pmid": "37422339",
+   "kind": "pci",
+   "ratio": "RR",
+   "estimate": "0.49",
+   "ci": [
+    "0.24",
+    "099"
+   ],
+   "printed_p": "= 0.046",
+   "sentence": "The bleeding rate under the TXA treatment was 22.2%, while in the collagen-gelatin sponge group it was 45.7%, resulting in a RR of 0.49 (95% CI 0.24-099; p = 0.046), RAR 23.5% and NNT 4.3."
+  },
+  {
    "pmid": "37310606",
    "kind": "verdict",
    "ratio": "HR",
@@ -1959,6 +2644,30 @@
    "sentence": "This result was related to the risk of bleeding, with an odds ratio of 1.31, 95% confidence interval, 1.004-1.023, P = 0.004, independent of the group."
   },
   {
+   "pmid": "38082227",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "0.684",
+   "ci": [
+    "0.240",
+    "0.971"
+   ],
+   "printed_p": "= 0.025",
+   "sentence": "The multivariate logistic regression model revealed that dexmedetomidine reduced the incidence of postoperative delirium by 32% compared to placebo (reference) (OR = 0.684, 95% CI: 0.240-0.971, p = 0.025), whereas ketamine increased the risk by threefold (OR = 3.012, 95% CI: 1.185-9.681, p = 0.013)."
+  },
+  {
+   "pmid": "36635009",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "0.48",
+   "ci": [
+    "0.007",
+    "0.537"
+   ],
+   "printed_p": "< 0.001",
+   "sentence": "The incidence of pulmonary complications was significantly in both intervention groups compared to control (odds ratio: 0.48, 95 % CI 0.007-0.537; p < 0.001)."
+  },
+  {
    "pmid": "36409395",
    "kind": "inside",
    "ratio": "OR",
@@ -1969,6 +2678,30 @@
    ],
    "printed_p": null,
    "sentence": "In the validation cohort, histological grade (OR 3.779; 95% CI 3.793-1.136 × 10 3 ; P = 0.008) and neoPAI Score (OR 90.828; 95% CI 3.827-9.843 × 10 3 ; P = 0.019) were independent predictors of pCR."
+  },
+  {
+   "pmid": "36395875",
+   "kind": "pci",
+   "ratio": "hazard ratio",
+   "estimate": "0.77",
+   "ci": [
+    "0.684",
+    "0.891"
+   ],
+   "printed_p": "= .01",
+   "sentence": "However, the AT group was associated with a lower rate of MACEs after OPCAB (hazard ratio, 0.77; 95% CI, 0.684-0.891; P = .01)."
+  },
+  {
+   "pmid": "37542315",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "13.078",
+   "ci": [
+    "3.238",
+    "15.954"
+   ],
+   "printed_p": "= 0.008",
+   "sentence": "Results Adjusted regression analysis showed that the probability of increasing the nursing principle thinking (NPT) score through discussion training was significantly higher than lecture (OR: 13.078, 95% CI: 3.238-15.954, P = 0.008), as well as lecture (OR: 14.329, 95% CI: 16.171-2.005, P Conclusions The results of this study indicate that ethical decision-making training is effective on empowerm"
   },
   {
    "pmid": "37722926",
@@ -1995,6 +2728,30 @@
    "sentence": "In a model adjusted for age, sex, race, ethnicity, education, employment status, history of hypertension, diabetes, hyperlipidemia, myocardial infarction, and intensive blood pressure randomization arm, the risk of major adverse cardiovascular events, and death were higher in the persistent smokers compared with never smokers (HR for major adverse cardiovascular events: 1.56 [95% CI, 1.16-2.09]; H"
   },
   {
+   "pmid": "37604725",
+   "kind": "pci",
+   "ratio": "aHR",
+   "estimate": "3.556",
+   "ci": [
+    "1.141",
+    "4.884"
+   ],
+   "printed_p": "= 0.028",
+   "sentence": "The participants with age ≥ 50 (aHR = 3.556, 95 %CI: 1.141-4.884, P = 0.028) were associated with a high risk of response loss (titers Conclusions From 28 days to 10 months after receipt of the second dose of the BBIBP-CorV vaccine, neutralizing antibody levels were substantially decreased, especially among men, among persons 50 years of age or older, among persons with the 0-14 d group, and among"
+  },
+  {
+   "pmid": "36872420",
+   "kind": "pci",
+   "ratio": "odds ratio",
+   "estimate": "0.65",
+   "ci": [
+    "0.55",
+    "0.72"
+   ],
+   "printed_p": "= 0.002",
+   "sentence": "Results Progression of proteinuria was lower with empagliflozin as compared to placebo (odds ratio, 0.65; 95% CI, 0.55 to 0.72, p = 0.002)."
+  },
+  {
    "pmid": "37342080",
    "kind": "verdict",
    "ratio": "odds ratio",
@@ -2005,6 +2762,54 @@
    ],
    "printed_p": "= .03",
    "sentence": "Furthermore, participants in the RealConsent group engaged in more alcohol protective behaviors (adjusted odds ratio 1.17, 95% CI 0.12-2.22; P=.03) and were less likely to binge drink (adjusted incidence rate ratio 0.81, 95% CI 0.67-0.97; P=.003)."
+  },
+  {
+   "pmid": "37656500",
+   "kind": "pci",
+   "ratio": "IRR",
+   "estimate": "1.32",
+   "ci": [
+    "1.09",
+    "4.58"
+   ],
+   "printed_p": "= .01",
+   "sentence": "Group 1 had significantly more HIV testing than the control group (IRR 1.32, 95% CI 1.09-4.58; P=.01), while group 2 did not differ significantly from the controls (IRR 1.06, 95% CI 0.86-1.30; P=.60)."
+  },
+  {
+   "pmid": "37235976",
+   "kind": "pci",
+   "ratio": "HR",
+   "estimate": "0.47",
+   "ci": [
+    "0.34",
+    "0.65"
+   ],
+   "printed_p": "= .001",
+   "sentence": "Median PFS among those with exon 19 deletions and L858R EGFR mutations (n = 308) was 13.6 months for afatinib and 6.9 months for chemotherapy (HR, 0.47; 95% CI, 0.34 to 0.65; P = .001)."
+  },
+  {
+   "pmid": "36735853",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "3.67",
+   "ci": [
+    "2.13",
+    "6.33"
+   ],
+   "printed_p": "= .001",
+   "sentence": "Significant improvements were found for goal achievement in hypertension (OR 4.37, 95% confidence interval [CI] 2.54 to 7.51, P = .001), LDL cholesterol (OR 3.67, 95% CI 2.13 to 6.33, P = .001), type 2 diabetes (OR 6.97, 95% CI 3.69 to 13.2, P = .001), medication adherence (OR 6.60, 95% CI 1.36 to 31.9, P = .022), medications number (-0.86, 95% CI -1.14 to -0.58, P Conclusion Pharmacist-led medica"
+  },
+  {
+   "pmid": "36735853",
+   "kind": "pci",
+   "ratio": "OR",
+   "estimate": "6.97",
+   "ci": [
+    "3.69",
+    "13.2"
+   ],
+   "printed_p": "= .001",
+   "sentence": "Significant improvements were found for goal achievement in hypertension (OR 4.37, 95% confidence interval [CI] 2.54 to 7.51, P = .001), LDL cholesterol (OR 3.67, 95% CI 2.13 to 6.33, P = .001), type 2 diabetes (OR 6.97, 95% CI 3.69 to 13.2, P = .001), medication adherence (OR 6.60, 95% CI 1.36 to 31.9, P = .022), medications number (-0.86, 95% CI -1.14 to -0.58, P Conclusion Pharmacist-led medica"
   },
   {
    "pmid": "37254106",
