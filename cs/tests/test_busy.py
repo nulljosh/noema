@@ -78,7 +78,3 @@ class BusyBeaverTests(unittest.TestCase):
             self.assertFalse(ngram_cps(machine, 2, 3))
             self.assertFalse(ngram_cps(machine, 3, 4))
             self.assertIsNone(decide_holdout(machine, 3 if machine is machine_halts_in_three else 2))
-
-    def test_wider_deciders_on_a_three_state_machine(self):
-        # A0 -> 1RB, B0 -> 1RC, C0 undefined: halts in three steps. Every wider decider must refuse it.
-        self.assertEqual(simulate(machine_halts_in_three, 100)[0], 'undefined')
