@@ -1,32 +1,247 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FFFFFF">
-<title>Noema</title><meta name="description" content="A small lab for math and biology. Exact questions, fixed bounds, checks that can fail, and claims that stay as small as the evidence.">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Noema. A thought, checked.</title>
+<meta name="description" content="A small lab for every STEM field. Exact questions, fixed bounds, checks that can fail, and claims that stay as small as the evidence.">
+<meta name="theme-color" content="#0a0c1c">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Dressed after Nous Research: a navy page in a thin blue frame, giant thin condensed caps, tiny caps labels,
+     small square buttons, one electric blue band with halftone art in alternating rows, a terminal window over art.
+     Art: Albrecht Duerer, Melencolia I (1514, public domain, via Wikimedia Commons), cut into dot masks by scripts/dither-art.py.
+     Type is the system font throughout (SF Pro), thin caps for display. -->
 <style>
-:root{--ink:#111;--mute:#555;--line:#ddd;--blue:#0074D9;--bg:#fff;--card:#f6f8fa}
-@media(prefers-color-scheme:dark){:root{--ink:#f2f2f2;--mute:#aaa;--line:#2b2b2b;--blue:#7FDBFF;--bg:#111;--card:#1a1a1a}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,sans-serif}
-main{max-width:880px;margin:0 auto;padding:48px 16px 64px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:22px}
-h1{font-size:clamp(30px,6vw,48px);line-height:1.1;margin:40px 0 16px}
-p{color:var(--mute);margin:0 0 16px;max-width:60ch}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:32px}
-a.card{display:block;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:inherit;text-decoration:none}
-a.card:hover,a.card:focus-visible{border-color:var(--blue);outline:none}
-.card h2{margin:0 0 8px;font-size:24px}.card p{margin:0 0 12px}.card b{color:var(--blue);font-weight:600}
-footer{margin-top:48px;font-size:14px;color:var(--mute)}
-</style></head><body><main>
-<div class="brand"><img src="logo.svg" width="38" height="38" alt="">noema</div>
-<h1>Every field. One rule: show your work.</h1>
-<p>Exact questions, fixed bounds, checks that can fail, and claims that stay as small as the evidence. Seven fields are live. More join one study at a time.</p>
-<div class="grid">
-<a class="card" href="math/"><h2>Math</h2><p>Collatz, Goldbach and tiny SAT formulas, checked two ways, with a first Lean proof.</p><b>Open the workbench</b></a>
-<a class="card" href="https://github.com/nulljosh/labs/tree/main/noema/cs"><h2>Computer science</h2><p>Busy Beaver: the longest-running tiny Turing machines, with most small machines now proved to run forever.</p><b>Read the study</b></a>
-<a class="card" href="https://github.com/nulljosh/labs/tree/main/noema/physics"><h2>Physics</h2><p>Tiny magnets on a grid, every arrangement counted exactly up to 10 by 10, checked against a 1949 formula.</p><b>Read the study</b></a>
-<a class="card" href="https://github.com/nulljosh/labs/tree/main/noema/chemistry"><h2>Chemistry</h2><p>How many molecules you can build from up to 100 carbon atoms, matching the published counts.</p><b>Read the study</b></a>
-<a class="card" href="https://github.com/nulljosh/labs/tree/main/noema/medicine"><h2>Medicine</h2><p>Famous trials redone from their own raw counts, starting with aspirin after a heart attack.</p><b>Read the study</b></a>
-<a class="card" href="https://github.com/nulljosh/labs/tree/main/noema/statistics"><h2>Statistics</h2><p>The birthday problem and the coupon collector, worked out exactly and checked by simulation.</p><b>Read the study</b></a>
-<a class="card" href="biology/"><h2>Biology</h2><p>Every one-base change in the human beta-globin gene, scanned and compared with known variants.</p><b>Open the study</b></a>
-</div>
-<footer>Observations are not proofs. Failures stay visible.</footer>
-</main></body></html>
+:root {
+  --bg: #0a0c1c; --surface: #12152b; --line: #262a4a; --text: #f2f2f7; --sub: #a3a7c2;
+  --blue: #1a1aff;            /* buttons, frame */
+  --band: #0a0aa0;            /* the electric band */
+  --band-sub: #c9cbff; --band-art: #5458f0; --link: #8f95ff;
+  --ring: rgba(120, 130, 255, .5);
+  --display: var(--font);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px;
+  --wrap: 1120px; --r-sq: 2px; --motion: .2s ease;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .28 0 0 0 -.06'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; background: var(--bg); }
+body { font-family: var(--font); font-size: 15px; line-height: 22px; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--sp-5); }
+.center { text-align: center; }
+/* the thin blue frame around the whole window */
+@media (min-width: 900px) { body::after { content: ""; position: fixed; inset: 0; border: 3px solid var(--blue); border-radius: 10px; pointer-events: none; z-index: 30; } }
+
+.display { font-family: var(--display); font-weight: 100; text-transform: uppercase; line-height: .9; letter-spacing: -.03em; text-wrap: balance; }
+h1.display { font-size: clamp(72px, 15vw, 240px); }
+h2.display { font-size: clamp(48px, 8.5vw, 140px); }
+h3 { font-family: var(--display); font-weight: 300; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
+.label { font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--sub); margin-bottom: var(--sp-4); }
+
+.btn { height: 36px; padding: 0 var(--sp-4); border-radius: var(--r-sq); display: inline-flex; align-items: center; font-weight: 600; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: background var(--motion); }
+.btn-solid { background: var(--blue); color: #fff; }
+.btn-solid:hover { background: #4646ff; }
+.btn-ghost { background: var(--surface); color: var(--text); }
+.btn-ghost:hover { background: var(--line); }
+.cta { display: flex; justify-content: center; margin-top: var(--sp-6); }
+
+/* nav: four tiny caps links spread wide, the mark in the middle, then the ledger bar */
+.nav { display: grid; grid-template-columns: 1fr 1fr auto 1fr 1fr; align-items: center; max-width: var(--wrap); margin: 0 auto; padding: var(--sp-6) var(--sp-5) var(--sp-4); }
+.nav a { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--sub); }
+.nav a:hover { color: var(--text); }
+.nav a:nth-child(2), .nav a:nth-child(4) { text-align: center; } .nav a:nth-child(5) { text-align: right; }
+.nav .mark { display: block; width: 36px; height: 36px; }
+.bar { display: flex; align-items: center; gap: var(--sp-3); max-width: 560px; margin: 0 var(--sp-4); height: 40px; padding: 0 var(--sp-3); border: 1px solid var(--blue); border-radius: 4px; background: var(--surface); font-size: 13px; text-decoration: none; color: var(--sub); }
+@media (min-width: 592px) { .bar { margin: 0 auto; } }
+.bar b { color: var(--text); font-weight: 500; }
+.bar span:last-child { margin-left: auto; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.bar:hover { border-color: #4646ff; }
+
+.hero { padding: var(--sp-8) 0 var(--sp-9); }
+.def { max-width: 560px; margin: var(--sp-7) auto 0; color: var(--sub); }
+.def b { color: var(--text); font-weight: 600; }
+.lead { max-width: 560px; margin: var(--sp-4) auto 0; color: var(--sub); }
+
+/* halftone art: each png is a dot mask of the engraving, tinted with --band-art */
+.art { position: relative; overflow: hidden; background: var(--grain), var(--band); }
+.art::before { content: ""; position: absolute; inset: 0; background: var(--band-art); -webkit-mask: var(--img) center / cover no-repeat; mask: var(--img) center / cover no-repeat; }
+
+/* the electric band: art head, the giant line, then text and art in alternating rows */
+.band { position: relative; margin: 0 clamp(0px, 3vw, 44px); background: var(--band); color: #fff; overflow: hidden; padding-bottom: var(--sp-8); }
+.band::after { content: ""; position: absolute; inset: 0; background: var(--grain); pointer-events: none; }
+.band .label { color: var(--band-sub); }
+.band-art { aspect-ratio: 19 / 9; max-height: 80vh; width: 100%; background: none; }
+.band-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, var(--band) 94%); }
+.band h2 { position: relative; margin: -9vw auto var(--sp-8); padding: 0 var(--sp-5); text-align: center; }
+.frow { position: relative; display: grid; grid-template-columns: 2fr 3fr; align-items: center; gap: var(--sp-7); max-width: var(--wrap); margin: 0 auto var(--sp-8); padding: 0 var(--sp-6); }
+.frow:last-child { margin-bottom: 0; }
+.frow .art { aspect-ratio: 5 / 2; background: var(--grain), color-mix(in srgb, #000 22%, var(--band)); }
+.frow.flip { grid-template-columns: 3fr 2fr; }
+.frow.flip .art { order: -1; }
+.frow p:not(.label) { margin-top: var(--sp-4); color: var(--band-sub); max-width: 380px; }
+
+/* fields: ruled cells on the page colour */
+.sec { padding: var(--sp-9) 0; }
+.sec .mark { display: block; width: 56px; height: 56px; margin: 0 auto var(--sp-4); }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-7); max-width: 900px; margin: var(--sp-6) auto 0; text-align: left; color: var(--sub); }
+.cells { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: var(--sp-8); text-align: left; }
+.cell { display: block; background: var(--bg); padding: var(--sp-5) var(--sp-5) var(--sp-6); text-decoration: none; transition: background var(--motion); }
+a.cell:hover { background: var(--surface); }
+.cell h3 { font-size: 24px; }
+.cell p:not(.label) { margin-top: var(--sp-3); color: var(--sub); }
+.cell b { display: block; margin-top: var(--sp-4); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--link); }
+
+/* the method: four steps, then a terminal window over the engraving */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); margin-top: var(--sp-7); text-align: left; }
+.steps .art { aspect-ratio: 1; margin-bottom: var(--sp-4); }
+.steps p:not(.label) { margin-top: var(--sp-2); color: var(--sub); }
+.stage { position: relative; margin: var(--sp-8) clamp(0px, 3vw, 44px) 0; padding: clamp(32px, 8vw, 120px) clamp(12px, 6vw, 96px); }
+.stage > .art { position: absolute; inset: 0; }
+.term { position: relative; max-width: 820px; margin: 0 auto; border-radius: 10px; overflow: hidden; background: rgba(10, 12, 28, .94); border: 1px solid var(--line); box-shadow: 0 24px 64px rgba(0, 0, 0, .4); text-align: left; }
+.term-top { display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 var(--sp-3); border-bottom: 1px solid var(--line); font: 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--sub); }
+.term-top i { width: 11px; height: 11px; border-radius: 50%; background: #ff5f57; } .term-top i:nth-child(2) { background: #febc2e; } .term-top i:nth-child(3) { background: #28c840; }
+.term-top span { flex: 1; text-align: center; margin-right: 45px; }
+.term pre { padding: var(--sp-5); font: 13px/20px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; }
+.term .dim { color: var(--sub); }
+
+.foot { padding: var(--sp-8) var(--sp-5) var(--sp-5); border-top: 1px solid var(--line); margin-top: var(--sp-9); overflow: hidden; }
+.foot-top { max-width: var(--wrap); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--sp-7); }
+.foot-brand { display: grid; gap: var(--sp-2); align-content: start; }
+.foot-brand b { font-weight: 200; font-size: 40px; line-height: 44px; text-transform: uppercase; letter-spacing: -.02em; }
+.foot-brand p { color: var(--sub); }
+.foot-cols { display: flex; flex-wrap: wrap; gap: var(--sp-8); }
+.foot-cols div { display: grid; gap: var(--sp-2); align-content: start; }
+.foot-cols .label { margin-bottom: var(--sp-2); }
+.foot-cols a { text-decoration: none; }
+.foot-cols a:hover { color: var(--link); }
+.word { text-align: center; font-weight: 100; text-transform: uppercase; font-size: clamp(96px, 24vw, 360px); line-height: .8; letter-spacing: -.04em; color: var(--blue); margin-top: var(--sp-7); user-select: none; }
+.legal { text-align: center; margin-top: var(--sp-5); font-size: 12px; color: var(--sub); text-wrap: balance; }
+
+@media (max-width: 900px) {
+  .cells, .steps { grid-template-columns: 1fr 1fr; }
+  .frow, .frow.flip { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .frow.flip .art { order: 0; }
+  .cols { grid-template-columns: 1fr; gap: var(--sp-4); }
+}
+@media (max-width: 600px) {
+  .nav { grid-template-columns: 1fr auto 1fr; padding: var(--sp-5) var(--sp-4) var(--sp-4); }
+  .nav a:nth-child(2), .nav a:nth-child(4) { display: none; }
+  .bar span:last-child { display: none; }
+  .wrap { padding: 0 var(--sp-4); }
+  .cells, .steps { grid-template-columns: 1fr; }
+  .frow { padding: 0 var(--sp-4); }
+  .band h2 { margin-top: -2vw; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .cell { transition: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a href="#fields">Fields</a>
+    <a href="#name">The name</a>
+    <a href="#top" aria-label="Noema home"><img class="mark" src="logo.svg" alt="" width="36" height="36"></a>
+    <a href="#method">Method</a>
+    <a href="https://github.com/nulljosh/labs/tree/main/noema">Source</a>
+  </nav>
+  <a class="bar" href="https://github.com/nulljosh/labs/blob/main/noema/roadmap.md#discovery-ledger"><img src="logo.svg" alt="" width="18" height="18"><span><b>Ledger</b> : BB(3) = 21, settled here</span><span>Latest</span></a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap center">
+    <p class="label">Open lab &middot; MIT license</p>
+    <h1 class="display">Noema</h1>
+    <p class="def"><b>noema</b> (noun, Greek &nu;&oacute;&eta;&mu;&alpha;): a thought. Not the act of thinking, but what the thinking lands on.</p>
+    <p class="lead">One lab for every STEM field. One rule: show your work.</p>
+    <div class="cta">
+      <a class="btn btn-ghost" href="#name">The name</a>
+      <a class="btn btn-solid" href="#fields">See the fields</a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="name">
+  <div class="art band-art" style="--img: url(art/band.png)" aria-hidden="true"></div>
+  <h2 class="display">A thought, checked</h2>
+  <article class="frow">
+    <div><p class="label">The name</p><h3>Noesis is the thinking. Noema is the thought.</h3><p>Husserl split every act of thought in two: the thinking itself, and the thing as it is thought. This lab does the thinking in public. What survives the checks is the noema.</p></div>
+    <div class="art" style="--img: url(art/face.png)" aria-hidden="true"></div>
+  </article>
+  <article class="frow flip">
+    <div class="art" style="--img: url(art/solid.png)" aria-hidden="true"></div>
+    <div><p class="label">Reproduce first</p><h3>Earn trust before chasing anything new</h3><p>Every field starts by matching a result someone already published. A match counts as a win, and it becomes a test.</p></div>
+  </article>
+  <article class="frow">
+    <div><p class="label">The ledger</p><h3>Every claim, its check and its source</h3><p>One row per result. Observed, written and machine-checked stay apart, and a finite check never becomes a universal claim.</p></div>
+    <div class="art" style="--img: url(art/square.png)" aria-hidden="true"></div>
+  </article>
+</section>
+
+<section class="sec" id="fields">
+  <div class="wrap center">
+    <img class="mark" src="logo.svg" alt="" width="56" height="56">
+    <p class="label">Seven fields live</p>
+    <h2 class="display">Every field</h2>
+    <div class="cols">
+      <p>Math, computer science, physics, chemistry, medicine, statistics and biology each run the same loop: one exact question, a fixed bound, a second check.</p>
+      <p>Every result so far reproduces known work. The newest: every 3-state Busy Beaver machine is now settled by this lab's own code.</p>
+    </div>
+    <div class="cta"><a class="btn btn-ghost" href="https://github.com/nulljosh/labs/blob/main/noema/roadmap.md#discovery-ledger">Read the ledger</a><a class="btn btn-solid" href="https://github.com/nulljosh/labs/tree/main/noema">Source</a></div>
+    <div class="cells">
+      <a class="cell" href="math/"><p class="label">Math</p><h3>Collatz, checked</h3><p>The residue tree matches two published sequences to level 24, with three lemmas proved in Lean.</p><b>Open the workbench &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/cs"><p class="label">Computer science</p><h3>Busy Beaver</h3><p>Every 3-state machine settled: the record is 21 steps. 643 four-state machines to go.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/physics"><p class="label">Physics</p><h3>Tiny magnets</h3><p>Every arrangement of a 10 by 10 grid counted exactly, checked against a 1949 formula.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/chemistry"><p class="label">Chemistry</p><h3>Counting molecules</h3><p>How many alkanes you can build from up to 100 carbon atoms, matching the published counts.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/medicine"><p class="label">Medicine</p><h3>Trials, redone</h3><p>Famous trials recomputed from their own raw counts, starting with aspirin after a heart attack.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/statistics"><p class="label">Statistics</p><h3>Chance, exactly</h3><p>The birthday problem and the coupon collector as exact fractions, checked by simulation.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="biology/"><p class="label">Biology</p><h3>One gene, every change</h3><p>Every one-base change in human beta-globin, scored against held-out ClinVar records.</p><b>Open the study &rarr;</b></a>
+      <div class="cell"><p class="label">Next</p><h3>More on the way</h3><p>Information engineering and astronomy are queued. A field gets a folder when its first study starts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap center">
+    <p class="label">The loop</p>
+    <h2 class="display">Show your work</h2>
+    <div class="steps">
+      <article><div class="art" style="--img: url(art/square.png)" aria-hidden="true"></div><p class="label">One</p><h3>Ask one exact question</h3><p>A fixed bound and a clear stop. No open-ended searching.</p></article>
+      <article><div class="art" style="--img: url(art/scales.png)" aria-hidden="true"></div><p class="label">Two</p><h3>Check it a second way</h3><p>Brute force, a closed formula or the primary source. Two methods must agree.</p></article>
+      <article><div class="art" style="--img: url(art/solid.png)" aria-hidden="true"></div><p class="label">Three</p><h3>Search before calling it new</h3><p>A match in the literature means reproduced, which still counts as a win.</p></article>
+      <article><div class="art" style="--img: url(art/hourglass.png)" aria-hidden="true"></div><p class="label">Four</p><h3>Write it in the ledger</h3><p>Claim, check and source in one row, so no page can say more than the ledger holds.</p></article>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="art" style="--img: url(art/band.png)" aria-hidden="true"></div>
+    <figure class="term" aria-label="Two real runs from the lab">
+      <div class="term-top"><i></i><i></i><i></i><span>Terminal &mdash; zsh</span></div>
+<pre><span class="dim">$</span> python3 physics/ising.py
+L=4  2^16 states  C peak at T=2.439 (Onsager 2.269)  Kaufman err 1.8e-16  0.0s
+L=6  2^36 states  C peak at T=2.390 (Onsager 2.269)  Kaufman err 2.5e-16  0.01s
+L=8  2^64 states  C peak at T=2.362 (Onsager 2.269)  Kaufman err 1.4e-16  1.22s
+<span class="dim">$</span> python3 cs/busy.py 3
+{"states": 3, "cap": 200, "max_steps": 21, "max_ones": 6, <span class="dim">...</span> "holdouts_at_cap": 0}</pre>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-top">
+    <div class="foot-brand"><img src="logo.svg" alt="" width="40" height="40"><b>Noema</b><p>A thought, checked.</p></div>
+    <nav class="foot-cols" aria-label="Footer">
+      <div><p class="label">Lab</p><a href="math/">Math</a><a href="biology/">Biology</a><a href="#fields">All fields</a></div>
+      <div><p class="label">Source</p><a href="https://github.com/nulljosh/labs/tree/main/noema">GitHub</a><a href="https://github.com/nulljosh/labs/blob/main/noema/roadmap.md">Roadmap</a><a href="https://github.com/nulljosh/labs/blob/main/noema/docs/LOOP-HANDOFF.md">The loop</a></div>
+      <div><p class="label">More</p><a href="mailto:trommatic@icloud.com?subject=Noema">Feedback</a><a href="https://jaybulb.com">More projects</a><a href="#top">Back to top</a></div>
+    </nav>
+  </div>
+  <p class="word" aria-hidden="true">Noema</p>
+  <p class="legal">&copy; 2026 Joshua Trommel &middot; MIT License &middot; Art: D&uuml;rer, <i>Melencolia I</i>, 1514 &middot; Observations are not proofs.</p>
+</footer>
+</body>
+</html>
