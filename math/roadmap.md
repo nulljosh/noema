@@ -31,8 +31,9 @@ Do not infer termination for an initial class merely because its first descent i
 
 ## Next after cycle 3
 
-Modulo-32 splits and the first small Lean proof are complete. Written first-descent arguments cover 28 of 32 residue classes; only the 4k+1 exact three-step lemma is Lean-checked. Remaining classes: 7, 15, 27 and 31. Keep the bound fixed.
+Modulo-32 splits and the first small Lean proof are complete. Written first-descent arguments cover 28 of 32 residue classes; Lean checks the 4k+1 three-step lemma and the 32k+11 and 32k+23 eight-step lemmas. Remaining classes: 7, 15, 27 and 31. Keep the bound fixed.
 
-- [ ] Formalize the two exact eight-step lemmas, 32k+11 and 32k+23, in Lean using the ordinary map and all earlier steps.
+- [x] Formalize the two exact eight-step lemmas, 32k+11 and 32k+23, in Lean using the ordinary map and all earlier steps (2026-10-26, only propext and Quot.sound).
+- [ ] Formalize the remaining written first-descent arguments (even starts, 16k+3, and the others) in Lean, one at a time.
 - [ ] Derive forced prefixes for the four remaining groups modulo 64 before checking them at the existing bound. Preserve parity-dependent branches.
 - [ ] Keep proof-assistant status separate from bounded software checks and written algebra in every public claim.

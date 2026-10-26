@@ -4,13 +4,13 @@
 
 ## Now
 
-- [ ] **Math:** formalize the exact eight-step lemmas for 32k+11 and 32k+23 in Lean. Then 28 of 32 classes have a machine-checked or written first descent; 7, 15, 27 and 31 remain.
+- [x] **Math:** the eight-step lemmas for 32k+11 and 32k+23 are Lean-checked (2026-10-26). 28 of 32 classes have a written first descent; 7, 15, 27 and 31 remain.
 - [ ] **Biology:** review `benchmarks/latest.json`, then read the two annotations no one-base change explains and the original Hb Bristol paper.
 - [ ] **Both:** ship the merged site. Run `./deploy.sh`, move the noema.jaybulb.com DNS from the Sites CNAME to the wrangler custom domain, and check that evidna.jaybulb.com still opens.
 
 ## Next
 
-- [ ] **Math:** split classes 7, 15, 27 and 31 modulo 64. Derive the forced prefixes before computing anything, and keep the bound at one million.
+- [ ] **Math:** split classes 7, 15, 27 and 31 modulo 64 (now the first math task). Derive the forced prefixes before computing anything, and keep the bound at one million.
 - [ ] **Biology:** write the held-out hypothesis-quality benchmark with predeclared scoring, before claiming any improvement.
 - [ ] **Biology:** add a second public gene, but only with expected cases someone else specified.
 - [ ] **Both:** one claims ledger. A small `claims.json` per lab: claim, exact domain, bound, level (observed, written, machine-checked, literature), source. The landing pages render from it, so no page can state more than the ledger holds.

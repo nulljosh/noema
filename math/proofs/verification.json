@@ -2,8 +2,8 @@
   "status": "checked",
   "toolchain": "leanprover/lean4:v4.35.0",
   "theorem": "Noema.first_descent_four_k_plus_one",
-  "statement": "For every natural k >= 1, ordinary Collatz starting at 4*k+1 first descends at exactly step 3.",
-  "source_sha256": "c95248c6e177862a8a3fdcd892aecfd59fe7d7953ab7147bc9af10671700e00b",
+  "statement": "Ordinary Collatz first descends at exactly step 3 from 4*k+1 (k >= 1), and at exactly step 8 from 32*k+11 and from 32*k+23 (all k >= 0).",
+  "source_sha256": "b0f71abcc5ae90c02ef5e79d0683fe49671f36c2a0ba73fe67bfc94e8b2e29f6",
   "commands": [
     "lean -DwarningAsError=true Noema.lean",
     "lake build"
@@ -12,6 +12,11 @@
     "propext",
     "Quot.sound"
   ],
-  "compiler_output": "'Noema.first_descent_four_k_plus_one' depends on axioms: [propext, Quot.sound]",
-  "scope": "One universally quantified elementary first-descent lemma. Not a proof of Collatz termination or of the other written lemmas."
+  "compiler_output": "'Noema.first_descent_four_k_plus_one' depends on axioms: [propext, Quot.sound]\n'Noema.first_descent_32k_plus_11' depends on axioms: [propext, Quot.sound]\n'Noema.first_descent_32k_plus_23' depends on axioms: [propext, Quot.sound]",
+  "scope": "Three universally quantified elementary first-descent lemmas. Not a proof of Collatz termination or of the other written lemmas.",
+  "theorems": [
+    "Noema.first_descent_four_k_plus_one",
+    "Noema.first_descent_32k_plus_11",
+    "Noema.first_descent_32k_plus_23"
+  ]
 }

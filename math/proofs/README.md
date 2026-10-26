@@ -14,6 +14,6 @@ Use the pinned Lean toolchain through elan, or put the official toolchain's bin 
 
 verification.json records the source hash and actual compiler output. The theorem depends on standard Lean axioms propext and Quot.sound, with no custom Collatz assumption or unfinished proof. The file enables warnings as errors, so an unfinished proof is rejected. A GitHub proof job is configured, but this source repository currently uses Sites rather than a GitHub remote; no hosted CI result is claimed.
 
-The written eight-step lemmas for remainders 11 and 23 modulo 32 are not yet formalized. A proof of first descent in selected starting classes does not by itself prove termination for those classes: the smaller endpoint may be outside them.
+The eight-step lemmas for 32k+11 and 32k+23 are also checked (all k >= 0, same definitions, same axioms). The other written first-descent arguments are not yet formalized. A proof of first descent in selected starting classes does not by itself prove termination for those classes: the smaller endpoint may be outside them.
 
 [Official tactic reference](https://lean-lang.org/doc/reference/latest/Tactic-Proofs/Tactic-Reference), [Lean release](https://github.com/leanprover/lean4/releases/tag/v4.35.0).

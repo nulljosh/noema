@@ -6,7 +6,7 @@ A finite foreground research cycle. State one exact question, calculate within a
 
 ## Where things stand
 
-Public site: https://noema.jaybulb.com. Brand kit: /brand.html. Sixteen Python tests pass; the first Lean lemma builds locally. SAT checked 18,069 formulas; Goldbach and Collatz total stopping cover 10,000. First descent checks starts two through one million with two implementations, maximum 287 ordinary steps at 626,331. Modulo 8 and 16 reports preserve the v1 baseline. Elementary written proofs cover even starts, 4k+1 above one, and 16k+3. These are known facts reproduced, not a universal termination theorem. Lean 4.35.0 verifies the exact three-step 4k+1 lemma. Two written eight-step arguments add remainders 11 and 23 modulo 32, covering 28 of 32 classes. Remaining classes: 7, 15, 27, 31.
+Public site: https://noema.jaybulb.com. Brand kit: /brand.html. Sixteen Python tests pass; three Lean lemmas build locally. SAT checked 18,069 formulas; Goldbach and Collatz total stopping cover 10,000. First descent checks starts two through one million with two implementations, maximum 287 ordinary steps at 626,331. Modulo 8 and 16 reports preserve the v1 baseline. Elementary written proofs cover even starts, 4k+1 above one, and 16k+3. These are known facts reproduced, not a universal termination theorem. Lean 4.35.0 verifies the exact three-step 4k+1 lemma and the eight-step 32k+11 and 32k+23 lemmas. Two written eight-step arguments add remainders 11 and 23 modulo 32, covering 28 of 32 classes. Remaining classes: 7, 15, 27, 31.
 
 ## Next, in order
 
