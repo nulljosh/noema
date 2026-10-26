@@ -1,0 +1,174 @@
+{
+ "source": "randomized controlled trial abstracts 2015 to 2024, PubMed E-utilities (2024) and Europe PMC (2015 to 2023), fetched 2026-10-26",
+ "abstracts": 235860,
+ "checked": 997,
+ "over_clear": 4,
+ "short_unexplained": 8,
+ "rows": [
+  {
+   "pmid": "38409086",
+   "total": 126,
+   "split": [
+    130,
+    121
+   ],
+   "kind": "over",
+   "snippet": "ing 125 patients in the POCUS group and 126 patients in the usual care group (130 women and 121 men, median [Q1-Q3] age: 42 [30;57]). There",
+   "review": "not a mismatch: the split covers both groups, 125 + 126 = 251"
+  },
+  {
+   "pmid": "38848006",
+   "total": 815,
+   "split": [
+    161,
+    646
+   ],
+   "kind": "short",
+   "snippet": "alysis of the DECAAF II trial evaluated 815 patients (161 females, 646 males). Between July 2016 and January 2020, p",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "39535724",
+   "total": 60,
+   "split": [
+    18,
+    39
+   ],
+   "kind": "short",
+   "snippet": " male and 150 female). After screening, 60 individuals (18 males and 39 females) were selected on the basis of high and",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "39622712",
+   "total": 62,
+   "split": [
+    27,
+    42
+   ],
+   "kind": "over",
+   "snippet": "e recorded after the session. In total, 62 participants (27 male and 42 female participants; mean age 43, SD 13 years)",
+   "review": "clear: more people than the total"
+  },
+  {
+   "pmid": "27273602",
+   "total": 1612,
+   "split": [
+    673,
+    975
+   ],
+   "kind": "over",
+   "snippet": "ue cancer screening test. Results Among 1612 patients (673 men and 975 women; median age, 57 years), baseline patien",
+   "review": "clear: more people than the total"
+  },
+  {
+   "pmid": "26595359",
+   "total": 17,
+   "split": [
+    13,
+    3
+   ],
+   "kind": "short",
+   "snippet": "nuclear cells isolated from a subset of 17 subjects (13 women, 3 men) at the end of each dietary period. Liv",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "29855100",
+   "total": 55,
+   "split": [
+    22,
+    34
+   ],
+   "kind": "over",
+   "snippet": "ts of 4.3 mm diameter were evaluated in 55 patients (22 males and 34 females, mean age 48.3 ± 3.4 years) in prospect",
+   "review": "clear: more people than the total"
+  },
+  {
+   "pmid": "30666017",
+   "total": 279,
+   "split": [
+    129,
+    111
+   ],
+   "kind": "short",
+   "snippet": "ine solution. Results A total of 240 of 279 patients (129 females and 111 male) aged 18 - 65 years were referred and i",
+   "review": "not a mismatch: the split is of the 240 referred, and 129 + 111 = 240"
+  },
+  {
+   "pmid": "32145674",
+   "total": 53,
+   "split": [
+    34,
+    9
+   ],
+   "kind": "short",
+   "snippet": "ents (AEs) were also evaluated. Results 53 patients (34 males and 9 females) completed the trial, including 29 in t",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "32654554",
+   "total": 22,
+   "split": [
+    13,
+    8
+   ],
+   "kind": "short",
+   "snippet": "n 3 4-week treatment periods. Among the 22 patients enrolled (13 females/8 males), the median age was 26 (range, 12-59 y",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "33057314",
+   "total": 400,
+   "split": [
+    154,
+    346
+   ],
+   "kind": "over",
+   "snippet": "erial and method We enrolled a total of 400 patients (154 men and 346 women) in this randomized trial (4 groups, ea",
+   "review": "clear: more people than the total"
+  },
+  {
+   "pmid": "35081959",
+   "total": 1304,
+   "split": [
+    614,
+    667
+   ],
+   "kind": "short",
+   "snippet": "eight velocity (HV). Results A total of 1304 children (614 girls, 667 boys) in twelve clusters were assessed at ba",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "34606758",
+   "total": 300,
+   "split": [
+    127,
+    165
+   ],
+   "kind": "short",
+   "snippet": " Upper Midwest. Participants A total of 300 patients (127 men, 165 women), average age 61.2 (range, 18-97) hospi",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "36924792",
+   "total": 76,
+   "split": [
+    34,
+    4
+   ],
+   "kind": "short",
+   "snippet": "ce level P Results This study comprised 76 patients (34 females/4 males, mean age 47.2 ± 9.1 for the AC + i-PRF",
+   "review": "short: no missing or other group named"
+  },
+  {
+   "pmid": "37949086",
+   "total": 1107,
+   "split": [
+    369,
+    369
+   ],
+   "kind": "short",
+   "snippet": "18. The safety population comprised all 1107 participants (369 girls and 369 boys in the SIIPL quadrivalent HPV vaccine g",
+   "review": "not a mismatch: the split is of one vaccine group"
+  }
+ ]
+}
