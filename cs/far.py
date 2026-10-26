@@ -359,3 +359,145 @@ def certify(machine, states, budget=20.0):
 
 def far_proves(machine, states, budget=20.0):
     return certify(machine, states, budget) is not None
+
+
+def dfas(n):
+    """Every complete DFA over {0, 1} with n states, numbered in breadth-first order from start 0, as delta rows."""
+    delta = [[None, None] for _ in range(n)]
+
+    def fill(slot, found):
+        if slot == 2 * n:
+            if found == n:
+                yield [row[:] for row in delta]
+            return
+        s, c = divmod(slot, 2)
+        if s >= found:
+            return
+        for t in range(min(found + 1, n)):
+            delta[s][c] = t
+            yield from fill(slot + 1, max(found, t + 1))
+
+    yield from fill(0, 1)
+
+
+def _post_star(machine, states, left):
+    """Direct FAR (Blanchard's method, written as pushdown reachability). The left DFA `left` reads the tape left of
+    the head; the right tape is a stack, top cell first, over a bottom marker 2 that stands for the zeros beyond.
+    A control is (left DFA state, head state, head symbol). A right move pops the next cell (or reads 0 at the
+    bottom); a left move picks any (d, b) with left[d][b] equal to the current left state and pushes the written cell.
+    post* saturation (Schwoon) gives the exact reachable set of this pushdown system from every blank representative.
+    Returns the saturated transitions, or None as soon as a control with an undefined rule is reached."""
+    n = len(left)
+    idx = lambda d, q, a: (d * states + q) * 2 + a
+    nctl = n * states * 2
+    init, final = nctl, nctl + 1
+    mids = {}
+    pops, pushes = {}, {}  # (control, symbol) -> list of (target control, written symbol or None)
+    undefined = set()
+    for d0 in range(n):
+        for q in range(states):
+            for a in (0, 1):
+                p = idx(d0, q, a)
+                rule = machine.get((q, a))
+                if rule is None:
+                    undefined.add(p)
+                    continue
+                write, move, r = rule
+                if move > 0:
+                    d1 = left[d0][write]
+                    for b in (0, 1):
+                        pops.setdefault((p, b), []).append((idx(d1, r, b), None))
+                    pops.setdefault((p, 2), []).append((idx(d1, r, 0), 2))
+                else:
+                    for d in range(n):
+                        for b in (0, 1):
+                            if left[d][b] == d0:
+                                target = idx(d, r, b)
+                                mid = mids.setdefault((target, write), nctl + 2 + len(mids))
+                                for g in (0, 1, 2):
+                                    pushes.setdefault((p, g), []).append((target, write, mid))
+    zeros, z = set(), 0
+    while z not in zeros:
+        zeros.add(z)
+        z = left[z][0]
+    work = [(init, 0, init), (init, 2, final)]
+    for z in zeros:
+        work += [(idx(z, 0, 0), 0, init), (idx(z, 0, 0), 2, final)]
+    rel, out, eps_in = set(), {}, {}
+    while work:
+        t = work.pop()
+        if t in rel:
+            continue
+        rel.add(t)
+        s, g, q = t
+        if s < nctl and s in undefined:
+            return None
+        if g is None:  # epsilon edge from a control
+            eps_in.setdefault(q, set()).add(s)
+            work += [(s, g2, r) for g2, r in out.get(q, ())]
+            continue
+        out.setdefault(s, set()).add((g, q))
+        work += [(e, g, q) for e in eps_in.get(s, ())]
+        if s >= nctl:
+            continue
+        for target, kept in pops.get((s, g), ()):
+            work.append((target, kept, q))
+        for target, write, mid in pushes.get((s, g), ()):
+            work += [(target, write, mid), (mid, g, q)]
+    return rel, nctl, final
+
+
+def _certificate_dfa(machine, states, left, saturated):
+    """The complement of the reachable set as a config-word DFA in the form far.holds checks: words with no head,
+    with two heads, or whose single-head form is unreachable are accepted."""
+    rel, nctl, final = saturated
+    n, nl = len(left), letter_count(states)
+    step = {}
+    eps = {}
+    for s, g, q in rel:
+        if g is None:
+            eps.setdefault(s, set()).add(q)
+        else:
+            step.setdefault((s, g), set()).add(q)
+    keys = {('L', 0): 0}
+    order = [('L', 0)]
+    delta, acc = [], []
+    i = 0
+    while i < len(order):
+        key = order[i]
+        i += 1
+        row = []
+        for x in range(nl):
+            if key == 'dead':
+                nxt = 'dead'
+            elif key[0] == 'L':
+                if x < 2:
+                    nxt = ('L', left[key[1]][x])
+                else:
+                    q, a = (x - 2) // 2, (x - 2) % 2
+                    c = (key[1] * states + q) * 2 + a
+                    nxt = ('R', frozenset({c} | eps.get(c, set())))
+            else:
+                nxt = ('R', frozenset(t for s in key[1] for t in step.get((s, x), ()))) if x < 2 else 'dead'
+            if nxt not in keys:
+                keys[nxt] = len(order)
+                order.append(nxt)
+            row.append(keys[nxt])
+        delta.append(row)
+        reach = key != 'dead' and key[0] == 'R' and any(final in step.get((s, 2), ()) for s in key[1])
+        acc.append(not reach)
+    return minimize(DFA(delta, acc))
+
+
+def direct_certificate(machine, states, sizes=(1, 2, 3, 4), deadline=None):
+    """Search left DFAs by size. Returns the first certificate that far.holds accepts, or None."""
+    for n in sizes:
+        for left in dfas(n):
+            if deadline is not None and time.monotonic() > deadline:
+                return None
+            saturated = _post_star(machine, states, left)
+            if saturated is not None:
+                dfa = _certificate_dfa(machine, states, left, saturated)
+                if holds(machine, states, dfa):
+                    return dfa
+    return None

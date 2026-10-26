@@ -97,13 +97,25 @@ class FiniteAutomataReductionTests(unittest.TestCase):
         champion = self.parse('1RB1LB_1LA0LC_---1LD_1RD0RA')
         self.assertIsNone(far.certify(champion, 4, budget=2.0))
 
+    def test_direct_far_finds_a_known_certificate_and_refuses_the_champion(self):
+        # The direct search must re-find a certificate for a machine the merge search already certified,
+        # and find none for the champion, which halts at step 107.
+        import json
+        import far
+        import busy
+        with open(busy.CERTIFICATES) as handle:
+            row = json.load(handle)[0]
+        machine = {tuple(k): tuple(v) for k, v in row['machine']}
+        self.assertIsNotNone(far.direct_certificate(machine, 4, sizes=(1, 2, 3)))
+        self.assertIsNone(far.direct_certificate(self.parse('1RB1LB_1LA0LC_---1LD_1RD0RA'), 4))
+
     def test_stored_certificates_recheck_exactly(self):
         # Every row of far-certificates.json passes the exact automaton check that busy.py runs on each holdout.
         import json
         import busy
         with open(busy.CERTIFICATES) as handle:
             rows = json.load(handle)
-        self.assertEqual(len(rows), 14)
+        self.assertEqual(len(rows), 41)
         for row in rows:
             machine = {tuple(k): tuple(v) for k, v in row['machine']}
             self.assertTrue(busy.far_certified(machine, 4), row['index'])
