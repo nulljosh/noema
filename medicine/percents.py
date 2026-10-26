@@ -50,25 +50,43 @@ def check(text):
     return [p for p in pairs(text) if not consistent(*p[:3])]
 
 
-def _get(url):
+def _get(url, body=None):
     time.sleep(0.4)
-    with urllib.request.urlopen(url, timeout=60) as response:
+    with urllib.request.urlopen(url, body, timeout=120) as response:
         return response.read()
 
 
-def fetch(year, count):
-    """PMIDs and abstract text of randomized controlled trials published in the given year."""
-    term = 'randomized controlled trial[pt] AND hasabstract AND %d[dp]' % year
+def fetch(dates, count):
+    """PMIDs and abstract text of randomized controlled trials published in a PubMed date range, like 2023 or
+    2023/01:2023/06. One search returns at most 10,000, so larger samples split the range."""
+    term = 'randomized controlled trial[pt] AND hasabstract AND %s[dp]' % dates
     query = urllib.parse.urlencode({'db': 'pubmed', 'term': term, 'retmax': count, 'retmode': 'json', 'sort': 'pub_date'})
     ids = json.loads(_get(EUTILS + 'esearch.fcgi?' + query))['esearchresult']['idlist']
     out = {}
     for i in range(0, len(ids), 200):
-        query = urllib.parse.urlencode({'db': 'pubmed', 'id': ','.join(ids[i:i + 200]), 'retmode': 'xml'})
-        root = ET.fromstring(_get(EUTILS + 'efetch.fcgi?' + query))
+        body = urllib.parse.urlencode({'db': 'pubmed', 'id': ','.join(ids[i:i + 200]), 'retmode': 'xml'}).encode()
+        root = ET.fromstring(_get(EUTILS + 'efetch.fcgi', body))
         for art in root.iter('PubmedArticle'):
             pmid = art.findtext('.//PMID')
             out[pmid] = ' '.join(''.join(a.itertext()) for a in art.iter('AbstractText'))
     return out
+
+
+def fetch_epmc(year):
+    """The same trials from Europe PMC, which mirrors PubMed and pages 1,000 abstracts a request, about 5 times
+    faster. Keyed by PMID, so it merges with fetch."""
+    base = 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?'
+    query = 'PUB_TYPE:"randomized controlled trial" AND PUB_YEAR:%d AND HAS_ABSTRACT:y' % year
+    out, cursor = {}, '*'
+    while True:
+        page = json.loads(_get(base + urllib.parse.urlencode({'query': query, 'resultType': 'core', 'pageSize': 1000,
+                                                              'format': 'json', 'cursorMark': cursor})))
+        for r in page['resultList']['result']:
+            if r.get('pmid') and r.get('abstractText'):
+                out[r['pmid']] = re.sub(r'<[^>]+>', ' ', r['abstractText'])
+        if not page['resultList']['result'] or page.get('nextCursorMark') in (None, cursor):
+            return out
+        cursor = page['nextCursorMark']
 
 
 def scan(year, count):
