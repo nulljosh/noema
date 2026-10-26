@@ -12,4 +12,8 @@ python3 ising.py 10    # 10x10, about two and a half minutes
 
 From the counts, the point where the grid soaks up heat fastest falls from 2.511 on a 2x2 grid to 2.345 on 10x10, heading toward Onsager's 2.269. That is a trend on small grids, not a measurement of the limit.
 
-This reproduces known results. Beale (Physical Review Letters 76, 78, 1996) gave the exact counts for finite periodic grids from Kaufman's formula, and later work runs his method to 192x192.
+Flip the rule so each magnet wants to point opposite its neighbours, and put the magnets on a triangle grid. Now no arrangement can please everyone, so the coldest state is not unique: a 9x9 grid has 547,003,370,634 equally cold arrangements. `python3 ising.py tri 9` counts them exactly. The leftover disorder per magnet, 0.334 at 9x9, is heading toward Wannier's 1950 value of 0.338. The 5x5 count (3,630) was also checked by listing all 33 million states.
+
+These counts are not in OEIS, and one search found no published table for these exact grids. That makes them worth an OEIS entry, not a discovery: the limit has been known since 1950.
+
+The square-grid results reproduce known work. Beale (Physical Review Letters 76, 78, 1996) gave the exact counts for finite periodic grids from Kaufman's formula, and later work runs his method to 192x192.

@@ -6,6 +6,7 @@ checked against brute force (L <= 4) and Kaufman's 1949 closed form.
 
     python3 ising.py        # L = 2..8, writes benchmarks/ising-latest.json
     python3 ising.py 9      # one size, not saved
+    python3 ising.py tri 9  # antiferromagnet ground states on triangular tori up to 9x9
 """
 import json
 import math
@@ -20,8 +21,8 @@ def _pop(x):
     return bin(x).count("1")
 
 
-def density_of_states(L):
-    """Exact g[k], k = 0..2N, via a row transfer matrix.
+def density_of_states(L, triangular=False):
+    """Exact g[k], k = 0..2N (0..3N on the triangular lattice), via a row transfer matrix.
 
     Each polynomial in k is packed into one big int, B bits per coefficient
     (every coefficient is below 2^N), so shifting k is a shift and summing is +.
@@ -30,7 +31,10 @@ def density_of_states(L):
     B, full = N + 1, S - 1
     rot = lambda s: ((s << 1) | (s >> (L - 1))) & full
     h = [_pop(s ^ rot(s)) for s in range(S)]  # bonds inside one row, wrap included
-    by_dist = [[[s for s in range(S) if _pop(s ^ t) == k] for k in range(L + 1)] for t in range(S)]
+    # bonds between rows: straight down, plus one diagonal per site on the triangular lattice
+    between = (lambda s, t: _pop(s ^ t) + _pop(s ^ rot(t))) if triangular else (lambda s, t: _pop(s ^ t))
+    K = 2 * L if triangular else L
+    by_dist = [[[s for s in range(S) if between(s, t) == k] for k in range(K + 1)] for t in range(S)]
     # T commutes with row rotation and global flip, so the trace term is the same on each orbit
     orbit = {}
     for s0 in range(S):
@@ -45,9 +49,9 @@ def density_of_states(L):
         V[s0] = 1 << (B * h[s0])
         for _ in range(L - 1):
             V = [sum((sum(V[s] for s in group) << (B * (k + h[t])) for k, group in enumerate(by_dist[t]))) for t in range(S)]
-        total += mult * sum(V[s] << (B * _pop(s ^ s0)) for s in range(S))
+        total += mult * sum(V[s] << (B * between(s, s0)) for s in range(S))
     mask = (1 << B) - 1
-    return [(total >> (B * k)) & mask for k in range(2 * N + 1)]
+    return [(total >> (B * k)) & mask for k in range((3 if triangular else 2) * N + 1)]
 
 
 def brute_force(L):
@@ -61,6 +65,21 @@ def brute_force(L):
             me = (x >> i) & 1
             bad += me != (x >> (r * L + (c + 1) % L)) & 1
             bad += me != (x >> (((r + 1) % L) * L + c)) & 1
+        g[bad] += 1
+    return g
+
+
+def brute_force_triangular(L):
+    """Triangular-lattice g[k] by listing all 2^N states. Only for L <= 4."""
+    N = L * L
+    g = [0] * (3 * N + 1)
+    for x in range(1 << N):
+        bad = 0
+        for i in range(N):
+            r, c = divmod(i, L)
+            me = (x >> i) & 1
+            for j in (r * L + (c + 1) % L, ((r + 1) % L) * L + c, ((r + 1) % L) * L + (c + 1) % L):
+                bad += me != (x >> j) & 1
         g[bad] += 1
     return g
 
@@ -127,7 +146,19 @@ def study(sizes):
     return rows
 
 
+def triangular_ground_states(L):
+    """Antiferromagnet on the triangular torus: ground states are the states with the most unlike bonds."""
+    g = density_of_states(L, triangular=True)
+    k = max(i for i, c in enumerate(g) if c)
+    return k, g[k]
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["tri"]:
+        for L in range(2, int(sys.argv[2]) + 1 if sys.argv[2:] else 9):
+            k, count = triangular_ground_states(L)
+            print(f"L={L}  ground states {count}  unlike bonds {k} of {3 * L * L}  entropy per spin {math.log(count) / (L * L):.5f} (Wannier 0.33831)")
+        raise SystemExit
     sizes = [int(a) for a in sys.argv[1:]] or list(range(2, 9))
     rows = study(sizes)
     if not sys.argv[1:]:

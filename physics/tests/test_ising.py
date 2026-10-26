@@ -33,6 +33,15 @@ class IsingTests(unittest.TestCase):
             for K in (0.3, 0.6):  # Kc = 0.4407
                 self.assertAlmostEqual(ising.log_z(g, K), ising.kaufman_log_z(L, K), places=9)
 
+    def test_triangular_matches_brute_force(self):
+        for L in (2, 3, 4):
+            self.assertEqual(ising.density_of_states(L, triangular=True), ising.brute_force_triangular(L))
+
+    def test_triangular_antiferromagnet_ground_states(self):
+        # L = 5 was also checked by listing all 2^25 states (numpy, 2026-10-26): 3630.
+        counts = [ising.triangular_ground_states(L)[1] for L in range(2, 8)]
+        self.assertEqual(counts, [6, 42, 42, 3630, 263640, 2620800])
+
     def test_specific_heat_peak_falls_toward_onsager(self):
         peaks = [ising.specific_heat_peak(ising.density_of_states(L))[0] for L in range(4, 8)]
         self.assertEqual(peaks, sorted(peaks, reverse=True))

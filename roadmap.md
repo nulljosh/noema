@@ -48,6 +48,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | cs | BB(3) = 21 steps and Sigma(3) = 6 ones, decided by this code: every 3-state machine halts within 21 steps or is proved never to halt (0 holdouts). 4-state holdouts 1,539 to 643 | machine-decided (sound deciders, Python) | each flagged machine rerun with no decider, 3-state to 1,000,000 steps and 896 four-state to 50,000, none halt | Lin and Rado (1965); bbchallenge n-gram CPS decider | reproduced |
 | 2026-10-26 | biology | Inputs v1 (NM_000518.4 titles too, identical CDS) grow the labeled set 93 to 134 and the held-out set 28 to 41; v0 unchanged scores 0.67 again (sensitivity 0.59, specificity 0.75) | observed | engine matches ClinVar's protein change on all 134; both transcripts' CDS byte-identical from NCBI | same ClinVar pin; spec amended with a dated inputs_v1 block, v0 and split untouched | baseline held, not a finding |
 | 2026-10-26 | cs | Wider block n-gram deciders cut 4-state holdouts 643 to 41 (32 counter-like, 7 square-root growth, 2 other); run 24 s; maxima still 107 steps, 13 ones | machine-decided (sound deciders, Python) | all 20,528 flagged 4-state machines rerun 100,000 steps with no decider, none halt | Brady (1983) BB(4) = 107; bbchallenge CPS | reproduced, 41 to go |
+| 2026-10-26 | physics | Ground states of the triangular Ising antiferromagnet on L x L tori, L = 2..9: 6, 42, 42, 3630, 263640, 2620800, 906124242, 547003370634; entropy per spin 0.3337 at L = 9, toward Wannier's 0.3383 | observed (exact counts) | brute force L <= 4 and a separate numpy listing of all 2^25 states at L = 5 | Wannier (1950) limit matches; no OEIS entry and no exact torus table found in one search | candidate for an OEIS entry, not a breakthrough |
 
 ## Fields
 
@@ -77,7 +78,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
-- [ ] **Physics:** count ground states of the antiferromagnet on small triangular tori, where frustration leaves leftover entropy, and compare with Wannier's 1950 value.
+- [x] **Physics:** triangular antiferromagnet ground states to 9x9 (2026-10-26), heading toward Wannier's 0.3383.
+- [ ] **Physics:** a deeper literature search (Blote and Nightingale, dimer counts on the honeycomb torus) for the triangular counts, then an independent check by Pfaffian dimer counting, then an OEIS draft for Joshua.
 - [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
 - [ ] **Medicine:** read the ISIS-2 full text to see whether the combination's SD 5 comes from a stratified analysis, then recompute the 1954 Salk polio trial from the Francis report's own table.
 - [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
