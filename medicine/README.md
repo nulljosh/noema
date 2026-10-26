@@ -31,7 +31,13 @@ python3 percents.py 2023 6000
 
 The scan covers 235,860 randomized-trial abstracts from 2015 to 2024 (PubMed and Europe PMC). They hold 2,825 such pairs, and 1,895 are plain 2x2 comparisons. 364 of those print a P that no rounding of any of the six tests gives. Most of these are small gaps, likely a test we did not try. The sharp case is the one statcheck counts (Nuijten et al. 2016): the printed P lands on the other side of 0.05 from every test. That happens 26 times. Reading each abstract by hand, 14 of the 26, in 13 abstracts, are clear mismatches. The other 12 turn out to be paired designs, scores written like fractions, or markup debris. One example prints 8/47 vs 14/47 with chi-square 19.394 and P = 0.004, but those counts give a chi-square of about 1.9. Another calls 3/30 vs 2/30 significant at P = 0.008. Every case, with its PubMed ID and the reason, is in `pvalues-2015-2024.json`.
 
-As with the percentages, each one is an open note until the full paper is read. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
+As with the percentages, each one is an open note until the full paper is read.
+
+## Do the ratios add up?
+
+`ratios.py` checks odds, risk and hazard ratios printed with a 95% interval, like "OR 1.5 (95% CI 1.2-1.9), P = 0.30". No test choice is needed. The estimate must sit inside its own interval. An interval that clearly leaves out 1 must go with P under 0.05, and one that clearly holds 1 with P over 0.05. Borderline cases are skipped: bounds within rounding of 1, P between 0.04 and 0.06, and sentences about interaction, heterogeneity, non-inferiority or one-sided tests.
+
+Across the same 235,860 abstracts there are 31,021 ratios with an interval. 68 sit outside their own interval, like OR 0.217 with an interval of 0.056 to 0.085. 64 more disagree with their P, like HR 1.33 (0.67 to 2.63) printed with P = 0.037. A random 40 of the 132 were read by hand. 28 are clear mismatches, and 12 are ambiguous (a P that belongs to the next item, a borderline bound, a one-sided test). So roughly 90 are clear, about 1 in 340 ratios. Georgescu and Wren (2018) ran this kind of check across MEDLINE and found far more, up to 7.5% of ratios, but they also counted the smaller gaps this scan skips. Everything is in `ratios-2015-2024.json`. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
 
 ```sh
 python3 pvalues.py CACHE_DIR    # a folder of {pmid: abstract} JSON files from percents.fetch or fetch_epmc
