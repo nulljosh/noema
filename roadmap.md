@@ -39,6 +39,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | biology | Predeclared BLOSUM62 rule scores 0.67 balanced accuracy on 28 held-out ClinVar HBB records vs 0.50 for both baselines | observed | engine matches ClinVar protein change on all 93 | BLOSUM-only predictors are known to be weak; n is tiny (4 negatives) | baseline set, not a finding |
 | 2026-10-26 | physics | Exact Ising energy counts on L x L tori, L = 2..10 (2^100 states at L = 10); heat-capacity peak falls 2.511 to 2.345 toward Onsager's 2.269 | observed (exact counts) | brute force L <= 4, Kaufman 1949 closed form at K = 0.3 and 0.6 to 1e-15 | Beale, PRL 76, 78 (1996); later runs to 192 x 192. The 3x3 and 4x4 rows are not in OEIS | reproduced |
 | 2026-10-26 | chemistry | Alkane isomer counts for 1 to 100 carbons | observed (exact counts) | brute-force canonical trees agree for n <= 12 | OEIS A000602, exact match to n = 100 | reproduced |
+| 2026-10-26 | cs | Translated-cycler decider proves 3,027 of 3,119 three-state holdouts and 500,893 of 521,462 four-state holdouts never halt; 92 and 20,569 remain | observed | every flagged 3-state machine and 3,000 flagged 4-state ones rerun 5,000 to 10,000 steps without the decider, none halted | bbchallenge translated-cycler decider | reproduced |
 
 ## Fields
 
@@ -61,7 +62,8 @@ Every STEM field is welcome. A field gets a folder only when a tick starts its f
 Each tick adds the sharpest next question its result raised. Prune anything that stays untouched for ten ticks.
 
 - [ ] **Math:** binary patterns in the longest-surviving residues mod 2^20.
-- [ ] **CS:** add a translated-cycler decider and drive the 3-state holdouts to zero, so BB(3) = 21 becomes a decided result here, not a capped one. Then shrink the 4-state holdouts the same way.
+- [x] **CS:** translated-cycler decider (2026-10-26). 3-state holdouts 3,119 to 92, 4-state 521,462 to 20,569, 4-state run 253 s to 14 s.
+- [ ] **CS:** a bouncer decider for the last 92 three-state holdouts (the 2-state bouncer is among them), so BB(3) = 21 is decided here, not capped.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
