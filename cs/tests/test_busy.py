@@ -78,3 +78,71 @@ class BusyBeaverTests(unittest.TestCase):
             self.assertFalse(ngram_cps(machine, 2, 3))
             self.assertFalse(ngram_cps(machine, 3, 4))
             self.assertIsNone(decide_holdout(machine, 3 if machine is machine_halts_in_three else 2))
+
+
+class FiniteAutomataReductionTests(unittest.TestCase):
+    @staticmethod
+    def parse(text):
+        machine = {}
+        for state, rule in enumerate(text.split('_')):
+            for symbol in (0, 1):
+                entry = rule[3 * symbol:3 * symbol + 3]
+                if entry[0] != '-':
+                    machine[(state, symbol)] = (int(entry[0]), 1 if entry[1] == 'R' else -1, ord(entry[2]) - ord('A'))
+        return machine
+
+    def test_far_refuses_the_four_state_champion(self):
+        # Halts at step 107, so no certificate may exist. The search gives up within its budget.
+        import far
+        champion = self.parse('1RB1LB_1LA0LC_---1LD_1RD0RA')
+        self.assertIsNone(far.certify(champion, 4, budget=2.0))
+
+    def test_stored_certificates_recheck_exactly(self):
+        # Every row of far-certificates.json passes the exact automaton check that busy.py runs on each holdout.
+        import json
+        import busy
+        with open(busy.CERTIFICATES) as handle:
+            rows = json.load(handle)
+        self.assertEqual(len(rows), 14)
+        for row in rows:
+            machine = {tuple(k): tuple(v) for k, v in row['machine']}
+            self.assertTrue(busy.far_certified(machine, 4), row['index'])
+
+    def test_word_checker_accepts_a_stored_certificate_and_rejects_a_bad_one(self):
+        import far
+        import far_verify
+        import json
+        import busy
+        with open(busy.CERTIFICATES) as handle:
+            row = json.load(handle)[0]
+        machine = {tuple(k): tuple(v) for k, v in row['machine']}
+        if row['orientation'] == 'mirror':
+            machine = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+        dfa = far.DFA(row['delta'], row['acc'])
+        self.assertEqual(far_verify.verify(machine, 4, dfa, max_len=3), 'ok')
+        # The bare undefined-letter language is not a certificate for the champion: its predecessors escape it.
+        bare = far.empty_word_dfa(self.parse('1RB1LB_1LA0LC_---1LD_1RD0RA'), 4)
+        self.assertNotEqual(far_verify.verify(self.parse('1RB1LB_1LA0LC_---1LD_1RD0RA'), 4, bare, max_len=3), 'ok')
+
+    def test_transducer_matches_direct_rewriting(self):
+        # pre_dfa must accept u exactly when the direct one-step rewrite fwd(u) is defined and lies in L, over every
+        # word up to length 5, for a stored certificate and for the bare undefined-letter language E.
+        import itertools
+        import json
+        import far
+        import far_verify
+        import busy
+        with open(busy.CERTIFICATES) as handle:
+            row = json.load(handle)[0]
+        machine = {tuple(k): tuple(v) for k, v in row['machine']}
+        if row['orientation'] == 'mirror':
+            machine = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+        cert = far.DFA(row['delta'], row['acc'])
+        bare = far.minimize(far.empty_word_dfa(machine, 4))
+        for dfa in (cert, bare):
+            pre = far.pre_dfa(machine, dfa, 4)
+            for n in range(1, 6):
+                for word in itertools.product(range(10), repeat=n):
+                    f = far_verify.fwd(machine, word)
+                    expected = f is not None and far_verify.run(dfa, f)
+                    self.assertEqual(far_verify.run(pre, word), expected, word)

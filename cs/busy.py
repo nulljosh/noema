@@ -1,8 +1,11 @@
 """Busy Beaver by tree enumeration: grow 2-symbol Turing machines only along transitions they actually use."""
 import itertools
 import json
+import os
 import sys
 import time
+
+import far
 
 
 def simulate(machine, cap):
@@ -241,6 +244,35 @@ WIDE_NGRAMS = ((3, 2), (2, 3), (3, 3), (3, 4))
 LATE_CAP = 2000
 
 
+CERTIFICATES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'far-certificates.json')
+_certificates = None
+
+
+def _load_certificates():
+    with open(CERTIFICATES) as handle:
+        rows = json.load(handle)
+    table = {}
+    for row in rows:
+        key = tuple(sorted((tuple(k), tuple(v)) for k, v in row['machine']))
+        table[key] = row
+    return table
+
+
+def far_certified(machine, states):
+    """True when a stored finite automata reduction certificate proves the machine never reads an undefined
+    transition from blank. The table lists the machine (or its mirror) with a DFA, and far.holds re-checks it
+    exactly on every run. The search that found each certificate is far.certify."""
+    global _certificates
+    if _certificates is None:
+        _certificates = _load_certificates()
+    row = _certificates.get(tuple(sorted(machine.items())))
+    if row is None:
+        return False
+    if row['orientation'] == 'mirror':
+        machine = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+    return far.holds(machine, states, far.DFA(row['delta'], row['acc']))
+
+
 def decide_holdout(machine, states):
     """Name of the first sound decider that proves a holdout never halts from blank, or None.
     The 2-cell n-gram closure runs before the wider deciders, so the 3-state counts do not move."""
@@ -256,6 +288,8 @@ def decide_holdout(machine, states):
         return 'wide'
     if any(ngram_cps(machine, n, k) for n, k in WIDE_NGRAMS):
         return 'wide'
+    if far_certified(machine, states):
+        return 'far'
     return None
 
 
@@ -267,7 +301,7 @@ def enumerate_machines(states, cap, flagged=None):
     halt, which is then counted and its maxima recorded. Machines the deciders prove non-halting are appended to
     flagged, when given."""
     best_steps, best_ones, halters, holdouts, cycles, translated = 0, 0, 0, 0, 0, 0
-    proved = {'backward': 0, 'tape': 0, 'block': 0, 'ngram': 0, 'wide': 0, 'rerun': 0}
+    proved = {'backward': 0, 'tape': 0, 'block': 0, 'ngram': 0, 'wide': 0, 'far': 0, 'rerun': 0}
     late_halters = 0
     stack = [{}]
     while stack:
@@ -314,7 +348,7 @@ def enumerate_machines(states, cap, flagged=None):
             'halting_branches': halters, 'cycles_proved': cycles, 'translated_cyclers': translated,
             'backward_proved': proved['backward'], 'closed_tape_proved': proved['tape'],
             'block_tape_proved': proved['block'], 'ngram_proved': proved['ngram'],
-            'wide_proved': proved['wide'], 'rerun_proved': proved['rerun'],
+            'wide_proved': proved['wide'], 'far_proved': proved['far'], 'rerun_proved': proved['rerun'],
             'late_halters': late_halters, 'holdouts_at_cap': holdouts}
 
 
