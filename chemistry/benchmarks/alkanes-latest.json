@@ -1,0 +1,814 @@
+{
+ "sequence": "A000602",
+ "reference": "benchmarks/A000602-b-0-100.txt (rows 0 to 100 of https://oeis.org/A000602/b000602.txt)",
+ "formula_max_n": 100,
+ "brute_max_n": 12,
+ "all_match_oeis": true,
+ "all_brute_match_formula": true,
+ "seconds": {
+  "formula": 0.072,
+  "brute": 0.046
+ },
+ "rows": [
+  {
+   "n": 1,
+   "formula": "1",
+   "oeis": "1",
+   "match_oeis": true,
+   "brute": "1",
+   "match_brute": true
+  },
+  {
+   "n": 2,
+   "formula": "1",
+   "oeis": "1",
+   "match_oeis": true,
+   "brute": "1",
+   "match_brute": true
+  },
+  {
+   "n": 3,
+   "formula": "1",
+   "oeis": "1",
+   "match_oeis": true,
+   "brute": "1",
+   "match_brute": true
+  },
+  {
+   "n": 4,
+   "formula": "2",
+   "oeis": "2",
+   "match_oeis": true,
+   "brute": "2",
+   "match_brute": true
+  },
+  {
+   "n": 5,
+   "formula": "3",
+   "oeis": "3",
+   "match_oeis": true,
+   "brute": "3",
+   "match_brute": true
+  },
+  {
+   "n": 6,
+   "formula": "5",
+   "oeis": "5",
+   "match_oeis": true,
+   "brute": "5",
+   "match_brute": true
+  },
+  {
+   "n": 7,
+   "formula": "9",
+   "oeis": "9",
+   "match_oeis": true,
+   "brute": "9",
+   "match_brute": true
+  },
+  {
+   "n": 8,
+   "formula": "18",
+   "oeis": "18",
+   "match_oeis": true,
+   "brute": "18",
+   "match_brute": true
+  },
+  {
+   "n": 9,
+   "formula": "35",
+   "oeis": "35",
+   "match_oeis": true,
+   "brute": "35",
+   "match_brute": true
+  },
+  {
+   "n": 10,
+   "formula": "75",
+   "oeis": "75",
+   "match_oeis": true,
+   "brute": "75",
+   "match_brute": true
+  },
+  {
+   "n": 11,
+   "formula": "159",
+   "oeis": "159",
+   "match_oeis": true,
+   "brute": "159",
+   "match_brute": true
+  },
+  {
+   "n": 12,
+   "formula": "355",
+   "oeis": "355",
+   "match_oeis": true,
+   "brute": "355",
+   "match_brute": true
+  },
+  {
+   "n": 13,
+   "formula": "802",
+   "oeis": "802",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 14,
+   "formula": "1858",
+   "oeis": "1858",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 15,
+   "formula": "4347",
+   "oeis": "4347",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 16,
+   "formula": "10359",
+   "oeis": "10359",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 17,
+   "formula": "24894",
+   "oeis": "24894",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 18,
+   "formula": "60523",
+   "oeis": "60523",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 19,
+   "formula": "148284",
+   "oeis": "148284",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 20,
+   "formula": "366319",
+   "oeis": "366319",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 21,
+   "formula": "910726",
+   "oeis": "910726",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 22,
+   "formula": "2278658",
+   "oeis": "2278658",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 23,
+   "formula": "5731580",
+   "oeis": "5731580",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 24,
+   "formula": "14490245",
+   "oeis": "14490245",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 25,
+   "formula": "36797588",
+   "oeis": "36797588",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 26,
+   "formula": "93839412",
+   "oeis": "93839412",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 27,
+   "formula": "240215803",
+   "oeis": "240215803",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 28,
+   "formula": "617105614",
+   "oeis": "617105614",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 29,
+   "formula": "1590507121",
+   "oeis": "1590507121",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 30,
+   "formula": "4111846763",
+   "oeis": "4111846763",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 31,
+   "formula": "10660307791",
+   "oeis": "10660307791",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 32,
+   "formula": "27711253769",
+   "oeis": "27711253769",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 33,
+   "formula": "72214088660",
+   "oeis": "72214088660",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 34,
+   "formula": "188626236139",
+   "oeis": "188626236139",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 35,
+   "formula": "493782952902",
+   "oeis": "493782952902",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 36,
+   "formula": "1295297588128",
+   "oeis": "1295297588128",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 37,
+   "formula": "3404490780161",
+   "oeis": "3404490780161",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 38,
+   "formula": "8964747474595",
+   "oeis": "8964747474595",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 39,
+   "formula": "23647478933969",
+   "oeis": "23647478933969",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 40,
+   "formula": "62481801147341",
+   "oeis": "62481801147341",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 41,
+   "formula": "165351455535782",
+   "oeis": "165351455535782",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 42,
+   "formula": "438242894769226",
+   "oeis": "438242894769226",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 43,
+   "formula": "1163169707886427",
+   "oeis": "1163169707886427",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 44,
+   "formula": "3091461011836856",
+   "oeis": "3091461011836856",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 45,
+   "formula": "8227162372221203",
+   "oeis": "8227162372221203",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 46,
+   "formula": "21921834086683418",
+   "oeis": "21921834086683418",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 47,
+   "formula": "58481806621987010",
+   "oeis": "58481806621987010",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 48,
+   "formula": "156192366474590639",
+   "oeis": "156192366474590639",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 49,
+   "formula": "417612400765382272",
+   "oeis": "417612400765382272",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 50,
+   "formula": "1117743651746953270",
+   "oeis": "1117743651746953270",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 51,
+   "formula": "2994664179967370611",
+   "oeis": "2994664179967370611",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 52,
+   "formula": "8031081780535296591",
+   "oeis": "8031081780535296591",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 53,
+   "formula": "21557771913572630901",
+   "oeis": "21557771913572630901",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 54,
+   "formula": "57919180873148437753",
+   "oeis": "57919180873148437753",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 55,
+   "formula": "155745431857549699124",
+   "oeis": "155745431857549699124",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 56,
+   "formula": "419149571193411829372",
+   "oeis": "419149571193411829372",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 57,
+   "formula": "1128939578361332867936",
+   "oeis": "1128939578361332867936",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 58,
+   "formula": "3043043571906827182530",
+   "oeis": "3043043571906827182530",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 59,
+   "formula": "8208615366863753915949",
+   "oeis": "8208615366863753915949",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 60,
+   "formula": "22158734535770411074184",
+   "oeis": "22158734535770411074184",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 61,
+   "formula": "59858097847706865855186",
+   "oeis": "59858097847706865855186",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 62,
+   "formula": "161805725349297357221898",
+   "oeis": "161805725349297357221898",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 63,
+   "formula": "437671691526158936922623",
+   "oeis": "437671691526158936922623",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 64,
+   "formula": "1184616185385310843585573",
+   "oeis": "1184616185385310843585573",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 65,
+   "formula": "3208285066181475821271463",
+   "oeis": "3208285066181475821271463",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 66,
+   "formula": "8694130712024868414002815",
+   "oeis": "8694130712024868414002815",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 67,
+   "formula": "23573796134448175745408811",
+   "oeis": "23573796134448175745408811",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 68,
+   "formula": "63955159527348138708694312",
+   "oeis": "63955159527348138708694312",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 69,
+   "formula": "173603007393950249896865875",
+   "oeis": "173603007393950249896865875",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 70,
+   "formula": "471484798515330363034639871",
+   "oeis": "471484798515330363034639871",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 71,
+   "formula": "1281151315764638215613845510",
+   "oeis": "1281151315764638215613845510",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 72,
+   "formula": "3482965749140691245110434511",
+   "oeis": "3482965749140691245110434511",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 73,
+   "formula": "9473447386804490449091871124",
+   "oeis": "9473447386804490449091871124",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 74,
+   "formula": "25779306238954404972323916397",
+   "oeis": "25779306238954404972323916397",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 75,
+   "formula": "70183211512214096492433058105",
+   "oeis": "70183211512214096492433058105",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 76,
+   "formula": "191156381393249393027319384769",
+   "oeis": "191156381393249393027319384769",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 77,
+   "formula": "520874195248906781713044332539",
+   "oeis": "520874195248906781713044332539",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 78,
+   "formula": "1419908915343952137338409797325",
+   "oeis": "1419908915343952137338409797325",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 79,
+   "formula": "3872282575137005474139119076135",
+   "oeis": "3872282575137005474139119076135",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 80,
+   "formula": "10564476906946675106953415600016",
+   "oeis": "10564476906946675106953415600016",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 81,
+   "formula": "28833609436277333169440806135431",
+   "oeis": "28833609436277333169440806135431",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 82,
+   "formula": "78725585464391037293036629979444",
+   "oeis": "78725585464391037293036629979444",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 83,
+   "formula": "215027809474796675607407513633870",
+   "oeis": "215027809474796675607407513633870",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 84,
+   "formula": "587531723826577193455385789266377",
+   "oeis": "587531723826577193455385789266377",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 85,
+   "formula": "1605913778494711520354663202536756",
+   "oeis": "1605913778494711520354663202536756",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 86,
+   "formula": "4391002908093323425994602631972445",
+   "oeis": "4391002908093323425994602631972445",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 87,
+   "formula": "12010257907756938974208750945664835",
+   "oeis": "12010257907756938974208750945664835",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 88,
+   "formula": "32861295558120887536942123568548502",
+   "oeis": "32861295558120887536942123568548502",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 89,
+   "formula": "89940959024891576997396491928932689",
+   "oeis": "89940959024891576997396491928932689",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 90,
+   "formula": "246245150242821439632304475956113295",
+   "oeis": "246245150242821439632304475956113295",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 91,
+   "formula": "674391606297983432514229725117306224",
+   "oeis": "674391606297983432514229725117306224",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 92,
+   "formula": "1847515048012613337782670842346319120",
+   "oeis": "1847515048012613337782670842346319120",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 93,
+   "formula": "5062818112121161180862827915688625902",
+   "oeis": "5062818112121161180862827915688625902",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 94,
+   "formula": "13877857529584521384324419956411729295",
+   "oeis": "13877857529584521384324419956411729295",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 95,
+   "formula": "38051836070803837001309074456088423358",
+   "oeis": "38051836070803837001309074456088423358",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 96,
+   "formula": "104363664561059273927704242814298678658",
+   "oeis": "104363664561059273927704242814298678658",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 97,
+   "formula": "286312976836850192359345859166390622180",
+   "oeis": "286312976836850192359345859166390622180",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 98,
+   "formula": "785684759853087702778573182234297830503",
+   "oeis": "785684759853087702778573182234297830503",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 99,
+   "formula": "2156596319845084996862701478402986311496",
+   "oeis": "2156596319845084996862701478402986311496",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  },
+  {
+   "n": 100,
+   "formula": "5921072038125809849884993369103538010139",
+   "oeis": "5921072038125809849884993369103538010139",
+   "match_oeis": true,
+   "brute": null,
+   "match_brute": null
+  }
+ ]
+}
