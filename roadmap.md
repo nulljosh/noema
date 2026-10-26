@@ -42,6 +42,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | cs | Translated-cycler decider proves 3,027 of 3,119 three-state holdouts and 500,893 of 521,462 four-state holdouts never halt; 92 and 20,569 remain | observed | every flagged 3-state machine and 3,000 flagged 4-state ones rerun 5,000 to 10,000 steps without the decider, none halted | bbchallenge translated-cycler decider | reproduced |
 | 2026-10-26 | math | Classes closing at each level of the residue tree, m = 1..24: 1, 1, 1, 2, 3, 7, 12, 30, 85, 173, 476, 961, 2652, 8045, 17637, 51033; open counts to m = 24 also match | observed | the A076227 open counts and a numeric descent check of every closed class to level 12 | OEIS A100982 (admissible sequences) and A186009, exact match | reproduced |
 | 2026-10-26 | medicine | ISIS-2 from its printed counts: odds reductions 25% (streptokinase), 23% (aspirin), 42% (both, 95% 34 to 50) | observed (arithmetic on published counts) | Peto one-step and Woolf odds ratios agree within a point | ISIS-2, Lancet 1988, PMID 2899772, exact match; the combination's printed SD 5 recomputes to 4, open until the full text is read | reproduced |
+| 2026-10-26 | statistics | Birthday problem: 23 people, P = 0.507297; coupon collector: 14.7 rolls for a die, 224.96 draws for 50 coupons | observed (exact fractions) | seeded simulation within four standard errors | textbook closed forms, exact match | reproduced |
 
 ## Fields
 
@@ -56,7 +57,7 @@ Every STEM field is welcome. A field gets a folder only when a tick starts its f
 | Chemistry | live (`chemistry/`) | Count alkane structural isomers C1 to C20 by tree enumeration | OEIS A000602 |
 | Information engineering | queued | Largest binary codes A(n, d) for small n by exhaustive search | published code tables |
 | Astronomy | queued | Kepler's third law across the NASA Exoplanet Archive, with the scatter reported | the archive itself |
-| Statistics | queued | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
+| Statistics | live (`statistics/`) | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
 | Medicine | live (`medicine/`) | Recompute the headline effect and its confidence interval from the published counts of landmark trials (ISIS-2 aspirin, the 1954 Salk polio trial) | the papers' own tables |
 
 ## Frontier
@@ -73,6 +74,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Physics:** count ground states of the antiferromagnet on small triangular tori, where frustration leaves leftover entropy, and compare with Wannier's 1950 value.
 - [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
 - [ ] **Medicine:** read the ISIS-2 full text to see whether the combination's SD 5 comes from a stratified analysis, then recompute the 1954 Salk polio trial from the Francis report's own table.
+- [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
 - [ ] **Hub:** add physics and chemistry cards to the landing page and deploy.
 
 ## Not doing
