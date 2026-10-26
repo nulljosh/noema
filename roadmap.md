@@ -43,6 +43,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | math | Classes closing at each level of the residue tree, m = 1..24: 1, 1, 1, 2, 3, 7, 12, 30, 85, 173, 476, 961, 2652, 8045, 17637, 51033; open counts to m = 24 also match | observed | the A076227 open counts and a numeric descent check of every closed class to level 12 | OEIS A100982 (admissible sequences) and A186009, exact match | reproduced |
 | 2026-10-26 | medicine | ISIS-2 from its printed counts: odds reductions 25% (streptokinase), 23% (aspirin), 42% (both, 95% 34 to 50) | observed (arithmetic on published counts) | Peto one-step and Woolf odds ratios agree within a point | ISIS-2, Lancet 1988, PMID 2899772, exact match; the combination's printed SD 5 recomputes to 4, open until the full text is read | reproduced |
 | 2026-10-26 | statistics | Birthday problem: 23 people, P = 0.507297; coupon collector: 14.7 rolls for a die, 224.96 draws for 50 coupons | observed (exact fractions) | seeded simulation within four standard errors | textbook closed forms, exact match | reproduced |
+| 2026-10-26 | cs | Backward reasoning plus two closed-tape deciders cut 3-state holdouts 92 to 4 and 4-state 20,569 to 1,539 (run 23 s); maxima unchanged | observed | 88 newly flagged 3-state machines run 100,000 steps and 2,000 sampled 4-state ones 20,000 steps, none halt | bbchallenge backward-reasoning and CTL deciders; BB(3) = 21 proved by Lin and Rado (1965) | reproduced |
 
 ## Fields
 
@@ -67,7 +68,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Math:** binary patterns in the longest-surviving residues mod 2^20.
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
 - [x] **CS:** translated-cycler decider (2026-10-26). 3-state holdouts 3,119 to 92, 4-state 521,462 to 20,569, 4-state run 253 s to 14 s.
-- [ ] **CS:** a bouncer decider for the last 92 three-state holdouts (the 2-state bouncer is among them), so BB(3) = 21 is decided here, not capped.
+- [ ] **CS:** the last 4 three-state holdouts look like binary counters (two pairs of near-twins). Write an induction proof for each, or a counter decider, so BB(3) = 21 is decided here, not capped.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
