@@ -302,6 +302,105 @@
    ],
    "snippet": "l load data at baseline and were included in the viral load analyses. Of those, 210 (range, 41-63) patients ",
    "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "39045920",
+   "kind": "sd",
+   "value": "11.42",
+   "sd": "6.40",
+   "interval": [
+    "8.83",
+    "14.01"
+   ],
+   "snippet": "o TA group and 28 to placebo group. The mean blood loss was 11.42ml (SD 6.40, range 8.83-14.01) in the T",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "39045920",
+   "kind": "sd",
+   "value": "17.6",
+   "sd": "6.22",
+   "interval": [
+    "15.19",
+    "20.01"
+   ],
+   "snippet": "as 11.42ml (SD 6.40, range 8.83-14.01) in the TA group, and 17.6ml (SD 6.22, range 15.19-20.01) in the p",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "30853454",
+   "kind": "sd",
+   "value": "2.8",
+   "sd": "1.78",
+   "interval": [
+    "2.29",
+    "3.31"
+   ],
+   "snippet": "0) groups. Hospital stay was comparable between groups: PA, 2.8±1.78 days [range, 2.29-3.31 days]; AA",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "30853454",
+   "kind": "sd",
+   "value": "2.84",
+   "sd": "1.25",
+   "interval": [
+    "2.48",
+    "3.2"
+   ],
+   "snippet": "ween groups: PA, 2.8±1.78 days [range, 2.29-3.31 days]; AA, 2.84±1.25 days [range, 2.48-3.2 days] (p=",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "32720367",
+   "kind": "sd",
+   "value": "11.5",
+   "sd": "5.07",
+   "interval": [
+    "8.7",
+    "13.5"
+   ],
+   "snippet": "eural within 30 days of the operation. Results Mean age was 11.5 ± 5.07 (range, 8.7-13.5) years in",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "36660970",
+   "kind": "sd",
+   "value": "84.5",
+   "sd": "10.7",
+   "interval": [
+    "79",
+    "89"
+   ],
+   "snippet": "roup 4. The mean duration time to diarrhoea termination was 84.5±10.7 hours (range: 79-89 hours) in",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "36660970",
+   "kind": "sd",
+   "value": "73.05",
+   "sd": "6.8",
+   "interval": [
+    "70.5",
+    "75.4"
+   ],
+   "snippet": "nation was 84.5±10.7 hours (range: 79-89 hours) in group 1, 73.05±6.8 hours (range: 70.5-75.4 hours) in",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
+  },
+  {
+   "pmid": "36660970",
+   "kind": "sd",
+   "value": "80.1",
+   "sd": "10.3",
+   "interval": [
+    "76",
+    "84"
+   ],
+   "snippet": "oup 1, 73.05±6.8 hours (range: 70.5-75.4 hours) in group 2, 80.1±10.3 hours (range: 76-84 hours) in",
+   "review": "clear: SD too large for any data in that range; the \"range\" reads like a 95% CI"
   }
- ]
+ ],
+ "sd_checked": 533,
+ "sd_clear": 8,
+ "sd_clear_abstracts": 4
 }

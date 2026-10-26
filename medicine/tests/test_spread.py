@@ -19,6 +19,12 @@ class SpreadTests(unittest.TestCase):
                      'Median 4.9 (IQR 3.1-6.0).'):
             self.assertEqual(list(spread.flags(text)), [], text)
 
+    def test_sd_too_wide_for_range(self):
+        self.assertEqual(len(list(spread.sd_flags('PA, 2.8±1.78 days [range, 2.29-3.31 days]'))), 1)
+        self.assertEqual(len(list(spread.sd_flags('blood loss 11.42 ml (SD 6.40, range 8.83-14.01)'))), 1)
+        for text in ('Age 45 ± 12 years (range 20-80)', 'mean 74 out of 100 (SD 23, range 12.5-100)', 'Age 30 ± 35 (range 0-70)'):
+            self.assertEqual(list(spread.sd_flags(text)), [], text)
+
 
 if __name__ == '__main__':
     unittest.main()

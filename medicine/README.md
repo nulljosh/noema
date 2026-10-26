@@ -47,6 +47,8 @@ Across the same 235,860 abstracts there are 31,021 ratios with an interval. 68 s
 
 `spread.py` looks for a median printed outside its own interquartile range, or a value outside its own range. Neither can ever be right. Across the 235,860 abstracts there are 6,638 such pairs. 27 are flagged, and a hand read of all 27 leaves 15 clear mismatches in 13 abstracts, like "10 [IQR 7-7]", a median follow-up of 22.9 months with an IQR of 27.5 to 33.3, and "8 months (range 1-6)". The other 12 are units, times or group labels read as the value. All 27, with reasons, are in `spread-2015-2024.json`.
 
+An SD can be too big for its range too. Data that all sit between a and b with mean m have a variance of at most (m - a)(b - m), the Bhatia-Davis inequality (2000), and a sample SD is at most the square root of twice that. 533 abstracts print a mean, an SD and a range together. 8 SDs in 4 abstracts break the bound, like a hospital stay of 2.8 ± 1.78 days with a range of 2.29 to 3.31. All 8 read as a 95% interval printed under the word range.
+
 ## Headcounts that do not add up
 
 `totals.py` checks sex splits against the total they split, like "55 patients (22 males and 34 females)". 997 splits can be checked. 4 add up to more people than the total, which cannot happen: 56 of 55, 69 of 62, 1,648 of 1,612 and 500 of 400. 8 more fall short with no missing or other group named, such as 43 of 53, which may be unreported data. Three flags were not mismatches and are marked so in `totals-2015-2024.json`.
