@@ -1,5 +1,5 @@
 import unittest
-from busy import backward, closed_block, closed_tape, enumerate_machines, simulate
+from busy import backward, closed_block, closed_tape, enumerate_machines, ngram_cps, simulate
 
 
 class BusyBeaverTests(unittest.TestCase):
@@ -28,10 +28,16 @@ class BusyBeaverTests(unittest.TestCase):
         self.assertEqual(simulate(machine, 100), ('translated', None, 5, 3))
 
     def test_three_state_holdouts(self):
-        # Translated cyclers leave 92. Backward reasoning proves 55, the closed tape 28 and the block tape 5, leaving 4.
+        # Translated cyclers leave 92. Backward reasoning proves 55, the closed tape 28, the block tape 5 and the
+        # 2-cell-block n-gram closure 4, leaving none.
         result = enumerate_machines(3, 200)
         self.assertEqual((result['holdouts_at_cap'], result['backward_proved'], result['closed_tape_proved'],
-                          result['block_tape_proved']), (4, 55, 28, 5))
+                          result['block_tape_proved'], result['ngram_proved']), (0, 55, 28, 5, 4))
+
+    def test_ngram_proves_translated_cycler(self):
+        # The same translated cycler as above, closed by plain-cell 2-grams.
+        machine = {(0, 0): (1, 1, 1), (0, 1): (1, 1, 0), (1, 0): (1, -1, 0)}
+        self.assertTrue(ngram_cps(machine, 2, 1))
 
     def test_block_tape_proves_parity_machine(self):
         # A run of ones alternates states C and A cell by cell, so a cell-run tape loses the parity and fails.
@@ -52,8 +58,12 @@ class BusyBeaverTests(unittest.TestCase):
         self.assertFalse(backward(machine, 3))
         self.assertFalse(closed_tape(machine))
         self.assertFalse(closed_block(machine, 2))
-        # The two-state champion halts, so both deciders must also refuse it.
+        self.assertFalse(ngram_cps(machine, 2, 2))
+        self.assertFalse(ngram_cps(machine, 2, 1))
+        # The two-state champion halts, so every decider must also refuse it.
         champion = {(0, 0): (1, 1, 1), (0, 1): (1, -1, 1), (1, 0): (1, -1, 0)}
         self.assertFalse(backward(champion, 2))
         self.assertFalse(closed_tape(champion))
         self.assertFalse(closed_block(champion, 2))
+        self.assertFalse(ngram_cps(champion, 2, 2))
+        self.assertFalse(ngram_cps(champion, 2, 1))
