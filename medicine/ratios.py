@@ -29,26 +29,30 @@ def _num(text):
     return value, 0.5 * 10 ** -decimals
 
 
-def _p_fits(op, printed, est, te, lo, tl, hi, th, slack=10):
+def _p_fits(op, printed, est, te, lo, tl, hi, th, slack=10, log=True, too_big=True):
     """True when the printed P fits the P that Altman and Bland (2011) recover from the interval, to within a factor.
 
     SE = (ln hi - ln lo) / 3.92 and z = |ln est| / SE, taken over every rounding of the three printed numbers.
+    With log=False (a difference, null 0) the same runs on the raw scale. too_big=False forgives a printed P above the
+    recovered one, which small-sample t and exact tests give.
     ponytail: a factor of 10 forgives exact, profile and t-based intervals; tighten it only after a hand-read.
     """
-    if lo - tl <= 0 or est - te <= 0:
+    if log and (lo - tl <= 0 or est - te <= 0):
         return True
-    se_max = (math.log(hi + th) - math.log(lo - tl)) / 3.92
-    se_min = max(1e-12, (math.log(hi - th) - math.log(lo + tl)) / 3.92)
-    far = max(abs(math.log(est - te)), abs(math.log(est + te)))
-    near = 0.0 if est - te <= 1 <= est + te else min(abs(math.log(est - te)), abs(math.log(est + te)))
+    f = math.log if log else float
+    (e1, e2), (l1, l2), (h1, h2) = [(f(x - t), f(x + t)) for x, t in ((est, te), (lo, tl), (hi, th))]
+    se_max = (h2 - l1) / 3.92
+    se_min = max(1e-12, (h1 - l2) / 3.92)
+    far = max(abs(e1), abs(e2))
+    near = 0.0 if e1 <= 0 <= e2 else min(abs(e1), abs(e2))
     p_lo, p_hi = math.erfc(far / se_min / math.sqrt(2)), math.erfc(near / se_max / math.sqrt(2))
     value, decimals, exp = pvalues._value(printed)
     if op in ('<', '≤', '<='):
         return p_lo <= value * slack
     if op in ('>', '≥', '>='):
-        return p_hi * slack >= value
+        return not too_big or p_hi * slack >= value
     half = 0.5 * 10 ** -(decimals + exp)
-    return p_lo / slack <= value + half and value - half <= p_hi * slack
+    return p_lo / slack <= value + half and (not too_big or value - half <= p_hi * slack)
 
 
 def flags(text):

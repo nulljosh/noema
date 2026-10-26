@@ -1,0 +1,1531 @@
+{
+ "abstracts": 235860,
+ "differences_with_ci": 11237,
+ "flags": 127,
+ "rows": [
+  {
+   "pmid": "39197029",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-0.35",
+   "ci": [
+    "-1.09",
+    "0.38"
+   ],
+   "printed_p": "< 0.001",
+   "sentence": "The mean difference was -0.35 mL/kg/min (95% confidence interval: -1.09 to 0.38; p <0.001), and no treatment and carryover effect were observed."
+  },
+  {
+   "pmid": "38328975",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "1.57",
+   "ci": [
+    "0.46",
+    "2.67"
+   ],
+   "printed_p": "= 0.0002",
+   "sentence": "The mean pain score was lower in decompressed versus sham legs (mean difference: 1.57 95% CI: 0.46 to 2.67; P =0.0002)."
+  },
+  {
+   "pmid": "38244557",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "0·7",
+   "ci": [
+    "-7·8",
+    "9·1"
+   ],
+   "printed_p": "= 0·013",
+   "sentence": "In the oral switch group, 14 (13%) participants met the primary endpoint versus 13 (12%) in the intravenous group, with a treatment difference of 0·7 percentage points (95% CI -7·8 to 9·1; p=0·013)."
+  },
+  {
+   "pmid": "38502074",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "-10.2",
+   "ci": [
+    "-27.7",
+    "-2.6"
+   ],
+   "printed_p": "= .009",
+   "sentence": "The mean absolute change in hepatic fat content by MRS was -6.6% with aspirin vs 3.6% with placebo (difference, -10.2% [95% CI, -27.7% to -2.6%]; P = .009)."
+  },
+  {
+   "pmid": "38502126",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "23",
+   "ci": [
+    "19",
+    "26"
+   ],
+   "printed_p": "= .44",
+   "sentence": "This difference of 23% (95% CI, 19%-26%) was not statistically significant (P = .44) due to an intraclass correlation coefficient of 0.32."
+  },
+  {
+   "pmid": "37163686",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-0.332",
+   "ci": [
+    "-0.635",
+    "-0.028"
+   ],
+   "printed_p": "= 0.062",
+   "sentence": "The observed pain scores by research nurses and a parent were significantly lower in the EMLA group compared with the Buzzy device group; however, the pain scores by the self-assessment scale were not statistically significant with mean difference of -0.332, 95% confidence interval, -0.635 to -0.028 ( P = 0.062)."
+  },
+  {
+   "pmid": "38078660",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0.807",
+   "ci": [
+    "0.123",
+    "1.491"
+   ],
+   "printed_p": "= 0.459",
+   "sentence": "There was no significant difference between groups in electromyographic PFM signals in prebaseline rest (mean difference: -0.146 [95% confidence interval (CI): -0.44 to 0.148; p = 0.470]), phasic contractions (mean difference: 0.807 [95% CI: 0.123-1.491; p = 0.459]), tonic contractions (mean difference: 1.06 [95% CI: 0.255-1.865; p = 0.302]), endurance contractions (mean difference: 0.896 [95% CI:"
+  },
+  {
+   "pmid": "38078660",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "1.06",
+   "ci": [
+    "0.255",
+    "1.865"
+   ],
+   "printed_p": "= 0.302",
+   "sentence": "There was no significant difference between groups in electromyographic PFM signals in prebaseline rest (mean difference: -0.146 [95% confidence interval (CI): -0.44 to 0.148; p = 0.470]), phasic contractions (mean difference: 0.807 [95% CI: 0.123-1.491; p = 0.459]), tonic contractions (mean difference: 1.06 [95% CI: 0.255-1.865; p = 0.302]), endurance contractions (mean difference: 0.896 [95% CI:"
+  },
+  {
+   "pmid": "38078660",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0.896",
+   "ci": [
+    "0.057",
+    "1.735"
+   ],
+   "printed_p": "= 0.352",
+   "sentence": "There was no significant difference between groups in electromyographic PFM signals in prebaseline rest (mean difference: -0.146 [95% confidence interval (CI): -0.44 to 0.148; p = 0.470]), phasic contractions (mean difference: 0.807 [95% CI: 0.123-1.491; p = 0.459]), tonic contractions (mean difference: 1.06 [95% CI: 0.255-1.865; p = 0.302]), endurance contractions (mean difference: 0.896 [95% CI:"
+  },
+  {
+   "pmid": "37973958",
+   "kind": "verdict",
+   "name": "risk difference",
+   "estimate": "-4.1",
+   "ci": [
+    "-14.1",
+    "6.0"
+   ],
+   "printed_p": "= 0.023",
+   "sentence": "In 274 patients were included in the efficacy analysis, the rates of delayed CR in Arms D4 and D1 were 79.7% and 75.0%, respectively (risk difference -4.1%; 95% CI -14.1%-6.0%, P = 0.023)."
+  },
+  {
+   "pmid": "37394147",
+   "kind": "verdict",
+   "name": "mean differences",
+   "estimate": "17.1",
+   "ci": [
+    "-0.1",
+    "26.1"
+   ],
+   "printed_p": "< .001",
+   "sentence": "Percentage of associated injuries and step-offs reduction maneuvers was greater with arthroscopy (mean differences: 17.1 95% CI -0.1, 26.1, P < .001) and 17.4 (95% CI 5.0, 29.7, P = .007)."
+  },
+  {
+   "pmid": "38294813",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "-0.3",
+   "ci": [
+    "-2.3",
+    "1.7"
+   ],
+   "printed_p": "= .01",
+   "sentence": "In addition, there was a significant decrease in insomnia from baseline to postintervention in the SKY group (difference, -0.3 points; 95% CI, -2.3 to 1.7 points; P = .01)."
+  },
+  {
+   "pmid": "38289612",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-1.89",
+   "ci": [
+    "-4.27",
+    "-0.47"
+   ],
+   "printed_p": "= 0.11",
+   "sentence": "In the subgroup with reduced NPC, subjects reported a larger improvement in HIT score improvement with NL but was not statistically significant (mean difference, -1.89 points; 95% confidence interval, -4.27 to -0.47; P = 0.11)."
+  },
+  {
+   "pmid": "38008266",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "1.9",
+   "ci": [
+    "0.5",
+    "1.2"
+   ],
+   "printed_p": null,
+   "sentence": "They were also more likely to follow the recommendation if they had not already followed it (MD of 1.2, 95% CI 0.7-1.8%; P < 0.001) and share it with other people they know (MD of 1.9, 95% CI 0.5-1.2%; P < 0.001)."
+  },
+  {
+   "pmid": "37587734",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-28",
+   "ci": [
+    "-56",
+    "0.19"
+   ],
+   "printed_p": "= .033",
+   "sentence": "The need for both opioid and non-opioid analgesics in the postoperative period was significantly lower in the SSCNB group (36.0% vs. 0%; p = .002 and 44.0% vs. 16.0%; mean difference, -28%; 95% CI, -56 to 0.19; p = .033, respectively), while other secondary outcomes were not significantly different between the two groups."
+  },
+  {
+   "pmid": "38813852",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "-18.05",
+   "ci": [
+    "-17.17",
+    "-6.13"
+   ],
+   "printed_p": null,
+   "sentence": "The mean difference in XI scores was -18.05 (95% CI: -17.17, -6.13, p < 0.001), with a-49.77 ± 3.22% change (p < 0.001)."
+  },
+  {
+   "pmid": "38852600",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "6·0",
+   "ci": [
+    "0·2",
+    "11·7"
+   ],
+   "printed_p": "= 0·30",
+   "sentence": "In the intention-to-treat analysis, 54 (18·3%) of 295 participants required reoperation in the group assigned to receive no irrigation versus 37 (12·6%) of 294 in the group assigned to receive irrigation (difference of 6·0 percentage points, 95% CI 0·2-11·7; p=0·30; adjusted for study site)."
+  },
+  {
+   "pmid": "38531637",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "5",
+   "ci": [
+    "0",
+    "15"
+   ],
+   "printed_p": "= .001",
+   "sentence": "Prolonged PP was associated with longer time to successful extubation in survivors (13.00 [IQR 8.75-26.00] d vs 8.00 [IQR 5.00-10.25] d; difference, 5 [95% CI 0-15], P = .001)."
+  },
+  {
+   "pmid": "38795440",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "-0.32",
+   "ci": [
+    "-0.59",
+    "0.04"
+   ],
+   "printed_p": "= 0.025",
+   "sentence": "Compared with the control group, the symptoms of cough in the intervention group were significantly improved (F = 5.095, MD = -0.32, 95% CI, -0.59 to 0.04, P = 0.025), while expectoration (F = 0.626, MD = -0.11, 95% CI, -0.38 to 0.16, P = 0.430) and shortness of breath (F = 0.165, MD = -0.05, 95% CI, -0.27 to 0.18, P = 0.685) had no significant change."
+  },
+  {
+   "pmid": "37872023",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "-0.50",
+   "ci": [
+    "-3.93",
+    "-0.34"
+   ],
+   "printed_p": "= 0.043",
+   "sentence": "After 4 weeks of treatment, compared to the placebo group (n = 31), the purslane group (n = 31) had significantly lower physician-reported fissure scores (adjusted mean difference (adjMD): -0.50, 95 %CI -3.93 to -0.34, p = 0.043), participant-reported itching (adjMD -0.51, 95 %CI -2.32 to -0.31, p = 0.041), dryness (adjMD -1.46, 95 %CI -2.89 to -0.03, p = 0.045), and total itching, dryness and thi"
+  },
+  {
+   "pmid": "39133646",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "0.37",
+   "ci": [
+    "0.23",
+    "9.50"
+   ],
+   "printed_p": "< 0.001",
+   "sentence": "Participants in the VR condition had a greater increase in affect (mean change difference = 0.95, 95% confidence interval [CI] = 0.83-1.06, P < 0.001), arousal (mean change difference = 0.37, 95% CI = 0.23-9.50, P < 0.001)."
+  },
+  {
+   "pmid": "39217809",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.09",
+   "ci": [
+    "0.18",
+    "1.14"
+   ],
+   "printed_p": null,
+   "sentence": "In 96 weeks, in the per-protocol population, the ARR was 0.05 in the peginterferon beta-1a group versus 0.11 in the interferon beta-1a group, which does not reflect a statistically significant difference (p=0.09; 95 % CI, 0.18-1.14)."
+  },
+  {
+   "pmid": "39112892",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "11.1",
+   "ci": [
+    "0.8",
+    "21.5"
+   ],
+   "printed_p": "= 0.36",
+   "sentence": "The eMST-group reported greater improvements in emotion (difference = 11.1 (95% CI 0.8-21.5; p = 0.36) and participation (difference = 10.3 (95% CI 0.6-25.9); p = 0.41) subscales of QoL, and higher enjoyment during the sessions (difference = 1 (95% CI 0.3-1.5); p = 0.12)."
+  },
+  {
+   "pmid": "39112892",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "10.3",
+   "ci": [
+    "0.6",
+    "25.9"
+   ],
+   "printed_p": "= 0.41",
+   "sentence": "The eMST-group reported greater improvements in emotion (difference = 11.1 (95% CI 0.8-21.5; p = 0.36) and participation (difference = 10.3 (95% CI 0.6-25.9); p = 0.41) subscales of QoL, and higher enjoyment during the sessions (difference = 1 (95% CI 0.3-1.5); p = 0.12)."
+  },
+  {
+   "pmid": "39112892",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "1",
+   "ci": [
+    "0.3",
+    "1.5"
+   ],
+   "printed_p": "= 0.12",
+   "sentence": "The eMST-group reported greater improvements in emotion (difference = 11.1 (95% CI 0.8-21.5; p = 0.36) and participation (difference = 10.3 (95% CI 0.6-25.9); p = 0.41) subscales of QoL, and higher enjoyment during the sessions (difference = 1 (95% CI 0.3-1.5); p = 0.12)."
+  },
+  {
+   "pmid": "39060015",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "2.54",
+   "ci": [
+    "3.05",
+    "8.12"
+   ],
+   "printed_p": null,
+   "sentence": "At 7 h after an allergen challenge at week 9, sputum eosinophilia was significantly attenuated in the benralizumab group compared to placebo (least squares mean difference -5.81%, 95% CI -10.69- -0.94%; p=0.021); however, the LAR was not significantly different (least squares mean difference 2.54%, 95% CI 3.05-8.12%; p=0.363)."
+  },
+  {
+   "pmid": "39069635",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "1.29",
+   "ci": [
+    "4.57",
+    "5.70"
+   ],
+   "printed_p": null,
+   "sentence": "Women who viewed the evidence-based information about the AMH test had lower interest in having an AMH test (MD = 1.05, 95% CI = 0.83-1.30), less positive attitudes towards (MD = 1.29, 95% CI = 4.57-5.70), and higher knowledge about the test than women who viewed the control information (MD = 0.75, 95% CI = 0.71-0.82)."
+  },
+  {
+   "pmid": "38863305",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "0.58",
+   "ci": [
+    "-0.81",
+    "1.97"
+   ],
+   "printed_p": "= 0.021",
+   "sentence": "When correcting for this expectation, we found that women in the intervention group reported significantly higher scores, both in peak (adjusted MD 0.58 (95% CI -0.81, 1.97), P = 0.021) and overall (adjusted MD 0.43 (95% CI -0.84, 1.71), P = 0.013) pain, compared to the control group."
+  },
+  {
+   "pmid": "38863305",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "0.43",
+   "ci": [
+    "-0.84",
+    "1.71"
+   ],
+   "printed_p": "= 0.013",
+   "sentence": "When correcting for this expectation, we found that women in the intervention group reported significantly higher scores, both in peak (adjusted MD 0.58 (95% CI -0.81, 1.97), P = 0.021) and overall (adjusted MD 0.43 (95% CI -0.84, 1.71), P = 0.013) pain, compared to the control group."
+  },
+  {
+   "pmid": "39110461",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "0.12",
+   "ci": [
+    "0.08",
+    "0.48"
+   ],
+   "printed_p": "= .01",
+   "sentence": "Analysis of covariance found a significant main effect of feedback between intervention and control groups at time 2 (mean [SD] score, 3.26 [0.45] vs 3.14 [0.39]; difference, 0.12; 95% CI, 0.08-0.48; P = .01)."
+  },
+  {
+   "pmid": "38967866",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "11.5",
+   "ci": [
+    "38.3",
+    "61.3"
+   ],
+   "printed_p": null,
+   "sentence": "Mean baseline SALT score in tofacitinib group was 91.02 ± 10.21 and azathioprine group was 91.02 ± 10.63, which at 06 months follow-up improved to 14.1 ± 24.6 and 63.9 ± 33.9, respectively (difference, 11.5 points; 95% confidence interval, 38.3-61.3, p < 0.0001)."
+  },
+  {
+   "pmid": "39506539",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.016",
+   "ci": [
+    "0.03",
+    "0.29"
+   ],
+   "printed_p": null,
+   "sentence": "Of initially 62 SB patients, 14 (23%) experienced graft failure compared to 4 (7%) of the 58 DB patients (p = 0.015; difference 0.016 [95% CI: 0.03-0.29])."
+  },
+  {
+   "pmid": "39674711",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.196",
+   "ci": [
+    "0.340",
+    "0.731"
+   ],
+   "printed_p": null,
+   "sentence": "There were no statistically significant differences between intervention and control groups for pain severity at three months post-injury, (intervention mean (SD): 2.15 (2.49), control: 1.81 (2.10); adjusted difference 0.196, 95 % CI:0.340 to 0.731; p = 0.473); or Health-Related Quality of Life (intervention mean (SD): 0.715 (0.291), control: 0.704 (0.265); adjusted difference: 0.030; 95 % CI:0.03"
+  },
+  {
+   "pmid": "39674711",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.030",
+   "ci": [
+    "0.033",
+    "0.094"
+   ],
+   "printed_p": null,
+   "sentence": "There were no statistically significant differences between intervention and control groups for pain severity at three months post-injury, (intervention mean (SD): 2.15 (2.49), control: 1.81 (2.10); adjusted difference 0.196, 95 % CI:0.340 to 0.731; p = 0.473); or Health-Related Quality of Life (intervention mean (SD): 0.715 (0.291), control: 0.704 (0.265); adjusted difference: 0.030; 95 % CI:0.03"
+  },
+  {
+   "pmid": "39477009",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0.98",
+   "ci": [
+    "0.94",
+    "2.91"
+   ],
+   "printed_p": "= .31",
+   "sentence": "There were no between group differences immediately after intervention on HAI (mean difference [MD] 0.98 HAI units, 95% CI 0.94-2.91; P = .31)."
+  },
+  {
+   "pmid": "39711028",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "-0.3",
+   "ci": [
+    "-5.7",
+    "-0.2"
+   ],
+   "printed_p": "= .03",
+   "sentence": "At 12 months there were no significant differences between treatment conditions, except that EASE was associated with less reduction in depression (estimated mean difference -1.6, 95% CI -3.2 to -0.1; p=.03; effect size, -0.3), and a greater sense of school belonging (estimated mean difference -0.3, 95% CI -5.7 to -0.2; p=.03; effect size, 5.0)."
+  },
+  {
+   "pmid": "39375836",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "-173",
+   "ci": [
+    "-336",
+    "11"
+   ],
+   "printed_p": "= 0.03",
+   "sentence": "T1-relaxation time of the descending colon chyme was decreased during opium treatment, indicating dryer feces (difference: -173 ms [95% CI: -336 -11], p = 0.03)."
+  },
+  {
+   "pmid": "37905906",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "1.04",
+   "ci": [
+    "-1.90",
+    "-1.58"
+   ],
+   "printed_p": null,
+   "sentence": "In the FE group, a greater increase of the SNA angle was observed after expansion compared to the EDO group (MD = 1.04°, 95% CI = -1.90 to -1.58)."
+  },
+  {
+   "pmid": "39501291",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "0.36",
+   "ci": [
+    "0.03",
+    "0.7"
+   ],
+   "printed_p": "< .001",
+   "sentence": "Patients in the HBCAA group showed better gastrointestinal function with faster defecation (4.0 [3.6, 5.0] vs. 5.0 [4.0, 5.5] days; mean difference, 0.6 days; 95% CI, 0.26-0.94 days; P < .001) and semi-liquid diet initiation (8.0 [7.5, 8.0] vs. 8.0 [8.0, 8.8] days; mean difference, 0.36 days; 95% CI, 0.03-0.7 days; P < .001) and had lesser weight loss at postoperative day 5 than those in the contr"
+  },
+  {
+   "pmid": "39133505",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "8.4",
+   "ci": [
+    "0.9",
+    "5.8"
+   ],
+   "printed_p": null,
+   "sentence": "A higher proportion of infants cared for with ESC received exclusive breast milk (15.1% vs 6.7%; absolute difference, 8.4%; 95% CI, 0.9-5.8) or any breast milk (38.8% vs 27.4%; absolute difference, 11.4%; 95% CI, 0.2-23.1) and were directly breastfeeding at discharge (35.2% vs 19.5%; absolute difference, 15.7%; 95% CI, 4.1-27.3)."
+  },
+  {
+   "pmid": "25877360",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "2.9",
+   "ci": [
+    "2.7",
+    "12.3"
+   ],
+   "printed_p": "< 0.01",
+   "sentence": "After 4-week treatment, the U-FMA scores [mean difference of 13.2, 95% confidence interval (CI) 3.6 to 22.7, P<0.01], WMFT scores (mean difference of 2.9, 95% CI 2.7 to 12.3, P<0.01), and MBI scores (mean difference 16.1, 95% CI 3.8 to 9.4, P<0.05) were significantly increased in the experimental group as compared with the control group."
+  },
+  {
+   "pmid": "25877360",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "16.1",
+   "ci": [
+    "3.8",
+    "9.4"
+   ],
+   "printed_p": null,
+   "sentence": "After 4-week treatment, the U-FMA scores [mean difference of 13.2, 95% confidence interval (CI) 3.6 to 22.7, P<0.01], WMFT scores (mean difference of 2.9, 95% CI 2.7 to 12.3, P<0.01), and MBI scores (mean difference 16.1, 95% CI 3.8 to 9.4, P<0.05) were significantly increased in the experimental group as compared with the control group."
+  },
+  {
+   "pmid": "25138128",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "4.50",
+   "ci": [
+    "0.63",
+    "0.82"
+   ],
+   "printed_p": null,
+   "sentence": "Results The vaginal route reduced the mean induction-vaginal delivery interval by four-and-half hours (20.7 ± 12.1 vs. 16.2 ± 10.4; mean difference: 4.50, 95% CI 0.63-0.82; p = 0.02)."
+  },
+  {
+   "pmid": "25138128",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "1.20",
+   "ci": [
+    "0.15",
+    "0.23"
+   ],
+   "printed_p": null,
+   "sentence": "Furthermore, the mean dose of misoprostol required to achieve induction of labor and the mean duration of oxytocin augmentation when indicated were significantly less in the vaginal group than in the oral group (2.5 ± 1.3 vs. 2.0 ± 1.1; mean difference: 0.50, 95% CI 0.10-0.90; p = 0.02 and 4.6 ± 3.2 vs. 3.4 ± 3.1; mean difference: 1.20, 95% CI 0.15-0.23; p = 0.03 respectively)."
+  },
+  {
+   "pmid": "26355172",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "27.5",
+   "ci": [
+    "3.3",
+    "51.7"
+   ],
+   "printed_p": "< 0.0001",
+   "sentence": "Postoperatively, patients in the 1-drill group vs patients in the multiple-drill group reported statistically significant differences for pain level (difference 27.5, 95% CI 3.3; 51.7, P < 0.0001), number of days in which the swelling persisted (difference 3.4, 95% CI 2.4; 4.4, P < 0.0001) and the number of analgesic drugs taken (difference 2.8, 95% CI 1.4; 4.2, P < 0.0001) CONCLUSIONS: Within the"
+  },
+  {
+   "pmid": "26051565",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "45.14",
+   "ci": [
+    "6.10",
+    "14.98"
+   ],
+   "printed_p": null,
+   "sentence": "Furthermore, difference between mean changes was significant (mean difference: 45.14; 95% CI: 6.10-14.98)."
+  },
+  {
+   "pmid": "28002035",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "0.7",
+   "ci": [
+    "-0.4",
+    "2.1"
+   ],
+   "printed_p": "= 0.023",
+   "sentence": "Also, the reduction in serum creatinine level was more in the omega-3 group than in the control group (MD, 0.7 mg/dL; 95% CI, -0.4 to 2.1 p = 0.023)."
+  },
+  {
+   "pmid": "27871699",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-87.94",
+   "ci": [
+    "-223.75",
+    "47.86"
+   ],
+   "printed_p": "= 0.008",
+   "sentence": "The area of demineralization decreased in the RME group (-17.50 mm 2 ), which was a significantly greater decrease than in the control group (0.00) (effect size, -2.63; mean difference, -87.94; 95% confidence interval, -223.75-47.86; P = 0.008)."
+  },
+  {
+   "pmid": "27138896",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "29.1",
+   "ci": [
+    "1.8",
+    "7.2"
+   ],
+   "printed_p": null,
+   "sentence": "There mean (standard deviation) time to complete lung collapse of the operative lung was significantly faster using the BB compared with using the DL-ETT [7.5 (3.8) min vs 36.6 (29.1) min, respectively; mean difference, 29.1 min; 95% confidence interval, 1.8 to 7.2; P Conclusion The time and quality of lung collapse during OLV for VATS was significantly better when using a BB than when using a lef"
+  },
+  {
+   "pmid": "26864193",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "16",
+   "ci": [
+    "12",
+    "43"
+   ],
+   "printed_p": "= 0.27",
+   "sentence": "Results On average, patients receiving IP ketorolac required less (mean difference, 29 μg; 95% confidence interval [CI], 2 to 56; P = 0.04) fentanyl than patients in the Control group but a similar (mean difference, 16 μg; 95% CI, 12 to 43; P = 0.27) amount compared to patients in the IV group."
+  },
+  {
+   "pmid": "27861718",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.37",
+   "ci": [
+    "0.56",
+    "1.31"
+   ],
+   "printed_p": null,
+   "sentence": "Results Mean percentage of delirium-free days (intervention: 64.8%, 95% confidence interval (CI) = 59.6-70.1; control: 68.7%, 95% CI = 63.9-73.6; P = .37, Wilcoxon rank sum test) and delirium severity (range 0-39: intervention: 10.77, 95% CI = 10.10-11.45; control: 11.15, 95% CI = 10.50-11.80; difference 0.37, 95% CI = 0.56-1.31, P = .43) were similar in both groups."
+  },
+  {
+   "pmid": "26319220",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "3.4",
+   "ci": [
+    "6.9",
+    "10.6"
+   ],
+   "printed_p": null,
+   "sentence": "Results The overall incidence of SSIs was 2.9 % in the sennoside group (n = 68) and 6.3 % in the PEG group (n = 63) with a difference of 3.4 % (95 % confidence interval 6.9-10.6 %)."
+  },
+  {
+   "pmid": "27306628",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "-488.0",
+   "ci": [
+    "-2",
+    "443.4"
+   ],
+   "printed_p": null,
+   "sentence": "MTX did not reduce the month 4-12 prednisone AUDTC when compared to placebo (difference MTX - placebo: -488.0 mg, 95% confidence interval -2,443.4 to 1,467.3, p = 0.26); however, the average daily prednisone dose decreased in both groups."
+  },
+  {
+   "pmid": "27687471",
+   "kind": "verdict",
+   "name": "absolute risk difference",
+   "estimate": "-0.20",
+   "ci": [
+    "-2.61",
+    "2.21"
+   ],
+   "printed_p": "= 0.037",
+   "sentence": "The overall rate of SSI in the per-protocol analysis was 6.12% (47 of 768) in the clipped group and 6.32% (49 of 775) in the not-clipped group (absolute risk difference -0.20%; 95% CI -2.61% to 2.21%), p = 0.037)."
+  },
+  {
+   "pmid": "27209341",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "29.6",
+   "ci": [
+    "7.1",
+    "49.1"
+   ],
+   "printed_p": "= 0.062",
+   "sentence": "In the per protocol analysis, the ongoing pregnancy rate per patient following hysteroscopic proximal occlusion by intratubal devices was 9/27 (33.3%) compared with 19/32 (59.4%) following laparoscopic salpingectomy (P = 0.067) (absolute difference: 29.6%; 95% CI: 7.1 to 49.1, RR: 0.47; 95% CI: 0.27-0.83, P = 0.062)."
+  },
+  {
+   "pmid": "29131084",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "7.2",
+   "ci": [
+    "2.1",
+    "2.3"
+   ],
+   "printed_p": null,
+   "sentence": "Effects persisted 6 months later, with a mean difference of 7.2 (95% CI 2.1-2.3, p = 0.006) and a standardized effect size of 0.56 (95% CI 0.16-0.96)."
+  },
+  {
+   "pmid": "28936608",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "2.5",
+   "ci": [
+    "1.2",
+    "2.3"
+   ],
+   "printed_p": null,
+   "sentence": "The mean (SD) current required to elicit a motor response at baseline was 4.2 (2.6) mA in the 0.1-msec group and 1.7 (1.1) mA in the 1-msec group (mean difference, 2.5; 95% CI, 1.2 to 2.3; P Conclusions The motor response pattern following the stimulation of a lumbar epidural catheter with pulse widths of 0.1 msec or 1 msec is similar and typically unilateral."
+  },
+  {
+   "pmid": "27791246",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "0.035",
+   "ci": [
+    "-0.007",
+    "0078"
+   ],
+   "printed_p": "= 0.097",
+   "sentence": "The strongest increase was seen in the 2.2 mm group (mean difference 0.031 [95% confidence interval (CI) 0.006-0.056], p = 0.014) and in the 1.4 mm group (mean difference 0.035 [95% CI -0.007 to 0078], p = 0.097)."
+  },
+  {
+   "pmid": "27530996",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "-1.23",
+   "ci": [
+    "-3.81",
+    "-1.35"
+   ],
+   "printed_p": null,
+   "sentence": "Results At 10-week follow-up, there were no significant differences in HADS score for the 181 patients in control epoch and 177 in intervention epoch (adjusted difference -1.23, 95 % CI -3.81--1.35, p = 0.35)."
+  },
+  {
+   "pmid": "28727581",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "3.20",
+   "ci": [
+    "3.22",
+    "9.72"
+   ],
+   "printed_p": null,
+   "sentence": "The overall incidence of postoperative delirium in any of the first 3 days was 22.4% (24.0% in the gabapentin and 20.8% in the placebo groups; the difference was 3.20%; 95% CI, 3.22% to 9.72%; P = 0.30)."
+  },
+  {
+   "pmid": "28555207",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "1.1",
+   "ci": [
+    "0.04",
+    "2.96"
+   ],
+   "printed_p": "= 0.422",
+   "sentence": "Six months after implant placement, mean ISQ value was 78.8 ± 2.8 for group A and 79.9 ± 3.6 for group B, showing no statistically significant difference between groups (difference 1.1; 95% CI: 0.04 to 2.96; P = 0.422)."
+  },
+  {
+   "pmid": "28555208",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0.66",
+   "ci": [
+    "-0.02",
+    "1.34"
+   ],
+   "printed_p": "= 0.024",
+   "sentence": "On average OPI and TPI lost 1.34 mm and 0.67 mm of marginal bone, respectively, the difference between groups being statistically significant (mean difference, 0.66 mm; 95% CI -0.02 to 1.34; P = 0.024) in favour of TPI implants."
+  },
+  {
+   "pmid": "27544575",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "0.75",
+   "ci": [
+    "0.1",
+    "3.2"
+   ],
+   "printed_p": "= 0.7",
+   "sentence": "There were no statistically significant differences between groups A and B regarding overall lymphocele incidence (47% vs 48%; difference -0.91%, 95% confidence interval [CI] -2.6 to 0.7; p=0.9) and the rate of clinically significant lymphocele [5% vs 4%; difference 0.75%, 95% CI, 0.1-3.2; p=0.7]."
+  },
+  {
+   "pmid": "28632865",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "4.4",
+   "ci": [
+    "1.0",
+    "9.0"
+   ],
+   "printed_p": "= .13",
+   "sentence": "Response rates were not significantly different, 59.6% vs 55.2% for cetuximab and bevacizumab, respectively (difference, 4.4%, 95% CI, 1.0%-9.0%, P = .13)."
+  },
+  {
+   "pmid": "29958570",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0·26",
+   "ci": [
+    "-0·28",
+    "0·80"
+   ],
+   "printed_p": "= 0·009",
+   "sentence": "Mean baseline haemoglobin concentration was slightly higher in the oral group than in the intravenous group (12·71 g/dL [SD 1·06] vs 12·24 g/L [1·09]), and by post-operative day 56 was 12·54 g/dL (SD 1·18) and 12·80 g/dL (0·81), respectively (mean difference of 0·26 g/dL, 95% CI -0·28 to 0·80; p=0·009 in favour of the intravenous group)."
+  },
+  {
+   "pmid": "29316895",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0.57",
+   "ci": [
+    "-0.013",
+    "1.16"
+   ],
+   "printed_p": "= 0.027",
+   "sentence": "After 2 weeks of the intervention, patients in the group receiving standard therapy with RSS showed significantly better restored sensorimotor function than the control group (standardized mean difference 0.57; 95% CI -0.013-1.16; p = 0.027) RSS treatment was superior in all domains tested."
+  },
+  {
+   "pmid": "30168581",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "1.85",
+   "ci": [
+    "0.46",
+    "3.24"
+   ],
+   "printed_p": "= 0.087",
+   "sentence": "There were no significant differences between the TCP and SCP on (i) examination results (marginal mean difference 1.85, 95% CI: 0.46-3.24; P = 0.087); (ii) unit score (mean (SD) SCP: 71.9 (8.8), TCP: 70.34 (9.1); P = 0.066); or (iii) placement fail rate, assessed using the Student Practice Evaluation Form-Revised (100% passed both groups)."
+  },
+  {
+   "pmid": "29340679",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "-7.18",
+   "ci": [
+    "-14.30",
+    "-0.06"
+   ],
+   "printed_p": "= .22",
+   "sentence": "Excess BMI loss was not significantly different at 5 years: for sleeve gastrectomy, 61.1%, vs Roux-en-Y gastric bypass, 68.3% (absolute difference, -7.18%; 95% CI, -14.30% to -0.06%; P = .22 after adjustment for multiple comparisons)."
+  },
+  {
+   "pmid": "29498534",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "0.02",
+   "ci": [
+    "0.42",
+    "1.92"
+   ],
+   "printed_p": null,
+   "sentence": "The average Leeds Sleep Evaluation Questionnaire score was similar (mean difference, 0.02; 95% confidence interval, 0.42-1.92) between the 34 dexmedetomidine (average seven assessments per patient) and 30 placebo (six per patient) group patients able to provide one or more assessments."
+  },
+  {
+   "pmid": "29948418",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "2",
+   "ci": [
+    "1",
+    "4"
+   ],
+   "printed_p": "= 0.2",
+   "sentence": "In the TachoSil ® group, length of stay was longer (MD 1 day, 95% CI 0.3-1.7, p = 0.009), and improvement of pain was faster, although the latter difference was not significant [2 days (95% CI 1-4) vs. 5.5 days (95% CI 2-11); p = 0.2]."
+  },
+  {
+   "pmid": "29411314",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "139",
+   "ci": [
+    "65",
+    "213"
+   ],
+   "printed_p": "= .08",
+   "sentence": "Participants receiving TCE increased their weekly aerobic exercise by 218 min compared to 93 min in the SDE group [mean-adjusted between-group difference (MBGD adj ) = 139, 95%CI = 65 to 213, p adj = 3.7, 95%CI = - 0.4 to 7.9, p = .08, d = 0.42) and mental health component (MBGD adj = 3.6, 95%CI = - 0.8 to 8.1, p = .10, d = 0.35) subscales."
+  },
+  {
+   "pmid": "30002395",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "-25.98",
+   "ci": [
+    "-41.64",
+    "-10.33"
+   ],
+   "printed_p": "< 0.0001",
+   "sentence": "At 6 weeks, mean [SD] last 24h-pain decreased significantly more in Brace group versus Control group (-41.35 [3.37] vs -15.37 [3.23], difference -25.98, 95% CI -41.64 to -10.33, P < 0.0001)."
+  },
+  {
+   "pmid": "29742655",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "-0.2",
+   "ci": [
+    "-0.5",
+    "-0.2"
+   ],
+   "printed_p": "= .36",
+   "sentence": "Gabapentin also did not improve pain over placebo for sexual intercourse pain (adjusted mean 3.9, 95% CI 2.4-5.3 vs 4.0, 95% CI 2.5-5.4, difference -0.1, 95% CI -0.9 to 0.6; P=.76) and daily pain (adjusted mean 2.7, 95% CI 1.8-3.6 vs 2.9, 95% CI 2.0-3.8, difference -0.2, 95% CI -0.5 to -0.2; P=.36)."
+  },
+  {
+   "pmid": "31058475",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.00",
+   "ci": [
+    "-12.59",
+    "-3.34"
+   ],
+   "printed_p": null,
+   "sentence": "Results The CERB group significantly improved efficiency in pinch force output during the PHUA test by reducing the percentage of maximum pinch strength (change from 34.5±11.66 to 30.7±10.16%, P=0.001), and there was a statistically significant between-group difference (P=0.00, 95% CI: -12.59 to -3.34, F=9.42)."
+  },
+  {
+   "pmid": "31781699",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "13",
+   "ci": [
+    "3.4",
+    "27.7"
+   ],
+   "printed_p": "= 0.453",
+   "sentence": "The difference in the rate of complications between the two interventions was not statistically significant at 3 years (difference = 13%; 95% CI 3.4% to 27.7%; P = 0.453)."
+  },
+  {
+   "pmid": "31090751",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "0.27",
+   "ci": [
+    "0.15",
+    "0.38"
+   ],
+   "printed_p": "= 0.60",
+   "sentence": "No statistically significant differences were detected between the two groups, either for the bone augmentation data (difference: 0.27 mm; 95% CI: 0.15-0.38; P = 0.60) or for the bone width values (difference: 0.02 mm; 95% CI: 0.07-0.11; P = 0.67)."
+  },
+  {
+   "pmid": "31090751",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.02",
+   "ci": [
+    "0.07",
+    "0.11"
+   ],
+   "printed_p": null,
+   "sentence": "No statistically significant differences were detected between the two groups, either for the bone augmentation data (difference: 0.27 mm; 95% CI: 0.15-0.38; P = 0.60) or for the bone width values (difference: 0.02 mm; 95% CI: 0.07-0.11; P = 0.67)."
+  },
+  {
+   "pmid": "30873906",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "4.19",
+   "ci": [
+    "-0.24",
+    "8.63"
+   ],
+   "printed_p": "= 0.031",
+   "sentence": "They also appeared to have higher levels of preparation for decision making (difference, 4.19; 95% CI, -0.24 to 8.63 on a 100-point scale; P = 0.031)."
+  },
+  {
+   "pmid": "31543474",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "0·95",
+   "ci": [
+    "0·85",
+    "1·07"
+   ],
+   "printed_p": "= 0·41",
+   "sentence": "The mean 6-week PHQ-9 score was 7·98 (SD 5·63) in the sertraline group and 8·76 (5·86) in the placebo group (adjusted proportional difference 0·95, 95% CI 0·85-1·07; p=0·41)."
+  },
+  {
+   "pmid": "30366945",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "2",
+   "ci": [
+    "25",
+    "28"
+   ],
+   "printed_p": null,
+   "sentence": "At 3 months postintervention, 12/27 patients (44%; 95% CI 26% to 63%) in the LDRT vs 12/28 patients (43%; 95% CI 25% to 61%) in the sham group responded; difference 2% (95% CI 25% to 28%), OR adjusted for the stratifying variable was 1.1 (95% CI 0.4 to 3.2)."
+  },
+  {
+   "pmid": "31456562",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "9.69",
+   "ci": [
+    "0.09",
+    "24.86"
+   ],
+   "printed_p": "= 0.335",
+   "sentence": "For the primary outcomes at 12 months, there were no significant benefits over SSPT of exercise [QUALEFFO-41, difference -0.23 points, 95% confidence interval (CI) -3.20 to 1.59 points; p = 1.000; and TLS test, difference 5.77 seconds, 95% CI -4.85 to 20.46 seconds; p = 0.437] or of manual therapy (QUALEFFO-41, difference 1.35 points, 95% CI -1.76 to 2.93 points; p = 0.744; TLS test, difference 9."
+  },
+  {
+   "pmid": "30182376",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "0.23",
+   "ci": [
+    "0.35",
+    "0.56"
+   ],
+   "printed_p": null,
+   "sentence": "At 12 months of age, the ICFI mean (MD = 0.23; 95% CI = 0.35-0.56) and the prevalence of children who met the recommendation for dietary diversity (RR = 1.11; 95% CI = 1.01-1.22) and meal frequency (RR = 4.68; 95% CI = 1.34-16.36) were higher in the intervention group, although only among children who had more than seven follow-up appointments during the first year of life."
+  },
+  {
+   "pmid": "31081504",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.06",
+   "ci": [
+    "0.30",
+    "0.41"
+   ],
+   "printed_p": null,
+   "sentence": "There was no between-group difference in the Tinetti balance test score, with a baseline mean of 14.7 (SD 1.8) in both groups, and 15.2 (1.3) at 3 months in the intervention group compared to 15.3 (1.7) in controls; the between-group difference was 0.06 (95% CI 0.30-0.41)."
+  },
+  {
+   "pmid": "31162569",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "0.74",
+   "ci": [
+    "0.04",
+    "1.78"
+   ],
+   "printed_p": "= .006",
+   "sentence": "The absolute difference in fall incidence was 0.74 (95% CI, 0.04-1.78; P = .006) falls per person-year and the incident rate ratio was 0.64 (95% CI, 0.46-0.90; P = .009)."
+  },
+  {
+   "pmid": "30777080",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "0.51",
+   "ci": [
+    "0.16",
+    "1.58"
+   ],
+   "printed_p": "= 0.24",
+   "sentence": "There were no significant differences in the proportion of services implementing all six practices at 12 months (mean difference 0.51; 95% CI 0.16 to 1.58; p = 0.24)."
+  },
+  {
+   "pmid": "30737889",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "2.7",
+   "ci": [
+    "0.4",
+    "5.9"
+   ],
+   "printed_p": "= 0.103",
+   "sentence": "SBP decreased at week 6 in acupuncture group vs sham acupuncture vs waiting-list group (7.2 ± 11.0 mm Hg vs 4.1 ± 11.5 mm Hg vs 4.1 ± 13.2 mm Hg); acupuncture was not superior to sham acupuncture (mean difference 2.7 mm Hg, 95% CI 0.4 to 5.9, adjusted P = 0.103) or waiting-list control (2.9 mm Hg, 95% CI -0.2 to 6.0, adjusted P = 0.078)."
+  },
+  {
+   "pmid": "30475232",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "5.2",
+   "ci": [
+    "3.1",
+    "13.6"
+   ],
+   "printed_p": "= 0.109",
+   "sentence": "A 5-mg dose of amisulpride did not show a significant benefit (80 of 237, 33.8%); the difference from placebo was 5.2% (95% CI, 3.1 to 13.6; odds ratio, 1.24; P = 0.109)."
+  },
+  {
+   "pmid": "30866856",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "- 0.01",
+   "ci": [
+    "- 0.68",
+    "- 0.66"
+   ],
+   "printed_p": null,
+   "sentence": "Methods Patients of either gender (aged 18-65 years) with ESRD undergoing dialysis who had hemoglobin (Hb) levels Results In the intention-to-treat population (n = 126), the between group difference in mean Hb change was - 0.01 g/dL (95% CI - 0.68 to - 0.66, p = 0.97)."
+  },
+  {
+   "pmid": "31914834",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-0.057",
+   "ci": [
+    "-0.185",
+    "0.070"
+   ],
+   "printed_p": "= .018",
+   "sentence": "Intention-to-treat analysis indicated that serum T ( p = .022) and AD ( p = .05) levels modestly but significantly decreased after 6-month daidzein treatment in comparison with placebo, with a mean difference of -0.057 nmol/L (95%CI: -0.185 to 0.070, p = .018) and -0.118 ng/mL (95%CI: -0.240-0.004, p = .045), respectively."
+  },
+  {
+   "pmid": "31959549",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "11.5",
+   "ci": [
+    "9.03",
+    "16.1"
+   ],
+   "printed_p": "= 0.735",
+   "sentence": "Results and limitations There were no differences in the recurrence-free time between treatment groups, a difference of 12.2 mo (95% confidence interval [CI], 11.1-17.6) for TUR, and a difference of 11.5 mo (95% CI, 9.03-16.1; p=0.735) for TUC."
+  },
+  {
+   "pmid": "33006190",
+   "kind": "pci",
+   "name": "mean difference",
+   "estimate": "-0.49",
+   "ci": [
+    "-0.89",
+    "-0.08"
+   ],
+   "printed_p": "< 0.001",
+   "sentence": "IL-6 receptor blockade attenuated the increase of NK cells by 53% (mean difference -0.49 (95% CI: -0.89 to -0.08) × 10 9 cells L -1 , P 9 cells L -1 , P < 0.001) induced by an acute bout of exercises."
+  },
+  {
+   "pmid": "31432562",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "-147",
+   "ci": [
+    "-284",
+    "10"
+   ],
+   "printed_p": "= 0.035",
+   "sentence": "The cost per morbidity-free neonate was significantly lower in the pessary group compared with that in the progesterone group (2492 vs 2639 €; absolute difference, -147 € (95% CI, -284 to 10 €), P = 0.035)."
+  },
+  {
+   "pmid": "32600140",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "1.4",
+   "ci": [
+    "0.7",
+    "1.9"
+   ],
+   "printed_p": "= 0.781",
+   "sentence": "Regarding SF-12 scores at 12 months follow-up, there was no significant difference at any point from injury until 12 months (mean difference 1.4; 95% CI 0.7 to 1.9; p = 0.781)."
+  },
+  {
+   "pmid": "31790979",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "-0.49",
+   "ci": [
+    "-1.61",
+    "-0.64"
+   ],
+   "printed_p": null,
+   "sentence": "There was no clear evidence that N-back (MD -0.25, 95% CI: -1.45 to 0.94), delay discounting (MD 0.01, 95% CI: -0.002 to 0.004) or dot probe performance (MD -0.49, 95% CI: -1.61 to -0.64) were sensitive to NRT."
+  },
+  {
+   "pmid": "32569284",
+   "kind": "inside",
+   "name": "SMD",
+   "estimate": "0.63",
+   "ci": [
+    "0.65",
+    "1.91"
+   ],
+   "printed_p": null,
+   "sentence": "Moderate effects were observed in Body Function measures (active wrist extension: SMD = 1.82, 95%CI = 0.85-2.78; Grip Strength: SMD = 0.63, 95%CI = 0.65-1.91; Box and Blocks: Hedge's g = 0.58, 95%CI = -0.11-1.27) and small-moderate effects in Activities and Participation measures (AHA: Hedge's g = 0.29, 95%CI = -0.39-0.97, COPM: r = 0.60, 95%CI = 0.13-0.82, SEAS: r = 0.24, 95%CI = -0.25-0.61)."
+  },
+  {
+   "pmid": "32078683",
+   "kind": "inside",
+   "name": "risk difference",
+   "estimate": "0.0",
+   "ci": [
+    "-8.9",
+    "-8.9"
+   ],
+   "printed_p": null,
+   "sentence": "The number of participants with greater than 50% reperfusion of the previously occluded vascular territory was 29 of 150 (19.3%) in the 0.40 mg/kg group vs 29 of 150 (19.3%) in the 0.25 mg/kg group (unadjusted risk difference, 0.0% [95% CI, -8.9% to -8.9%]; adjusted risk ratio, 1.03 [95% CI, 0.66-1.61]; P = .89)."
+  },
+  {
+   "pmid": "32903262",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "-755",
+   "ci": [
+    "-1",
+    "010"
+   ],
+   "printed_p": null,
+   "sentence": "We observed higher EPC levels (group difference: 1.64%; 95% CI: 0.79-2.13, p = 0.028) and lower EMPs (group difference: -755 EMPs/μl; 95% CI: -1,010 to -567, p = 0.015) after the Mediterranean diet compared with the low-fat diet in all patients."
+  },
+  {
+   "pmid": "31726034",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "0.34",
+   "ci": [
+    "-12.94",
+    "13.63"
+   ],
+   "printed_p": "= 0.064",
+   "sentence": "Results At day 14, 32 of 96 EGP-437 subjects (33.3%) and 32 of 97 PA 1% subjects (33.0%) had an AC cell count of zero (difference, 0.34; 95% CI, -12.94 to 13.63; P = 0.064)."
+  },
+  {
+   "pmid": "32804268",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-.31",
+   "ci": [
+    "-7.36",
+    "0.72"
+   ],
+   "printed_p": "= 0.02",
+   "sentence": "Patients in the PRM group had a lower incidence of subdiaphragmatic gas present in the chest X-ray (29% vs 55%) p = 0.01 and less volume of residual pneumoperitoneum (mean difference -.31(95%CI -7.36, 0.72), p = 0.02)."
+  },
+  {
+   "pmid": "33728346",
+   "kind": "inside",
+   "name": "differences",
+   "estimate": "6",
+   "ci": [
+    "36.2",
+    "64.6"
+   ],
+   "printed_p": null,
+   "sentence": "Between the two groups, differences were observed at the 6MWD (95% CI: 36.2-64.6, η 2 = 0.72), STS 10 rep (95% CI: 6.6-2.2, η 2 = 0.4), STS 20 rep (95% CI: 10.8-2.4, η 2 = 0.34), lower limb strength (95% CI: 7.2-3.6, η 2 = 0.38), cardiopulmonary exercise time (95% CI: 0.1-3.3, η 2 = 0.2), and VCO 2 (95% CI: 0.1-0.5, η 2 = 0.2)."
+  },
+  {
+   "pmid": "33637926",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.87",
+   "ci": [
+    "1.6",
+    "3.3"
+   ],
+   "printed_p": null,
+   "sentence": "There was no statistically significant or clinically important difference in gingival bleeding between the three S&P groups (for example, six-monthly versus none: difference 0.87% sites, 95% CI: 1.6 to 3.3, p = 0.48) or between personalised or usual OHA groups (difference -2.5% sites, -95%CI: -8.3 to 3.3, p = 0.39), or oral hygiene self-efficacy (cognitive impact) between either group (for example"
+  },
+  {
+   "pmid": "32929783",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "-25.25",
+   "ci": [
+    "-43.77",
+    "6.73"
+   ],
+   "printed_p": "= 0.008",
+   "sentence": "Results Opioid consumption at 12 months was lower compared to baseline (53.94 vs. 79.19 MME, MD -25.25, 95% CI -43.77 to 6.73, p = 0.008)."
+  },
+  {
+   "pmid": "33893064",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "4.0",
+   "ci": [
+    "-0.79",
+    "5.5"
+   ],
+   "printed_p": "= 0.000",
+   "sentence": "There was a statistically significant difference favoring the RSC group for final overjet (mean difference [MD] = 1.068, 95% confidence interval [CI] -0.67 to 1.47, P = 0.000) and final PAR (MD = 4.0, 95% CI -0.79 to 5.5, P = 0.000)."
+  },
+  {
+   "pmid": "34363766",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "-2·8",
+   "ci": [
+    "-8·6",
+    "-3·1"
+   ],
+   "printed_p": null,
+   "sentence": "Correct management occurred in 120 (27·0%) of 444 standardised patients in the intervention group and in 136 (29·2%) of 465 in the control group (absolute difference -2·8 percentage points, 95% CI -8·6 to -3·1; p=0·36)."
+  },
+  {
+   "pmid": "34078307",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "- 1.3",
+   "ci": [
+    "- 4.7",
+    "- 1.5"
+   ],
+   "printed_p": null,
+   "sentence": "The post-intervention mean score of stress (adjusted mean difference = - 1.7, 95% confidence interval: - 3.2 to - 0.3, P = 0.018) and depression (adjusted mean difference = - 1.3, 95% confidence interval: - 4.7 to - 1.5, P Conclusion Hope-oriented group counseling was effective in reducing stress and depression and improving QoL in women with failed IVF cycles."
+  },
+  {
+   "pmid": "33988519",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "-0.36",
+   "ci": [
+    "-0.66",
+    "-0.50"
+   ],
+   "printed_p": null,
+   "sentence": "For the secondary outcomes, there were no statistically significant differences in adjusted analyses except in 1 self-efficacy domain (Total plus), where the Txt2Prevent group had lower scores (mean difference -0.36, 95% CI -0.66 to -0.50, P=.03)."
+  },
+  {
+   "pmid": "34665203",
+   "kind": "inside",
+   "name": "risk difference",
+   "estimate": "3.0",
+   "ci": [
+    "7.2",
+    "13.2"
+   ],
+   "printed_p": null,
+   "sentence": "The primary outcome occurred in 89 of 184 patients (48.4%) in the 31 °C group and in 83 of 183 patients (45.4%) in the 34 °C group (risk difference, 3.0% [95% CI, 7.2%-13.2%]; relative risk, 1.07 [95% CI, 0.86-1.33]; P = .56)."
+  },
+  {
+   "pmid": "33399541",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "2.36",
+   "ci": [
+    "-0.14",
+    "4.87"
+   ],
+   "printed_p": "= .03",
+   "sentence": "Diastolic blood pressure was significantly higher after AT than after UC (MD 5.62 mm Hg, 95% CI 1.30 to 9.94 mm Hg; P=.01), and TTSTS was significantly slower on TC compared with UC (MD 2.36 seconds, 95% CI -0.14 to 4.87 seconds; P=.03)."
+  },
+  {
+   "pmid": "33245858",
+   "kind": "pci",
+   "name": "difference",
+   "estimate": "-2·4",
+   "ci": [
+    "-4·8",
+    "-0·03"
+   ],
+   "printed_p": "= 0·002",
+   "sentence": "Participants in the prednisone group had a mean of 7·1 (SD 6·5) attacks within the first week compared with 9·5 (6·0) attacks in the placebo group (difference -2·4 attacks, 95% CI -4·8 to -0·03; p=0·002)."
+  },
+  {
+   "pmid": "33475222",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-0.45",
+   "ci": [
+    "-0.63",
+    "- 0.26"
+   ],
+   "printed_p": "= 0.6287",
+   "sentence": "After 24 weeks, lixisenatide reduced HbA1c in both ethnic groups, with no statistically significant difference between the two groups (Asian patients least squares mean difference -0.49, 95% confidence interval -0.68 to - 0.30 and white patients least squares mean difference -0.45, 95% confidence interval -0.63 to - 0.26; P = 0.6287)."
+  },
+  {
+   "pmid": "32853709",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "4",
+   "ci": [
+    "7",
+    "15"
+   ],
+   "printed_p": null,
+   "sentence": "Fifteen of 75 patients (20%) developed grade 3 reactions in the test arm compared with 18 of 75 patients (24%) in the control arm (absolute difference, 4%; 95% confidence interval, 7%-15%; P = .554)."
+  },
+  {
+   "pmid": "35445808",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "-1.1",
+   "ci": [
+    "-12.3",
+    "-7.4"
+   ],
+   "printed_p": null,
+   "sentence": "The mean OAB-V8 was 15.7 at baseline and 5.6 at 3 months for the combined treatment arm and 16.6 and 7.6 at 3 months for the CPAP group only (mean baseline-adjusted between-group difference -1.1 [95% CI, -12.3 to -7.4]; p Conclusions In this study, combined use of tolterodine with CPAP provides beneficial effects to CPAP treatment only regarding OAB symptoms."
+  },
+  {
+   "pmid": "32496448",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "37.6",
+   "ci": [
+    "6.2",
+    "37.4"
+   ],
+   "printed_p": null,
+   "sentence": "Compared with standard therapy, GDT reduced the duration of intraoperative hypovolemia (mean difference 37.6 [95% confidence interval, 6.2-37.4] min, P=0.006) and low cardiac index (mean difference 30.7 [95% confidence interval, 9.5-56.9] min, P=0.035)."
+  },
+  {
+   "pmid": "36364828",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "−0.96",
+   "ci": [
+    "−1.52",
+    "0.39"
+   ],
+   "printed_p": "= 0.001",
+   "sentence": "Visceral adipose tissue significantly decreased in the intervention group compared to the placebo group at 60 days −0.69 g (95% CI: −1.09, 0.29) vs. 0.27 g (95% CI: −0.11, 0.65), groups difference −0.96 (95% CI: −1.52, 0.39, p = 0.001)."
+  },
+  {
+   "pmid": "36302132",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "5483.87",
+   "ci": [
+    "-526.34",
+    "1"
+   ],
+   "printed_p": null,
+   "sentence": "Similarly, patients dissatisfied with function incurred a mean cost of $19 007.70, compared to $13 523.83 for those who were satisfied (mean difference $5483.87, 95% CI -526.34 to 11 494.10)."
+  },
+  {
+   "pmid": "34520841",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "0.06",
+   "ci": [
+    "0.01",
+    "0.11"
+   ],
+   "printed_p": "= 0.69",
+   "sentence": "Horizontal and vertical metamorphopsia scores were similar in patients with and without ORFs: horizontal, 0.35 ± 0.12 vs. 0.29 ± 0.07 (difference = 0.06, 95% CI = 0.01-0.11, P = 0.69); vertical, 0.25 ± 0.07 vs. 0.29 ± 0.07 (difference = 0.04, 95% CI = 0-0.08, P = 0.60)."
+  },
+  {
+   "pmid": "34951474",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "26.3",
+   "ci": [
+    "17",
+    "25"
+   ],
+   "printed_p": null,
+   "sentence": "Results Those in the intervention group (n = 23) reported statistically significant improvements in self-reported scores immediately following intervention: the Clinical Outcomes in Routine Evaluation (CORE) scores (CORE global distress mean difference [MD] = 45.0, 95% confidence interval [CI] 31-60) (CORE subjective well-being MD = 5.9, 95% CI 3.5-8.3) (CORE functioning MD = 16.7, 95% CI 11.4-21."
+  },
+  {
+   "pmid": "35143273",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "7.1",
+   "ci": [
+    "0.64",
+    "0.97"
+   ],
+   "printed_p": null,
+   "sentence": "The narrative group had lower rates of preference for opioids at discharge than the general risk information group (25.9% vs 33.0%; difference = 7.1%; 95% CI = 0.64, 0.97)."
+  },
+  {
+   "pmid": "35103609",
+   "kind": "verdict",
+   "name": "differences",
+   "estimate": "-0.26",
+   "ci": [
+    "-1.21",
+    "0.70"
+   ],
+   "printed_p": "= .02",
+   "sentence": "After 12 months, the IG showed net differences in weight (-0.26, 95% CI -1.21 to 0.70 kg; P=.02), BMI (-0.06, 95% CI -0.41 to 0.28 points; P=.01), waist-height ratio (-0.25, 95% CI -0.94 to 0.44; P=.03), body adiposity index (-0.33, 95% CI -0.77 to 0.11; P=.03), waist circumference (-0.48, 95% CI -1.62 to 0.66 cm, P=.04) and hip circumference (-0.69, 95% CI -1.62 to 0.25 cm; P=.03)."
+  },
+  {
+   "pmid": "33739197",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "0.25",
+   "ci": [
+    "0.39",
+    "0.47"
+   ],
+   "printed_p": null,
+   "sentence": "The absolute PHE volume was 17.27 ± 8.34 mL in the control group and 12.92 ± 7.30 mL in the remote ischemic conditioning group at seven days after enrollment, which is not a significant between-group difference ( p = 0.087), but the relative PHE in the remote ischemic conditioning group (1.77 ± 0.39) was significantly lower than in the control group (2.02 ± 0.27; MD, 0.25; 95% CI, 0.39-0.47; p = 0"
+  },
+  {
+   "pmid": "37542953",
+   "kind": "inside",
+   "name": "MD",
+   "estimate": "0.135",
+   "ci": [
+    "0.201",
+    "0.354"
+   ],
+   "printed_p": null,
+   "sentence": "The 5% annual discount resulted in a significantly lower QALY gain (MD 0.135, 95% CI 0.201-0.354, P = 0.002), whereas the 3.5% annual discount resulted in non-significant difference in QALY gain compared with the actual gain (MD 0.021, 95% CI -0.084 to 0.077, P = 0.292)."
+  },
+  {
+   "pmid": "37137259",
+   "kind": "verdict",
+   "name": "difference",
+   "estimate": "-18.4",
+   "ci": [
+    "-35.9",
+    "-0.9"
+   ],
+   "printed_p": "= 0.063",
+   "sentence": "The incidences of sore throat in the pLMA+BB and DLT groups were 16.3% vs. 34.7% (difference, -18.4%; 95% confidence interval, -35.9% to -0.9%; p = 0.063) on postoperative day 1."
+  },
+  {
+   "pmid": "37012071",
+   "kind": "inside",
+   "name": "mean difference",
+   "estimate": "187",
+   "ci": [
+    "34",
+    "153"
+   ],
+   "printed_p": null,
+   "sentence": "Changes in endurance time were significantly better in the pulmonary rehabilitation (64 s, 95% CI -42.3 to 171)) than in the control (-123 s (95% CI -232 to -13)) group (mean difference, 187 s (95% CI 34 to 153), p=0.019)."
+  },
+  {
+   "pmid": "35671976",
+   "kind": "verdict",
+   "name": "mean difference",
+   "estimate": "-0.6",
+   "ci": [
+    "-1.4",
+    "0.04"
+   ],
+   "printed_p": "= 0.009",
+   "sentence": "Fatigue perception (mean difference, -0.6; 95% CI -1.4 to 0.04; p=0.009) and pain (intensity level p Conclusions An integral strategy involving the BENECA mHealth app with a supervised, multimodal intervention improved cognitive, psychological, and functional performance in women after breast cancer more than mHealth alone."
+  },
+  {
+   "pmid": "37374375",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "-2.75",
+   "ci": [
+    "-7.73",
+    "2.22"
+   ],
+   "printed_p": "= 0.005",
+   "sentence": "Within the experimental group, there was also a significant decrease in systolic blood pressure (MD = -2.75 mmHg, 95% CI = -7.73, 2.22, p = 0.005) and diastolic blood pressure (MD = -0.83 mmHg, 95% CI = -5.81, 4.14, p = 0.02)."
+  },
+  {
+   "pmid": "37374375",
+   "kind": "verdict",
+   "name": "MD",
+   "estimate": "-0.83",
+   "ci": [
+    "-5.81",
+    "4.14"
+   ],
+   "printed_p": "= 0.02",
+   "sentence": "Within the experimental group, there was also a significant decrease in systolic blood pressure (MD = -2.75 mmHg, 95% CI = -7.73, 2.22, p = 0.005) and diastolic blood pressure (MD = -0.83 mmHg, 95% CI = -5.81, 4.14, p = 0.02)."
+  },
+  {
+   "pmid": "37409229",
+   "kind": "inside",
+   "name": "difference",
+   "estimate": "0.72",
+   "ci": [
+    "0.9",
+    "1.34"
+   ],
+   "printed_p": null,
+   "sentence": "Results When considering the patients in the upper tertile (HIGH-DIR), C-peptide AUC (0-120 min) at 13 weeks was higher in the LDX group (n = 16) than in the placebo (n = 10) group [difference: 0.72 nmol/L (95% CI 0.9-1.34), p = 0.027]."
+  }
+ ]
+}
