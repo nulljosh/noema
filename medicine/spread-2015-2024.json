@@ -1,0 +1,307 @@
+{
+ "source": "randomized controlled trial abstracts 2015 to 2024, PubMed E-utilities (2024) and Europe PMC (2015 to 2023), fetched 2026-10-26",
+ "abstracts": 235860,
+ "checked": 6638,
+ "flags": 27,
+ "clear": 15,
+ "clear_abstracts": 13,
+ "rows": [
+  {
+   "pmid": "38478750",
+   "kind": "range",
+   "value": "41.00",
+   "interval": [
+    "41.50",
+    "43.00"
+   ],
+   "snippet": "larly in the Debriefing and Reflection subscale (44.00 [range: 43.00-45.00] vs. 41.00 [range: 41.50-43.00]; z = 5.24",
+   "review": "clear"
+  },
+  {
+   "pmid": "38445487",
+   "kind": "iqr",
+   "value": "36",
+   "interval": [
+    "1.1",
+    "2.2"
+   ],
+   "snippet": ".5%. The median time from emergency call to ambulance dispatch was 1 minute and 36 s (interquartile range, 1.1-2.2) in the in",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "38445487",
+   "kind": "iqr",
+   "value": "30",
+   "interval": [
+    "1.1",
+    "2.2"
+   ],
+   "snippet": " 36 s (interquartile range, 1.1-2.2) in the intervention group and 1 minute and 30 s (interquartile range, 1.1-2.2) in the co",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "39086232",
+   "kind": "iqr",
+   "value": "14",
+   "interval": [
+    "17",
+    "19"
+   ],
+   "snippet": "65-84), 50.8% females, median National Institute of Health Stroke Scale (NIHSS) 14 (IQR 17-19)) with ant",
+   "review": "clear"
+  },
+  {
+   "pmid": "39676607",
+   "kind": "range",
+   "value": "8",
+   "interval": [
+    "1.5",
+    "5"
+   ],
+   "snippet": "y. Group 1 (n = 15) included 4 boys and 11 girls with a mean age of 2 years and 8 months (range: 1.5-5) and a mea",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "39676607",
+   "kind": "range",
+   "value": "6",
+   "interval": [
+    "1.5",
+    "4.8"
+   ],
+   "snippet": "8). Group 2 (n = 15) included 6 boys and 9 girls with a mean age of 2 years and 6 months (range: 1.5-4.8) and a mea",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "25997508",
+   "kind": "range",
+   "value": "55",
+   "interval": [
+    "65",
+    "85"
+   ],
+   "snippet": " age groups: a young group under 55 years (range 18-54) and an older group over 55 years (range 65-85). PpIX for",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "25601342",
+   "kind": "iqr",
+   "value": "22.9",
+   "interval": [
+    "27.5",
+    "33.3"
+   ],
+   "snippet": "adiotherapy and cetuximab. Median follow-up for the radiotherapy comparison was 22.9 months (IQR 27.5-33.3). Median o",
+   "review": "clear"
+  },
+  {
+   "pmid": "25601342",
+   "kind": "iqr",
+   "value": "21.3",
+   "interval": [
+    "23.5",
+    "29.8"
+   ],
+   "snippet": ", 95% CI 1.09-1.76; p=0.004). Median follow-up for the cetuximab comparison was 21.3 months (IQR 23.5-29.8). Median o",
+   "review": "clear"
+  },
+  {
+   "pmid": "27603346",
+   "kind": "range",
+   "value": "24.6",
+   "interval": [
+    "2.8",
+    "24.3"
+   ],
+   "snippet": ", respectively (P = 0.041). The median OS was 35.1 (range, 6.5-47.2) months and 24.6 (range, 2.8-24.3) months fo",
+   "review": "clear"
+  },
+  {
+   "pmid": "30219327",
+   "kind": "iqr",
+   "value": "4.1",
+   "interval": [
+    "14.6",
+    "19.3"
+   ],
+   "snippet": "O PCI group 104 patients. The change in SWT did not differ between the CTO PCI (4.1% [interquartile range: 14.6 to 19.3]) and no C",
+   "review": "clear"
+  },
+  {
+   "pmid": "30567490",
+   "kind": "iqr",
+   "value": "4",
+   "interval": [
+    "2",
+    "2"
+   ],
+   "snippet": "ach patient. Results Data of 136 patients were analyzed. Compared with group B (4[IQR:2,2]), the pai",
+   "review": "clear"
+  },
+  {
+   "pmid": "30567490",
+   "kind": "iqr",
+   "value": "2",
+   "interval": [
+    "4",
+    "4"
+   ],
+   "snippet": "nts were analyzed. Compared with group B (4[IQR:2,2]), the pain NRS in group A (2[IQR:4,4]) was sign",
+   "review": "clear"
+  },
+  {
+   "pmid": "29902177",
+   "kind": "range",
+   "value": "6",
+   "interval": [
+    "1",
+    "3"
+   ],
+   "snippet": " The mean intrinsic motivation score was 2.79 at baseline (range: 1-3), 2.91 at 6 months (range: 1-3), and 2.95",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "29902177",
+   "kind": "range",
+   "value": "12",
+   "interval": [
+    "2",
+    "3"
+   ],
+   "snippet": "e was 2.79 at baseline (range: 1-3), 2.91 at 6 months (range: 1-3), and 2.95 at 12 months (range: 2-3), which wa",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "30136597",
+   "kind": "iqr",
+   "value": "19",
+   "interval": [
+    "9",
+    "17"
+   ],
+   "snippet": "with a pre-hospital heart rate ⩾100 beats per minute developed larger infarcts (19% (interquartile range, 9-17) versus 11",
+   "review": "clear"
+  },
+  {
+   "pmid": "32487507",
+   "kind": "range",
+   "value": "20",
+   "interval": [
+    "2",
+    "18"
+   ],
+   "snippet": " between groups (P = 0.407). The median number of excess tablets prescribed was 20 (range 2-18) in the co",
+   "review": "clear"
+  },
+  {
+   "pmid": "32559474",
+   "kind": "iqr",
+   "value": "24",
+   "interval": [
+    "730",
+    "1560"
+   ],
+   "snippet": "e mGFR was 58·3 mL/min per 1·73 m 2 (SD 23), median proteinuria was 1110 mg per 24 h (IQR 730-1560), and mean",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "32591862",
+   "kind": "range",
+   "value": "8",
+   "interval": [
+    "1",
+    "6"
+   ],
+   "snippet": "time to non-salvageable recurrence was superior in the TriMixDC-MEL arm (median 8 months (range 1-6) vs. not r",
+   "review": "clear"
+  },
+  {
+   "pmid": "32679040",
+   "kind": "iqr",
+   "value": "10",
+   "interval": [
+    "7",
+    "7"
+   ],
+   "snippet": "was higher in the standard-care group than in the multidisciplinary-care group (10 [IQR 7-7] vs 9 [5-1",
+   "review": "clear"
+  },
+  {
+   "pmid": "31663368",
+   "kind": "iqr",
+   "value": "3",
+   "interval": [
+    "204",
+    "546"
+   ],
+   "snippet": "nce to evaluate associations between early ART initiation and viral suppression 3 (IQR 204-546), and 30% ",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "33358843",
+   "kind": "iqr",
+   "value": "-0.14",
+   "interval": [
+    "-0.72",
+    "-0.26"
+   ],
+   "snippet": " groups (sunflower oil, n = 6; -0.63 [IQR, -0.96 to -0.55]; LCPUFA-120: n = 12; -0.14 [IQR, -0.72 to -0.26]; LCPUFA-3",
+   "review": "clear"
+  },
+  {
+   "pmid": "33530929",
+   "kind": "range",
+   "value": "49.9",
+   "interval": [
+    "0",
+    "10"
+   ],
+   "snippet": "8 ± 15.45 (range: 89-177). The average score of stress at work was 6.00 ± 2.44; 49.9% (range: 0-10). 49.9% of",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "35462214",
+   "kind": "iqr",
+   "value": "4",
+   "interval": [
+    "0",
+    "2"
+   ],
+   "snippet": "edian change in TUG time was 4 (IQR 1 to 7) seconds for the vibration group and 4 (IQR 0 to 2) seconds f",
+   "review": "clear"
+  },
+  {
+   "pmid": "36931355",
+   "kind": "iqr",
+   "value": "0.023",
+   "interval": [
+    "0.08",
+    "0.12"
+   ],
+   "snippet": "67 to 0.08)] versus 0.086 mm(IQR, -0.29 to 0.005, P = .683); medial translation 0.023 mm (IQR 0.08 to 0.12) versus 0.",
+   "review": "clear"
+  },
+  {
+   "pmid": "36867503",
+   "kind": "range",
+   "value": "368",
+   "interval": [
+    "82",
+    "98"
+   ],
+   "snippet": "range], 95-102) participants were enrolled in the PHC intervention arm, of whom 368 participants (range, 82-98) had viral",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  },
+  {
+   "pmid": "36867503",
+   "kind": "range",
+   "value": "210",
+   "interval": [
+    "41",
+    "63"
+   ],
+   "snippet": "l load data at baseline and were included in the viral load analyses. Of those, 210 (range, 41-63) patients ",
+   "review": "not a mismatch: a unit, a time, a count or a group label was read as the value"
+  }
+ ]
+}

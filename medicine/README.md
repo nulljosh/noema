@@ -39,6 +39,10 @@ As with the percentages, each one is an open note until the full paper is read.
 
 Across the same 235,860 abstracts there are 31,021 ratios with an interval. 68 sit outside their own interval, like OR 0.217 with an interval of 0.056 to 0.085. 64 more disagree with their P, like HR 1.33 (0.67 to 2.63) printed with P = 0.037. A random 40 of the 132 were read by hand. 28 are clear mismatches, and 12 are ambiguous (a P that belongs to the next item, a borderline bound, a one-sided test). So roughly 90 are clear, about 1 in 340 ratios. Georgescu and Wren (2018) ran this kind of check across MEDLINE and found far more, up to 7.5% of ratios, but they also counted the smaller gaps this scan skips. Everything is in `ratios-2015-2024.json`.
 
+## Impossible spreads
+
+`spread.py` looks for a median printed outside its own interquartile range, or a value outside its own range. Neither can ever be right. Across the 235,860 abstracts there are 6,638 such pairs. 27 are flagged, and a hand read of all 27 leaves 15 clear mismatches in 13 abstracts, like "10 [IQR 7-7]", a median follow-up of 22.9 months with an IQR of 27.5 to 33.3, and "8 months (range 1-6)". The other 12 are units, times or group labels read as the value. All 27, with reasons, are in `spread-2015-2024.json`.
+
 ## Are flagged papers retracted more often?
 
 No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
