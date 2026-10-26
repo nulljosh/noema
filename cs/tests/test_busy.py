@@ -109,6 +109,18 @@ class FiniteAutomataReductionTests(unittest.TestCase):
         self.assertIsNotNone(far.direct_certificate(machine, 4, sizes=(1, 2, 3)))
         self.assertIsNone(far.direct_certificate(self.parse('1RB1LB_1LA0LC_---1LD_1RD0RA'), 4))
 
+    def test_two_state_three_symbol_champion(self):
+        # 1RB2LB1RZ_2LA2RB1LB halts at step 38 with 9 nonzero cells (Brady), and no FAR certificate may exist for it.
+        import busy
+        import far
+        machine = {(0, 0): (1, 1, 1), (0, 1): (2, -1, 1), (1, 0): (2, -1, 0), (1, 1): (2, 1, 1), (1, 2): (1, -1, 1)}
+        far.SYMBOLS = 3
+        try:
+            self.assertEqual(busy.simulate(machine, 200), ('undefined', (0, 2), 37, 9))
+            self.assertIsNone(far.direct_certificate(machine, 2))
+        finally:
+            far.SYMBOLS = 2
+
     def test_stored_certificates_recheck_exactly(self):
         # Every row of far-certificates.json passes the exact automaton check that busy.py runs on each holdout.
         import json

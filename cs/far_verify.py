@@ -1,6 +1,7 @@
 """Word-level checker for FAR certificates. Independent of the automaton construction in far.py: it rewrites words
 directly and runs the certificate DFA on each word. Exhaustive over all words up to max_len."""
 import itertools
+import far
 from far import DFA, state_letter
 
 
@@ -14,11 +15,11 @@ def run(dfa, word):
 def fwd(machine, word):
     """One step of the configuration word, or None when the word is not a single-head configuration with the
     neighbours the rule needs. Cells are letters 0/1; the head cell is state_letter(q, a)."""
-    heads = [i for i, x in enumerate(word) if x >= 2]
+    heads = [i for i, x in enumerate(word) if x >= far.SYMBOLS]
     if len(heads) != 1:
         return None
     i = heads[0]
-    q, a = (word[i] - 2) // 2, (word[i] - 2) % 2
+    q, a = divmod(word[i] - far.SYMBOLS, far.SYMBOLS)
     rule = machine.get((q, a))
     if rule is None:
         return None
@@ -42,9 +43,9 @@ def in_closure(dfa, word):
 
 
 def verify(machine, states, dfa, max_len=5):
-    nl = 2 + 2 * states
+    nl = far.letter_count(states)
     # I2: every word with an undefined letter is accepted (single head and any others), checked on the padded form.
-    undef = {state_letter(q, a) for q in range(states) for a in (0, 1) if (q, a) not in machine}
+    undef = {state_letter(q, a) for q in range(states) for a in range(far.SYMBOLS) if (q, a) not in machine}
     for n in range(1, max_len + 1):
         for word in itertools.product(range(nl), repeat=n):
             if any(x in undef for x in word) and not in_closure(dfa, word):

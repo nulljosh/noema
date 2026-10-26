@@ -20,6 +20,7 @@ import time
 from collections import deque
 
 DEAD = 'dead'
+SYMBOLS = 2  # ponytail: one alphabet per run; busy.enumerate_machines sets it, thread a parameter if two ever run at once
 
 
 class DFA:
@@ -35,15 +36,15 @@ class DFA:
 
 
 def letter_count(states):
-    return 2 + 2 * states
+    return SYMBOLS + SYMBOLS * states
 
 
 def state_letter(q, a):
-    return 2 + 2 * q + a
+    return SYMBOLS + SYMBOLS * q + a
 
 
 def undefined_letters(machine, states):
-    return {state_letter(q, a) for q in range(states) for a in (0, 1) if (q, a) not in machine}
+    return {state_letter(q, a) for q in range(states) for a in range(SYMBOLS) if (q, a) not in machine}
 
 
 def empty_word_dfa(machine, states):
@@ -144,9 +145,9 @@ def _step(machine, ts, x):
         return DEAD, ()
     if ts[0] == 'pre':
         buf = ts[1]
-        if x < 2:
+        if x < SYMBOLS:
             return ('pre', x), ((buf,) if buf is not None else ())
-        q, a = (x - 2) // 2, (x - 2) % 2
+        q, a = divmod(x - SYMBOLS, SYMBOLS)
         rule = machine.get((q, a))
         if rule is None:
             return DEAD, ()
@@ -157,7 +158,7 @@ def _step(machine, ts, x):
             return DEAD, ()
         return ('post', write, None), (state_letter(nxt, buf),)
     buf, need = ts[1], ts[2]
-    if x >= 2:
+    if x >= SYMBOLS:
         return DEAD, ()
     if need is not None:
         return ('post', None, None), (buf, state_letter(need, x))
@@ -362,15 +363,15 @@ def far_proves(machine, states, budget=20.0):
 
 
 def dfas(n):
-    """Every complete DFA over {0, 1} with n states, numbered in breadth-first order from start 0, as delta rows."""
-    delta = [[None, None] for _ in range(n)]
+    """Every complete DFA over the tape symbols with n states, numbered in breadth-first order from start 0, as delta rows."""
+    delta = [[None] * SYMBOLS for _ in range(n)]
 
     def fill(slot, found):
-        if slot == 2 * n:
+        if slot == SYMBOLS * n:
             if found == n:
                 yield [row[:] for row in delta]
             return
-        s, c = divmod(slot, 2)
+        s, c = divmod(slot, SYMBOLS)
         if s >= found:
             return
         for t in range(min(found + 1, n)):
@@ -382,21 +383,21 @@ def dfas(n):
 
 def _post_star(machine, states, left):
     """Direct FAR (Blanchard's method, written as pushdown reachability). The left DFA `left` reads the tape left of
-    the head; the right tape is a stack, top cell first, over a bottom marker 2 that stands for the zeros beyond.
+    the head; the right tape is a stack, top cell first, over a bottom marker SYMBOLS that stands for the zeros beyond.
     A control is (left DFA state, head state, head symbol). A right move pops the next cell (or reads 0 at the
     bottom); a left move picks any (d, b) with left[d][b] equal to the current left state and pushes the written cell.
     post* saturation (Schwoon) gives the exact reachable set of this pushdown system from every blank representative.
     Returns the saturated transitions, or None as soon as a control with an undefined rule is reached."""
-    n = len(left)
-    idx = lambda d, q, a: (d * states + q) * 2 + a
-    nctl = n * states * 2
+    n, k = len(left), SYMBOLS
+    idx = lambda d, q, a: (d * states + q) * k + a
+    nctl = n * states * k
     init, final = nctl, nctl + 1
     mids = {}
     pops, pushes = {}, {}  # (control, symbol) -> list of (target control, written symbol or None)
     undefined = set()
     for d0 in range(n):
         for q in range(states):
-            for a in (0, 1):
+            for a in range(k):
                 p = idx(d0, q, a)
                 rule = machine.get((q, a))
                 if rule is None:
@@ -405,24 +406,24 @@ def _post_star(machine, states, left):
                 write, move, r = rule
                 if move > 0:
                     d1 = left[d0][write]
-                    for b in (0, 1):
+                    for b in range(k):
                         pops.setdefault((p, b), []).append((idx(d1, r, b), None))
-                    pops.setdefault((p, 2), []).append((idx(d1, r, 0), 2))
+                    pops.setdefault((p, k), []).append((idx(d1, r, 0), k))
                 else:
                     for d in range(n):
-                        for b in (0, 1):
+                        for b in range(k):
                             if left[d][b] == d0:
                                 target = idx(d, r, b)
                                 mid = mids.setdefault((target, write), nctl + 2 + len(mids))
-                                for g in (0, 1, 2):
+                                for g in range(k + 1):
                                     pushes.setdefault((p, g), []).append((target, write, mid))
     zeros, z = set(), 0
     while z not in zeros:
         zeros.add(z)
         z = left[z][0]
-    work = [(init, 0, init), (init, 2, final)]
+    work = [(init, 0, init), (init, k, final)]
     for z in zeros:
-        work += [(idx(z, 0, 0), 0, init), (idx(z, 0, 0), 2, final)]
+        work += [(idx(z, 0, 0), 0, init), (idx(z, 0, 0), k, final)]
     rel, out, eps_in = set(), {}, {}
     while work:
         t = work.pop()
@@ -471,20 +472,20 @@ def _certificate_dfa(machine, states, left, saturated):
             if key == 'dead':
                 nxt = 'dead'
             elif key[0] == 'L':
-                if x < 2:
+                if x < SYMBOLS:
                     nxt = ('L', left[key[1]][x])
                 else:
-                    q, a = (x - 2) // 2, (x - 2) % 2
-                    c = (key[1] * states + q) * 2 + a
+                    q, a = divmod(x - SYMBOLS, SYMBOLS)
+                    c = (key[1] * states + q) * SYMBOLS + a
                     nxt = ('R', frozenset({c} | eps.get(c, set())))
             else:
-                nxt = ('R', frozenset(t for s in key[1] for t in step.get((s, x), ()))) if x < 2 else 'dead'
+                nxt = ('R', frozenset(t for s in key[1] for t in step.get((s, x), ()))) if x < SYMBOLS else 'dead'
             if nxt not in keys:
                 keys[nxt] = len(order)
                 order.append(nxt)
             row.append(keys[nxt])
         delta.append(row)
-        reach = key != 'dead' and key[0] == 'R' and any(final in step.get((s, 2), ()) for s in key[1])
+        reach = key != 'dead' and key[0] == 'R' and any(final in step.get((s, SYMBOLS), ()) for s in key[1])
         acc.append(not reach)
     return minimize(DFA(delta, acc))
 

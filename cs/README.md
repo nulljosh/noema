@@ -19,4 +19,6 @@ So BB(4) = 107 and Sigma(4) = 13 are decided by this code: every 4-state machine
 
 Soundness check: the 20,528 machines the deciders flag at 4 states were each run with no deciders for 100,000 steps. None halts. The 3-state flags did not change, so the earlier 3-state checks still hold: none of the flagged machines halts within 100,000 steps, and none of the 4 n-gram flags halts within 1,000,000 steps. The 41 machines the FAR pass settles were each run with no deciders for 1,000,000 steps. None halts. The maxima do not move: 1, 6, 21 and 107 steps, and 1, 4, 6 and 13 ones.
 
+Three symbols. The same tree, with each transition writing 0, 1 or 2, runs for 2 states and 3 symbols with `python3 busy.py 2x3` (about 45 seconds). Cycles, translated cycles and backward reasoning settle most branches, and the direct FAR search, generalized to any alphabet, settles the last 330. None remain. So BB(2,3) = 38 steps and Sigma(2,3) = 9 nonzero cells are decided by this code, matching Brady's champion 1RB2LB1RZ_2LA2RB1LB and Lafitte and Papazian (2007). All 332 machines proved non-halting were run 1,000,000 steps with no deciders, and none halts. The binary tape deciders are skipped at 3 symbols.
+
 BB(5) = 47,176,870 was proved in 2024 by the bbchallenge collaboration with a Coq-checked proof; that is the frontier this lane reads toward, not one it claims.

@@ -19,7 +19,7 @@ def simulate(machine, cap):
         symbol = tape.get(head, 0)
         rule = machine.get((state, symbol))
         if rule is None:
-            return 'undefined', (state, symbol), steps, sum(tape.values())
+            return 'undefined', (state, symbol), steps, _ones(tape)
         heads.append(head)
         if head > hi or head < lo:
             side = 1 if head > hi else -1
@@ -34,16 +34,21 @@ def simulate(machine, cap):
                 span = range(low, old_head + 1) if side > 0 else range(old_head, high + 1)
                 shift = head - old_head
                 if all(old_tape.get(x, 0) == tape.get(x + shift, 0) for x in span):
-                    return 'translated', None, steps, sum(tape.values())
+                    return 'translated', None, steps, _ones(tape)
             past.append((steps, head, dict(tape)))
-        config = (state, head, frozenset(k for k, v in tape.items() if v))
+        config = (state, head, frozenset((k, v) for k, v in tape.items() if v))
         if config in seen:
-            return 'cycle', None, steps, sum(tape.values())
+            return 'cycle', None, steps, _ones(tape)
         seen.add(config)
         write, move, state = rule
         tape[head] = write
         head += move
-    return 'cap', None, cap, sum(tape.values())
+    return 'cap', None, cap, _ones(tape)
+
+
+def _ones(tape):
+    """Nonzero cells, the Sigma count for any number of symbols."""
+    return sum(1 for v in tape.values() if v)
 
 
 def backward(machine, states, width=8, limit=50000):
@@ -54,7 +59,7 @@ def backward(machine, states, width=8, limit=50000):
     configuration that can reach an undefined transition. If the blank tape matches none of them, the run from
     blank never reaches one, so it never halts however the undefined transitions are later completed.
     Returns True when proved, False when the blank tape matches a pattern or the closure grows past limit."""
-    frontier = [(state, ((0, symbol),)) for state in range(states) for symbol in (0, 1)
+    frontier = [(state, ((0, symbol),)) for state in range(states) for symbol in range(far.SYMBOLS)
                 if (state, symbol) not in machine]
     seen = set(frontier)
     while frontier:
@@ -275,9 +280,14 @@ def far_certified(machine, states):
 
 def decide_holdout(machine, states):
     """Name of the first sound decider that proves a holdout never halts from blank, or None.
-    The 2-cell n-gram closure runs before the wider deciders, so the 3-state counts do not move."""
+    The 2-cell n-gram closure runs before the wider deciders, so the 3-state counts do not move.
+    With more than two symbols only backward reasoning and the direct FAR search run; the tape deciders are binary."""
     if backward(machine, states):
         return 'backward'
+    if far.SYMBOLS > 2:
+        mirror = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+        found = far.direct_certificate(machine, states) or far.direct_certificate(mirror, states)
+        return 'far' if found is not None else None
     if closed_tape(machine):
         return 'tape'
     if closed_block(machine):
@@ -293,13 +303,14 @@ def decide_holdout(machine, states):
     return None
 
 
-def enumerate_machines(states, cap, flagged=None):
+def enumerate_machines(states, cap, flagged=None, symbols=2):
     """Every machine reachable this way is distinct in behaviour from a blank tape.
     The first move is fixed to the right; the mirror image behaves the same.
     A machine that reaches the cap is a holdout. decide_holdout tries the sound deciders in turn. A holdout none of
     them settles is rerun at LATE_CAP through simulate, which catches a longer translated cycle or cycle, or a
     halt, which is then counted and its maxima recorded. Machines the deciders prove non-halting are appended to
-    flagged, when given."""
+    flagged, when given. symbols > 2 counts machines over that many tape symbols, writing any of them."""
+    far.SYMBOLS = symbols
     best_steps, best_ones, halters, holdouts, cycles, translated = 0, 0, 0, 0, 0, 0
     proved = {'backward': 0, 'tape': 0, 'block': 0, 'ngram': 0, 'wide': 0, 'far': 0, 'rerun': 0}
     late_halters = 0
@@ -320,7 +331,7 @@ def enumerate_machines(states, cap, flagged=None):
                 if outcome == 'undefined':
                     late_halters += 1
                     best_steps = max(best_steps, steps + 1)
-                    best_ones = max(best_ones, ones + (1 - key[1]))
+                    best_ones = max(best_ones, ones + (key[1] == 0))
                     continue
                 if outcome in ('cycle', 'translated'):
                     name = 'rerun'
@@ -331,16 +342,15 @@ def enumerate_machines(states, cap, flagged=None):
             if flagged is not None:
                 flagged.append(dict(machine))
             continue
-        # Halt on this undefined transition (writing 1 maximises the ones count).
+        # Halt on this undefined transition (writing a nonzero symbol maximises the count).
         halters += 1
         best_steps = max(best_steps, steps + 1)
-        tape_symbol = key[1]
-        best_ones = max(best_ones, ones + (1 - tape_symbol))
+        best_ones = max(best_ones, ones + (key[1] == 0))
         # Or define it, if at least one transition would stay undefined to halt on later.
-        if len(machine) + 1 >= 2 * states:
+        if len(machine) + 1 >= symbols * states:
             continue
         used = max([0] + [r[2] for r in machine.values()] + [k[0] for k in machine])
-        for write in (0, 1):
+        for write in range(symbols):
             for move in ((1,) if not machine else (-1, 1)):
                 for nxt in range(min(used + 2, states)):
                     stack.append({**machine, key: (write, move, nxt)})
@@ -353,6 +363,12 @@ def enumerate_machines(states, cap, flagged=None):
 
 
 if __name__ == '__main__':
+    if sys.argv[1:] == ['2x3']:  # 2 states, 3 symbols
+        started = time.monotonic()
+        result = enumerate_machines(2, 200, symbols=3)
+        result['seconds'] = round(time.monotonic() - started, 2)
+        print(json.dumps(result))
+        sys.exit()
     top = int(sys.argv[1]) if sys.argv[1:] else 3
     for n in range(1, top + 1):
         started = time.monotonic()
