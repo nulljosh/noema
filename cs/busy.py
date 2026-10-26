@@ -1,0 +1,62 @@
+"""Busy Beaver by tree enumeration: grow 2-symbol Turing machines only along transitions they actually use."""
+import json
+import sys
+import time
+
+
+def simulate(machine, cap):
+    """Run from a blank tape. Returns ('undefined', key, steps, ones) or ('cycle'|'cap', None, steps, ones)."""
+    tape, head, state, seen = {}, 0, 0, set()
+    for steps in range(cap):
+        symbol = tape.get(head, 0)
+        rule = machine.get((state, symbol))
+        if rule is None:
+            return 'undefined', (state, symbol), steps, sum(tape.values())
+        config = (state, head, frozenset(k for k, v in tape.items() if v))
+        if config in seen:
+            return 'cycle', None, steps, sum(tape.values())
+        seen.add(config)
+        write, move, state = rule
+        tape[head] = write
+        head += move
+    return 'cap', None, cap, sum(tape.values())
+
+
+def enumerate_machines(states, cap):
+    """Every machine reachable this way is distinct in behaviour from a blank tape.
+    The first move is fixed to the right; the mirror image behaves the same."""
+    best_steps, best_ones, halters, holdouts, cycles = 0, 0, 0, 0, 0
+    stack = [{}]
+    while stack:
+        machine = stack.pop()
+        outcome, key, steps, ones = simulate(machine, cap)
+        if outcome == 'cycle':
+            cycles += 1
+            continue
+        if outcome == 'cap':
+            holdouts += 1
+            continue
+        # Halt on this undefined transition (writing 1 maximises the ones count).
+        halters += 1
+        best_steps = max(best_steps, steps + 1)
+        tape_symbol = key[1]
+        best_ones = max(best_ones, ones + (1 - tape_symbol))
+        # Or define it, if at least one transition would stay undefined to halt on later.
+        if len(machine) + 1 >= 2 * states:
+            continue
+        used = max([0] + [r[2] for r in machine.values()] + [k[0] for k in machine])
+        for write in (0, 1):
+            for move in ((1,) if not machine else (-1, 1)):
+                for nxt in range(min(used + 2, states)):
+                    stack.append({**machine, key: (write, move, nxt)})
+    return {'states': states, 'cap': cap, 'max_steps': best_steps, 'max_ones': best_ones,
+            'halting_branches': halters, 'cycles_proved': cycles, 'holdouts_at_cap': holdouts}
+
+
+if __name__ == '__main__':
+    top = int(sys.argv[1]) if sys.argv[1:] else 3
+    for n in range(1, top + 1):
+        started = time.monotonic()
+        result = enumerate_machines(n, {1: 10, 2: 50, 3: 200, 4: 2000}[n])
+        result['seconds'] = round(time.monotonic() - started, 2)
+        print(json.dumps(result))

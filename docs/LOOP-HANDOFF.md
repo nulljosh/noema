@@ -6,7 +6,7 @@ A finite foreground cycle. State one exact question, compute inside a fixed boun
 
 ## Tick protocol (every loop tick, in order)
 
-1. Read `roadmap.md`. Alternate lanes: if the last ledger row is math, take biology next, unless that lane is blocked.
+1. Read `roadmap.md`. Rotate lanes in ledger order (math, cs, biology, then any queued field): take the lane whose last ledger row is oldest. Starting a queued field counts as that lane's tick.
 2. Run the lane's tests before touching anything. A red baseline is the tick's only job.
 3. Do one bounded study: an exact question, a fixed bound, a stop condition.
 4. Check it a second way: an independent implementation, a numeric check of a symbolic result, or a primary source (OEIS, the paper, UniProt, ClinVar).

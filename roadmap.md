@@ -35,13 +35,31 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | math | Lean checks 32k+11 and 32k+23 first descent in 8 steps | machine-checked | Python bound to 10^6 | known algebra | reproduced |
 | 2026-10-26 | math | Mod-64 split resolves none of 7, 15, 27, 31 | written | symbolic run | expected by Terras | reproduced |
 | 2026-10-26 | math | Open classes mod 2^m, m = 1..20 | observed | numeric descent of members | OEIS A076227, exact match | reproduced |
+| 2026-10-26 | cs | Busy Beaver maxima for 1 to 4 states: 1, 6, 21, 107 steps; 1, 4, 6, 13 ones | observed (holdouts undecided) | hand-checked 2-state champion, exact-cycle decider | Rado; Lin and Rado; Brady (BB(4)) | reproduced |
 | 2026-10-26 | biology | Predeclared BLOSUM62 rule scores 0.67 balanced accuracy on 28 held-out ClinVar HBB records vs 0.50 for both baselines | observed | engine matches ClinVar protein change on all 93 | BLOSUM-only predictors are known to be weak; n is tiny (4 negatives) | baseline set, not a finding |
+
+## Fields
+
+Every STEM field is welcome. A field gets a folder only when a tick starts its first study, and its first study must reproduce something published before it aims at anything new.
+
+| Field | Status | First study (reproduce first) | Check against |
+|---|---|---|---|
+| Math | live (`math/`) | Collatz residue tree, Lean first-descent lemmas | OEIS A076227 |
+| Computer science | live (`cs/`) | Busy Beaver through 4 states | Rado, Brady, bbchallenge |
+| Biology | live (`biology/`) | HBB substitutions, held-out ClinVar benchmark | UniProt, ClinVar |
+| Physics | queued | Exact 2D Ising partition function on small periodic lattices | known exact values, Onsager limit |
+| Chemistry | queued | Count alkane structural isomers C1 to C20 by tree enumeration | OEIS A000602 |
+| Information engineering | queued | Largest binary codes A(n, d) for small n by exhaustive search | published code tables |
+| Astronomy | queued | Kepler's third law across the NASA Exoplanet Archive, with the scatter reported | the archive itself |
+| Statistics | queued | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
 
 ## Frontier
 
 Each tick adds the sharpest next question its result raised. Prune anything that stays untouched for ten ticks.
 
 - [ ] **Math:** binary patterns in the longest-surviving residues mod 2^20.
+- [ ] **CS:** add a translated-cycler decider and drive the 3-state holdouts to zero, so BB(3) = 21 becomes a decided result here, not a capped one. Then shrink the 4-state holdouts the same way.
+- [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 
 ## Not doing
