@@ -19,3 +19,14 @@ class BusyBeaverTests(unittest.TestCase):
 
     def test_cycle_detection(self):
         self.assertEqual(simulate({(0, 0): (0, 1, 1), (1, 0): (0, -1, 0)}, 50)[0], 'cycle')
+
+    def test_translated_cycler_by_hand(self):
+        # A0 -> 1RB, A1 -> 1RA, B0 -> 1LA, B1 undefined. Right-edge records in state B: cell 1 at step 1 and
+        # cell 3 at step 5. Tape 0..1 at the first record is [1, 0]; tape 2..3 at the second is [1, 0].
+        # Shift 2, period 4, never halts: detected at step 5 with three 1s on the tape.
+        machine = {(0, 0): (1, 1, 1), (0, 1): (1, 1, 0), (1, 0): (1, -1, 0)}
+        self.assertEqual(simulate(machine, 100), ('translated', None, 5, 3))
+
+    def test_three_state_holdouts_after_translated_cyclers(self):
+        # Translated cyclers decide 3,027 of the 3,119 holdouts. The other 92 are unchanged at caps 200, 400 and 1000.
+        self.assertEqual(enumerate_machines(3, 200)['holdouts_at_cap'], 92)

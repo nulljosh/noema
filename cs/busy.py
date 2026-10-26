@@ -5,13 +5,33 @@ import time
 
 
 def simulate(machine, cap):
-    """Run from a blank tape. Returns ('undefined', key, steps, ones) or ('cycle'|'cap', None, steps, ones)."""
+    """Run from a blank tape. Returns ('undefined', key, steps, ones) or ('cycle'|'translated'|'cap', None, steps, ones).
+    A translated cycler: the head reaches a new edge in the same state as an earlier edge record on that side,
+    and the tape from that record back to the furthest point the head went since then repeats, shifted.
+    Only defined transitions are used, so no completion of the machine can halt."""
     tape, head, state, seen = {}, 0, 0, set()
+    heads, edges, lo, hi = [], {}, 0, 0
     for steps in range(cap):
         symbol = tape.get(head, 0)
         rule = machine.get((state, symbol))
         if rule is None:
             return 'undefined', (state, symbol), steps, sum(tape.values())
+        heads.append(head)
+        if head > hi or head < lo:
+            side = 1 if head > hi else -1
+            lo, hi = min(lo, head), max(hi, head)
+            past = edges.setdefault((side, state), [])
+            low = high = head
+            end = steps + 1
+            for old_step, old_head, old_tape in reversed(past):
+                low = min(low, min(heads[old_step:end]))
+                high = max(high, max(heads[old_step:end]))
+                end = old_step
+                span = range(low, old_head + 1) if side > 0 else range(old_head, high + 1)
+                shift = head - old_head
+                if all(old_tape.get(x, 0) == tape.get(x + shift, 0) for x in span):
+                    return 'translated', None, steps, sum(tape.values())
+            past.append((steps, head, dict(tape)))
         config = (state, head, frozenset(k for k, v in tape.items() if v))
         if config in seen:
             return 'cycle', None, steps, sum(tape.values())
@@ -25,13 +45,16 @@ def simulate(machine, cap):
 def enumerate_machines(states, cap):
     """Every machine reachable this way is distinct in behaviour from a blank tape.
     The first move is fixed to the right; the mirror image behaves the same."""
-    best_steps, best_ones, halters, holdouts, cycles = 0, 0, 0, 0, 0
+    best_steps, best_ones, halters, holdouts, cycles, translated = 0, 0, 0, 0, 0, 0
     stack = [{}]
     while stack:
         machine = stack.pop()
         outcome, key, steps, ones = simulate(machine, cap)
         if outcome == 'cycle':
             cycles += 1
+            continue
+        if outcome == 'translated':
+            translated += 1
             continue
         if outcome == 'cap':
             holdouts += 1
@@ -50,7 +73,8 @@ def enumerate_machines(states, cap):
                 for nxt in range(min(used + 2, states)):
                     stack.append({**machine, key: (write, move, nxt)})
     return {'states': states, 'cap': cap, 'max_steps': best_steps, 'max_ones': best_ones,
-            'halting_branches': halters, 'cycles_proved': cycles, 'holdouts_at_cap': holdouts}
+            'halting_branches': halters, 'cycles_proved': cycles, 'translated_cyclers': translated,
+            'holdouts_at_cap': holdouts}
 
 
 if __name__ == '__main__':
