@@ -11,7 +11,9 @@
 ## Next
 
 - [ ] **Math:** split classes 7, 15, 27 and 31 modulo 64 (now the first math task). Derive the forced prefixes before computing anything, and keep the bound at one million.
-- [ ] **Biology:** write the held-out hypothesis-quality benchmark with predeclared scoring, before claiming any improvement.
+- [x] **Biology:** held-out benchmark declared and scored (`uv run heldout.py`, 2026-10-26). v0 = 0.67 balanced accuracy on 28 held-out records.
+- [ ] **Biology:** widen inputs as v1 inputs: accept NM_000518.4 titles (243 records) after checking the two transcripts share the CDS, and report the held-out set again with v0 unchanged.
+- [ ] **Biology:** predictor v1 from structure facts with sources (heme pocket and alpha1-beta1/beta2 interface residues from a cited paper), scored next to v0 on the same split.
 - [ ] **Biology:** add a second public gene, but only with expected cases someone else specified.
 - [ ] **Both:** one claims ledger. A small `claims.json` per lab: claim, exact domain, bound, level (observed, written, machine-checked, literature), source. The landing pages render from it, so no page can state more than the ledger holds.
 - [ ] **Both:** link each study to its Fieldbook entry (Collatz and number theory, genetics and molecular biology), one line each.
@@ -33,6 +35,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | math | Lean checks 32k+11 and 32k+23 first descent in 8 steps | machine-checked | Python bound to 10^6 | known algebra | reproduced |
 | 2026-10-26 | math | Mod-64 split resolves none of 7, 15, 27, 31 | written | symbolic run | expected by Terras | reproduced |
 | 2026-10-26 | math | Open classes mod 2^m, m = 1..20 | observed | numeric descent of members | OEIS A076227, exact match | reproduced |
+| 2026-10-26 | biology | Predeclared BLOSUM62 rule scores 0.67 balanced accuracy on 28 held-out ClinVar HBB records vs 0.50 for both baselines | observed | engine matches ClinVar protein change on all 93 | BLOSUM-only predictors are known to be weak; n is tiny (4 negatives) | baseline set, not a finding |
 
 ## Frontier
 

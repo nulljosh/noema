@@ -28,7 +28,7 @@ def fetch():
         body = urllib.parse.urlencode(params).encode()
         with urllib.request.urlopen(EUTILS + endpoint, body, timeout=60) as response:
             return json.load(response)
-    ids = get('esearch.fcgi', term='HBB[gene] AND single_gene[prop]', retmax=5000)['esearchresult']['idlist']
+    ids = get('esearch.fcgi', term='HBB[gene]', retmax=5000)['esearchresult']['idlist']
     rows = []
     for i in range(0, len(ids), 300):
         result = get('esummary.fcgi', id=','.join(ids[i:i + 300]))['result']
@@ -39,7 +39,7 @@ def fetch():
                          'review_status': d['germline_classification'].get('review_status', ''),
                          'protein_change': d.get('protein_change', '')})
     rows.sort(key=lambda r: r['accession'])
-    DATA.write_text(json.dumps({'source': EUTILS, 'query': 'HBB[gene] AND single_gene[prop]',
+    DATA.write_text(json.dumps({'source': EUTILS, 'query': 'HBB[gene]',
                                 'records': rows}, indent=1) + '\n')
     return len(rows)
 
