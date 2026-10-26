@@ -75,6 +75,11 @@ class ResidueTreeTests(unittest.TestCase):
     def test_matches_oeis(self):
         self.assertEqual([l['open'] for l in residue_tree(20)], self.A076227)
 
+    def test_closed_counts_match_a100982(self):
+        # OEIS A100982 a(0)..a(12), admissible sequences; fetched 2026-10-26.
+        closed = [l['closed'] for l in residue_tree(20) if l['closed']]
+        self.assertEqual(closed, [1, 1, 1, 2, 3, 7, 12, 30, 85, 173, 476, 961, 2652])
+
     def test_closed_classes_descend_numerically(self):
         for level in residue_tree(12):
             m = level['modulus']
