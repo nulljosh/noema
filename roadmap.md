@@ -6,11 +6,11 @@
 
 - [x] **Math:** the eight-step lemmas for 32k+11 and 32k+23 are Lean-checked (2026-10-26). 28 of 32 classes have a written first descent; 7, 15, 27 and 31 remain.
 - [ ] **Biology:** review `benchmarks/latest.json`, then read the two annotations no one-base change explains and the original Hb Bristol paper.
-- [ ] **Both:** ship the merged site. Run `./deploy.sh`, move the noema.jaybulb.com DNS from the Sites CNAME to the wrangler custom domain, and check that evidna.jaybulb.com still opens.
+- [x] **Both:** ship the merged site (2026-10-26). Run `./deploy.sh`, move the noema.jaybulb.com DNS from the Sites CNAME to the wrangler custom domain, and check that evidna.jaybulb.com still opens.
 
 ## Next
 
-- [ ] **Math:** split classes 7, 15, 27 and 31 modulo 64 (now the first math task). Derive the forced prefixes before computing anything, and keep the bound at one million.
+- [x] **Math:** split classes 7, 15, 27 and 31 modulo 64 (2026-10-26, none resolve) (now the first math task). Derive the forced prefixes before computing anything, and keep the bound at one million.
 - [x] **Biology:** held-out benchmark declared and scored (`uv run heldout.py`, 2026-10-26). v0 = 0.67 balanced accuracy on 28 held-out records.
 - [ ] **Biology:** widen inputs as v1 inputs: accept NM_000518.4 titles (243 records) after checking the two transcripts share the CDS, and report the held-out set again with v0 unchanged.
 - [ ] **Biology:** predictor v1 from structure facts with sources (heme pocket and alpha1-beta1/beta2 interface residues from a cited paper), scored next to v0 on the same split.
@@ -37,6 +37,8 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | math | Open classes mod 2^m, m = 1..20 | observed | numeric descent of members | OEIS A076227, exact match | reproduced |
 | 2026-10-26 | cs | Busy Beaver maxima for 1 to 4 states: 1, 6, 21, 107 steps; 1, 4, 6, 13 ones | observed (holdouts undecided) | hand-checked 2-state champion, exact-cycle decider | Rado; Lin and Rado; Brady (BB(4)) | reproduced |
 | 2026-10-26 | biology | Predeclared BLOSUM62 rule scores 0.67 balanced accuracy on 28 held-out ClinVar HBB records vs 0.50 for both baselines | observed | engine matches ClinVar protein change on all 93 | BLOSUM-only predictors are known to be weak; n is tiny (4 negatives) | baseline set, not a finding |
+| 2026-10-26 | physics | Exact Ising energy counts on L x L tori, L = 2..10 (2^100 states at L = 10); heat-capacity peak falls 2.511 to 2.345 toward Onsager's 2.269 | observed (exact counts) | brute force L <= 4, Kaufman 1949 closed form at K = 0.3 and 0.6 to 1e-15 | Beale, PRL 76, 78 (1996); later runs to 192 x 192. The 3x3 and 4x4 rows are not in OEIS | reproduced |
+| 2026-10-26 | chemistry | Alkane isomer counts for 1 to 100 carbons | observed (exact counts) | brute-force canonical trees agree for n <= 12 | OEIS A000602, exact match to n = 100 | reproduced |
 
 ## Fields
 
@@ -47,11 +49,12 @@ Every STEM field is welcome. A field gets a folder only when a tick starts its f
 | Math | live (`math/`) | Collatz residue tree, Lean first-descent lemmas | OEIS A076227 |
 | Computer science | live (`cs/`) | Busy Beaver through 4 states | Rado, Brady, bbchallenge |
 | Biology | live (`biology/`) | HBB substitutions, held-out ClinVar benchmark | UniProt, ClinVar |
-| Physics | queued | Exact 2D Ising partition function on small periodic lattices | known exact values, Onsager limit |
-| Chemistry | queued | Count alkane structural isomers C1 to C20 by tree enumeration | OEIS A000602 |
+| Physics | live (`physics/`) | Exact 2D Ising partition function on small periodic lattices | known exact values, Onsager limit |
+| Chemistry | live (`chemistry/`) | Count alkane structural isomers C1 to C20 by tree enumeration | OEIS A000602 |
 | Information engineering | queued | Largest binary codes A(n, d) for small n by exhaustive search | published code tables |
 | Astronomy | queued | Kepler's third law across the NASA Exoplanet Archive, with the scatter reported | the archive itself |
 | Statistics | queued | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
+| Medicine | queued | Recompute the headline effect and its confidence interval from the published counts of landmark trials (ISIS-2 aspirin, the 1954 Salk polio trial) | the papers' own tables |
 
 ## Frontier
 
@@ -61,6 +64,10 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **CS:** add a translated-cycler decider and drive the 3-state holdouts to zero, so BB(3) = 21 becomes a decided result here, not a capped one. Then shrink the 4-state holdouts the same way.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
+- [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
+- [ ] **Physics:** count ground states of the antiferromagnet on small triangular tori, where frustration leaves leftover entropy, and compare with Wannier's 1950 value.
+- [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
+- [ ] **Hub:** add physics and chemistry cards to the landing page and deploy.
 
 ## Not doing
 
