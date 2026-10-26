@@ -1,0 +1,240 @@
+{
+ "source": "PubMed E-utilities, randomized controlled trial[pt] AND hasabstract, 6,000 most recent per publication year, fetched 2026-10-26",
+ "abstracts": 18000,
+ "pairs": 1256,
+ "flagged": 23,
+ "clear_pairs": 17,
+ "clear_abstracts": 16,
+ "rows": [
+  {
+   "pmid": "35341362",
+   "x": 8,
+   "n": 183,
+   "printed": "3",
+   "exact": 4.372,
+   "snippet": ".29). 11/179 (6%) in the 10 mg/mL group vomited compared to 8/183 (3%) in the 1",
+   "year": 2022,
+   "review": "clear"
+  },
+  {
+   "pmid": "36284033",
+   "x": 25,
+   "n": 48,
+   "printed": "47",
+   "exact": 52.083,
+   "snippet": "e enrolled from nine countries. In the ischemia-guided arm, 25/48 (47%) patients",
+   "year": 2022,
+   "review": "clear"
+  },
+  {
+   "pmid": "35688623",
+   "x": 638,
+   "n": 1208,
+   "printed": "52.7",
+   "exact": 52.815,
+   "snippet": "for CXR (difference 1.1; 95% lower CI: 0.003). After ULDCT, 638/1208 (52.7%) patients",
+   "year": 2022,
+   "review": "clear"
+  },
+  {
+   "pmid": "35428739",
+   "x": 3,
+   "n": 12,
+   "printed": "12.0",
+   "exact": 25.0,
+   "snippet": "patients compared with 1/10 (10.0%) patients in the CG1 and 3/12 (12.0%) in the C",
+   "year": 2022,
+   "review": "clear: the arm has 25 patients and 3/25 is 12.0%, so the printed denominator is off"
+  },
+  {
+   "pmid": "36209759",
+   "x": 126,
+   "n": 300,
+   "printed": "45",
+   "exact": 42.0,
+   "snippet": "0 patients (150 per group: median age 56 years [IQR 47-65]; 126 [45%] of 300 male; ski",
+   "year": 2022,
+   "review": "clear"
+  },
+  {
+   "pmid": "36352788",
+   "x": 10,
+   "n": 104,
+   "printed": "9.4",
+   "exact": 9.615,
+   "snippet": "oth groups. The two groups did not differ for stage II POP: 10 of 104 (9.4%) in the O",
+   "year": 2022,
+   "review": "clear"
+  },
+  {
+   "pmid": "36569268",
+   "x": 10,
+   "n": 55,
+   "printed": "18.0",
+   "exact": 18.182,
+   "snippet": "of a low or negative serology for CD, FGIDs prevalence was 10/55 (18.0%) in group",
+   "year": 2022,
+   "review": "clear"
+  },
+  {
+   "pmid": "36066264",
+   "x": 336,
+   "n": 2587,
+   "printed": "43.2",
+   "exact": 12.988,
+   "snippet": "0.12), while the proportion receiving HFNC increased (2014, 336/2587 (43.2%); 2017, 6",
+   "year": 2022,
+   "review": "ambiguous: the percentage may be of oxygen recipients, not of all infants"
+  },
+  {
+   "pmid": "36066264",
+   "x": 609,
+   "n": 3720,
+   "printed": "57.8",
+   "exact": 16.371,
+   "snippet": "ion receiving HFNC increased (2014, 336/2587 (43.2%); 2017, 609/3720 (57.8%); P \u2264 0.0",
+   "year": 2022,
+   "review": "ambiguous: the percentage may be of oxygen recipients, not of all infants"
+  },
+  {
+   "pmid": "37987842",
+   "x": 6,
+   "n": 18,
+   "printed": "66.6",
+   "exact": 33.333,
+   "snippet": "al flares. In those with histological remission (biopsy 2), 6/18 (66.6%) experien",
+   "year": 2023,
+   "review": "clear: 12/18 is 66.7%"
+  },
+  {
+   "pmid": "38108829",
+   "x": 799,
+   "n": 1105,
+   "printed": "72.1",
+   "exact": 72.308,
+   "snippet": "tomatic > 50% carotid stenosis and extracranial dissection, 799/1105 (72.1%) patients",
+   "year": 2023,
+   "review": "clear"
+  },
+  {
+   "pmid": "38007947",
+   "x": 70,
+   "n": 88,
+   "printed": "81",
+   "exact": 79.545,
+   "snippet": "subjective improvement from baseline at last follow-up and 70/88 (81% [0.70-0.8",
+   "year": 2023,
+   "review": "ambiguous: printed with an interval, so it may be a model estimate"
+  },
+  {
+   "pmid": "37902744",
+   "x": 96,
+   "n": 173,
+   "printed": "55.9",
+   "exact": 55.491,
+   "snippet": ".4%]) utilized screening overall at 6 months than controls (96 of 173 [55.9%]) (adjust",
+   "year": 2023,
+   "review": "clear"
+  },
+  {
+   "pmid": "37393022",
+   "x": 13,
+   "n": 67,
+   "printed": "18",
+   "exact": 19.403,
+   "snippet": "e centers required resubmission more often (44/136 [33%] vs 13/67 [18%]; P = .07",
+   "year": 2023,
+   "review": "clear"
+  },
+  {
+   "pmid": "39607079",
+   "x": 24,
+   "n": 73,
+   "printed": "33.3",
+   "exact": 32.877,
+   "snippet": "he one-step group than in the two-step group, with rates of 24/73 (33.3%) vs 8/70",
+   "year": 2024,
+   "review": "clear: the arms have 72 and 71 women, and 24/72 and 8/71 give the printed 33.3% and 11.3%"
+  },
+  {
+   "pmid": "39607079",
+   "x": 8,
+   "n": 70,
+   "printed": "11.3",
+   "exact": 11.429,
+   "snippet": "than in the two-step group, with rates of 24/73 (33.3%) vs 8/70 (11.3%); P value",
+   "year": 2024,
+   "review": "clear: the arms have 72 and 71 women, and 24/72 and 8/71 give the printed 33.3% and 11.3%"
+  },
+  {
+   "pmid": "39799639",
+   "x": 32,
+   "n": 43,
+   "printed": "79",
+   "exact": 74.419,
+   "snippet": "to be approved than pre-accrual (p = 0.016). For planning, 32/43 (79%) pre-accr",
+   "year": 2024,
+   "review": "clear"
+  },
+  {
+   "pmid": "39343051",
+   "x": 12,
+   "n": 16,
+   "printed": "72",
+   "exact": 75.0,
+   "snippet": "t. Of 21 patients, 2 of 5 (40%) undergoing a single EBD and 12 of 16 (72%) undergoi",
+   "year": 2024,
+   "review": "clear"
+  },
+  {
+   "pmid": "39086232",
+   "x": 1,
+   "n": 14,
+   "printed": "0.3",
+   "exact": 7.143,
+   "snippet": "on stroke were included. mRS 0-1 at 90 days was achieved in 1/14 (0.3%), 43/160",
+   "year": 2024,
+   "review": "ambiguous: the three percentages sum to 100, so they are shares of another total"
+  },
+  {
+   "pmid": "39086232",
+   "x": 43,
+   "n": 160,
+   "printed": "14.7",
+   "exact": 26.875,
+   "snippet": "e included. mRS 0-1 at 90 days was achieved in 1/14 (0.3%), 43/160 (14.7%), and 252",
+   "year": 2024,
+   "review": "ambiguous: the three percentages sum to 100, so they are shares of another total"
+  },
+  {
+   "pmid": "39086232",
+   "x": 252,
+   "n": 726,
+   "printed": "85.1",
+   "exact": 34.711,
+   "snippet": "at 90 days was achieved in 1/14 (0.3%), 43/160 (14.7%), and 252/726 (85.1%) in the A",
+   "year": 2024,
+   "review": "ambiguous: the three percentages sum to 100, so they are shares of another total"
+  },
+  {
+   "pmid": "39446608",
+   "x": 20,
+   "n": 84,
+   "printed": "23.3",
+   "exact": 23.81,
+   "snippet": "esarean rates were 28/103 (27.2%) in the melatonin group vs 20/84 (23.3%) in the p",
+   "year": 2024,
+   "review": "clear: 86 were randomized to placebo and 20/86 is 23.3%"
+  },
+  {
+   "pmid": "39221516",
+   "x": 27,
+   "n": 67,
+   "printed": "41.8",
+   "exact": 40.299,
+   "snippet": "id-rich lesions, 34 of 55 (61.8%) in the alirocumab arm and 27 of 67 (41.8%) in the p",
+   "year": 2024,
+   "review": "clear"
+  }
+ ]
+}
