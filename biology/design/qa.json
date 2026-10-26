@@ -1,0 +1,12 @@
+{
+  "reviewed": "2026-10-13",
+  "url": "https://evidna.jaybulb.com/",
+  "scope": "Public mobile Lighthouse audit; excludes performance",
+  "categories": {
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100,
+    "agentic-browsing": 100
+  },
+  "failed_audits": []
+}

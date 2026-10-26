@@ -1,0 +1,29 @@
+{
+  "id": 1,
+  "analysis": {
+    "accession": "NM_000518.5",
+    "description": "Homo sapiens hemoglobin subunit beta (HBB), mRNA",
+    "source": "https://www.ncbi.nlm.nih.gov/nuccore/NM_000518.5/",
+    "sha256": "c114b998f526a13ce7029a484f7d2679de9bc9f50a533d6e86ce5e644ca6c5d9",
+    "variant": "c.20A>T",
+    "cds_bases": 444,
+    "gc_percent": 56.08,
+    "protein_residues": 147,
+    "reference_protein": "MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH",
+    "translated_mutant_codons": "MVHLTPVEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH*",
+    "reference_mass_da": 15998.21,
+    "codon_position": 7,
+    "reference_codon": "GAG",
+    "mutant_codon": "GTG",
+    "reference_amino_acid": "E",
+    "mutant_amino_acid": "V",
+    "consequence": "missense",
+    "lesson": "Coding DNA is read in triplets. A codon specifies an amino acid or a stop. Positions here include the initiator methionine; HBB Glu7 is traditionally called beta-globin Glu6 after that methionine is removed.",
+    "limits": "Sequence consequence only. No measured structure, function, disease risk, or experimental result. Mutant codons are a translation, not a confirmed expressed protein."
+  },
+  "proposal": "**Hypothesis:** The c.20A>T change swaps one residue, Glu7 to Val, and is the only amino acid difference from the reference. The swap removes one negative charge, so net charge at pH 7 rises by +1 and average mass falls by about 30 Da.\n\n**Rationale:** c.20 is the middle base of codon 7 (GAG to GTG). Changing the middle base changes the amino acid. The supplied translations show E to V at the same position.\n\n**Computational test:** Align the reference and mutant translations. Count differing positions. Compute net charge and average mass for each, then compare the differences to the prediction.\n\n**Negative control:** A synonymous change at codon 7 (GAG to GAA, both Glu) should leave the protein sequence, charge, and mass unchanged.\n\n**Predicted result:** One differing position (Glu to Val, numbered with the initiator Met), net charge +1, mass shift near -30 Da (Glu residue about 129.1 Da, Val about 99.1 Da).\n\n**Falsification:** More or fewer than one differing position, a mass shift far from -30 Da, or any change in the synonymous control means the hypothesis or the pipeline is wrong.\n\n**Uncertainty:** This tests sequence consequence only. The supplied data contain no structure, function, or measured protein. The clinical effect of this change is well known from the wider literature, but this analysis does not validate it.\n\n**Revision:** None. The supplied observations do not require changing the hypothesis.\n\n**Lesson:** Coding DNA is read three bases at a time. Change the middle base of GAG and Glu becomes Val. Numbering matters: Glu7 with the initiator Met is called Glu6 in mature beta-globin.",
+  "critique": "**Critique**\n\nThe arithmetic holds. c.20 is the middle base of codon 7 (GAG to GTG). The supplied strings differ only at position 7 (Glu to Val, counting the initiator Met). Those changes give a net charge difference of +1 and a mass difference of about -30 Da. These are residue-level calculations, not observations.\n\nWeak points:\n- \"The clinical effect is well known\" is an outside claim with no source in the evidence. Remove it or label it as untested.\n- \"Revision: None\" is premature. Nothing has been run.\n- The \"only difference\" check compares the pipeline's translation with itself. An independent translation of the accession sequence is needed.\n- Net charge at pH 7 ignores termini, histidines, and pKa values. Only the difference is meaningful.\n- The synonymous control tests the pipeline, not the mutation.\n\nNeeded: the accession sequence fetched and its checksum verified, an independent translation, and a stated mass model (average or monoisotopic, with or without the removed Met).",
+  "model": "haiku",
+  "provider": "Claude CLI",
+  "status": "unvalidated"
+}

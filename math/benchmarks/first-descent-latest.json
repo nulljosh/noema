@@ -1,0 +1,1514 @@
+{
+  "suite": "first-descent-v3",
+  "status": "complete",
+  "updated_at": "2026-10-14T17:36:41.846745+00:00",
+  "engine_sha256": "8f89b8c981640b2099cb48b0ee1af66812d62df2c159a4ad7c358569fb967c75",
+  "stages": [
+    {
+      "limit": 10000,
+      "starts_checked": 9999,
+      "cap": 1000,
+      "unresolved": [],
+      "record_highs": [
+        {
+          "start": 2,
+          "steps": 1,
+          "first_below": 1,
+          "status": "descended"
+        },
+        {
+          "start": 3,
+          "steps": 6,
+          "first_below": 2,
+          "status": "descended"
+        },
+        {
+          "start": 7,
+          "steps": 11,
+          "first_below": 5,
+          "status": "descended"
+        },
+        {
+          "start": 27,
+          "steps": 96,
+          "first_below": 23,
+          "status": "descended"
+        },
+        {
+          "start": 703,
+          "steps": 132,
+          "first_below": 628,
+          "status": "descended"
+        }
+      ],
+      "step_histogram": {
+        "1": 5000,
+        "3": 2499,
+        "6": 625,
+        "8": 625,
+        "11": 236,
+        "13": 273,
+        "16": 116,
+        "19": 73,
+        "21": 104,
+        "24": 55,
+        "26": 71,
+        "29": 37,
+        "32": 38,
+        "34": 33,
+        "37": 18,
+        "39": 33,
+        "42": 16,
+        "44": 23,
+        "47": 7,
+        "50": 8,
+        "52": 12,
+        "55": 5,
+        "57": 10,
+        "60": 10,
+        "63": 5,
+        "65": 9,
+        "68": 5,
+        "70": 10,
+        "73": 1,
+        "75": 5,
+        "78": 4,
+        "81": 5,
+        "83": 2,
+        "86": 1,
+        "88": 7,
+        "91": 1,
+        "94": 2,
+        "96": 1,
+        "99": 1,
+        "104": 1,
+        "106": 1,
+        "112": 2,
+        "114": 1,
+        "117": 1,
+        "119": 1,
+        "125": 1,
+        "127": 1,
+        "130": 2,
+        "132": 2
+      },
+      "independent_disagreements": 0,
+      "evidence_sha256": "3099f30c07ba64d8f2c2bd53633c9054e8b6ec429c7537ec0ab5a4644cf39eed",
+      "residue_groups": {
+        "8": [
+          {
+            "remainder": 0,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 8,
+              "steps": 1,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 1,
+            "checked": 1249,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 9,
+              "steps": 3,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 2,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 2,
+              "steps": 1,
+              "first_below": 1,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 3,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 6,
+            "maximum": {
+              "start": 7963,
+              "steps": 117,
+              "first_below": 4984,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 4,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 4,
+              "steps": 1,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 5,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 5,
+              "steps": 3,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 6,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 6,
+              "steps": 1,
+              "first_below": 3,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 7,
+            "checked": 1250,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 703,
+              "steps": 132,
+              "first_below": 628,
+              "status": "descended"
+            }
+          }
+        ],
+        "16": [
+          {
+            "remainder": 0,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 16,
+              "steps": 1,
+              "first_below": 8,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 1,
+            "checked": 624,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 17,
+              "steps": 3,
+              "first_below": 13,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 2,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 2,
+              "steps": 1,
+              "first_below": 1,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 3,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 6,
+            "maximum": {
+              "start": 3,
+              "steps": 6,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 4,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 4,
+              "steps": 1,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 5,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 5,
+              "steps": 3,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 6,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 6,
+              "steps": 1,
+              "first_below": 3,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 7,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 7527,
+              "steps": 119,
+              "first_below": 7066,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 8,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 8,
+              "steps": 1,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 9,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 9,
+              "steps": 3,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 10,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 10,
+              "steps": 1,
+              "first_below": 5,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 11,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 7963,
+              "steps": 117,
+              "first_below": 4984,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 12,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 12,
+              "steps": 1,
+              "first_below": 6,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 13,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 13,
+              "steps": 3,
+              "first_below": 10,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 14,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 14,
+              "steps": 1,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 15,
+            "checked": 625,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 703,
+              "steps": 132,
+              "first_below": 628,
+              "status": "descended"
+            }
+          }
+        ],
+        "32": [
+          {
+            "remainder": 7,
+            "checked": 313,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 7527,
+              "steps": 119,
+              "first_below": 7066,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 11,
+            "checked": 313,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 11,
+              "steps": 8,
+              "first_below": 10,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 15,
+            "checked": 313,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 1583,
+              "steps": 127,
+              "first_below": 1256,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 23,
+            "checked": 312,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 23,
+              "steps": 8,
+              "first_below": 20,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 27,
+            "checked": 312,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 7963,
+              "steps": 117,
+              "first_below": 4984,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 31,
+            "checked": 312,
+            "unresolved": 0,
+            "minimum_steps": 13,
+            "maximum": {
+              "start": 703,
+              "steps": 132,
+              "first_below": 628,
+              "status": "descended"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "limit": 100000,
+      "starts_checked": 99999,
+      "cap": 1000,
+      "unresolved": [],
+      "record_highs": [
+        {
+          "start": 2,
+          "steps": 1,
+          "first_below": 1,
+          "status": "descended"
+        },
+        {
+          "start": 3,
+          "steps": 6,
+          "first_below": 2,
+          "status": "descended"
+        },
+        {
+          "start": 7,
+          "steps": 11,
+          "first_below": 5,
+          "status": "descended"
+        },
+        {
+          "start": 27,
+          "steps": 96,
+          "first_below": 23,
+          "status": "descended"
+        },
+        {
+          "start": 703,
+          "steps": 132,
+          "first_below": 628,
+          "status": "descended"
+        },
+        {
+          "start": 10087,
+          "steps": 171,
+          "first_below": 7688,
+          "status": "descended"
+        },
+        {
+          "start": 35655,
+          "steps": 220,
+          "first_below": 29405,
+          "status": "descended"
+        }
+      ],
+      "step_histogram": {
+        "1": 50000,
+        "3": 24999,
+        "6": 6250,
+        "8": 6250,
+        "11": 2345,
+        "13": 2734,
+        "16": 1171,
+        "19": 731,
+        "21": 1038,
+        "24": 527,
+        "26": 724,
+        "29": 374,
+        "32": 287,
+        "34": 383,
+        "37": 209,
+        "39": 296,
+        "42": 160,
+        "44": 234,
+        "47": 119,
+        "50": 85,
+        "52": 129,
+        "55": 84,
+        "57": 112,
+        "60": 60,
+        "63": 51,
+        "65": 74,
+        "68": 41,
+        "70": 80,
+        "73": 37,
+        "75": 53,
+        "78": 24,
+        "81": 20,
+        "83": 29,
+        "86": 24,
+        "88": 33,
+        "91": 17,
+        "94": 17,
+        "96": 23,
+        "99": 8,
+        "101": 15,
+        "104": 13,
+        "106": 16,
+        "109": 16,
+        "112": 12,
+        "114": 20,
+        "117": 12,
+        "119": 9,
+        "122": 5,
+        "125": 3,
+        "127": 7,
+        "130": 4,
+        "132": 4,
+        "135": 2,
+        "140": 3,
+        "143": 1,
+        "145": 4,
+        "148": 1,
+        "150": 2,
+        "156": 1,
+        "163": 1,
+        "171": 3,
+        "176": 1,
+        "179": 1,
+        "181": 1,
+        "189": 1,
+        "194": 1,
+        "197": 1,
+        "200": 1,
+        "202": 2,
+        "205": 1,
+        "207": 1,
+        "210": 1,
+        "220": 1
+      },
+      "independent_disagreements": 0,
+      "evidence_sha256": "aa94dcb36a977ccd6d1f8c0fdc6109d6e5def80a8a6c54f1c8eadd40f4226a75",
+      "residue_groups": {
+        "8": [
+          {
+            "remainder": 0,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 8,
+              "steps": 1,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 1,
+            "checked": 12499,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 9,
+              "steps": 3,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 2,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 2,
+              "steps": 1,
+              "first_below": 1,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 3,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 6,
+            "maximum": {
+              "start": 57115,
+              "steps": 200,
+              "first_below": 29405,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 4,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 4,
+              "steps": 1,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 5,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 5,
+              "steps": 3,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 6,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 6,
+              "steps": 1,
+              "first_below": 3,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 7,
+            "checked": 12500,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 35655,
+              "steps": 220,
+              "first_below": 29405,
+              "status": "descended"
+            }
+          }
+        ],
+        "16": [
+          {
+            "remainder": 0,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 16,
+              "steps": 1,
+              "first_below": 8,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 1,
+            "checked": 6249,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 17,
+              "steps": 3,
+              "first_below": 13,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 2,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 2,
+              "steps": 1,
+              "first_below": 1,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 3,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 6,
+            "maximum": {
+              "start": 3,
+              "steps": 6,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 4,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 4,
+              "steps": 1,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 5,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 5,
+              "steps": 3,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 6,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 6,
+              "steps": 1,
+              "first_below": 3,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 7,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 35655,
+              "steps": 220,
+              "first_below": 29405,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 8,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 8,
+              "steps": 1,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 9,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 9,
+              "steps": 3,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 10,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 10,
+              "steps": 1,
+              "first_below": 5,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 11,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 57115,
+              "steps": 200,
+              "first_below": 29405,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 12,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 12,
+              "steps": 1,
+              "first_below": 6,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 13,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 13,
+              "steps": 3,
+              "first_below": 10,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 14,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 14,
+              "steps": 1,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 15,
+            "checked": 6250,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 60975,
+              "steps": 207,
+              "first_below": 52975,
+              "status": "descended"
+            }
+          }
+        ],
+        "32": [
+          {
+            "remainder": 7,
+            "checked": 3125,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 35655,
+              "steps": 220,
+              "first_below": 29405,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 11,
+            "checked": 3125,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 11,
+              "steps": 8,
+              "first_below": 10,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 15,
+            "checked": 3125,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 60975,
+              "steps": 207,
+              "first_below": 52975,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 23,
+            "checked": 3125,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 23,
+              "steps": 8,
+              "first_below": 20,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 27,
+            "checked": 3125,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 57115,
+              "steps": 200,
+              "first_below": 29405,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 31,
+            "checked": 3125,
+            "unresolved": 0,
+            "minimum_steps": 13,
+            "maximum": {
+              "start": 37503,
+              "steps": 205,
+              "first_below": 21722,
+              "status": "descended"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "limit": 1000000,
+      "starts_checked": 999999,
+      "cap": 1000,
+      "unresolved": [],
+      "record_highs": [
+        {
+          "start": 2,
+          "steps": 1,
+          "first_below": 1,
+          "status": "descended"
+        },
+        {
+          "start": 3,
+          "steps": 6,
+          "first_below": 2,
+          "status": "descended"
+        },
+        {
+          "start": 7,
+          "steps": 11,
+          "first_below": 5,
+          "status": "descended"
+        },
+        {
+          "start": 27,
+          "steps": 96,
+          "first_below": 23,
+          "status": "descended"
+        },
+        {
+          "start": 703,
+          "steps": 132,
+          "first_below": 628,
+          "status": "descended"
+        },
+        {
+          "start": 10087,
+          "steps": 171,
+          "first_below": 7688,
+          "status": "descended"
+        },
+        {
+          "start": 35655,
+          "steps": 220,
+          "first_below": 29405,
+          "status": "descended"
+        },
+        {
+          "start": 270271,
+          "steps": 267,
+          "first_below": 160832,
+          "status": "descended"
+        },
+        {
+          "start": 362343,
+          "steps": 269,
+          "first_below": 323434,
+          "status": "descended"
+        },
+        {
+          "start": 381727,
+          "steps": 282,
+          "first_below": 323434,
+          "status": "descended"
+        },
+        {
+          "start": 626331,
+          "steps": 287,
+          "first_below": 597017,
+          "status": "descended"
+        }
+      ],
+      "step_histogram": {
+        "1": 500000,
+        "3": 249999,
+        "6": 62500,
+        "8": 62500,
+        "11": 23439,
+        "13": 27343,
+        "16": 11718,
+        "19": 7323,
+        "21": 10376,
+        "24": 5284,
+        "26": 7261,
+        "29": 3670,
+        "32": 2530,
+        "34": 3831,
+        "37": 2124,
+        "39": 3018,
+        "42": 1607,
+        "44": 2327,
+        "47": 1281,
+        "50": 903,
+        "52": 1400,
+        "55": 799,
+        "57": 1228,
+        "60": 635,
+        "63": 486,
+        "65": 770,
+        "68": 408,
+        "70": 650,
+        "73": 344,
+        "75": 547,
+        "78": 300,
+        "81": 213,
+        "83": 356,
+        "86": 219,
+        "88": 307,
+        "91": 175,
+        "94": 134,
+        "96": 185,
+        "99": 114,
+        "101": 176,
+        "104": 95,
+        "106": 144,
+        "109": 86,
+        "112": 80,
+        "114": 125,
+        "117": 69,
+        "119": 104,
+        "122": 53,
+        "125": 45,
+        "127": 70,
+        "130": 31,
+        "132": 65,
+        "135": 37,
+        "138": 33,
+        "140": 50,
+        "143": 26,
+        "145": 35,
+        "148": 21,
+        "150": 39,
+        "153": 26,
+        "156": 19,
+        "158": 28,
+        "161": 19,
+        "163": 30,
+        "166": 13,
+        "169": 7,
+        "171": 21,
+        "174": 8,
+        "176": 20,
+        "179": 12,
+        "181": 9,
+        "184": 7,
+        "187": 3,
+        "189": 10,
+        "192": 4,
+        "194": 5,
+        "197": 7,
+        "200": 4,
+        "202": 6,
+        "205": 4,
+        "207": 4,
+        "210": 2,
+        "212": 2,
+        "215": 3,
+        "220": 5,
+        "223": 1,
+        "225": 3,
+        "228": 2,
+        "233": 1,
+        "236": 1,
+        "238": 4,
+        "243": 2,
+        "246": 2,
+        "249": 2,
+        "251": 1,
+        "256": 1,
+        "259": 1,
+        "264": 4,
+        "267": 1,
+        "269": 2,
+        "272": 1,
+        "282": 2,
+        "285": 1,
+        "287": 1
+      },
+      "independent_disagreements": 0,
+      "evidence_sha256": "1bbdbc778c9ab362c755b91979d1658ef193b15e3ff35e4a098bc18972bd7c2b",
+      "residue_groups": {
+        "8": [
+          {
+            "remainder": 0,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 8,
+              "steps": 1,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 1,
+            "checked": 124999,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 9,
+              "steps": 3,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 2,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 2,
+              "steps": 1,
+              "first_below": 1,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 3,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 6,
+            "maximum": {
+              "start": 626331,
+              "steps": 287,
+              "first_below": 597017,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 4,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 4,
+              "steps": 1,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 5,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 5,
+              "steps": 3,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 6,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 6,
+              "steps": 1,
+              "first_below": 3,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 7,
+            "checked": 125000,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 667375,
+              "steps": 285,
+              "first_below": 424094,
+              "status": "descended"
+            }
+          }
+        ],
+        "16": [
+          {
+            "remainder": 0,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 16,
+              "steps": 1,
+              "first_below": 8,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 1,
+            "checked": 62499,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 17,
+              "steps": 3,
+              "first_below": 13,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 2,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 2,
+              "steps": 1,
+              "first_below": 1,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 3,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 6,
+            "maximum": {
+              "start": 3,
+              "steps": 6,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 4,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 4,
+              "steps": 1,
+              "first_below": 2,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 5,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 5,
+              "steps": 3,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 6,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 6,
+              "steps": 1,
+              "first_below": 3,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 7,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 362343,
+              "steps": 269,
+              "first_below": 323434,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 8,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 8,
+              "steps": 1,
+              "first_below": 4,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 9,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 9,
+              "steps": 3,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 10,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 10,
+              "steps": 1,
+              "first_below": 5,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 11,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 626331,
+              "steps": 287,
+              "first_below": 597017,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 12,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 12,
+              "steps": 1,
+              "first_below": 6,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 13,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 3,
+            "maximum": {
+              "start": 13,
+              "steps": 3,
+              "first_below": 10,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 14,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 1,
+            "maximum": {
+              "start": 14,
+              "steps": 1,
+              "first_below": 7,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 15,
+            "checked": 62500,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 667375,
+              "steps": 285,
+              "first_below": 424094,
+              "status": "descended"
+            }
+          }
+        ],
+        "32": [
+          {
+            "remainder": 7,
+            "checked": 31250,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 362343,
+              "steps": 269,
+              "first_below": 323434,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 11,
+            "checked": 31250,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 11,
+              "steps": 8,
+              "first_below": 10,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 15,
+            "checked": 31250,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 667375,
+              "steps": 285,
+              "first_below": 424094,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 23,
+            "checked": 31250,
+            "unresolved": 0,
+            "minimum_steps": 8,
+            "maximum": {
+              "start": 23,
+              "steps": 8,
+              "first_below": 20,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 27,
+            "checked": 31250,
+            "unresolved": 0,
+            "minimum_steps": 11,
+            "maximum": {
+              "start": 626331,
+              "steps": 287,
+              "first_below": 597017,
+              "status": "descended"
+            }
+          },
+          {
+            "remainder": 31,
+            "checked": 31250,
+            "unresolved": 0,
+            "minimum_steps": 13,
+            "maximum": {
+              "start": 381727,
+              "steps": 282,
+              "first_below": 323434,
+              "status": "descended"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "limits": "Finite ordinary-step first descent. Start 1 is excluded. Stages overlap. No universal termination claim.",
+  "seconds": 4.153266083
+}

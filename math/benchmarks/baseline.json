@@ -1,0 +1,16 @@
+{
+  "suite": "unit-propagation-v1",
+  "metrics": {
+    "formulas": 18069,
+    "sat_sat": 6511,
+    "soundness_errors": 0,
+    "stalled_sat": 9824,
+    "stalled_unsat": 10,
+    "unsat_unsat": 1724,
+    "variables_1": 4,
+    "variables_2": 163,
+    "variables_3": 17902,
+    "witness_errors": 0
+  },
+  "corpus_sha256": "5afa8a13c2505c5ccac80a023ec0bfd8a0aed02206e613dfeb7518eefcbbaed6"
+}

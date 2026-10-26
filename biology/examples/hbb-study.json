@@ -1,0 +1,57 @@
+{
+  "study": "HBB sequence, mass, and charge comparison",
+  "biopython": "1.88",
+  "reference_sha256": "c114b998f526a13ce7029a484f7d2679de9bc9f50a533d6e86ce5e644ca6c5d9",
+  "cross_check": {
+    "accession": "sp|P68871|HBB_HUMAN",
+    "url": "https://rest.uniprot.org/uniprotkb/P68871.fasta",
+    "sha256": "a976e8ef07b298781398d4a66d52ddf13b796e991baa7e4e499732ecc6689107",
+    "matches_ncbi_translation_annotation": true,
+    "matches_uniprot_sequence": true
+  },
+  "assumptions": "Average molecular mass; 147-residue unprocessed chains with initiator methionine. No heme, tetramer, or post-translational modifications. Charge uses Biopython pKa estimates at pH 7.",
+  "reference": {
+    "mass_da": 15998.2064,
+    "estimated_charge_pH7": -0.718567
+  },
+  "variants": [
+    {
+      "variant": "c.20A>T",
+      "differences": [
+        {
+          "position": 7,
+          "reference": "E",
+          "mutant": "V"
+        }
+      ],
+      "mass_da": 15968.2234,
+      "mass_delta_da": -29.983,
+      "estimated_charge_pH7": 0.278623,
+      "charge_delta_pH7": 0.99719
+    },
+    {
+      "variant": "c.20A>G",
+      "differences": [
+        {
+          "position": 7,
+          "reference": "E",
+          "mutant": "G"
+        }
+      ],
+      "mass_da": 15926.1437,
+      "mass_delta_da": -72.0627,
+      "estimated_charge_pH7": 0.278623,
+      "charge_delta_pH7": 0.99719
+    },
+    {
+      "variant": "c.21G>A",
+      "differences": [],
+      "mass_da": 15998.2064,
+      "mass_delta_da": 0.0,
+      "estimated_charge_pH7": -0.718567,
+      "charge_delta_pH7": 0.0
+    }
+  ],
+  "interpretation": "Consistent with the first AI prediction of one E-to-V difference, about 30 Da lower mass, and about +1 charge. Synonymous control has zero changes in these sequence-derived metrics. This checks arithmetic, not biological function or novelty.",
+  "limits": "Computational estimates, not physical measurements. Two databases agreeing is a source cross-check, not independent experimental validation. No inference about oxygen binding, folding, expression, or disease risk."
+}

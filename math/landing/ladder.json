@@ -1,0 +1,93 @@
+{
+  "suite": "number-theory-v1",
+  "status": "complete",
+  "updated_at": "2026-10-26T08:34:19.696323+00:00",
+  "engine_sha256": "35be2934174a1601dc3eb90f7fe09ef8b33d647923ed16c2a986dc40bcf1957a",
+  "stages": [
+    {
+      "limit": 100,
+      "goldbach": {
+        "even_cases": 49,
+        "counterexamples": [],
+        "largest_minimum_addend": {
+          "even": 98,
+          "p": 19,
+          "q": 79
+        }
+      },
+      "collatz": {
+        "starts": 100,
+        "step_cap": 1000,
+        "unresolved": [],
+        "longest_first_tie": {
+          "start": 97,
+          "steps": 118,
+          "peak": 9232,
+          "status": "reached_one"
+        }
+      },
+      "twin_primes": {
+        "pairs": 8,
+        "both_primes_at_most": 100
+      },
+      "evidence_sha256": "ea7470a8f8276855ca903610822962234cd871d6d2c13195b218085141e45e0a"
+    },
+    {
+      "limit": 1000,
+      "goldbach": {
+        "even_cases": 499,
+        "counterexamples": [],
+        "largest_minimum_addend": {
+          "even": 992,
+          "p": 73,
+          "q": 919
+        }
+      },
+      "collatz": {
+        "starts": 1000,
+        "step_cap": 1000,
+        "unresolved": [],
+        "longest_first_tie": {
+          "start": 871,
+          "steps": 178,
+          "peak": 190996,
+          "status": "reached_one"
+        }
+      },
+      "twin_primes": {
+        "pairs": 35,
+        "both_primes_at_most": 1000
+      },
+      "evidence_sha256": "5e808aa4e46151710927161a30437e1b7d447a9b0a5a2b1f6b51df8590867730"
+    },
+    {
+      "limit": 10000,
+      "goldbach": {
+        "even_cases": 4999,
+        "counterexamples": [],
+        "largest_minimum_addend": {
+          "even": 7426,
+          "p": 173,
+          "q": 7253
+        }
+      },
+      "collatz": {
+        "starts": 10000,
+        "step_cap": 1000,
+        "unresolved": [],
+        "longest_first_tie": {
+          "start": 6171,
+          "steps": 261,
+          "peak": 975400,
+          "status": "reached_one"
+        }
+      },
+      "twin_primes": {
+        "pairs": 205,
+        "both_primes_at_most": 10000
+      },
+      "evidence_sha256": "d4c4e8fc8fabb691a540458c29e40e92cd6782dfbad5df6ff6c50e9222c5fc5c"
+    }
+  ],
+  "limits": "Finite checks only. A Collatz step cap is unresolved, not divergence. No finite twin-prime count proves infinitely many pairs."
+}

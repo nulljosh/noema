@@ -1,0 +1,13 @@
+/* Noema 1.0. Base palette from https://clrs.cc. Tints use alpha, never new hues. */
+:root{
+ --color-navy:#001F3F;--color-blue:#0074D9;--color-aqua:#7FDBFF;
+ --color-black:#111111;--color-gray:#AAAAAA;--color-silver:#DDDDDD;--color-white:#FFFFFF;
+ --color-maroon:#85144B;--color-olive:#3D9970;
+ --paper:var(--color-white);--ink:var(--color-navy);--blue:var(--color-blue);
+ --muted:rgba(0,31,63,.72);--line:var(--color-silver);--wash:rgba(0,116,217,.07);--white:var(--color-white);
+ --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ --font-display:Georgia,'Times New Roman',serif;--serif:var(--font-display);
+ --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-12:48px;--space-16:64px;
+ --radius-control:4px;--radius-panel:8px;--border:1px solid var(--line);
+ --focus:3px solid var(--blue);--content-max:1280px;
+}

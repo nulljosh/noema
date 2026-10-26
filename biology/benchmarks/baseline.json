@@ -1,0 +1,27 @@
+{
+  "suite": "hbb-v1",
+  "established": "2026-10-13",
+  "metrics": {
+    "scanned": 1332,
+    "consequences": {
+      "missense": 957,
+      "start-codon change; translation initiation is uncertain": 9,
+      "stop gained": 34,
+      "stop lost; downstream sequence needed": 7,
+      "stop retained": 2,
+      "synonymous": 323
+    },
+    "matched_annotations": 256,
+    "unmatched_annotations": 2,
+    "excluded_annotations": 3,
+    "unique_variants": 1332,
+    "known_cases_passed": 9,
+    "known_cases_total": 9
+  },
+  "inputs": {
+    "hbb.gb": "c114b998f526a13ce7029a484f7d2679de9bc9f50a533d6e86ce5e644ca6c5d9",
+    "hbb-uniprot.fasta": "a976e8ef07b298781398d4a66d52ddf13b796e991baa7e4e499732ecc6689107",
+    "hbb-uniprot.json": "937a46d0da699853316d18ae8becb21e949eed48ec8e1c8d2fdbd9bc2798fd12"
+  },
+  "policy": "Frozen initial regression baseline, not independent proof of correctness. Change only after reviewing the biological reason; never refresh automatically to make a failure pass."
+}

@@ -1,0 +1,15 @@
+{
+  "sources": ["https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG1", "https://rest.uniprot.org/uniprotkb/P68871.json"],
+  "coordinate_system": "1-based NM_000518.5 coding DNA; protein numbering includes initiator methionine",
+  "cases": [
+    {"variant":"c.20A>T","amino_acid":"V","consequence":"missense"},
+    {"variant":"c.19G>A","amino_acid":"K","consequence":"missense"},
+    {"variant":"c.19G>C","amino_acid":"Q","consequence":"missense"},
+    {"variant":"c.20A>C","amino_acid":"A","consequence":"missense"},
+    {"variant":"c.21G>A","amino_acid":"E","consequence":"synonymous"},
+    {"variant":"c.19G>T","amino_acid":"*","consequence":"stop gained"},
+    {"variant":"c.1A>G","amino_acid":"V","consequence":"start-codon change; translation initiation is uncertain"},
+    {"variant":"c.442T>C","amino_acid":"Q","consequence":"stop lost; downstream sequence needed"},
+    {"variant":"c.444A>G","amino_acid":"*","consequence":"stop retained"}
+  ]
+}

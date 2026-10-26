@@ -1,0 +1,17 @@
+{
+  "status": "checked",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "theorem": "Noema.first_descent_four_k_plus_one",
+  "statement": "For every natural k >= 1, ordinary Collatz starting at 4*k+1 first descends at exactly step 3.",
+  "source_sha256": "c95248c6e177862a8a3fdcd892aecfd59fe7d7953ab7147bc9af10671700e00b",
+  "commands": [
+    "lean -DwarningAsError=true Noema.lean",
+    "lake build"
+  ],
+  "axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "compiler_output": "'Noema.first_descent_four_k_plus_one' depends on axioms: [propext, Quot.sound]",
+  "scope": "One universally quantified elementary first-descent lemma. Not a proof of Collatz termination or of the other written lemmas."
+}

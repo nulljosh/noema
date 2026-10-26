@@ -1,0 +1,7 @@
+/* Noema brand tokens. The accent is the only colour this app owns; spacing, radii and type come from the shared system. */
+:root {
+  --accent: #2b62c9;
+  --accent-light: #7fb0ff;
+  --accent-deep: #2b62c9;
+  --accent-ring: color-mix(in srgb, #2b62c9 30%, transparent);
+}

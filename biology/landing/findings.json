@@ -1,0 +1,26 @@
+{
+  "updated": "2026-10-14T04:10:42.570256+00:00",
+  "metrics": {
+    "scanned": 1332,
+    "unique_variants": 1332,
+    "consequences": {
+      "missense": 957,
+      "start-codon change; translation initiation is uncertain": 9,
+      "stop gained": 34,
+      "stop lost; downstream sequence needed": 7,
+      "stop retained": 2,
+      "synonymous": 323
+    },
+    "known_cases_passed": 9,
+    "known_cases_total": 9,
+    "matched_annotations": 256,
+    "unmatched_annotations": 2,
+    "excluded_annotations": 3
+  },
+  "reproducibility_runs": 5,
+  "passed_runs": 5,
+  "identical_metrics": true,
+  "median_seconds": 0.728,
+  "model_calls": 0,
+  "scope": "Known-case correctness and fixed-input regression checks only. Annotation coverage is 256/261 in the initial snapshot; unmatched and excluded cases stay visible. Timing is informational and comparable only on the same machine under similar load. AI hypothesis quality is not scored."
+}
