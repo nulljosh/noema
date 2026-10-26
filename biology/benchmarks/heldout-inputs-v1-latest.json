@@ -1,0 +1,85 @@
+{
+  "suite": "hbb-heldout-inputs-v1",
+  "records": 1972,
+  "skipped": 1838,
+  "labeled": 134,
+  "engine_disagreements": [],
+  "held_out_from_accession": "VCV000478852",
+  "development": {
+    "predictor_v0": {
+      "n": 93,
+      "positives": 77,
+      "negatives": 16,
+      "tp": 39,
+      "tn": 12,
+      "fp": 4,
+      "fn": 38,
+      "sensitivity": 0.5064935064935064,
+      "specificity": 0.75,
+      "balanced_accuracy": 0.6282467532467533
+    },
+    "majority_class": {
+      "n": 93,
+      "positives": 77,
+      "negatives": 16,
+      "tp": 77,
+      "tn": 0,
+      "fp": 16,
+      "fn": 0,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.5
+    },
+    "non_synonymous_is_1": {
+      "n": 93,
+      "positives": 77,
+      "negatives": 16,
+      "tp": 77,
+      "tn": 0,
+      "fp": 16,
+      "fn": 0,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  },
+  "held_out": {
+    "predictor_v0": {
+      "n": 41,
+      "positives": 37,
+      "negatives": 4,
+      "tp": 22,
+      "tn": 3,
+      "fp": 1,
+      "fn": 15,
+      "sensitivity": 0.5945945945945946,
+      "specificity": 0.75,
+      "balanced_accuracy": 0.6722972972972974
+    },
+    "majority_class": {
+      "n": 41,
+      "positives": 37,
+      "negatives": 4,
+      "tp": 37,
+      "tn": 0,
+      "fp": 4,
+      "fn": 0,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.5
+    },
+    "non_synonymous_is_1": {
+      "n": 41,
+      "positives": 37,
+      "negatives": 4,
+      "tp": 37,
+      "tn": 0,
+      "fp": 4,
+      "fn": 0,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  },
+  "limits": "ClinVar classifications are submitter assertions, not measurements. Balanced accuracy on one gene says nothing about other genes."
+}

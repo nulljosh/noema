@@ -14,5 +14,10 @@
   },
   "baselines": ["majority class of the development set", "every non-synonymous change predicted 1"],
   "metric": "balanced accuracy, with the confusion matrix and counts",
-  "rule": "Do not change predictor_v0 or the split after seeing labels. Any new predictor is v1 and is scored on the same held-out set, reported next to v0."
+  "rule": "Do not change predictor_v0 or the split after seeing labels. Any new predictor is v1 and is scored on the same held-out set, reported next to v0.",
+  "inputs_v1": {
+    "declared": "2026-10-26, after the v0 run; labels for these records were already pinned but never scored",
+    "change": "Also accept NM_000518.4 titles. Its CDS is byte-identical to NM_000518.5, so c. positions and protein changes agree.",
+    "rule": "predictor_v0, the labels, the 70/30 split by VCV accession and the metric are unchanged. Reported next to the v0 inputs, never instead of them."
+  }
 }

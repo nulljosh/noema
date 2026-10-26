@@ -103,4 +103,4 @@ The first three scored cycles agree: 1,332 substitutions, 256 protein annotation
 
 ## Held-out benchmark
 
-`uv run heldout.py` scores a rule declared in advance (`benchmarks/heldout-spec.json`) against the newest 30 percent of pinned ClinVar HBB records. Version 0 reaches 0.67 balanced accuracy on 28 held-out records, against 0.50 for both baselines. The set is small, so this is a baseline, not a finding. `uv run heldout.py fetch` refreshes the pinned data by hand; tests never use the network.
+`uv run heldout.py` scores a rule declared in advance (`benchmarks/heldout-spec.json`) against the newest 30 percent of pinned ClinVar HBB records. Version 0 reaches 0.67 balanced accuracy on 28 held-out records, against 0.50 for both baselines. The set is small, so this is a baseline, not a finding. Inputs v1 also take the older transcript's titles (same coding sequence): 41 held-out records, still 0.67, still only four negatives. `uv run heldout.py fetch` refreshes the pinned data by hand; tests never use the network.

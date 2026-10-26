@@ -12,7 +12,8 @@
 
 - [x] **Math:** split classes 7, 15, 27 and 31 modulo 64 (2026-10-26, none resolve) (now the first math task). Derive the forced prefixes before computing anything, and keep the bound at one million.
 - [x] **Biology:** held-out benchmark declared and scored (`uv run heldout.py`, 2026-10-26). v0 = 0.67 balanced accuracy on 28 held-out records.
-- [ ] **Biology:** widen inputs as v1 inputs: accept NM_000518.4 titles (243 records) after checking the two transcripts share the CDS, and report the held-out set again with v0 unchanged.
+- [x] **Biology:** inputs v1 with NM_000518.4 titles (2026-10-26): 41 held out, v0 still 0.67.
+- [ ] **Biology:** the held-out set has only four negatives. Declare, before fetching, a second source of benign labels (common HBB variants by population frequency, cited threshold) and score v0 on it.
 - [ ] **Biology:** predictor v1 from structure facts with sources (heme pocket and alpha1-beta1/beta2 interface residues from a cited paper), scored next to v0 on the same split.
 - [ ] **Biology:** add a second public gene, but only with expected cases someone else specified.
 - [ ] **Both:** one claims ledger. A small `claims.json` per lab: claim, exact domain, bound, level (observed, written, machine-checked, literature), source. The landing pages render from it, so no page can state more than the ledger holds.
@@ -45,6 +46,7 @@ Every candidate goes here first. A candidate is a breakthrough only after it pas
 | 2026-10-26 | statistics | Birthday problem: 23 people, P = 0.507297; coupon collector: 14.7 rolls for a die, 224.96 draws for 50 coupons | observed (exact fractions) | seeded simulation within four standard errors | textbook closed forms, exact match | reproduced |
 | 2026-10-26 | cs | Backward reasoning plus two closed-tape deciders cut 3-state holdouts 92 to 4 and 4-state 20,569 to 1,539 (run 23 s); maxima unchanged | observed | 88 newly flagged 3-state machines run 100,000 steps and 2,000 sampled 4-state ones 20,000 steps, none halt | bbchallenge backward-reasoning and CTL deciders; BB(3) = 21 proved by Lin and Rado (1965) | reproduced |
 | 2026-10-26 | cs | BB(3) = 21 steps and Sigma(3) = 6 ones, decided by this code: every 3-state machine halts within 21 steps or is proved never to halt (0 holdouts). 4-state holdouts 1,539 to 643 | machine-decided (sound deciders, Python) | each flagged machine rerun with no decider, 3-state to 1,000,000 steps and 896 four-state to 50,000, none halt | Lin and Rado (1965); bbchallenge n-gram CPS decider | reproduced |
+| 2026-10-26 | biology | Inputs v1 (NM_000518.4 titles too, identical CDS) grow the labeled set 93 to 134 and the held-out set 28 to 41; v0 unchanged scores 0.67 again (sensitivity 0.59, specificity 0.75) | observed | engine matches ClinVar's protein change on all 134; both transcripts' CDS byte-identical from NCBI | same ClinVar pin; spec amended with a dated inputs_v1 block, v0 and split untouched | baseline held, not a finding |
 
 ## Fields
 
