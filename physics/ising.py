@@ -6,7 +6,7 @@ checked against brute force (L <= 4) and Kaufman's 1949 closed form.
 
     python3 ising.py        # L = 2..8, writes benchmarks/ising-latest.json
     python3 ising.py 9      # one size, not saved
-    python3 ising.py tri 9  # antiferromagnet ground states on triangular tori up to 9x9
+    python3 ising.py tri 12 # antiferromagnet ground states on triangular tori up to 12x12
 """
 import json
 import math
@@ -153,11 +153,43 @@ def triangular_ground_states(L):
     return k, g[k]
 
 
+def no_mono_triangle_count(L):
+    """The same ground states counted a second way: every triangle has exactly one like bond
+    exactly when no triangle has all three spins equal, so count 2-colourings of the triangular
+    torus with no one-colour triangle. A 0/1 row transfer, much faster than the full polynomial."""
+    S, full = 1 << L, (1 << L) - 1
+    rot = lambda s: ((s << 1) | (s >> (L - 1))) & full
+
+    def ok(s, t):  # triangles {s_i, t_i, t_(i-1)} and {s_i, s_(i-1), t_(i-1)}, matching density_of_states
+        rt, rs = rot(t), rot(s)
+        return not ((~(s ^ t) & ~(t ^ rt)) | (~(s ^ rs) & ~(rs ^ rt))) & full
+
+    nxt = [[t for t in range(S) if ok(s, t)] for s in range(S)]
+    orbit = {}
+    for s0 in range(S):
+        r, rep = s0, s0
+        for _ in range(L):
+            r = rot(r)
+            rep = min(rep, r, r ^ full)
+        orbit[rep] = orbit.get(rep, 0) + 1
+    total = 0
+    for s0, mult in orbit.items():
+        V = {s0: 1}
+        for _ in range(L - 1):
+            W = {}
+            for s, c in V.items():
+                for t in nxt[s]:
+                    W[t] = W.get(t, 0) + c
+            V = W
+        total += mult * sum(c for s, c in V.items() if ok(s, s0))
+    return total
+
+
 if __name__ == "__main__":
     if sys.argv[1:2] == ["tri"]:
         for L in range(2, int(sys.argv[2]) + 1 if sys.argv[2:] else 9):
-            k, count = triangular_ground_states(L)
-            print(f"L={L}  ground states {count}  unlike bonds {k} of {3 * L * L}  entropy per spin {math.log(count) / (L * L):.5f} (Wannier 0.33831)")
+            count = no_mono_triangle_count(L)
+            print(f"L={L}  ground states {count}  entropy per spin {math.log(count) / (L * L):.5f} (Wannier 0.33831)", flush=True)
         raise SystemExit
     sizes = [int(a) for a in sys.argv[1:]] or list(range(2, 9))
     rows = study(sizes)

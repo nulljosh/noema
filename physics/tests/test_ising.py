@@ -41,6 +41,7 @@ class IsingTests(unittest.TestCase):
         # L = 5 was also checked by listing all 2^25 states (numpy, 2026-10-26): 3630.
         counts = [ising.triangular_ground_states(L)[1] for L in range(2, 8)]
         self.assertEqual(counts, [6, 42, 42, 3630, 263640, 2620800])
+        self.assertEqual([ising.no_mono_triangle_count(L) for L in range(2, 8)], counts)  # second method
 
     def test_specific_heat_peak_falls_toward_onsager(self):
         peaks = [ising.specific_heat_peak(ising.density_of_states(L))[0] for L in range(4, 8)]
