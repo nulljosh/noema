@@ -16,6 +16,14 @@ class TotalsTests(unittest.TestCase):
         self.assertEqual(list(totals.splits('504 participants (333 women, 165 men, and 6 unspecified)')), [])
         self.assertEqual(list(totals.splits('40 patients (20 men and 15 men)')), [])
 
+    def test_arms(self):
+        self.assertEqual([r[0] for r in totals.arms('95 patients were randomized to either MA (n = 50) or KA (n = 49) groups.')], [95])
+        for text in ('120 patients were randomized to A (n = 60) or B (n = 60).',
+                     '1082 infants were randomly assigned to sitting (n=546) or lying (n=536), and early (n=549) or late (n=533).',
+                     '15 076 participants were randomized to aspirin 81 mg (n=7540) or 325 mg (n=7536).',
+                     'COVID-19 patients were randomized to verum (n = 41) and placebo (n = 37).'):
+            self.assertEqual(list(totals.arms(text)), [], text)
+
 
 if __name__ == '__main__':
     unittest.main()

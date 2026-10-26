@@ -51,6 +51,8 @@ Across the same 235,860 abstracts there are 31,021 ratios with an interval. 68 s
 
 `totals.py` checks sex splits against the total they split, like "55 patients (22 males and 34 females)". 997 splits can be checked. 4 add up to more people than the total, which cannot happen: 56 of 55, 69 of 62, 1,648 of 1,612 and 500 of 400. 8 more fall short with no missing or other group named, such as 43 of 53, which may be unreported data. Three flags were not mismatches and are marked so in `totals-2015-2024.json`.
 
+Trial arms get the same check. "95 patients were randomized to MA (n = 50) or KA (n = 49)" puts 99 people in 95 places. 2,099 sentences give a randomized total and at least two arm sizes. 13 arms overflow their total, and all 13 were read by hand: 9 are clear, like 674 women split into 337 and 377. One is markup debris and three are unclear, such as families counted against children. A run of arms that adds to the total exactly is never flagged, since that is a factorial design or a later "of whom" count.
+
 ## Are flagged papers retracted more often?
 
 No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. The slips also do not cluster: of 440 abstracts flagged by any check, only one (PMID 39086232) fails two. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.

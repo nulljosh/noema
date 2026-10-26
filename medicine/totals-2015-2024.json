@@ -170,5 +170,139 @@
    "snippet": "18. The safety population comprised all 1107 participants (369 girls and 369 boys in the SIIPL quadrivalent HPV vaccine g",
    "review": "not a mismatch: the split is of one vaccine group"
   }
+ ],
+ "arms_checked": 2099,
+ "arms_over_clear": 9,
+ "arm_rows": [
+  {
+   "pmid": "38488954",
+   "total": 94,
+   "arms": [
+    74,
+    60
+   ],
+   "snippet": "94 children were randomly assigned to two intervention groups: the PCEM group (n = 74) and the PM group (n = 60).",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "27113595",
+   "total": 95,
+   "arms": [
+    50,
+    49
+   ],
+   "snippet": "95 patients were randomized to either MA (n = 50) or KA (n = 49) groups.",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "28438473",
+   "total": 674,
+   "arms": [
+    337,
+    377
+   ],
+   "snippet": "674 women were enrolled and randomly assigned to standard chemotherapy (n=337) or chemotherapy plus bevacizumab (n=377).",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "29369240",
+   "total": 28,
+   "arms": [
+    78,
+    75
+   ],
+   "snippet": "28 patients 153 patients were randomized and CapsoCam SV-1 (n=78) or PillCam SB 3 (n=75) was administered.",
+   "review": "not a mismatch: markup debris, the trial randomized 153"
+  },
+  {
+   "pmid": "32876119",
+   "total": 33,
+   "arms": [
+    34,
+    36
+   ],
+   "snippet": "33 patients were randomly divided into two groups, MTA Angelus (n = 34) and Bio-C Pulpo (n = 36).",
+   "review": "ambiguous: 70 may count teeth, not patients"
+  },
+  {
+   "pmid": "32282434",
+   "total": 150,
+   "arms": [
+    81,
+    77
+   ],
+   "snippet": "150 patients were randomized into 2 groups: concurrent, Intacs and CXL during the same session (n = 81), or sequential, Intacs followed by CXL 3 months later (n = 77).",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "31998802",
+   "total": 371,
+   "arms": [
+    263,
+    263
+   ],
+   "snippet": "371 HCC patients were randomly divided into a development cohort ( N = 263) and a validation cohort ( N = 263) and a validation cohort (.",
+   "review": "ambiguous: repeated text in the abstract, and a cohort split rather than a trial"
+  },
+  {
+   "pmid": "31525120",
+   "total": 180,
+   "arms": [
+    4500,
+    4500
+   ],
+   "snippet": "180 overweight or obese patients were recruited and randomly assigned to an intervention group (n = 4500) or to a control group (n = 4500)",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "33548689",
+   "total": 348,
+   "arms": [
+    346,
+    180
+   ],
+   "snippet": "348 families including 526 children were randomized to START (n = 346) and usual services (n = 180).",
+   "review": "ambiguous: 348 families but arms may count children (526)"
+  },
+  {
+   "pmid": "33539729",
+   "total": 548,
+   "arms": [
+    299,
+    315
+   ],
+   "snippet": "548 patients were randomly assigned either 24 Gy in 12 fractions (n=299) or 4 Gy in two fractions (n=315).",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "36092537",
+   "total": 120,
+   "arms": [
+    64,
+    65
+   ],
+   "snippet": "120 patients were randomized to receive either the control group ( n = 64) or the experimental group ( n = 65).",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "36643621",
+   "total": 177,
+   "arms": [
+    143,
+    60
+   ],
+   "snippet": "177 patients were collected and assigned randomly to the training set ( n = 143) or test set ( n = 60).",
+   "review": "clear: the arms hold more people than were randomized"
+  },
+  {
+   "pmid": "35569996",
+   "total": 203,
+   "arms": [
+    103,
+    108
+   ],
+   "snippet": "203 patients were assigned to the intervention (n=103) and control (n=108) groups.",
+   "review": "clear: the arms hold more people than were randomized"
+  }
  ]
 }
