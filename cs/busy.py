@@ -181,62 +181,94 @@ def closed_block(machine, k=2, max_tokens=6, limit=50000):
     return True
 
 
-def ngram_cps(machine, n=2, k=2, limit=50000):
+def ngram_cps(machine, n=2, k=2, limit=200000):
     """n-gram Closed Position Set over blocks of k aligned cells (k=1 is plain cells). A configuration is
     (state, block under the head, offset in that block, left n-gram, right n-gram), each n-gram listing blocks
     nearest the head first. Sets L and R hold every n-gram seen on each side, starting from the blank pair. A move
     that leaves the head block pushes the block onto the other side's n-gram, and pops a new block from this side:
-    any block b such that the old n-gram shifted and extended by b is already stored. Sweeps repeat until nothing
-    new appears; the sets are finite and only grow, so the loop ends. Every concrete configuration matches an
-    abstract one (its windows are in the sets), so the abstract closure contains every reachable configuration.
+    any block b such that the old n-gram shifted and extended by b is already stored. A configuration that is blocked
+    on a pop waits for that window to appear, and is rerun only then, so the loop ends once nothing is waiting or new.
+    The sets are finite and only grow. Every concrete configuration matches an abstract one (its windows are in the
+    sets), so the abstract closure contains every reachable configuration.
     Returns True when no abstract configuration reads an undefined transition."""
     blank = (0,) * k
     blocks_all = list(itertools.product((0, 1), repeat=k))
     zero = (blank,) * n
     left_set, right_set = {zero}, {zero}
-    seen = {(0, blank, 0, zero, zero)}
-    changed = True
-    while changed:
-        changed = False
-        for state, cur, off, left, right in list(seen):
-            rule = machine.get((state, cur[off]))
-            if rule is None:
-                return False
-            write, move, nxt = rule
-            cells = cur[:off] + (write,) + cur[off + 1:]
-            off2 = off + move
-            if 0 <= off2 < k:
-                successors = [(nxt, cells, off2, left, right)]
-            elif move > 0:
-                window = (cells,) + left[:-1]
-                if window not in left_set:
-                    left_set.add(window)
-                    changed = True
-                successors = [(nxt, right[0], 0, window, right[1:] + (b,))
-                              for b in blocks_all if right[1:] + (b,) in right_set]
-            else:
-                window = (cells,) + right[:-1]
-                if window not in right_set:
-                    right_set.add(window)
-                    changed = True
-                successors = [(nxt, left[0], k - 1, left[1:] + (b,), window)
-                              for b in blocks_all if left[1:] + (b,) in left_set]
-            for config in successors:
-                if config not in seen:
-                    if len(seen) >= limit:
-                        return False
-                    seen.add(config)
-                    changed = True
+    left_wait, right_wait = {}, {}
+    start = (0, blank, 0, zero, zero)
+    seen, work = {start}, [start]
+    while work:
+        config = work.pop()
+        state, cur, off, left, right = config
+        rule = machine.get((state, cur[off]))
+        if rule is None:
+            return False
+        write, move, nxt = rule
+        cells = cur[:off] + (write,) + cur[off + 1:]
+        off2 = off + move
+        successors = []
+        if 0 <= off2 < k:
+            successors.append((nxt, cells, off2, left, right))
+        elif move > 0:
+            window = (cells,) + left[:-1]
+            if window not in left_set:
+                left_set.add(window)
+                work.extend(left_wait.pop(window[:-1], ()))
+            prefix = right[1:]
+            right_wait.setdefault(prefix, set()).add(config)
+            successors.extend((nxt, right[0], 0, window, prefix + (b,))
+                              for b in blocks_all if prefix + (b,) in right_set)
+        else:
+            window = (cells,) + right[:-1]
+            if window not in right_set:
+                right_set.add(window)
+                work.extend(right_wait.pop(window[:-1], ()))
+            prefix = left[1:]
+            left_wait.setdefault(prefix, set()).add(config)
+            successors.extend((nxt, left[0], k - 1, prefix + (b,), window)
+                              for b in blocks_all if prefix + (b,) in left_set)
+        for succ in successors:
+            if succ not in seen:
+                if len(seen) >= limit:
+                    return False
+                seen.add(succ)
+                work.append(succ)
     return True
+
+
+WIDE_NGRAMS = ((3, 2), (2, 3), (3, 3), (3, 4))
+LATE_CAP = 2000
+
+
+def decide_holdout(machine, states):
+    """Name of the first sound decider that proves a holdout never halts from blank, or None.
+    The 2-cell n-gram closure runs before the wider deciders, so the 3-state counts do not move."""
+    if backward(machine, states):
+        return 'backward'
+    if closed_tape(machine):
+        return 'tape'
+    if closed_block(machine):
+        return 'block'
+    if ngram_cps(machine, 2, 2):
+        return 'ngram'
+    if closed_block(machine, 3) or closed_block(machine, 4):
+        return 'wide'
+    if any(ngram_cps(machine, n, k) for n, k in WIDE_NGRAMS):
+        return 'wide'
+    return None
 
 
 def enumerate_machines(states, cap, flagged=None):
     """Every machine reachable this way is distinct in behaviour from a blank tape.
     The first move is fixed to the right; the mirror image behaves the same.
-    Machines the backward, closed-tape, block-tape and n-gram deciders prove non-halting are appended to flagged,
-    when given. The n-gram decider runs last, on the holdouts the others leave, over 2-cell blocks."""
+    A machine that reaches the cap is a holdout. decide_holdout tries the sound deciders in turn. A holdout none of
+    them settles is rerun at LATE_CAP through simulate, which catches a longer translated cycle or cycle, or a
+    halt, which is then counted and its maxima recorded. Machines the deciders prove non-halting are appended to
+    flagged, when given."""
     best_steps, best_ones, halters, holdouts, cycles, translated = 0, 0, 0, 0, 0, 0
-    backwards, tapes, blocks, ngrams = 0, 0, 0, 0
+    proved = {'backward': 0, 'tape': 0, 'block': 0, 'ngram': 0, 'wide': 0, 'rerun': 0}
+    late_halters = 0
     stack = [{}]
     while stack:
         machine = stack.pop()
@@ -248,17 +280,20 @@ def enumerate_machines(states, cap, flagged=None):
             translated += 1
             continue
         if outcome == 'cap':
-            if backward(machine, states):
-                backwards += 1
-            elif closed_tape(machine):
-                tapes += 1
-            elif closed_block(machine):
-                blocks += 1
-            elif ngram_cps(machine, 2, 2):
-                ngrams += 1
-            else:
+            name = decide_holdout(machine, states)
+            if name is None:
+                outcome, key, steps, ones = simulate(machine, LATE_CAP)
+                if outcome == 'undefined':
+                    late_halters += 1
+                    best_steps = max(best_steps, steps + 1)
+                    best_ones = max(best_ones, ones + (1 - key[1]))
+                    continue
+                if outcome in ('cycle', 'translated'):
+                    name = 'rerun'
+            if name is None:
                 holdouts += 1
                 continue
+            proved[name] += 1
             if flagged is not None:
                 flagged.append(dict(machine))
             continue
@@ -277,14 +312,16 @@ def enumerate_machines(states, cap, flagged=None):
                     stack.append({**machine, key: (write, move, nxt)})
     return {'states': states, 'cap': cap, 'max_steps': best_steps, 'max_ones': best_ones,
             'halting_branches': halters, 'cycles_proved': cycles, 'translated_cyclers': translated,
-            'backward_proved': backwards, 'closed_tape_proved': tapes, 'block_tape_proved': blocks,
-            'ngram_proved': ngrams, 'holdouts_at_cap': holdouts}
+            'backward_proved': proved['backward'], 'closed_tape_proved': proved['tape'],
+            'block_tape_proved': proved['block'], 'ngram_proved': proved['ngram'],
+            'wide_proved': proved['wide'], 'rerun_proved': proved['rerun'],
+            'late_halters': late_halters, 'holdouts_at_cap': holdouts}
 
 
 if __name__ == '__main__':
     top = int(sys.argv[1]) if sys.argv[1:] else 3
     for n in range(1, top + 1):
         started = time.monotonic()
-        result = enumerate_machines(n, {1: 10, 2: 50, 3: 200, 4: 2000}[n])
+        result = enumerate_machines(n, {1: 10, 2: 50, 3: 200, 4: 300}[n])
         result['seconds'] = round(time.monotonic() - started, 2)
         print(json.dumps(result))

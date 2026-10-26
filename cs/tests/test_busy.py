@@ -1,5 +1,8 @@
 import unittest
-from busy import backward, closed_block, closed_tape, enumerate_machines, ngram_cps, simulate
+from busy import backward, closed_block, closed_tape, decide_holdout, enumerate_machines, ngram_cps, simulate
+
+
+machine_halts_in_three = {(0, 0): (1, 1, 1), (1, 0): (1, 1, 2)}
 
 
 class BusyBeaverTests(unittest.TestCase):
@@ -67,3 +70,15 @@ class BusyBeaverTests(unittest.TestCase):
         self.assertFalse(closed_block(champion, 2))
         self.assertFalse(ngram_cps(champion, 2, 2))
         self.assertFalse(ngram_cps(champion, 2, 1))
+        # The wider deciders must also refuse both halting machines.
+        for machine in (machine_halts_in_three, champion):
+            self.assertFalse(closed_block(machine, 3))
+            self.assertFalse(closed_block(machine, 4))
+            self.assertFalse(ngram_cps(machine, 3, 2))
+            self.assertFalse(ngram_cps(machine, 2, 3))
+            self.assertFalse(ngram_cps(machine, 3, 4))
+            self.assertIsNone(decide_holdout(machine, 3 if machine is machine_halts_in_three else 2))
+
+    def test_wider_deciders_on_a_three_state_machine(self):
+        # A0 -> 1RB, B0 -> 1RC, C0 undefined: halts in three steps. Every wider decider must refuse it.
+        self.assertEqual(simulate(machine_halts_in_three, 100)[0], 'undefined')
