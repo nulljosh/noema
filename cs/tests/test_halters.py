@@ -53,6 +53,7 @@ class HaltersTests(unittest.TestCase):
     def test_deciders_cut_no_halter(self):  # fire every decider early, past the cap: counts must not move
         for trig in (1, 3, 8, 20):
             self.assertEqual(self.run_c(4, 2, 3000, trig=trig), (11140566368, 23076152576))
+            self.assertEqual(self.run_c(2, 3, 500, trig=trig), (16525080, 24319536))  # 2-symbol cuts stay off
 
     def test_split_adds_up(self):
         parts = [self.run_c(4, 2, 107, 2, 3, i) for i in range(3)]

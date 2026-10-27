@@ -106,8 +106,8 @@ static int run(int l) {
             for (int p = c.lo; p <= c.hi && ok; p++) ok = T[p] == ((p >= slo && p <= shi) ? brent[p - slo] : 0);
             if (ok) { cycles++; break; }
         }
-        if ((c.t - t0 == TRIG && backward(2000)) || (c.t - t0 == (1 << 18) && backward(12000))) { bws++; break; }
-        if ((c.t - t0 == TRIG && ngram_any(30000)) || (c.t - t0 == (1 << 20) && ngram_any(60000))) { ngs++; break; }
+        if (M == 2 && ((c.t - t0 == TRIG && backward(2000)) || (c.t - t0 == (1 << 18) && backward(12000)))) { bws++; break; }
+        if (M == 2 && ((c.t - t0 == TRIG && ngram_any(30000)) || (c.t - t0 == (1 << 20) && ngram_any(60000)))) { ngs++; break; }
         if (c.t - t0 == next) {
             next *= 2; sq = c.q; sp = c.pos; sh = c.h; slo = c.lo; shi = c.hi;
             memcpy(brent, T + c.lo, c.hi - c.lo + 1);
