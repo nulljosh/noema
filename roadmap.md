@@ -59,7 +59,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [x] **CS:** FAR certificates Lean-checked (2026-10-26). All 41 pass `decide +kernel` under one soundness theorem.
 - [x] **CS:** cycle decider proved sound in Lean and applied to the 532 cycles at 2 and 3 states; Lean build in CI (2026-10-26).
 - [x] **CS:** translated-cycler decider proved sound in Lean and applied to all 3,063 at 2 and 3 states (2026-10-26).
-- [ ] **CS:** a full BB(3) in Lean: check the 1,772 halters' step counts, prove the 92 tape-decided machines (backward reasoning first), and prove the tree enumeration complete.
+- [x] **CS:** every leaf of the 3-state tree in Lean: 1,772 halters' step counts, the 92 tape-decided machines (by FAR certificates), cycles and translated cyclers. BB(3) = 21 among the listed halters.
+- [ ] **CS:** prove the tree enumeration complete in Lean (any 3-state machine agrees with some leaf on every rule its run uses), which finishes BB(3).
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.

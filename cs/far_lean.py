@@ -1,6 +1,7 @@
-"""Export the FAR certificates in far-certificates.json as Lean data with witnesses the kernel can check locally.
+"""Export the FAR certificates in far-certificates.json (4 states) and far-certificates-3.json (3 states) as Lean
+data with witnesses the kernel can check locally.
 
-    python3 far_lean.py        # checks every certificate locally, then writes proofs/FarCerts/Certs*.lean
+    python3 far_lean.py        # checks every certificate locally, then writes proofs/FarCerts/Certs*.lean and Small*.lean
 
 far.holds checks pre(L) in L by building a product automaton. Here the same condition is split into local facts
 that Lean checks by `decide`, given witnesses computed below:
@@ -111,19 +112,21 @@ def lean_cert(row, states):
 
 
 if __name__ == '__main__':
-    rows = json.load(open(os.path.join(HERE, 'far-certificates.json')))
-    states = 4
     far.SYMBOLS = 2
-    for row in rows:
-        machine, dfa = oriented(row), far.DFA(row['delta'], row['acc'])
-        assert far.holds(machine, states, dfa) == local_check(machine, states, dfa) == True, row['index']
-        broken = far.DFA(row['delta'], [not a for a in row['acc']])  # a wrong certificate must fail both ways
-        assert far.holds(machine, states, broken) == local_check(machine, states, broken) == False, row['index']
     names = []
-    for k in range(0, len(rows), 8):  # ponytail: 8 per file keeps each under the repo's 5000-token file limit
-        names.append('Certs%d' % (k // 8 + 1))
-        out = ['import FarCerts.Basic', '', 'set_option maxRecDepth 100000', '', 'namespace FAR', '']
-        out += [lean_cert(row, states) for row in rows[k:k + 8]] + ['end FAR', '']
-        open(os.path.join(HERE, 'proofs', 'FarCerts', names[-1] + '.lean'), 'w').write('\n'.join(out))
+    # far-certificates-3.json covers the 92 three-state machines busy.py settles by its tape deciders
+    for path, states, stem in (('far-certificates.json', 4, 'Certs'), ('far-certificates-3.json', 3, 'Small')):
+        rows = json.load(open(os.path.join(HERE, path)))
+        for row in rows:
+            machine, dfa = oriented(row), far.DFA(row['delta'], row['acc'])
+            assert far.holds(machine, states, dfa) == local_check(machine, states, dfa) == True, row['index']
+            broken = far.DFA(row['delta'], [not a for a in row['acc']])  # a wrong certificate must fail both ways
+            assert far.holds(machine, states, broken) == local_check(machine, states, broken) == False, row['index']
+        for k in range(0, len(rows), 8):  # ponytail: 8 per file keeps each under the repo's 5000-token file limit
+            names.append('%s%d' % (stem, k // 8 + 1))
+            out = ['import FarCerts.Basic', '', 'set_option maxRecDepth 100000', '', 'namespace FAR', '']
+            out += [lean_cert(row, states) for row in rows[k:k + 8]] + ['end FAR', '']
+            open(os.path.join(HERE, 'proofs', 'FarCerts', names[-1] + '.lean'), 'w').write('\n'.join(out))
+        print('%d %d-state certificates agree with far.holds' % (len(rows), states))
     write_root()
-    print('%d certificates agree with far.holds; wrote %d files' % (len(rows), len(names)))
+    print('wrote %d files' % len(names))

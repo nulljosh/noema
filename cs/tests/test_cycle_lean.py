@@ -31,6 +31,15 @@ class CycleLeanTests(unittest.TestCase):
         self.assertFalse(cycle_lean.tcycles(machine, 0, 0, 0))
         self.assertFalse(cycle_lean.tcycles({(0, 0): (1, 1, 1)}, 0, 1, 0))
 
+    def test_every_halter_halts_in_lean_shape(self):
+        halted = []
+        busy.enumerate_machines(3, 200, halted=halted)
+        self.assertEqual(len(halted), 1772)
+        self.assertEqual(max(k for _, k in halted), 20)
+        for machine, k in halted:
+            self.assertTrue(cycle_lean.lean_halts(machine, k))
+            self.assertFalse(cycle_lean.lean_halts(machine, k + 1))
+
     def test_halter_has_no_repeat(self):
         self.assertIsNone(cycle_lean.lean_repeat({(0, 0): (1, 1, 1)}))
 
