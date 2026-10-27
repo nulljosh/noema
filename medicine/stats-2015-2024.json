@@ -1,0 +1,3483 @@
+{
+ "source": "stats.py over 235,860 RCT abstracts 2015-2024 (PubMed and Europe PMC)",
+ "checked": 4243,
+ "off": 433,
+ "gross": 55,
+ "clear": 41,
+ "clear_abstracts": 37,
+ "gross_rows": [
+  {
+   "pmid": "37984841",
+   "verdict": "gross",
+   "stat": "Z = 3.674",
+   "p": "P = 0.055",
+   "sentence": "There was no statistically significant difference in the overall ADR between the CF-H290I and PCF-Q260JI groups (81 [40.9%] vs 63 [31.7%], Z = 3.674, P = 0.055).",
+   "review": "slip: labelled Z; P fits chi-square 3.674 on 1 df"
+  },
+  {
+   "pmid": "37192756",
+   "verdict": "gross",
+   "stat": "χ2 = 3.26",
+   "p": "p = .047",
+   "sentence": "Several secondary outcomes had significantly greater improvements in CBTI group, including higher depression remission at 12-month (59.7% vs. 37.9%, χ2 = 6.57, p = .01), lower anxiolytic use at 3-month (18.1% vs. 33.3%, χ2 = 4.72, p = .03) and 12-month (12.5% vs. 25.8%, χ2 = 3.26, p = .047), and lesser sleep-related dysfunctional cognitions at 3 and 6-month (mixed-effects model, F = 5.12, p = .001",
+   "review": "clear"
+  },
+  {
+   "pmid": "38692113",
+   "verdict": "gross",
+   "stat": "F(1,78) = 2.81",
+   "p": "p < 0.05",
+   "sentence": "Compared to WL controls, the MBSR group showed greater improvements in FM symptoms (F(1,78) = 2.81, p < 0.05), PSS (F(1,78) = 4.38, p < 0.05) and Depression (F(1,78) = 21.12, p < 0.001), with mostly medium effect sizes.",
+   "review": "clear"
+  },
+  {
+   "pmid": "38867451",
+   "verdict": "gross",
+   "stat": "F(1, 38) = 3.78",
+   "p": "p = .008",
+   "sentence": "Interaction effect was observed between acupuncture method and time effect in terms of amplitude (F(1, 38) = 5.40, p < .001, η2 = 0.12) and latency (F(1, 38) = 3.78, p = .008, η2 = .09) of MEP.",
+   "review": "clear"
+  },
+  {
+   "pmid": "39182512",
+   "verdict": "gross",
+   "stat": "F(2, 115) = 0.96",
+   "p": "P = .01",
+   "sentence": "Using a repeated-measures generalized linear model, significant time × group interactions were found in the MMSE [F(2, 115) = 19.54, P < .001], FTT [F(2, 115) = 4.87, P = .01], HRV high-frequency [F(2, 115) = 3.57, P = .03], and high-frequency/low-frequency ratio [F(2, 115) = 0.96, P = .01], UCLA-3 [F(2, 115) = 54.7, P < .001], GDS-SF [F(2, 115) = 3.36, P = .04], and WEMWBS [F(2, 115) = 5.93, P < ",
+   "review": "clear"
+  },
+  {
+   "pmid": "39128677",
+   "verdict": "gross",
+   "stat": "χ2= 2.11",
+   "p": "P=.002",
+   "sentence": "Nevertheless, a significant effect of time was observed with both groups' reduction in HAM-D-17 scores from the start to the endpoint (χ2= 2.11, P=.002).",
+   "review": "clear"
+  },
+  {
+   "pmid": "39128677",
+   "verdict": "gross",
+   "stat": "χ2=3.1",
+   "p": "P=0.016",
+   "sentence": "Besides, a significant time × treatment × CRP interaction was found (χ2=3.1, P=0.016), where there was more reduction in HAM-D-17 score in PTX-treated subjects with CRP> 7.1 mg/L.",
+   "review": "clear"
+  },
+  {
+   "pmid": "39702335",
+   "verdict": "gross",
+   "stat": "t = 0.434",
+   "p": "p = 0.045",
+   "sentence": "The mean white blood cell count in the experimental group after the intervention decreased significantly compared to that before the intervention (t = 0.434, p = 0.045, df = 19).",
+   "review": "clear"
+  },
+  {
+   "pmid": "26049181",
+   "verdict": "gross",
+   "stat": "t=1.062",
+   "p": "P=0.033",
+   "sentence": "Compared with control group, 6-hour MAP in research group was obviously lowered [mmHg (1 mmHg=0.133 kPa): 66.31±4.38 vs. 68.58±4.86, t=1.062, P=0.033], but there were no significant differences in HR, MAP, CVP, lactic acid clearance and norepinephrine (NE) utilization rates at other time points between two groups.",
+   "review": "clear"
+  },
+  {
+   "pmid": "26661702",
+   "verdict": "gross",
+   "stat": "F(1,118)=5.361",
+   "p": "p=0.632",
+   "sentence": "Univariate tests showed a significance between patient perceived level of clinician education, F(1,118)=5.361, p=0.632, partial η2=0.043.",
+   "review": "clear"
+  },
+  {
+   "pmid": "25584474",
+   "verdict": "gross",
+   "stat": "t(28) =.46",
+   "p": "p =.008",
+   "sentence": "Time to defibrillation was 94 seconds (SD = 26.4) for the active observers and 132 seconds (SD = 52.9; M difference = 38 seconds), t(28) =.46, p =.008, for their first scenario counterparts.",
+   "review": "clear"
+  },
+  {
+   "pmid": "25524224",
+   "verdict": "gross",
+   "stat": "F(1,38) = 3.4",
+   "p": "p < 0.002",
+   "sentence": "The repeated measures analysis showed a significant near versus far by organ system interaction [F(1,38) = 3.4, p < 0.002] with practice with a single context showing lower far transfer scores than near transfer [0.58 (0.37)-0.83 (0.37)] compared to the two contexts which had similar far and near transfer scores [1.19 (0.50)-1.01 (0.38)].",
+   "review": "clear"
+  },
+  {
+   "pmid": "25663309",
+   "verdict": "gross",
+   "stat": "F(1, 44) = 3.11",
+   "p": "p = 0.021",
+   "sentence": "Three significant phases × condition interactions were indicated using mixed-methods analyses of variance (ANOVAs); women in the intervention condition reported significantly less deterioration in relationship satisfaction (F(1, 44) = 3.11; p = 0.021; eta(2) = 0.07), while men in the intervention condition reported significantly less deterioration in couple communication (F(1, 35) = 2.59; p = 0.02",
+   "review": "clear"
+  },
+  {
+   "pmid": "25663309",
+   "verdict": "gross",
+   "stat": "F(1, 35) = 2.59",
+   "p": "p = 0.029",
+   "sentence": "Three significant phases × condition interactions were indicated using mixed-methods analyses of variance (ANOVAs); women in the intervention condition reported significantly less deterioration in relationship satisfaction (F(1, 44) = 3.11; p = 0.021; eta(2) = 0.07), while men in the intervention condition reported significantly less deterioration in couple communication (F(1, 35) = 2.59; p = 0.02",
+   "review": "clear"
+  },
+  {
+   "pmid": "25467705",
+   "verdict": "gross",
+   "stat": "t(29)=-2.91",
+   "p": "P=0.06",
+   "sentence": "For the experimental group, however, there was a trend towards improvement in speed of processing between baseline and 9-month follow-up (t(29)=-2.91, P=0.06) and at post-CRT compared to 9-month follow-up (t(29)=-2.99, P<0.05).",
+   "review": "clear"
+  },
+  {
+   "pmid": "29786223",
+   "verdict": "gross",
+   "stat": "χ 2 =1.991",
+   "p": "P =0.047",
+   "sentence": "Difference was significant in fracture reduction quality in the patients with avascular necrosis of the femoral head and nonunion between 2 groups ( χ 2 =1.991, P =0.047）.",
+   "review": "slip: labelled chi-square; P fits z 1.991"
+  },
+  {
+   "pmid": "26997218",
+   "verdict": "gross",
+   "stat": "t = -0.7365",
+   "p": "P = 0.000",
+   "sentence": "Greenish luminal contents in the two groups differed significantly in the captured small-bowel (t = -13.74, P = 0.000) segments and proximal small-bowel (t = -0.7365, P = 0.000) segments, but not for the distal small-bowel (t = -0.552, P = 0.581) segments.",
+   "review": "clear"
+  },
+  {
+   "pmid": "27062400",
+   "verdict": "gross",
+   "stat": "t(1)=2.6",
+   "p": "p = 0.011",
+   "sentence": "Early hospitalization was a negative predictor for improvements in percent weight change for both treatment groups (t(1)=2.6, p = 0.011).",
+   "review": "unclear: t(1) with many patients; P fits a large df"
+  },
+  {
+   "pmid": "29325336",
+   "verdict": "gross",
+   "stat": "Z =2.576",
+   "p": "P =0.462",
+   "sentence": "Results: The NRS values before treatment were 5.00(4.00, 6.00), 5.00(4.25, 6.00), 5.50(5.00, 6.00) and 5.00(4.00, 6.00), the difference was no significant( Z =2.576, P =0.462).",
+   "review": "slip: four groups; P fits Kruskal-Wallis chi-square 2.576 on 3 df"
+  },
+  {
+   "pmid": "28936962",
+   "verdict": "gross",
+   "stat": "χ 2 = 2.944",
+   "p": "P = 0.003",
+   "sentence": "Results There were 6 patients with mild displacement, 2 patients with moderate displacement and 1 patient with severe displacement in the control group, while there was no catheter displacement or detachment occurred in the observation group, and the difference between the two groups was statistically significant (χ 2 = 2.944, P = 0.003).",
+   "review": "slip: labelled chi-square; P fits z 2.944"
+  },
+  {
+   "pmid": "28642125",
+   "verdict": "gross",
+   "stat": "t=-0·28",
+   "p": "p=0·03",
+   "sentence": "Compared with the mean baseline TRS score of 57·0 (SD 10·2), the mean score at 6 months decreased to 40·1 (17·6), -29·6% reduction; t=-0·28, p=0·03.",
+   "review": "clear"
+  },
+  {
+   "pmid": "28270292",
+   "verdict": "gross",
+   "stat": "t=-1.000",
+   "p": "P=0.002",
+   "sentence": "The artifacts in abdominal aorta (t=2.893,P=0.000)and feet arteries (t=3.776,P=0.000)were higher in 70 kV group than those in 100 kV group,the enhancement of abdominal aorta (t=-1.000,P=0.002)and feet arteries (t=2.893,P=0.010)were lower in 70 kV group,the enhancement of femoral-popliteal arteries (t=-1.000,P=0.000)and arteries of calf (t=4.261,P=0.000)were higher in 70 kV group.",
+   "review": "clear"
+  },
+  {
+   "pmid": "28270292",
+   "verdict": "gross",
+   "stat": "t=-1.000",
+   "p": "P=0.000",
+   "sentence": "The artifacts in abdominal aorta (t=2.893,P=0.000)and feet arteries (t=3.776,P=0.000)were higher in 70 kV group than those in 100 kV group,the enhancement of abdominal aorta (t=-1.000,P=0.002)and feet arteries (t=2.893,P=0.010)were lower in 70 kV group,the enhancement of femoral-popliteal arteries (t=-1.000,P=0.000)and arteries of calf (t=4.261,P=0.000)were higher in 70 kV group.",
+   "review": "clear"
+  },
+  {
+   "pmid": "29194242",
+   "verdict": "gross",
+   "stat": "t = -0.312, df = 37",
+   "p": "p = .004",
+   "sentence": "The experiential strategy was more effective than the traditional method (t = -0.312, df = 37, p = .004, 95% CI) with a reduction in calculation errors.",
+   "review": "clear"
+  },
+  {
+   "pmid": "28051337",
+   "verdict": "gross",
+   "stat": "F(1, 82) = 2.55",
+   "p": "p = 0.02",
+   "sentence": "Results Repeated-measures ANOVA indicated a significant time effect F(1, 82) = 2.55, p = 0.02, and no significant time-group interaction F(1, 82) = 1.09, p = 0.30, suggesting a similar reduction in parental depressive symptoms in both groups.",
+   "review": "clear"
+  },
+  {
+   "pmid": "29798542",
+   "verdict": "gross",
+   "stat": "χ 2 =0.173",
+   "p": "P =0.034",
+   "sentence": "However, the incidence of patellar malposition in the trial group (18.8%) was significantly lower than that in the control group (35.5%) ( χ 2 =0.173, P =0.034).",
+   "review": "clear"
+  },
+  {
+   "pmid": "30388181",
+   "verdict": "gross",
+   "stat": "F(4, 29) = 3.57",
+   "p": "p = 0.18",
+   "sentence": "No time vs. group interaction effects were noted for accuracy (F(4, 29) = 3.57, p = 0.18) or response time (F(4, 29) = 2.61, p = 0.06) on the Stroop test.",
+   "review": "clear"
+  },
+  {
+   "pmid": "29483383",
+   "verdict": "gross",
+   "stat": "χ 2 = 2.931",
+   "p": "P = 0.047",
+   "sentence": "Results Both groups had a significantly reduced prevalence of HPR at 30 days versus baseline, but the TC group, compared with the placebo group, had greater reduction (15.8% vs. 24.8%, P = 0.013), especially among patients with one cytochrome P450 2C19 loss of function (LOF) allele (χ 2 = 2.931, P = 0.047).",
+   "review": "clear"
+  },
+  {
+   "pmid": "29912663",
+   "verdict": "gross",
+   "stat": "t = 1256",
+   "p": "p = 0.349",
+   "sentence": "Whereas in group II, the change in the circumference was statistically insignificant (t = 1256, p = 0.349) with no satisfactory pain relief and improvement in walking ability.",
+   "review": "slip: decimal point lost; t = 1.256 fits"
+  },
+  {
+   "pmid": "30388029",
+   "verdict": "gross",
+   "stat": "z = -2.99",
+   "p": "p = 0.08",
+   "sentence": "The combined group exhibited a statistically significant reduction in total sleep problems ( z = -5.81, p p = 0.05), behavior therapy ( z = -2.99, p = 0.08), or community care ( z = -1.59, p > 0.99) did not reach statistical significance.",
+   "review": "debris: markup debris, P belongs elsewhere"
+  },
+  {
+   "pmid": "27511921",
+   "verdict": "gross",
+   "stat": "F(2, 28) = 3.13",
+   "p": "p = .04",
+   "sentence": "A medium-sized, significant effect was found for MBSR participants with baseline PSQI scores ≥ 10, F(2, 28) = 3.13, p = .04, η p 2 = .10.",
+   "review": "clear"
+  },
+  {
+   "pmid": "31576450",
+   "verdict": "gross",
+   "stat": "F(1, 19) = 7.115",
+   "p": "p = 0.87",
+   "sentence": "There was no intergroup significant difference in post-intervention ICIQ-SF F(1, 19) = 7.115, p = 0.87, partial η 2 = 0.001; manometry F(1, 19) = 0.608, p = 0.44, partial η 2 = 0.003; pad test 1 h F(1, 19) = 0.185, p = 0.67, partial η 2 = 0.01; QoL F(1, 19) = 1.018, p = 0.32, partial η 2 = 0.05; and weight F(1, 19) = 0.251, p = 0.62, partial η 2 = 0.01.",
+   "review": "clear"
+  },
+  {
+   "pmid": "30554300",
+   "verdict": "gross",
+   "stat": "t(1) = 2.02",
+   "p": "p = .02",
+   "sentence": "At 3-month follow-up, participants in the memory practice condition were at least twice as likely (OR = 2.10 or greater, p < .01) to self-report testing compared to those in the control conditions and also reported more frequent condom use compared to a health education condition [B = .37, t(1) = 2.02, p = .02].",
+   "review": "unclear: t(1) with many patients; P fits a large df"
+  },
+  {
+   "pmid": "34187126",
+   "verdict": "gross",
+   "stat": "t=-1.24",
+   "p": "p=0.000",
+   "sentence": "The independent t-test between the study and the control group showed a statistically significant reduction in fatigue in the study group with a mean difference (MD) of 3.56 (t=-1.24; p=0.000).",
+   "review": "clear"
+  },
+  {
+   "pmid": "33526730",
+   "verdict": "gross",
+   "stat": "χ²=3.3",
+   "p": "p=0.04",
+   "sentence": "There was a further LV hypertensive remodeling in group 2: detection of concentric LVH without LV dilatation (χ²=3.3, p=0.04) was increased.",
+   "review": "clear"
+  },
+  {
+   "pmid": "32074794",
+   "verdict": "gross",
+   "stat": "t =1.436",
+   "p": "P= 0.007",
+   "sentence": "(4.9 ± 1.6) days, t =1.436, P= 0.007], shorter time to remove nasogastric tube [(3.9±2.6) days vs.",
+   "review": "clear"
+  },
+  {
+   "pmid": "31870702",
+   "verdict": "gross",
+   "stat": "F (1,129) = 1.72",
+   "p": "p = 0.001",
+   "sentence": "Results The study results indicate that, compared with a placebo group, the sucrose group had significantly less pain post-immunization (F (1,129) = 1.72, p = 0.001).",
+   "review": "clear"
+  },
+  {
+   "pmid": "31812557",
+   "verdict": "gross",
+   "stat": "t (39) = 2.10",
+   "p": "p = 0.17",
+   "sentence": "There was no significant difference between expected satiety and ideal portion size in the other incongruous meal context (breakfast foods at lunch; t (39) = 2.10, p = 0.17) or in congruous meal contexts (breakfast foods at breakfast time, lunch foods at lunch time; both t (39) ≤ -0.15, p > 0.999).",
+   "review": "clear"
+  },
+  {
+   "pmid": "32819321",
+   "verdict": "gross",
+   "stat": "χ 2 = 0.875",
+   "p": "p = 0.040",
+   "sentence": "The pain decreased mainly during the first 5 days of treatment (χ 2 = 0.875, p = 0.040).",
+   "review": "clear"
+  },
+  {
+   "pmid": "32819321",
+   "verdict": "gross",
+   "stat": "χ 2 = 1.194",
+   "p": "p = 0.001",
+   "sentence": "In the open phase the pain decreased from the first day to the final day (χ 2 = 1.194, p = 0.001).",
+   "review": "clear"
+  },
+  {
+   "pmid": "32160348",
+   "verdict": "gross",
+   "stat": "χ 2 (24) = 247.0",
+   "p": "p ≥ .05",
+   "sentence": "Two discriminant functions were calculated (χ 2 (24) = 247.0, p ≥ .05, d = 0.78).",
+   "review": "clear"
+  },
+  {
+   "pmid": "31863582",
+   "verdict": "gross",
+   "stat": "t(1.51) = 2.30",
+   "p": "p = .03",
+   "sentence": "No difference was found in the baseline characteristics between the two arms with the exception that the treatment arm had higher nicotine dependence scores [t(1.51) = 2.30, p = .03] than the control arm.",
+   "review": "unclear: df printed as 1.51"
+  },
+  {
+   "pmid": "33530854",
+   "verdict": "gross",
+   "stat": "t (1) = 2.867",
+   "p": "p = 0.007",
+   "sentence": "Results Adjusted for gender and baseline values, the chia seed group had systolic BP (SBP) significantly reduced compared to control [ t (1) = 2.867, p = 0.007, η 2 p = 0.174].",
+   "review": "unclear: t(1) with many patients; P fits a large df"
+  },
+  {
+   "pmid": "32889626",
+   "verdict": "gross",
+   "stat": "t(31.51) = 3.68",
+   "p": "p = 0.330",
+   "sentence": "Whereas comparable numbers of training blocks were completed by the two groups (t(31.51) = 3.68, p = 0.330), the Ultrasound group attained significantly higher percentage accuracies than the sEMG group at both Post-training (t(28.88) = 4.04, p < 0.001, d = 1.309) and Retention (t(30.78) = 2.13, p = 0.042, d = 0.690).",
+   "review": "clear"
+  },
+  {
+   "pmid": "33826992",
+   "verdict": "gross",
+   "stat": "F(1,92) = 3.89",
+   "p": "p = 0.024",
+   "sentence": "Among the WED group, individuals assigned to write about their IBS experienced greater improvements in pain self-efficacy than those assigned to write about a life stressor, F(1,92) = 3.89, p = 0.024, η 2 = 0.08.",
+   "review": "clear"
+  },
+  {
+   "pmid": "33147353",
+   "verdict": "gross",
+   "stat": "χ 2 = -2.6094",
+   "p": "P = .0091",
+   "sentence": "Compared with the DNTP group, the CSLA group showed a significantly higher first-attempt success rate (71.1% vs 46.7%, χ 2 = 5.5533, P = .0184) and significantly fewer needle passes (1.0[1.0-2.0] vs 2.0[1.0-3.0], χ 2 = -2.6094, P = .0091).",
+   "review": "slip: negative chi-square; P fits z -2.6094"
+  },
+  {
+   "pmid": "35107855",
+   "verdict": "gross",
+   "stat": "Z = 10",
+   "p": "p = 0.06",
+   "sentence": "Results A significant difference was observed in AEA concentrations in Study 2 after ayahuasca intake (Χ 2 (2) = 6.5, p = 0.03, Friedman test), and near significant differences (increases) were observed between baseline and 90 (Z = 0, p = 0.06, Wilcoxon test) and 240 (Z = 10, p = 0.06) minutes after ayahuasca intake.",
+   "review": "slip: Wilcoxon W printed as Z"
+  },
+  {
+   "pmid": "33978602",
+   "verdict": "gross",
+   "stat": "χ2 = 3.47",
+   "p": "P = 0.037",
+   "sentence": "There was a significant change in α diversity from baseline to month 6 in samples overall (Kruskal-Wallis χ2 = 3.47, P = 0.037) and in the treatment success group (Yuen T = -2.53, P = 0.035).",
+   "review": "clear"
+  },
+  {
+   "pmid": "35701732",
+   "verdict": "gross",
+   "stat": "χ 2 = 3.617",
+   "p": "P = 0.004",
+   "sentence": "The intervention had a significant effect on the KDQOL-36 sub-scores Mental Component Summary (MCS) (Wald χ 2 = 6.763, P = 0.009) and effects of kidney disease (Wald χ 2 = 3.617, P = 0.004).",
+   "review": "clear"
+  },
+  {
+   "pmid": "35224871",
+   "verdict": "gross",
+   "stat": "F(1,5) = 6.478",
+   "p": "p < 0.001",
+   "sentence": "A time effect was observed throughout the HIIT session [F(1,5) = 6.478, p < 0.001].",
+   "review": "clear"
+  },
+  {
+   "pmid": "37960353",
+   "verdict": "gross",
+   "stat": "F (1, 38) = 15.41",
+   "p": "p = 0.4316",
+   "sentence": "The results revealed that compared to the placebo group (pre: M = 10.10, SD = 2.292; post: M = 8.650, SD = 2.793; pre vs. post: F (1, 38) = 15.41, p = 0.4316), the CCFM1025-treated group exhibited a significant decrease in Pittsburgh Sleep Quality Index (PSQI) scores from baseline (pre: M = 11.60, SD = 3.169; post: M = 7.750, SD = 3.697, F (1, 38) = 15.41, p = 0.0007).",
+   "review": "clear"
+  },
+  {
+   "pmid": "37366129",
+   "verdict": "gross",
+   "stat": "χ 2 = 3.788",
+   "p": "P = 0.040",
+   "sentence": "(24.18±5.35)%, dp/dtmax (mmHg/s): 1 312.1±312.4 vs. 1 140.9±301.0, all P 2 and SV were significantly increased [DO 2 (mL×min -1 ×m -2 ): 647.69±100.89 vs. 610.31±78.56, SV (mL): 49.97±14.71 vs. 42.79±15.77, both P -1 : 287.71±66.32 vs. 251.17±78.21, P 2 = 3.788, P = 0.052], the rate of esmolol use in patients who died within 28 days was lower than that in patients who survived [38.6% (17/44) vs. 5",
+   "review": "debris: markup debris; the sentence prints P = 0.052 beside it"
+  },
+  {
+   "pmid": "35191291",
+   "verdict": "gross",
+   "stat": "F (1,23) =3.023",
+   "p": "P=0.049",
+   "sentence": "Results Two-way ANOVA showed group×time interaction effects for the 30-m sprint time (F (1,23) =3.023; P=0.049; η 2 P=0.116), BLa - (F (1,23) =5.250; P=0.031; η 2 P=0.185), and V̇O 2max (F (1,23)= 4.648, P=0.044; η 2 P=0.157).",
+   "review": "clear"
+  },
+  {
+   "pmid": "37593850",
+   "verdict": "gross",
+   "stat": "t (2.4) = 26.07",
+   "p": "P = .053",
+   "sentence": "Consensus scoring of electroencephalography data confirmed this trend of more time spent in SWS [ t (2.4) = 26.07, P = .053].",
+   "review": "unclear: df printed as 2.4"
+  },
+  {
+   "pmid": "36936914",
+   "verdict": "gross",
+   "stat": "F (4,15) = 2.49",
+   "p": "p = 0.049",
+   "sentence": "Considering both sIgA level and secretion rate, significant time (F (4,15) = 3.38; p = 0.037; F (4,15) = 6.00; p = 0.004) and time×group interactions (F (4,15) = 2.49; p = 0.049; F (4,15) = 5.01; p = 0.009) were reported, with the treated group showing higher sIgA levels at 72h post-exercise and increased secretion rate both at 0h and 72h.",
+   "review": "clear"
+  }
+ ],
+ "off_rows": [
+  {
+   "pmid": "38273706",
+   "verdict": "off",
+   "stat": "F(1,68.3) = 4.04",
+   "p": "p = .04",
+   "sentence": "A statistically significant group-by-time interaction was found to predict change in HF-HRV between T1 and T2 (F(1,68.3) = 4.04, p = .04), but no significant interaction predicted change in FAA or temperament."
+  },
+  {
+   "pmid": "39734604",
+   "verdict": "off",
+   "stat": "F (8, 13) = 90.1",
+   "p": "p=0.001",
+   "sentence": "Results: MANCOVA analysis revealed a significant impact of interventions on CROM in all directions, NPRS, and NDI scores, even after adjusting for initial scores (F (8, 13) = 90.1; p=0.001)."
+  },
+  {
+   "pmid": "38485660",
+   "verdict": "off",
+   "stat": "t(13) = 3.10",
+   "p": "p < 0.001",
+   "sentence": "Results show significant differences in identical stimulation with negative vs positive suggestions (60% conditions AUC 38.75 vs 23.32, t(13) = 3.10, p < 0.001)."
+  },
+  {
+   "pmid": "38447773",
+   "verdict": "off",
+   "stat": "F(1,28) = 3.52",
+   "p": "p = 0.05",
+   "sentence": "The active tFUS group also showed decreased amygdala-insula (F(1,28) = 4.98, p = 0.03) and amygdala-hippocampal (F(1,28) = 7.14, p = 0.01) rsFC, and increased amygdala-ventromedial prefrontal cortex (F(1,28) = 3.52, p = 0.05) resting-state functional connectivity. tFUS can change functional connectivity and brain region activation associated with decreased anxiety."
+  },
+  {
+   "pmid": "37984841",
+   "verdict": "off",
+   "stat": "Z = 9.588",
+   "p": "P = 0.002",
+   "sentence": "However, the ADRs in the transverse colon and left colon were significantly higher in the CF-H290I group (22 [11.1%] vs 6 [3.0%], Z = 9.588, P = 0.002 and 57 [28.8%] vs 37 [18.6%], Z = 5.212, P = 0.017, respectively)."
+  },
+  {
+   "pmid": "37984841",
+   "verdict": "off",
+   "stat": "Z = 5.212",
+   "p": "P = 0.017",
+   "sentence": "However, the ADRs in the transverse colon and left colon were significantly higher in the CF-H290I group (22 [11.1%] vs 6 [3.0%], Z = 9.588, P = 0.002 and 57 [28.8%] vs 37 [18.6%], Z = 5.212, P = 0.017, respectively)."
+  },
+  {
+   "pmid": "37984841",
+   "verdict": "off",
+   "stat": "Z = 7.579",
+   "p": "P = 0.006",
+   "sentence": "More sessile serrated lesions were detected in the CF-H290I group (52 [26.3] vs 30 [15.1%], Z = 7.579, P = 0.006)."
+  },
+  {
+   "pmid": "37984841",
+   "verdict": "off",
+   "stat": "Z = 6.144",
+   "p": "P = 0.013",
+   "sentence": "Patient satisfaction with colonoscopy was better in the PCF-Q260JI group (8.91 ± 1.09 vs 8.51 ± 1.44, t = -3.158, P < 0.01) with less likelihood of discomfort (23 [11.6%] vs 41 [20.7%], Z = 6.144, P = 0.013), The number of patients willing to undergo colonoscopy in the future was significantly greater in the PCF-Q260JI group (168 [84.4%] vs 149 [75.3%], Z = 5.186, P = 0.023)."
+  },
+  {
+   "pmid": "37984841",
+   "verdict": "off",
+   "stat": "Z = 5.186",
+   "p": "P = 0.023",
+   "sentence": "Patient satisfaction with colonoscopy was better in the PCF-Q260JI group (8.91 ± 1.09 vs 8.51 ± 1.44, t = -3.158, P < 0.01) with less likelihood of discomfort (23 [11.6%] vs 41 [20.7%], Z = 6.144, P = 0.013), The number of patients willing to undergo colonoscopy in the future was significantly greater in the PCF-Q260JI group (168 [84.4%] vs 149 [75.3%], Z = 5.186, P = 0.023)."
+  },
+  {
+   "pmid": "37537508",
+   "verdict": "off",
+   "stat": "t = -2.47",
+   "p": "p < .001",
+   "sentence": "There was a statistically significant difference in favour of the intervention group at the 15th minute (t = -2.47, p < .001; t = 2.57, p < .001; t = 2.93, p < .001 respectively) and 30th minute (t = -3.17, p < .001; t = 3.46, p < .001; t = -3.93, p < .001 respectively)."
+  },
+  {
+   "pmid": "37537508",
+   "verdict": "off",
+   "stat": "t = 2.57",
+   "p": "p < .001",
+   "sentence": "There was a statistically significant difference in favour of the intervention group at the 15th minute (t = -2.47, p < .001; t = 2.57, p < .001; t = 2.93, p < .001 respectively) and 30th minute (t = -3.17, p < .001; t = 3.46, p < .001; t = -3.93, p < .001 respectively)."
+  },
+  {
+   "pmid": "37537508",
+   "verdict": "off",
+   "stat": "t = 2.93",
+   "p": "p < .001",
+   "sentence": "There was a statistically significant difference in favour of the intervention group at the 15th minute (t = -2.47, p < .001; t = 2.57, p < .001; t = 2.93, p < .001 respectively) and 30th minute (t = -3.17, p < .001; t = 3.46, p < .001; t = -3.93, p < .001 respectively)."
+  },
+  {
+   "pmid": "38214539",
+   "verdict": "off",
+   "stat": "χ2(1) = 16.48",
+   "p": "P = 0.001",
+   "sentence": "The ENG had significantly more participants reach postintervention target values (BMI: χ2(1) = 16.48, P = 0.001; FBG: χ2(1) = 52.26, P < 0.001; WC: χ2(1) = 4.29, P = 0.038) compared with the CON."
+  },
+  {
+   "pmid": "38213251",
+   "verdict": "off",
+   "stat": "Z = 0.033",
+   "p": "P = 0.855",
+   "sentence": "The total effective rates of treatment of the combined group and the eszopiclone group were 36.92% vs 35.38% (Z = 0.033, P = 0.855) after 1 week of the intervention, 83.08% vs 58.46% (Z = 9.519, P < 0.05) after 2 weeks of the intervention, and 83.08% vs 61.54% (Z = 7.530, P < 0.05) and after the follow-up on week 3, respectively."
+  },
+  {
+   "pmid": "38193809",
+   "verdict": "off",
+   "stat": "z = -1.894",
+   "p": "P = 0.048",
+   "sentence": "Results: There was a statistically significant difference in terms of both CBT indicators, CBT forward span (z = -2.835, P = 0.005) and CBT backward span (z = 3.285, P = 0.001), and the SCWT indicator of Stroop Words Test (SW) (z = -1.894, P = 0.048) in the two groups."
+  },
+  {
+   "pmid": "37689323",
+   "verdict": "off",
+   "stat": "χ2 = 3.19, df = 1",
+   "p": "P = .06",
+   "sentence": "A generalized linear model showed a significant improvement in the disability scale in the groups that received a-tDCS compared to s-tDCS over M1 20.54% versus 2.49% (χ2 = 11.06, df = 1, P < .001]), while on DLPFC the improvement was 14.29% and 5.77%, with a borderline significance (χ2 = 3.19, df = 1, P = .06]), respectively."
+  },
+  {
+   "pmid": "38281056",
+   "verdict": "off",
+   "stat": "F (1,35) = 6.13",
+   "p": "p = .016",
+   "sentence": "A significant time-group interaction was found for anxiety (F (1,35) = 6.13, p = .016), fear of disease progression (F (1,331) = 18.23, p < .001), depression (F (1,74) = 10.79, p = .002) and coping (F (1,233) = 7.02, p = .010), suggesting superiority of the WEP-CARE group."
+  },
+  {
+   "pmid": "38281056",
+   "verdict": "off",
+   "stat": "F (1,233) = 7.02",
+   "p": "p = .010",
+   "sentence": "A significant time-group interaction was found for anxiety (F (1,35) = 6.13, p = .016), fear of disease progression (F (1,331) = 18.23, p < .001), depression (F (1,74) = 10.79, p = .002) and coping (F (1,233) = 7.02, p = .010), suggesting superiority of the WEP-CARE group."
+  },
+  {
+   "pmid": "38281056",
+   "verdict": "off",
+   "stat": "F(1,2) = 0.016",
+   "p": "p = .899",
+   "sentence": "A significant interaction effect could not be found for quality of life (F(1,2) = 0.016; p = .899)."
+  },
+  {
+   "pmid": "38271437",
+   "verdict": "off",
+   "stat": "χ2 (5) = 3.65",
+   "p": "p = 0.46",
+   "sentence": "No significant group differences were found in decision-making conflict [t (99) = 0.69, p = 0.49, d = 0.14] and roles in decision-making scores [χ2 (5) = 3.65, p = 0.46]."
+  },
+  {
+   "pmid": "38166859",
+   "verdict": "off",
+   "stat": "t=-0.182, df = 98",
+   "p": "p = 0.85",
+   "sentence": "Before the intervention, there was no significant difference in the headache frequency per month (t=-0.182, df = 98, p = 0.85), mean MMD (p = 0.17), headache severity (p = 0.076), and MIDAS (p = 0.091)."
+  },
+  {
+   "pmid": "38884436",
+   "verdict": "off",
+   "stat": "t(42)=-2.67",
+   "p": "p<0.001",
+   "sentence": "After the training, the number of correct answers significantly increased (t(42)=-2.67, p<0.001) in the experimental group, while in the comparison group the indicator did not change (t(41)=0.50, p=0.617)."
+  },
+  {
+   "pmid": "38628080",
+   "verdict": "off",
+   "stat": "t(147) = -2·47",
+   "p": "p = ·02",
+   "sentence": "Sexual discussion (t(147) = -2·47, p = ·02) and condom negotiation (t(146) = -2·51, p = ·01) increased for intervention participants at 12 months in Coloured communities."
+  },
+  {
+   "pmid": "37980577",
+   "verdict": "off",
+   "stat": "Z= 2.717",
+   "p": "P= 0.008",
+   "sentence": "Compared with the control group, the unplanned extubation rate of the experimental group was lower (χ2= 8.513; P= 0.004), the indwelling time of the drainage tube was shorter (t= 2.108; P= 0.037), the cumulative material cost was lower (t= 3.778; P< 0.001), the time cost was also lower (Z= 2.717; P= 0.008), the degree of comfort was higher (Z= 2.752; P= 0.006), and the degree of pain was lower (Z="
+  },
+  {
+   "pmid": "37857565",
+   "verdict": "off",
+   "stat": "χ²=4.059",
+   "p": "p=0.021",
+   "sentence": "Additionally, the rate of recurrences and distant metastases was significantly lower in the NACT+CCRT group than in the CCRT group (4.11% vs. 7.35%, χ²=4.059, p=0.021)."
+  },
+  {
+   "pmid": "37839156",
+   "verdict": "off",
+   "stat": "F(2, 46) = 4.03",
+   "p": "p = .03",
+   "sentence": "A group x time interaction was observed wherein the trauma writing treatment group showed a significantly greater decrease in total urinary output, F(2, 46) = 4.03, p = .03, and concentration, F(2, 46) = 4.74, p = .01 of epinepherine."
+  },
+  {
+   "pmid": "37839156",
+   "verdict": "off",
+   "stat": "F(2, 22) = 4.82",
+   "p": "p = .03",
+   "sentence": "Post-hoc analyses revealed the interaction effect for the total, F(2, 22) = 4.82, p = .03, and concentration, F(2, 22) = 7.57, p = .005, of urinary E output over 6-months was significant for women."
+  },
+  {
+   "pmid": "37839156",
+   "verdict": "off",
+   "stat": "F(2, 22) = 7.57",
+   "p": "p = .005",
+   "sentence": "Post-hoc analyses revealed the interaction effect for the total, F(2, 22) = 4.82, p = .03, and concentration, F(2, 22) = 7.57, p = .005, of urinary E output over 6-months was significant for women."
+  },
+  {
+   "pmid": "37800558",
+   "verdict": "off",
+   "stat": "t =-0.120",
+   "p": "P =0.281",
+   "sentence": "The independent t -test showed no significant difference between the two groups in the mean quality of life score ( t =-0.120, P =0.281) and its dimensions before the intervention."
+  },
+  {
+   "pmid": "37800558",
+   "verdict": "off",
+   "stat": "t =1.984",
+   "p": "P <0.001",
+   "sentence": "However, after the intervention, the results showed a significant difference between the two groups in terms of the mean quality of life score ( t =1.984, P <0.001) and its dimensions."
+  },
+  {
+   "pmid": "37800558",
+   "verdict": "off",
+   "stat": "t =1.109",
+   "p": "P =0.614",
+   "sentence": "Furthermore, the results showed that before and after the intervention in the control group, the mean score of quality of life ( t =1.109, P =0.614) and its dimensions were not significantly different."
+  },
+  {
+   "pmid": "37747970",
+   "verdict": "off",
+   "stat": "F (19,3210) = 2.23",
+   "p": "P = 0.009",
+   "sentence": "Over the course of the 5-year intervention, patients demonstrated significant reductions in ED/inpatient utilization when compared with control patients [ F (19,3210) = 2.23, P = 0.009]."
+  },
+  {
+   "pmid": "38693314",
+   "verdict": "off",
+   "stat": "Z = -2.10",
+   "p": "p = 0.03",
+   "sentence": "The results indicated that ctDCS enhanced the overall stability index when compared to sham ctDCS (Z = -2.10, p = 0.03), although it did not significantly affect the anteroposterior or medial-lateral stability indices."
+  },
+  {
+   "pmid": "38693314",
+   "verdict": "off",
+   "stat": "Z = -1.91",
+   "p": "p = 0.05",
+   "sentence": "Compared to the baseline, a single session of ctDCS reduced appendicular symptoms related to cerebellar ataxia, as evidenced by improvements in the nose-finger test (Z = -2.07, p = 0.04), fast alternating hand movements (Z = -2.15, p = 0.03), and heel-to-shin slide (Z = -1.91, p = 0.05)."
+  },
+  {
+   "pmid": "39037709",
+   "verdict": "off",
+   "stat": "F (1,30) = 6.08",
+   "p": "P = 0.019",
+   "sentence": "Patients with baseline hypoxaemia who received nitric oxide exhibited significantly lower hypoxaemia rates (61.1 vs. 93.8%), P = 0.042, and higher p a O2 /FiO 2 ratios at all time points, F (1,30) = 6.08, P = 0.019."
+  },
+  {
+   "pmid": "38881244",
+   "verdict": "off",
+   "stat": "t(47) = 3.47",
+   "p": "P = 0.002",
+   "sentence": "Similarly, Rush tic severity scores reduced more post-ICR versus DR (t(47) = 3.47, P = 0.002)."
+  },
+  {
+   "pmid": "38635115",
+   "verdict": "off",
+   "stat": "z = - 2.98",
+   "p": "p = 0.01",
+   "sentence": "The incidence of drug related problems was significantly higher in the control group (median = 1) after 6 months, U = 15, z = - 2.98, p = 0.01."
+  },
+  {
+   "pmid": "38866795",
+   "verdict": "off",
+   "stat": "F(1,46) = 6.59",
+   "p": "p < 0.01",
+   "sentence": "Following the intervention, the experimental group demonstrated improvements in the 20-m sprint test (F(1,46) = 11.03, p < 0.01), flamingo balance test (F(1,46) = 9.16, p = 0.004), SLJ (F(1,46) = 5.30, p = 0.03), agility T-test (F(1,46) = 28.30, p < 0.01), and right-handgrip (F(1,46) = 6.59, p < 0.01)."
+  },
+  {
+   "pmid": "38867451",
+   "verdict": "off",
+   "stat": "F(1, 38) = 5.40",
+   "p": "p < .001",
+   "sentence": "Interaction effect was observed between acupuncture method and time effect in terms of amplitude (F(1, 38) = 5.40, p < .001, η2 = 0.12) and latency (F(1, 38) = 3.78, p = .008, η2 = .09) of MEP."
+  },
+  {
+   "pmid": "38502154",
+   "verdict": "off",
+   "stat": "z = 116.50",
+   "p": "P = .023",
+   "sentence": "There was significant change in the caries status of sound tooth surfaces with \"action planning\" at 12 weeks (z = 116.50, P = .023)."
+  },
+  {
+   "pmid": "38670670",
+   "verdict": "off",
+   "stat": "t = 2.01, df = 132",
+   "p": "p = .040",
+   "sentence": "Patients who did not achieve reliable recovery incurred more costs, especially associated with general practitioner consultations (t = 3.01, df = 132, p = .003), use of emergency departments (t = 2.20, df = 132, p = .030), total health care costs (t = 2.01, df = 132, p = .040), and sick leaves (t = 1.97, df = 132, p = .048)."
+  },
+  {
+   "pmid": "38670670",
+   "verdict": "off",
+   "stat": "t = 1.97, df = 132",
+   "p": "p = .048",
+   "sentence": "Patients who did not achieve reliable recovery incurred more costs, especially associated with general practitioner consultations (t = 3.01, df = 132, p = .003), use of emergency departments (t = 2.20, df = 132, p = .030), total health care costs (t = 2.01, df = 132, p = .040), and sick leaves (t = 1.97, df = 132, p = .048)."
+  },
+  {
+   "pmid": "38581814",
+   "verdict": "off",
+   "stat": "χ2(2) = 13.19",
+   "p": "p < 0.001",
+   "sentence": "Results show that the intervention was efficacious in reducing emotional and physical IPV as evidenced by a statistically significant intervention main effect for emotional IPV, χ2(1) = 5.96, p = 0.015, and a significant intervention-by-time interaction effect for physical IPV, χ2(2) = 13.19, p < 0.001."
+  },
+  {
+   "pmid": "38216434",
+   "verdict": "off",
+   "stat": "t = 3.013",
+   "p": "p < 0.001",
+   "sentence": "The TAM improved more significantly in the tranexamic acid group (87.68° ± 10.44°) than in the conventional group (80.47° ± 10.93°) at 6 months after surgery, with a statistically significant difference (t = 3.013, p < 0.001)."
+  },
+  {
+   "pmid": "38599641",
+   "verdict": "off",
+   "stat": "χ2=0.62",
+   "p": "P=0.42",
+   "sentence": "The median follow-up time was 15 months, and the one-year disease-free survival rate of the experimental group was higher than that of control group (92.86% vs. 77.78%, χ2=0.62, P=0.42), with a relative decrease of 87% in the risk of disease progression or death (P=0.029)."
+  },
+  {
+   "pmid": "39007911",
+   "verdict": "off",
+   "stat": "Z = 2.43",
+   "p": "p = .019",
+   "sentence": "Furthermore, the experimental group demonstrated greater improvements in walking speed (F = 4.58, p = .040), cadence (F = 5.67, p = .023), affected step length (F = 5.79, p = .022), affected stride length (F = 4.84, p = .035), FMA-LE (Z = 2.43, p = .019), and BBS (F = 4.76, p = .036) compared to the control group."
+  },
+  {
+   "pmid": "39167466",
+   "verdict": "off",
+   "stat": "F(1,19.8) = 5.62",
+   "p": "P = 0.027",
+   "sentence": "Anodal tDCS reduced pain compared with cathodal stimulation (F(1,19.9) = 19.53, P < 0.001, Cohen d = 0.86) and analgesic expectancy reduced pain compared with hyperalgesic expectancy (F(1,19.8) = 5.62, P = 0.027, Cohen d = 0.56)."
+  },
+  {
+   "pmid": "39326067",
+   "verdict": "off",
+   "stat": "Z = -2.570",
+   "p": "p = .009",
+   "sentence": "This result was also imprinted on the travel distance of the non-surgical knee limb in the post (t = 3.259, p = .004, d = 1.456), 2 weeks (Z = -2.570, p = .009, |r| = 0.574) and one month measurement (t = 2.653, p = .016, d = 1.185)."
+  },
+  {
+   "pmid": "38968085",
+   "verdict": "off",
+   "stat": "t(22) = -6.01",
+   "p": "p = .00009",
+   "sentence": "On Day 720, a live blind evaluator rated the VYC-17.5L assigned side as having significant reduction in scar severity (-7.2 [t(22) = -6.01, p = .00009]) and number of scars (-8.8 [t(22) = -6.25, p = .00006]) as compared with baseline."
+  },
+  {
+   "pmid": "38968085",
+   "verdict": "off",
+   "stat": "t(22) = -6.25",
+   "p": "p = .00006",
+   "sentence": "On Day 720, a live blind evaluator rated the VYC-17.5L assigned side as having significant reduction in scar severity (-7.2 [t(22) = -6.01, p = .00009]) and number of scars (-8.8 [t(22) = -6.25, p = .00006]) as compared with baseline."
+  },
+  {
+   "pmid": "39182512",
+   "verdict": "off",
+   "stat": "F(2, 115) = 5.93",
+   "p": "P < .001",
+   "sentence": "Using a repeated-measures generalized linear model, significant time × group interactions were found in the MMSE [F(2, 115) = 19.54, P < .001], FTT [F(2, 115) = 4.87, P = .01], HRV high-frequency [F(2, 115) = 3.57, P = .03], and high-frequency/low-frequency ratio [F(2, 115) = 0.96, P = .01], UCLA-3 [F(2, 115) = 54.7, P < .001], GDS-SF [F(2, 115) = 3.36, P = .04], and WEMWBS [F(2, 115) = 5.93, P < "
+  },
+  {
+   "pmid": "39090458",
+   "verdict": "off",
+   "stat": "z = - 2.83",
+   "p": "p = 0.05",
+   "sentence": "Psychological violence (exp(β) = 1.37, z = 1.97, p = 0.05) and higher household asset scores (exp(β) = 1.29, z = - 2.83, p = 0.05) were weakly associated with poorer ART adherence."
+  },
+  {
+   "pmid": "39090458",
+   "verdict": "off",
+   "stat": "z = − 2.83",
+   "p": "p = 0.05",
+   "sentence": "La violencia psicológica (exp(β) = 1.37, z = 1.97, p = 0.05) y las puntuaciones más altas de activos del hogar (exp(β) = 1.29, z = − 2.83, p = 0.05) se asociaron con una peor adherencia al TAR."
+  },
+  {
+   "pmid": "38977510",
+   "verdict": "off",
+   "stat": "F(1,12) = 18.753",
+   "p": "p = 0.005",
+   "sentence": "A significant time effect was found for maximal oxygen uptake (F(1,12) = 18.753, p = 0.005, ηp2 = 0.630), the velocity at the ventilatory threshold one (F(1,12) = 10.704, p = 0.007, ηp2 = 0.493) and two (F(1,12) = 7.746, p = .018, ηp2 = .413)."
+  },
+  {
+   "pmid": "38977510",
+   "verdict": "off",
+   "stat": "F(1,12) = 7.746",
+   "p": "p = .018",
+   "sentence": "A significant time effect was found for maximal oxygen uptake (F(1,12) = 18.753, p = 0.005, ηp2 = 0.630), the velocity at the ventilatory threshold one (F(1,12) = 10.704, p = 0.007, ηp2 = 0.493) and two (F(1,12) = 7.746, p = .018, ηp2 = .413)."
+  },
+  {
+   "pmid": "39510541",
+   "verdict": "off",
+   "stat": "Z=-2.71",
+   "p": "P=0.004",
+   "sentence": "A significant reduction was found from baseline to 6-month follow-up in mean scores in the intervention group for MSK pain prevalence (from 55.2% to 43.3%, Z=-2.71, P=0.004, etap2=0.07), MSK pain intensity (from 2.21±2.51 to 1.94±2.47, F263=32.27, P<0.001, etap2 = 0.11), and postural behavior (from 6.99±2.97 to 6.65±2.72, F263=27.35, P<0.001, etap2=0.09)."
+  },
+  {
+   "pmid": "39197359",
+   "verdict": "off",
+   "stat": "z = -0.5523",
+   "p": "p = 0.29116",
+   "sentence": "In phase 2, there was no difference in the confirmed response rates between the combination group (n = 18, 2 partial responses [PR], 11 %) and the pembrolizumab group (n = 17, 1 PR, 6 %; z = -0.5523, p = 0.29116)."
+  },
+  {
+   "pmid": "39151278",
+   "verdict": "off",
+   "stat": "F (1,58) = 12.62",
+   "p": "p = 0.002",
+   "sentence": "There was a significant time x group interaction effect in favor of the study group for the antero-posterior postural sway of children on the normal surface with eyes open (F (1,58) = 12.62, p = 0.002)."
+  },
+  {
+   "pmid": "39202631",
+   "verdict": "off",
+   "stat": "F(1, 26) = 7.470",
+   "p": "p < 0.011",
+   "sentence": "Results: A significant group-time interaction was observed for pain, with F-values of F(1, 26) = 7.470, p < 0.011 for the splenius and F(1, 26) = 9.623, p < 0.005 for the upper trapezius."
+  },
+  {
+   "pmid": "39202631",
+   "verdict": "off",
+   "stat": "F(1, 26) = 13.211",
+   "p": "p < 0.001",
+   "sentence": "A significant time-group interaction was observed for the muscle strength of the shoulder, with F-values of F(1, 26) = 13.211, p < 0.001; F(1, 26) = 4.974, p = 0.035 and F(1, 26) = 9.674, p = 0.004 for flexors, abductors, and external rotators, respectively."
+  },
+  {
+   "pmid": "39202631",
+   "verdict": "off",
+   "stat": "F(1, 26) = 13.243",
+   "p": "p < 0.001",
+   "sentence": "A significant time-group interaction was observed in the FMA, with F-values of F(1, 26) = 13.243, p < 0.001."
+  },
+  {
+   "pmid": "39192413",
+   "verdict": "off",
+   "stat": "χ2=0.457",
+   "p": "P =0.254",
+   "sentence": "The total effective rate of patients in the observation group was slightly lower than that of the control group(χ2=0.457, P =0.254)."
+  },
+  {
+   "pmid": "38948943",
+   "verdict": "off",
+   "stat": "F(1, 69) = 37.34",
+   "p": "p = 0.001",
+   "sentence": "A second GLM demonstrated decreased worry in the TSM condition: F(1, 69) = 37.34, p = 0.001, partial η2 = 0.35 and observed power = 0.83."
+  },
+  {
+   "pmid": "35227132",
+   "verdict": "off",
+   "stat": "F(1,58) = 15.47",
+   "p": "p < .0001",
+   "sentence": "Significant intervention × group interaction effects were apparent for Trail Making Test part-B [F(1,58) = 20.46, p < .0001, η2 = .26] and Digit Span Backwards [F(1,58) = 15.47, p < .0001, η2 = .21] neuropsychological assessments."
+  },
+  {
+   "pmid": "39440865",
+   "verdict": "off",
+   "stat": "F(2, 26) = 1.06",
+   "p": "p = 0.367",
+   "sentence": "A secondary analysis revealed no statistically significant difference in pain intensity between the performance of the first, second, or third exercise set regardless of the load (F(2, 26) = 1.06, p = 0.367)."
+  },
+  {
+   "pmid": "39723938",
+   "verdict": "off",
+   "stat": "χ2 = 30.995",
+   "p": "p < 0.000",
+   "sentence": "Results: A significant difference was found in the VAS activity-related pain scores of the groups according to the assessment time (MLD: χ2 = 47.175; p = 0.000; control; χ2 = 30.995; p < 0.000)."
+  },
+  {
+   "pmid": "39661916",
+   "verdict": "off",
+   "stat": "F(3, 177) = 0.35",
+   "p": "p = .71",
+   "sentence": "Results indicated no statistically significant main effects associated with intervention groups for pre-post change scores of pain intensity (F(3, 177) = 0.35, p = .71, partial η2 = .004), anxiety (F(3, 177) = 0.20, p = .81, partial η2 = .002) or sleep quality (F(3, 175) = 0.81, p = .45, partial η2 = .009)."
+  },
+  {
+   "pmid": "39661916",
+   "verdict": "off",
+   "stat": "F(3, 177) = 0.20",
+   "p": "p = .81",
+   "sentence": "Results indicated no statistically significant main effects associated with intervention groups for pre-post change scores of pain intensity (F(3, 177) = 0.35, p = .71, partial η2 = .004), anxiety (F(3, 177) = 0.20, p = .81, partial η2 = .002) or sleep quality (F(3, 175) = 0.81, p = .45, partial η2 = .009)."
+  },
+  {
+   "pmid": "39661916",
+   "verdict": "off",
+   "stat": "F(3, 175) = 0.81",
+   "p": "p = .45",
+   "sentence": "Results indicated no statistically significant main effects associated with intervention groups for pre-post change scores of pain intensity (F(3, 177) = 0.35, p = .71, partial η2 = .004), anxiety (F(3, 177) = 0.20, p = .81, partial η2 = .002) or sleep quality (F(3, 175) = 0.81, p = .45, partial η2 = .009)."
+  },
+  {
+   "pmid": "39535112",
+   "verdict": "off",
+   "stat": "F(1,215) = 4.836",
+   "p": "P = .015",
+   "sentence": "Overall, caregivers increased linearly in resourcefulness over time [F(1,215) = 4.836, P = .015]."
+  },
+  {
+   "pmid": "39702595",
+   "verdict": "off",
+   "stat": "t = -2.75",
+   "p": "P = 0.783",
+   "sentence": "In contrast, the control group participants showed no significant changes in CAT scores (t = -0.252, P = 0.801), mMRC scale scores (t = -0.085, P = 0.932), 6MWD performance (t = -0.463, P = 0.644), HADS-A scores (t = -2.75, P = 0.783), or HADS-D scores (t = -0.281, P = 0.779)."
+  },
+  {
+   "pmid": "39516846",
+   "verdict": "off",
+   "stat": "F(2, 32) = 81.01",
+   "p": "p = 0.001",
+   "sentence": "The results revealed significant differences in pain scores and proprioception among female rock climbers with SIS who participated in SFTMM, SFT, and a control group (F(2, 32) = 81.01, p = 0.001, η2 = 0.83 for pain scores; F(2, 32) = 178.2, p = 0.001, η2 = 0.91 for proprioception scores)."
+  },
+  {
+   "pmid": "39516846",
+   "verdict": "off",
+   "stat": "F(2, 32) = 178.2",
+   "p": "p = 0.001",
+   "sentence": "The results revealed significant differences in pain scores and proprioception among female rock climbers with SIS who participated in SFTMM, SFT, and a control group (F(2, 32) = 81.01, p = 0.001, η2 = 0.83 for pain scores; F(2, 32) = 178.2, p = 0.001, η2 = 0.91 for proprioception scores)."
+  },
+  {
+   "pmid": "39499517",
+   "verdict": "off",
+   "stat": "z = 12.02",
+   "p": "P = .001",
+   "sentence": "Compared with the control group, the intervention group achieved a significantly greater reduction in incontinence severity (median, 3.00 [IQR, 1.00-6.00] vs 2.00 [IQR, 0-4.00] points; z = -3.05; P = .002), significantly increased cure rate (45 of 223 [20.2%] vs 20 of 229 [8.7%]; z = 12.02; P = .001) and improvement (132 of 223 [59.2%] vs 102 of 229 [44.5%]; z = 9.71; P = .002), significantly grea"
+  },
+  {
+   "pmid": "39499517",
+   "verdict": "off",
+   "stat": "z = 9.71",
+   "p": "P = .002",
+   "sentence": "Compared with the control group, the intervention group achieved a significantly greater reduction in incontinence severity (median, 3.00 [IQR, 1.00-6.00] vs 2.00 [IQR, 0-4.00] points; z = -3.05; P = .002), significantly increased cure rate (45 of 223 [20.2%] vs 20 of 229 [8.7%]; z = 12.02; P = .001) and improvement (132 of 223 [59.2%] vs 102 of 229 [44.5%]; z = 9.71; P = .002), significantly grea"
+  },
+  {
+   "pmid": "39457319",
+   "verdict": "off",
+   "stat": "F (2, 205) = 5.42",
+   "p": "p = 0.006",
+   "sentence": "Significant group effects and significant time × group interactions for overall self-compassion [F (2, 183) = 32.72, p < 0.001; effect size ηp2 = 0.226], mental wellbeing [F (2, 212) = 17.46, p < 0.001; effect size ηp2 = 0.135], perceived stress [F (2, 205) = 5.42, p = 0.006; effect size ηp2 = 0.46], personal burnout [F (2, 224) = 7.57, p = 0.001; effect size ηp2 = 0.063] and work burnout [F (2, 2"
+  },
+  {
+   "pmid": "26710954",
+   "verdict": "off",
+   "stat": "t = 2.178",
+   "p": "P = 0.869",
+   "sentence": "Results The frequency of defecation per week in the therapy group was higher than that in the control group at the first week after treatment (t = 2.178, P = 0.869), and significantly increase in the fourth week (t = 8.390, P = 0.000)."
+  },
+  {
+   "pmid": "26710954",
+   "verdict": "off",
+   "stat": "χ² = 10.010",
+   "p": "P = 0.001",
+   "sentence": "The total recurrence of constipation in lactulose group was lower than that in the control group by follow up 120 days (4% vs 18%, χ² = 10.010, P = 0.001)."
+  },
+  {
+   "pmid": "25903450",
+   "verdict": "off",
+   "stat": "F(8,26) = 5.16",
+   "p": "P = 0.03",
+   "sentence": "At 6 months post-baseline, the physical activity group showed significantly reduced insomnia symptom severity (F(8,26) = 5.16, P = 0.03), with an average reduction of four points on the Insomnia Severity Index; and significantly reduced depression and anxiety scores (F(6,28) = 5.61, P = 0.02; and F(6,28) = 4.41, P = 0.05, respectively)."
+  },
+  {
+   "pmid": "25903450",
+   "verdict": "off",
+   "stat": "F(6,28) = 5.61",
+   "p": "P = 0.02",
+   "sentence": "At 6 months post-baseline, the physical activity group showed significantly reduced insomnia symptom severity (F(8,26) = 5.16, P = 0.03), with an average reduction of four points on the Insomnia Severity Index; and significantly reduced depression and anxiety scores (F(6,28) = 5.61, P = 0.02; and F(6,28) = 4.41, P = 0.05, respectively)."
+  },
+  {
+   "pmid": "25903450",
+   "verdict": "off",
+   "stat": "F(6,28) = 4.41",
+   "p": "P = 0.05",
+   "sentence": "At 6 months post-baseline, the physical activity group showed significantly reduced insomnia symptom severity (F(8,26) = 5.16, P = 0.03), with an average reduction of four points on the Insomnia Severity Index; and significantly reduced depression and anxiety scores (F(6,28) = 5.61, P = 0.02; and F(6,28) = 4.41, P = 0.05, respectively)."
+  },
+  {
+   "pmid": "25903450",
+   "verdict": "off",
+   "stat": "F(8,26) = 1.84",
+   "p": "P = 0.18",
+   "sentence": "Daytime fatigue showed no significant effect of the intervention (F(8,26) = 1.84, P = 0.18)."
+  },
+  {
+   "pmid": "26661702",
+   "verdict": "off",
+   "stat": "F(8,111)=0.122",
+   "p": "p=0.695",
+   "sentence": "Results The multivariate effect (Pillai's trace) was not significant between clinicians, F(8,111)=0.122, p=0.695, partial η2=0.106."
+  },
+  {
+   "pmid": "25807670",
+   "verdict": "off",
+   "stat": "X2 = 15.00, df = 1",
+   "p": "p = 0.001",
+   "sentence": "There was a statistical significant difference between the study groups with respect to development of alveolar osteitis (X2 = 15.00, df = 1, p = 0.001).The risk of development of alveolar osteitis was 4 times higher in the control group (OR = 4.33, P = 0.001)."
+  },
+  {
+   "pmid": "26409698",
+   "verdict": "off",
+   "stat": "Z = -2.44",
+   "p": "P = 0.02",
+   "sentence": "Statistical analyses showed significantly different in ARAT (Z = -2.17, P = 0.03), FMA-UE (Z = -2.49, P = 0.01), MBI (Z = -2.44, P = 0.02), MAL-AOU (Z = -2.17, P = 0.03), and MAL-QOM (Z = -2.17, P = 0.03) between groups."
+  },
+  {
+   "pmid": "27132446",
+   "verdict": "off",
+   "stat": "χ2 = 3.500",
+   "p": "P = 0.057",
+   "sentence": "It was shown that the results were not different in two groups [96.7% (174/180) vs. 92.2% (166/180), χ2 = 3.500, P = 0.057]."
+  },
+  {
+   "pmid": "27132446",
+   "verdict": "off",
+   "stat": "χ2 = 5.786",
+   "p": "P = 0.013",
+   "sentence": "By using auscultation, the correct rate of experienced anesthetist was higher than that of inexperienced (95.0% vs. 78.3%, χ2 = 5.786, P = 0.013)."
+  },
+  {
+   "pmid": "27132446",
+   "verdict": "off",
+   "stat": "χ2 = 0.500",
+   "p": "P = 0.250",
+   "sentence": "Using transillumination, the experienced anesthetist was mistaken in 3 cases (accuracy was 95.0%), while the inexperienced mistook in 1 case (accuracy was 98.3%), and no significant difference was found between two groups χ2 = 0.500, P = 0.250)."
+  },
+  {
+   "pmid": "27132446",
+   "verdict": "off",
+   "stat": "χ2 = 7.563",
+   "p": "P = 0.004",
+   "sentence": "The correct rate of using transillumination was significantly higher than that of using auscultation χ2 = 7.563, P = 0.004)."
+  },
+  {
+   "pmid": "26383218",
+   "verdict": "off",
+   "stat": "t (55) =2.15",
+   "p": "p = 0.049",
+   "sentence": "There was a significant difference in pretest-posttest change in scores for intervention (7.89±4.13) and control (-2.51±2.64) groups; t (55) =2.15, p = 0.049."
+  },
+  {
+   "pmid": "25639148",
+   "verdict": "off",
+   "stat": "F(1, 21) = 5.057",
+   "p": "P = 0.036",
+   "sentence": "Findings Analysis of changes in withdrawal symptoms revealed a significant time × product interaction F(1, 21) = 5.057, P = 0.036, n(2) P = 0.202."
+  },
+  {
+   "pmid": "26154249",
+   "verdict": "off",
+   "stat": "F(1,37) = 0.02",
+   "p": "P = 0.94",
+   "sentence": "After controlling for pretest score, there was no difference between intervention arms on the posttest [F(1,37) = 0.02, P = 0.94] and retention tests [F(1,17) = 1.43, P = 0.25]."
+  },
+  {
+   "pmid": "26094782",
+   "verdict": "off",
+   "stat": "F(1,69) = 8.145",
+   "p": "P = .008",
+   "sentence": "Results Workshop participants reported greater mean changes 6 weeks post-workshop for total recovery experiences (F(1,69) = 8.145, P = .008), self-care satisfaction (F(1,69) = 8.277, P = .005) and perceived sleep quality (F(1,69) = 9.611, P = .003)."
+  },
+  {
+   "pmid": "25660821",
+   "verdict": "off",
+   "stat": "Z = -2.459",
+   "p": "P = 0.017",
+   "sentence": "Geranylgeranylacetone improved both the Lewis score (Z = -2.459, P = 0.017) and degree (χ(2) = 5.414, P = 0.020) on capsule endoscopy 12 weeks later."
+  },
+  {
+   "pmid": "25738891",
+   "verdict": "off",
+   "stat": "F(1,304)=4.42",
+   "p": "p=0.03",
+   "sentence": "There was a significant group×time×grade interaction (F(1,304)=4.42; p=0.03) for internalizing problems, with high school-age participants in CAPS reporting significantly lower symptoms at 18 months postbaseline than those in the IRC."
+  },
+  {
+   "pmid": "25239086",
+   "verdict": "off",
+   "stat": "Z= -0.87",
+   "p": "P=0.49",
+   "sentence": "Results There were no significant differences between early and late stages of the programme in time spent on the core components (recap Z= -0.87, P=0.49; activities Z = -0.29, P=0.89; take-home activity Z = -0.59, P=0.69; other Z = -0.58, P=0.69)."
+  },
+  {
+   "pmid": "25239086",
+   "verdict": "off",
+   "stat": "Z = -0.29",
+   "p": "P=0.89",
+   "sentence": "Results There were no significant differences between early and late stages of the programme in time spent on the core components (recap Z= -0.87, P=0.49; activities Z = -0.29, P=0.89; take-home activity Z = -0.59, P=0.69; other Z = -0.58, P=0.69)."
+  },
+  {
+   "pmid": "25239086",
+   "verdict": "off",
+   "stat": "Z = -0.59",
+   "p": "P=0.69",
+   "sentence": "Results There were no significant differences between early and late stages of the programme in time spent on the core components (recap Z= -0.87, P=0.49; activities Z = -0.29, P=0.89; take-home activity Z = -0.59, P=0.69; other Z = -0.58, P=0.69)."
+  },
+  {
+   "pmid": "25239086",
+   "verdict": "off",
+   "stat": "Z = -0.58",
+   "p": "P=0.69",
+   "sentence": "Results There were no significant differences between early and late stages of the programme in time spent on the core components (recap Z= -0.87, P=0.49; activities Z = -0.29, P=0.89; take-home activity Z = -0.59, P=0.69; other Z = -0.58, P=0.69)."
+  },
+  {
+   "pmid": "25372657",
+   "verdict": "off",
+   "stat": "F(1,169) = 14.86",
+   "p": "P = .001",
+   "sentence": "Results Participants in PATH had significantly greater reduction in depression (Cohen d, 0.60; 95% CI, 0.13-1.06; treatment × time, F(1,179) = 8.03; P = .005) and disability (Cohen d, 0.67; 95% CI, 0.20-1.14; treatment × time, F(1,169) = 14.86; P = .001) than ST-CI participants during the 12-week period (primary outcomes)."
+  },
+  {
+   "pmid": "25897953",
+   "verdict": "off",
+   "stat": "F(2,20) = 6.73",
+   "p": "p < 0.0058",
+   "sentence": "Results A statistically significant effect of Phase 2 (Day 6) diet was found on FK of Day 7, as indicated by repeated analysis of variance (ANOVA), F(2,20) = 6.73, p < 0.0058."
+  },
+  {
+   "pmid": "26052874",
+   "verdict": "off",
+   "stat": "t(94) = 2.41",
+   "p": "p = .017",
+   "sentence": "A hierarchical linear models (HLM) analysis comparing rates of change across conditions controlling for baseline gender, age, and racial group indicated a moderate effect in favor of the feedback condition for symptom improvement, t(94) = 2.41, p = .017, d = .50."
+  },
+  {
+   "pmid": "26107256",
+   "verdict": "off",
+   "stat": "t(8) = -3.90",
+   "p": "p = 0.01",
+   "sentence": "In the AYT group, absolute COP significantly increased in the FoamEO (t(8) = -3.66, p = 0.01) and FoamEC (t(8) = -3.90, p = 0.01) conditions."
+  },
+  {
+   "pmid": "26107256",
+   "verdict": "off",
+   "stat": "t(8) = -3.96",
+   "p": "p = 0.01",
+   "sentence": "Relative somatosensory SIEO (t(8) = -2.42, p = 0.04) and SIEC (t(8) = -3.96, p = 0.01), and vestibular SIV (t(8) = -2.47, p = 0.04) contributions to balance increased significantly."
+  },
+  {
+   "pmid": "26628206",
+   "verdict": "off",
+   "stat": "t = 4.28, df = 554",
+   "p": "p = 0.001",
+   "sentence": "Results Both interventions resulted in improved functioning by 12 weeks (t = 4.28, df = 554, p = 0.001), which was maintained until 24 weeks."
+  },
+  {
+   "pmid": "26628206",
+   "verdict": "off",
+   "stat": "t = -2.45, df = 672",
+   "p": "p = 0.021",
+   "sentence": "Improvements in self efficacy (t = -2.45, df = 672, p = 0.021), problem-solving skill (t = -2.44, df = 546, p = 0.015), and depression symptoms (t = 2.25, df = 672, p = .025) by week 9 predicted improvement in function across groups by week 12."
+  },
+  {
+   "pmid": "29786336",
+   "verdict": "off",
+   "stat": "χ 2 =11.688",
+   "p": "P =0.000",
+   "sentence": "After injection, the incidences of pain and swelling in the cell treatment group were significantly higher than those in the control group ( χ 2 =16.200, P =0.000; χ 2 =11.688, P =0.000), but no significant difference was found in the incidence of effusion ( χ 2 =2.118, P =0.146)."
+  },
+  {
+   "pmid": "28129680",
+   "verdict": "off",
+   "stat": "F (1,38)=0.90",
+   "p": "p=0.78",
+   "sentence": "Moreover, a significant increase was reported in the lymphocyte proliferation with phytohemagglutinin (PHA) [F (1,38)=16.24, p<0.001], and peripheral blood IL-17 [F (1,38)=56.71, p<0.001] However, lymphocyte (CD4+, CD8+, and NK-cell) percentages were not affected significantly [F (1,38)=2.21, p=0.14] ,[F (1,38)=0.90, p=0.78] and [F (1,38)=1.79, p=0.18], respectively."
+  },
+  {
+   "pmid": "28129680",
+   "verdict": "off",
+   "stat": "F (1,38)=1.79",
+   "p": "p=0.18",
+   "sentence": "Moreover, a significant increase was reported in the lymphocyte proliferation with phytohemagglutinin (PHA) [F (1,38)=16.24, p<0.001], and peripheral blood IL-17 [F (1,38)=56.71, p<0.001] However, lymphocyte (CD4+, CD8+, and NK-cell) percentages were not affected significantly [F (1,38)=2.21, p=0.14] ,[F (1,38)=0.90, p=0.78] and [F (1,38)=1.79, p=0.18], respectively."
+  },
+  {
+   "pmid": "27488081",
+   "verdict": "off",
+   "stat": "F(1.54, 141.94) = 9.72",
+   "p": "P = 0.001",
+   "sentence": "Results General linear model repeated measures demonstrated significant effect for time × treatment interaction on the Y-BOCS total scores, F(1.49, 137.93) = 7.1, P = 0.003, and Y-BOCS Obsession subscale score, F(1.54, 141.94) = 9.72, P = 0.001, and near significant effect for the Y-BOCS Compulsion subscale score, F(1.27, 117.47) = 2.92, P = 0.08."
+  },
+  {
+   "pmid": "27825415",
+   "verdict": "off",
+   "stat": "χ 2 =5.549",
+   "p": "P=0.010",
+   "sentence": "Compared with the children in group D1,those in group D2 were significantly more sedated when they were separated from their parents (61.9% vs. 95.0%,respectively)(χ 2 =5.549,P=0.010)."
+  },
+  {
+   "pmid": "27389678",
+   "verdict": "off",
+   "stat": "Z = 12.571",
+   "p": "P = 0.002",
+   "sentence": "There was no significant difference between the level of blood loss in Group A [mean 10.0 ml; range 5.0-20.0 ml] and Group B [mean 10.0 ml; range 5.0-20.0 ml] (P = 0.989), but the level in both groups was higher than that in Group C [mean 7.5 ml; range 5.0-10.0 ml] (Z = 12.571, P = 0.002; Z = 13.619, P = 0.001)."
+  },
+  {
+   "pmid": "27389678",
+   "verdict": "off",
+   "stat": "Z = 13.619",
+   "p": "P = 0.001",
+   "sentence": "There was no significant difference between the level of blood loss in Group A [mean 10.0 ml; range 5.0-20.0 ml] and Group B [mean 10.0 ml; range 5.0-20.0 ml] (P = 0.989), but the level in both groups was higher than that in Group C [mean 7.5 ml; range 5.0-10.0 ml] (Z = 12.571, P = 0.002; Z = 13.619, P = 0.001)."
+  },
+  {
+   "pmid": "27289365",
+   "verdict": "off",
+   "stat": "F (1,77) = 5.266",
+   "p": "p ≤ 0.02",
+   "sentence": "Analysis of the IHTT revealed that only TFMPP (F (1,77) = 5.266, p ≤ 0.02) significantly reduced the IHTT, while BZP, BZP + TFMPP and dexamphetamine had no effect."
+  },
+  {
+   "pmid": "27181179",
+   "verdict": "off",
+   "stat": "F(1,39)=4.78",
+   "p": "p=0.04",
+   "sentence": "Results EPO had no cumulative effect on plasma levels of IL-6 or IL-18 but increased hsCRP levels in patients with TRD (mean±SD change in ng/L: EPO: 0.43±1.64; Saline: -0.90±2.43; F(1,39)=4.78, p=0.04)."
+  },
+  {
+   "pmid": "27116921",
+   "verdict": "off",
+   "stat": "z = 0.182",
+   "p": "P = .668",
+   "sentence": "After placebo, there was no difference in heart rate (HR) or maximal workload at either altitude (z = 0.182; P = .668, respectively)."
+  },
+  {
+   "pmid": "27107896",
+   "verdict": "off",
+   "stat": "z=5.313",
+   "p": "p=0.037",
+   "sentence": "Significant statistical differences were found in the exercise execution error results within the experimental group (z=5.313; p=0.037) and between groups (u=37.00; p=0.001; u=64.00; p=0.024)."
+  },
+  {
+   "pmid": "27222459",
+   "verdict": "off",
+   "stat": "F(1,110)=6.21",
+   "p": "p=0.006",
+   "sentence": "Multivariate analyses of variance indicated that the manual-guided self-learning group reported significantly greater improvements than the usual care group in family burden [F(1,110)=6.21, p=0.006] and caregiving experience [F(1,110)=6.88, p=0.0004], and patients' psychotic symptoms [F(1,110)=6.25, p=0.0003], functioning [F(1,110)=7.01, p=0.0005] and number of hospitalisations [F(1,110)=5.71, p=0"
+  },
+  {
+   "pmid": "27222459",
+   "verdict": "off",
+   "stat": "F(1,110)=6.88",
+   "p": "p=0.0004",
+   "sentence": "Multivariate analyses of variance indicated that the manual-guided self-learning group reported significantly greater improvements than the usual care group in family burden [F(1,110)=6.21, p=0.006] and caregiving experience [F(1,110)=6.88, p=0.0004], and patients' psychotic symptoms [F(1,110)=6.25, p=0.0003], functioning [F(1,110)=7.01, p=0.0005] and number of hospitalisations [F(1,110)=5.71, p=0"
+  },
+  {
+   "pmid": "27222459",
+   "verdict": "off",
+   "stat": "F(1,110)=6.25",
+   "p": "p=0.0003",
+   "sentence": "Multivariate analyses of variance indicated that the manual-guided self-learning group reported significantly greater improvements than the usual care group in family burden [F(1,110)=6.21, p=0.006] and caregiving experience [F(1,110)=6.88, p=0.0004], and patients' psychotic symptoms [F(1,110)=6.25, p=0.0003], functioning [F(1,110)=7.01, p=0.0005] and number of hospitalisations [F(1,110)=5.71, p=0"
+  },
+  {
+   "pmid": "27222459",
+   "verdict": "off",
+   "stat": "F(1,110)=7.01",
+   "p": "p=0.0005",
+   "sentence": "Multivariate analyses of variance indicated that the manual-guided self-learning group reported significantly greater improvements than the usual care group in family burden [F(1,110)=6.21, p=0.006] and caregiving experience [F(1,110)=6.88, p=0.0004], and patients' psychotic symptoms [F(1,110)=6.25, p=0.0003], functioning [F(1,110)=7.01, p=0.0005] and number of hospitalisations [F(1,110)=5.71, p=0"
+  },
+  {
+   "pmid": "27222459",
+   "verdict": "off",
+   "stat": "F(1,110)=5.71",
+   "p": "p=0.005",
+   "sentence": "Multivariate analyses of variance indicated that the manual-guided self-learning group reported significantly greater improvements than the usual care group in family burden [F(1,110)=6.21, p=0.006] and caregiving experience [F(1,110)=6.88, p=0.0004], and patients' psychotic symptoms [F(1,110)=6.25, p=0.0003], functioning [F(1,110)=7.01, p=0.0005] and number of hospitalisations [F(1,110)=5.71, p=0"
+  },
+  {
+   "pmid": "26456161",
+   "verdict": "off",
+   "stat": "χ 2 = 1.495",
+   "p": "p = .209",
+   "sentence": "No statistical significant difference in uncompromised survival rate could be identified between abutment types (χ 2 = 1.495, p = .209)."
+  },
+  {
+   "pmid": "26079158",
+   "verdict": "off",
+   "stat": "t(35) = 4.28",
+   "p": "p > .001",
+   "sentence": "Significant within-group increases in sleep quality were found for completers of the insomnia program from pre- to post-intervention (t(35) = 4.28, p > .001) with a moderate between-groups effect size (d = .51)."
+  },
+  {
+   "pmid": "27489077",
+   "verdict": "off",
+   "stat": "F(1,47)=2.87",
+   "p": "P=.09",
+   "sentence": "With regard to CAQ and QoL no significant differences were found between the groups (CAQ [d(1,47)=0.5, P=.48] and QoL [F(1,47)=2.87, P=.09])."
+  },
+  {
+   "pmid": "26994397",
+   "verdict": "off",
+   "stat": "F(1,5) = 8.09",
+   "p": "P = .03",
+   "sentence": "Results The number of participants in the CBTuhr group making the transition to psychosis increased from 10 at 18-month follow-up to 12 at 4-year follow-up whereas it did not change in the TAU group (n = 22); this still represents a clinically important (incidence rate ratio [IRR] = 12/22 = 0.55) and significant effect (F(1,5) = 8.09, P = .03), favoring CBTuhr."
+  },
+  {
+   "pmid": "26933803",
+   "verdict": "off",
+   "stat": "F(3, 38)= 4.74",
+   "p": "p = 0.03",
+   "sentence": "Results D-serine administration improved performance in the Groton Maze learning test of spatial memory and learning and problem solving (F(3, 38)= 4.74, p = 0.03)."
+  },
+  {
+   "pmid": "26825916",
+   "verdict": "off",
+   "stat": "F(2,54) = 4.873",
+   "p": "P < 0.01",
+   "sentence": "There were significant differences in the peak torque between 3 treatments (F(2,54) = 4.873, P < 0.01)."
+  },
+  {
+   "pmid": "27112637",
+   "verdict": "off",
+   "stat": "F(2,22)=4.19",
+   "p": "p=0.048",
+   "sentence": "Interleukin-6 levels were also lower following haloperidol (F(2,22)=4.19, p=0.048) in comparison with placebo (p=0.02; CI=0.14, 1.8), but not with aripiprazole."
+  },
+  {
+   "pmid": "26911949",
+   "verdict": "off",
+   "stat": "Z = 2.198",
+   "p": "P = 0.021",
+   "sentence": "However, in patients with sepsis, TLR4 level was significantly decreased from 10 days in simvastatin group as compared with that of conventional therapy group (n = 47), and it was decreased up to 15 days [mean fluorescence intensity (MFI): 21 (19, 28) vs. 27 (25, 33) at 10 days, Z = 2.198, P = 0.021; 16 (15, 21) vs. 26 (23, 34) at 15 days, Z = 4.611, P = 0.002]."
+  },
+  {
+   "pmid": "26911949",
+   "verdict": "off",
+   "stat": "Z = 4.611",
+   "p": "P = 0.002",
+   "sentence": "However, in patients with sepsis, TLR4 level was significantly decreased from 10 days in simvastatin group as compared with that of conventional therapy group (n = 47), and it was decreased up to 15 days [mean fluorescence intensity (MFI): 21 (19, 28) vs. 27 (25, 33) at 10 days, Z = 2.198, P = 0.021; 16 (15, 21) vs. 26 (23, 34) at 15 days, Z = 4.611, P = 0.002]."
+  },
+  {
+   "pmid": "26911949",
+   "verdict": "off",
+   "stat": "Z = 0.313",
+   "p": "P = 0.692",
+   "sentence": "In patients with severe sepsis, there was no significant difference in TLR4 level at different time points between simvastatin group and conventional treatment group (n = 38) [MFI: 55 (52, 63) vs. 56 (48, 65) at 1 day, Z = 0.313, P = 0.692; 47 (42, 56) vs. 49 (41, 58) at 5 days, Z = 0.827, P = 0.533; 40 (35, 42) vs. 42 (37, 45) at 10 days, Z = 1.012, P = 0.301; 33 (30, 38) vs. 38 (35, 41) at 15 da"
+  },
+  {
+   "pmid": "26911949",
+   "verdict": "off",
+   "stat": "Z = 0.827",
+   "p": "P = 0.533",
+   "sentence": "In patients with severe sepsis, there was no significant difference in TLR4 level at different time points between simvastatin group and conventional treatment group (n = 38) [MFI: 55 (52, 63) vs. 56 (48, 65) at 1 day, Z = 0.313, P = 0.692; 47 (42, 56) vs. 49 (41, 58) at 5 days, Z = 0.827, P = 0.533; 40 (35, 42) vs. 42 (37, 45) at 10 days, Z = 1.012, P = 0.301; 33 (30, 38) vs. 38 (35, 41) at 15 da"
+  },
+  {
+   "pmid": "26911949",
+   "verdict": "off",
+   "stat": "Z = 1.012",
+   "p": "P = 0.301",
+   "sentence": "In patients with severe sepsis, there was no significant difference in TLR4 level at different time points between simvastatin group and conventional treatment group (n = 38) [MFI: 55 (52, 63) vs. 56 (48, 65) at 1 day, Z = 0.313, P = 0.692; 47 (42, 56) vs. 49 (41, 58) at 5 days, Z = 0.827, P = 0.533; 40 (35, 42) vs. 42 (37, 45) at 10 days, Z = 1.012, P = 0.301; 33 (30, 38) vs. 38 (35, 41) at 15 da"
+  },
+  {
+   "pmid": "26911949",
+   "verdict": "off",
+   "stat": "Z = 0.539",
+   "p": "P = 0.571",
+   "sentence": "In patients with severe sepsis, there was no significant difference in TLR4 level at different time points between simvastatin group and conventional treatment group (n = 38) [MFI: 55 (52, 63) vs. 56 (48, 65) at 1 day, Z = 0.313, P = 0.692; 47 (42, 56) vs. 49 (41, 58) at 5 days, Z = 0.827, P = 0.533; 40 (35, 42) vs. 42 (37, 45) at 10 days, Z = 1.012, P = 0.301; 33 (30, 38) vs. 38 (35, 41) at 15 da"
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=8.876",
+   "p": "p=0.026",
+   "sentence": "Results showed significantly greater gains in peak force (44.1%; F(1,21)=8.876, p=0.026), mean force (58.6%; F(1,21)=16.136, p=0.013), peak power (58.7%; F(1,21)=18.754, p=0.009), and mean power (59.2%; F(1,21)=23.114, p=0.007) at the velocity of 35 deg/s after stable than unstable resistance training."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=16.136",
+   "p": "p=0.013",
+   "sentence": "Results showed significantly greater gains in peak force (44.1%; F(1,21)=8.876, p=0.026), mean force (58.6%; F(1,21)=16.136, p=0.013), peak power (58.7%; F(1,21)=18.754, p=0.009), and mean power (59.2%; F(1,21)=23.114, p=0.007) at the velocity of 35 deg/s after stable than unstable resistance training."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=18.754",
+   "p": "p=0.009",
+   "sentence": "Results showed significantly greater gains in peak force (44.1%; F(1,21)=8.876, p=0.026), mean force (58.6%; F(1,21)=16.136, p=0.013), peak power (58.7%; F(1,21)=18.754, p=0.009), and mean power (59.2%; F(1,21)=23.114, p=0.007) at the velocity of 35 deg/s after stable than unstable resistance training."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=23.114",
+   "p": "p=0.007",
+   "sentence": "Results showed significantly greater gains in peak force (44.1%; F(1,21)=8.876, p=0.026), mean force (58.6%; F(1,21)=16.136, p=0.013), peak power (58.7%; F(1,21)=18.754, p=0.009), and mean power (59.2%; F(1,21)=23.114, p=0.007) at the velocity of 35 deg/s after stable than unstable resistance training."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=1.965",
+   "p": "p=0.74",
+   "sentence": "However, there were no significant between-groups differences in pre-post training gains in peak force (10.4%; F(1,21)=1.965, p=0.74), mean force (10.3%; F(1,21)=1.889, p=0.80), peak power (12.9%; F(1,21)=2.980, p=0.49), and mean power (19.1%; F(1,21)=3.454, p=0.36) during squats at the velocity of 10 deg/s."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=1.889",
+   "p": "p=0.80",
+   "sentence": "However, there were no significant between-groups differences in pre-post training gains in peak force (10.4%; F(1,21)=1.965, p=0.74), mean force (10.3%; F(1,21)=1.889, p=0.80), peak power (12.9%; F(1,21)=2.980, p=0.49), and mean power (19.1%; F(1,21)=3.454, p=0.36) during squats at the velocity of 10 deg/s."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=2.980",
+   "p": "p=0.49",
+   "sentence": "However, there were no significant between-groups differences in pre-post training gains in peak force (10.4%; F(1,21)=1.965, p=0.74), mean force (10.3%; F(1,21)=1.889, p=0.80), peak power (12.9%; F(1,21)=2.980, p=0.49), and mean power (19.1%; F(1,21)=3.454, p=0.36) during squats at the velocity of 10 deg/s."
+  },
+  {
+   "pmid": "26667929",
+   "verdict": "off",
+   "stat": "F(1,21)=3.454",
+   "p": "p=0.36",
+   "sentence": "However, there were no significant between-groups differences in pre-post training gains in peak force (10.4%; F(1,21)=1.965, p=0.74), mean force (10.3%; F(1,21)=1.889, p=0.80), peak power (12.9%; F(1,21)=2.980, p=0.49), and mean power (19.1%; F(1,21)=3.454, p=0.36) during squats at the velocity of 10 deg/s."
+  },
+  {
+   "pmid": "25863520",
+   "verdict": "off",
+   "stat": "F(2, 1796) = 12.3",
+   "p": "P = .0001",
+   "sentence": "Control) reduced overall negative affect, F(1, 1798) = 13.8, P = .0002; reduced craving immediately post-meditation, (Group × Assessment Type interaction, F(2, 1796) = 12.3, P = .0001); and reduced cigarettes smoked per day over time (Group × Day interaction, F(1, 436) = 5.50, P = .01)."
+  },
+  {
+   "pmid": "25863520",
+   "verdict": "off",
+   "stat": "F(1, 436) = 5.50",
+   "p": "P = .01",
+   "sentence": "Control) reduced overall negative affect, F(1, 1798) = 13.8, P = .0002; reduced craving immediately post-meditation, (Group × Assessment Type interaction, F(2, 1796) = 12.3, P = .0001); and reduced cigarettes smoked per day over time (Group × Day interaction, F(1, 436) = 5.50, P = .01)."
+  },
+  {
+   "pmid": "27445635",
+   "verdict": "off",
+   "stat": "t(32) = 2.75",
+   "p": "p < 0.001",
+   "sentence": "The device group additionally reported pain on the device (means 18.50 versus 11.90 pain ratings per day, t(32) = 2.75, p < 0.001) that was significantly worse than reported to nurses but retrospectively rated significantly less anxiety. 80% of patients found the device useful."
+  },
+  {
+   "pmid": "26322788",
+   "verdict": "off",
+   "stat": "t(252) = 4.37",
+   "p": "p = .001",
+   "sentence": "Results Veterans in the Vets Prevail condition reported significantly greater reductions in PTSD, t(250) = 3.24, p = .001 (Mreduction = 5.51, SD = 9.63), and depression, t(252) = 4.37, p = .001 (Mreduction = 2.31, SD = 5.34), at 12-week follow-up compared with veterans in the adjustment as usual condition (PTSD Mreduction = 1.00, SD = 7.32; depression Mreduction = 0.48, SD = 4.95), with moderate e"
+  },
+  {
+   "pmid": "26422745",
+   "verdict": "off",
+   "stat": "t = -2.066",
+   "p": "P = .001",
+   "sentence": "Results Relationship quality, defined by activities with the partner (β = -0.892, SE = 0.432, t = -2.066; P = .001) and happiness (β = -4.586, SE = 2.044, t = -2.24; P = .001), significantly moderated the intervention effects on patients' SSE self-efficacy."
+  },
+  {
+   "pmid": "26422745",
+   "verdict": "off",
+   "stat": "t = -2.24",
+   "p": "P = .001",
+   "sentence": "Results Relationship quality, defined by activities with the partner (β = -0.892, SE = 0.432, t = -2.066; P = .001) and happiness (β = -4.586, SE = 2.044, t = -2.24; P = .001), significantly moderated the intervention effects on patients' SSE self-efficacy."
+  },
+  {
+   "pmid": "26422745",
+   "verdict": "off",
+   "stat": "t = -0.320",
+   "p": "P = .10",
+   "sentence": "In contrast, patient-partner agreeability (β = -0.262, SE = 0.148, t = -1.773; P = .09) and partner motivation (β = -0.328, SE = 1.024, t = -0.320; P = .10) did not significantly moderate the intervention effects on patients' SSE self-efficacy."
+  },
+  {
+   "pmid": "29325336",
+   "verdict": "off",
+   "stat": "Z =17.421",
+   "p": "P =0.001",
+   "sentence": "The NRS values at 30 minutes decreased and the effective rate of the treatment increased(χ(2)=8.371, P =0.004), following ropivacaine dose gradient increasing, they were 1.50(1.00, 2.00), 1.00(1.00, 2.00), 0.50(0.00, 1.00) and 0.00(0.00, 1.00), the difference was statistically significant ( Z =17.421, P =0.001)."
+  },
+  {
+   "pmid": "28939307",
+   "verdict": "off",
+   "stat": "χ 2 (2)=8.987",
+   "p": "p=0.003",
+   "sentence": "The pre and post FIFA 11+ program reduced the total number of injuries (χ 2 (1)=11.549, p=0.001) and the incidence of initial injury (χ 2 (2)=8.987, p=0.003) significantly more than the pre FIFA 11+ program alone."
+  },
+  {
+   "pmid": "28926885",
+   "verdict": "off",
+   "stat": "Z= -2.036",
+   "p": "P= 0.003",
+   "sentence": "The improvements compared to the baseline of MGYSS at the upper eyelid in the treatment eyes were significantly higher than those in the control eyes after the first treatment ( Z= -2.036, P= 0.003)."
+  },
+  {
+   "pmid": "28771093",
+   "verdict": "off",
+   "stat": "F(2,18) = 4.90",
+   "p": "p = .01",
+   "sentence": "Results of four repeated-measures ANOVAs found significant and quadratic changes across time in cannabis (ARCI m-scale) intoxication (F(2,18) = 4.90, p = .01, η 2 = .22) and negative mood (F(2,18) = 3.99, p = .05, η 2 = .19)."
+  },
+  {
+   "pmid": "28771093",
+   "verdict": "off",
+   "stat": "F(2,18) = 3.99",
+   "p": "p = .05",
+   "sentence": "Results of four repeated-measures ANOVAs found significant and quadratic changes across time in cannabis (ARCI m-scale) intoxication (F(2,18) = 4.90, p = .01, η 2 = .22) and negative mood (F(2,18) = 3.99, p = .05, η 2 = .19)."
+  },
+  {
+   "pmid": "28406803",
+   "verdict": "off",
+   "stat": "F(1,68.58) = 3.90",
+   "p": "p = .050",
+   "sentence": "In addition, self-reported posttraumatic stress disorder (F(1,56.42) = 4.50, p = .038) for the treatment effect, depression (F(1,93.70) = 4.44, p = .038), and fatigue symptoms (F(1,68.58) = 3.90, p = .050) at follow-up improved in MBB compared with those in SED."
+  },
+  {
+   "pmid": "28590767",
+   "verdict": "off",
+   "stat": "t (93) = 2.136",
+   "p": "p = 0.015",
+   "sentence": "Significant differences in perceived stress [t (93) = 2.136; p = 0.015] and depression [t (93) = 2.738; p = 0.000] were observed after the Biodanza period."
+  },
+  {
+   "pmid": "28590767",
+   "verdict": "off",
+   "stat": "t (93) = 2.738",
+   "p": "p = 0.000",
+   "sentence": "Significant differences in perceived stress [t (93) = 2.136; p = 0.015] and depression [t (93) = 2.738; p = 0.000] were observed after the Biodanza period."
+  },
+  {
+   "pmid": "28541770",
+   "verdict": "off",
+   "stat": "F (4,72) = 2.459",
+   "p": "p = 0.082",
+   "sentence": "Time and group interactions were not significant in inspiration time (F (4,72) = 2.459, p = 0.082) nor the slope of contraction (F (4,72) = 0.655, p = 0.582)]."
+  },
+  {
+   "pmid": "28541770",
+   "verdict": "off",
+   "stat": "F (4,72) = 0.655",
+   "p": "p = 0.582",
+   "sentence": "Time and group interactions were not significant in inspiration time (F (4,72) = 2.459, p = 0.082) nor the slope of contraction (F (4,72) = 0.655, p = 0.582)]."
+  },
+  {
+   "pmid": "28425747",
+   "verdict": "off",
+   "stat": "F(1, 54) = 3.09",
+   "p": "p = .05",
+   "sentence": "Results The results confirmed a responsiveness effect associated with the motive-oriented therapeutic relationship and showed a significant decrease in frequency of behavioral forms of coping, F(1, 54) = 3.09, p = .05, d = .56, which was not different between the 2 conditions."
+  },
+  {
+   "pmid": "28190675",
+   "verdict": "off",
+   "stat": "F(1.29, 23.33) = 4.16",
+   "p": "p = 0.043",
+   "sentence": "Results RM-ANOVA showed that balance and fatigue differed significantly between time points: balance [F(1.29, 23.33) = 4.16, p = 0.043] and fatigue [F(2,36) = 5.96, p = 0.006]."
+  },
+  {
+   "pmid": "28270285",
+   "verdict": "off",
+   "stat": "t=-3.099",
+   "p": "P=0.000",
+   "sentence": "Results The mean ED were 21.3% lower (t=-3.099,P=0.000) in group 1 [(2.48±0.80) mSv] than in group 2 [(3.15±0.86) mSv]."
+  },
+  {
+   "pmid": "28270292",
+   "verdict": "off",
+   "stat": "t=2.893",
+   "p": "P=0.000",
+   "sentence": "The artifacts in abdominal aorta (t=2.893,P=0.000)and feet arteries (t=3.776,P=0.000)were higher in 70 kV group than those in 100 kV group,the enhancement of abdominal aorta (t=-1.000,P=0.002)and feet arteries (t=2.893,P=0.010)were lower in 70 kV group,the enhancement of femoral-popliteal arteries (t=-1.000,P=0.000)and arteries of calf (t=4.261,P=0.000)were higher in 70 kV group."
+  },
+  {
+   "pmid": "27996339",
+   "verdict": "off",
+   "stat": "t = 2.8",
+   "p": "p = .935",
+   "sentence": "The study results revealed no statistically significant differences between the study groups regarding the total marital conflict scores (t = 2.8, p = .935) or any of the seven subscales of conflict before the intervention (p > .05)."
+  },
+  {
+   "pmid": "27829323",
+   "verdict": "off",
+   "stat": "F(1,8) = .12",
+   "p": "P = .70",
+   "sentence": "There were no differences in blood glucose (F(1,8) = .63, P = .4, η p = .07) or blood lactate levels (F(1,8) = .12, P = .70, η p = .01) between conditions as a function of time."
+  },
+  {
+   "pmid": "27790791",
+   "verdict": "off",
+   "stat": "χ2(2) = 3.53",
+   "p": "p = 0.77",
+   "sentence": "There was no effect on abstinence duration after three months (χ2(2) = 3.53, p = 0.77)."
+  },
+  {
+   "pmid": "27459673",
+   "verdict": "off",
+   "stat": "F (1,8) =653.453",
+   "p": "p = .003",
+   "sentence": "A significant interaction for Time*Group was observed for absolute (kJ.day -1 ) (F-statistic, p-value: F (1,8) =13.890, p = .01) and relative RMR (F (1,8) =653.453, p = .003) POST-training."
+  },
+  {
+   "pmid": "29191176",
+   "verdict": "off",
+   "stat": "F (2,112) = .49",
+   "p": "p = .609",
+   "sentence": "This effect was not defined by participant type, i.e. patients or study nurses (F (1,112) = .15, p = .699), CRF length (F (2,112) = .49, p = .609) or patient age (Beta = .09, p = .534)."
+  },
+  {
+   "pmid": "29125783",
+   "verdict": "off",
+   "stat": "F(3,179) = 48.58",
+   "p": "p < .000",
+   "sentence": "A significant gain in vaccination knowledge was reported by all experimental groups compared with the control (F(3,179) = 48.58, p < .000), while only those receiving both interventions reported a significant increase in their psychological empowerment (t(179) = -2.79, p = .006)."
+  },
+  {
+   "pmid": "29125783",
+   "verdict": "off",
+   "stat": "t(179) = 2.111",
+   "p": "p = .03",
+   "sentence": "Participants receiving the intervention targeting knowledge reported significantly higher intention to vaccinate (t(179) = 2.111; p = .03) and higher confidence in the decision (t(179) = 2.76; p = .006) compared with the control group."
+  },
+  {
+   "pmid": "26999625",
+   "verdict": "off",
+   "stat": "F(1,24) = 5.02",
+   "p": "P = 0.033",
+   "sentence": "Post-hoc tests indicated that after systematic breathing interventions, F(1,24) = 5.02, P = 0.033, [Formula: see text] = 0.18, participants performed significantly better compared to control sessions."
+  },
+  {
+   "pmid": "28932131",
+   "verdict": "off",
+   "stat": "F (4,76) = 0.37",
+   "p": "P = 0.82",
+   "sentence": "Results The results showed that there are no significant changes in pain perception over time in none of the three groups ( F (4,76) = 0.37, P = 0.82)."
+  },
+  {
+   "pmid": "28722093",
+   "verdict": "off",
+   "stat": "Z=9.241",
+   "p": "P=0.002",
+   "sentence": "Meanwhile, the scores of combined group and single group in hematochezia or bleeding were 0(0, 1) and 0(0, 2) (Z=9.241, P=0.002); in shapes and properties of stool were 0(0, 1) and 0(0, 1) (Z=5.364, P=0.021); in defecation frequency were 0(0, 1) and 0(0, 2) (Z=7.552, P=0.006); and in defecation duration were 0(0, 1) and 0(0, 2) (Z=4.425, P=0.035), whose differences were all significant."
+  },
+  {
+   "pmid": "28722093",
+   "verdict": "off",
+   "stat": "Z=5.364",
+   "p": "P=0.021",
+   "sentence": "Meanwhile, the scores of combined group and single group in hematochezia or bleeding were 0(0, 1) and 0(0, 2) (Z=9.241, P=0.002); in shapes and properties of stool were 0(0, 1) and 0(0, 1) (Z=5.364, P=0.021); in defecation frequency were 0(0, 1) and 0(0, 2) (Z=7.552, P=0.006); and in defecation duration were 0(0, 1) and 0(0, 2) (Z=4.425, P=0.035), whose differences were all significant."
+  },
+  {
+   "pmid": "28722093",
+   "verdict": "off",
+   "stat": "Z=7.552",
+   "p": "P=0.006",
+   "sentence": "Meanwhile, the scores of combined group and single group in hematochezia or bleeding were 0(0, 1) and 0(0, 2) (Z=9.241, P=0.002); in shapes and properties of stool were 0(0, 1) and 0(0, 1) (Z=5.364, P=0.021); in defecation frequency were 0(0, 1) and 0(0, 2) (Z=7.552, P=0.006); and in defecation duration were 0(0, 1) and 0(0, 2) (Z=4.425, P=0.035), whose differences were all significant."
+  },
+  {
+   "pmid": "28722093",
+   "verdict": "off",
+   "stat": "Z=4.425",
+   "p": "P=0.035",
+   "sentence": "Meanwhile, the scores of combined group and single group in hematochezia or bleeding were 0(0, 1) and 0(0, 2) (Z=9.241, P=0.002); in shapes and properties of stool were 0(0, 1) and 0(0, 1) (Z=5.364, P=0.021); in defecation frequency were 0(0, 1) and 0(0, 2) (Z=7.552, P=0.006); and in defecation duration were 0(0, 1) and 0(0, 2) (Z=4.425, P=0.035), whose differences were all significant."
+  },
+  {
+   "pmid": "28442195",
+   "verdict": "off",
+   "stat": "F(2, 123)=4.39",
+   "p": "p=.04",
+   "sentence": "A second two-way ANOVA indicated a significant main effect for Conservative Protestant Affiliation (F(2, 123)=4.39, p=.04, hp 2 =.03) indicating that positive spanking attitudes declined most significantly for participants identifying with a conservative religious affiliation."
+  },
+  {
+   "pmid": "28545756",
+   "verdict": "off",
+   "stat": "z = 2.45",
+   "p": "p = .02",
+   "sentence": "Results Survival analyses indicated a significantly higher probability of survival without a suicide attempt by the 3-month follow-up point among SAFETY youths (cumulative estimated probability of survival without suicide attempt = 1.00, standard error = 0), compared to E-TAU youths (cumulative estimated probability of survival without suicide attempt = 0.67, standard error = 0.14; z = 2.45, p = ."
+  },
+  {
+   "pmid": "28248418",
+   "verdict": "off",
+   "stat": "χ 2 = 4.84",
+   "p": "P = .01",
+   "sentence": "More than 81% of the treatment group and 36% of the control group reported improvement in UI (χ 2 = 4.84, P = .01), with mean estimated percentage improvement of 65.3 ± 32.0 versus 34.1 ± 41.3 (P = .03)."
+  },
+  {
+   "pmid": "28276987",
+   "verdict": "off",
+   "stat": "Z = 11.04",
+   "p": "p = 0.004",
+   "sentence": "Concerning CMJ change, % differences occurred at 24 (Z = 11.04, p = 0.004) and 48 hours (Z = 14.01, p Conclusion Both cold water immersion CWI protocols are effective in improving recovery in basketball players."
+  },
+  {
+   "pmid": "28049201",
+   "verdict": "off",
+   "stat": "F (22,1) = 12.005",
+   "p": "p = 0.003",
+   "sentence": "Results The intervention group displayed significantly higher levels of adherence when compared to the control group (t = 2.2, p = 0.04) and. similarly, when the amount of change was compared between the groups, the intervention group showed more change than the control condition (F (22,1) = 12.005, p = 0.003)."
+  },
+  {
+   "pmid": "27595298",
+   "verdict": "off",
+   "stat": "F (4.90, 292.50)=1.04",
+   "p": "p=0.37",
+   "sentence": "Results: There was no significant effect for time×treatment interaction on HDRS score [F (4.90, 292.50)=1.04, p=0.37] between the 2 groups. 13 (40.60%) patients in the saffron group experienced complete response (≥50% reduction in HDRS score) compared with 16 (50%) in the fluoxetine group and the difference between the 2 groups was not significant in this regard (p=0.61)."
+  },
+  {
+   "pmid": "29191188",
+   "verdict": "off",
+   "stat": "χ2 = 1.481; df = 2",
+   "p": "p = 0.224",
+   "sentence": "Results The expectations scale was found to be unidimensional with superior model fit (χ2 = 1.481; df = 2; p = 0.224; RMSEA = 0.035; 90% CI = [0-0.146]; CFI = 0.999; TLI = 0.993)."
+  },
+  {
+   "pmid": "28143679",
+   "verdict": "off",
+   "stat": "F(2,44)=3.794",
+   "p": "p=0.046",
+   "sentence": "Participants in the exercise condition significantly increased the number of minutes spent exercising at a high intensity level (F(2,44)=3.794; p=0.046; η 2 =0.159)."
+  },
+  {
+   "pmid": "28017916",
+   "verdict": "off",
+   "stat": "Z = 43.50",
+   "p": "p = 0.04",
+   "sentence": "Among the 22 participants who were each admitted twice, use of blue light smartphones was associated with significantly decreased sleepiness (Cohen's d = 0.49, Z = 43.50, p = 0.04) and confusion-bewilderment (Cohen's d = 0.53, Z = 39.00, p = 0.02), and increased commission error (Cohen's d = -0.59, t = -2.64, p = 0.02)."
+  },
+  {
+   "pmid": "28017916",
+   "verdict": "off",
+   "stat": "Z = 39.00",
+   "p": "p = 0.02",
+   "sentence": "Among the 22 participants who were each admitted twice, use of blue light smartphones was associated with significantly decreased sleepiness (Cohen's d = 0.49, Z = 43.50, p = 0.04) and confusion-bewilderment (Cohen's d = 0.53, Z = 39.00, p = 0.02), and increased commission error (Cohen's d = -0.59, t = -2.64, p = 0.02)."
+  },
+  {
+   "pmid": "27896797",
+   "verdict": "off",
+   "stat": "z = 1.71",
+   "p": "p = 0.08",
+   "sentence": "Compared to the control condition, SUTQ intervention was associated with greater physical activity at week 4 (b = 0.51, z = 1.71, p = 0.08), with between-group differences sustained at follow-up."
+  },
+  {
+   "pmid": "29345864",
+   "verdict": "off",
+   "stat": "z = 6.58",
+   "p": "P = .01",
+   "sentence": "A gambling-group-by-disulfiram interaction was observed for abstinence, with problem-gambling features not associated with beneficial response to disulfiram (z = 6.58, P = .01)."
+  },
+  {
+   "pmid": "30293053",
+   "verdict": "off",
+   "stat": "t = 2073",
+   "p": "p = 0.043",
+   "sentence": "However, there was a significant difference in the EG when the mean scores on the pre- and post-test were compared on the CCTDI analyticity subscale (t = 2073; p = 0.043) and on the CCTST analysis subscale (t = 2302; p = 0.025)."
+  },
+  {
+   "pmid": "30293053",
+   "verdict": "off",
+   "stat": "t = 2302",
+   "p": "p = 0.025",
+   "sentence": "However, there was a significant difference in the EG when the mean scores on the pre- and post-test were compared on the CCTDI analyticity subscale (t = 2073; p = 0.043) and on the CCTST analysis subscale (t = 2302; p = 0.025)."
+  },
+  {
+   "pmid": "30477847",
+   "verdict": "off",
+   "stat": "z = -2.47",
+   "p": "p = .001",
+   "sentence": "Regarding the secondary outcomes the comparison of the pre-post-differences between the conditions showed significant effects for the HRV parameters pNN 50 (ΔpNN 50 = 1.46%, z = -2.47, p = .001) and SDNN (ΔSDNN=-0.06 ms, z = -2.25, p = .002)."
+  },
+  {
+   "pmid": "30477847",
+   "verdict": "off",
+   "stat": "z = -2.25",
+   "p": "p = .002",
+   "sentence": "Regarding the secondary outcomes the comparison of the pre-post-differences between the conditions showed significant effects for the HRV parameters pNN 50 (ΔpNN 50 = 1.46%, z = -2.47, p = .001) and SDNN (ΔSDNN=-0.06 ms, z = -2.25, p = .002)."
+  },
+  {
+   "pmid": "29976277",
+   "verdict": "off",
+   "stat": "t=0.722",
+   "p": "P=0.444",
+   "sentence": "The changes of LVEDV, LVESV, and LVEF at the 1 year follow-up from the admission did not differ between the IT group and the ST group (t=0.722, P=0.444; t=1.228, P=0.221; t=1.354, P=0.187, repectively).Conclusions Short-term high-dose atorvastatin treatment for AAMI was associated with lower hs-CRP, ET-1 and MMP-9 levels compared to the standard dose treatment."
+  },
+  {
+   "pmid": "29738282",
+   "verdict": "off",
+   "stat": "F (6, 54) = 131.3",
+   "p": "p = .001",
+   "sentence": "Statistical differences were found for HR and RPE between rounds (F (6, 54) = 131.3, p = .001; [Formula: see text] = 0.93 and F (2, 18) = 40.6, p = .001; [Formula: see text] = 0.81, respectively) but not between conditions (F (1, 9) = 0.46; p = .51; [Formula: see text] = 0.05 and F (1, 9) = 0.02, p = .89; [Formula: see text] = 0.002, respectively)."
+  },
+  {
+   "pmid": "29738282",
+   "verdict": "off",
+   "stat": "F (2, 18) = 40.6",
+   "p": "p = .001",
+   "sentence": "Statistical differences were found for HR and RPE between rounds (F (6, 54) = 131.3, p = .001; [Formula: see text] = 0.93 and F (2, 18) = 40.6, p = .001; [Formula: see text] = 0.81, respectively) but not between conditions (F (1, 9) = 0.46; p = .51; [Formula: see text] = 0.05 and F (1, 9) = 0.02, p = .89; [Formula: see text] = 0.002, respectively)."
+  },
+  {
+   "pmid": "29603242",
+   "verdict": "off",
+   "stat": "F(12,46) = 4.0",
+   "p": "P = 0.001",
+   "sentence": "Results Results of multi-variate MANOVA for repeated measures indicating significant enhancement in several leadership skills (F(12,46) = 4.0, P = 0.001, η 2 = 0.579)."
+  },
+  {
+   "pmid": "29324264",
+   "verdict": "off",
+   "stat": "t(31) = 2.15",
+   "p": "p = .05",
+   "sentence": "Those in the intervention group reported higher subjective sleepiness at the end of the drive [M = 6.25, SD = 3.83, t(31) = 2.15, p = .05] and were more likely to indicate that they would stop driving [M = 3.08, SD = 1.16, t(31) = 2.24, p = .04]."
+  },
+  {
+   "pmid": "29324264",
+   "verdict": "off",
+   "stat": "t(31) = 2.24",
+   "p": "p = .04",
+   "sentence": "Those in the intervention group reported higher subjective sleepiness at the end of the drive [M = 6.25, SD = 3.83, t(31) = 2.15, p = .05] and were more likely to indicate that they would stop driving [M = 3.08, SD = 1.16, t(31) = 2.24, p = .04]."
+  },
+  {
+   "pmid": "29223182",
+   "verdict": "off",
+   "stat": "F (1,38) = 6.50",
+   "p": "p = 0.02",
+   "sentence": "However, significantly greater improvement was shown for one item on the KRS in the experimental condition when compared to the control condition, indicating that historical knowledge of residents was greater when staff read life stories than when they read file notes, F (1,38) = 6.50, p = 0.02."
+  },
+  {
+   "pmid": "29112939",
+   "verdict": "off",
+   "stat": "Z = 1.93",
+   "p": "P = 0.06",
+   "sentence": "There was a significant between groups treatment effect only in perception of health (EQ-VAS) (Z = 1.93, P = 0.06) favouring the exergame group."
+  },
+  {
+   "pmid": "28657697",
+   "verdict": "off",
+   "stat": "χ 2 = 0.119",
+   "p": "p = 0.707",
+   "sentence": "Comparing patients with no VRF versus ≥1 VRF, the remission rate decreased from 80 to 58% (χ 2 = 1.652, p = 0.276) in ECT patients and from 38 to 32% (χ 2 = 0.119, p = 0.707) in MED patients."
+  },
+  {
+   "pmid": "28370327",
+   "verdict": "off",
+   "stat": "χ 2 = 4.3",
+   "p": "P = 0.03",
+   "sentence": "(χ 2 = 4.3, P = 0.03)."
+  },
+  {
+   "pmid": "29846804",
+   "verdict": "off",
+   "stat": "z = 2.62",
+   "p": "p = 0.008",
+   "sentence": "Results Use of DBT (AUC = 0.927) led to improved performance of the radiologists (z = 2.62, p = 0.008) compared with mammography workup (AUC = 0.872)."
+  },
+  {
+   "pmid": "29280726",
+   "verdict": "off",
+   "stat": "F(3, 55) = 3.04",
+   "p": "p = .038",
+   "sentence": "Results Poor awareness attenuated improvements in independence over time, F(3, 55) = 3.04, p = .038."
+  },
+  {
+   "pmid": "29280726",
+   "verdict": "off",
+   "stat": "F(3, 55) = 5.93",
+   "p": "p = .002",
+   "sentence": "Strategy training promoted greater improvements in independence over time relative to attention control, F(3, 55) = 5.93, p = .002."
+  },
+  {
+   "pmid": "30511680",
+   "verdict": "off",
+   "stat": "Z = 0.15",
+   "p": "P = 0.703",
+   "sentence": "There was no significant difference between the groups (Z = 0.15, P = 0.703)."
+  },
+  {
+   "pmid": "30388029",
+   "verdict": "off",
+   "stat": "z = -1.59",
+   "p": "p > 0.99",
+   "sentence": "The combined group exhibited a statistically significant reduction in total sleep problems ( z = -5.81, p p = 0.05), behavior therapy ( z = -2.99, p = 0.08), or community care ( z = -1.59, p > 0.99) did not reach statistical significance."
+  },
+  {
+   "pmid": "29693757",
+   "verdict": "off",
+   "stat": "χ 2 = 5.17",
+   "p": "P = .017",
+   "sentence": "Probiotic treatment also resulted in fewer days rehospitalized (mean 8.3 vs 2.8 days for placebo and probiotic treatment, respectively; χ 2 = 5.17, P = .017)."
+  },
+  {
+   "pmid": "29332222",
+   "verdict": "off",
+   "stat": "F (3, 162) = 10.41",
+   "p": "p = 0.0001",
+   "sentence": "General linear model repeated measures demonstrated significant effect for time × treatment interaction on the HFRDIS score [F (3, 162) = 10.41, p = 0.0001] and HDRS score [F (3, 162) = 5.48, p = 0.001]."
+  },
+  {
+   "pmid": "29171135",
+   "verdict": "off",
+   "stat": "F(1, 14) = 5.83",
+   "p": "P = .046",
+   "sentence": "Parents reported significant increased worry about their child's diabetes at follow-up, in both groups (F(1, 14) = 5.83; P = .046)."
+  },
+  {
+   "pmid": "30352997",
+   "verdict": "off",
+   "stat": "z = 3.16",
+   "p": "P < .0001",
+   "sentence": "Associated post-intervention resting-state brain functional connectivity was greater in music vs. non-music groups between auditory and subcortical regions (z = 3.94, P < .0001) and auditory and fronto-motor regions (z = 3.16, P < .0001)."
+  },
+  {
+   "pmid": "30352997",
+   "verdict": "off",
+   "stat": "z = 4.01",
+   "p": "P < .00001",
+   "sentence": "Post-intervention brain connectivity was lower between auditory and visual regions in the music compared to the non-music groups, known to be over-connected in autism (z = 4.01, P < .00001)."
+  },
+  {
+   "pmid": "30352997",
+   "verdict": "off",
+   "stat": "z = 3.57",
+   "p": "P < .0001",
+   "sentence": "Post-intervention brain connectivity in the music group was related to communication improvement (z = 3.57, P < .0001)."
+  },
+  {
+   "pmid": "29398354",
+   "verdict": "off",
+   "stat": "t(32) = 3.01",
+   "p": "p = 0.004",
+   "sentence": "Results The greatest signal detection between medication and placebo in favor of medication was among patients with fewer years of education (≤12) who suffered from a longer duration of depression since their first episode (>3.47 years) (B = 2.53, t(32) = 3.01, p = 0.004)."
+  },
+  {
+   "pmid": "28914726",
+   "verdict": "off",
+   "stat": "z = -1.61",
+   "p": "p = .13",
+   "sentence": "From pretreatment to posttreatment, CBTI-BP compared with psychoeducation was associated with a nonsignificant, large effect size decrease in IL-6 (z = -1.61, p = .13, d = -0.78) and a nonsignificant, small-medium effect size decrease in sTNF-R2 (z = -0.79, p = .44, d = -0.38)."
+  },
+  {
+   "pmid": "28914726",
+   "verdict": "off",
+   "stat": "z = -0.79",
+   "p": "p = .44",
+   "sentence": "From pretreatment to posttreatment, CBTI-BP compared with psychoeducation was associated with a nonsignificant, large effect size decrease in IL-6 (z = -1.61, p = .13, d = -0.78) and a nonsignificant, small-medium effect size decrease in sTNF-R2 (z = -0.79, p = .44, d = -0.38)."
+  },
+  {
+   "pmid": "29856472",
+   "verdict": "off",
+   "stat": "χ 2 = 5.6391",
+   "p": "P = 0.017",
+   "sentence": "We found a significantly higher rate of adequate relief of global symptoms in TXFY group during weeks 1 to 4 (57.5% vs 37.5%, χ 2 = 5.6391, P = 0.017); logistic regression analysis showed a similar result (OR 2.2, 95% CI 1.2-4.4, P = 0.016)."
+  },
+  {
+   "pmid": "30215723",
+   "verdict": "off",
+   "stat": "χ2=6.192",
+   "p": "P=.004",
+   "sentence": "Significant differences between treatments were found in the categories of sleepiness/sedation (χ2=9.617; P=.008) and increased sleep duration (χ2=6.192; P=.004)."
+  },
+  {
+   "pmid": "29998882",
+   "verdict": "off",
+   "stat": "t = 0.03",
+   "p": "P = 1.000",
+   "sentence": "Results HBeAg seroconversion rate (18.2% vs. 18.2%, t = 0.03, P = 1.000) and seroclearance rate (19.7% vs. 19.7%, t = 0.03, P = 1.000) were same in both mono-treatment and sequential treatment groups."
+  },
+  {
+   "pmid": "29998882",
+   "verdict": "off",
+   "stat": "t = 0.03",
+   "p": "P = 1.000",
+   "sentence": "Results HBeAg seroconversion rate (18.2% vs. 18.2%, t = 0.03, P = 1.000) and seroclearance rate (19.7% vs. 19.7%, t = 0.03, P = 1.000) were same in both mono-treatment and sequential treatment groups."
+  },
+  {
+   "pmid": "29998882",
+   "verdict": "off",
+   "stat": "t = 1.70",
+   "p": "P = 0.019",
+   "sentence": "The rate of alanine aminotransferase (ALT) normalization (45.5% vs. 54.5%, t = 1.12, P = 0.296) and serum hepatitis B virus (HBV)-DNA 10 U/ml vs. 7.5 log 10 U/ml, t = 1.70, P = 0.019) and hepatitis B surface antigen titer (3.6 log 10 U/ml vs. 4.0 log 10 U/ml, t = 2.19, P = 0.020) were lower and predictors of responder in mono-treatment and sequential treatment groups, respectively."
+  },
+  {
+   "pmid": "31119905",
+   "verdict": "off",
+   "stat": "t=-2.42, df=16",
+   "p": "p= 0.039",
+   "sentence": "A 10-day-course of CDP significantly increased ulcer healing compared to compression of the same duration (t=-2.42, df=16, p= 0.039)."
+  },
+  {
+   "pmid": "28351544",
+   "verdict": "off",
+   "stat": "F(1,28)=6.0",
+   "p": "p=0.04",
+   "sentence": "Clozapine treated patients reported a greater reduction in craving (F(1,28)=6.0, p=0.04) and showed a larger decrease in amygdala activation during cannabis-related images compared to risperidone treated patients (T=3.94, pFWE=0.006)."
+  },
+  {
+   "pmid": "29480182",
+   "verdict": "off",
+   "stat": "t(51) = 5.0",
+   "p": "p = 0.0001",
+   "sentence": "Conversely, the SEQ group, but not the SIM, showed significant improvement in executive functioning (t(51) = 5.0, p = 0.0001, ES = 0.96)."
+  },
+  {
+   "pmid": "29551338",
+   "verdict": "off",
+   "stat": "Z=2·06",
+   "p": "p=0·0400",
+   "sentence": "Platelet counts were slightly elevated during treatment (Z=2·06, p=0·0400)."
+  },
+  {
+   "pmid": "31676522",
+   "verdict": "off",
+   "stat": "z = -3.5",
+   "p": "P = .01",
+   "sentence": "Stress scores after SĀF-T were significantly lower than scores before SĀF-T ( z = -3.5, P = .01)."
+  },
+  {
+   "pmid": "31615192",
+   "verdict": "off",
+   "stat": "F (1, 22)=10.36",
+   "p": "P=0.003",
+   "sentence": "Results Data provided evidence that motor imagery enhanced the quadriceps muscle strength of the operated knee (F (1, 22)=10.36, P=0.003), improved the peak knee flexion during the swing phase (F (1, 22)=31.52, P Conclusions This study demonstrated the effectiveness of motor imagery exercises in gait performance and functional recovery in a small sample of individuals who underwent total knee arth"
+  },
+  {
+   "pmid": "31590189",
+   "verdict": "off",
+   "stat": "F(1,20)=4.62",
+   "p": "p=0.046",
+   "sentence": "Anteroposterior center of pressure amplitude showed a significant condition x time interaction in bipedal eyes closed (F(1,20)=4.62, p=0.046) and unipedal eyes open (F(1,20)=9.42, p=0.006) tests, and mediolateral center of pressure amplitude in bipedal eyes closed (F(1,20)=6.12, p=0.023) and bipedal eyes open (F(1,12)=5.55, p=0.029) tests."
+  },
+  {
+   "pmid": "31590189",
+   "verdict": "off",
+   "stat": "F(1,20)=6.12",
+   "p": "p=0.023",
+   "sentence": "Anteroposterior center of pressure amplitude showed a significant condition x time interaction in bipedal eyes closed (F(1,20)=4.62, p=0.046) and unipedal eyes open (F(1,20)=9.42, p=0.006) tests, and mediolateral center of pressure amplitude in bipedal eyes closed (F(1,20)=6.12, p=0.023) and bipedal eyes open (F(1,12)=5.55, p=0.029) tests."
+  },
+  {
+   "pmid": "31590189",
+   "verdict": "off",
+   "stat": "F(1,12)=5.55",
+   "p": "p=0.029",
+   "sentence": "Anteroposterior center of pressure amplitude showed a significant condition x time interaction in bipedal eyes closed (F(1,20)=4.62, p=0.046) and unipedal eyes open (F(1,20)=9.42, p=0.006) tests, and mediolateral center of pressure amplitude in bipedal eyes closed (F(1,20)=6.12, p=0.023) and bipedal eyes open (F(1,12)=5.55, p=0.029) tests."
+  },
+  {
+   "pmid": "31576450",
+   "verdict": "off",
+   "stat": "F(1, 19) = 1.018",
+   "p": "p = 0.32",
+   "sentence": "There was no intergroup significant difference in post-intervention ICIQ-SF F(1, 19) = 7.115, p = 0.87, partial η 2 = 0.001; manometry F(1, 19) = 0.608, p = 0.44, partial η 2 = 0.003; pad test 1 h F(1, 19) = 0.185, p = 0.67, partial η 2 = 0.01; QoL F(1, 19) = 1.018, p = 0.32, partial η 2 = 0.05; and weight F(1, 19) = 0.251, p = 0.62, partial η 2 = 0.01."
+  },
+  {
+   "pmid": "31276747",
+   "verdict": "off",
+   "stat": "χ 2 (1) = 0.90",
+   "p": "p = 0.53",
+   "sentence": "Progression and retention failure were the outcomes used for group comparisons at p-value Results After a two-year follow-up, only one lesion progressed to ICDAS 5, without statistically significant differences between the groups (χ 2 (1) = 0.90, p = 0.53)."
+  },
+  {
+   "pmid": "31276747",
+   "verdict": "off",
+   "stat": "χ 2 (1) = 0.93",
+   "p": "p = 0.93",
+   "sentence": "Radiographically, 100 lesions (98%) were arrested and 2 (2%) showed radiographic progression, without differences between groups (χ 2 (1) = 0.93, p = 0.93)."
+  },
+  {
+   "pmid": "31276747",
+   "verdict": "off",
+   "stat": "χ 2 (1) = 0.71",
+   "p": "p = 0.48",
+   "sentence": "At 2 years, complete retention was observed in 77% of the resin-based and in 83% of the GI sealants, without statistical differences between type of sealant (χ 2 (1) = 0.71, p = 0.48)."
+  },
+  {
+   "pmid": "31836104",
+   "verdict": "off",
+   "stat": "t(6)= 3.6",
+   "p": "p= 0.001",
+   "sentence": "Visual acuity, contrast sensitivity and fixation stability enhanced in group A after training from 0.89 (±0.09) LogMAR to 0.75 (±0.2) LogMAR (t(6)= 3.6, p= 0.001), from 0.8 (±0.3) LogC (0.6 - 0.9) to 1.3 (±0.3) LogC (t(13)=3.17, p= 0.003) and from 59.3 % (± 24.3) to 71.5 % (± 20.4) (t(13)=1.8 p= 0.04), respectively."
+  },
+  {
+   "pmid": "31836104",
+   "verdict": "off",
+   "stat": "t(13)=3.17",
+   "p": "p= 0.003",
+   "sentence": "Visual acuity, contrast sensitivity and fixation stability enhanced in group A after training from 0.89 (±0.09) LogMAR to 0.75 (±0.2) LogMAR (t(6)= 3.6, p= 0.001), from 0.8 (±0.3) LogC (0.6 - 0.9) to 1.3 (±0.3) LogC (t(13)=3.17, p= 0.003) and from 59.3 % (± 24.3) to 71.5 % (± 20.4) (t(13)=1.8 p= 0.04), respectively."
+  },
+  {
+   "pmid": "30817090",
+   "verdict": "off",
+   "stat": "t(88) = -1.974",
+   "p": "p = 0.048",
+   "sentence": "The increase of bilirubin levels in the experimental group (1.96 ± 1.69 mg/dl) was statistically significantly lower compared with the control group (2.80 ± 2.30 mg/dl), t(88) = -1.974, p = 0.048."
+  },
+  {
+   "pmid": "30040032",
+   "verdict": "off",
+   "stat": "z = -3.83",
+   "p": "P = .001",
+   "sentence": "The experimental group had a significantly greater improvement in FMS composite score at 4 weeks post ( U = 87; z = -3.83; P = .001; effect size = 1.33; 95% confidence interval, 0.69-1.98)."
+  },
+  {
+   "pmid": "30653355",
+   "verdict": "off",
+   "stat": "F (1,28) = 7.45",
+   "p": "p = 0.02",
+   "sentence": "Results: Analysis of covariance repeated measures analysis showed that linguistic short-term memory, F (1,28) = 7.45, p = 0.02, and conduct problems, F (1,28) = 12.51, p = 0.00, significantly improved with larger effects in the board games training group after intervention when compared to the wait-list group."
+  },
+  {
+   "pmid": "31172934",
+   "verdict": "off",
+   "stat": "F (1,18) =15.59",
+   "p": "p = 0.0004",
+   "sentence": "Significant TIME x GROUP interactions were recorded in the experimental group with respect to the control group for the TBG score [F (1,18) =15.59; p = 0.0004] and BI score [F (1,28) =6.35; p = 0.01]."
+  },
+  {
+   "pmid": "31172934",
+   "verdict": "off",
+   "stat": "F (1,28) =6.35",
+   "p": "p = 0.01",
+   "sentence": "Significant TIME x GROUP interactions were recorded in the experimental group with respect to the control group for the TBG score [F (1,18) =15.59; p = 0.0004] and BI score [F (1,28) =6.35; p = 0.01]."
+  },
+  {
+   "pmid": "30553766",
+   "verdict": "off",
+   "stat": "F(1,32)=4.92",
+   "p": "p=0.036",
+   "sentence": "Results The statistical analysis revealed that EX compared to CON showed higher CRAE at post-test, when pre-test values were accounted for, F(1,32)=4.92, p=0.036, η 2 =0.130."
+  },
+  {
+   "pmid": "30446822",
+   "verdict": "off",
+   "stat": "F(1, 101) = 5.679",
+   "p": "p = .036",
+   "sentence": "At post-treatment, there was no significant benefit of MBCT over OCD-EP with the Yale-Brown-Obsessive-Compulsive Scale (Y-BOCS) as the primary outcome measure, but with the Obsessive-Compulsive Inventory [OCI-R; F(1, 101) = 5.679, p = .036, effect size η 2 partial = 0.053]."
+  },
+  {
+   "pmid": "31823545",
+   "verdict": "off",
+   "stat": "χ 2 =3.875",
+   "p": "P =0.037",
+   "sentence": "There was significant difference in the acceptable rate of screw implantation between the two groups ( χ 2 =3.875, P =0.037)."
+  },
+  {
+   "pmid": "31823545",
+   "verdict": "off",
+   "stat": "χ 2 =4.125",
+   "p": "P =0.021",
+   "sentence": "The penetration rate of pedicle wall in trial group was 8.47% (5/59), which was significantly lower than that in the control group [32.20% (19/59); χ 2 =4.125, P =0.021]."
+  },
+  {
+   "pmid": "31544432",
+   "verdict": "off",
+   "stat": "Z =-2.794",
+   "p": "P =0.024",
+   "sentence": "There was no significant difference in operation time and intraoperative blood loss between the two groups ( P >0.05), but the blood transfusion volume and intraoperative fluoroscopy times in the trial group were significantly less than those in the control group ( P Z =-2.794, P =0.024)."
+  },
+  {
+   "pmid": "31547861",
+   "verdict": "off",
+   "stat": "χ 2 (2) = 0.36",
+   "p": "p = 0.546",
+   "sentence": "There were no significant differences between the two groups in the proportion of participants who required exchange transfusion (χ 2 (2) = 0.36, p = 0.546); repeat phototherapy (χ 2 (2) = 2.37, p = 0.123); and those who died (χ 2 (2) = 0.92, p = 0.337)."
+  },
+  {
+   "pmid": "31547861",
+   "verdict": "off",
+   "stat": "χ 2 (2) = 2.37",
+   "p": "p = 0.123",
+   "sentence": "There were no significant differences between the two groups in the proportion of participants who required exchange transfusion (χ 2 (2) = 0.36, p = 0.546); repeat phototherapy (χ 2 (2) = 2.37, p = 0.123); and those who died (χ 2 (2) = 0.92, p = 0.337)."
+  },
+  {
+   "pmid": "31547861",
+   "verdict": "off",
+   "stat": "χ 2 (2) = 0.92",
+   "p": "p = 0.337",
+   "sentence": "There were no significant differences between the two groups in the proportion of participants who required exchange transfusion (χ 2 (2) = 0.36, p = 0.546); repeat phototherapy (χ 2 (2) = 2.37, p = 0.123); and those who died (χ 2 (2) = 0.92, p = 0.337)."
+  },
+  {
+   "pmid": "31464643",
+   "verdict": "off",
+   "stat": "F(1, 29) = 5.12",
+   "p": "p = .013",
+   "sentence": "Women in the Bikram yoga group demonstrated significantly improved SF-36 subscale physical functioning: [ANCOVA: F(1, 29) = 6.17, p = .019, partial eta-squared effect size (η p 2 ) = .175 and mental health: F(1, 29) = 9.09, p = .005, η p 2 = .239; and increased heart rate variability (SDNN): F(1, 29) = 5.12, p = .013, η p 2 = .150, scores compared to the HIIT group."
+  },
+  {
+   "pmid": "29532291",
+   "verdict": "off",
+   "stat": "F (1, 28) = 17.38",
+   "p": "P = 0.0001",
+   "sentence": "Results The two-way ANOVA with repeated measures revealed differences between AAs and AC/CCs under CAF conditions for repetitions performed in sets 1, 2, and 3 of BP (F (1, 28) = 14.84, P = 0.001, ƞ 2 = 0.34), LP (F (1, 28) = 8.92, P = 0.006, ƞ 2 = 0.24), SR (F (1, 28) = 17.38, P = 0.0001, ƞ 2 = 0.38), and SP (F (1, 28) = 3.76, P = 0.063, ƞ 2 = 0.11)."
+  },
+  {
+   "pmid": "29532291",
+   "verdict": "off",
+   "stat": "F (1, 28) = 4.67",
+   "p": "P = 0.03",
+   "sentence": "CAF also increased the total number of repetitions performed for all three sets in AAs versus AC/CCs for BP (F (1, 28) = 8.72, P = 0.006, ƞ 2 = 0.23), LP (F (1, 28) = 4.67, P = 0.03, ƞ 2 = 0.14), SR (F (1, 28) = 5.54, P = 0.02, ƞ 2 = 0.16), and SP (F (1, 28) = 3.89, P = 0.058, ƞ 2 = 0.12) in athletes who were homozygous carriers of the A allele, compared to the C allele carriers."
+  },
+  {
+   "pmid": "29532291",
+   "verdict": "off",
+   "stat": "F (1, 28) = 5.54",
+   "p": "P = 0.02",
+   "sentence": "CAF also increased the total number of repetitions performed for all three sets in AAs versus AC/CCs for BP (F (1, 28) = 8.72, P = 0.006, ƞ 2 = 0.23), LP (F (1, 28) = 4.67, P = 0.03, ƞ 2 = 0.14), SR (F (1, 28) = 5.54, P = 0.02, ƞ 2 = 0.16), and SP (F (1, 28) = 3.89, P = 0.058, ƞ 2 = 0.12) in athletes who were homozygous carriers of the A allele, compared to the C allele carriers."
+  },
+  {
+   "pmid": "31269780",
+   "verdict": "off",
+   "stat": "F(1,38) = 1.44",
+   "p": "P = 0.23",
+   "sentence": "Results: In a factorial ANOVA with the outcome being List B, there was a main effect for condition (F(1,38) = 5.75, P = 0.02, n 2 p = 0.13), but there was no main effect for sex (F(1,38) = 1.39, P = 0.24, n 2 p = 0.04) or sex by condition interaction (F(1,38) = 1.44, P = 0.23, n 2 p = 0.04)."
+  },
+  {
+   "pmid": "31197990",
+   "verdict": "off",
+   "stat": "χ 2 =0.783",
+   "p": "P =0.112",
+   "sentence": "There was no significant difference in the incidence of complications between the two groups (χ 2 =0.783, P =0.112)."
+  },
+  {
+   "pmid": "31054551",
+   "verdict": "off",
+   "stat": "χ 2 =4.114",
+   "p": "P =0.042",
+   "sentence": "During follow-up of 12 to 36 (24±5) months, the recurrence rate of perianal abscess within 1 year after operation and anal fistula formation rate in negative pressure irrigation and suction group were lower than those in conventional drainage group [5.0% (2/40) vs. 20.0% (8/40), χ 2 =4.114, P =0.042 and 2.5% (1/40) vs. 17.5% (7/40), χ 2 =5.000, P =0.025, respectirely]."
+  },
+  {
+   "pmid": "30891657",
+   "verdict": "off",
+   "stat": "F(1,95) = 6.17",
+   "p": "p = .02",
+   "sentence": "As hypothesized, the impact of ICT on weight loss was moderated by implicit preference for sweet foods [F(1,95) = 6.17, p = .02] such that only those with higher-than-average implicit preference benefited (8-week weight losses for ICT were 3.1% vs. 2.2% for sham)."
+  },
+  {
+   "pmid": "30685751",
+   "verdict": "off",
+   "stat": "t (219) =-0.676",
+   "p": "p = 0.085",
+   "sentence": "Results On completion of the module, the written test scores of intervention group students were similar to those of the control group (t (239) = 1.553, p=0.122), as well as overall Evidence-based Practice Confidence Scale scores (F (2/170) = 0.179, p = 0.673) and attitude scores (t (219) =-0.676, p = 0.085)."
+  },
+  {
+   "pmid": "31861951",
+   "verdict": "off",
+   "stat": "t = 2.91",
+   "p": "p < 0.0005",
+   "sentence": "The mean cost savings per infant was € 4.60 (±11.2) in formula-fed infants treated with magnesium alginate compared to thickened formula (t = 2.91, p < 0.0005)."
+  },
+  {
+   "pmid": "30488954",
+   "verdict": "off",
+   "stat": "t(38) = 2.94",
+   "p": "P = 0.008",
+   "sentence": "Results Independent samples t-tests show that the treatment group had a significantly lower mean percentage of intervals in which disruptive behaviour was observed [t(38) = 2.94, P = 0.008] compared with the control group."
+  },
+  {
+   "pmid": "30488954",
+   "verdict": "off",
+   "stat": "t(38) = -4.01",
+   "p": "P = 0.001",
+   "sentence": "Subjective rating scales revealed significantly higher ratings of cooperation for the treatment group from the dentist [t(38) = -5.19, P = 0.000], the dental assistant [t(38) = -4.01, P = 0.001] and the blinded coder [t(38) = -3.54, P = 0.002]."
+  },
+  {
+   "pmid": "30488954",
+   "verdict": "off",
+   "stat": "t(38) = -3.54",
+   "p": "P = 0.002",
+   "sentence": "Subjective rating scales revealed significantly higher ratings of cooperation for the treatment group from the dentist [t(38) = -5.19, P = 0.000], the dental assistant [t(38) = -4.01, P = 0.001] and the blinded coder [t(38) = -3.54, P = 0.002]."
+  },
+  {
+   "pmid": "31112513",
+   "verdict": "off",
+   "stat": "F(12,444) = 6.75",
+   "p": "p = 0.010",
+   "sentence": "There was a small effect of group on BRP [F(12,444) = 6.75, p = 0.010] with participants who received the additional epidemiological information demonstrating more positive perceptions."
+  },
+  {
+   "pmid": "30395145",
+   "verdict": "off",
+   "stat": "F(3, 180) = 4.77",
+   "p": "p = .027",
+   "sentence": "Results Mothers in an angry state who received a gain-framed message chose relatively more FV for their child in the virtual buffet, F(3, 180) = 4.77, p = .027."
+  },
+  {
+   "pmid": "30395145",
+   "verdict": "off",
+   "stat": "F(3, 180) = 4.91",
+   "p": "p = .028",
+   "sentence": "However, fathers in this group did not feed more FV, but rather reported greater intention to improve future FV feeding, F(3, 180) = 4.91, p = .028."
+  },
+  {
+   "pmid": "31490841",
+   "verdict": "off",
+   "stat": "F(1,88) = 2.10",
+   "p": "p = .076",
+   "sentence": "Results Marginally lower itch was reported in the combined conditioned compared with the control groups (F(1,88) = 2.10, p = .076, ηpartial = 0.02); no differences between separate groups were found."
+  },
+  {
+   "pmid": "30920684",
+   "verdict": "off",
+   "stat": "F(1, 106) = 1.20",
+   "p": "p = .280",
+   "sentence": "Over the course of treatment, the two groups also did not differ significantly in PTSD symptom severity change on the PTSD Checklist, F(1, 106) = 1.20, p = .280, d = 0.33."
+  },
+  {
+   "pmid": "31315118",
+   "verdict": "off",
+   "stat": "t(166) = -0.57",
+   "p": "p = 0.71",
+   "sentence": "Results We found that altruistic behavior did not differ between obese and nonobese opponents (t(166) = -0.57, p = 0.71), nor did we find less altruistic attitudes toward women with obesity (t(85) = -0.03, p = 0.39)."
+  },
+  {
+   "pmid": "31315118",
+   "verdict": "off",
+   "stat": "t(85) = -0.03",
+   "p": "p = 0.39",
+   "sentence": "Results We found that altruistic behavior did not differ between obese and nonobese opponents (t(166) = -0.57, p = 0.71), nor did we find less altruistic attitudes toward women with obesity (t(85) = -0.03, p = 0.39)."
+  },
+  {
+   "pmid": "31299479",
+   "verdict": "off",
+   "stat": "F(1,12) = 6.22",
+   "p": "p = .041",
+   "sentence": "Children after CWMT who improved with >1SD on verbal working-memory had significantly higher FA in the left SLF post-CWMT(n = 6; improvement = .408 ± .01) than children without this improvement post-CWMT(n = 6; no-improvement = .384 ± .02), F(1,12) = 6.22, p = .041, η p 2 = .47."
+  },
+  {
+   "pmid": "29999394",
+   "verdict": "off",
+   "stat": "z = -6.3",
+   "p": "p < .000",
+   "sentence": "Analysis of the rate of change indicated a significantly steeper decline for the immediate-treatment group compared with the delayed-intervention group (β = -1.07, 95% confidence interval [-1.40, -0.74], z = -6.3, p < .000)."
+  },
+  {
+   "pmid": "31033396",
+   "verdict": "off",
+   "stat": "F (2,597) = 11.89",
+   "p": "p = .001",
+   "sentence": "Results : Those who viewed the ad more frequently were better able to recall both risk ( X 2 = 20.93, p X 2 = 9.34, p = .009) and to recognize risk ( F (2,597) = 11.89, p = .001) and benefit information ( F (2,597) = 3.17, p = .043) than those who viewed the ad one time."
+  },
+  {
+   "pmid": "30804399",
+   "verdict": "off",
+   "stat": "F (1,11) = 14.49",
+   "p": "p = 0.002",
+   "sentence": "Following the chiropractic care intervention there was a significant increase in strength (F (1,11) = 14.49, p = 0.002; avg 64.2 ± 77.7%) and V-wave/Mmax ratio (F(1,11) = 9.67, p = 0.009; avg 54.0 ± 65.2%) compared to the control intervention."
+  },
+  {
+   "pmid": "30804399",
+   "verdict": "off",
+   "stat": "F(1,11) = 9.67",
+   "p": "p = 0.009",
+   "sentence": "Following the chiropractic care intervention there was a significant increase in strength (F (1,11) = 14.49, p = 0.002; avg 64.2 ± 77.7%) and V-wave/Mmax ratio (F(1,11) = 9.67, p = 0.009; avg 54.0 ± 65.2%) compared to the control intervention."
+  },
+  {
+   "pmid": "30717614",
+   "verdict": "off",
+   "stat": "t(94.6) = 2.26",
+   "p": "p = .024",
+   "sentence": "In study one, there were more false alarms for anger in the alcohol compared to placebo group ( n = 52 and 56, respectively; t(94.6) = 2.26, p = .024, d = .44) and fewer false alarms for happiness ( t(106) = -2.42, p = .017, d = -.47)."
+  },
+  {
+   "pmid": "30916714",
+   "verdict": "off",
+   "stat": "z = -0.59",
+   "p": "P = .57",
+   "sentence": "There were no significant differences between the SNP and placebo groups at baseline or in change from baseline for PANSS-total (weighted β = -1.04; z = -0.59; P = .57), PANSS-positive (weighted β = -0.62; z = -0.93; P = .35), or PANSS-negative (weighted β = -0.12; z = -0.19; P = .85) scores."
+  },
+  {
+   "pmid": "30291016",
+   "verdict": "off",
+   "stat": "z = -3.0",
+   "p": "P = .008",
+   "sentence": "Results At the completion of the intervention, BMIs in the experimental arm were 0.8 units lower than at baseline (z = -3.0; P = .008) and 1.2 lower at 6 months after baseline (z = -4.1; P 2 = 26.9; degrees of freedom = 2; P Conclusions Body mass index in the experimental arm decreased at the end of intervention and was maintained at 6 months' follow-up."
+  },
+  {
+   "pmid": "30347011",
+   "verdict": "off",
+   "stat": "z = 3.30",
+   "p": "P = .04",
+   "sentence": "Compared with sham stimulation, active DLPFC stimulation significantly reduced bilateral amygdala threat reactivity (z = 3.30, P = .04) and simultaneously increased activity in cortical regions associated with attentional control (z = 3.28, P Conclusions and relevance These results reveal a causal role for prefrontal regulation of amygdala function in attentional capture by threat in individuals w"
+  },
+  {
+   "pmid": "30536479",
+   "verdict": "off",
+   "stat": "z = 1.98",
+   "p": "P = .04",
+   "sentence": "Patients in the high-dose group showed significant more hearing loss than in the intermediate group at 4 kHz ([z = 1.98; P = .04] and 8 kHz [z = 2.07; P Conclusion After induction TPF, more ototoxicity was observed in chemoradiotherapy with cis100+RT than after chemoradiotherapy with cis40+ART."
+  },
+  {
+   "pmid": "31182351",
+   "verdict": "off",
+   "stat": "t(20.7) = -4.8",
+   "p": "p = 0.003",
+   "sentence": "However, in those who completed the SIB (n = 25) treatment differences favored placebo (b = -4.6 [-7.3 to -1.8], t(20.7) = -4.8, p = 0.003)."
+  },
+  {
+   "pmid": "30950743",
+   "verdict": "off",
+   "stat": "F(5, 20) = 7.94",
+   "p": "p = .0106",
+   "sentence": "On average, Borg ratings were 20% lower for the RE group than the HLE group at all time points, F(5, 20) = 7.94, p = .0106, indicating that this exercise was perceived as easier to perform."
+  },
+  {
+   "pmid": "33040101",
+   "verdict": "off",
+   "stat": "t(21)= 8.829",
+   "p": "p = 0.0001",
+   "sentence": "A significant decline in mean systolic blood pressure was noted in pre- to posttherapy record (149 vs.142 mm of Hg, respectively; t(21)= 8.829, p = 0.0001)."
+  },
+  {
+   "pmid": "32534724",
+   "verdict": "off",
+   "stat": "t = -3.56",
+   "p": "P = 0.77",
+   "sentence": "There was no statistically significant difference between the intervention and control group in job stress scores after intervention (t = -3.56, P = 0.77)."
+  },
+  {
+   "pmid": "32616128",
+   "verdict": "off",
+   "stat": "t =3.41",
+   "p": "P =0.33",
+   "sentence": "(7.30±1.29)W; t =3.612, P =0.006] were significantly lower in the EA+RFA group than in the RFA group.At 3,6 and 12 months after surgery,the VRR in the EA+RFA group was(57.73±11.07)%( t =-3.16, P t =-5.45, P t =-10.46, P t =-1.76, P t =-5.09, P t =-8.93, P t =3.41, P =0.33),3( t =2.05, P =0.21),6( t =2.77, P =0.49),and 12 months( t =5.05, P =0.10)after treatment.During the follow-up,no recurrence o"
+  },
+  {
+   "pmid": "32616128",
+   "verdict": "off",
+   "stat": "t =2.77",
+   "p": "P =0.49",
+   "sentence": "(7.30±1.29)W; t =3.612, P =0.006] were significantly lower in the EA+RFA group than in the RFA group.At 3,6 and 12 months after surgery,the VRR in the EA+RFA group was(57.73±11.07)%( t =-3.16, P t =-5.45, P t =-10.46, P t =-1.76, P t =-5.09, P t =-8.93, P t =3.41, P =0.33),3( t =2.05, P =0.21),6( t =2.77, P =0.49),and 12 months( t =5.05, P =0.10)after treatment.During the follow-up,no recurrence o"
+  },
+  {
+   "pmid": "30926995",
+   "verdict": "off",
+   "stat": "t(77) = 2.207",
+   "p": "p = .029",
+   "sentence": "The pretest might, however, have caused a sensitization of participants for knowledge-related questions (t(77) = 2.207, p = .029)."
+  },
+  {
+   "pmid": "32187390",
+   "verdict": "off",
+   "stat": "Z = -6.501",
+   "p": "P = .001",
+   "sentence": "Pretest mean scores were found to be similar, and there were no statistically significant differences (Z = -6.501, P = .001)."
+  },
+  {
+   "pmid": "32074794",
+   "verdict": "off",
+   "stat": "t =1.665",
+   "p": "P =0.021",
+   "sentence": "(1.6±1.5) days, t =1.665, P =0.021], shorter time to fluid diet [(4.6±1.4) days vs."
+  },
+  {
+   "pmid": "31812557",
+   "verdict": "off",
+   "stat": "t (39) = 2.95",
+   "p": "p = 0.02",
+   "sentence": "Our results showed a significant difference between expected satiety and ideal portion size for lunch foods presented at breakfast time (an incongruous meal context; t (39) = 2.95, p = 0.02)."
+  },
+  {
+   "pmid": "33060126",
+   "verdict": "off",
+   "stat": "χ 2 =11.15",
+   "p": "p value=0.0006",
+   "sentence": "This was statistically significant (χ 2 =11.15, p value=0.0006) CONCLUSION: The study suggests that using BATHE in this family practice centre is beneficial in improving the perception of person centeredness in the consultation."
+  },
+  {
+   "pmid": "32787921",
+   "verdict": "off",
+   "stat": "F(2, 58) = 3.06",
+   "p": "p = 0.06",
+   "sentence": "Two-way mixed ANOVA test showed that there was no statistically significant interaction between the types of educational approach and time of testing (pre-test, post-test, 2 months post-training) for both theoretical knowledge score and practical skills score, with F(2, 58) = 39.6, p 2 = 0.4 and F(2, 58) = 3.06, p = 0.06, partial η 2 = 0.095, respectively."
+  },
+  {
+   "pmid": "32591170",
+   "verdict": "off",
+   "stat": "F(1,61.8)=11.37",
+   "p": "p=.002",
+   "sentence": "Mixed effects model analysis the time effect (week) (F(1,71.22)=25.2, p<0.0001) and treatment group X time interaction (F(1,61.8)=11.37, p=.002) reached significance indicating that the slope of decline in MADRS was steeper in the nCCR-GD group."
+  },
+  {
+   "pmid": "32591170",
+   "verdict": "off",
+   "stat": "t(28)=9.5",
+   "p": "p=.006",
+   "sentence": "Further, the nCCR group improved their semantic clustering strategy(t(28)=9.5; p=.006), as well as performance on the Stroop interference condition, and cognitive flexibility (Trails B)."
+  },
+  {
+   "pmid": "32410425",
+   "verdict": "off",
+   "stat": "χ 2 =0.097",
+   "p": "P =0.104",
+   "sentence": "After the completion of postoperative IPC treatment, the satisfaction rates of using IPC were 89.4%(42/47) in the trial group and 70.2% (33/47) in the control group, and the difference was not significant ( χ 2 =0.097, P =0.104)."
+  },
+  {
+   "pmid": "32155883",
+   "verdict": "off",
+   "stat": "z = 3.9",
+   "p": "p = 0.003",
+   "sentence": "After 12 weeks of treatment, no significant group differences were observed in all neuropsychological tests between the four groups, except for the emotion inhibition test, where HCs with DHA had higher scores compared to either BD with DHA ( z = 3.9, p = 0.003) or BD with placebo ( t = 3.7, p = 0.005)."
+  },
+  {
+   "pmid": "31978983",
+   "verdict": "off",
+   "stat": "F (4 , 525) = 7.675",
+   "p": "p = 0.006",
+   "sentence": "In Experiment 1, participants who received a FAM explanation for weight control and obesity reported lower weight stigma scores (e.g., less dislike of 'fat people', and lower personal willpower blame) than those receiving an explanation emphasizing diet and exercise ( F (4 , 525) = 7.675, p = 0.006; and F (4,525) = 5.393, p = 0.021, respectively)."
+  },
+  {
+   "pmid": "31978983",
+   "verdict": "off",
+   "stat": "F (4,525) = 5.393",
+   "p": "p = 0.021",
+   "sentence": "In Experiment 1, participants who received a FAM explanation for weight control and obesity reported lower weight stigma scores (e.g., less dislike of 'fat people', and lower personal willpower blame) than those receiving an explanation emphasizing diet and exercise ( F (4 , 525) = 7.675, p = 0.006; and F (4,525) = 5.393, p = 0.021, respectively)."
+  },
+  {
+   "pmid": "31978983",
+   "verdict": "off",
+   "stat": "F ( 5 , 684) = 5.157",
+   "p": "p = 0.006",
+   "sentence": "In Experiment 2, there was a significant group difference for the dislike of 'fat people' stigma measure ( F ( 5 , 684) = 5.157, p = 0.006), but not for personal willpower weight stigma ( F ( 5 , 684) = 0.217, p = 0.81)."
+  },
+  {
+   "pmid": "31978983",
+   "verdict": "off",
+   "stat": "F ( 5 , 684) = 0.217",
+   "p": "p = 0.81",
+   "sentence": "In Experiment 2, there was a significant group difference for the dislike of 'fat people' stigma measure ( F ( 5 , 684) = 5.157, p = 0.006), but not for personal willpower weight stigma ( F ( 5 , 684) = 0.217, p = 0.81)."
+  },
+  {
+   "pmid": "31608424",
+   "verdict": "off",
+   "stat": "F (2, 46) = 14.94",
+   "p": "P ≤ 0.000",
+   "sentence": "Compared to the other two groups, perturbation training group showed significantly more improvement in ABC scale (F (2, 46) = 14.94, P ≤ 0.000, η 2 ≥ 0.39)."
+  },
+  {
+   "pmid": "31512050",
+   "verdict": "off",
+   "stat": "χ 2 (2) = 7.78",
+   "p": "p = 0.021",
+   "sentence": "However, we found a significant group x point of measurement interaction [χ 2 (2) = 7.78; p = 0.021] regarding NSSI within the last month indicating at T1."
+  },
+  {
+   "pmid": "32176193",
+   "verdict": "off",
+   "stat": "F(2,236) = 3.64",
+   "p": "p = .043",
+   "sentence": "Individuals with higher levels of predonation anxiety displayed larger decreases in end-tidal carbon dioxide throughout the procedure (F(2,236) = 3.64, p = .043, ηp = 0.030)."
+  },
+  {
+   "pmid": "30261805",
+   "verdict": "off",
+   "stat": "Z = –0.34",
+   "p": "p = 0.97",
+   "sentence": "Results Knowledge (Z = –0.34, p = 0.97 (Knowledge and Attitudes Survey Regarding Pain) and Z = 0.49, p = 0.62 (KnowPain-12)) and perceived competence (Z = –0.74, p = 0.46) did not increase for providers in the intervention group compared with providers in the control group."
+  },
+  {
+   "pmid": "32811628",
+   "verdict": "off",
+   "stat": "F (2,734) = 4.85",
+   "p": "p = .009",
+   "sentence": "There was a small direct effect of time across conditions (F (2,734) = 4.33, p = .014, Cohen's f = 0.11) and a small direct effect of time-by-EMI use (F (2,734) = 4.85, p = .009, f = 0.11) on days of abstinence."
+  },
+  {
+   "pmid": "32743950",
+   "verdict": "off",
+   "stat": "t(4125) = 2.67",
+   "p": "P = 0.007",
+   "sentence": "However, the intervention group reported significantly fewer instances of moderate to severe pain compared with the control group, t(4125) = 2.67, P = 0.007."
+  },
+  {
+   "pmid": "31539578",
+   "verdict": "off",
+   "stat": "F (3, 67) = 4.1",
+   "p": "p = 0.047",
+   "sentence": "Results We detected a significant 3-way interaction between BMI, Task, and Condition (F (3, 67) = 4.1, p = 0.047, ƞ 2 = 0.06)."
+  },
+  {
+   "pmid": "32727509",
+   "verdict": "off",
+   "stat": "t(79) = 3.71",
+   "p": "p = .001",
+   "sentence": "Results Extended condition providers reported greater improvements in self-efficacy, b = .83, 95% CI [.38, 1.27], t(79) = 3.71, p = .001, and d = .63."
+  },
+  {
+   "pmid": "32727509",
+   "verdict": "off",
+   "stat": "t(68) = 2.70",
+   "p": "p = .007",
+   "sentence": "Extended condition providers used more PE components (M = .9/session) than did Standard condition providers (M = .5/session), b = .54, 95% CI [.15, .93], t(68) = 2.70, p = .007, and d = .68."
+  },
+  {
+   "pmid": "32231295",
+   "verdict": "off",
+   "stat": "F(1,86) = 5.58",
+   "p": "P < 0.01",
+   "sentence": "JNJ-67953964 significantly increased functional magnetic resonance imaging (fMRI) ventral striatum activation during reward anticipation (primary outcome) as compared to placebo (baseline-adjusted mean: JNJ-67953964, 0.72 (s.d. = 0.67); placebo, 0.33 (s.d. = 0.68); F(1,86) = 5.58, P < 0.01; effect size = 0.58 (95% confidence interval, 0.13-0.99))."
+  },
+  {
+   "pmid": "33347725",
+   "verdict": "off",
+   "stat": "F(2, 37) = 3.31",
+   "p": "P = 0.04",
+   "sentence": "Mental development index (MDI) scores differed by group, F(2, 37) = 3.31, P = 0.04, with the RCF&P group showing higher scores than the C group (P 2 = 0.076). 'CPCD' was also associated with PDI (R 2 = 0.039)."
+  },
+  {
+   "pmid": "31372864",
+   "verdict": "off",
+   "stat": "F(1, 91) = 3.95",
+   "p": "p = 0.048",
+   "sentence": "There was a 5.7 unit (1 unit = 10 ml or 8 g ethanol) per week reduction ([95%CI 0.15, 11.19], p = 0.048) in alcohol consumption at 1 month follow-up among participants who formed implementation intentions, which was significantly more than controls F(1, 91) = 3.95, p = 0.048, a medium effect size (d = 0.47, Cohen, 1992)."
+  },
+  {
+   "pmid": "31940011",
+   "verdict": "off",
+   "stat": "χ2 = 4.44",
+   "p": "P = .03",
+   "sentence": "High-risk youths in the FFT group had longer intervals from recovery to the emergence of the next mood episode (χ2 = 5.44; P = .02; hazard ratio, 0.55; 95% CI, 0.48-0.92;), and from randomization to the next mood episode (χ2 = 4.44; P = .03; hazard ratio, 0.59; 95% CI, 0.35-0.97) than youths in enhanced care."
+  },
+  {
+   "pmid": "35102971",
+   "verdict": "off",
+   "stat": "χ 2 = 0.34",
+   "p": "P = 0.55",
+   "sentence": "Results There was no statistically significant difference in the clinical success rates between the formocresol group (97.05%) and the photobiomodulation group (94.1%) (χ 2 = 0.34, P = 0.55); however, the radiographic success rate was significantly high in the laser group (94.1%) compared to the formocresol group (58.82%) (χ 2 = 11.76, P = 0.001)."
+  },
+  {
+   "pmid": "34519620",
+   "verdict": "off",
+   "stat": "F(1,70) = 0.18",
+   "p": "p = .678",
+   "sentence": "The therapeutic treatment focus did not predict the effectiveness for any of the examined target criteria (maternal psychological stress F(1,70) = 0.71, p = .401, maternal depression F(1,70) = 0.18, p = .678, infant regulatory symptoms F(1,70) = 0.11, p = .753, maternal self-efficacy F(1,70) = 0.038, p = .847, maternal reflective functioning F(1,50) = 0.56, p = .458)."
+  },
+  {
+   "pmid": "34519620",
+   "verdict": "off",
+   "stat": "F(1,70) = 0.11",
+   "p": "p = .753",
+   "sentence": "The therapeutic treatment focus did not predict the effectiveness for any of the examined target criteria (maternal psychological stress F(1,70) = 0.71, p = .401, maternal depression F(1,70) = 0.18, p = .678, infant regulatory symptoms F(1,70) = 0.11, p = .753, maternal self-efficacy F(1,70) = 0.038, p = .847, maternal reflective functioning F(1,50) = 0.56, p = .458)."
+  },
+  {
+   "pmid": "33764470",
+   "verdict": "off",
+   "stat": "X2 (1) = 4.85",
+   "p": "p = .04",
+   "sentence": "Exploratory analyses show that patients in the MEDi® group were 5.04 times more likely to complete IV induction, compared to SC, Fisher's exact test: X2 (1) = 4.85, p = .04, φc = 0.22, odds ratio = 5.04, 95% CI [1.06, 24.00]."
+  },
+  {
+   "pmid": "34352596",
+   "verdict": "off",
+   "stat": "Z = -2.423",
+   "p": "p = .014",
+   "sentence": "Results Non-Rapid Eye Movement sleep stage 3 duration change (Z = -2.187, p = .029) and Non-Rapid Eye Movement sleep stage 3 ratio change (Z = -2.423, p = .014), measured by polysomnography, of the experimental group showed a significant increase over time compared to the sham control group."
+  },
+  {
+   "pmid": "34034400",
+   "verdict": "off",
+   "stat": "Z =1.180",
+   "p": "P =0.254",
+   "sentence": "Results: There was no significant difference in visual analogue scale of rhinitis symptom in the last pollen season between prophylactic group and control group[ 8.0 (6.4, 9.3) vs 7.3 (6.1, 8.0), Z =1.180, P =0.254]."
+  },
+  {
+   "pmid": "33798921",
+   "verdict": "off",
+   "stat": "t(52) = -0.132",
+   "p": "p = 0.89",
+   "sentence": "Results CM intervention increased 24-hour tobacco abstinence (50% vs. 20%, χ 2 (1) = 5.4; p = .021) and days of continuous abstinence (M = 5.92 ± 7.67 vs. 5.53 ± 12.42; t(52) = -0.132; p = 0.89) at end-of-treatment in comparison with CBT + EFT intervention."
+  },
+  {
+   "pmid": "33798921",
+   "verdict": "off",
+   "stat": "χ 2 (1) = 0.255",
+   "p": "p = .208",
+   "sentence": "Although not statistically significant, CBT + EFT + CM enhanced in-treatment behaviors, in terms of retention (83.3% vs. 70%; χ 2 (1) = 0.255; p = .208), sessions attended (12.29 ± 3.22 vs. 10.93 ± 3.26; t(52) = -1.527; p = .133) and adherence to weekly nicotine use reduction targets (41.07% ± 31.96 vs. 35% ±2 6.28; t(52) = -0.766; p = .447)."
+  },
+  {
+   "pmid": "33630641",
+   "verdict": "off",
+   "stat": "F(6, 799) = 2.32",
+   "p": "p = .020",
+   "sentence": "However, both MBSR and CBT led to increased perceived control over thoughts, F(2, 72) = 5.20, p = .008, and individuals who displayed a greater change in perceived control over thoughts also displayed greater habituation to the speech portion of the stressor, F(6, 799) = 2.32, p = .020."
+  },
+  {
+   "pmid": "33909725",
+   "verdict": "off",
+   "stat": "z = 0.99",
+   "p": "P = .31",
+   "sentence": "The mean percentage of new bone formation in the human chorionic amniotic membrane group was 45.71% ± 4.82%, and for the plasma-rich fibrin group, it was 41.39% ± 6.29%, showing no statistically significant difference (z = 0.99, P = .31)."
+  },
+  {
+   "pmid": "33629809",
+   "verdict": "off",
+   "stat": "χ 2 = 5.456",
+   "p": "P = .016",
+   "sentence": "Results The diagnostic yield in EBUS+ROSE group was 85.9%, the operation time was (24.6 ± 6.8) min, the diagnostic yield in EBUS group was 70.3%, and the operative time was (32.4 ± 8.7) min, there were significant differences in diagnostic yield (χ 2 = 5.456, P = .016) and operation time (t = 3.167, P = .001) between the two groups."
+  },
+  {
+   "pmid": "34823572",
+   "verdict": "off",
+   "stat": "t(13)=.636",
+   "p": "p=.537",
+   "sentence": "The sham group showed no such change (pre: M=2.13, SEM=0.22; 1d post: M=2.24, SEM=0.22; t(13)=.636, p=.537, d=.176)."
+  },
+  {
+   "pmid": "34574642",
+   "verdict": "off",
+   "stat": "t(39) = -11.40",
+   "p": "p = 0.001",
+   "sentence": "In the experimental group, significant differences were noted between pretest and posttest in psychological well-being, especially in the area of relationships with others (M pretest = 59.3; M posttest = 65.07; t(39) = -11.40; p = 0.001) and purpose in life (M pretest = 54.85; M posttest = 58.21; t(39) = -3.15; p = 0.003), as well as self-efficacy (M pretest = 28.06; M posttest = 29.60; t(39) = -2"
+  },
+  {
+   "pmid": "34301422",
+   "verdict": "off",
+   "stat": "χ 2 = 8.79",
+   "p": "P ≤ .003",
+   "sentence": "After initiation, the proportion of sickle cell disease patients' visits with an emergency severity index of 2 or higher triaged by nurses in the intervention group was markedly higher in the intervention group than in the control group (64.95% vs 35.05%; χ 2 = 8.79, P ≤ .003)."
+  },
+  {
+   "pmid": "34121511",
+   "verdict": "off",
+   "stat": "F (1, 39) = 4.566",
+   "p": "P = .036",
+   "sentence": "A significant interaction effect between groups and time were observed F (1, 39) = 4.566, P = .036, where the sensory group improved in comparison to the boxing group."
+  },
+  {
+   "pmid": "33844901",
+   "verdict": "off",
+   "stat": "χ2 = 4.95",
+   "p": "p = 0.02",
+   "sentence": "In the DBT 29/30 participants completed all sessions (96% retention) and 24/31 control group participants completed all sessions (77% retention) (χ2 = 4.95, p = 0.02)."
+  },
+  {
+   "pmid": "33627086",
+   "verdict": "off",
+   "stat": "t = - 1.945",
+   "p": "p = 0.58",
+   "sentence": "However, there were no significant differences in the salivary cortisol (t = 0.349, p = 0.73) and oxytocin (t = - 1.945, p = 0.58) levels between the two groups."
+  },
+  {
+   "pmid": "33508918",
+   "verdict": "off",
+   "stat": "t= -0.015",
+   "p": "P =0.976",
+   "sentence": "The mean number of harvested lymph nodes in the specimens in the nCRT group and the direct operation group was 27.6±12.4 and 26.8±14.6, respectively, and the difference was not statistically significant ( t= -0.015, P =0.976)."
+  },
+  {
+   "pmid": "33410616",
+   "verdict": "off",
+   "stat": "χ2 = 1.55",
+   "p": "P = 0.12",
+   "sentence": "The calculated TBL in the aspirin group (944.9 mL [658.5-1137.8 mL]) was similar to that in the rivaroxaban group (978.3 mL [747.4-1740.6mL]) (χ2 = 1.55, P = 0.12)."
+  },
+  {
+   "pmid": "33678639",
+   "verdict": "off",
+   "stat": "t =0.724",
+   "p": "P =0.799",
+   "sentence": "Results There was no significant difference in the operation time between the Group A and the Group B ( t =0.724, P =0.799), but the operation time in the Group D was significant shorter than that in the Group C ( t =4.200, P =0.017)."
+  },
+  {
+   "pmid": "31650861",
+   "verdict": "off",
+   "stat": "F (1,157) = 6.53",
+   "p": "p < .01",
+   "sentence": "Results showed overall cognitive performance was predictive of adherence to capsule intake when controlling for polypharmacy [ F (1,157) = 6.53, p < .01]."
+  },
+  {
+   "pmid": "34516712",
+   "verdict": "off",
+   "stat": "χ 2 = 4.698",
+   "p": "P = 0.025",
+   "sentence": "Results Postoperative CT showed that the rate of Grade A screws in the robot-assisted MIS-TLIF group was significantly more than that in the open surgery group (χ 2 = 4.698, P = 0.025)."
+  },
+  {
+   "pmid": "34482187",
+   "verdict": "off",
+   "stat": "χ 2 = 7.39; df = 1",
+   "p": "P = .008",
+   "sentence": "Results Participants receiving IPS + CR showed greater improvement of competitive employment over time in terms of hours worked (during follow-up period: 38.5 vs. 19.6 h, B = 2.94; Wald χ 2 = 5.39; P = .02) and employment rate (at T2: 62.1% vs. 25.9%, χ 2 = 7.39; df = 1; P = .008), compared with the IPS + control group, particularly in the longer term."
+  },
+  {
+   "pmid": "32454239",
+   "verdict": "off",
+   "stat": "χ 2 = 0.068",
+   "p": "P = .08",
+   "sentence": "Results The total closure rate of the great saphenous vein at 12 months was slightly lower in the RFiTT group (90.9% [90/99]) than in the HLS group (97.0% [98/101]) but not statistically signiﬁcant (χ 2 = 0.068; P = .08)."
+  },
+  {
+   "pmid": "34214881",
+   "verdict": "off",
+   "stat": "F (1, 798) = 4.32",
+   "p": "P = 0.03",
+   "sentence": "Results Dichotomous comparison between alcohol drinkers (>0 g/day of alcohol intake) and non-drinkers (0 g/day of alcohol intake) found higher total ghrelin levels among individuals who drank alcohol than those who did not, with statistically significant results in study A [F (1, 798) = 4.32, P = 0.03] and less robust results in study B [F (1, 966) = 2.62, P = 0.10], controlling for a list of fact"
+  },
+  {
+   "pmid": "34214881",
+   "verdict": "off",
+   "stat": "F (1, 966) = 2.62",
+   "p": "P = 0.10",
+   "sentence": "Results Dichotomous comparison between alcohol drinkers (>0 g/day of alcohol intake) and non-drinkers (0 g/day of alcohol intake) found higher total ghrelin levels among individuals who drank alcohol than those who did not, with statistically significant results in study A [F (1, 798) = 4.32, P = 0.03] and less robust results in study B [F (1, 966) = 2.62, P = 0.10], controlling for a list of fact"
+  },
+  {
+   "pmid": "34164935",
+   "verdict": "off",
+   "stat": "F(2,101) = 4.16",
+   "p": "p = 0.01",
+   "sentence": "Both groups evidenced significant reductions in alcohol use measured using phosphatidylethanol (PEth) (F(2,101) = 4.16, p = 0.01), significantly decreased likelihood of self-reported moderate or severe AOD (F(2,104) = 7.02, p = 0.001), and significant declines in alcohol use quantity on the timeline follow-back (F(2,102) = 21.53, p Conclusions Results of this pilot trial provide initial evidence o"
+  },
+  {
+   "pmid": "33601689",
+   "verdict": "off",
+   "stat": "Chi-square=1.76, df=1",
+   "p": "p = 0.294",
+   "sentence": "Week 1 remission rate was numerically higher but not statistically significant in the triple chronotherapy versus alternative protocol group (25.0% vs. 6.7%, Chi-square=1.76, df=1, p = 0.294). m-SIGH scores and response and remission rates on Days 2-7 were numerically improved without reaching statistical significance in the triple chronotherapy versus alternative protocol group."
+  },
+  {
+   "pmid": "34360490",
+   "verdict": "off",
+   "stat": "t = -2.282",
+   "p": "p = 0.007",
+   "sentence": "Results RACT participants had significantly greater post-intervention improvement in cognitive function ( t = 4.707, p t = -2.282, p = 0.007), executive function (t = 4.610, p t = -3.307, p = 0.004)."
+  },
+  {
+   "pmid": "34293413",
+   "verdict": "off",
+   "stat": "F(1, 17) = 10.816",
+   "p": "p = .002",
+   "sentence": "Results The results of the ANOVA showed significant improvements of the intervention group for hand grip strength (Pre: M = 12.67, SD = 5.28; Post: M = 13.86, SD = 4.79; Group × Time: F(1, 17) = 10.816, p = .002, η p 2 = 0.241), manual dexterity (Pre: M = 4.50, SD = 5.17; Post: M = 5.30, SD = 4.25; Group × Time: F(1, 7) = 9.193, p = .008, η p 2 = 0.365), cognition (Pre: M = 10.31, SD = 6.87; Post:"
+  },
+  {
+   "pmid": "34293413",
+   "verdict": "off",
+   "stat": "F(1, 7) = 9.193",
+   "p": "p = .008",
+   "sentence": "Results The results of the ANOVA showed significant improvements of the intervention group for hand grip strength (Pre: M = 12.67, SD = 5.28; Post: M = 13.86, SD = 4.79; Group × Time: F(1, 17) = 10.816, p = .002, η p 2 = 0.241), manual dexterity (Pre: M = 4.50, SD = 5.17; Post: M = 5.30, SD = 4.25; Group × Time: F(1, 7) = 9.193, p = .008, η p 2 = 0.365), cognition (Pre: M = 10.31, SD = 6.87; Post:"
+  },
+  {
+   "pmid": "34293413",
+   "verdict": "off",
+   "stat": "F(1, 15) = 12.687",
+   "p": "p = .001",
+   "sentence": "Results The results of the ANOVA showed significant improvements of the intervention group for hand grip strength (Pre: M = 12.67, SD = 5.28; Post: M = 13.86, SD = 4.79; Group × Time: F(1, 17) = 10.816, p = .002, η p 2 = 0.241), manual dexterity (Pre: M = 4.50, SD = 5.17; Post: M = 5.30, SD = 4.25; Group × Time: F(1, 7) = 9.193, p = .008, η p 2 = 0.365), cognition (Pre: M = 10.31, SD = 6.87; Post:"
+  },
+  {
+   "pmid": "34293413",
+   "verdict": "off",
+   "stat": "F(1, 14) = 5.135",
+   "p": "p = .031",
+   "sentence": "Results The results of the ANOVA showed significant improvements of the intervention group for hand grip strength (Pre: M = 12.67, SD = 5.28; Post: M = 13.86, SD = 4.79; Group × Time: F(1, 17) = 10.816, p = .002, η p 2 = 0.241), manual dexterity (Pre: M = 4.50, SD = 5.17; Post: M = 5.30, SD = 4.25; Group × Time: F(1, 7) = 9.193, p = .008, η p 2 = 0.365), cognition (Pre: M = 10.31, SD = 6.87; Post:"
+  },
+  {
+   "pmid": "34227411",
+   "verdict": "off",
+   "stat": "Z = 3.03",
+   "p": "P = 0.003",
+   "sentence": "Analysis of individual questionnaire items showed two statistically significant differences: the website information had higher ratings on 'easy to understand' (Z = 3.03; P = 0.003) and 'confidence in decision-making' (Z = 2.00; P = 0.044)."
+  },
+  {
+   "pmid": "34227411",
+   "verdict": "off",
+   "stat": "Z = 2.00",
+   "p": "P = 0.044",
+   "sentence": "Analysis of individual questionnaire items showed two statistically significant differences: the website information had higher ratings on 'easy to understand' (Z = 3.03; P = 0.003) and 'confidence in decision-making' (Z = 2.00; P = 0.044)."
+  },
+  {
+   "pmid": "33608711",
+   "verdict": "off",
+   "stat": "F(1,0.1) = 0.37",
+   "p": "P = .55",
+   "sentence": "No main treatment effect was found for cognition (F(1,0.1) = 0.37, P = .55) or secondary outcomes."
+  },
+  {
+   "pmid": "34199448",
+   "verdict": "off",
+   "stat": "F(2,66) = 29.54",
+   "p": "p = 0.001",
+   "sentence": "Results showed significant interaction (group x time) effects for the primary outcome in performance, F(2,66) = 29.54, p = 0.001, ɳ P 2 = 0.472, and satisfaction, F(2,66) = 37.15, p = 0.000, ɳ P 2 = 0.530."
+  },
+  {
+   "pmid": "33419660",
+   "verdict": "off",
+   "stat": "F(2,176) = 6.60",
+   "p": "p = 0.001",
+   "sentence": "Results Being married (F(2,176) = 6.60; p = 0.001), reporting higher perceived social support (F(2,177) = 4.70; p = 0.01), and fewer interpersonal problems (F(2, 176) = 4.34; p = 0.01) predicted lower depression severity on average over the course of 24 weeks."
+  },
+  {
+   "pmid": "33911153",
+   "verdict": "off",
+   "stat": "t(20) = 2.851",
+   "p": "p = .018",
+   "sentence": "This type of resistance exercise improved the information processing speed measured by Stroop task reaction time (t(23) = - 2.313, p = .030, M = - 16 ms, 95% CI [- 30, - 2]) and decreased the conflict-related neural activity measured by event-related potential N2b in both congruent (t(20) = 2.674, p = .015, M = 2.290 μv, 95% CI [0.504, 4.075]) and incongruent (t(20) = 2.851, p = .018, M = 2.291 μv"
+  },
+  {
+   "pmid": "34725668",
+   "verdict": "off",
+   "stat": "F(2, 84) =6.99",
+   "p": "p=0.0006",
+   "sentence": "ANCOVA showed a significant difference in the mean gait velocity at 16-weeks post-intervention [F(2, 84) =6.99, p=0.0006); η2 (95%CI)=0.16 (0.02, 0.27)]."
+  },
+  {
+   "pmid": "34725668",
+   "verdict": "off",
+   "stat": "t(83)=3.15",
+   "p": "p=0.007",
+   "sentence": "Post hoc comparisons using Sidak test showed that the estimated marginal mean (EMM) for velocity for the walking group [EMM (SE), 0.51m/s (0.03)] was significantly higher compared to the interpersonal interaction group [EMM (SE), 0.38m/s (0.03); t(83)=3.15, p=0.007] and the care-as-usual control group [EMM (SE), 0.38m/s (0.03)]; t(83)=3.32, p=0.004]."
+  },
+  {
+   "pmid": "34725668",
+   "verdict": "off",
+   "stat": "t(83)=3.32",
+   "p": "p=0.004",
+   "sentence": "Post hoc comparisons using Sidak test showed that the estimated marginal mean (EMM) for velocity for the walking group [EMM (SE), 0.51m/s (0.03)] was significantly higher compared to the interpersonal interaction group [EMM (SE), 0.38m/s (0.03); t(83)=3.15, p=0.007] and the care-as-usual control group [EMM (SE), 0.38m/s (0.03)]; t(83)=3.32, p=0.004]."
+  },
+  {
+   "pmid": "34488085",
+   "verdict": "off",
+   "stat": "χ 2 (16)=31.35",
+   "p": "p=.001",
+   "sentence": "Although both CBT and G4H led to symptom improvement, the benefits of G4H were more robust following an unanticipated threat to social connectedness for depression (χ 2 (16)=31.35, p=.001), loneliness (χ 2 (8)=21.622, p=.006), and wellbeing (χ 2 (8)=22.938, p=.003)."
+  },
+  {
+   "pmid": "33611132",
+   "verdict": "off",
+   "stat": "F(1, 39)= 5.267",
+   "p": "p = 0.036",
+   "sentence": "Results There was a significant condition (CBT/RT, HE)xtime (T0, T2) effect on NF-κB, F(1, 39)= 5.267, p = 0.036, wherein NF-κB expression significantly increased over time for HE but did not change for RT or CBT."
+  },
+  {
+   "pmid": "33611132",
+   "verdict": "off",
+   "stat": "t(36) = -2.637",
+   "p": "p = 0.048",
+   "sentence": "Greater increases in PSMS from T0 to T1 were associated with less increase in NF-κB expression over 12 months (β = -0.426, t(36) = -2.637, p = 0.048)."
+  },
+  {
+   "pmid": "33611132",
+   "verdict": "off",
+   "stat": "F(1, 40)= 6.537",
+   "p": "p = 0.028",
+   "sentence": "We found that women assigned to active intervention (CBT/RT) had significant decreases in ABS-NA (F(1, 40)= 6.537, p = 0.028) and IES-I (F(1, 40)= 4.391, p = 0.043) from T0 to T1 compared to women assigned to HE, who showed no change over time (p's > 0.10)."
+  },
+  {
+   "pmid": "35749267",
+   "verdict": "off",
+   "stat": "F(1, 107) = 29.54",
+   "p": "p = .01",
+   "sentence": "Results At 8 wk postintervention, participants in the MAX group reported significantly lower levels of fatigue impact (mFIS) than those in the HE group, F(1, 107) = 29.54, p = .01; Cohen's d = 0.87; 95% confidence interval [0.18, 1.55]."
+  },
+  {
+   "pmid": "35410736",
+   "verdict": "off",
+   "stat": "t(47) = 2.638",
+   "p": "p = .013",
+   "sentence": "The scores on pain, anxiety, and fear during the procedure were lower in the cartoon watching group than in the bubble-blowing group (pain t(47) = 2.638, p = .013; anxiety t(47) = 2.358, p = .023; and fear t(47) = 2.784, p = .008)."
+  },
+  {
+   "pmid": "35306502",
+   "verdict": "off",
+   "stat": "χ2(3) = 9.05",
+   "p": "p = 0.033",
+   "sentence": "However, out of the tested secondary outcomes, global functioning (χ2(3) = 9.05; p = 0.033), and negative symptoms (χ2(3) = 19.91; p Conclusions INTERACT did not support a significant effect of ACT-DL over TAU on the primary outcome measure of psychotic distress as assessed with the CAARMS."
+  },
+  {
+   "pmid": "35176724",
+   "verdict": "off",
+   "stat": "F(1, 47) = 660.76",
+   "p": "P = 0.024",
+   "sentence": "Results The findings show that the rates of change in total score of visual perception from pre to post were significantly different between groups (F(1, 47) = 660.76, P = 0.024)."
+  },
+  {
+   "pmid": "35176724",
+   "verdict": "off",
+   "stat": "F (1, 47) = 26.15",
+   "p": "P = 0.013",
+   "sentence": "Similarly, intervention group showed significantly different rates of change in total score of executive function from pre to post (F (1, 47) = 26.15, P = 0.013)."
+  },
+  {
+   "pmid": "36482613",
+   "verdict": "off",
+   "stat": "F(1, 68) = 390.751",
+   "p": "P = .001",
+   "sentence": "Results The findings show that, among first-year undergraduate music education students, educational music training decreased their stress level associated with music performance [F(1, 68) = 390.751; P = .001, ηp2 = 0.270]."
+  },
+  {
+   "pmid": "36482613",
+   "verdict": "off",
+   "stat": "F(1, 68) = 1375.495",
+   "p": "P = .001",
+   "sentence": "It was also found that after the educational music training, the students reported decreased anxiety level associated with music performance [F(1, 68) = 1375.495; P = .001, ηp2 = 0.344]."
+  },
+  {
+   "pmid": "36482613",
+   "verdict": "off",
+   "stat": "F(2, 68) = 127.301",
+   "p": "P = .001",
+   "sentence": "Significant interaction effects of educational music training and time on students' stress [F(2, 68) = 127.301; P = .001] and anxiety levels [F(2, 68) = 260.535; P = .001] were also found."
+  },
+  {
+   "pmid": "36482613",
+   "verdict": "off",
+   "stat": "F(2, 68) = 260.535",
+   "p": "P = .001",
+   "sentence": "Significant interaction effects of educational music training and time on students' stress [F(2, 68) = 127.301; P = .001] and anxiety levels [F(2, 68) = 260.535; P = .001] were also found."
+  },
+  {
+   "pmid": "35093842",
+   "verdict": "off",
+   "stat": "F(1,34)=5.91",
+   "p": "p=.022",
+   "sentence": "Results The treatment group showed significantly improved facial affect recognition skills relative to the placebo group post-treatment, F(1,34)=5.91, p=.022, partial ꞃ 2 =0.146."
+  },
+  {
+   "pmid": "36171562",
+   "verdict": "off",
+   "stat": "χ 2 = 8.248",
+   "p": "P = 0.003",
+   "sentence": "The results showed that the incidence of nausea and vomiting and potential psychiatric symptoms were significantly higher in patients in group EH (15.9, 11.4%) compared with that of participants in group F (2.2, 0%), group EL (4.4, 0%) and group EM (2.3, 2.3%) (χ 2 = 7.493; P = 0.038 and χ 2 = 8.248; P = 0.003)."
+  },
+  {
+   "pmid": "36231171",
+   "verdict": "off",
+   "stat": "t (48) = 44",
+   "p": "p = 0.01",
+   "sentence": "Statistically significant differences on VAS (t (48) = 44, p = 0.01, ES = 0.42 [0.13, 0.65]) was found in favor to PET group."
+  },
+  {
+   "pmid": "35689521",
+   "verdict": "off",
+   "stat": "t(28) = -4.3196",
+   "p": "p = 0.008",
+   "sentence": "Results According to the blind evaluator, there was a significant reduction 90 days after the last treatment on the QGSGS for VYC-17.5L compared with saline (-6.6 VYC-17.5L vs -1.7 saline [t(28) = -4.3196, p = 0.008])."
+  },
+  {
+   "pmid": "35804078",
+   "verdict": "off",
+   "stat": "F(4,86) = 2.77",
+   "p": "p = 0.049",
+   "sentence": "At the end of the study, significant differences were found among the groups in the Tibial-SOS [F(4,86) = 2.77, p = 0.049, η p 2 = 0.114] in terms of the benefit to the RLT group."
+  },
+  {
+   "pmid": "34366293",
+   "verdict": "off",
+   "stat": "F (1, 88) = 316.5",
+   "p": "p = .001",
+   "sentence": "A significant interaction with time (F (1, 88) = 316.5, p = .001, ηp 2 :0.91) and between the group × time (F (3, 88) = 2.83, p = 0.04, ηp 2 :0.8) was found after the intervention."
+  },
+  {
+   "pmid": "35752785",
+   "verdict": "off",
+   "stat": "χ 2 (4) = 8.118",
+   "p": "P = .072",
+   "sentence": "Diffusion -weighted imaging (DWI) was the only axillary node characteristic significant when associated with pathological node status (χ 2 (4) = 8.118, P = .072)."
+  },
+  {
+   "pmid": "35752175",
+   "verdict": "off",
+   "stat": "t (15) = -2.18",
+   "p": "p= .04",
+   "sentence": "Less prompting was seen in simulation-2 among both the video-prior (t (15) = -2.83, p= .01) and video-between cohorts (t (15) = -2.18, p= .04)."
+  },
+  {
+   "pmid": "34077602",
+   "verdict": "off",
+   "stat": "F(2,64) = 4.87",
+   "p": "p = 0.031",
+   "sentence": "A significant group effect favourable to the treatment group was observed in the following variables: self-efficacy (F[2,64] = 9.2, p = 0.003), physical activity (F[2,64] = 43.6, p < 0.001) and balance for most painful knee (F(2,64) = 4.87, p = 0.031) and less painful knee (F[2,64] = 6.94, p = 0.010)."
+  },
+  {
+   "pmid": "35470200",
+   "verdict": "off",
+   "stat": "F (1, 246)=15.28",
+   "p": "p = 0.01",
+   "sentence": "All primary and secondary outcomes were enhanced by the video intervention: A repeated-measures analysis of variance yielded a significant interaction effect for acceptance ( F (1, 246)=15.28, p = 0.01), performance expectancy ( F (1, 246)=6.10, p = 0.01) and credibility ( F (1, 246)=25.61, p 0.001)."
+  },
+  {
+   "pmid": "35341944",
+   "verdict": "off",
+   "stat": "F (1,39) = 6.15",
+   "p": "p = .020",
+   "sentence": "Results Individuals who inhaled the essential oil blend for 2 weeks had significantly lower fatigue scores after controlling for baseline scores, employment status, BMI, olfactory function, and time since diagnosis, with a large effect size (F (1,39) = 6.15, p = .020, partial eta squared = 0.198)."
+  },
+  {
+   "pmid": "34999670",
+   "verdict": "off",
+   "stat": "χ²=5.018",
+   "p": "P=0.024",
+   "sentence": "The total incidence of adverse reactions in the study group was lower than in the reference group (χ²=5.018, P=0.024)."
+  },
+  {
+   "pmid": "34985237",
+   "verdict": "off",
+   "stat": "F(1,58)=5.27",
+   "p": "P=0.02",
+   "sentence": "Between group differences showed a significant difference for isometric strength of Knee extensor values at 2 month follow-up F(1,58)=5.56, P=0.02, partial η2=0.09, 459.4 (412.13, 506.64) vs. 380.68 (333.42, 427.93) and in worst pain post-treatment F(1,58)=5.27, P=0.02, partial η 2 =0.08, 0.76 (0.48, 1.04) vs. reference group 1.30 (0.91, 1.68) with significantly better scores in the blood flow res"
+  },
+  {
+   "pmid": "32930640",
+   "verdict": "off",
+   "stat": "F (4, 18) = 1.04",
+   "p": "p = .33",
+   "sentence": "Results : No group x time interaction for 50-m freestyle ( F (4, 18) = 1.04; p = .33; η 2 = 0.09 ) and CMJ performance ( F (4, 18) = 0.31; p = .58; η 2 = 0.03 ) was found."
+  },
+  {
+   "pmid": "32930640",
+   "verdict": "off",
+   "stat": "F (4, 18) = 0.31",
+   "p": "p = .58",
+   "sentence": "Results : No group x time interaction for 50-m freestyle ( F (4, 18) = 1.04; p = .33; η 2 = 0.09 ) and CMJ performance ( F (4, 18) = 0.31; p = .58; η 2 = 0.03 ) was found."
+  },
+  {
+   "pmid": "32930640",
+   "verdict": "off",
+   "stat": "F (2, 20) = 8.71",
+   "p": "p = .01",
+   "sentence": "Both experimental groups improved CMJ ( F (2, 20) = 8.71; p = .01; η 2 = 0.46 )."
+  },
+  {
+   "pmid": "34402959",
+   "verdict": "off",
+   "stat": "t(13.958) = - 2.373",
+   "p": "p = 0.00",
+   "sentence": "Greater weight loss caused significantly higher levels of Depression (t(13.958) = - 2.373; p = 0.00; p Conclusion According to our safety study, SADI-GP is a promising malabsorptive procedure, but a long-term high-volume case series or a randomised controlled trial is necessary to evaluate complication rates and weight-loss outcomes."
+  },
+  {
+   "pmid": "35178237",
+   "verdict": "off",
+   "stat": "χ 2 = 5.275",
+   "p": "P = 0.021",
+   "sentence": "The inactivation rate of microwave ablation in the MRI group was higher than that in the CT group ( χ 2 = 5.275, P = 0.021)."
+  },
+  {
+   "pmid": "35107855",
+   "verdict": "off",
+   "stat": "Z = 0",
+   "p": "p = 0.06",
+   "sentence": "Results A significant difference was observed in AEA concentrations in Study 2 after ayahuasca intake (Χ 2 (2) = 6.5, p = 0.03, Friedman test), and near significant differences (increases) were observed between baseline and 90 (Z = 0, p = 0.06, Wilcoxon test) and 240 (Z = 10, p = 0.06) minutes after ayahuasca intake."
+  },
+  {
+   "pmid": "35459133",
+   "verdict": "off",
+   "stat": "F(3, 245) = 4.66",
+   "p": "p = .004",
+   "sentence": "Compared to women with ETE in both childhood and adulthood, those with exposure in adulthood only (β = -.10, 95% CI = -.20, -.02) or no exposure (β = -.11, 95% CI = -.23, -.03; [∆R 2= .347, F(8, 245) = 15.7, p 2 = .04, F(3, 245) = 4.66, p = .004."
+  },
+  {
+   "pmid": "33978602",
+   "verdict": "off",
+   "stat": "χ2 = 4.9",
+   "p": "P = 0.0014",
+   "sentence": "A relative bloom of L. crispatus compared with L. gasseri was associated with treatment success (Kruskal-Wallis χ2 = 4.9, P = 0.0014)."
+  },
+  {
+   "pmid": "34581703",
+   "verdict": "off",
+   "stat": "F(1,55) = 5.625",
+   "p": "p = .022",
+   "sentence": "Results Results from analysis of variance showed that the mean change of sleep latency (F(1,55) =4.793, p = .033) and sleep efficiency (F(1,55) = 5.625, p = .022) were significantly superior in bright light therapy over placebo."
+  },
+  {
+   "pmid": "35858870",
+   "verdict": "off",
+   "stat": "Z = -2.726",
+   "p": "p = 0.004",
+   "sentence": "Results Participants reported a statistically significant increase in activity levels between February and May (Wilcoxon Z = -2.013, p = 0.044) and a statistically significant decrease between May and August (Wilcoxon Z = -2.726, p = 0.004)."
+  },
+  {
+   "pmid": "35858870",
+   "verdict": "off",
+   "stat": "Z = 0.485",
+   "p": "p = 0.620",
+   "sentence": "No significant difference was found in the physical activity levels from pre- to post-lockdown (Wilcoxon Z = 0.485, p = 0.620)."
+  },
+  {
+   "pmid": "34751384",
+   "verdict": "off",
+   "stat": "Z = -2.509",
+   "p": "P = .028",
+   "sentence": "The Draize dermal irritation scores were significantly lower in the nanofiber vs control group (Z = -2.509; P = .028) on the first postoperative day but became similar afterward (Z ≥ -1.62; P ≥ .198)."
+  },
+  {
+   "pmid": "34751384",
+   "verdict": "off",
+   "stat": "Z = -0.299",
+   "p": "P = .764",
+   "sentence": "In addition, the average time to re-epithelialization was similar in the nanofiber (17.9 ± 4.4 days) and control group (18.3 ± 4.5 days; Z = -0.299; P = .764), so were postoperative adverse events, pain, and infection incidence, itching and scarring."
+  },
+  {
+   "pmid": "34787917",
+   "verdict": "off",
+   "stat": "F (1.74, 86.9) = 0.406",
+   "p": "p = 0.638",
+   "sentence": "There was no significant difference between groups in UI symptoms (F (1.74, 86.9) = 0.406; p = 0.638), vaginal resting pressure (mean difference -1.5 cmH₂0 [95% confidence interval [CI] -4.5 to 1.5; p = 0.33]), and maximum voluntary contraction of PFM (median 0.0 cmH₂0 [25%-75% interquartile range 0.0-5.6; p = 0.12]) after the intervention period."
+  },
+  {
+   "pmid": "35531961",
+   "verdict": "off",
+   "stat": "F(6, 67) = 2.52",
+   "p": "p = .049",
+   "sentence": "There were intervention effects on emotional availability F(6, 67) = 2.52, p = .049, Cohen's d = .90, with higher sensitivity and non-intrusiveness in the intervention group (n = 40) than the comparison group (n = 34)."
+  },
+  {
+   "pmid": "35273272",
+   "verdict": "off",
+   "stat": "z = - 2.86",
+   "p": "p = 0.003",
+   "sentence": "Mediolateral COP velocity ranking during the bipodal test was lower for UF than for SF group (U = 19.50, z = - 2.86, p = 0.003) at follow-up."
+  },
+  {
+   "pmid": "34409935",
+   "verdict": "off",
+   "stat": "F (1,55) = 5.33",
+   "p": "P = .03",
+   "sentence": "Results Play2Sleep was effective in reducing maternal-reported infant wakefulness, F (1,55) = 5.33, P = .03, partial η 2 = .09, and the number of paternal-reported naps, F (1,58) = 4.90, P = .03, partial η 2 = .08."
+  },
+  {
+   "pmid": "35102782",
+   "verdict": "off",
+   "stat": "F (1,5323) = 0.017",
+   "p": "p = 0.68",
+   "sentence": "Results Participants showed significant improvements at the primary efficacy endpoint in both treatment groups (BTX: M = -0.39, SD = 0.39; ACU: M = -0.35, SD = 0.42), but no superior effect of the BTX condition in comparison with the control intervention was found- F (1,5323) = 0.017, p = 0.68)."
+  },
+  {
+   "pmid": "38163740",
+   "verdict": "off",
+   "stat": "Z = -3.677",
+   "p": "P = 0.002",
+   "sentence": "The median and interquartile range of VAS scores for the intravenous, irrigation, and intravenous plus irrigation groups were 2.70 (2.50, 2.86) ( Z = -3.677, P = 0.002), 2.67 (2.50, 2.77) ( Z = -3.058, P Z = -6.634, P P P < 0.001)."
+  },
+  {
+   "pmid": "34847073",
+   "verdict": "off",
+   "stat": "F(1,40) = 2212.35",
+   "p": "P = .001",
+   "sentence": "Results The results of mixed-design ANOVA with repeated measures showed that there was significant correspondence between the type of training used and time on TNF-α (F(1,40) = 2212.35; P = .001; estimates (ES) = 0.98) and IL-6 (F(1,40) = 2423.69; P = .001; ES = 0.98) levels."
+  },
+  {
+   "pmid": "34847073",
+   "verdict": "off",
+   "stat": "F(1,40) = 2423.69",
+   "p": "P = .001",
+   "sentence": "Results The results of mixed-design ANOVA with repeated measures showed that there was significant correspondence between the type of training used and time on TNF-α (F(1,40) = 2212.35; P = .001; estimates (ES) = 0.98) and IL-6 (F(1,40) = 2423.69; P = .001; ES = 0.98) levels."
+  },
+  {
+   "pmid": "34847073",
+   "verdict": "off",
+   "stat": "F(3, 40) = 11.39",
+   "p": "P = .001",
+   "sentence": "Results indicated that there was a significant difference between the resistance training groups and the control group in both TNF-α (F(3, 40) = 11.39; P = .001; ES = 0.46) and IL-6 (F(3, 40) = 4.65; P = .007; ES = 0.25) levels."
+  },
+  {
+   "pmid": "37643589",
+   "verdict": "off",
+   "stat": "t(345) = 2.36",
+   "p": "p = 0.004",
+   "sentence": "The difference between levels of sensory features was higher in multisensory imagery condition compared to neutral (b = 0.95, SE = 0.30, t(345) = 3.17, p = 0.002, SMD = 0.49) and mental imagery condition (b = 0.67, SE = 0.23, t(345) = 2.36, p = 0.004, SMD = 0.35)."
+  },
+  {
+   "pmid": "37466456",
+   "verdict": "off",
+   "stat": "Z = -6.574",
+   "p": "P = 0.001",
+   "sentence": "Post-venipuncture pain mean scores were significantly lower in the experimental group than those of the children in the control group ( Z = -6.574; P = 0.001)."
+  },
+  {
+   "pmid": "36999903",
+   "verdict": "off",
+   "stat": "z = 2.48",
+   "p": "p = 0.02",
+   "sentence": "Although VR-Other generated less emotions, such as fear, than VR-Self ( z = 2.48, p = 0.02) and print ( z = -2.82, p = 0.02), its persuasiveness was not hindered."
+  },
+  {
+   "pmid": "36999903",
+   "verdict": "off",
+   "stat": "z = -2.82",
+   "p": "p = 0.02",
+   "sentence": "Although VR-Other generated less emotions, such as fear, than VR-Self ( z = 2.48, p = 0.02) and print ( z = -2.82, p = 0.02), its persuasiveness was not hindered."
+  },
+  {
+   "pmid": "36921543",
+   "verdict": "off",
+   "stat": "Z = -4.911",
+   "p": "p = 0.0001",
+   "sentence": "Results A statistically significant difference was found between the pre-test and post-test scores (Z = -4.911, p = 0.0001) of the experimental group (Z = -5054, p = 0.0001) and the control group."
+  },
+  {
+   "pmid": "36921543",
+   "verdict": "off",
+   "stat": "Z = -5054",
+   "p": "p = 0.0001",
+   "sentence": "Results A statistically significant difference was found between the pre-test and post-test scores (Z = -4.911, p = 0.0001) of the experimental group (Z = -5054, p = 0.0001) and the control group."
+  },
+  {
+   "pmid": "37960353",
+   "verdict": "off",
+   "stat": "F (1, 38) = 15.41",
+   "p": "p = 0.0007",
+   "sentence": "The results revealed that compared to the placebo group (pre: M = 10.10, SD = 2.292; post: M = 8.650, SD = 2.793; pre vs. post: F (1, 38) = 15.41, p = 0.4316), the CCFM1025-treated group exhibited a significant decrease in Pittsburgh Sleep Quality Index (PSQI) scores from baseline (pre: M = 11.60, SD = 3.169; post: M = 7.750, SD = 3.697, F (1, 38) = 15.41, p = 0.0007)."
+  },
+  {
+   "pmid": "36757496",
+   "verdict": "off",
+   "stat": "t(102) = 3.004",
+   "p": "p = 0.001",
+   "sentence": "This difference was statistically highly significant (t(102) = 3.004; p = 0.001; CI 0.58 to 2.86)."
+  },
+  {
+   "pmid": "37674467",
+   "verdict": "off",
+   "stat": "Z =5.69",
+   "p": "P =0.017",
+   "sentence": "Objective To develop a CT-based weighted radiomic model that predicts tumor response to programmed death-1(PD-1)/PD-ligand 1(PD-L1)immunotherapy in patients with non-small cell lung cancer.Methods The patients with non-small cell lung cancer treated by PD-1/PD-L1 immune checkpoint inhibitors in the Peking Union Medical College Hospital from June 2015 to February 2022 were retrospectively studied a"
+  },
+  {
+   "pmid": "37674467",
+   "verdict": "off",
+   "stat": "Z =5.76",
+   "p": "P =0.016",
+   "sentence": "Objective To develop a CT-based weighted radiomic model that predicts tumor response to programmed death-1(PD-1)/PD-ligand 1(PD-L1)immunotherapy in patients with non-small cell lung cancer.Methods The patients with non-small cell lung cancer treated by PD-1/PD-L1 immune checkpoint inhibitors in the Peking Union Medical College Hospital from June 2015 to February 2022 were retrospectively studied a"
+  },
+  {
+   "pmid": "38056478",
+   "verdict": "off",
+   "stat": "t(18) = 1.4",
+   "p": "p = 0.911",
+   "sentence": "There was no significant difference in tumor-free interval (t(18) = 1.4, p = 0.911) and survival times (t(19) = -0.094, p = 0.463) between the 2 groups."
+  },
+  {
+   "pmid": "37328780",
+   "verdict": "off",
+   "stat": "t = 0.05",
+   "p": "p = 0.95",
+   "sentence": "Results Both the intervention (3.29 ± 0.58) and control (3.24 ± 0.58) groups demonstrated a similar level of cultural competence before the training program (t = 0.05, p = 0.95)."
+  },
+  {
+   "pmid": "37165660",
+   "verdict": "off",
+   "stat": "F (2, 63) = 4·40",
+   "p": "P = 0·01",
+   "sentence": "Also, a significant improvement in SC (Λ = 0·88, F (2, 63) = 4·40, P = 0·01) and reduction in PS (Λ = 0·86, F (2, 63) = 5·21, P = 0·008) were observed in the active IE group."
+  },
+  {
+   "pmid": "37061868",
+   "verdict": "off",
+   "stat": "F(1, 4) = 16.68",
+   "p": "p = .002",
+   "sentence": "The time-and-group interaction effects on constriction velocity and dilation velocity were significantly different [F(1, 4) = 16.68, p = .002; F(1, 4) = 14.78, p = .008, respectively] but were not different on the Neurological Pupil index, pupil diameter, and percentage of change in pupil diameter."
+  },
+  {
+   "pmid": "37061868",
+   "verdict": "off",
+   "stat": "F(1, 4) = 14.78",
+   "p": "p = .008",
+   "sentence": "The time-and-group interaction effects on constriction velocity and dilation velocity were significantly different [F(1, 4) = 16.68, p = .002; F(1, 4) = 14.78, p = .008, respectively] but were not different on the Neurological Pupil index, pupil diameter, and percentage of change in pupil diameter."
+  },
+  {
+   "pmid": "36967544",
+   "verdict": "off",
+   "stat": "Z = -3.25",
+   "p": "p = 0.003",
+   "sentence": "Results indicated significantly less Disease-related Misconceptions in the intervention group in comparison to the control group at t2 (U = 145.50, Z = -3.79, p < 0.001) and at t3 (U = 177.00, Z = -3.25, p = 0.003)."
+  },
+  {
+   "pmid": "36682008",
+   "verdict": "off",
+   "stat": "Z = - 2.77",
+   "p": "p = 0.009",
+   "sentence": "In adjusted Poisson regression models, the following barriers to viral suppression were identified: injection drug use [adjusted risk ratio (aRR) 0.78, 95% CI 0.65-0.93, Z = - 2.64, p = 0.008], methamphetamine use (aRR 0.65, 95% CI 0.51-0.83, Z = - 3.45, p = 0.001), amphetamine use (aRR 0.62, 95% CI 0.44-0.87, Z = - 2.75, p = 0.006), homelessness (aRR 0.79, 95% CI 0.63-0.98, Z = - 2.06, p = 0.039)"
+  },
+  {
+   "pmid": "36780427",
+   "verdict": "off",
+   "stat": "t = 0.221",
+   "p": "P = 0.815",
+   "sentence": "Results At the 10-year follow-up, both groups had a similarly significantly improved ROM (114.88 ± 9.84° vs. 114.02 ± 9.43°, t = 0.221, P = 0.815) and pain relief with no differences between the two groups (1.0 [1.0] vs. 1.0 [1.5], U = 789.500, P = 0.613)."
+  },
+  {
+   "pmid": "35191291",
+   "verdict": "off",
+   "stat": "F (1,23)= 4.648",
+   "p": "P=0.044",
+   "sentence": "Results Two-way ANOVA showed group×time interaction effects for the 30-m sprint time (F (1,23) =3.023; P=0.049; η 2 P=0.116), BLa - (F (1,23) =5.250; P=0.031; η 2 P=0.185), and V̇O 2max (F (1,23)= 4.648, P=0.044; η 2 P=0.157)."
+  },
+  {
+   "pmid": "37032132",
+   "verdict": "off",
+   "stat": "Z= 0.72",
+   "p": "P= 0.72",
+   "sentence": "The total cost of hospitalization [34 591.00(15 527.46,59 324.80) vs. 37 144.65(16 066.90,63 919.00)yuan, Z =-0.26, P =0.80] and the total length of hospitalization [9 (8, 12) vs. 10 (7, 13) days, Z= 0.72, P= 0.72] were lower for patients in the levosimendan group compared to those in the control group, but did not show statistically significant differences."
+  },
+  {
+   "pmid": "37593850",
+   "verdict": "off",
+   "stat": "t (3.17) = 33.57",
+   "p": "P = .019",
+   "sentence": "Results Results of the DREEM 2 headband algorithm show a significant average increase in SWS (minutes) [ t (3.17) = 33.57, P = .019] between the beginning and end of the intervention, almost twice as much time was spent in SWS."
+  },
+  {
+   "pmid": "38011994",
+   "verdict": "off",
+   "stat": "χ²(1) =1.06",
+   "p": "p=0.440",
+   "sentence": "POCD frequency was 22% (n=6) in the control group and 11% (n=2) in the training group (χ²(1) =1.06, p=0.440; OR=2.43, 95% CI 0.43 to 13.61)."
+  },
+  {
+   "pmid": "37690525",
+   "verdict": "off",
+   "stat": "Z = -2.66",
+   "p": "p = 0.011",
+   "sentence": "Although the study did not detect a benefit of TAU+TES-NAV over TAU on the primary outcome (Median = 2 consecutive weeks of abstinence for both arms) at end of treatment (treatment effect: Z = -0.78, p = 0.437), TAU+TES-NAV participants did demonstrate significantly greater percent days of abstinence at the week 24 follow-up (69.3 % versus 49.0 % for TAU; t = 2.08, p = 0.045) and significantly gre"
+  },
+  {
+   "pmid": "36995254",
+   "verdict": "off",
+   "stat": "χ 2 = 4.48, df = 3",
+   "p": "p =.211",
+   "sentence": "Linear mixed models demonstrated efficacy to change behaviour through significant effects of adherence to MeDi (χ 2 = 16.75, df = 3, p 2 = 9.83, df = 3, p =.020), but not PA (χ 2 = 4.48, df = 3, p =.211)."
+  },
+  {
+   "pmid": "37585447",
+   "verdict": "off",
+   "stat": "F(2,86) = 30.698",
+   "p": "p = 0.01",
+   "sentence": "Performance on the More-Odd-Shifting test improved over time (significant Time effect, F(2,86) = 30.698, p = 0.01), both immediately after the dual-task intervention (p = 0.015), and 30 min later (p = 0.001)."
+  },
+  {
+   "pmid": "36266225",
+   "verdict": "off",
+   "stat": "F(1,99) = 2.48",
+   "p": "p = .13",
+   "sentence": "A similar improving pattern was observed for self-efficacy, F(1,99) = 2.48, p = .13, partial η 2 = .02."
+  },
+  {
+   "pmid": "37619654",
+   "verdict": "off",
+   "stat": "z = -1.98",
+   "p": "p = 0.049",
+   "sentence": "Results Age significantly moderated the effect of lithium vs. valproate on the risk of suicide event during the study (z = -1.98, p = 0.049)."
+  },
+  {
+   "pmid": "36739422",
+   "verdict": "off",
+   "stat": "F(2, 543.16) = 0.75",
+   "p": "p = 0.51",
+   "sentence": "We found no significant effect of oxytocin on the formation of intrusive memories (F(2, 543.16) = 0.75, p = 0.51, ηp2 = 0.00) and identified no heterogeneous treatment effect."
+  },
+  {
+   "pmid": "37043203",
+   "verdict": "off",
+   "stat": "t = 0.621991",
+   "p": "P = .43",
+   "sentence": "No significant group differences were observed in the mean (SD) 90-day methadone dose (83.1 [25.1] mg for group TAU, 79.4 [19.6] mg for group C-OLP; t = 0.621991; P = .43), but the groups differed significantly in their retention rates: 33 (61.1%) for TAU and 60 (77.9%) for C-OLP (χ21 = 4.356; P = .04; number needed to treat for the beneficial outcome of 3-month treatment retention, 6; 95% CI, 4-1"
+  },
+  {
+   "pmid": "36804489",
+   "verdict": "off",
+   "stat": "t(12.3) = 3.61",
+   "p": "p = 0.01",
+   "sentence": "Dissociative symptoms during infusion were more intense with ketamine than midazolam (t(12.3) = 3.61, p = 0.01), but they resolved by 40 min after infusion in both groups."
+  }
+ ]
+}
