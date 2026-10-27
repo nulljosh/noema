@@ -77,6 +77,12 @@ A t, z, chi-square or F statistic printed with its P fixes that P, which is the 
 
 Only 62 d values sit right after a mean ± SD pair, and 14 are far off. All 14 were read by hand. None is a clear mismatch. 4 fit exactly once the ± is read as a standard error of the mean rather than an SD, like a crossover in 8 men where 22.4 ± 6.1 vs 12.2 ± 4.3 gives d 0.68, the printed 0.67. 4 are within-subject designs, where a paired d can be larger. 1 is a misread. 5, in 3 abstracts, are open notes. The clearest is a parallel trial with 55 women per arm that prints d = 0.030 for 77.52 ± 18.27 vs 72.35 ± 16.39. The SD gives 0.30 and a standard error gives 0.04. Results are in `cohen-2015-2024.json`.
 
+## Do hazard ratios match the medians?
+
+When hazards stay constant, a hazard ratio is the inverse ratio of the two median times. They rarely stay constant, and an abstract seldom says which arm is the reference, so `hazard.py` checks only size: a pair is flagged when the whole interval for the ratio sits more than 3 times farther from 1 than the medians, or less than a third as far.
+
+In 323 pairs, 1 is flagged, and it is a misread ("Pathway 1 and 25 days"). No clear mismatch. Direction was tried first and dropped: 8 significant ratios point the other way from their medians, and every one reads fine once the reference arm is the other one.
+
 ## Are flagged papers retracted more often?
 
 No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. The slips also do not cluster: of 440 abstracts flagged by any check, only one (PMID 39086232) fails two. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
