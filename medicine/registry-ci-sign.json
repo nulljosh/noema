@@ -1,0 +1,998 @@
+{
+ "source": "ClinicalTrials.gov API v2, every outcome analysis of every study with results, fetched 2026-10-27",
+ "command": "python3 analyses.py fetch ANALYSES_JSON && python3 analyses.py ANALYSES_JSON",
+ "analyses": 329322,
+ "additive_two_sided": 126313,
+ "sign_slips": {
+  "no p": 117,
+  "neutral": 68,
+  "backs the flip": 61,
+  "backs the posted CI": 28
+ },
+ "trials_backed": 52,
+ "backed": [
+  {
+   "nct": "NCT04667377",
+   "title": "Absolute Change in Systolic Blood Pressure From Baseline to Week 46",
+   "type": "Difference of adjusted means",
+   "estimate": "-5.62",
+   "ci": [
+    "-9.71",
+    "1.53"
+   ],
+   "flipped": [
+    -9.71,
+    -1.53
+   ],
+   "p": "<.0072",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT05173012",
+   "title": "Change From Baseline in TETRAS Activities of Daily Living (ADL) Composite Score in the Monotherapy Cohort",
+   "type": "LS Mean Difference",
+   "estimate": "2.04",
+   "ci": [
+    "0.59",
+    "4.67"
+   ],
+   "flipped": [
+    -0.59,
+    4.67
+   ],
+   "p": "0.1271",
+   "method": "MMRM"
+  },
+  {
+   "nct": "NCT03257995",
+   "title": "Rescue Medication Usage",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.42",
+   "ci": [
+    "-0.73",
+    "0.11"
+   ],
+   "flipped": [
+    -0.73,
+    -0.11
+   ],
+   "p": "0.009",
+   "method": "ANOVA"
+  },
+  {
+   "nct": "NCT03257995",
+   "title": "Rescue Medication Usage",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.42",
+   "ci": [
+    "-0.73",
+    "0.11"
+   ],
+   "flipped": [
+    -0.73,
+    -0.11
+   ],
+   "p": "0.008",
+   "method": "ANOVA"
+  },
+  {
+   "nct": "NCT02749292",
+   "title": "Organ Damage as Assessed by the Vasculitis Damage Index (VDI).",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.14",
+   "ci": [
+    "-0.34",
+    "-0.06"
+   ],
+   "flipped": [
+    -0.34,
+    0.06
+   ],
+   "p": "0.17",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT02870972",
+   "title": "Number of Confirmed HAE Attacks",
+   "type": "Difference in Least Square Means",
+   "estimate": "-0.703",
+   "ci": [
+    "-1.033",
+    "0.373"
+   ],
+   "flipped": [
+    -1.033,
+    -0.373
+   ],
+   "p": "<0.001",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT03597464",
+   "title": "Change From AURORA 1 Baseline (i.e., Month 0) in Urine Protein to Creatinine Ratio (UPCR)",
+   "type": "Least Squares Mean difference",
+   "estimate": "-0.48",
+   "ci": [
+    "-1.06",
+    "-0.10"
+   ],
+   "flipped": [
+    -1.06,
+    0.1
+   ],
+   "p": "0.106",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT02595970",
+   "title": "proSPI (s) at Week 16 Compared to Baseline",
+   "type": "Mean Difference (Net)",
+   "estimate": "-22.6",
+   "ci": [
+    "-24.52",
+    "20.59"
+   ],
+   "flipped": [
+    -24.52,
+    -20.59
+   ],
+   "p": "<0.0001",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT02595970",
+   "title": "Changes of saSPI (s) at Week 16 Compared to Baseline",
+   "type": "Mean Difference (Net)",
+   "estimate": "-21.6",
+   "ci": [
+    "-23.52",
+    "19.58"
+   ],
+   "flipped": [
+    -23.52,
+    -19.58
+   ],
+   "p": "<0.0001",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT02345161",
+   "title": "Assessment of Respiratory Symptoms by Change From Baseline in 4-weekly Mean EXACT-RS Scores up to Week 52",
+   "type": "LS Mean difference",
+   "estimate": "-0.15",
+   "ci": [
+    "-0.36",
+    "-0.06"
+   ],
+   "flipped": [
+    -0.36,
+    0.06
+   ],
+   "p": "0.167",
+   "method": "Mixed Model Repeated Measures"
+  },
+  {
+   "nct": "NCT03192176",
+   "title": "Co-Primary Efficacy Endpoint: Change From Baseline (CFB) in The Mean Frequency of Moderate to Severe Vasomotor Symptoms (VMS) at Week 4",
+   "type": "LSMean difference",
+   "estimate": "-2.4",
+   "ci": [
+    "-4.06",
+    "0.76"
+   ],
+   "flipped": [
+    -4.06,
+    -0.76
+   ],
+   "p": "0.0042",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT03192176",
+   "title": "Co-Primary Efficacy Endpoint: Change From Baseline in The Mean Severity of Moderate to Severe VMS at Week 12",
+   "type": "LSMean difference",
+   "estimate": "-0.3",
+   "ci": [
+    "-0.67",
+    "-0.16"
+   ],
+   "flipped": [
+    -0.67,
+    0.16
+   ],
+   "p": "0.2324",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT02880956",
+   "title": "Change From Baseline Over Time in ADAS-Cog-14 Comprehension of Spoken Language Score",
+   "type": "LS Mean of Difference",
+   "estimate": "0.07",
+   "ci": [
+    "0.037",
+    "0.175"
+   ],
+   "flipped": [
+    -0.037,
+    0.175
+   ],
+   "p": "0.201",
+   "method": "repeated measures model"
+  },
+  {
+   "nct": "NCT01177137",
+   "title": "Change in Tinnitus Handicap Inventory Catastrophic Sub-scale Scores.",
+   "type": "Slope",
+   "estimate": "0.61",
+   "ci": [
+    "0.55",
+    "1.78"
+   ],
+   "flipped": [
+    -0.55,
+    1.78
+   ],
+   "p": "0.30",
+   "method": "repeated measures GEE model"
+  },
+  {
+   "nct": "NCT03054428",
+   "title": "Percent Change From Baseline in Weekly Average of Daily Peak Pruritus Numerical Rating Scale (NRS) Score at Week 16",
+   "type": "LS Mean difference",
+   "estimate": "-26.5",
+   "ci": [
+    "-37.45",
+    "15.63"
+   ],
+   "flipped": [
+    -37.45,
+    -15.63
+   ],
+   "p": "< 0.0001",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT02528253",
+   "title": "Change From Baseline in Brief Pain Inventory-Short Form (BPI-sf) Score Pain Interference Index at Weeks 2, 4, 8, 16, 24, 32, 40, 48 and 56: Observed Data",
+   "type": "LS Mean Difference",
+   "estimate": "-0.17",
+   "ci": [
+    "-0.43",
+    "-0.10"
+   ],
+   "flipped": [
+    -0.43,
+    0.1
+   ],
+   "p": "0.2272",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT00915343",
+   "title": "Maximal Concentration (Cmax1) of S-cortisol in Plasma After Single and Multiple Dosing During Part A",
+   "type": "Mean difference",
+   "estimate": "-111.989",
+   "ci": [
+    "-133.980",
+    "89.999"
+   ],
+   "flipped": [
+    -133.98,
+    -89.999
+   ],
+   "p": "<0.0001",
+   "method": "Fisher's non-parametric permutation test"
+  },
+  {
+   "nct": "NCT00915343",
+   "title": "Average Concentration of S-cortisol During the Dosing Interval at Steady State (Css,av) in Plasma After Single and Multiple Dosing During Part A",
+   "type": "Mean difference",
+   "estimate": "-38.076",
+   "ci": [
+    "-50.276",
+    "25.876"
+   ],
+   "flipped": [
+    -50.276,
+    -25.876
+   ],
+   "p": "<0.0001",
+   "method": "Fisher's non-parametric permutation test"
+  },
+  {
+   "nct": "NCT00915343",
+   "title": "First Detectable Concentration (Cfirst) of S-cortisol in Plasma After Single and Multiple Dosing During Part A",
+   "type": "Mean difference",
+   "estimate": "-65.782",
+   "ci": [
+    "-109.201",
+    "22.362"
+   ],
+   "flipped": [
+    -109.201,
+    -22.362
+   ],
+   "p": "0.0033",
+   "method": "Fisher's non-parametric permutation test"
+  },
+  {
+   "nct": "NCT04636528",
+   "title": "Change in Shoulder Pain - Worst Pain Level",
+   "type": "Median Difference (Net)",
+   "estimate": "-0.6",
+   "ci": [
+    "-1.4",
+    "-0.2"
+   ],
+   "flipped": [
+    -1.4,
+    0.2
+   ],
+   "p": "0.12",
+   "method": "Quantile mixed-effects model"
+  },
+  {
+   "nct": "NCT04636528",
+   "title": "Change in Shoulder Pain - Least Pain Level",
+   "type": "Median Difference (Net)",
+   "estimate": "-1.1",
+   "ci": [
+    "-1.5",
+    "0.6"
+   ],
+   "flipped": [
+    -1.5,
+    -0.6
+   ],
+   "p": "<.001",
+   "method": "Quantile mixed-effects model"
+  },
+  {
+   "nct": "NCT01094886",
+   "title": "Summary of Change From Day 3 to Day 1 in Maximum Anti-Factor Xa (aFXa)",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "0.20",
+   "ci": [
+    "-0.05",
+    "0.34"
+   ],
+   "flipped": [
+    0.05,
+    0.34
+   ],
+   "p": ".008",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT01360632",
+   "title": "Mean Change From End of Phase A (Week 8 Visit) to Phase B by Study Week in Clinical CGI-S for the Efficacy Sample Per Final Protocol",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.08",
+   "ci": [
+    "-0.22",
+    "-0.06"
+   ],
+   "flipped": [
+    -0.22,
+    0.06
+   ],
+   "p": "0.2503",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT05339659",
+   "title": "Self-efficacy for Quitting Smoking",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-1.31",
+   "ci": [
+    "-3.55",
+    "-0.94"
+   ],
+   "flipped": [
+    -3.55,
+    0.94
+   ],
+   "p": "0.227",
+   "method": "Regression, Linear"
+  },
+  {
+   "nct": "NCT02083783",
+   "title": "SKAMP (Swanson, Kotkin, Agler, M-Flynn, and Pelham Scale)",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-14.68",
+   "ci": [
+    "-17.9",
+    "11.6"
+   ],
+   "flipped": [
+    -17.9,
+    -11.6
+   ],
+   "p": "<0.0001",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT01684878",
+   "title": "Part 2- Objective Response Rate (ORR)",
+   "type": "Difference in response rate",
+   "estimate": "6.06",
+   "ci": [
+    "6.0",
+    "18.3"
+   ],
+   "flipped": [
+    -6.0,
+    18.3
+   ],
+   "p": "0.4102",
+   "method": "Fisher Exact"
+  },
+  {
+   "nct": "NCT02373813",
+   "title": "Disease Activity Score (28 Joint) Using the C-Reactive Protein Formula (DAS28-CRP) at All Measured Timepoints",
+   "type": "Treatment Difference",
+   "estimate": "-0.15",
+   "ci": [
+    "-0.40",
+    "-0.10"
+   ],
+   "flipped": [
+    -0.4,
+    0.1
+   ],
+   "p": "0.25",
+   "method": "two sample t-test"
+  },
+  {
+   "nct": "NCT02187159",
+   "title": "Change From Baseline to Week 13 in the Brief Pain Inventory Short Form (BPI-SF) in Participants Receiving DS-5565, Pregabalin, or Placebo",
+   "type": "Difference in least squares means",
+   "estimate": "-0.6",
+   "ci": [
+    "-1.0",
+    "0.2"
+   ],
+   "flipped": [
+    -1.0,
+    -0.2
+   ],
+   "p": "0.0014",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT07043829",
+   "title": "Change in Platelet Reactivity After Acute Consumption of SPVCE",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.085",
+   "ci": [
+    "-0.194",
+    "-0.024"
+   ],
+   "flipped": [
+    -0.194,
+    0.024
+   ],
+   "p": "0.12",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT03466866",
+   "title": "Actual Access to Care",
+   "type": "Mean Difference (Final Values)",
+   "estimate": ".26",
+   "ci": [
+    ".16",
+    ".69"
+   ],
+   "flipped": [
+    -0.16,
+    0.69
+   ],
+   "p": ".23",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT03056157",
+   "title": "Change in Use of Physically Aggressive Behavior Assessed Through the Physical Assault Subscale on the Revised Conflict Tactics Scale (CTS2)",
+   "type": "Slope",
+   "estimate": "-0.13",
+   "ci": [
+    "-0.31",
+    "-0.05"
+   ],
+   "flipped": [
+    -0.31,
+    0.05
+   ],
+   "p": "0.17",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT03633617",
+   "title": "Absolute Change From Baseline in Frequency of EoE Symptoms Other Than Dysphagia as Measured by EoE-SQ at Week 24",
+   "type": "LS Mean Difference",
+   "estimate": "-1.4",
+   "ci": [
+    "-2.30",
+    "0.45"
+   ],
+   "flipped": [
+    -2.3,
+    -0.45
+   ],
+   "p": "0.0037",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT05051579",
+   "title": "Change From Baseline in BMI in LY3502970 and Placebo",
+   "type": "LS Mean difference (Final Values)",
+   "estimate": "-3.8",
+   "ci": [
+    "-4.6",
+    "3.0"
+   ],
+   "flipped": [
+    -4.6,
+    -3.0
+   ],
+   "p": "<0.001",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT00809354",
+   "title": "Change From Baseline in the Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC) Pain Subscale Score at Weeks 2, 4, 8, 12, 16, 24, 32, 40, 48 and 56: Last Observation Carried Forward (LOCF)",
+   "type": "LS Mean difference",
+   "estimate": "-0.84",
+   "ci": [
+    "-1.20",
+    "0.48"
+   ],
+   "flipped": [
+    -1.2,
+    -0.48
+   ],
+   "p": "<0.001",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT03816891",
+   "title": "Phase 2a & 2b: Percent Change From Baseline in Weekly Average Worst Itch-Numeric Rating Scale (WI-NRS) Score",
+   "type": "LS Mean Difference",
+   "estimate": "-36.4",
+   "ci": [
+    "-49.6",
+    "23.3"
+   ],
+   "flipped": [
+    -49.6,
+    -23.3
+   ],
+   "p": "<0.0001",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT03816891",
+   "title": "Phase 2b: Change From Baseline in Weekly Average of WI-NRS Over Time",
+   "type": "LS Mean Difference",
+   "estimate": "-0.9",
+   "ci": [
+    "-2.1",
+    "-0.3"
+   ],
+   "flipped": [
+    -2.1,
+    0.3
+   ],
+   "p": "0.1344",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT02833350",
+   "title": "Change in Disease Activity Score From Baseline Based on 28-Joints Count and Erythrocyte Sedimentation Rate (3 Variables) (DAS28-3 [ESR])",
+   "type": "Adjusted Difference",
+   "estimate": "-0.25",
+   "ci": [
+    "-0.74",
+    "-0.24"
+   ],
+   "flipped": [
+    -0.74,
+    0.24
+   ],
+   "p": "0.5566",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT04930744",
+   "title": "Change in FVC From Baseline to TB Treatment Completion",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.07",
+   "ci": [
+    "-0.20",
+    "-0.06"
+   ],
+   "flipped": [
+    -0.2,
+    0.06
+   ],
+   "p": "0.288",
+   "method": "Regression, Linear"
+  },
+  {
+   "nct": "NCT00796653",
+   "title": "Use of Rescue Medication at Week 24",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.153",
+   "ci": [
+    "-0.391",
+    "-0.084"
+   ],
+   "flipped": [
+    -0.391,
+    0.084
+   ],
+   "p": "0.2057",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT01815424",
+   "title": "Change From Baseline in DLQI Total Score at Week 16",
+   "type": "Least square mean difference",
+   "estimate": "-7.52",
+   "ci": [
+    "-9.32",
+    "5.72"
+   ],
+   "flipped": [
+    -9.32,
+    -5.72
+   ],
+   "p": "<0.0001",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT05698875",
+   "title": "Time Above Range",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "12",
+   "ci": [
+    "8",
+    "32"
+   ],
+   "flipped": [
+    -8.0,
+    32.0
+   ],
+   "p": "0.22",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT05698875",
+   "title": "Time in Tight Range",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "21",
+   "ci": [
+    "5",
+    "46"
+   ],
+   "flipped": [
+    -5.0,
+    46.0
+   ],
+   "p": "0.11",
+   "method": "t-test, 2 sided"
+  },
+  {
+   "nct": "NCT05698875",
+   "title": "Glucose at 120 Minutes",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "0.8",
+   "ci": [
+    "0.6",
+    "2.2"
+   ],
+   "flipped": [
+    -0.6,
+    2.2
+   ],
+   "p": "0.27",
+   "method": "Linear Mixed Model"
+  },
+  {
+   "nct": "NCT01269918",
+   "title": "Heart Rate",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-6",
+   "ci": [
+    "-10",
+    "3"
+   ],
+   "flipped": [
+    -10.0,
+    -3.0
+   ],
+   "p": "< 0.001",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT00288912",
+   "title": "Pain",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.6",
+   "ci": [
+    "-1.0",
+    "0.2"
+   ],
+   "flipped": [
+    -1.0,
+    -0.2
+   ],
+   "p": "0.007",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT04518306",
+   "title": "Difference in Change in Clinic Seated Mean Mean Systolic Blood Pressure (SBP) From Randomization to Week 4",
+   "type": "LS Means Difference",
+   "estimate": "-9.52",
+   "ci": [
+    "-13.588",
+    "5.449"
+   ],
+   "flipped": [
+    -13.588,
+    -5.449
+   ],
+   "p": "<0.0001",
+   "method": "MMRM procedure"
+  },
+  {
+   "nct": "NCT03861052",
+   "title": "Change From Baseline in Fasting Serum Glucose",
+   "type": "Least Squares Mean Difference",
+   "estimate": "-35.7",
+   "ci": [
+    "-40.6",
+    "30.9"
+   ],
+   "flipped": [
+    -40.6,
+    -30.9
+   ],
+   "p": "<0.001",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT01576783",
+   "title": "Erythrocyte Fatty Acid Levels",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-2.2",
+   "ci": [
+    "-3.4",
+    "0.9"
+   ],
+   "flipped": [
+    -3.4,
+    -0.9
+   ],
+   "p": "<0.001",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT01184859",
+   "title": "Change From Baseline in Number of Nocturnal Voids After 28 Days of Treatment - Period 2",
+   "type": "Mean Difference (Net)",
+   "estimate": "-0.272",
+   "ci": [
+    "-0.685",
+    "-0.141"
+   ],
+   "flipped": [
+    -0.685,
+    0.141
+   ],
+   "p": "0.194",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT01972841",
+   "title": "Change From Baseline to Weeks 4, 8, 12 and EoT in Mean Number of Urgency Episodes (Grade 3 or 4) Per 24 Hours",
+   "type": "Least squares mean difference",
+   "estimate": "-0.87",
+   "ci": [
+    "-1.24",
+    "0.51"
+   ],
+   "flipped": [
+    -1.24,
+    -0.51
+   ],
+   "p": "<0.001",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT01459653",
+   "title": "EP2006 Duration by Chemotherapy Toxicity: Cycle Level",
+   "type": "Slope",
+   "estimate": "0.0741",
+   "ci": [
+    "-0.0452",
+    "0.1029"
+   ],
+   "flipped": [
+    0.0452,
+    0.1029
+   ],
+   "p": "<0.0001",
+   "method": "ANOVA"
+  },
+  {
+   "nct": "NCT00406029",
+   "title": "Change From Baseline in Unified Parkinson's Disease Rating Scale (UPDRS) Part 1",
+   "type": "Difference in LS Means",
+   "estimate": "-0.8",
+   "ci": [
+    "-1.4",
+    "0.3"
+   ],
+   "flipped": [
+    -1.4,
+    -0.3
+   ],
+   "p": "0.004",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT04370054",
+   "title": "Annualized Infusion Rate (AIR) of Exogenous FVIII Activity",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-124.18",
+   "ci": [
+    "-139.47",
+    "108.89"
+   ],
+   "flipped": [
+    -139.47,
+    -108.89
+   ],
+   "p": "<0.0001",
+   "method": "Paired t-test"
+  },
+  {
+   "nct": "NCT03837496",
+   "title": "Group Differences in Mean Medication Adherence Rates to Adjuvant Endocrine Therapy Across the 24-week Study Period",
+   "type": "Slope",
+   "estimate": "-0.17",
+   "ci": [
+    "-0.44",
+    "-0.10"
+   ],
+   "flipped": [
+    -0.44,
+    0.1
+   ],
+   "p": ".225",
+   "method": "ANCOVA"
+  },
+  {
+   "nct": "NCT01393613",
+   "title": "Mean Change From Baseline to Week 6 in Clinical Global Impression-Severity (CGI-S) Score.",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.19",
+   "ci": [
+    "-0.42",
+    "-0.05"
+   ],
+   "flipped": [
+    -0.42,
+    0.05
+   ],
+   "p": "0.1269",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT05317312",
+   "title": "Rescue Medication Use",
+   "type": "Risk Difference (RD)",
+   "estimate": "-44.4",
+   "ci": [
+    "-68.3",
+    "20.6"
+   ],
+   "flipped": [
+    -68.3,
+    -20.6
+   ],
+   "p": "0.001",
+   "method": "Chi-squared"
+  },
+  {
+   "nct": "NCT01968460",
+   "title": "UPDRS ADL (Part II)",
+   "type": "Mean Difference (Net)",
+   "estimate": "-1.42",
+   "ci": [
+    "-2.41",
+    "0.44"
+   ],
+   "flipped": [
+    -2.41,
+    -0.44
+   ],
+   "p": "0.005",
+   "method": "MMRM"
+  },
+  {
+   "nct": "NCT01081132",
+   "title": "Change From Baseline in the WFIRS-P Global Domain Score at Week 13",
+   "type": "Mean Difference (Final Values)",
+   "estimate": "-0.050",
+   "ci": [
+    "-0.136",
+    "-0.036"
+   ],
+   "flipped": [
+    -0.136,
+    0.036
+   ],
+   "p": "0.253",
+   "method": "Mixed Models Repeated Measures Analysis"
+  },
+  {
+   "nct": "NCT01396421",
+   "title": "Mean Change From Baseline to Week 6 in PANSS Negative Subscale Score",
+   "type": "Treatment difference",
+   "estimate": "-1.41",
+   "ci": [
+    "-2.44",
+    "0.39"
+   ],
+   "flipped": [
+    -2.44,
+    -0.39
+   ],
+   "p": "0.0069",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT04063215",
+   "title": "Brief Symptoms Inventory 18 (BSI 18) SOM T Scores",
+   "type": "Mean Difference (Net)",
+   "estimate": "-2.43",
+   "ci": [
+    "-6.07",
+    "-1.18"
+   ],
+   "flipped": [
+    -6.07,
+    1.18
+   ],
+   "p": "0.19",
+   "method": "Mixed Models Analysis"
+  },
+  {
+   "nct": "NCT01995838",
+   "title": "Mean Change From Baseline in Wakefulness After Sleep Onset (WASO) After Dosing on Days 1-2 and Days 14-15",
+   "type": "LS Mean Difference",
+   "estimate": "-29.34",
+   "ci": [
+    "-40.75",
+    "17.93"
+   ],
+   "flipped": [
+    -40.75,
+    -17.93
+   ],
+   "p": "<0.0001",
+   "method": "ANCOVA"
+  }
+ ],
+ "verdict_meaning": {
+  "backs the flip": "the posted CI disagrees with the posted p about zero and the flipped CI agrees",
+  "backs the posted CI": "the reverse; how often a lopsided CI turns symmetric by luck",
+  "neutral": "p does not clearly side with either",
+  "no p": "no usable 95% CI and p pair"
+ },
+ "spot_check": "NCT02595970, NCT03816891 and NCT00915343 re-fetched live on 2026-10-27; every flagged cell matches"
+}
