@@ -1,6 +1,7 @@
 """Export the machines busy.py proves cyclic or translated-cyclic, and every halting branch, as Lean data.
 
     python3 cycle_lean.py        # 2 and 3 states; writes proofs/FarCerts/Cycles*, Translated* and Halts*.lean
+    python3 cycle_lean.py 2x3    # 2 states, 3 symbols; writes WCycles*, WTranslated*, WSmall* and BB23Tree.lean
 
 busy.simulate spots a cycle by absolute head position and the nonzero cells. Lean's Config is relative to the
 head and keeps the blank cells the head has visited, so the same machine may repeat later in Lean's shape.
@@ -8,9 +9,12 @@ lean_repeat runs that shape exactly and returns the first repeat. lean_translate
 Translated.lean's tcycles, on the machine or its mirror, and tcycles below is the same check in Python.
 Main asserts a certificate exists for every machine.
 """
+import json
 import os
+import sys
 
 import busy
+import far
 import far_lean
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -82,7 +86,7 @@ def lean_translated(machine, budget=3000):
 def lean_machine(machine, states):
     rules = ', '.join('(%d, %d, %d, %s, %d)' % (q, a, w, 'true' if m == 1 else 'false', n)
                       for (q, a), (w, m, n) in sorted(machine.items()))
-    return '{ S := 2, n := %d, rules := [%s] }' % (states, rules)
+    return '{ S := %d, n := %d, rules := [%s] }' % (far.SYMBOLS, states, rules)
 
 
 def lean_halts(machine, k):
@@ -120,7 +124,56 @@ def write_bb3(names):
     open(os.path.join(HERE, 'proofs', 'FarCerts', 'BB3.lean'), 'w').write('\n'.join(out))
 
 
+def certify(found, moved, states):
+    """Lean rows for the cyclers and the translated cyclers, asserting each has a certificate."""
+    cycles, translated = [], []
+    for machine in found:
+        ip = lean_repeat(machine)
+        assert ip is not None, machine
+        cycles.append('(%s, %d, %d)' % (lean_machine(machine, states), ip[0], ip[1]))
+    for machine in moved:
+        mirror = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+        for flag, run in (('false', machine), ('true', mirror)):
+            cert = lean_translated(run)
+            if cert:
+                break
+        assert cert is not None, machine
+        translated.append('(%s, %s, %d, %d, %d)' % ((lean_machine(machine, states), flag) + cert))
+    return cycles, translated
+
+
+def wide():
+    """BB(2,3): the cyclers, the translated cyclers and a FAR certificate for every holdout the deciders settle,
+    in busy.py's order, so BB23Tree.lean can replay the tree. Halting branches need no list: the replay runs them."""
+    found, moved, flagged = [], [], []
+    busy.enumerate_machines(2, 200, flagged=flagged, symbols=3, cyclers=found, translated_found=moved)
+    cycles, translated = certify(found, moved, 2)
+    rows = []
+    for i, machine in enumerate(flagged):
+        mirror = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+        for orientation, run in (('direct', machine), ('mirror', mirror)):
+            dfa = far.direct_certificate(run, 2)
+            if dfa is not None:
+                break
+        assert dfa is not None and far_lean.local_check(run, 2, dfa), machine
+        rows.append({'index': 'w%d' % i, 'orientation': orientation, 'machine': sorted(machine.items()),
+                     'delta': dfa.delta, 'acc': dfa.acc})
+    json.dump(rows, open(os.path.join(HERE, 'far-certificates-23.json'), 'w'))
+    for k in range(0, len(rows), 8):
+        out = ['import FarCerts.Basic', '', 'set_option maxRecDepth 100000', '', 'namespace FAR', '']
+        out += [far_lean.lean_cert(row, 2) for row in rows[k:k + 8]]
+        out += far_lean.small_list('WSmall%d' % (k // 8 + 1), rows[k:k + 8]) + ['end FAR', '']
+        open(os.path.join(HERE, 'proofs', 'FarCerts', 'WSmall%d.lean' % (k // 8 + 1)), 'w').write('\n'.join(out))
+    a = write('WCycles', 'Cycle', 'Machine × Nat × Nat', 'all_cycle', cycles, 110)
+    b = write('WTranslated', 'Translated', 'Machine × Bool × Nat × Nat × Nat', 'all_tcycle', translated, 100)
+    far_lean.write_root()
+    print('%d cycles, %d translated cyclers and %d FAR certificates; wrote %d files'
+          % (len(cycles), len(translated), len(rows), len(a + b) + (len(rows) + 7) // 8 + 1))
+
+
 if __name__ == '__main__':
+    if sys.argv[1:] == ['2x3']:
+        sys.exit(wide())
     cycles, translated, halts = [], [], []
     for states, cap in ((2, 50), (3, 200)):
         found, moved, halted = [], [], []
@@ -128,18 +181,9 @@ if __name__ == '__main__':
         for machine, k in halted:
             assert lean_halts(machine, k), machine
             halts.append('(%s, %d)' % (lean_machine(machine, states), k))
-        for machine in found:
-            ip = lean_repeat(machine)
-            assert ip is not None, machine
-            cycles.append('(%s, %d, %d)' % (lean_machine(machine, states), ip[0], ip[1]))
-        for machine in moved:
-            mirror = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
-            for flag, run in (('false', machine), ('true', mirror)):
-                cert = lean_translated(run)
-                if cert:
-                    break
-            assert cert is not None, machine
-            translated.append('(%s, %s, %d, %d, %d)' % ((lean_machine(machine, states), flag) + cert))
+        c, t = certify(found, moved, states)
+        cycles += c
+        translated += t
     a = write('Cycles', 'Cycle', 'Machine × Nat × Nat', 'all_cycle', cycles, 110)
     b = write('Translated', 'Translated', 'Machine × Bool × Nat × Nat × Nat', 'all_tcycle', translated, 100)
     c = write('Halts', 'Halt', 'Machine × Nat', 'all_halt', halts, 110, 'Halts x.1', 'halt')

@@ -5,7 +5,9 @@ the first move goes right (`Machine.mirror` runs the mirror image) and a node th
 picks state 2 (`Machine.swap` renames states 1 and 2). A machine that defines all but the missing rule has no
 children, since defining it leaves nothing to halt on. A machine that does not halt within 20 steps must extend
 the head of one of three queues of machines proved never to halt. `explore_sound` turns a successful run into
-`Covered`: every 2-symbol, 3-state machine that extends the node and halts does so within 20 steps.
+`Covered S N B`: every S-symbol, N-state machine that extends the node and halts does so within B steps. The step
+bound B and the shape are parameters, so the same replay checks BB(3) (S = 2, N = 3, B = 20) and BB(2,3) (S = 3,
+N = 2, B = 37). N stays at most 3, since the state-renaming symmetry is only the swap of states 1 and 2.
 -/
 import FarCerts.Cycle
 import FarCerts.Halt
@@ -14,13 +16,13 @@ set_option autoImplicit false
 
 namespace FAR
 
-/-- Every rule writes 0 or 1 and goes to state 0, 1 or 2. -/
-def WF (M : Machine) : Prop := ∀ q a r, M.get q a = some r → r.1 < 2 ∧ r.2.2 < 3
+/-- Every rule writes a symbol below S and goes to a state below N. -/
+def WF (S N : Nat) (M : Machine) : Prop := ∀ q a r, M.get q a = some r → r.1 < S ∧ r.2.2 < N
 
 /-- M defines every rule m defines, the same way. -/
 def Ext (m M : Machine) : Prop := ∀ q a r, m.get q a = some r → M.get q a = some r
 
-def Covered (m : Machine) : Prop := ∀ M, WF M → Ext m M → ∀ k, haltsAt M k = true → k ≤ 20
+def Covered (S N B : Nat) (m : Machine) : Prop := ∀ M, WF S N M → Ext m M → ∀ k, haltsAt M k = true → k ≤ B
 
 theorem step_ext {m M : Machine} (h : Ext m M) (c d : Config) (hs : step m c = some d) : step M c = some d := by
   unfold step at hs ⊢
@@ -93,10 +95,11 @@ theorem halt_unique {M : Machine} {k k' : Nat} (h : haltsAt M k = true) (h' : ha
     rw [run_add, hc'] at hc
     simp [stuck c' hg' j] at hc
 
-/-- A configuration of a 2-symbol, 3-state run. -/
-def V3 (c : Config) : Prop := c.q < 3 ∧ c.a < 2 ∧ (∀ x ∈ c.L, x < 2) ∧ (∀ x ∈ c.R, x < 2)
+/-- A configuration of an S-symbol, N-state run. -/
+def V3 (S N : Nat) (c : Config) : Prop := c.q < N ∧ c.a < S ∧ (∀ x ∈ c.L, x < S) ∧ (∀ x ∈ c.R, x < S)
 
-theorem step_V3 {M : Machine} (hw : WF M) (c d : Config) (hv : V3 c) (hs : step M c = some d) : V3 d := by
+theorem step_V3 {S N : Nat} {M : Machine} (hw : WF S N M) (c d : Config) (hv : V3 S N c) (hs : step M c = some d) :
+    V3 S N d := by
   obtain ⟨-, -, hL, hR⟩ := hv
   unfold step at hs
   cases hg : M.get c.q c.a with
@@ -108,7 +111,7 @@ theorem step_V3 {M : Machine} (hw : WF M) (c d : Config) (hv : V3 c) (hs : step 
     cases dir <;> simp [hg] at hs <;> subst hs
     · refine ⟨hn, ?_, ?_, ?_⟩
       · cases hc : c.L with
-        | nil => simp
+        | nil => exact Nat.lt_of_le_of_lt (Nat.zero_le _) hw1
         | cons b t => exact hL b (by simp [hc])
       · intro x hx; cases hc : c.L with
         | nil => simp [hc] at hx
@@ -118,7 +121,7 @@ theorem step_V3 {M : Machine} (hw : WF M) (c d : Config) (hv : V3 c) (hs : step 
         · exact hR x hx
     · refine ⟨hn, ?_, ?_, ?_⟩
       · cases hc : c.R with
-        | nil => simp
+        | nil => exact Nat.lt_of_le_of_lt (Nat.zero_le _) hw1
         | cons b t => exact hR b (by simp [hc])
       · intro x hx; simp at hx; rcases hx with rfl | hx
         · exact hw1
@@ -127,7 +130,7 @@ theorem step_V3 {M : Machine} (hw : WF M) (c d : Config) (hv : V3 c) (hs : step 
         | nil => simp [hc] at hx
         | cons b t => exact hR x (by simp [hc] at hx; simp [hc, hx])
 
-theorem run_V3 {M : Machine} (hw : WF M) : ∀ j c d, V3 c → run M j c = some d → V3 d
+theorem run_V3 {S N : Nat} {M : Machine} (hw : WF S N M) : ∀ j c d, V3 S N c → run M j c = some d → V3 S N d
   | 0, c, d, hv, hr => by simp [run] at hr; subst hr; exact hv
   | j + 1, c, d, hv, hr => by
     simp only [run] at hr
@@ -135,12 +138,12 @@ theorem run_V3 {M : Machine} (hw : WF M) : ∀ j c d, V3 c → run M j c = some 
     | none => simp [hs] at hr
     | some c1 => rw [hs] at hr; exact run_V3 hw j c1 d (step_V3 hw c c1 hv hs) hr
 
-/-- A machine with all six rules never halts. -/
-theorem full_no_halt {M : Machine} (hw : WF M) (hf : ∀ q a, q < 3 → a < 2 → M.get q a ≠ none) (k : Nat) :
-    haltsAt M k ≠ true := by
+/-- A machine with all S * N rules never halts. -/
+theorem full_no_halt {S N : Nat} {M : Machine} (hS : 0 < S) (hN : 0 < N) (hw : WF S N M)
+    (hf : ∀ q a, q < N → a < S → M.get q a ≠ none) (k : Nat) : haltsAt M k ≠ true := by
   intro h
   obtain ⟨c, hc, hg⟩ := haltsAt_spec h
-  obtain ⟨hq, ha, -, -⟩ := run_V3 hw k blank c (by simp [V3, blank]) hc
+  obtain ⟨hq, ha, -, -⟩ := run_V3 hw k blank c ⟨hN, hS, by simp [blank], by simp [blank]⟩ hc
   exact hf c.q c.a hq ha hg
 
 end FAR

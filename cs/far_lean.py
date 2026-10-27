@@ -84,53 +84,91 @@ def oriented(row):
     return machine
 
 
-def write_tree():
-    """BB3Tree.lean replays busy.py's 3-state tree in Lean against the three lists of machines proved never to halt."""
+BB3 = {'S': 2, 'N': 3, 'B': 20, 'tag': '3', 'stems': ('Cycles', 'Translated', 'Small'), 'certs': 'far-certificates-3.json',
+       'file': 'BB3Tree.lean', 'what': 'BB(3) = 21', 'champion': '(0, 0, 1, true, 1), (1, 0, 1, false, 1), '
+       '(1, 1, 0, true, 2), (2, 0, 1, false, 2), (2, 1, 1, false, 0)'}
+BB23 = {'S': 3, 'N': 2, 'B': 37, 'tag': '23', 'stems': ('WCycles', 'WTranslated', 'WSmall'),
+        'certs': 'far-certificates-23.json', 'file': 'BB23Tree.lean', 'what': 'BB(2,3) = 38', 'small_lists': True,
+        'champion': '(0, 0, 1, true, 1), (0, 1, 2, false, 1), (1, 0, 2, false, 0), (1, 1, 2, true, 1), '
+        '(1, 2, 1, false, 1)'}
+
+
+def small_chain(mods):
+    proof = '%s_never_halt' % (mods[0][0].lower() + mods[0][1:])
+    for m in mods[1:]:
+        proof = 'forall_append (%s) %s_never_halt' % (proof, m[0].lower() + m[1:])
+    return proof
+
+
+def small_list(stem, rows):
+    """The machines one certificate file proves never halt, as a list with its proof."""
+    names = ['m_' + str(row['index']).replace('-', '_') for row in rows]
+    proof = 'fun _ h => nomatch h'
+    for n in reversed(names):
+        proof = 'List.forall_mem_cons.2 ⟨%s_never_halts, %s⟩' % (n, proof)
+    low = stem[0].lower() + stem[1:]
+    return ['def %s : List Machine := [%s]' % (low, ', '.join(names)),
+            'theorem %s_never_halt : ∀ x ∈ %s, ¬ Halts x :=' % (low, low), '  ' + proof, '']
+
+
+def write_tree(t):
+    """<t>Tree.lean replays busy.py's tree for one shape in Lean against the three lists of machines proved never
+    to halt, then proves the busy beaver value from it and a champion."""
+    S, N, B, tag = t['S'], t['N'], t['B'], t['tag']
     folder = os.path.join(HERE, 'proofs', 'FarCerts')
     mods = lambda stem: sorted((f[:-5] for f in os.listdir(folder) if re.fullmatch(stem + r'\d+\.lean', f)),
                                key=lambda m: int(m[len(stem):]))
     low = lambda m: m[0].lower() + m[1:]
-    cyc, tr, small = mods('Cycles'), mods('Translated'), mods('Small')
-    names = ['m_' + row['index'] for row in json.load(open(os.path.join(HERE, 'far-certificates-3.json')))]
+    cyc, tr, small = map(mods, t['stems'])
+    names = ['m_' + row['index'] for row in json.load(open(os.path.join(HERE, t['certs'])))]
 
     def listed(name, parts, stem):
         joined = '%s_%s' % (low(parts[0]), stem)
         for m in parts[1:]:
             joined = 'forall_append (%s) %s_%s' % (joined, low(m), stem)
-        return ['def %s : List Machine := ((%s).filter (·.1.n == 3)).map (·.1)' % (name, ' ++ '.join(map(low, parts))),
+        return ['def %s : List Machine := ((%s).filter (fun x => x.1.n == %d && x.1.S == %d)).map (·.1)'
+                % (name, ' ++ '.join(map(low, parts)), N, S),
                 'theorem %s_never_halt : ∀ x ∈ %s, ¬ Halts x := by' % (name, name),
                 '  intro x hx',
                 '  unfold %s at hx' % name,
                 '  obtain ⟨y, hy, rfl⟩ := List.mem_map.1 hx',
                 '  exact (%s) y (List.mem_filter.1 hy).1' % joined, '']
 
-    proof = 'fun _ h => nomatch h'
-    for n in reversed(names):
-        proof = 'List.forall_mem_cons.2 ⟨%s_never_halts, %s⟩' % (n, proof)
+    if t.get('small_lists'):  # each WSmall file lists its own machines, which keeps this file under 20 KB
+        body, proof = ' ++ '.join(map(low, small)), small_chain(small)
+    else:
+        body = '[%s]' % ', '.join(names)
+        proof = 'fun _ h => nomatch h'
+        for n in reversed(names):
+            proof = 'List.forall_mem_cons.2 ⟨%s_never_halts, %s⟩' % (n, proof)
+    q = 'cyc%s, tr%s, far%s' % (tag, tag, tag)
+    shape = '%d %d %d %d' % (S, N, B, S * N + 2)
     out = ['import FarCerts.Explore'] + ['import FarCerts.' + m for m in cyc + tr + small] + [
         '', 'set_option maxRecDepth 100000', '', 'namespace FAR', '']
-    out += listed('cyc3', cyc, 'never_halt') + listed('tr3', tr, 'never_halt')
-    out += ['def far3 : List Machine := [%s]' % ', '.join(names),
-            'theorem far3_never_halt : ∀ x ∈ far3, ¬ Halts x :=', '  ' + proof, '',
-            '/-- No 2-symbol, 3-state machine halts after more than 20 steps from blank. -/',
-            'theorem bb3_steps_le : ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=',
-            '  bb3_of_explore (cyc3, tr3, far3) ⟨cyc3_never_halt, tr3_never_halt, far3_never_halt⟩ (by decide +kernel)',
-            '',
-            'def champion : Machine := { S := 2, n := 3, rules := [(0, 0, 1, true, 1), (1, 0, 1, false, 1), '
-            '(1, 1, 0, true, 2), (2, 0, 1, false, 2), (2, 1, 1, false, 0)] }',
-            '',
-            '/-- BB(3) = 21: one machine takes 20 steps and halts on its 21st, and none takes longer. -/',
-            'theorem bb3 : (∃ M, WF M ∧ haltsAt M 20 = true) ∧ ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=',
-            '  ⟨⟨champion, wf_of_rules (by decide), by decide +kernel⟩, bb3_steps_le⟩', '',
-            '-- sabotage: the replay fails without one never-halting machine, and the champion is not halted at 21',
-            'example : (explore 8 root (cyc3, tr3, far3.tail)).isSome = false := by decide +kernel',
-            'example : haltsAt champion 21 = false := by decide +kernel', '', 'end FAR', '']
-    open(os.path.join(folder, 'BB3Tree.lean'), 'w').write('\n'.join(out))
+    out += listed('cyc' + tag, cyc, 'never_halt') + listed('tr' + tag, tr, 'never_halt')
+    out += ['def far%s : List Machine := %s' % (tag, body),
+            'theorem far%s_never_halt : ∀ x ∈ far%s, ¬ Halts x :=' % (tag, tag), '  ' + proof, '',
+            '/-- No %d-symbol, %d-state machine halts after more than %d steps from blank. -/' % (S, N, B),
+            'theorem bb%s_steps_le : ∀ M, WF %d %d M → ∀ k, haltsAt M k = true → k ≤ %d :=' % (tag, S, N, B),
+            '  bb_of_explore (by decide) (%s) ⟨cyc%s_never_halt, tr%s_never_halt, far%s_never_halt⟩ (by decide +kernel)'
+            % (q, tag, tag, tag), '',
+            'def champion%s : Machine := { S := %d, n := %d, rules := [%s] }' % (tag, S, N, t['champion']), '',
+            '/-- %s: one machine takes %d steps and halts on its next, and none takes longer. -/' % (t['what'], B),
+            'theorem bb%s : (∃ M, WF %d %d M ∧ haltsAt M %d = true) ∧ ∀ M, WF %d %d M → ∀ k, haltsAt M k = true → k ≤ %d :='
+            % (tag, S, N, B, S, N, B),
+            '  ⟨⟨champion%s, wf_of_rules (by decide), by decide +kernel⟩, bb%s_steps_le⟩' % (tag, tag), '',
+            '-- sabotage: the replay fails without one never-halting machine, and the champion is not halted later',
+            'example : (explore %s (root %d %d) (cyc%s, tr%s, far%s.tail)).isSome = false := by decide +kernel'
+            % (shape, S, N, tag, tag, tag),
+            'example : haltsAt champion%s %d = false := by decide +kernel' % (tag, B + 1), '', 'end FAR', '']
+    open(os.path.join(folder, t['file']), 'w').write('\n'.join(out))
 
 
 def write_root():
     """proofs/FarCerts.lean imports every module in proofs/FarCerts, so far_lean.py and cycle_lean.py share it."""
-    write_tree()
+    for t in (BB3, BB23):
+        if os.path.exists(os.path.join(HERE, t['certs'])):
+            write_tree(t)
     mods = sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'proofs', 'FarCerts')) if f.endswith('.lean'))
     open(os.path.join(HERE, 'proofs', 'FarCerts.lean'), 'w').write(''.join('import FarCerts.%s\n' % m for m in mods))
 

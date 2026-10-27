@@ -52,14 +52,14 @@ set_option maxRecDepth 100000
 
 namespace FAR
 
-def cyc3 : List Machine := ((cycles1 ++ cycles2 ++ cycles3 ++ cycles4 ++ cycles5).filter (·.1.n == 3)).map (·.1)
+def cyc3 : List Machine := ((cycles1 ++ cycles2 ++ cycles3 ++ cycles4 ++ cycles5).filter (fun x => x.1.n == 3 && x.1.S == 2)).map (·.1)
 theorem cyc3_never_halt : ∀ x ∈ cyc3, ¬ Halts x := by
   intro x hx
   unfold cyc3 at hx
   obtain ⟨y, hy, rfl⟩ := List.mem_map.1 hx
   exact (forall_append (forall_append (forall_append (forall_append (cycles1_never_halt) cycles2_never_halt) cycles3_never_halt) cycles4_never_halt) cycles5_never_halt) y (List.mem_filter.1 hy).1
 
-def tr3 : List Machine := ((translated1 ++ translated2 ++ translated3 ++ translated4 ++ translated5 ++ translated6 ++ translated7 ++ translated8 ++ translated9 ++ translated10 ++ translated11 ++ translated12 ++ translated13 ++ translated14 ++ translated15 ++ translated16 ++ translated17 ++ translated18 ++ translated19 ++ translated20 ++ translated21 ++ translated22 ++ translated23 ++ translated24 ++ translated25 ++ translated26 ++ translated27 ++ translated28 ++ translated29 ++ translated30 ++ translated31).filter (·.1.n == 3)).map (·.1)
+def tr3 : List Machine := ((translated1 ++ translated2 ++ translated3 ++ translated4 ++ translated5 ++ translated6 ++ translated7 ++ translated8 ++ translated9 ++ translated10 ++ translated11 ++ translated12 ++ translated13 ++ translated14 ++ translated15 ++ translated16 ++ translated17 ++ translated18 ++ translated19 ++ translated20 ++ translated21 ++ translated22 ++ translated23 ++ translated24 ++ translated25 ++ translated26 ++ translated27 ++ translated28 ++ translated29 ++ translated30 ++ translated31).filter (fun x => x.1.n == 3 && x.1.S == 2)).map (·.1)
 theorem tr3_never_halt : ∀ x ∈ tr3, ¬ Halts x := by
   intro x hx
   unfold tr3 at hx
@@ -71,17 +71,17 @@ theorem far3_never_halt : ∀ x ∈ far3, ¬ Halts x :=
   List.forall_mem_cons.2 ⟨m_s3_0_never_halts, List.forall_mem_cons.2 ⟨m_s3_1_never_halts, List.forall_mem_cons.2 ⟨m_s3_2_never_halts, List.forall_mem_cons.2 ⟨m_s3_3_never_halts, List.forall_mem_cons.2 ⟨m_s3_4_never_halts, List.forall_mem_cons.2 ⟨m_s3_5_never_halts, List.forall_mem_cons.2 ⟨m_s3_6_never_halts, List.forall_mem_cons.2 ⟨m_s3_7_never_halts, List.forall_mem_cons.2 ⟨m_s3_8_never_halts, List.forall_mem_cons.2 ⟨m_s3_9_never_halts, List.forall_mem_cons.2 ⟨m_s3_10_never_halts, List.forall_mem_cons.2 ⟨m_s3_11_never_halts, List.forall_mem_cons.2 ⟨m_s3_12_never_halts, List.forall_mem_cons.2 ⟨m_s3_13_never_halts, List.forall_mem_cons.2 ⟨m_s3_14_never_halts, List.forall_mem_cons.2 ⟨m_s3_15_never_halts, List.forall_mem_cons.2 ⟨m_s3_16_never_halts, List.forall_mem_cons.2 ⟨m_s3_17_never_halts, List.forall_mem_cons.2 ⟨m_s3_18_never_halts, List.forall_mem_cons.2 ⟨m_s3_19_never_halts, List.forall_mem_cons.2 ⟨m_s3_20_never_halts, List.forall_mem_cons.2 ⟨m_s3_21_never_halts, List.forall_mem_cons.2 ⟨m_s3_22_never_halts, List.forall_mem_cons.2 ⟨m_s3_23_never_halts, List.forall_mem_cons.2 ⟨m_s3_24_never_halts, List.forall_mem_cons.2 ⟨m_s3_25_never_halts, List.forall_mem_cons.2 ⟨m_s3_26_never_halts, List.forall_mem_cons.2 ⟨m_s3_27_never_halts, List.forall_mem_cons.2 ⟨m_s3_28_never_halts, List.forall_mem_cons.2 ⟨m_s3_29_never_halts, List.forall_mem_cons.2 ⟨m_s3_30_never_halts, List.forall_mem_cons.2 ⟨m_s3_31_never_halts, List.forall_mem_cons.2 ⟨m_s3_32_never_halts, List.forall_mem_cons.2 ⟨m_s3_33_never_halts, List.forall_mem_cons.2 ⟨m_s3_34_never_halts, List.forall_mem_cons.2 ⟨m_s3_35_never_halts, List.forall_mem_cons.2 ⟨m_s3_36_never_halts, List.forall_mem_cons.2 ⟨m_s3_37_never_halts, List.forall_mem_cons.2 ⟨m_s3_38_never_halts, List.forall_mem_cons.2 ⟨m_s3_39_never_halts, List.forall_mem_cons.2 ⟨m_s3_40_never_halts, List.forall_mem_cons.2 ⟨m_s3_41_never_halts, List.forall_mem_cons.2 ⟨m_s3_42_never_halts, List.forall_mem_cons.2 ⟨m_s3_43_never_halts, List.forall_mem_cons.2 ⟨m_s3_44_never_halts, List.forall_mem_cons.2 ⟨m_s3_45_never_halts, List.forall_mem_cons.2 ⟨m_s3_46_never_halts, List.forall_mem_cons.2 ⟨m_s3_47_never_halts, List.forall_mem_cons.2 ⟨m_s3_48_never_halts, List.forall_mem_cons.2 ⟨m_s3_49_never_halts, List.forall_mem_cons.2 ⟨m_s3_50_never_halts, List.forall_mem_cons.2 ⟨m_s3_51_never_halts, List.forall_mem_cons.2 ⟨m_s3_52_never_halts, List.forall_mem_cons.2 ⟨m_s3_53_never_halts, List.forall_mem_cons.2 ⟨m_s3_54_never_halts, List.forall_mem_cons.2 ⟨m_s3_55_never_halts, List.forall_mem_cons.2 ⟨m_s3_56_never_halts, List.forall_mem_cons.2 ⟨m_s3_57_never_halts, List.forall_mem_cons.2 ⟨m_s3_58_never_halts, List.forall_mem_cons.2 ⟨m_s3_59_never_halts, List.forall_mem_cons.2 ⟨m_s3_60_never_halts, List.forall_mem_cons.2 ⟨m_s3_61_never_halts, List.forall_mem_cons.2 ⟨m_s3_62_never_halts, List.forall_mem_cons.2 ⟨m_s3_63_never_halts, List.forall_mem_cons.2 ⟨m_s3_64_never_halts, List.forall_mem_cons.2 ⟨m_s3_65_never_halts, List.forall_mem_cons.2 ⟨m_s3_66_never_halts, List.forall_mem_cons.2 ⟨m_s3_67_never_halts, List.forall_mem_cons.2 ⟨m_s3_68_never_halts, List.forall_mem_cons.2 ⟨m_s3_69_never_halts, List.forall_mem_cons.2 ⟨m_s3_70_never_halts, List.forall_mem_cons.2 ⟨m_s3_71_never_halts, List.forall_mem_cons.2 ⟨m_s3_72_never_halts, List.forall_mem_cons.2 ⟨m_s3_73_never_halts, List.forall_mem_cons.2 ⟨m_s3_74_never_halts, List.forall_mem_cons.2 ⟨m_s3_75_never_halts, List.forall_mem_cons.2 ⟨m_s3_76_never_halts, List.forall_mem_cons.2 ⟨m_s3_77_never_halts, List.forall_mem_cons.2 ⟨m_s3_78_never_halts, List.forall_mem_cons.2 ⟨m_s3_79_never_halts, List.forall_mem_cons.2 ⟨m_s3_80_never_halts, List.forall_mem_cons.2 ⟨m_s3_81_never_halts, List.forall_mem_cons.2 ⟨m_s3_82_never_halts, List.forall_mem_cons.2 ⟨m_s3_83_never_halts, List.forall_mem_cons.2 ⟨m_s3_84_never_halts, List.forall_mem_cons.2 ⟨m_s3_85_never_halts, List.forall_mem_cons.2 ⟨m_s3_86_never_halts, List.forall_mem_cons.2 ⟨m_s3_87_never_halts, List.forall_mem_cons.2 ⟨m_s3_88_never_halts, List.forall_mem_cons.2 ⟨m_s3_89_never_halts, List.forall_mem_cons.2 ⟨m_s3_90_never_halts, List.forall_mem_cons.2 ⟨m_s3_91_never_halts, fun _ h => nomatch h⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩⟩
 
 /-- No 2-symbol, 3-state machine halts after more than 20 steps from blank. -/
-theorem bb3_steps_le : ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=
-  bb3_of_explore (cyc3, tr3, far3) ⟨cyc3_never_halt, tr3_never_halt, far3_never_halt⟩ (by decide +kernel)
+theorem bb3_steps_le : ∀ M, WF 2 3 M → ∀ k, haltsAt M k = true → k ≤ 20 :=
+  bb_of_explore (by decide) (cyc3, tr3, far3) ⟨cyc3_never_halt, tr3_never_halt, far3_never_halt⟩ (by decide +kernel)
 
-def champion : Machine := { S := 2, n := 3, rules := [(0, 0, 1, true, 1), (1, 0, 1, false, 1), (1, 1, 0, true, 2), (2, 0, 1, false, 2), (2, 1, 1, false, 0)] }
+def champion3 : Machine := { S := 2, n := 3, rules := [(0, 0, 1, true, 1), (1, 0, 1, false, 1), (1, 1, 0, true, 2), (2, 0, 1, false, 2), (2, 1, 1, false, 0)] }
 
-/-- BB(3) = 21: one machine takes 20 steps and halts on its 21st, and none takes longer. -/
-theorem bb3 : (∃ M, WF M ∧ haltsAt M 20 = true) ∧ ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=
-  ⟨⟨champion, wf_of_rules (by decide), by decide +kernel⟩, bb3_steps_le⟩
+/-- BB(3) = 21: one machine takes 20 steps and halts on its next, and none takes longer. -/
+theorem bb3 : (∃ M, WF 2 3 M ∧ haltsAt M 20 = true) ∧ ∀ M, WF 2 3 M → ∀ k, haltsAt M k = true → k ≤ 20 :=
+  ⟨⟨champion3, wf_of_rules (by decide), by decide +kernel⟩, bb3_steps_le⟩
 
--- sabotage: the replay fails without one never-halting machine, and the champion is not halted at 21
-example : (explore 8 root (cyc3, tr3, far3.tail)).isSome = false := by decide +kernel
-example : haltsAt champion 21 = false := by decide +kernel
+-- sabotage: the replay fails without one never-halting machine, and the champion is not halted later
+example : (explore 2 3 20 8 (root 2 3) (cyc3, tr3, far3.tail)).isSome = false := by decide +kernel
+example : haltsAt champion3 21 = false := by decide +kernel
 
 end FAR

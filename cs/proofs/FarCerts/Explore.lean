@@ -16,7 +16,7 @@ theorem haltsAt_mirror (M : Machine) (k : Nat) : haltsAt M.mirror k = haltsAt M 
   | none => rfl
   | some c => simp only [Option.map, flip, get_mirror]; cases M.get c.q c.a <;> rfl
 
-theorem wf_mirror {M : Machine} (h : WF M) : WF M.mirror := by
+theorem wf_mirror {S N : Nat} {M : Machine} (h : WF S N M) : WF S N M.mirror := by
   intro q a r hr
   rw [get_mirror] at hr
   cases hg : M.get q a with
@@ -35,11 +35,11 @@ theorem sw_sw : ∀ s, sw (sw s) = s
   | 2 => rfl
   | _ + 3 => rfl
 
-theorem sw_lt : ∀ s, s < 3 → sw s < 3
-  | 0, _ => by decide
-  | 1, _ => by decide
-  | 2, _ => by decide
-  | _ + 3, h => by omega
+theorem sw_lt {N : Nat} (hN : 3 ≤ N) : ∀ s, s < N → sw s < N
+  | 0, h => h
+  | 1, _ => by show 2 < N; omega
+  | 2, _ => by show 1 < N; omega
+  | _ + 3, h => h
 
 theorem sw_beq (x q : Nat) : (sw x == q) = (x == sw q) := by
   rw [Bool.eq_iff_iff]; simp only [beq_iff_eq]
@@ -84,14 +84,14 @@ theorem haltsAt_swap (M : Machine) (k : Nat) : haltsAt M.swap k = haltsAt M k :=
   | none => rfl
   | some c => simp only [Option.map, rn, get_swap, sw_sw]; cases M.get c.q c.a <;> rfl
 
-theorem wf_swap {M : Machine} (h : WF M) : WF M.swap := by
+theorem wf_swap {S N : Nat} {M : Machine} (hN : 3 ≤ N) (h : WF S N M) : WF S N M.swap := by
   intro q a r hr
   rw [get_swap] at hr
   cases hg : M.get (sw q) a with
   | none => rw [hg] at hr; cases hr
   | some r0 =>
     rw [hg] at hr; obtain rfl := Option.some.inj hr
-    exact ⟨(h _ _ _ hg).1, sw_lt _ (h _ _ _ hg).2⟩
+    exact ⟨(h _ _ _ hg).1, sw_lt hN _ (h _ _ _ hg).2⟩
 
 def zeroOnly (M : Machine) : Bool := M.rules.all (fun t => t.1 == 0 && t.2.2.2.2 == 0)
 
@@ -131,28 +131,28 @@ theorem ext_set {m M : Machine} {q a : Nat} {r : Rule} (h : Ext m M) (hr : M.get
       rw [← e]; exact hr
 
 /-- The rules busy.py tries at an undefined (q, a), in the order its stack pops them. -/
-def choices (m : Machine) (q : Nat) : List Rule :=
+def choices (S N : Nat) (m : Machine) (q : Nat) : List Rule :=
   let moves := if m.rules.isEmpty then [true] else [false, true]
-  let nexts := if zeroOnly m && q == 0 then [0, 1] else [0, 1, 2]
-  ([0, 1].flatMap fun w => moves.flatMap fun d => nexts.map fun n => (w, d, n)).reverse
+  let nexts := if zeroOnly m && q == 0 then List.range (min 2 N) else List.range N
+  ((List.range S).flatMap fun w => moves.flatMap fun d => nexts.map fun n => (w, d, n)).reverse
 
-theorem mem_choices (m : Machine) (q w n : Nat) (d : Bool) (hw : w < 2) (hn : n < 3)
+theorem mem_choices (S N : Nat) (m : Machine) (q w n : Nat) (d : Bool) (hw : w < S) (hn : n < N)
     (hd : d = true ∨ m.rules.isEmpty = false) (hs : n < 2 ∨ (zeroOnly m && q == 0) = false) :
-    (w, d, n) ∈ choices m q := by
+    (w, d, n) ∈ choices S N m q := by
   simp only [choices, List.mem_reverse, List.mem_flatMap, List.mem_map]
-  refine ⟨w, by have : w = 0 ∨ w = 1 := (by omega); rcases this with rfl | rfl <;> simp, d, ?_, n, ?_, rfl⟩
+  refine ⟨w, List.mem_range.2 hw, d, ?_, n, ?_, rfl⟩
   · cases he : m.rules.isEmpty <;> cases d <;> simp_all
-  · have : n = 0 ∨ n = 1 ∨ n = 2 := by omega
-    cases hz : (zeroOnly m && q == 0) <;> simp only [hz] at hs ⊢ <;> rcases this with rfl | rfl | rfl <;> simp_all
+  · cases hz : (zeroOnly m && q == 0) <;> simp [hz] at hs ⊢ <;> omega
 
 /-- If an extension M defines the rule m lacks at c, one symmetric copy of M extends a child of m. -/
-theorem sym_child {m M : Machine} {c : Config} (hext : Ext m M) (hw : WF M) (r : Rule) (hr : M.get c.q c.a = some r) :
-    ∃ M2, ∃ r2 ∈ choices m c.q, WF M2 ∧ (∀ k, haltsAt M2 k = haltsAt M k) ∧ Ext m M2 ∧ M2.get c.q c.a = some r2 := by
+theorem sym_child {S N : Nat} (hN3 : N ≤ 3) {m M : Machine} {c : Config} (hext : Ext m M) (hw : WF S N M) (r : Rule)
+    (hr : M.get c.q c.a = some r) : ∃ M2, ∃ r2 ∈ choices S N m c.q,
+      WF S N M2 ∧ (∀ k, haltsAt M2 k = haltsAt M k) ∧ Ext m M2 ∧ M2.get c.q c.a = some r2 := by
   obtain ⟨w, d, n⟩ := r
   obtain ⟨hw1, hn⟩ := hw _ _ _ hr
   simp only at hw1 hn
   -- first the mirror, at the root only
-  obtain ⟨M1, d1, h1w, h1k, h1e, h1g, h1d⟩ : ∃ M1 d1, WF M1 ∧ (∀ k, haltsAt M1 k = haltsAt M k) ∧ Ext m M1 ∧
+  obtain ⟨M1, d1, h1w, h1k, h1e, h1g, h1d⟩ : ∃ M1 d1, WF S N M1 ∧ (∀ k, haltsAt M1 k = haltsAt M k) ∧ Ext m M1 ∧
       M1.get c.q c.a = some (w, d1, n) ∧ (d1 = true ∨ m.rules.isEmpty = false) := by
     cases d with
     | true => exact ⟨M, true, hw, fun _ => rfl, hext, hr, Or.inl rfl⟩
@@ -166,14 +166,15 @@ theorem sym_child {m M : Machine} {c : Config} (hext : Ext m M) (hw : WF M) (r :
         · rw [get_mirror, hr]; rfl
   cases hz : (zeroOnly m && c.q == 0 && n == 2) with
   | false =>
-    refine ⟨M1, (w, d1, n), mem_choices m c.q w n d1 hw1 hn h1d ?_, h1w, h1k, h1e, h1g⟩
+    refine ⟨M1, (w, d1, n), mem_choices S N m c.q w n d1 hw1 hn h1d ?_, h1w, h1k, h1e, h1g⟩
     cases hzq : (zeroOnly m && c.q == 0) with
     | false => exact Or.inr rfl
     | true => left; rw [hzq] at hz; simp at hz; omega
   | true =>
     simp only [Bool.and_eq_true, beq_iff_eq] at hz
     obtain ⟨⟨hzm, hq⟩, rfl⟩ := hz
-    refine ⟨M1.swap, (w, d1, 1), mem_choices m c.q w 1 d1 hw1 (by decide) h1d (Or.inl (by decide)), wf_swap h1w,
+    refine ⟨M1.swap, (w, d1, 1), mem_choices S N m c.q w 1 d1 hw1 (by omega) h1d (Or.inl (by decide)),
+      wf_swap (by omega) h1w,
       fun k => (haltsAt_swap M1 k).trans (h1k k), ext_swap hzm h1e, ?_⟩
     rw [hq] at h1g
     rw [get_swap, hq]
@@ -240,7 +241,7 @@ theorem pop_spec {M : Machine} {Q Q' : Qs} (h : pop M Q = some Q') (hQ : Good Q)
         obtain ⟨g, e⟩ := pop1_spec hc h3
         exact ⟨⟨h1, h2, g⟩, e⟩
 
-theorem leaf_covered {x m : Machine} (hx : ¬ Halts x) (he : Ext x m) : Covered m := by
+theorem leaf_covered {S N B : Nat} {x m : Machine} (hx : ¬ Halts x) (he : Ext x m) : Covered S N B m := by
   intro M _ hm k hk
   obtain ⟨c, hc, hg⟩ := haltsAt_spec hk
   exact absurd (halts_of_ext (fun q a r h => hm _ _ _ (he _ _ _ h)) ⟨k, c, hc, hg⟩) hx
@@ -266,11 +267,11 @@ theorem firstStuck_spec (M : Machine) : ∀ f k c k' e, firstStuck M f k c = som
       exact ⟨j + 1, by omega, by omega, by simp only [run]; rw [hs]; exact hr, hg⟩
 
 /-- Every rule but the one missing at c is defined. -/
-def full (M : Machine) (c : Config) : Bool :=
-  (List.range 3).all fun q => (List.range 2).all fun a => (q == c.q && a == c.a) || (M.get q a).isSome
+def full (S N : Nat) (M : Machine) (c : Config) : Bool :=
+  (List.range N).all fun q => (List.range S).all fun a => (q == c.q && a == c.a) || (M.get q a).isSome
 
-theorem full_spec {m M : Machine} {c : Config} (h : full m c = true) (he : Ext m M) (r : Rule)
-    (hM : M.get c.q c.a = some r) : ∀ q a, q < 3 → a < 2 → M.get q a ≠ none := by
+theorem full_spec {S N : Nat} {m M : Machine} {c : Config} (h : full S N m c = true) (he : Ext m M) (r : Rule)
+    (hM : M.get c.q c.a = some r) : ∀ q a, q < N → a < S → M.get q a ≠ none := by
   intro q a hq ha
   have := List.all_eq_true.1 (List.all_eq_true.1 h q (List.mem_range.2 hq)) a (List.mem_range.2 ha)
   simp only [Bool.or_eq_true, Bool.and_eq_true, beq_iff_eq] at this
@@ -279,9 +280,9 @@ theorem full_spec {m M : Machine} {c : Config} (h : full m c = true) (he : Ext m
   · obtain ⟨r', hr'⟩ := Option.isSome_iff_exists.1 hs
     rw [he _ _ _ hr']; simp
 
-theorem node_covered {m : Machine} {k : Nat} {c : Config} (hr : run m k blank = some c) (hk : k ≤ 20)
-    (kids : ∀ M, WF M → Ext m M → ∀ r, M.get c.q c.a = some r → ∀ k', haltsAt M k' = true → k' ≤ 20) :
-    Covered m := by
+theorem node_covered {S N B : Nat} {m : Machine} {k : Nat} {c : Config} (hr : run m k blank = some c) (hk : k ≤ B)
+    (kids : ∀ M, WF S N M → Ext m M → ∀ r, M.get c.q c.a = some r → ∀ k', haltsAt M k' = true → k' ≤ B) :
+    Covered S N B m := by
   intro M hw he k' hk'
   cases hM : M.get c.q c.a with
   | none => rw [← halt_unique (haltsAt_of (run_ext he k blank c hr) hM) hk']; exact hk
@@ -291,34 +292,38 @@ def exploreList (g : Machine → Qs → Option Qs) : List Machine → Qs → Opt
   | [], Q => some Q
   | N :: Ns, Q => (g N Q).bind (exploreList g Ns)
 
-def explore : Nat → Machine → Qs → Option Qs
+def explore (S N B : Nat) : Nat → Machine → Qs → Option Qs
   | 0, _, _ => none
   | f + 1, m, Q =>
-    match firstStuck m 21 0 blank with
+    match firstStuck m (B + 1) 0 blank with
     | none => pop m Q
     | some (_, c) =>
-      if 6 ≤ m.rules.length + 1 then (if full m c then some Q else none)
-      else exploreList (explore f) ((choices m c.q).map (setRule m c.q c.a)) Q
+      if S * N ≤ m.rules.length + 1 then (if full S N m c then some Q else none)
+      else exploreList (explore S N B f) ((choices S N m c.q).map (setRule m c.q c.a)) Q
 
 theorem exploreList_spec (g : Machine → Qs → Option Qs)
-    (ih : ∀ N Q Q', g N Q = some Q' → Good Q → Good Q' ∧ Covered N) :
-    ∀ Ns Q Q', exploreList g Ns Q = some Q' → Good Q → Good Q' ∧ ∀ N ∈ Ns, Covered N
+    {S N B : Nat} (ih : ∀ X Q Q', g X Q = some Q' → Good Q → Good Q' ∧ Covered S N B X) :
+    ∀ Ns Q Q', exploreList g Ns Q = some Q' → Good Q → Good Q' ∧ ∀ X ∈ Ns, Covered S N B X
   | [], Q, Q', h, hQ => by simp [exploreList] at h; subst h; exact ⟨hQ, by simp⟩
-  | N :: Ns, Q, Q', h, hQ => by
+  | X :: Ns, Q, Q', h, hQ => by
     simp only [exploreList] at h
-    cases hg : g N Q with
+    cases hg : g X Q with
     | none => simp [hg] at h
     | some Q1 =>
       rw [hg] at h
-      obtain ⟨g1, c1⟩ := ih N Q Q1 hg hQ
+      obtain ⟨g1, c1⟩ := ih X Q Q1 hg hQ
       obtain ⟨g2, c2⟩ := exploreList_spec g ih Ns Q1 Q' h g1
       exact ⟨g2, fun x hx => by simp at hx; rcases hx with rfl | hx; exact c1; exact c2 x hx⟩
 
-theorem explore_sound : ∀ f m Q Q', explore f m Q = some Q' → Good Q → Good Q' ∧ Covered m
+/-- At least one symbol, between one and three states. -/
+abbrev Shape (S N : Nat) : Prop := 0 < S ∧ 0 < N ∧ N ≤ 3
+
+theorem explore_sound {S N B : Nat} (sh : Shape S N) :
+    ∀ f m Q Q', explore S N B f m Q = some Q' → Good Q → Good Q' ∧ Covered S N B m
   | 0, _, _, _, h, _ => by simp [explore] at h
   | f + 1, m, Q, Q', h, hQ => by
     simp only [explore] at h
-    cases hs : firstStuck m 21 0 blank with
+    cases hs : firstStuck m (B + 1) 0 blank with
     | none =>
       simp only [hs] at h
       obtain ⟨g, x, hx, he⟩ := pop_spec h hQ
@@ -326,21 +331,22 @@ theorem explore_sound : ∀ f m Q Q', explore f m Q = some Q' → Good Q → Goo
     | some kc =>
       obtain ⟨k, c⟩ := kc
       simp only [hs] at h
-      obtain ⟨j, -, hj, hr, hg⟩ := firstStuck_spec m 21 0 blank k c hs
+      obtain ⟨j, -, hj, hr, hg⟩ := firstStuck_spec m (B + 1) 0 blank k c hs
       split at h
-      · cases hf : full m c with
+      · cases hf : full S N m c with
         | false => simp [hf] at h
         | true =>
           simp [hf] at h; subst h
           exact ⟨hQ, node_covered hr (by omega)
-            fun M hw he r hM k' hk' => absurd hk' (full_no_halt hw (full_spec hf he r hM) k')⟩
-      · obtain ⟨g, hall⟩ := exploreList_spec (explore f) (explore_sound f) _ Q Q' h hQ
+            fun M hw he r hM k' hk' => absurd hk' (full_no_halt sh.1 sh.2.1 hw (full_spec hf he r hM) k')⟩
+      · obtain ⟨g, hall⟩ := exploreList_spec (explore S N B f) (explore_sound sh f) _ Q Q' h hQ
         refine ⟨g, node_covered hr (by omega) fun M hw he r hM k' hk' => ?_⟩
-        obtain ⟨M2, r2, hmem, hw2, hk2, he2, hg2⟩ := sym_child he hw r hM
+        obtain ⟨M2, r2, hmem, hw2, hk2, he2, hg2⟩ := sym_child sh.2.2 he hw r hM
         exact hall (setRule m c.q c.a r2) (List.mem_map.2 ⟨r2, hmem, rfl⟩) M2 hw2 (ext_set he2 hg2) k'
           (by rw [hk2]; exact hk')
 
-theorem wf_of_rules {M : Machine} (h : M.rules.all (fun t => t.2.2.1 < 2 && t.2.2.2.2 < 3) = true) : WF M := by
+theorem wf_of_rules {S N : Nat} {M : Machine} (h : M.rules.all (fun t => t.2.2.1 < S && t.2.2.2.2 < N) = true) :
+    WF S N M := by
   intro q a r hr
   have := List.all_eq_true.1 h _ (get_mem M q a r hr)
   simp only [Bool.and_eq_true, decide_eq_true_eq] at this
@@ -350,13 +356,13 @@ theorem forall_append {α : Type} {P : α → Prop} {l1 l2 : List α} (h1 : ∀ 
     ∀ x ∈ l1 ++ l2, P x :=
   fun x hx => (List.mem_append.1 hx).elim (h1 x) (h2 x)
 
-def root : Machine := { S := 2, n := 3, rules := [] }
+def root (S N : Nat) : Machine := { S := S, n := N, rules := [] }
 
-/-- If the replay of busy.py's tree succeeds, no 2-symbol, 3-state machine halts after more than 20 steps. -/
-theorem bb3_of_explore (Q : Qs) (hQ : Good Q) (h : (explore 8 root Q).isSome = true) :
-    ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 := by
+/-- If the replay of busy.py's tree succeeds, no S-symbol, N-state machine halts after more than B steps. -/
+theorem bb_of_explore {S N B : Nat} (sh : Shape S N) (Q : Qs) (hQ : Good Q)
+    (h : (explore S N B (S * N + 2) (root S N) Q).isSome = true) : ∀ M, WF S N M → ∀ k, haltsAt M k = true → k ≤ B := by
   obtain ⟨Q', hQ'⟩ := Option.isSome_iff_exists.1 h
   intro M hw k hk
-  exact (explore_sound 8 root Q Q' hQ' hQ).2 M hw (fun q a r h => by simp [Machine.get, root] at h) k hk
+  exact (explore_sound sh _ _ Q Q' hQ' hQ).2 M hw (fun q a r h => by simp [Machine.get, root] at h) k hk
 
 end FAR
