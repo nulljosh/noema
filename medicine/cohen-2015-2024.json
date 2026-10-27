@@ -1,0 +1,181 @@
+{
+ "source": "235,860 randomized trial abstracts, PubMed 2015-2024 (the cache the other checks use)",
+ "compared": 62,
+ "far": 14,
+ "clear": 0,
+ "open": 5,
+ "open_abstracts": 3,
+ "standard_error": 4,
+ "design": 4,
+ "parse": 1,
+ "rows": [
+  {
+   "pmid": "28116804",
+   "pair": "22.4 ± 6.1 versus 12.2 ± 4.3",
+   "d": "d: 0.67",
+   "range": [
+    1.23,
+    2.42
+   ],
+   "sentence": "The apnea-hypopnea index was higher in the gabapentin arm than in the placebo arm (22.4 ± 6.1 versus 12.2 ± 4.3, P ≤ 0.05, d: 0.67), as was the oxygen desaturation index (20.6 ± 5.8 versus 10.8 ± 3.9, P ≤ 0.05, d: 0.68).",
+   "review": "sem",
+   "note": "crossover, n=8: ± read as a standard error gives d 0.68"
+  },
+  {
+   "pmid": "28116804",
+   "pair": "20.6 ± 5.8 versus 10.8 ± 3.9",
+   "d": "d: 0.68",
+   "range": [
+    1.24,
+    2.57
+   ],
+   "sentence": "The apnea-hypopnea index was higher in the gabapentin arm than in the placebo arm (22.4 ± 6.1 versus 12.2 ± 4.3, P ≤ 0.05, d: 0.67), as was the oxygen desaturation index (20.6 ± 5.8 versus 10.8 ± 3.9, P ≤ 0.05, d: 0.68).",
+   "review": "sem",
+   "note": "crossover, n=8: ± read as a standard error gives d 0.70"
+  },
+  {
+   "pmid": "30155761",
+   "pair": "231.6 ± 36.2 vs. 225.3 ± 35.8",
+   "d": "d = 0.02",
+   "range": [
+    0.13,
+    0.18
+   ],
+   "sentence": "Results BLN supplementation improved average absolute power compared to PLA (231.6 ± 36.2 vs. 225.3 ± 35.8 W, p = 0.050, d = 0.02).",
+   "review": "open",
+   "note": "crossover, n=28: d 0.02 sits below even the paired floor (0.09) and does not fit P = 0.050"
+  },
+  {
+   "pmid": "30990762",
+   "pair": "77.52 ± 18.27 vs 72.35 ± 16.39",
+   "d": "Cohen's d = 0.030",
+   "range": [
+    0.21,
+    0.32
+   ],
+   "sentence": "Results Regarding balance confidence, the Pilates group showed higher values compared to the control group (77.52 ± 18.27 vs 72.35 ± 16.39, Cohen's d = 0.030).",
+   "review": "open",
+   "note": "parallel, 55 per arm, age given as mean ± SD: neither SD (0.30) nor standard error (0.04) gives 0.030"
+  },
+  {
+   "pmid": "30990762",
+   "pair": "22.07 ± 5.73 vs 27.9 ± 6.95",
+   "d": "Cohen's d = 0.041",
+   "range": [
+    0.62,
+    1.03
+   ],
+   "sentence": "Women in the Pilates group showed lower fear of falling, compared to those of the control group (22.07 ± 5.73 vs 27.9 ± 6.95, Cohen's d = 0.041).",
+   "review": "open",
+   "note": "parallel, 55 per arm: SD gives 0.92 and standard error gives 0.12, not 0.041"
+  },
+  {
+   "pmid": "33077119",
+   "pair": "155.0 ± 15.8 vs 150.8 ± 14.5",
+   "d": "d = 0.57",
+   "range": [
+    0.19,
+    0.3
+   ],
+   "sentence": "A significant improvement in the total amount of work was observed in the caffeine condition compared to the placebo condition (155.0 ± 15.8 vs 150.8 ± 14.5 kJ, respectively; p 0.05, d = 0.57).",
+   "review": "design",
+   "note": "within-subject conditions: a paired d can exceed the between-arm range"
+  },
+  {
+   "pmid": "32272260",
+   "pair": "250 ± 44 vs. 231 ± 41",
+   "d": "d = 1.13",
+   "range": [
+    0.3,
+    0.49
+   ],
+   "sentence": "Plasma [nitrite] was higher in all BR compared to all PL trials (P lim was improved after BR compared to PL ingestion in the hypoxic trials (250 ± 44 vs. 231 ± 41 s; P = 0.006; d = 1.13), with the magnitude of improvement being negatively correlated with quadriceps TOI at T lim (r = -0.78; P lim was not improved following BR ingestion in normoxia (BR: 364 ± 98 vs.",
+   "review": "design",
+   "note": "within-subject trials: a paired d can exceed the between-arm range"
+  },
+  {
+   "pmid": "34684336",
+   "pair": "102.56 ± 18.75 vs. 40.54 ± 18.74",
+   "d": "d = 0.94",
+   "range": [
+    2.48,
+    3.31
+   ],
+   "sentence": "The consumption of coffee + milk resulted in greater muscle glycogen recovery (102.56 ± 18.75 vs. 40.54 ± 18.74 mmol·kg dw -1 ; p = 0.01; d = 0.94) and greater glucose ( p = 0.02; d = 0.83) and insulin ( p = 0.03; d = 0.76) total area under the curve compared with control.",
+   "review": "sem",
+   "note": "crossover, n=14: ± read as a standard error gives d 0.89"
+  },
+  {
+   "pmid": "35522253",
+   "pair": "6.2 ± 1.6 vs 0.3 ± 1.7",
+   "d": "d = 0.68",
+   "range": [
+    2.49,
+    3.87
+   ],
+   "sentence": "The increase in ActiGraph-derived steps per day (1085.3 ± 265.6 vs 34.7 ± 274.3; P = 0.008) and daily minutes of moderate-to-vigorous physical activity (MVPA; 6.2 ± 1.6 vs 0.3 ± 1.7; d = 0.68; P = 0.01), and self-reported Community Healthy Activities Model Program for Seniors Activities Questionnaire MVPA bouts (3.5 ± 0.77 vs 0.33 ± 0.79; P 4- on 5-point Likert scale).",
+   "review": "sem",
+   "note": "parallel, 28 per arm, increases: ± read as a standard error gives d 0.68"
+  },
+  {
+   "pmid": "36452984",
+   "pair": "479.4±134.7 vs. 423.2±153.0",
+   "d": "d =0.83",
+   "range": [
+    0.27,
+    0.42
+   ],
+   "sentence": "Higher values of peak and mean peak forces (479.4±134.7 vs. 423.2±153.0, d =0.83 and 376.5±101.4 vs. 337.1±113.3 N, d =0.68), peak oxygen uptake (47.9±7.5 vs. 45.3±7.3 mL∙kg -1 ∙min -1 , d =0.19), peak blood lactate concentration (7.9±1.6 vs. 6.9±1.7 mmol∙L -1 , d =0.16), blood lactate increasing speed (0.08±0.01 vs. 0.07±0.06 [(mmol·L -1 )·s -1 ], d =0.27) and lactic anaerobic energy (27.4±7.9 vs",
+   "review": "design",
+   "note": "repeated measures, n=20: a paired d can exceed the between-arm range"
+  },
+  {
+   "pmid": "36452984",
+   "pair": "376.5±101.4 vs. 337.1±113.3",
+   "d": "d =0.68",
+   "range": [
+    0.26,
+    0.39
+   ],
+   "sentence": "Higher values of peak and mean peak forces (479.4±134.7 vs. 423.2±153.0, d =0.83 and 376.5±101.4 vs. 337.1±113.3 N, d =0.68), peak oxygen uptake (47.9±7.5 vs. 45.3±7.3 mL∙kg -1 ∙min -1 , d =0.19), peak blood lactate concentration (7.9±1.6 vs. 6.9±1.7 mmol∙L -1 , d =0.16), blood lactate increasing speed (0.08±0.01 vs. 0.07±0.06 [(mmol·L -1 )·s -1 ], d =0.27) and lactic anaerobic energy (27.4±7.9 vs",
+   "review": "design",
+   "note": "repeated measures, n=20: a paired d can exceed the between-arm range"
+  },
+  {
+   "pmid": "36452984",
+   "pair": "7.9±1.6 vs. 6.9±1.7",
+   "d": "d =0.16",
+   "range": [
+    0.39,
+    0.71
+   ],
+   "sentence": "Higher values of peak and mean peak forces (479.4±134.7 vs. 423.2±153.0, d =0.83 and 376.5±101.4 vs. 337.1±113.3 N, d =0.68), peak oxygen uptake (47.9±7.5 vs. 45.3±7.3 mL∙kg -1 ∙min -1 , d =0.19), peak blood lactate concentration (7.9±1.6 vs. 6.9±1.7 mmol∙L -1 , d =0.16), blood lactate increasing speed (0.08±0.01 vs. 0.07±0.06 [(mmol·L -1 )·s -1 ], d =0.27) and lactic anaerobic energy (27.4±7.9 vs",
+   "review": "open",
+   "note": "repeated measures, n=20: 0.16 sits below the paired floor (0.26), while the same sentence prints larger d for forces"
+  },
+  {
+   "pmid": "36452984",
+   "pair": "27.4±7.9 vs. 23.4±8.1",
+   "d": "d =0.23",
+   "range": [
+    0.36,
+    0.52
+   ],
+   "sentence": "Higher values of peak and mean peak forces (479.4±134.7 vs. 423.2±153.0, d =0.83 and 376.5±101.4 vs. 337.1±113.3 N, d =0.68), peak oxygen uptake (47.9±7.5 vs. 45.3±7.3 mL∙kg -1 ∙min -1 , d =0.19), peak blood lactate concentration (7.9±1.6 vs. 6.9±1.7 mmol∙L -1 , d =0.16), blood lactate increasing speed (0.08±0.01 vs. 0.07±0.06 [(mmol·L -1 )·s -1 ], d =0.27) and lactic anaerobic energy (27.4±7.9 vs",
+   "review": "open",
+   "note": "repeated measures, n=20: 0.23 sits just below the paired floor (0.24)"
+  },
+  {
+   "pmid": "38146741",
+   "pair": "83.31 ± 6.47 vs. 79.21 ± 6.17",
+   "d": "d : 10.51",
+   "range": [
+    0.47,
+    0.67
+   ],
+   "sentence": "Results In the control group, the diastolic blood pressure (DBP) was significantly improved compared with those before treatment (83.31 ± 6.47 vs. 79.21 ± 6.17, p d : 10.51), as was the case with the nitric oxide (NO) levels and TCM syndrome points (35.71 ± 4.58 vs. 43.96 ± 5.17, 9.57 ± 2.63 vs. 5.38 ± 1.79, p d : 0.90).",
+   "review": "parse",
+   "note": "\"p d : 10.51\" is a garbled statistic, not a d"
+  }
+ ]
+}

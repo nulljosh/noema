@@ -71,6 +71,12 @@ A t, z, chi-square or F statistic printed with its P fixes that P, which is the 
 
 747 ratios can be compared, and 17 are far off. All 17 were read by hand. 3, in 2 abstracts, are clear mismatches. One trial with 70 patients per arm prints discharge rates of 52.9% and 71% with an OR of 4.75 (95% CI 2.1 to 10.8). The crude OR is 2.2, and the printed P = 0.029 fits 2.2, not 4.75. Another calls its ORs univariate, yet 76.1% vs 48.8% in 46 and 43 patients gives 3.3, not the printed 1.78. 6 more are open notes with no adjustment named, like an OR of 14.61 beside 41% vs 27%, where the crude OR is 1.9. 7 are explained by a design the abstract names elsewhere (cluster trials, multilevel or adjusted models, exact tests), and 1 is a misread. Each is an open note until the full text is read. One search found no scan like this. Results are in `crude-2015-2024.json`.
 
+## Does Cohen's d match the means?
+
+"4.1 ± 2.6 vs 5.7 ± 2.4, d = 0.64" fixes d up to the choice of SD. `cohen.py` allows the pooled SD, either arm's SD alone and a small-sample shrink of up to a quarter, over every rounding. Sentences about change, baseline, differences, adjusted values or standard errors are skipped. A d is flagged only when it sits more than 1.5 times outside that range.
+
+Only 62 d values sit right after a mean ± SD pair, and 14 are far off. All 14 were read by hand. None is a clear mismatch. 4 fit exactly once the ± is read as a standard error of the mean rather than an SD, like a crossover in 8 men where 22.4 ± 6.1 vs 12.2 ± 4.3 gives d 0.68, the printed 0.67. 4 are within-subject designs, where a paired d can be larger. 1 is a misread. 5, in 3 abstracts, are open notes. The clearest is a parallel trial with 55 women per arm that prints d = 0.030 for 77.52 ± 18.27 vs 72.35 ± 16.39. The SD gives 0.30 and a standard error gives 0.04. Results are in `cohen-2015-2024.json`.
+
 ## Are flagged papers retracted more often?
 
 No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. The slips also do not cluster: of 440 abstracts flagged by any check, only one (PMID 39086232) fails two. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.
