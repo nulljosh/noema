@@ -1,0 +1,308 @@
+{
+ "source": "235,860 randomized trial abstracts, PubMed 2015-2024 (the cache the other checks use)",
+ "compared": 747,
+ "far": 17,
+ "clear": 3,
+ "clear_abstracts": 2,
+ "open": 6,
+ "explained": 7,
+ "parse": 1,
+ "rows": [
+  {
+   "pmid": "38060284",
+   "kind": "OR",
+   "arms": "79% vs 8%",
+   "ratio": "odds ratio = 72.03",
+   "crude": [
+    0.02,
+    0.03,
+    39.3,
+    41.75,
+    45.03,
+    47.83
+   ],
+   "sentence": "Cancer screening was higher in the self-sampling arm than the standard-of-care arm (colorectal: 75% vs 13%, respectively, odds ratio = 31.32, 95% confidence interval = 5.20 to 289.33; cervical: 79% vs 8%, odds ratio = 72.03, 95% confidence interval = 9.15 to 1141.41).",
+   "review": "explained",
+   "note": "Fisher exact tests: the conditional estimate can sit far from the crude OR when one arm has few events"
+  },
+  {
+   "pmid": "27193613",
+   "kind": "OR",
+   "arms": "66% vs. 43%",
+   "ratio": "OR 6·33",
+   "crude": [
+    0.37,
+    0.39,
+    0.41,
+    2.47,
+    2.57,
+    2.58,
+    2.69
+   ],
+   "sentence": "At 1 month follow-up caregivers' compliance in intervention DCCs was 66% vs. 43% in control DCCs (OR 6·33, 95% CI 3·71-10·80), and at 6 months 59% vs. 44% (OR 4·13, 95% CI 2·33-7·32).",
+   "review": "explained",
+   "note": "cluster trial, multilevel logistic regression"
+  },
+  {
+   "pmid": "27193613",
+   "kind": "OR",
+   "arms": "59% vs. 44%",
+   "ratio": "OR 4·13",
+   "crude": [
+    0.52,
+    0.55,
+    0.57,
+    1.76,
+    1.83,
+    1.91
+   ],
+   "sentence": "At 1 month follow-up caregivers' compliance in intervention DCCs was 66% vs. 43% in control DCCs (OR 6·33, 95% CI 3·71-10·80), and at 6 months 59% vs. 44% (OR 4·13, 95% CI 2·33-7·32).",
+   "review": "explained",
+   "note": "cluster trial, multilevel logistic regression"
+  },
+  {
+   "pmid": "27612486",
+   "kind": "OR",
+   "arms": "19 % improved vs. 44 %",
+   "ratio": "OR 0.62",
+   "crude": [
+    0.28,
+    0.29,
+    0.3,
+    0.31,
+    3.18,
+    3.31,
+    3.39,
+    3.53
+   ],
+   "sentence": "Key results There were no significant differences in error reduction (19 % vs. 11 %, OR of improvement 1.84, 95 % CI 0.70, 4.82, p = 0.21) or quality of care improvement (19 % improved vs. 44 %, OR 0.62, 95 % CI 0.58, 1.21, p = 0.42) between intervention and control clinics.",
+   "review": "explained",
+   "note": "cluster trial, multilevel regression"
+  },
+  {
+   "pmid": "29980989",
+   "kind": "OR",
+   "arms": "52.9% of the patients in PSI and 71%",
+   "ratio": "OR 4.75",
+   "crude": [
+    0.45,
+    0.47,
+    2.12,
+    2.13,
+    2.23,
+    2.24
+   ],
+   "sentence": "Hospital discharge during the first 48 h after surgery was possible in 52.9% of the patients in PSI and 71% in TAP-lap (OR 4.75; 95% CI 2.1-10.8; p = 0.029).",
+   "review": "clear",
+   "note": "simple two-arm trial, 70 per arm; crude OR from 37/70 and 50/70 is 2.2, and the printed P = 0.029 fits 2.2, not the printed OR 4.75 or its CI 2.1-10.8"
+  },
+  {
+   "pmid": "29956434",
+   "kind": "RR",
+   "arms": "77.6% vs 98.7%",
+   "ratio": "risk ratio [RR] =0.47",
+   "crude": [
+    0.06,
+    0.79,
+    1.27,
+    16.56,
+    16.63,
+    17.88,
+    17.96
+   ],
+   "sentence": "Results The need for initial PGE1 analogue (77.6% vs 98.7%, risk ratio [RR] =0.47, 95% confidence intervals [95% CI] =0.38-0.59, P 0.05).",
+   "review": "open",
+   "note": "no adjustment named; crude RR is 0.79 (or 17 on the complement), printed 0.47 with a tight CI"
+  },
+  {
+   "pmid": "30224032",
+   "kind": "OR",
+   "arms": "76.1% vs. 48.8%",
+   "ratio": "OR) 1.778",
+   "crude": [
+    0.3,
+    3.32,
+    3.34,
+    3.36
+   ],
+   "sentence": "Results Patients with rise of 1 st follow-up Na (n = 43) had an average admission Na of 130.1 meq/L which increased to 134 meq/L at day 3 (P st follow up Na (n = 46) had an admission Na of 131 meq/L which decreased to 128.9 meq/L at day 3 (P st follow-up Na had higher frequency of rehospitalization (76.1% vs. 48.8%, univariate Odds ratio (OR) 1.778, 95% CI 1.174-2.693, P = 0.009) and composite end",
+   "review": "clear",
+   "note": "the abstract calls it univariate; with n = 46 and 43 the crude ORs are 3.3 and 3.9, not 1.78"
+  },
+  {
+   "pmid": "30224032",
+   "kind": "OR",
+   "arms": "89.1% vs. 67.4%",
+   "ratio": "OR 1.779",
+   "crude": [
+    0.25,
+    3.92,
+    3.94,
+    3.97,
+    3.98
+   ],
+   "sentence": "Results Patients with rise of 1 st follow-up Na (n = 43) had an average admission Na of 130.1 meq/L which increased to 134 meq/L at day 3 (P st follow up Na (n = 46) had an admission Na of 131 meq/L which decreased to 128.9 meq/L at day 3 (P st follow-up Na had higher frequency of rehospitalization (76.1% vs. 48.8%, univariate Odds ratio (OR) 1.778, 95% CI 1.174-2.693, P = 0.009) and composite end",
+   "review": "clear",
+   "note": "the abstract calls it univariate; with n = 46 and 43 the crude ORs are 3.3 and 3.9, not 1.78"
+  },
+  {
+   "pmid": "28983665",
+   "kind": "OR",
+   "arms": "76% in the intervention group and 30%",
+   "ratio": "odds ratio (OR) 4.3",
+   "crude": [
+    0.13,
+    0.14,
+    7.02,
+    7.36,
+    7.42,
+    7.78
+   ],
+   "sentence": "On the 10th day, healing rate based on Amsel and Nugent criteria was 76% in the intervention group and 30% in the control group [odds ratio (OR) 4.3; 95% confidence interval (CI) 2.7-9.4].",
+   "review": "open",
+   "note": "50 per arm, no adjustment named; crude OR 7.4 (CI about 3-18), printed 4.3 (CI 2.7-9.4)"
+  },
+  {
+   "pmid": "31108564",
+   "kind": "OR",
+   "arms": "26.2% vs 3.4%",
+   "ratio": "odds ratio 0.04",
+   "crude": [
+    0.1,
+    9.91,
+    9.96,
+    10.22,
+    10.27
+   ],
+   "sentence": "Significantly more medication changes because of PPOs and PIMs were made in the intervention group than in the control group (PPOs 26.2% vs 3.4%, odds ratio 0.04 [95% confidence interval 0.003-0.46] P Conclusion Prescribing recommendations generated with the help of STRIP Assistant improved appropriate prescribing in a preoperative geriatric outpatient clinic but did not affect postoperative morta",
+   "review": "explained",
+   "note": "cluster-randomized trial"
+  },
+  {
+   "pmid": "30940108",
+   "kind": "OR",
+   "arms": "41% vs. 27%",
+   "ratio": "OR = 14·61",
+   "crude": [
+    0.51,
+    0.53,
+    0.56,
+    1.79,
+    1.87,
+    1.89,
+    1.97
+   ],
+   "sentence": "Compared with the PNI, WAP was associated with greater weight loss overall (- 4·2 kg vs. - 2·3 kg; difference = - 1·9 kg, 95% CI: -3·7 to - 0·1; P = 0·04) and was more likely to generate a weight loss of at least 5% at 12 months (41% vs. 27%, OR = 14·61 95% CI: 2·32 to 91·96, P = 0·004).",
+   "review": "open",
+   "note": "no adjustment named; crude OR about 1.9, printed 14.61, whose own CI and P agree with each other"
+  },
+  {
+   "pmid": "32912462",
+   "kind": "RR",
+   "arms": "0.3% and 2.0%",
+   "ratio": "RR: 0.070",
+   "crude": [
+    0.12,
+    0.13,
+    0.17,
+    0.18,
+    0.98,
+    1.02,
+    5.57,
+    5.86,
+    7.8,
+    8.2
+   ],
+   "sentence": "CA-AKI and PE rates in the UFR-guided group and LVEDP-guided group were 5.7% and 10.0% (RR: 0.570; 95% CI: 0.300 to 0.960; p = 0.048), and, respectively, 0.3% and 2.0% (RR: 0.070; 95% CI: 0.020 to 1.160; p = 0.069).",
+   "review": "open",
+   "note": "tiny counts (0.3% vs 2.0%); crude RR about 0.15, printed 0.070"
+  },
+  {
+   "pmid": "32071117",
+   "kind": "OR",
+   "arms": "5% of their baseline body weight, compared with 12%",
+   "ratio": "OR, 7.9",
+   "crude": [
+    0.33,
+    0.36,
+    0.41,
+    0.45,
+    2.23,
+    2.45,
+    2.76,
+    3.03
+   ],
+   "sentence": "At 6 months, 51% of women randomized to POWER-remote lost ≥5% of their baseline body weight, compared with 12% in the self-directed arm [OR, 7.9; 95% confidence interval (CI), 2.6-23.9; P = 0.0003]; proportion were similar at 12 months (51% vs 17%, respectively, P = 0.003).",
+   "review": "parse",
+   "note": "5% is a weight-loss threshold, not an arm rate"
+  },
+  {
+   "pmid": "33947195",
+   "kind": "OR",
+   "arms": "25 % versus 17 %",
+   "ratio": "OR: 0.24",
+   "crude": [
+    0.58,
+    0.61,
+    0.62,
+    0.65,
+    1.53,
+    1.61,
+    1.64,
+    1.73
+   ],
+   "sentence": "In the group receiving the probiotic, abdominal pain decreased in 42 % of patients, compared with 19 % in the control group (OR: 0.27; CI, 0.13-0.58; p < 0.001), and abdominal distension decreased in 25 % versus 17 % in the control group (OR: 0.24; IC, 0.19-0.84; p < 0.001); Conclusions: treatment with L. reuteri only reduced abdominal pain and distension.",
+   "review": "open",
+   "note": "80 patients, no adjustment named; crude OR about 0.6, printed 0.24"
+  },
+  {
+   "pmid": "37268503",
+   "kind": "OR",
+   "arms": "18.2% versus 6.6%",
+   "ratio": "OR 5.7",
+   "crude": [
+    0.31,
+    0.32,
+    3.11,
+    3.13,
+    3.16,
+    3.19
+   ],
+   "sentence": "Patients with positive bile cultures showed higher isolated OSI rates with perioperative compared to prolonged prophylaxis (18.2% versus 6.6%, OR 5.7, 95% CI: 1.3-23.9).",
+   "review": "explained",
+   "note": "ORs adjusted for surgical approach and duct diameter"
+  },
+  {
+   "pmid": "36709485",
+   "kind": "OR",
+   "arms": "9.5% vs. 2.5%",
+   "ratio": "odds ratio [OR]: 6.4",
+   "crude": [
+    0.24,
+    0.25,
+    3.99,
+    4.03,
+    4.16,
+    4.2
+   ],
+   "sentence": "Failure to rewire a jailed vessel during any strategy was more common when jailed wires were not used (9.5% vs. 2.5%, odds ratio [OR]: 6.4, p = 0.002).",
+   "review": "open",
+   "note": "per-protocol cohort comparison, method not named; crude OR about 4 and 0.36, printed 6.4 and 0.2"
+  },
+  {
+   "pmid": "37789389",
+   "kind": "OR",
+   "arms": "57.2% versus 44.2%",
+   "ratio": "OR: 0.34",
+   "crude": [
+    0.59,
+    0.6,
+    1.68,
+    1.69
+   ],
+   "sentence": "After 33 months the effect was weaker in the ITT analysis (prevalence 59.6% versus 49.9%, OR: 0.60, 95%CI:0.32-1.13, p-value: 0.1131) but still evident in the PP analysis (57.2% versus 44.2%, OR: 0.34, 95%CI: 0.16-0.71, p-value: 0.0051).",
+   "review": "explained",
+   "note": "cluster randomized factorial trial"
+  }
+ ]
+}
