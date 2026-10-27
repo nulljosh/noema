@@ -8,7 +8,9 @@ Total mean must lie between the lowest and highest arm mean (`outside`). With th
 count-weighted mean of the arms; a Total more than ten roundings off is `far`. Missing values can explain a far
 Total, but not one that lands, to the last digit, on the plain average of the arm means when the arms differ in
 size: that is a Total typed as AVERAGE(arms) (`unweighted`). `chance` is how many far Totals would land on the
-plain average by luck if they fell anywhere between the arm means. Equal analyzed counts make the plain average
+plain average by luck if they fell anywhere between the arm means. `decoy` counts far Totals with both the plain
+average and its mirror image about the weighted mean inside the arm range, then how many land on each: missing
+data would scatter Totals to both sides alike, an AVERAGE only to the plain one. Equal analyzed counts make the plain average
 right, so `clear` keeps only arms whose sizes differ at least twofold, with no note about missing participants.
 """
 import json
@@ -57,6 +59,18 @@ def _counts(denoms):
     return {}
 
 
+def sd_span(arms):
+    """(lo, hi) for the pooled SD over every rounding, allowing a divisor of N or N - 1; arms are (n, m, tm, s, ts)."""
+    N = sum(a[0] for a in arms)
+    m = sum(n * mv for n, mv, *_ in arms) / N
+    t = 2 * max(a[2] for a in arms)
+    within_lo = sum((n - 1) * max(0, sv - ts) ** 2 for n, _, _, sv, ts in arms)
+    within_hi = sum(max(n - 1, 1) * (sv + ts) ** 2 for n, _, _, sv, ts in arms)
+    between_lo = sum(n * max(0, abs(mv - m) - t) ** 2 for n, mv, *_ in arms)
+    between_hi = sum(n * (abs(mv - m) + t) ** 2 for n, mv, *_ in arms)
+    return (within_lo + between_lo) ** 0.5 / N ** 0.5, ((within_hi + between_hi) / max(N - 1, 1)) ** 0.5
+
+
 def rows(study):
     """One dict per single-row mean measure whose Total counts exactly the listed arms."""
     groups = study.get('groups', [])
@@ -85,19 +99,26 @@ def rows(study):
         p_tol = sum(t for _, _, t in arms) / len(arms) + tt
         lo, hi = min(m - t for _, m, t in arms), max(m + t for _, m, t in arms)
         sds = [_num(cells[i].get('spread')) for i in ids + [total]]
+        pooled = None if None in sds else sd_span([a + sd for a, sd in zip(arms, sds)])
+        mirror = 2 * weighted - plain  # a decoy: as far from the weighted mean as the plain average, other side
+        decoy = abs(weighted - plain) > 2 * p_tol and lo <= plain <= hi and lo <= mirror <= hi
         note = bool(measure.get('populationDescription') or study.get('populationDescription'))
         yield {'measure': measure.get('title', ''), 'total': tm, 'note': note,
                'unequal': 2 * min(c for c, _, _ in arms) <= max(c for c, _, _ in arms), 'weighted': round(weighted, 4),
                'plain': round(plain, 4), 'outside': tm + tt < lo or tm - tt > hi,
                'far': abs(tm - weighted) > 10 * w_tol,
                'unweighted': abs(tm - plain) <= p_tol + 1e-9 and abs(weighted - plain) > 2 * p_tol,
+               'decoy': decoy, 'on_plain': decoy and abs(tm - plain) <= p_tol + 1e-9,
+               'on_mirror': decoy and abs(tm - mirror) <= p_tol + 1e-9,
                'chance': min(1, 2 * p_tol / (hi - lo)) if hi > lo else 1,
                'sd_plain': None not in sds and abs(sds[-1][0] - sum(s for s, _ in sds[:-1]) / len(arms))
-                           <= sum(t for _, t in sds) / len(arms) + 1e-9}
+                           <= sum(t for _, t in sds) / len(arms) + 1e-9,
+               'sd_outside': pooled is not None and (sds[-1][0] + sds[-1][1] < pooled[0]
+                                                     or sds[-1][0] - sds[-1][1] > pooled[1])}
 
 
 def scan(studies):
-    out = {'checked': 0, 'outside': [], 'far': 0, 'chance': 0.0, 'unweighted': []}
+    out = {'checked': 0, 'outside': [], 'far': 0, 'chance': 0.0, 'unweighted': [], 'decoy': [0, 0, 0]}
     for nct, study in studies.items():
         for row in rows(study):
             out['checked'] += 1
@@ -106,6 +127,8 @@ def scan(studies):
             if row['far']:
                 out['far'] += 1
                 out['chance'] += row['chance']
+                for k, key in enumerate(('decoy', 'on_plain', 'on_mirror')):
+                    out['decoy'][k] += row[key]
                 if row['unweighted']:
                     out['unweighted'].append({'nct': nct, **row})
     out['chance'] = round(out['chance'], 1)
@@ -120,7 +143,9 @@ if __name__ == '__main__':
     out['studies'] = len(studies)
     out['trials_unweighted'] = len({r['nct'] for r in out['unweighted']})
     out['sd_plain_too'] = sum(r['sd_plain'] for r in out['unweighted'])
+    out['sd_plain_and_wrong'] = sum(r['sd_plain'] and r['sd_outside'] for r in out['unweighted'])
     clear = [r for r in out['unweighted'] if r['unequal'] and not r['note']]  # missing data cannot even the arms out
     out['clear'], out['trials_clear'] = len(clear), len({r['nct'] for r in clear})
+    out['clear_sd_plain_and_wrong'] = sum(r['sd_plain'] and r['sd_outside'] for r in clear)
     out['clear_rows'] = clear
     print(json.dumps(out, indent=1))
