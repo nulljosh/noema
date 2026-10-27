@@ -16,6 +16,21 @@ class CycleLeanTests(unittest.TestCase):
             i, p = cycle_lean.lean_repeat(machine)
             self.assertGreater(p, 0)
 
+    def test_every_translated_cycler_has_a_certificate(self):
+        moved = []
+        busy.enumerate_machines(3, 200, translated_found=moved)
+        self.assertEqual(len(moved), 3027)
+        for machine in moved:
+            mirror = {k: (w, -m, n) for k, (w, m, n) in machine.items()}
+            cert = cycle_lean.lean_translated(machine) or cycle_lean.lean_translated(mirror)
+            self.assertIsNotNone(cert, machine)
+
+    def test_tcycles_rejects_a_wrong_period(self):
+        machine = {(0, 0): (1, 1, 0)}  # writes 1 and moves right forever
+        self.assertTrue(cycle_lean.tcycles(machine, 0, 1, 0))
+        self.assertFalse(cycle_lean.tcycles(machine, 0, 0, 0))
+        self.assertFalse(cycle_lean.tcycles({(0, 0): (1, 1, 1)}, 0, 1, 0))
+
     def test_halter_has_no_repeat(self):
         self.assertIsNone(cycle_lean.lean_repeat({(0, 0): (1, 1, 1)}))
 

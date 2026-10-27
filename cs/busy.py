@@ -303,13 +303,14 @@ def decide_holdout(machine, states):
     return None
 
 
-def enumerate_machines(states, cap, flagged=None, symbols=2, cyclers=None):
+def enumerate_machines(states, cap, flagged=None, symbols=2, cyclers=None, translated_found=None):
     """Every machine reachable this way is distinct in behaviour from a blank tape.
     The first move is fixed to the right; the mirror image behaves the same.
     A machine that reaches the cap is a holdout. decide_holdout tries the sound deciders in turn. A holdout none of
     them settles is rerun at LATE_CAP through simulate, which catches a longer translated cycle or cycle, or a
     halt, which is then counted and its maxima recorded. Machines the deciders prove non-halting are appended to
-    flagged, when given, and machines caught in a repeated configuration to cyclers.
+    flagged, when given, machines caught in a repeated configuration to cyclers, and translated cyclers to
+    translated_found.
     symbols > 2 counts machines over that many tape symbols, writing any of them."""
     far.SYMBOLS = symbols
     best_steps, best_ones, halters, holdouts, cycles, translated = 0, 0, 0, 0, 0, 0
@@ -326,6 +327,8 @@ def enumerate_machines(states, cap, flagged=None, symbols=2, cyclers=None):
             continue
         if outcome == 'translated':
             translated += 1
+            if translated_found is not None:
+                translated_found.append(dict(machine))
             continue
         if outcome == 'cap':
             name = decide_holdout(machine, states)
