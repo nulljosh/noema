@@ -275,6 +275,9 @@ int main(int argc, char **argv) {
     node(0, 0, 1, 1);
     p128("halters", halters); p128("stepsum", stepsum);
     for (int i = 1; i < (1 << 16); i++) if (!seen[i]) { lowmiss = i; break; }
+    long long runtimes = 0;  // distinct halting times below 2^16; whole set only in one process
+    for (int i = 1; i < (1 << 16); i++) runtimes += seen[i];
+    printf("runtimes_below_65536 %lld\n", runtimes);
     printf("maxstep %lld lazy %lld nodes %lld leaves %lld capped %lld cycles %lld tcs %lld overflow %lld backward %lld ngram %lld\n",
            maxstep, lowmiss, nodes, leaves, capped, cycles, tcs, overflow, bws, ngs);
     return 0;

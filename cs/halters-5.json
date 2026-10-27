@@ -1706,5 +1706,19 @@
  "cross_checks": {
   "halters": "equals A004147(5) = 26,751,695,615,616, which OEIS credits to a separate enumeration by Shawn Ligocki (Count.py)",
   "cap_2000_run": "a single-process run at cap 2000 gives 26,751,695,551,680 machines and 64,014,052,916,160 steps over 48,379,561 leaves; the long halters add 333 leaves, 63,936 machines and 54,812,417,088 steps, exactly the gap"
+ },
+ "runtime_spectrum": {
+  "size": 1207,
+  "up_to_2000": 919,
+  "past_2000": 288,
+  "note": "Distinct halting times of 5-state machines from blank (Aaronson, The Busy Beaver Frontier, section 5.9, asks how many there are). Times up to 2000 come from a single-process run at cap 2000, which finds every halt by step 2000; times past 2000 are the distinct steps in long_halters.",
+  "second_longest": 23554764,
+  "gap_to_bb5": 23622106,
+  "smaller_n": {
+   "1": 1,
+   "2": 6,
+   "3": 21,
+   "4": 79
+  }
  }
 }
