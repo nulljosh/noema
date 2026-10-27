@@ -14,6 +14,7 @@ that Lean checks by `decide`, given witnesses computed below:
 """
 import json
 import os
+import re
 
 import far
 
@@ -83,8 +84,50 @@ def oriented(row):
     return machine
 
 
+def write_tree():
+    """BB3Tree.lean replays busy.py's 3-state tree in Lean against the three lists of machines proved never to halt."""
+    folder = os.path.join(HERE, 'proofs', 'FarCerts')
+    mods = lambda stem: sorted((f[:-5] for f in os.listdir(folder) if re.fullmatch(stem + r'\d+\.lean', f)),
+                               key=lambda m: int(m[len(stem):]))
+    low = lambda m: m[0].lower() + m[1:]
+    cyc, tr, small = mods('Cycles'), mods('Translated'), mods('Small')
+    names = ['m_' + row['index'] for row in json.load(open(os.path.join(HERE, 'far-certificates-3.json')))]
+
+    def listed(name, parts, stem):
+        joined = '%s_%s' % (low(parts[0]), stem)
+        for m in parts[1:]:
+            joined = 'forall_append (%s) %s_%s' % (joined, low(m), stem)
+        return ['def %s : List Machine := ((%s).filter (·.1.n == 3)).map (·.1)' % (name, ' ++ '.join(map(low, parts))),
+                'theorem %s_never_halt : ∀ x ∈ %s, ¬ Halts x := by' % (name, name),
+                '  intro x hx',
+                '  unfold %s at hx' % name,
+                '  obtain ⟨y, hy, rfl⟩ := List.mem_map.1 hx',
+                '  exact (%s) y (List.mem_filter.1 hy).1' % joined, '']
+
+    proof = 'fun _ h => nomatch h'
+    for n in reversed(names):
+        proof = 'List.forall_mem_cons.2 ⟨%s_never_halts, %s⟩' % (n, proof)
+    out = ['import FarCerts.Explore'] + ['import FarCerts.' + m for m in cyc + tr + small] + [
+        '', 'set_option maxRecDepth 100000', '', 'namespace FAR', '']
+    out += listed('cyc3', cyc, 'never_halt') + listed('tr3', tr, 'never_halt')
+    out += ['def far3 : List Machine := [%s]' % ', '.join(names),
+            'theorem far3_never_halt : ∀ x ∈ far3, ¬ Halts x :=', '  ' + proof, '',
+            '/-- No 2-symbol, 3-state machine halts after more than 20 steps from blank. -/',
+            'theorem bb3_steps_le : ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=',
+            '  bb3_of_explore (cyc3, tr3, far3) ⟨cyc3_never_halt, tr3_never_halt, far3_never_halt⟩ (by decide +kernel)',
+            '',
+            'def champion : Machine := { S := 2, n := 3, rules := [(0, 0, 1, true, 1), (1, 0, 1, false, 1), '
+            '(1, 1, 0, true, 2), (2, 0, 1, false, 2), (2, 1, 1, false, 0)] }',
+            '',
+            '/-- BB(3) = 21: one machine takes 20 steps and halts on its 21st, and none takes longer. -/',
+            'theorem bb3 : (∃ M, WF M ∧ haltsAt M 20 = true) ∧ ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=',
+            '  ⟨⟨champion, wf_of_rules (by decide), by decide +kernel⟩, bb3_steps_le⟩', '', 'end FAR', '']
+    open(os.path.join(folder, 'BB3Tree.lean'), 'w').write('\n'.join(out))
+
+
 def write_root():
     """proofs/FarCerts.lean imports every module in proofs/FarCerts, so far_lean.py and cycle_lean.py share it."""
+    write_tree()
     mods = sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'proofs', 'FarCerts')) if f.endswith('.lean'))
     open(os.path.join(HERE, 'proofs', 'FarCerts.lean'), 'w').write(''.join('import FarCerts.%s\n' % m for m in mods))
 

@@ -1,4 +1,5 @@
 import FarCerts.BB3
+import FarCerts.BB3Tree
 import FarCerts.Basic
 import FarCerts.Certs1
 import FarCerts.Certs2
@@ -12,6 +13,7 @@ import FarCerts.Cycles2
 import FarCerts.Cycles3
 import FarCerts.Cycles4
 import FarCerts.Cycles5
+import FarCerts.Explore
 import FarCerts.Halt
 import FarCerts.Halts1
 import FarCerts.Halts10
@@ -74,3 +76,4 @@ import FarCerts.Translated6
 import FarCerts.Translated7
 import FarCerts.Translated8
 import FarCerts.Translated9
+import FarCerts.Tree
