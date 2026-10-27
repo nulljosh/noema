@@ -14,7 +14,7 @@ def study(total_mean, total_sd='11.7', total_n='59'):
             'denoms': [{'units': 'Participants', 'counts': [{'groupId': 'BG000', 'value': '41'},
                                                             {'groupId': 'BG001', 'value': '18'},
                                                             {'groupId': 'BG002', 'value': total_n}]}],
-            'measures': [{'title': 'Age', 'classes': [{'categories': [{'measurements': [
+            'measures': [{'title': 'Age', 'paramType': 'MEAN', 'classes': [{'categories': [{'measurements': [
                 cell('BG000', '40.7', '11.1'), cell('BG001', '58.5', '12.4'),
                 cell('BG002', total_mean, total_sd)]}]}]}]}
 
@@ -33,6 +33,17 @@ class RegistryTests(unittest.TestCase):
         row, = registry.rows(study('75.0'))
         self.assertTrue(row['outside'] and row['far'] and not row['unweighted'])
         self.assertEqual(list(registry.rows(study('75.0', total_n='60'))), [])
+
+
+    def test_counts(self):
+        cell = lambda g, v: {'groupId': g, 'value': v}
+        s = study('46.1')
+        s['measures'] = [{'title': 'Sex: Female, Male', 'paramType': 'COUNT_OF_PARTICIPANTS', 'classes': [{'categories': [
+            {'measurements': [cell('BG000', '20'), cell('BG001', '9'), cell('BG002', '29')]},
+            {'measurements': [cell('BG000', '22'), cell('BG001', '9'), cell('BG002', '30')]}]}]}]
+        miss, over = registry.counts(s)
+        self.assertEqual(miss, ['Sex: Female, Male'])
+        self.assertEqual(over, [('Sex: Female, Male', 'BG000', 42, 41)])
 
 
 if __name__ == '__main__':

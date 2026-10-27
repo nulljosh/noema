@@ -1,6 +1,6 @@
 """Check the Total column of ClinicalTrials.gov baseline tables against the arms beside it.
 
-    python3 registry.py fetch BASELINE_JSON    # every study with posted results, mean/SD measures only (~1 h)
+    python3 registry.py fetch BASELINE_JSON    # every study with posted results, mean/SD and count measures (~1 h)
     python3 registry.py BASELINE_JSON
 
 A posted baseline table gives each arm's count, mean and SD, then a Total. Whatever participants are missing, the
@@ -31,8 +31,8 @@ def fetch(path):
             page = json.load(response)
         for s in page.get('studies', []):
             module = s.get('resultsSection', {}).get('baselineCharacteristicsModule') or {}
-            measures = [m for m in module.get('measures', []) if m.get('paramType') == 'MEAN'
-                        and m.get('dispersionType') == 'STANDARD_DEVIATION']
+            measures = [m for m in module.get('measures', []) if m.get('paramType') == 'COUNT_OF_PARTICIPANTS'
+                        or m.get('dispersionType') == 'STANDARD_DEVIATION']
             if measures:
                 keep[s['protocolSection']['identificationModule']['nctId']] = {**module, 'measures': measures}
         if not page.get('nextPageToken'):
@@ -82,7 +82,7 @@ def rows(study):
     base = _counts(study.get('denoms'))
     for measure in study['measures']:
         classes = measure.get('classes', [])
-        if len(classes) != 1 or len(classes[0].get('categories', [])) != 1:
+        if measure.get('paramType') != 'MEAN' or len(classes) != 1 or len(classes[0].get('categories', [])) != 1:
             continue
         counts = _counts(measure.get('denoms')) or base
         cells = {x['groupId']: x for x in classes[0]['categories'][0].get('measurements', [])}
@@ -117,6 +117,32 @@ def rows(study):
                                                      or sds[-1][0] - sds[-1][1] > pooled[1])}
 
 
+EXHAUSTIVE = ('Sex: Female, Male', 'Age, Categorical', 'Ethnicity (NIH/OMB)', 'Race (NIH/OMB)')
+
+
+def counts(study):
+    """(arm sums that miss the Total, categories summed past their arm's count) over the standard count measures."""
+    groups, base, miss, over = study.get('groups', []), _counts(study.get('denoms')), [], []
+    total = [g['id'] for g in groups if g.get('title', '').strip().lower() == 'total']
+    for measure in study['measures']:
+        classes = measure.get('classes', [])
+        if measure.get('paramType') != 'COUNT_OF_PARTICIPANTS' or len(classes) != 1:
+            continue
+        n = _counts(measure.get('denoms')) or base
+        cells = [{x['groupId']: x.get('value', '') for x in c.get('measurements', [])}
+                 for c in classes[0].get('categories', [])]
+        if not cells or not all(v.isdigit() for c in cells for v in c.values()):
+            continue
+        cells = [{k: int(v) for k, v in c.items()} for c in cells]
+        arms = [g['id'] for g in groups if g['id'] not in total]
+        if len(total) == 1 and len(arms) > 1 and all(i in c for c in cells for i in arms + total):
+            miss += [measure['title'] for c in cells if sum(c[i] for i in arms) != c[total[0]]]
+        if measure.get('title') in EXHAUSTIVE:
+            over += [(measure['title'], g['id'], sum(c[g['id']] for c in cells), n[g['id']]) for g in groups
+                     if g['id'] in n and all(g['id'] in c for c in cells) and sum(c[g['id']] for c in cells) > n[g['id']]]
+    return miss, over
+
+
 def scan(studies):
     out = {'checked': 0, 'outside': [], 'far': 0, 'chance': 0.0, 'unweighted': [], 'decoy': [0, 0, 0]}
     for nct, study in studies.items():
@@ -148,4 +174,8 @@ if __name__ == '__main__':
     out['clear'], out['trials_clear'] = len(clear), len({r['nct'] for r in clear})
     out['clear_sd_plain_and_wrong'] = sum(r['sd_plain'] and r['sd_outside'] for r in clear)
     out['clear_rows'] = clear
+    tallies = [counts(study) for study in studies.values()]
+    out['count_totals_missed'] = sum(len(m) for m, _ in tallies)
+    out['count_over'] = sum(len(o) for _, o in tallies)
+    out['count_over_doubled'] = sum(got == 2 * n for _, o in tallies for _, _, got, n in o)  # crossover arms
     print(json.dumps(out, indent=1))

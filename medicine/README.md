@@ -85,11 +85,13 @@ In 323 pairs, 1 is flagged, and it is a misread ("Pathway 1 and 25 days"). No cl
 
 ## Do registry Totals add up?
 
-ClinicalTrials.gov posts a baseline table for every trial with results: each arm's count, mean and SD, then a Total column. `registry.py fetch` pulls all 55,075 trials that post a mean with an SD, and `registry.py` checks 71,214 Totals against their arms. None of the Totals falls outside the range of its arm means. The registry may check that itself.
+ClinicalTrials.gov posts a baseline table for every trial with results: each arm's count, mean and SD, then a Total column. `registry.py fetch` pulls every trial with results. 55,075 post a mean with an SD, and `registry.py` checks 71,214 Totals against their arms. None of the Totals falls outside the range of its arm means. The registry may check that itself.
 
 The Total should be the mean weighted by arm size. 2,154 miss that by more than ten roundings. Missing values may explain many of them, because the posted counts are not always the people measured. But 328 Totals, in 234 trials, land to the last digit on the plain average of the arm means. That is right only when the arms are the same size, and luck would give about 27. A decoy test agrees. Take the point as far from the weighted mean as the plain average, on the other side. Missing data should push Totals to either side alike. Where both points fit inside the arm range, 283 Totals land on the plain average and 11 on the decoy. In 168 of the 328 the Total SD is also the plain average of the arm SDs and falls outside every pooled SD the arms allow. These look like Totals typed in as a spreadsheet AVERAGE of the arms.
 
 To be safe, the clear set keeps only trials whose arms differ at least twofold in size and carry no note about missing data: 134 Totals in 107 trials, listed in `registry-baseline.json`. In one, arms of 8 and 18 people have mean BMIs of 27.7 and 33.53. The Total is 30.615, the plain average; weighted, it is 31.74.
+
+Head counts behave. Across all 79,533 trials with results, every arm count adds up to its Total, 435,201 cells without one miss, so the registry likely adds count Totals itself while mean Totals are typed by hand. Sex, age group, race and ethnicity add past their arm's size in only 49 rows of 22 trials, and 41 of those are exactly double, the shape of a crossover trial that counts each person in both periods.
 
 Two literature searches found studies of missing and inconsistent registry fields, but none that checks the Total column this way, and no sign of how the registry validates Totals.
 
