@@ -1,0 +1,3697 @@
+{
+"source": "ClinicalTrials.gov API v2, every study with results, fetched 2026-10-27 by registry.py fetch",
+"checked": 71214,
+"sd_impossible": 407,
+"trials": 296,
+"kinds": {
+"zero": 24,
+"se": 42,
+"low": 170,
+"mean": 3,
+"count": 3,
+"high": 165
+},
+"kind_meaning": {
+"zero": "Total SD printed 0",
+"se": "Total SD near the smallest arm SD over sqrt(N), an SE",
+"low": "Total SD under half the smallest arm SD",
+"mean": "Total SD equals the Total mean",
+"count": "Total SD equals the Total count",
+"high": "Total SD over twice the largest the arms allow"
+},
+"spot_check": "NCT00635102, NCT01364584 and NCT00276406 re-fetched live 2026-10-27; every cell matches",
+"columns": [
+"nct",
+"measure",
+"total_mean",
+"total_sd",
+"lowest_allowed",
+"highest_allowed",
+"kind"
+],
+"rows": [
+[
+"NCT00470418",
+"Age, Continuous",
+70.05,
+0.49,
+12.45,
+13.9557,
+"low"
+],
+[
+"NCT01768637",
+"Glycosylated hemoglobin",
+6.4,
+1.3,
+0.35,
+0.5148,
+"high"
+],
+[
+"NCT05466136",
+"Height",
+168.77,
+67.38,
+7.945,
+8.4264,
+"high"
+],
+[
+"NCT02092857",
+"Age, Continuous",
+17.0,
+1.2,
+3.75,
+4.5047,
+"low"
+],
+[
+"NCT03358576",
+"creatinine clearance",
+90.3,
+87.0,
+39.05,
+41.5223,
+"high"
+],
+[
+"NCT02153710",
+"Age, Continuous",
+63.35,
+0.07,
+10.55,
+12.3504,
+"low"
+],
+[
+"NCT01887184",
+"Age, Customized",
+42.4,
+0.0,
+11.65,
+11.7864,
+"zero"
+],
+[
+"NCT02623803",
+"Age, Continuous",
+65.7,
+67.0,
+10.45,
+13.3658,
+"high"
+],
+[
+"NCT04417361",
+"Count of triggers",
+9.1,
+3.0,
+7.55,
+7.8557,
+"low"
+],
+[
+"NCT00319982",
+"Age, Continuous",
+15.8,
+8.6,
+1.65,
+2.7102,
+"high"
+],
+[
+"NCT02616393",
+"EORTC-QLQ-C30 Questionnaire",
+62.7,
+60.6,
+5.505,
+21.7977,
+"high"
+],
+[
+"NCT03726658",
+"Montgomery-Asberg Depression Severity (MADRS) score at baseline (prior to first dose)",
+34.06,
+0.509,
+3.615,
+5.1345,
+"low"
+],
+[
+"NCT02687919",
+"B-9 (folate)",
+16.06,
+4.53,
+1.15,
+2.2151,
+"high"
+],
+[
+"NCT04223934",
+"Age, Continuous",
+64.95,
+0.78,
+8.65,
+11.9651,
+"low"
+],
+[
+"NCT00929734",
+"HDL-C",
+1.8,
+0.5,
+0.05,
+0.1581,
+"high"
+],
+[
+"NCT00911612",
+"Age Continuous",
+42.8,
+13.0,
+3.65,
+4.1018,
+"high"
+],
+[
+"NCT00911612",
+"Body Mass Index",
+30.4,
+5.7,
+1.45,
+2.3817,
+"high"
+],
+[
+"NCT00911612",
+"Fasting Serum 7 alpha-HCO",
+35.0,
+36.5,
+5.85,
+15.1038,
+"high"
+],
+[
+"NCT05502081",
+"ratio of arterial Oxygen pressure to fraction inspired of Oxygen",
+181.46,
+516.0,
+137.5,
+210.1685,
+"high"
+],
+[
+"NCT06090461",
+"Age, Customized",
+47.1,
+1.38,
+11.85,
+13.5176,
+"low"
+],
+[
+"NCT04181593",
+"Age, Continuous",
+57.0,
+1.7,
+13.35,
+14.0608,
+"low"
+],
+[
+"NCT00233493",
+"Age, Continuous",
+54.03,
+3.7,
+17.605,
+21.1323,
+"low"
+],
+[
+"NCT00090064",
+"Age, Continuous",
+40.6,
+70.1,
+6.95,
+7.4527,
+"high"
+],
+[
+"NCT02200757",
+"Age, Continuous",
+64.42,
+0.0,
+6.725,
+7.7832,
+"zero"
+],
+[
+"NCT05144737",
+"Age, Continuous",
+50.6,
+11.9,
+1.35,
+3.6284,
+"high"
+],
+[
+"NCT04149964",
+"Age, Continuous",
+44.34,
+6.79,
+14.255,
+16.4917,
+"low"
+],
+[
+"NCT04247347",
+"Resourcefulness",
+92.71,
+55.2,
+14.715,
+16.4207,
+"high"
+],
+[
+"NCT02634151",
+"Serum amyloid A",
+7.2,
+816.0,
+3.195,
+11.11,
+"high"
+],
+[
+"NCT03000166",
+"Self-efficacy for Physical Activity",
+61.2,
+4.2,
+23.35,
+24.509,
+"low"
+],
+[
+"NCT01249274",
+"Parity",
+2.4,
+0.2,
+1.35,
+1.6771,
+"se"
+],
+[
+"NCT02370121",
+"2-hour postload plasma glucose (2-h PG)",
+7.67,
+184.0,
+1.775,
+1.8959,
+"high"
+],
+[
+"NCT02442700",
+"Age, Continuous",
+48.1,
+1.8,
+6.75,
+10.7551,
+"low"
+],
+[
+"NCT05240534",
+"Number of chronic conditions",
+6.44,
+0.05,
+1.525,
+2.0357,
+"low"
+],
+[
+"NCT02421198",
+"BMI z score",
+1.97,
+0.37,
+0.075,
+0.0955,
+"high"
+],
+[
+"NCT02360774",
+"Age, Continuous",
+59.3,
+9.1,
+1.975,
+3.9655,
+"high"
+],
+[
+"NCT00088153",
+"Age, Continuous",
+16.5,
+0.2,
+1.55,
+1.6621,
+"low"
+],
+[
+"NCT05382936",
+"Age, Continuous",
+54.8,
+0.05,
+6.575,
+14.9852,
+"low"
+],
+[
+"NCT03855111",
+"Age, Continuous",
+59.8,
+1.3,
+8.75,
+9.2407,
+"low"
+],
+[
+"NCT03524157",
+"Intra Ocular Pressure (IOP)",
+13.7,
+6.3,
+1.55,
+2.4627,
+"high"
+],
+[
+"NCT02139007",
+"Duration of Alendronate Use",
+5.1,
+17.0,
+2.05,
+3.1643,
+"high"
+],
+[
+"NCT05804877",
+"Age, Continuous",
+21.4,
+0.19,
+1.015,
+1.6507,
+"low"
+],
+[
+"NCT05804877",
+"Course units",
+16.23,
+0.74,
+4.935,
+5.6661,
+"se"
+],
+[
+"NCT00189436",
+"Age, Continuous",
+5.1,
+0.084,
+1.55,
+2.0797,
+"low"
+],
+[
+"NCT00957593",
+"Age, Continuous",
+27.4,
+0.4,
+5.55,
+5.7606,
+"se"
+],
+[
+"NCT00881647",
+"PTSD Duration",
+18.5,
+2.1,
+13.55,
+14.1204,
+"se"
+],
+[
+"NCT00194896",
+"Age, Continuous",
+55.8,
+1.6,
+6.85,
+9.6981,
+"low"
+],
+[
+"NCT02008773",
+"Age, Continuous",
+28.15,
+2.25,
+4.85,
+6.7789,
+"low"
+],
+[
+"NCT02451670",
+"Low-Density Lipoprotein Cholesterol",
+104.8,
+7978.0,
+35.35,
+35.6506,
+"high"
+],
+[
+"NCT02490527",
+"Age, Continuous",
+55.69,
+3.804,
+7.685,
+11.8366,
+"low"
+],
+[
+"NCT02490527",
+"BMI (kg/m^2)",
+29.12,
+0.2899,
+0.675,
+1.4701,
+"low"
+],
+[
+"NCT02490527",
+"HDL (mg/dL)",
+45.83,
+0.1131,
+3.05,
+3.746,
+"low"
+],
+[
+"NCT02690194",
+"Age, Continuous",
+52.4,
+2.12,
+15.75,
+18.2023,
+"se"
+],
+[
+"NCT00259857",
+"Age Continuous",
+9.32,
+0.2,
+2.25,
+2.8542,
+"low"
+],
+[
+"NCT01860651",
+"Age, Continuous",
+14.9,
+0.2,
+1.815,
+2.1297,
+"se"
+],
+[
+"NCT06982937",
+"Delay time",
+22.69,
+0.02,
+1.135,
+1.4048,
+"low"
+],
+[
+"NCT04682977",
+"PROMIS Physical Function Short Form 20",
+40.57,
+1.88,
+7.635,
+8.6697,
+"low"
+],
+[
+"NCT05642416",
+"Age, Continuous",
+64.5,
+10.5,
+29.15,
+29.5561,
+"low"
+],
+[
+"NCT03977727",
+"Age, Continuous",
+45.7,
+27.1,
+12.765,
+13.2907,
+"high"
+],
+[
+"NCT04504318",
+"Age, Continuous",
+53.0,
+0.0,
+9.5,
+11.5109,
+"zero"
+],
+[
+"NCT04375878",
+"Age, Continuous",
+27.3,
+1.8,
+4.05,
+10.5609,
+"low"
+],
+[
+"NCT03249350",
+"Positive Peer Activity - Youth Report",
+15.91,
+12.33,
+5.915,
+5.9903,
+"high"
+],
+[
+"NCT02466776",
+"Age, Continuous",
+31.25,
+0.21,
+5.25,
+5.6535,
+"low"
+],
+[
+"NCT02466776",
+"Gestational age at delivery",
+38.5,
+0.0,
+1.85,
+2.5739,
+"zero"
+],
+[
+"NCT01701193",
+"BMI (kg/m^2)",
+23.5,
+0.9,
+2.95,
+8.0327,
+"low"
+],
+[
+"NCT02487251",
+"Age, Continuous",
+31.65,
+2.71,
+5.55,
+7.456,
+"low"
+],
+[
+"NCT02487251",
+"Parent BMI",
+30.39,
+0.81,
+8.495,
+13.993,
+"low"
+],
+[
+"NCT01786109",
+"Age Continuous",
+40.8,
+11.935,
+2.05,
+4.6179,
+"high"
+],
+[
+"NCT01786109",
+"Body Mass Index",
+28.3,
+5.5,
+0.95,
+1.9912,
+"high"
+],
+[
+"NCT04414722",
+"Age, Continuous",
+30.47,
+2.998,
+7.775,
+15.274,
+"low"
+],
+[
+"NCT00618072",
+"Adiponectin",
+10.6,
+4.6,
+0.95,
+1.7335,
+"high"
+],
+[
+"NCT00802945",
+"Age, Continuous",
+54.5,
+0.0,
+10.45,
+12.4291,
+"zero"
+],
+[
+"NCT01730872",
+"Age, Continuous",
+39.88,
+0.0707107,
+0.9055,
+2.9413,
+"low"
+],
+[
+"NCT02384070",
+"Age, Continuous",
+64.0,
+3.0,
+7.5,
+10.6888,
+"low"
+],
+[
+"NCT02342197",
+"Age, Continuous",
+37.2,
+0.1,
+1.45,
+1.5628,
+"low"
+],
+[
+"NCT02342197",
+"BMI (kg/m2)",
+30.5,
+0.2,
+1.75,
+2.7391,
+"se"
+],
+[
+"NCT02342197",
+"Day 3 FSH (IU/L)",
+7.8,
+0.1,
+1.05,
+1.254,
+"se"
+],
+[
+"NCT02342197",
+"Duration of infertility",
+5.4,
+0.1,
+1.45,
+1.589,
+"low"
+],
+[
+"NCT00355615",
+"Baseline low-density lipoprotein cholesterol (LDL-C)",
+233.3,
+10.0,
+43.125,
+55.2369,
+"low"
+],
+[
+"NCT01686568",
+"Age, Continuous",
+34.1,
+9.7,
+2.45,
+3.2653,
+"high"
+],
+[
+"NCT05576155",
+"Age, Continuous",
+22.0,
+24.0,
+2.5,
+5.5902,
+"count"
+],
+[
+"NCT05484778",
+"Weight",
+69.633,
+9.774,
+1.2835,
+2.9635,
+"high"
+],
+[
+"NCT03520114",
+"Age, Continuous",
+67.0,
+12.0,
+-0.5,
+1.3,
+"high"
+],
+[
+"NCT04884243",
+"Intraocular Pressure of study eye related to safety",
+16.282,
+0.21359,
+2.1425,
+2.726,
+"se"
+],
+[
+"NCT01479543",
+"Age, Continuous",
+28.78,
+1.22,
+4.5,
+7.8885,
+"low"
+],
+[
+"NCT00776035",
+"Age, Continuous",
+41.5,
+9.2,
+2.5,
+3.6401,
+"high"
+],
+[
+"NCT00776035",
+"Homeostasis model assessment of insulin resistance",
+3.52,
+4.19,
+0.505,
+2.0039,
+"high"
+],
+[
+"NCT00736632",
+"Age, Continuous",
+54.3,
+1.7,
+8.75,
+13.3523,
+"low"
+],
+[
+"NCT03422159",
+"Baseline White Blood Cell Count (WBC) x10^9/L",
+17.5,
+0.0,
+9.5,
+10.6888,
+"zero"
+],
+[
+"NCT03422159",
+"Baseline Lactate (mM/L)",
+4.6,
+0.0,
+3.45,
+4.2548,
+"zero"
+],
+[
+"NCT03422159",
+"Baseline Procalcitonin (ng/mL)",
+33.5,
+0.0,
+37.5,
+73.3297,
+"zero"
+],
+[
+"NCT03422159",
+"Baseline Sequential Organ Failure Assessment (SOFA) Score",
+8.1,
+0.0,
+2.5,
+3.5588,
+"zero"
+],
+[
+"NCT03422159",
+"Acute Physiology And Chronic Health Evaluation (APACHE) II",
+24.5,
+0.0,
+7.55,
+8.78,
+"zero"
+],
+[
+"NCT03422159",
+"Acute Physiology And Chronic Health Evaluation (APACHE) IV",
+87.8,
+0.0,
+28.25,
+29.7546,
+"zero"
+],
+[
+"NCT03422159",
+"APACHE IV predicted mortality (%)",
+33.8,
+0.0,
+2.5,
+3.5355,
+"zero"
+],
+[
+"NCT03858803",
+"Parental Monitoring",
+9.02,
+0.72,
+3.745,
+4.7254,
+"low"
+],
+[
+"NCT05818527",
+"Age, Continuous",
+19.0,
+1.1,
+4.05,
+5.7247,
+"low"
+],
+[
+"NCT01205503",
+"Age, Continuous",
+54.78,
+1.97,
+11.695,
+15.8091,
+"se"
+],
+[
+"NCT00872898",
+"Age, Continuous",
+9.0,
+0.1,
+2.15,
+2.6519,
+"low"
+],
+[
+"NCT03944629",
+"BASELINE PAIN",
+0.34855,
+0.07735,
+0.803,
+1.5398,
+"low"
+],
+[
+"NCT03975400",
+"Age, Continuous",
+21.17,
+0.92,
+0.125,
+0.2462,
+"high"
+],
+[
+"NCT00614406",
+"Age Continuous",
+27.85,
+0.0,
+5.15,
+6.2018,
+"zero"
+],
+[
+"NCT04575155",
+"Age, Continuous",
+60.8,
+60.0,
+6.25,
+7.4527,
+"high"
+],
+[
+"NCT01465022",
+"Age, Continuous",
+24.4,
+197.0,
+4.35,
+5.5159,
+"count"
+],
+[
+"NCT01059760",
+"Body Mass Index (BMI)",
+27.8,
+1.3,
+6.05,
+7.1751,
+"low"
+],
+[
+"NCT03180489",
+"Fasting Insulin",
+9.0,
+12.7,
+0.75,
+4.1503,
+"high"
+],
+[
+"NCT02300077",
+"Age, Continuous",
+40.0,
+2.52,
+10.5,
+13.8293,
+"low"
+],
+[
+"NCT02300077",
+"body weight - kg",
+86.0,
+1.53,
+15.5,
+42.547,
+"low"
+],
+[
+"NCT02273115",
+"Age, Continuous",
+29.0,
+1.0,
+4.5,
+6.9642,
+"low"
+],
+[
+"NCT00712335",
+"Age Continuous",
+40.09,
+4.24,
+8.515,
+19.079,
+"low"
+],
+[
+"NCT00489476",
+"Age, Continuous",
+41.1,
+2.2,
+10.935,
+13.2394,
+"low"
+],
+[
+"NCT02988375",
+"Age, Continuous",
+45.0,
+1.59,
+15.05,
+15.8633,
+"low"
+],
+[
+"NCT02725801",
+"Age, Continuous",
+48.92,
+3.06,
+12.275,
+14.0041,
+"se"
+],
+[
+"NCT00460577",
+"Age Continuous",
+7.8,
+0.0,
+1.45,
+2.1506,
+"zero"
+],
+[
+"NCT00460577",
+"Maximum Inspiratory Flow",
+78.8,
+0.0,
+16.65,
+17.5876,
+"zero"
+],
+[
+"NCT00460577",
+"Maximum Expiratory Flow",
+145.3,
+0.0,
+33.05,
+36.9963,
+"zero"
+],
+[
+"NCT00460577",
+"Forced Expiratory Flow 1 sec as a Percentage of Predicted",
+69.11,
+0.0,
+15.215,
+15.8997,
+"zero"
+],
+[
+"NCT00460577",
+"Conway Clinical Scale",
+4.05,
+0.0,
+1.35,
+1.5532,
+"zero"
+],
+[
+"NCT02085135",
+"Age, Continuous",
+49.7,
+53.0,
+11.25,
+12.6977,
+"high"
+],
+[
+"NCT04565288",
+"Age, Continuous",
+18.9,
+0.08,
+0.65,
+0.8559,
+"low"
+],
+[
+"NCT06133816",
+"Age, Continuous",
+64.32,
+0.1,
+0.315,
+0.9251,
+"low"
+],
+[
+"NCT02268955",
+"Pain score",
+6.0,
+0.001,
+0.0145,
+1.0004,
+"low"
+],
+[
+"NCT00587678",
+"Total cholesterol",
+182.0,
+45.0,
+5.5,
+16.9853,
+"high"
+],
+[
+"NCT00587678",
+"Low density lipoprotein cholesterol",
+111.0,
+35.0,
+3.5,
+14.1598,
+"high"
+],
+[
+"NCT00587678",
+"High density lipoprotein cholesterol",
+43.0,
+13.0,
+1.5,
+5.7009,
+"high"
+],
+[
+"NCT00587678",
+"Plaque volume",
+10.6,
+5.4,
+0.75,
+1.7443,
+"high"
+],
+[
+"NCT00587678",
+"Total vessel volume",
+16.6,
+8.7,
+1.15,
+2.7577,
+"high"
+],
+[
+"NCT00587678",
+"Lumen volume",
+6.0,
+3.8,
+0.45,
+1.3657,
+"high"
+],
+[
+"NCT04318951",
+"BDI.",
+26.1,
+14.1,
+3.35,
+6.6095,
+"high"
+],
+[
+"NCT05424042",
+"Screening Weight",
+90.3,
+4.9,
+11.85,
+14.0628,
+"low"
+],
+[
+"NCT01524705",
+"C-peptide",
+0.77,
+0.77,
+0.065,
+0.1124,
+"mean"
+],
+[
+"NCT00889330",
+"Age, Continuous",
+36.1,
+40.0,
+13.515,
+15.7482,
+"high"
+],
+[
+"NCT00931879",
+"serum glutamate oxaloacetate transaminase(AST) (u/L)",
+24.0,
+8.44,
+1.495,
+2.4863,
+"high"
+],
+[
+"NCT04612842",
+"30-second Sit-to-Stand",
+10.1,
+4.0,
+0.55,
+0.8201,
+"high"
+],
+[
+"NCT04555096",
+"Age, Continuous",
+63.3,
+61.5,
+6.885,
+11.3067,
+"high"
+],
+[
+"NCT04077996",
+"Age, Continuous",
+49.42,
+72.64,
+4.55,
+17.0796,
+"high"
+],
+[
+"NCT00668902",
+"Age, Continuous",
+25.63,
+1.159,
+3.25,
+6.2476,
+"low"
+],
+[
+"NCT03688919",
+"Youth Future Orientation (behavioral)",
+-0.13,
+0.41,
+0.105,
+0.1956,
+"high"
+],
+[
+"NCT04404257",
+"Age, Continuous",
+63.7,
+1.2,
+4.55,
+11.9677,
+"low"
+],
+[
+"NCT03168425",
+"Age, Continuous",
+30.4,
+2.8,
+5.75,
+5.9754,
+"low"
+],
+[
+"NCT02400749",
+"Palmoplantar Psoriasis Surface Area (PPPSA)",
+34.3,
+0.2,
+18.25,
+23.7639,
+"low"
+],
+[
+"NCT01717456",
+"Fecal Incontinence Severity Index (FISI) at Baseline",
+23.72,
+2.44,
+8.135,
+12.2566,
+"low"
+],
+[
+"NCT01262573",
+"Age, Continuous",
+44.7,
+0.71,
+5.55,
+8.2869,
+"se"
+],
+[
+"NCT03628781",
+"Parent rating of School Performance on Impairment Rating Scale",
+3.46,
+0.179,
+1.725,
+1.8647,
+"low"
+],
+[
+"NCT01747447",
+"Baseline Free 25(OH)D",
+5.8,
+7.4,
+1.65,
+2.1645,
+"high"
+],
+[
+"NCT02714426",
+"Age, Continuous",
+73.85,
+15.98,
+4.825,
+6.2829,
+"high"
+],
+[
+"NCT02959996",
+"Age, Continuous",
+35.2,
+0.5,
+3.65,
+4.2793,
+"low"
+],
+[
+"NCT02959996",
+"BMI, pre-pregnancy, kg/m2",
+26.9,
+0.7,
+5.25,
+6.4935,
+"low"
+],
+[
+"NCT05002088",
+"Age, Continuous",
+79.9,
+0.0,
+6.15,
+9.3634,
+"zero"
+],
+[
+"NCT05002088",
+"Ejection Fraction",
+56.7,
+0.0,
+9.85,
+10.3983,
+"zero"
+],
+[
+"NCT02699060",
+"Age, Continuous",
+46.8,
+12.4,
+2.225,
+3.4386,
+"high"
+],
+[
+"NCT01443442",
+"Age, Customized",
+51.1,
+2.6,
+12.95,
+16.46,
+"se"
+],
+[
+"NCT00252629",
+"Age, Continuous",
+42.2,
+0.7,
+3.05,
+6.7619,
+"low"
+],
+[
+"NCT02459275",
+"Age, Continuous",
+49.8,
+0.75,
+15.55,
+24.7629,
+"low"
+],
+[
+"NCT01381172",
+"Peak VO2 (ml/kg/min)",
+15.425,
+0.141,
+2.605,
+2.8159,
+"low"
+],
+[
+"NCT01381172",
+"Minnesota Living with Heart Failure Questionnaire (MLWHFQ) score",
+56.885,
+0.28991,
+22.945,
+23.3697,
+"low"
+],
+[
+"NCT01381172",
+"6 Minute Hall Walk (meters)",
+320.46,
+0.94045,
+88.365,
+89.7878,
+"low"
+],
+[
+"NCT02815293",
+"BMI",
+28.1225,
+1.3197836926109,
+4.458,
+7.5129,
+"low"
+],
+[
+"NCT02815293",
+"Weight",
+76.76,
+3.5637743007958,
+11.0225,
+20.2404,
+"low"
+],
+[
+"NCT02815293",
+"Height",
+165.499,
+3.7800461794887,
+8.5923,
+17.2552,
+"low"
+],
+[
+"NCT03945266",
+"Gestational Age",
+10.2,
+4.5,
+1.55,
+1.7564,
+"high"
+],
+[
+"NCT01253408",
+"Body Mass Index (BMI)",
+30.5,
+9.46,
+1.45,
+4.2252,
+"high"
+],
+[
+"NCT02896595",
+"Age, Continuous",
+63.5,
+11.0,
+1.25,
+2.6879,
+"high"
+],
+[
+"NCT03604172",
+"Reward-based eating",
+37.0,
+8.0,
+1.5,
+3.2016,
+"high"
+],
+[
+"NCT00754013",
+"Age, Continuous",
+8.5,
+0.3,
+0.75,
+1.5508,
+"se"
+],
+[
+"NCT03538808",
+"Age, Continuous",
+46.86,
+11.51,
+2.585,
+3.3257,
+"high"
+],
+[
+"NCT03538808",
+"Stanford Expectations of Treatment Scale: Negative Subscale",
+3.33,
+1.48,
+0.335,
+0.3762,
+"high"
+],
+[
+"NCT02817763",
+"Gingival recession depth",
+3.31,
+0.03,
+0.65,
+1.1354,
+"low"
+],
+[
+"NCT03143855",
+"Age, Continuous",
+48.0,
+0.5,
+8.75,
+10.4433,
+"low"
+],
+[
+"NCT00564902",
+"Contrast Sensitivity Function Photopic Distance",
+204.0,
+125.0,
+21.5,
+35.0179,
+"high"
+],
+[
+"NCT00733226",
+"Age, Continuous",
+2.59,
+0.59,
+1.475,
+1.6967,
+"low"
+],
+[
+"NCT00557284",
+"Pruritus score",
+1.36,
+0.3,
+0.715,
+0.8249,
+"low"
+],
+[
+"NCT02010593",
+"Age, Customized",
+56.8,
+41.1,
+2.95,
+4.4635,
+"high"
+],
+[
+"NCT03273387",
+"Age, Continuous",
+48.0,
+8.9,
+1.45,
+3.9778,
+"high"
+],
+[
+"NCT03273387",
+"onset of diagnosis to study",
+1048.0,
+1093.0,
+213.5,
+406.4019,
+"high"
+],
+[
+"NCT03273387",
+"SF-36 Functional Capacity",
+53.84,
+19.56,
+4.765,
+9.115,
+"high"
+],
+[
+"NCT03273387",
+"Body Mass Index",
+22.1,
+8.6,
+0.75,
+4.1053,
+"high"
+],
+[
+"NCT03273387",
+"mean Right atrial pressure",
+5.9,
+3.9,
+1.15,
+1.5338,
+"high"
+],
+[
+"NCT03273387",
+"LV end diastolic pressure",
+7.4,
+3.1,
+0.75,
+1.2981,
+"high"
+],
+[
+"NCT03273387",
+"RV end diastolic volume",
+259.0,
+83.0,
+27.5,
+31.5357,
+"high"
+],
+[
+"NCT03273387",
+"RV end systolic volume",
+197.0,
+67.0,
+19.5,
+26.4433,
+"high"
+],
+[
+"NCT03273387",
+"LV end diastolic volume",
+81.0,
+18.0,
+5.25,
+6.8244,
+"high"
+],
+[
+"NCT03273387",
+"LV end systolic volume",
+31.0,
+9.7,
+2.75,
+4.18,
+"high"
+],
+[
+"NCT02819726",
+"C-reactive protein",
+17.0,
+2.99,
+17.905,
+29.0746,
+"low"
+],
+[
+"NCT01094808",
+"Body Mass Index (BMI)",
+26.3,
+0.6,
+3.65,
+6.3697,
+"low"
+],
+[
+"NCT05537597",
+"Epworth Sleeping Scale",
+8.5,
+6.68,
+0.895,
+0.9691,
+"high"
+],
+[
+"NCT00126113",
+"Hearing sensitivity (pure tone thresholds)",
+45.7,
+113.0,
+10.95,
+11.6741,
+"high"
+],
+[
+"NCT04405739",
+"SARS-CoV-2 RNA by qPCR in NP Swabs",
+5.24,
+0.42,
+1.4415,
+1.8587,
+"low"
+],
+[
+"NCT05062265",
+"Height (m)",
+1.7,
+0.5,
+0.05,
+0.1803,
+"high"
+],
+[
+"NCT02263963",
+"Age, Continuous",
+64.0,
+1.0,
+12.45,
+14.0472,
+"low"
+],
+[
+"NCT02467478",
+"Age, Customized",
+62.09,
+1.4,
+4.5,
+6.6708,
+"low"
+],
+[
+"NCT02467478",
+"BMI",
+30.8,
+0.42,
+2.85,
+4.4637,
+"low"
+],
+[
+"NCT02467478",
+"HbA1c",
+7.26,
+0.21,
+0.5,
+1.5133,
+"low"
+],
+[
+"NCT02467478",
+"Basal Metabolic Rate",
+1653.0,
+134.0,
+292.5,
+489.6575,
+"low"
+],
+[
+"NCT02467478",
+"Fasting Glucose",
+127.5,
+12.72,
+25.5,
+44.601,
+"low"
+],
+[
+"NCT02467478",
+"Serum Creatinine",
+1.0,
+0.07,
+0.25,
+0.4743,
+"low"
+],
+[
+"NCT02467478",
+"eGFR",
+83.5,
+1.41,
+18.5,
+21.5232,
+"low"
+],
+[
+"NCT02467478",
+"Cholesterol",
+167.0,
+0.7,
+51.5,
+53.521,
+"low"
+],
+[
+"NCT02473926",
+"Weight (kg)",
+91.2,
+47.0,
+21.35,
+21.7629,
+"high"
+],
+[
+"NCT01813058",
+"Age, Continuous",
+14.8,
+5.0,
+1.75,
+2.0555,
+"high"
+],
+[
+"NCT03443687",
+"Age, Continuous",
+46.0,
+2.0,
+9.5,
+13.7295,
+"low"
+],
+[
+"NCT00761956",
+"Age Continuous",
+66.2,
+189.0,
+8.45,
+8.571,
+"count"
+],
+[
+"NCT04668950",
+"SPO2",
+96.8,
+1.7,
+12.65,
+13.5501,
+"low"
+],
+[
+"NCT01194479",
+"HbA1c (%)",
+6.1,
+1.0,
+2.55,
+2.7681,
+"low"
+],
+[
+"NCT02341599",
+"Age, Continuous",
+61.7,
+44.81,
+2.425,
+13.2045,
+"high"
+],
+[
+"NCT03898206",
+"Heart rate",
+75.0,
+94.0,
+8.65,
+11.3847,
+"high"
+],
+[
+"NCT03132220",
+"Years practicing as nurse",
+6.6,
+6.7,
+0.905,
+0.9757,
+"high"
+],
+[
+"NCT01008280",
+"Age, Continuous",
+56.6,
+1.3,
+6.85,
+7.2128,
+"low"
+],
+[
+"NCT00646646",
+"Age, Continuous",
+33.16666,
+2.09797,
+6.9488,
+12.6722,
+"low"
+],
+[
+"NCT00481351",
+"Triglycerides",
+188.52,
+19.6,
+80.755,
+115.4341,
+"low"
+],
+[
+"NCT02790931",
+"Daily physical activity",
+7.866,
+4158.0,
+4.0865,
+4.2365,
+"high"
+],
+[
+"NCT02860169",
+"Age, Customized",
+32.91,
+5.2,
+10.975,
+11.126,
+"low"
+],
+[
+"NCT00111007",
+"Age, Continuous",
+55.5,
+57.0,
+12.75,
+13.0596,
+"high"
+],
+[
+"NCT04669158",
+"Age, Continuous",
+57.8,
+1.6,
+11.45,
+17.7866,
+"low"
+],
+[
+"NCT00609271",
+"Framingham risk percent",
+4.0,
+18.7,
+3.05,
+3.356,
+"high"
+],
+[
+"NCT02734238",
+"Age, Continuous",
+25.0,
+5.0,
+0.5,
+1.5811,
+"high"
+],
+[
+"NCT02734238",
+"Height",
+178.0,
+7.0,
+0.5,
+2.5495,
+"high"
+],
+[
+"NCT02734238",
+"Weight",
+78.0,
+12.0,
+1.5,
+4.6098,
+"high"
+],
+[
+"NCT02734238",
+"Systolic Blood Pressure",
+118.0,
+9.0,
+1.5,
+2.9155,
+"high"
+],
+[
+"NCT02734238",
+"Diastolic Blood Pressure",
+73.0,
+7.0,
+1.5,
+2.9155,
+"high"
+],
+[
+"NCT02734238",
+"Total Testosterone",
+461.0,
+118.0,
+18.5,
+42.9564,
+"high"
+],
+[
+"NCT02734238",
+"Estradiol",
+42.5,
+14.2,
+2.5,
+3.6401,
+"high"
+],
+[
+"NCT02734238",
+"Sex Hormone Binding Globulin",
+34.5,
+14.5,
+1.75,
+4.57,
+"high"
+],
+[
+"NCT02734238",
+"Glucose",
+88.5,
+5.8,
+0.5,
+1.8028,
+"high"
+],
+[
+"NCT02734238",
+"Total Cholesterol",
+165.0,
+30.0,
+5.5,
+8.2765,
+"high"
+],
+[
+"NCT02734238",
+"High-Density Lipoprotein Cholesterol",
+54.7,
+11.9,
+1.5,
+4.3012,
+"high"
+],
+[
+"NCT02734238",
+"Low-Density Lipoprotein Cholesterol",
+95.4,
+24.4,
+3.5,
+7.433,
+"high"
+],
+[
+"NCT02734238",
+"Triglyceride",
+74.6,
+40.2,
+6.5,
+9.9624,
+"high"
+],
+[
+"NCT02734238",
+"Hematocrit",
+44.0,
+3.0,
+0.45,
+1.1413,
+"high"
+],
+[
+"NCT02734238",
+"Prostate-Specific Antigen",
+0.72,
+0.5,
+0.05,
+0.1552,
+"high"
+],
+[
+"NCT02734238",
+"Alanine Aminotransferase",
+22.2,
+8.2,
+1.55,
+2.2411,
+"high"
+],
+[
+"NCT02070302",
+"Age, Continuous",
+56.35,
+5.7,
+17.85,
+20.7589,
+"se"
+],
+[
+"NCT03046836",
+"Age, Continuous",
+35.4,
+113.0,
+10.5,
+11.5812,
+"high"
+],
+[
+"NCT04456634",
+"Age, Continuous",
+27.3,
+27.3,
+11.75,
+12.8908,
+"mean"
+],
+[
+"NCT01293695",
+"Hot Flash Related Daily Interference Scale (HFRDIS)",
+5.81,
+24.0,
+0.225,
+0.2535,
+"high"
+],
+[
+"NCT00523718",
+"Age, Continuous",
+38.52,
+13.8,
+3.05,
+4.162,
+"high"
+],
+[
+"NCT04981678",
+"Age, Continuous",
+40.6,
+50.3,
+5.25,
+5.7509,
+"high"
+],
+[
+"NCT00624910",
+"Age, Continuous",
+42.2,
+42.5,
+6.165,
+7.3032,
+"high"
+],
+[
+"NCT01516879",
+"Apolipoprotein B/Apolipoprotein A-1 Ratio",
+0.59,
+1.7,
+0.1695,
+0.1705,
+"high"
+],
+[
+"NCT03950973",
+"Age, Continuous",
+53.45,
+1304.0,
+12.325,
+13.7092,
+"high"
+],
+[
+"NCT05227677",
+"HbA1c",
+8.8,
+8.9,
+0.75,
+0.9618,
+"mean"
+],
+[
+"NCT04981847",
+"Body Mass Index (BMI)",
+35.9,
+0.8,
+4.85,
+8.1624,
+"low"
+],
+[
+"NCT02734290",
+"Age, Customized",
+59.0,
+3.5,
+8.65,
+13.172,
+"low"
+],
+[
+"NCT01331148",
+"Age, Continuous",
+13.2,
+3.1,
+0.55,
+0.8732,
+"high"
+],
+[
+"NCT00746395",
+"Age, Continuous",
+37.07,
+2.36881,
+10.8647,
+13.2602,
+"low"
+],
+[
+"NCT00673244",
+"Age, Continuous",
+65.3,
+14.0,
+1.85,
+3.182,
+"high"
+],
+[
+"NCT04311697",
+"Age, Continuous",
+61.0,
+3.4,
+12.105,
+12.687,
+"low"
+],
+[
+"NCT01548742",
+"Duration of previous mental health care",
+66.5,
+9.2,
+45.15,
+53.4133,
+"low"
+],
+[
+"NCT03835780",
+"Age, Continuous",
+49.8,
+6.3,
+13.75,
+19.8354,
+"low"
+],
+[
+"NCT00655473",
+"Age, Continuous",
+63.6,
+1.0,
+7.75,
+8.3116,
+"se"
+],
+[
+"NCT02033213",
+"Age, Continuous",
+53.12,
+1.81,
+8.305,
+13.4362,
+"se"
+],
+[
+"NCT03187769",
+"Age, Continuous",
+25.8,
+24.5,
+5.915,
+6.1283,
+"high"
+],
+[
+"NCT00258674",
+"Mean HbA1c level",
+7.2,
+0.03,
+1.35,
+1.5532,
+"se"
+],
+[
+"NCT00258674",
+"mean LDL level",
+104.9,
+0.9,
+32.55,
+33.9768,
+"low"
+],
+[
+"NCT00258674",
+"mean diastolic blood pressure",
+76.8,
+0.2,
+9.45,
+9.9906,
+"se"
+],
+[
+"NCT00258674",
+"mean systolic blood pressure",
+139.6,
+0.4,
+17.95,
+18.6543,
+"se"
+],
+[
+"NCT01524627",
+"Age, Continuous",
+38.1,
+1.8,
+11.05,
+12.16,
+"se"
+],
+[
+"NCT02379156",
+"Body Mass Index (BMI)",
+25.93,
+0.46,
+2.765,
+5.3212,
+"se"
+],
+[
+"NCT00635102",
+"Age, Continuous",
+37.9,
+0.17,
+9.45,
+12.0441,
+"low"
+],
+[
+"NCT00378014",
+"Age, Continuous",
+52.6,
+1.0,
+9.85,
+10.156,
+"se"
+],
+[
+"NCT01284140",
+"Acute Physiology and Chronic Health Evaluation II score",
+25.0,
+5.3,
+1.95,
+2.6196,
+"high"
+],
+[
+"NCT06904404",
+"Age, Continuous",
+70.2,
+5.5,
+0.75,
+1.2642,
+"high"
+],
+[
+"NCT04048135",
+"Age, Continuous",
+52.97,
+1.81,
+8.135,
+14.1227,
+"low"
+],
+[
+"NCT00276406",
+"Hemoglobin A1c",
+7.9,
+0.3,
+1.15,
+1.7678,
+"low"
+],
+[
+"NCT00686920",
+"Age, Continuous",
+57.4,
+57.0,
+8.895,
+9.3783,
+"high"
+],
+[
+"NCT03750968",
+"Age, Continuous",
+29.9,
+1.2,
+3.05,
+3.8565,
+"low"
+],
+[
+"NCT03535688",
+"Pain Numeric Rating Scale (NRS)",
+5.97,
+4.36,
+1.355,
+1.3753,
+"high"
+],
+[
+"NCT04778475",
+"Age, Continuous",
+63.0,
+0.0,
+10.15,
+11.1052,
+"zero"
+],
+[
+"NCT04778475",
+"NIHSS",
+6.75,
+0.0,
+3.85,
+4.5401,
+"zero"
+],
+[
+"NCT00273364",
+"Expanded Disability Status Scale (EDSS)",
+3.35,
+0.05,
+0.95,
+1.254,
+"low"
+],
+[
+"NCT02655692",
+"Age, Continuous",
+43.3,
+11.5,
+1.45,
+2.7244,
+"high"
+],
+[
+"NCT06027619",
+"Age, Continuous",
+70.1,
+0.97,
+5.75,
+7.5168,
+"se"
+],
+[
+"NCT03386032",
+"SCORAD",
+49.3,
+14.1,
+2.385,
+5.5716,
+"high"
+],
+[
+"NCT03011775",
+"Age, Continuous",
+53.7,
+5.9,
+1.145,
+1.7375,
+"high"
+],
+[
+"NCT01049581",
+"Age, Continuous",
+7.0,
+0.25,
+2.45,
+3.6401,
+"low"
+],
+[
+"NCT00282672",
+"Age, Continuous",
+65.95,
+8.95,
+1.35,
+2.4005,
+"high"
+],
+[
+"NCT02744430",
+"UA RBC",
+19.5,
+11.0,
+3.95,
+5.1481,
+"high"
+],
+[
+"NCT01864564",
+"Body Mass index at randomization",
+37.0,
+0.6,
+6.45,
+6.6517,
+"low"
+],
+[
+"NCT03111121",
+"Age, Continuous",
+59.83,
+0.296,
+10.985,
+11.417,
+"low"
+],
+[
+"NCT03393754",
+"Age, Continuous",
+56.6,
+58.0,
+13.15,
+13.4651,
+"high"
+],
+[
+"NCT05090423",
+"Active knee extension range of motion during slump test in ankle plantar flexion with inversion",
+35.29,
+14.22,
+3.385,
+3.5703,
+"high"
+],
+[
+"NCT05090423",
+"Hamstring flexibility",
+40.83,
+10.93,
+2.605,
+2.6226,
+"high"
+],
+[
+"NCT02754882",
+"Age, Continuous",
+60.1,
+20.84,
+8.945,
+9.1862,
+"high"
+],
+[
+"NCT06071884",
+"Age, Continuous",
+57.25,
+1.5,
+6.35,
+7.9267,
+"low"
+],
+[
+"NCT06071884",
+"Body Mass Index (BMI)",
+31.4,
+1.3,
+7.75,
+8.2052,
+"se"
+],
+[
+"NCT02253654",
+"Age, Continuous",
+59.8,
+1.8,
+13.25,
+14.2963,
+"low"
+],
+[
+"NCT00957801",
+"Total Mass as Measured by DEXA",
+84.42,
+15.8,
+76.925,
+89.9552,
+"se"
+],
+[
+"NCT00957801",
+"Lean Body Mass as measured by DEXA",
+52.77,
+7.73,
+47.845,
+57.9877,
+"se"
+],
+[
+"NCT00957801",
+"Fat Mass as measured by DEXA",
+28.59,
+9.99,
+26.115,
+34.0607,
+"low"
+],
+[
+"NCT01884597",
+"Age, Continuous",
+77.17,
+2.2,
+8.365,
+20.0683,
+"low"
+],
+[
+"NCT00122954",
+"Age, Continuous",
+51.3,
+1.81,
+9.95,
+11.6681,
+"se"
+],
+[
+"NCT01477762",
+"Age, Continuous",
+42.4,
+11.8,
+2.795,
+4.9371,
+"high"
+],
+[
+"NCT04002037",
+"Age, Continuous",
+63.37,
+0.0,
+9.105,
+10.7466,
+"zero"
+],
+[
+"NCT00139477",
+"Age, Continuous",
+12.2,
+2.7,
+0.35,
+0.7433,
+"high"
+],
+[
+"NCT06764277",
+"Cardiac output",
+4.25,
+0.34,
+0.765,
+1.2617,
+"low"
+],
+[
+"NCT00279812",
+"Age, Continuous",
+57.12,
+1.12,
+3.85,
+5.324,
+"low"
+],
+[
+"NCT00279812",
+"BMI",
+26.0,
+0.54,
+2.35,
+4.287,
+"low"
+],
+[
+"NCT00754156",
+"Age, Continuous",
+51.14,
+3.4,
+12.35,
+14.2293,
+"se"
+],
+[
+"NCT00754156",
+"APACHE II",
+19.0,
+2.81,
+9.75,
+12.0001,
+"se"
+],
+[
+"NCT00754156",
+"Starting Wound Dimension",
+483.0,
+75.86,
+245.25,
+308.895,
+"low"
+],
+[
+"NCT02371187",
+"Height",
+1.69,
+8.92,
+0.075,
+0.1079,
+"high"
+],
+[
+"NCT02798211",
+"Age, Continuous",
+52.2,
+80.86,
+12.555,
+14.6159,
+"high"
+],
+[
+"NCT01292187",
+"Body Mass Index",
+26.13,
+25.48,
+3.7645,
+6.0031,
+"high"
+],
+[
+"NCT02544217",
+"Age, Continuous",
+40.0,
+4.0,
+8.15,
+14.9044,
+"low"
+],
+[
+"NCT04076540",
+"Age, Continuous",
+47.7,
+50.5,
+4.845,
+17.5662,
+"high"
+],
+[
+"NCT03402932",
+"Age, Continuous",
+28.5,
+1.18,
+2.775,
+28.1346,
+"low"
+],
+[
+"NCT00298038",
+"Age, Continuous",
+56.2,
+56.0,
+9.175,
+9.6006,
+"high"
+],
+[
+"NCT04359901",
+"Age, Continuous",
+72.3,
+32.7,
+8.45,
+14.9977,
+"high"
+],
+[
+"NCT03614325",
+"Age, Continuous",
+49.4,
+0.09,
+11.05,
+19.0648,
+"low"
+],
+[
+"NCT03614325",
+"Body Mass Index",
+28.4,
+0.12,
+4.75,
+5.2617,
+"low"
+],
+[
+"NCT04288154",
+"Age, Continuous",
+35.65,
+1.0,
+9.65,
+10.8505,
+"se"
+],
+[
+"NCT01364584",
+"Body Mass Index (kg/m2)",
+32.3,
+3.9,
+0.95,
+1.8398,
+"high"
+],
+[
+"NCT01364584",
+"Body Fat (%)",
+36.7,
+7.15,
+2.15,
+2.5739,
+"high"
+],
+[
+"NCT01364584",
+"Lean Mass (kg)",
+58.1,
+11.6,
+2.75,
+5.0212,
+"high"
+],
+[
+"NCT01364584",
+"Fasting Insulin (\u03bcU/ml)",
+31.0,
+15.1,
+3.65,
+7.0516,
+"high"
+],
+[
+"NCT01364584",
+"Total Cholesterol (mg/dl)",
+165.2,
+34.9,
+9.75,
+15.1415,
+"high"
+],
+[
+"NCT01364584",
+"LDL Cholesterol (mg/dl)",
+94.4,
+22.1,
+6.15,
+7.701,
+"high"
+],
+[
+"NCT01364584",
+"Triglycerides (mg/dl)",
+190.1,
+136.9,
+18.25,
+65.5981,
+"high"
+],
+[
+"NCT01364584",
+"Free Fatty Acids (mmol/L)",
+546.3,
+228.2,
+67.75,
+86.2865,
+"high"
+],
+[
+"NCT01364584",
+"VO2peak (ml/kg/min)",
+16.4,
+3.1,
+0.85,
+1.5207,
+"high"
+],
+[
+"NCT02621060",
+"Area under the curve of glucose (AUCG)",
+1129.0,
+50.0,
+146.5,
+154.8564,
+"low"
+],
+[
+"NCT02716727",
+"Age, Continuous",
+60.5,
+4.2,
+9.025,
+15.6605,
+"low"
+],
+[
+"NCT01928797",
+"Cardiac Output",
+6.4,
+74.0,
+1.25,
+1.3583,
+"high"
+],
+[
+"NCT00748982",
+"Age Continuous",
+4.0,
+254.0,
+61.5,
+65.5172,
+"high"
+],
+[
+"NCT01786252",
+"Age, Continuous",
+25.7,
+3.2,
+0.9755,
+1.5251,
+"high"
+],
+[
+"NCT04365465",
+"Age, Continuous",
+32.07,
+0.68,
+4.65,
+5.8917,
+"se"
+],
+[
+"NCT00355030",
+"Standing Height SDS",
+-2.5,
+0.045,
+0.445,
+0.4677,
+"se"
+],
+[
+"NCT00547898",
+"Age, Continuous",
+44.9,
+1.59,
+7.655,
+9.1256,
+"low"
+],
+[
+"NCT04102956",
+"FA value at admission ( Mean\u00b1SD)",
+0.436,
+0.484,
+0.0435,
+0.056,
+"high"
+],
+[
+"NCT01237301",
+"Age, Continuous",
+59.0,
+0.9,
+8.85,
+10.5043,
+"se"
+],
+[
+"NCT00104572",
+"Age, Continuous",
+71.0,
+1.2,
+2.95,
+5.364,
+"low"
+],
+[
+"NCT00104572",
+"Systolic blood pressure",
+135.3,
+2.2,
+9.35,
+14.7008,
+"low"
+],
+[
+"NCT00104572",
+"Diastolic blood pressure",
+72.9,
+0.5,
+5.25,
+10.462,
+"low"
+],
+[
+"NCT00104572",
+"Body mass index",
+28.5,
+1.4,
+3.45,
+4.3489,
+"low"
+],
+[
+"NCT00104572",
+"Total Testosterone",
+291.8,
+17.6,
+81.85,
+96.1165,
+"low"
+],
+[
+"NCT00104572",
+"Bioavailable Testosterone",
+106.8,
+13.5,
+31.65,
+39.0894,
+"low"
+],
+[
+"NCT00104572",
+"follicle-stimulating hormone",
+7.567,
+0.9,
+5.25,
+10.9869,
+"se"
+],
+[
+"NCT00104572",
+"lean body mass",
+55.6,
+0.8,
+7.15,
+12.5196,
+"low"
+],
+[
+"NCT00104572",
+"Fat mass",
+29.0,
+2.4,
+7.55,
+10.7221,
+"low"
+],
+[
+"NCT00104572",
+"hand grip",
+39.9,
+1.1,
+6.85,
+10.0001,
+"se"
+],
+[
+"NCT00104572",
+"knee strength",
+142.6,
+11.3,
+41.85,
+49.8452,
+"low"
+],
+[
+"NCT00708019",
+"Age, Continuous",
+59.15,
+11.9,
+1.185,
+1.3031,
+"high"
+],
+[
+"NCT00741936",
+"No. of days taking rescue therapy",
+0.89,
+1.24,
+0.145,
+0.182,
+"high"
+],
+[
+"NCT00741936",
+"Severity of constipation",
+4.43,
+0.76,
+0.095,
+0.1124,
+"high"
+],
+[
+"NCT05390580",
+"Modified rankin scale",
+0.31,
+0.68,
+0.205,
+0.3288,
+"high"
+],
+[
+"NCT01550757",
+"Age, Continuous",
+52.2,
+1.8,
+8.75,
+10.2774,
+"low"
+],
+[
+"NCT01537926",
+"Age, Continuous",
+49.15,
+0.56,
+14.95,
+15.2343,
+"low"
+],
+[
+"NCT00374244",
+"Age, Continuous",
+43.0,
+9.0,
+1.95,
+3.1977,
+"high"
+],
+[
+"NCT01689909",
+"Columbia Suicide Severity Rating Scale (C-SSRS) - suicide ideation scale",
+1.64,
+1.02,
+10.15,
+10.3502,
+"se"
+],
+[
+"NCT01243593",
+"Weight",
+8.7,
+3.0,
+0.615,
+1.0287,
+"high"
+],
+[
+"NCT00666848",
+"Age Continuous",
+43.0,
+2.2,
+9.05,
+14.0926,
+"low"
+],
+[
+"NCT03401489",
+"Modified Rankin Score (mRS)",
+1.85,
+0.85,
+0.075,
+0.1379,
+"high"
+],
+[
+"NCT00112125",
+"6 Minute Hall Walk Distance",
+325.2,
+7.28,
+82.05,
+92.4618,
+"low"
+],
+[
+"NCT00112125",
+"MLWHFQ score",
+58.95,
+0.282,
+22.5,
+23.5544,
+"low"
+],
+[
+"NCT00602537",
+"Number of lifetime major depressive episodes",
+29.9,
+11.0,
+49.65,
+50.5119,
+"low"
+],
+[
+"NCT00393978",
+"Age, Continuous",
+17.4,
+0.2,
+2.05,
+2.1783,
+"se"
+],
+[
+"NCT02930174",
+"Age, Continuous",
+42.6,
+1.3,
+13.15,
+14.4881,
+"low"
+],
+[
+"NCT00909545",
+"PD Qualify of Life Scale",
+9.7,
+2.3,
+5.815,
+8.6174,
+"low"
+],
+[
+"NCT03473145",
+"Age, Continuous",
+67.81,
+32.13,
+4.655,
+7.4557,
+"high"
+],
+[
+"NCT02090075",
+"Age, Continuous",
+57.0,
+11.4,
+1.85,
+3.8733,
+"high"
+],
+[
+"NCT02965846",
+"BMI",
+33.996,
+0.65464394984732,
+9.1331,
+10.7003,
+"low"
+],
+[
+"NCT02965846",
+"Weight",
+97.2893,
+2.0238704230461,
+20.1802,
+26.0731,
+"low"
+],
+[
+"NCT02965846",
+"Height",
+170.026,
+1.6317762147419,
+5.6684,
+10.4112,
+"low"
+],
+[
+"NCT02729038",
+"Age, Continuous",
+61.6,
+2.72,
+7.045,
+16.0981,
+"low"
+],
+[
+"NCT01460303",
+"Age, Continuous",
+60.6,
+1.27,
+12.35,
+12.4862,
+"low"
+],
+[
+"NCT02829983",
+"Age, Continuous",
+31.32,
+0.1,
+3.65,
+4.6511,
+"low"
+],
+[
+"NCT02829983",
+"Probing depht",
+3.43,
+0.13,
+0.55,
+0.6576,
+"low"
+],
+[
+"NCT02829983",
+"clinical attachment level",
+3.55,
+0.1,
+0.65,
+0.7543,
+"se"
+],
+[
+"NCT02829983",
+"bleeding on probing",
+53.5,
+0.7,
+18.5,
+30.5164,
+"low"
+],
+[
+"NCT02829983",
+"gingival recession",
+0.12,
+0.028,
+0.115,
+0.1724,
+"low"
+],
+[
+"NCT02829983",
+"plaque index",
+60.5,
+2.12,
+22.5,
+25.5783,
+"low"
+],
+[
+"NCT00740246",
+"Weight",
+80.6,
+8.6,
+80.55,
+80.65,
+"low"
+],
+[
+"NCT01834404",
+"Body Mass Index (BMI)",
+34.9,
+5.1,
+0.85,
+2.1915,
+"high"
+],
+[
+"NCT01834404",
+"Waist Circumference",
+109.8,
+7.5,
+2.15,
+2.65,
+"high"
+],
+[
+"NCT01834404",
+"Fasting Plasma Glucose",
+95.3,
+10.6,
+2.65,
+3.8422,
+"high"
+],
+[
+"NCT01834404",
+"Baseline Volume to Fullness",
+711.3,
+306.3,
+85.5,
+95.5118,
+"high"
+],
+[
+"NCT01834404",
+"Baseline Maximum Tolerated Volume",
+1297.8,
+383.2,
+110.5,
+132.1864,
+"high"
+],
+[
+"NCT00140231",
+"Age, Continuous",
+25.5,
+0.5,
+4.5,
+5.5902,
+"low"
+],
+[
+"NCT00955201",
+"Age, Continuous",
+62.5,
+1.4,
+6.55,
+9.6915,
+"low"
+],
+[
+"NCT02923674",
+"Waist to Hip Ratio",
+0.9,
+0.3,
+0.085,
+0.1061,
+"high"
+],
+[
+"NCT03767335",
+"Age, Continuous",
+56.02,
+55.5,
+7.9365,
+15.6912,
+"high"
+],
+[
+"NCT03178773",
+"Diabetes Distress Scale",
+2.46,
+0.1,
+0.855,
+1.1244,
+"low"
+],
+[
+"NCT01390389",
+"Age, Continuous",
+62.21,
+5.48,
+50.045,
+60.2587,
+"low"
+],
+[
+"NCT01479439",
+"Age, Continuous",
+24.4,
+88.8,
+4.85,
+22.1749,
+"high"
+],
+[
+"NCT05372315",
+"Age, Continuous",
+68.4,
+0.5,
+8.05,
+9.1512,
+"low"
+],
+[
+"NCT00296244",
+"Age Continuous",
+53.0,
+9.0,
+1.05,
+3.9488,
+"high"
+],
+[
+"NCT03491800",
+"Age, Continuous",
+59.9,
+3.96,
+13.85,
+17.2989,
+"low"
+],
+[
+"NCT02546193",
+"Age, Continuous",
+30.5,
+0.18,
+5.95,
+7.023,
+"low"
+],
+[
+"NCT03611309",
+"Age, Continuous",
+64.66,
+54.02,
+10.395,
+10.9053,
+"high"
+],
+[
+"NCT04592549",
+"Height (cm)",
+168.91,
+167.75,
+6.8585,
+14.1722,
+"high"
+],
+[
+"NCT01791803",
+"Age, Continuous",
+55.17,
+1.4,
+8.85,
+12.2795,
+"low"
+],
+[
+"NCT02141295",
+"Age, Continuous",
+62.5,
+0.2,
+10.55,
+11.0637,
+"low"
+],
+[
+"NCT01207752",
+"Age, Continuous",
+52.7,
+2.8,
+17.45,
+17.868,
+"low"
+],
+[
+"NCT03847987",
+"Age, Continuous",
+33.7,
+4.44,
+9.655,
+10.7029,
+"low"
+],
+[
+"NCT01217190",
+"Age, Continuous",
+29.2,
+0.7,
+5.55,
+6.1098,
+"se"
+],
+[
+"NCT02842242",
+"Postexercise LVOT gradient",
+94.5,
+0.0,
+42.5,
+51.2957,
+"zero"
+],
+[
+"NCT02987231",
+"Gingival recession depth",
+3.18,
+0.11,
+0.405,
+0.5908,
+"low"
+],
+[
+"NCT02112838",
+"Age, Continuous",
+42.0,
+40.5,
+11.55,
+14.9068,
+"high"
+],
+[
+"NCT04223843",
+"Forced Expiratory Volume in one second (FEV1) area under the curve from 0 to 3 hours (AUC0-3h)",
+1.324,
+0.467,
+0.0595,
+0.1698,
+"high"
+],
+[
+"NCT00817206",
+"Age, Continuous",
+50.3,
+1.61,
+11.705,
+13.4958,
+"low"
+],
+[
+"NCT03621956",
+"Age, Continuous",
+38.54,
+0.41,
+1.555,
+1.7742,
+"low"
+],
+[
+"NCT03452176",
+"Age, Continuous",
+56.9,
+0.9,
+7.15,
+13.8677,
+"low"
+],
+[
+"NCT03057548",
+"Age, Continuous",
+68.5,
+2.12,
+7.5,
+9.7082,
+"low"
+],
+[
+"NCT01923129",
+"intraoperative intravenous fluids",
+2901.0,
+192.0,
+802.5,
+858.7626,
+"low"
+],
+[
+"NCT01923129",
+"OR time",
+292.0,
+191.0,
+60.5,
+67.2477,
+"high"
+],
+[
+"NCT03293394",
+"Age, Continuous",
+61.7,
+2.0,
+10.85,
+11.4841,
+"se"
+],
+[
+"NCT03293394",
+"Disease Duration",
+2.0,
+0.2,
+0.95,
+1.4637,
+"se"
+],
+[
+"NCT04098302",
+"Age, Continuous",
+56.3,
+91.0,
+8.85,
+9.3886,
+"high"
+]
+]
+}

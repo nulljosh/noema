@@ -93,6 +93,8 @@ To be safe, the clear set keeps only trials whose arms differ at least twofold i
 
 Head counts behave. Across all 79,533 trials with results, every arm count adds up to its Total, 435,201 cells without one miss, so the registry likely adds count Totals itself while mean Totals are typed by hand. Sex, age group, race and ethnicity add past their arm's size in only 49 rows of 22 trials, and 41 of those are exactly double, the shape of a crossover trial that counts each person in both periods.
 
+Total SDs can be checked without any counts. However the arms pool, with at least two people each, the Total's SD is at least 0.7 times the smallest arm SD and at most the largest arm SD widened by the spread of the arm means. `registry.py` flags a Total SD under half the smallest arm SD, or over twice the widest pooling allows, when the Total mean itself sits inside the arms. 407 of 70,923 such Totals, in 296 trials, fail, so no table like them can be right. 24 print an SD of 0. 42 sit near the arm SD divided by the square root of N, which is a standard error. 3 repeat the Total mean and 3 the head count. In others the arms look like the slip: arms of 11 and 12 people with VO2peak SDs of 1.0 and 0.9 beside a Total SD of 3.1. One trial gives ages of 43.6 and 31.9 with SDs of 9.5 and 10, then a Total SD of .17. Three flagged trials were fetched again live and match cell for cell. The rows are in `registry-sd.json`. The checker cannot say which cell is wrong, only that one is.
+
 Two literature searches found studies of missing and inconsistent registry fields, but none that checks the Total column this way, and no sign of how the registry validates Totals.
 
 ## Are flagged papers retracted more often?

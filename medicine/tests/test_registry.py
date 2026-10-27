@@ -34,6 +34,12 @@ class RegistryTests(unittest.TestCase):
         self.assertTrue(row['outside'] and row['far'] and not row['unweighted'])
         self.assertEqual(list(registry.rows(study('75.0', total_n='60'))), [])
 
+    def test_sd_impossible(self):
+        self.assertEqual(list(registry.sd_impossible(study('46.1'))), [])  # 11.7 fits arms of 11.1 and 12.4
+        (_, _, sd, lo, hi, kind), = registry.sd_impossible(study('46.1', '1.5'))
+        self.assertEqual((sd, kind), (1.5, 'se'))  # 11.05 / sqrt(59) is 1.44
+        self.assertEqual(next(registry.sd_impossible(study('46.1', '46.1')))[-1], 'mean')
+        self.assertEqual(list(registry.sd_impossible(study('75.0', '1.5'))), [])  # mean outside: another check
 
     def test_counts(self):
         cell = lambda g, v: {'groupId': g, 'value': v}

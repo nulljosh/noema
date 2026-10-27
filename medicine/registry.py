@@ -12,6 +12,7 @@ plain average by luck if they fell anywhere between the arm means. `decoy` count
 average and its mirror image about the weighted mean inside the arm range, then how many land on each: missing
 data would scatter Totals to both sides alike, an AVERAGE only to the plain one. Equal analyzed counts make the plain average
 right, so `clear` keeps only arms whose sizes differ at least twofold, with no note about missing participants.
+`sd_impossible` needs no counts: it flags Total SDs that no way of pooling the arms could give.
 """
 import json
 import sys
@@ -117,6 +118,43 @@ def rows(study):
                                                      or sds[-1][0] - sds[-1][1] > pooled[1])}
 
 
+def sd_impossible(study):
+    """Single-row mean measures whose Total SD no arm sizes allow, with the Total mean inside the arm means.
+    Pooling arms of at least 2 gives a sample variance of at least half the smallest arm variance and at most the
+    largest arm variance plus half the squared range of arm means, whatever the counts, so a Total SD under half
+    the smallest arm SD, or over twice the root of (largest arm variance + range^2 / 4), cannot be right.
+    Yields (measure, total mean, total SD, lowest allowed, highest allowed, kind)."""
+    groups = study.get('groups', [])
+    total = [g['id'] for g in groups if g.get('title', '').strip().lower() == 'total']
+    if len(total) != 1 or len(groups) < 3:
+        return
+    ids = [g['id'] for g in groups if g['id'] != total[0]]
+    n = _counts(study.get('denoms')).get(total[0], 0)
+    for measure in study['measures']:
+        classes = measure.get('classes', [])
+        if measure.get('paramType') != 'MEAN' or len(classes) != 1 or len(classes[0].get('categories', [])) != 1:
+            continue
+        cells = {x['groupId']: x for x in classes[0]['categories'][0].get('measurements', [])}
+        means = [_num(cells.get(i, {}).get('value')) for i in ids + total]
+        sds = [_num(cells.get(i, {}).get('spread')) for i in ids + total]
+        if None in means or None in sds:
+            continue
+        (tm, tmt), (ts, tst) = means[-1], sds[-1]
+        lo_m, hi_m = min(m - t for m, t in means[:-1]), max(m + t for m, t in means[:-1])
+        if tm + tmt < lo_m or tm - tmt > hi_m:
+            continue
+        lo = min(v - t for v, t in sds[:-1])
+        hi = (max(v + t for v, t in sds[:-1]) ** 2 + (hi_m - lo_m) ** 2 / 4) ** 0.5
+        if ts + tst < 0.5 * lo:
+            kind = 'zero' if ts == 0 else 'se' if n > 1 and abs(ts - lo * n ** -0.5) <= max(tst, 0.15 * lo * n ** -0.5) \
+                else 'low'
+        elif ts - tst > 2 * hi:
+            kind = 'mean' if abs(ts - tm) <= tst + tmt else 'count' if ts == n else 'high'
+        else:
+            continue
+        yield measure.get('title', ''), tm, ts, round(lo, 4), round(hi, 4), kind
+
+
 EXHAUSTIVE = ('Sex: Female, Male', 'Age, Categorical', 'Ethnicity (NIH/OMB)', 'Race (NIH/OMB)')
 
 
@@ -178,4 +216,8 @@ if __name__ == '__main__':
     out['count_totals_missed'] = sum(len(m) for m, _ in tallies)
     out['count_over'] = sum(len(o) for _, o in tallies)
     out['count_over_doubled'] = sum(got == 2 * n for _, o in tallies for _, _, got, n in o)  # crossover arms
+    sd = [(nct,) + row for nct, study in studies.items() for row in sd_impossible(study)]
+    out['sd_impossible'], out['trials_sd_impossible'] = len(sd), len({r[0] for r in sd})
+    out['sd_kinds'] = {k: sum(r[-1] == k for r in sd) for k in ('zero', 'se', 'low', 'mean', 'count', 'high')}
+    out['sd_rows'] = sd
     print(json.dumps(out, indent=1))
