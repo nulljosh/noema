@@ -1,4 +1,4 @@
-# Noema loop handoff (2026-10-26)
+# Noema loop handoff (2026-10-27)
 
 ## What a loop is
 
@@ -22,7 +22,11 @@ Math: SAT checked 18,069 formulas; Goldbach and Collatz stopping cover 10,000; f
 
 Biology: the pinned HBB reference, 1,332 single-base substitutions, and 256 UniProt annotations reproduced (two outside a one-base explanation, three complex ones excluded). Hb Bristol explained with sources. Eleven tests.
 
-Both sites now deploy as one from `./deploy.sh`.
+Computer science: every 2-, 3- and 4-state machine and every 2-state 3-symbol machine is settled in Python. BB(3) = 21 and BB(2,3) = 38 are proved in full in Lean (`FAR.bb3`, `FAR.bb23`), axioms propext and Quot.sound only. `halters.c` counts every halting machine and sums the halting times. At 5 states it gives 26,751,695,615,616 halters, exactly A004147(5), and a sum of 64,068,865,333,248, a new fifth term for A386859. The OEIS edit waits on Joshua in `docs/OEIS-A386859.md`. The runtime spectrum is 1, 6, 21, 79, 1,207 distinct runtimes for 1 to 5 states, an open question in Aaronson's Busy Beaver Frontier. It has no OEIS entry yet. The 5-state run takes about 3 hours on six cores. Rerun with `./halters 5 2 47176870 3 6 I`, and keep `halters-5.json` curated.
+
+Medicine: landmark trials recomputed from their counts; 235,860 abstracts scanned for numbers that contradict themselves. On ClinicalTrials.gov, `registry.py` checks baseline Totals: 328 equal the plain average of unequal arms, and 407 Total SDs cannot come from any arm sizes. `analyses.py` checks outcome analyses: 61 CIs in 52 trials have a limit with the wrong sign, which the posted p-value confirms. Raw downloads live in the session scratchpad and are refetched with `fetch`.
+
+Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
 
 ## Restart prompts
 
@@ -36,6 +40,18 @@ Biology lane:
 
 ```text
 Continue Noema's biology lane. Read CLAUDE.md, biology/CLAUDE.md, biology/WHITEPAPER.md and biology/benchmarks/README.md. In biology/, run uv run evidna.py benchmark and inspect regressions before changing anything. Then take the next open item in roadmap.md in one small, tested change: first the held-out hypothesis-quality benchmark with predeclared scoring, then a second public gene with independently specified expected cases. Update the whitepaper and landing findings only with measured evidence. Keep evidence provenance separate from sequence correctness. No Claude calls, background jobs or instrument code. Stop when useful work is done and report results and remaining limits.
+```
+
+CS lane:
+
+```text
+Continue Noema's CS lane. Read CLAUDE.md, cs/CLAUDE.md, cs/README.md and ledger.md. In cs/, run python3 -m unittest discover -s tests. Next: draft an OEIS entry for the runtime spectrum (1, 6, 21, 79, 1207) for Joshua, then run halters.c on 2 states and 4 symbols with cap 3932964 and report how many nodes reach the cap before claiming anything. Every claim names its level. No universal claims from finite checks. Stop when the cycle ends.
+```
+
+Medicine lane:
+
+```text
+Continue Noema's medicine lane. Read CLAUDE.md, medicine/CLAUDE.md, medicine/README.md and ledger.md. Run python3 -m unittest discover -s tests. Next: hand-read a seeded sample of the 61 sign slips in registry-ci-sign.json and the 407 SD rows in registry-sd.json, and record what each one is. A mismatch with a paper is an open note until the full text is read. NCBI calls use tool=noema only. Stop when the cycle ends.
 ```
 
 Cross-lab (use when both lanes are quiet):
