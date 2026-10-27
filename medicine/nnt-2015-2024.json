@@ -1,0 +1,196 @@
+{
+ "abstracts": 235860,
+ "mentions": {
+  "nnt": 518,
+  "rrr": 104
+ },
+ "flags": 23,
+ "rows": [
+  {
+   "pmid": "38447434",
+   "kind": "nnt",
+   "printed": "absolute difference [95% ... NNT 15",
+   "implied": 1.1,
+   "sentence": "Placebo-corrected time-adjusted absolute reduction in LDL-C with inclisiran was -1.32 mmol/L (95% CI -1.37 to -1.26; p < 0.001), which predicted a 10-year cardiovascular risk of 18.1% with inclisiran versus 24.7% with placebo (absolute difference [95% CI], -6.99% [-7.33 to -6.66]; p < 0.001) NNT 15.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "39265595",
+   "kind": "nnt",
+   "printed": "risk difference -2·1% ... NNT 40",
+   "implied": 47.6,
+   "sentence": "Any severe (3 months: adjusted risk difference -1·6% [-2·6% to -0·6%]; probability superiority [p(sup)]>0·99; number needed to treat [NNT] 62·5; 6 months: -1·9% [-2·9% to -0·9%]; p(sup)>0·99, NNT 52·6) or persistent symptoms (3 months: adjusted risk difference -2·1% [-2·9% to -1·5%]; p(sup)>0·99; NNT 47·6; 6 months: -2·5% [-3·3% to -1·6%]; p(sup)>0·99; NNT 40) were reduced in severity, and health-",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "39265595",
+   "kind": "nnt",
+   "printed": "risk difference -1·4% ... NNT 200",
+   "implied": 71.4,
+   "sentence": "Ratings of wellness (3 months: adjusted mean difference 0·15 (0·11 to 0·19); p(sup)>0·99; 6 months: 0·12 (0·07 to 0·16); p(sup)>0·99), experiencing any more severe symptom (3 months; adjusted risk difference -1·6% [-2·6% to -0·6%]; p(sup)=0·99; 6 months: -1·9% [-2·9% to -0·9%]; p(sup)>0·99), and health-care use (3 months: adjusted risk difference -1·4% [-2·3% to -0·4%]; p(sup)>0·99; NNT 71·4; 6 mo",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "39628282",
+   "kind": "nnt",
+   "printed": "42% and 18% ... number needed to treat of 3.5",
+   "implied": 4.2,
+   "sentence": "Treatment-responder rates in the donepezil and placebo groups were 42% and 18%, respectively, yielding a number needed to treat of 3.5.",
+   "review": "clear"
+  },
+  {
+   "pmid": "39628282",
+   "kind": "nnt",
+   "printed": "46% and 8% ... number needed to harm of 6.25",
+   "implied": 2.6,
+   "sentence": "Treatment-emergent adverse event rates for donepezil and placebo were 46% and 8%, respectively, and mild or moderate (85%); diarrhea and nausea were significantly more common in the donepezil group, yielding a number needed to harm of 6.25 and a likelihood to be helped or harmed ratio of 1.79.",
+   "review": "clear"
+  },
+  {
+   "pmid": "39548082",
+   "kind": "nnt",
+   "printed": "ARR -2.3% ... NNT 115",
+   "implied": 43.5,
+   "sentence": "Long-term treat-to-target interventions showed significant reductions in CVD (ARR -2.3%, 95%CI -3.4% to -0.8%; NNT 115), all-cause mortality (-3.0%, -4.3% to -1.8%; 95), and atherosclerotic CVD (-2.6%, -3.5% to -1.2%; 104).",
+   "review": "not comparable: different NNT (restricted mean event-free time)"
+  },
+  {
+   "pmid": "27046160",
+   "kind": "nnt",
+   "printed": "1.5% vs. 1.1% ... number needed to treat of 67",
+   "implied": 250.0,
+   "sentence": "As patients with diabetes were at higher risk of MACE, the absolute risk reduction tended to be greater in patients with versus without diabetes (1.5% vs. 1.1%, with corresponding 3-year number needed to treat of 67 vs. 91).",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "27449274",
+   "kind": "nnt",
+   "printed": "12.9% and 14.7% ... number needed to treat of 22",
+   "implied": 55.6,
+   "sentence": "Results At 24-month follow-up prevalence of 7-day point abstinence was 8.4%, 12.9% and 14.7% in the control, abstinence intervention and reduction intervention condition, which corresponds to a number needed to treat of 22 (95%-CI: 11-707) and 16 (95%-CI: 9-53).",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "28588007",
+   "kind": "nnt",
+   "printed": "9.5% for control vs 4.0% ... NNT=24",
+   "implied": 18.2,
+   "sentence": "Notable differences were observed between the groups for the female gender (4.2% to 9.5% for control vs 4.0% to 5.2% for intervention; NNT=24 for females vs NNT=207 for males), low educational background (7.3% to 12% for control vs 6.1% to 8.7% for intervention; NNT=30), and migrational background (students who claimed that at least one parent was not born in Germany) at the 12-month follow-up.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "28588007",
+   "kind": "nnt",
+   "printed": "9.5% for control vs 4.0% ... NNT=207",
+   "implied": 18.2,
+   "sentence": "Notable differences were observed between the groups for the female gender (4.2% to 9.5% for control vs 4.0% to 5.2% for intervention; NNT=24 for females vs NNT=207 for males), low educational background (7.3% to 12% for control vs 6.1% to 8.7% for intervention; NNT=30), and migrational background (students who claimed that at least one parent was not born in Germany) at the 12-month follow-up.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "28588007",
+   "kind": "nnt",
+   "printed": "12% for control vs 6.1% ... NNT=30",
+   "implied": 16.9,
+   "sentence": "Notable differences were observed between the groups for the female gender (4.2% to 9.5% for control vs 4.0% to 5.2% for intervention; NNT=24 for females vs NNT=207 for males), low educational background (7.3% to 12% for control vs 6.1% to 8.7% for intervention; NNT=30), and migrational background (students who claimed that at least one parent was not born in Germany) at the 12-month follow-up.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "29506674",
+   "kind": "nnt",
+   "printed": "12.1% vs. 26.1% ... NNT=9",
+   "implied": 7.1,
+   "sentence": "RIPC significantly reduced CIN incidence in the overall population (12.1% vs. 26.1%, p=0.01, with a NNT=9) and in non-diabetic patients (9.2% vs. 25.0%, p=0.02), but showed no benefit in diabetics (16.7% vs. 28.2%, p=0.21).",
+   "review": "clear"
+  },
+  {
+   "pmid": "31448789",
+   "kind": "nnt",
+   "printed": "absolute risk reduction was 0.08% ... number needed to treat was 12.4",
+   "implied": 1250.0,
+   "sentence": "The increase in the absolute risk reduction was 0.08% (95% confidence interval 0.12-0.30), and the number needed to treat was 12.4.",
+   "review": "clear"
+  },
+  {
+   "pmid": "31992545",
+   "kind": "nnt",
+   "printed": "absolute risk reduction was 6.6% ... number needed to treat was 152",
+   "implied": 15.2,
+   "sentence": "The absolute risk reduction was 6.6% (95% CI 3.2 to 10.0), and the number needed to treat was 152 hours of floorball exposure (95% CI 100 to 316).",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "32479321",
+   "kind": "nnt",
+   "printed": "48.2% vs. 30.3% ... NNT of 8",
+   "implied": 5.6,
+   "sentence": "Results In the pivotal acute flexible-dose study, MADRS response (63.4% vs. 49.5%) and remission (48.2% vs. 30.3%) at 4 weeks resulted in NNT of 8 and 6 for esketamine+AD vs. placebo+AD.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "32000630",
+   "kind": "nnt",
+   "printed": "2.5% vs 0.2% ... NNT 40",
+   "implied": 43.5,
+   "sentence": "Conversely, the ARR for MALE was higher in those with prior lower extremity revascularization (2.5% vs 0.2%: NNT 40 vs 500).",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "31912603",
+   "kind": "rrr",
+   "printed": "relative risk reduction for the 30% | HR 0.89",
+   "implied": 11.0,
+   "sentence": "The PRE score predicted a relative risk reduction for the 30% eGFR decline + ESRD endpoint of 11.3% (HR 0.89; 95% CI 0.83-0.94), compared with 12.7% (HR 0.87; 0.77-0.99) observed risk reduction.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "32791894",
+   "kind": "nnt",
+   "printed": "17.8% and 29.8% ... number needed to treat [NNT]=7.29",
+   "implied": 8.3,
+   "sentence": "Significantly fewer patients in the olanzapine/samidorphan combination group compared with the olanzapine group had weight gain ≥10% (17.8% and 29.8%, respectively; number needed to treat [NNT]=7.29; odds ratio=0.50) and weight gain ≥7% (27.5% and 42.7%, respectively; NNT=6.29; odds ratio=0.50).",
+   "review": "clear"
+  },
+  {
+   "pmid": "31799993",
+   "kind": "nnt",
+   "printed": "48.5% vs 74.8% ... number needed to treat [NNT], 2.8",
+   "implied": 3.8,
+   "sentence": "Maintenance ADM yielded lower rates of recurrence compared with ADM withdrawal regardless of whether patients had achieved recovery in phase 1 with ADM alone (48.5% vs 74.8%; z = -3.16; P = .002; number needed to treat [NNT], 2.8; 95% CI, 1.8-7.0) or ADM plus CBT (48.5% vs 76.7%; z = -3.49; P Conclusions and relevance Maintenance ADM treatment, but not previous exposure to CBT, was associated with",
+   "review": "clear"
+  },
+  {
+   "pmid": "34157385",
+   "kind": "nnt",
+   "printed": "absolute risk difference of 0.5% ... number needed to treat 100",
+   "implied": 200.0,
+   "sentence": "A Bayesian re-analysis with a wide variety of priors (vague, optimistic, sceptical, and pessimistic) was performed, calculating the posterior probability for: any benefit, an absolute risk difference of 0.5% (small benefit, number needed to treat 200), and an absolute risk difference of one percentage point (modest benefit, number needed to treat 100).",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "35263859",
+   "kind": "nnt",
+   "printed": "66% vs 42% ... NNT = 10",
+   "implied": 4.2,
+   "sentence": "Selenium supplementation improved short-term outcome, 15.7% by using NIHSS (66% vs 42%, RR = 0.85 with CI = 0.54-1.35; NNT = 10; 95% CI = 5.15- 2.53, P = 0.51) and 46.3% by using mRS (57% vs 12%, RR = 0.52 with CI = 0.31-0.88; NNT = 3; 95% CI = 1.49 -7.59, P = 0.01).",
+   "review": "clear"
+  },
+  {
+   "pmid": "34191011",
+   "kind": "nnt",
+   "printed": "1.1% vs. 0.4% ... number needed to treat 91",
+   "implied": 142.9,
+   "sentence": "Patients taking more concomitant medications derived the largest absolute reduction in the net clinical outcome with added rivaroxaban (1.1% vs. 0.4% reduction with >4 vs. 0-2 cardiovascular drugs, number needed to treat 91 vs. 250).",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  },
+  {
+   "pmid": "35112974",
+   "kind": "nnt",
+   "printed": "14.7% and 14.3% ... NNT 6.8",
+   "implied": 250.0,
+   "sentence": "Sorafenib patients experienced improved RECIST partial response rates at 1 and 2 years of 14.7% and 14.3%, with NNT 6.8 and 6.9, and costs of $766,938 and $1,556,433; respectively.",
+   "review": "debris (wrong pairing: subgroups, respectively, three arms, or another quantity)"
+  }
+ ],
+ "clear": 7,
+ "clear_abstracts": 6
+}
