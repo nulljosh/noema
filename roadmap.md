@@ -57,7 +57,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [x] **CS:** BB(3) decided here (2026-10-26). Two-cell block n-gram CPS cleared the last 4 counters.
 - [x] **CS:** BB(4) decided here (2026-10-26). Direct FAR cleared the last 27.
 - [x] **CS:** FAR certificates Lean-checked (2026-10-26). All 41 pass `decide +kernel` under one soundness theorem.
-- [ ] **CS:** Lean-check the cycle and translated-cycler deciders, so more of BB(4) is machine-checked, then add the Lean build to CI.
+- [x] **CS:** cycle decider proved sound in Lean and applied to the 532 cycles at 2 and 3 states; Lean build in CI (2026-10-26).
+- [ ] **CS:** prove the translated-cycler decider sound in Lean (a shifted run into fresh blank tape behaves the same), then apply it to the 3,027 three-state translated cyclers.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.

@@ -82,6 +82,12 @@ def oriented(row):
     return machine
 
 
+def write_root():
+    """proofs/FarCerts.lean imports every module in proofs/FarCerts, so far_lean.py and cycle_lean.py share it."""
+    mods = sorted(f[:-5] for f in os.listdir(os.path.join(HERE, 'proofs', 'FarCerts')) if f.endswith('.lean'))
+    open(os.path.join(HERE, 'proofs', 'FarCerts.lean'), 'w').write(''.join('import FarCerts.%s\n' % m for m in mods))
+
+
 def lean_cert(row, states):
     machine = {(q, a): tuple(r) for (q, a), r in row['machine']}
     dfa = far.DFA(row['delta'], row['acc'])
@@ -119,6 +125,5 @@ if __name__ == '__main__':
         out = ['import FarCerts.Basic', '', 'set_option maxRecDepth 100000', '', 'namespace FAR', '']
         out += [lean_cert(row, states) for row in rows[k:k + 8]] + ['end FAR', '']
         open(os.path.join(HERE, 'proofs', 'FarCerts', names[-1] + '.lean'), 'w').write('\n'.join(out))
-    open(os.path.join(HERE, 'proofs', 'FarCerts.lean'), 'w').write(
-        ''.join('import FarCerts.%s\n' % n for n in ['Basic'] + names))
+    write_root()
     print('%d certificates agree with far.holds; wrote %d files' % (len(rows), len(names)))
