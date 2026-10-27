@@ -83,6 +83,14 @@ When hazards stay constant, a hazard ratio is the inverse ratio of the two media
 
 In 323 pairs, 1 is flagged, and it is a misread ("Pathway 1 and 25 days"). No clear mismatch. Direction was tried first and dropped: 8 significant ratios point the other way from their medians, and every one reads fine once the reference arm is the other one.
 
+## Do registry Totals add up?
+
+ClinicalTrials.gov posts a baseline table for every trial with results: each arm's count, mean and SD, then a Total column. `registry.py fetch` pulls all 55,075 trials that post a mean with an SD, and `registry.py` checks 71,214 Totals against their arms. None of the Totals falls outside the range of its arm means. The registry may check that itself.
+
+The Total should be the mean weighted by arm size. 2,154 miss that by more than ten roundings. Missing values can explain most of them, because the posted counts are not always the people measured. But 328 Totals, in 234 trials, land to the last digit on the plain average of the arm means. That would be right only if the arms were the same size. By luck about 27 would. In 192 of them the Total SD is also the plain average of the arm SDs, which no correct formula gives. These look like Totals typed in as a spreadsheet AVERAGE of the arms. To be safe, the clear set keeps only trials whose arms differ at least twofold in size and carry no note about missing data. That leaves 134 Totals in 107 trials, listed in `registry-baseline.json`. A typical one gives arms of 16 and 11 people with means 30.51 and 8.5, and a Total of 19.51; weighted, it should be about 21.5.
+
+A literature search found studies of missing and inconsistent registry fields, but none that checks the Total column this way.
+
 ## Are flagged papers retracted more often?
 
 No. PubMed marks 685 of the 235,860 abstracts as retracted, 0.29%. Of the 428 abstracts flagged by any of the three checks, 1 is retracted (0.23%, PMID 29636004). One would be expected by chance. So these slips look like ordinary typing errors, not a sign of a bad paper. The test is weak, though: with only 428 flagged abstracts it would miss anything smaller than about a fivefold rise. The slips also do not cluster: of 440 abstracts flagged by any check, only one (PMID 39086232) fails two. Four of the 13 abstracts mention a model elsewhere in the text, which might explain theirs.

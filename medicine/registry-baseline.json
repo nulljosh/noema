@@ -1,0 +1,1088 @@
+{
+ "source": "ClinicalTrials.gov API v2, every study with posted results, fetched 2026-10-27",
+ "studies": 55075,
+ "checked": 71214,
+ "outside": 0,
+ "far": 2154,
+ "chance": 26.5,
+ "unweighted": 328,
+ "trials_unweighted": 234,
+ "sd_plain_too": 192,
+ "clear": 134,
+ "trials_clear": 107,
+ "hand_read": "seeded random 10 of the 328 read: all fit the plain average; 2 had near-equal arms or a missing-data note and are not counted clear",
+ "rows": [
+  {
+   "nct": "NCT00470418",
+   "measure": "Education",
+   "total": 15.15,
+   "weighted": 14.01,
+   "plain": 15.15,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01109849",
+   "measure": "zWeight",
+   "total": 0.314,
+   "weighted": 0.2929,
+   "plain": 0.3135,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01963208",
+   "measure": "Age, Continuous",
+   "total": 39.72,
+   "weighted": 40.9456,
+   "plain": 39.725,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03726320",
+   "measure": "Age, Continuous",
+   "total": 49.87,
+   "weighted": 52.819,
+   "plain": 49.8667,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01814046",
+   "measure": "Age, Continuous",
+   "total": 57.85,
+   "weighted": 52.725,
+   "plain": 57.85,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05875701",
+   "measure": "Time between first dose of previous NVX vaccine at Study 307 and Day 1 dose of Study 312",
+   "total": 288.0,
+   "weighted": 278.4558,
+   "plain": 288.0,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Age, Continuous",
+   "total": 60.88,
+   "weighted": 61.396,
+   "plain": 60.8867,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Heart rate",
+   "total": 85.04,
+   "weighted": 85.568,
+   "plain": 85.04,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "O2 saturation on Room air",
+   "total": 89.44,
+   "weighted": 88.86,
+   "plain": 89.4433,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Aspartate aminotransferase level",
+   "total": 51.03,
+   "weighted": 52.112,
+   "plain": 51.03,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Alanine aminotransferase level",
+   "total": 36.46,
+   "weighted": 37.092,
+   "plain": 36.4667,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Bilirubin level",
+   "total": 0.634,
+   "weighted": 0.6516,
+   "plain": 0.6342,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Prothrombin Time",
+   "total": 15.201,
+   "weighted": 15.3262,
+   "plain": 15.201,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Serum creatinine",
+   "total": 1.3966,
+   "weighted": 1.4341,
+   "plain": 1.3966,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Total leukocytic count",
+   "total": 9.39,
+   "weighted": 9.5319,
+   "plain": 9.3921,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Hematocrit level",
+   "total": 37.18,
+   "weighted": 36.757,
+   "plain": 37.1837,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Platelet count",
+   "total": 221.37,
+   "weighted": 218.6642,
+   "plain": 221.3723,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Lactate dehydrogenase level",
+   "total": 393.79,
+   "weighted": 389.936,
+   "plain": 393.79,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Creatine kinase level",
+   "total": 215.59,
+   "weighted": 221.52,
+   "plain": 215.5933,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "D-dimer level",
+   "total": 0.351,
+   "weighted": 0.2977,
+   "plain": 0.3512,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "C-reactive protein level",
+   "total": 72.79,
+   "weighted": 75.0352,
+   "plain": 72.7903,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Ferritin level",
+   "total": 672.93,
+   "weighted": 719.052,
+   "plain": 672.9333,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "Sodium level",
+   "total": 145.34,
+   "weighted": 145.1176,
+   "plain": 145.3433,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "arterial oxygen pressure",
+   "total": 37.205,
+   "weighted": 37.309,
+   "plain": 37.2057,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05502081",
+   "measure": "ratio of arterial Oxygen pressure to fraction inspired of Oxygen",
+   "total": 181.46,
+   "weighted": 173.0523,
+   "plain": 181.4612,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00791219",
+   "measure": "Percentage of toe infected",
+   "total": 58.27,
+   "weighted": 57.3381,
+   "plain": 58.2733,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01445327",
+   "measure": "Age, Continuous",
+   "total": 61.76,
+   "weighted": 58.6,
+   "plain": 61.7667,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03481816",
+   "measure": "Age, Continuous",
+   "total": 71.6,
+   "weighted": 71.9267,
+   "plain": 71.6,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00989950",
+   "measure": "Sleep Latency",
+   "total": 37.8,
+   "weighted": 35.2923,
+   "plain": 37.75,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00839254",
+   "measure": "Age, Continuous",
+   "total": 7.2,
+   "weighted": 4.1911,
+   "plain": 7.2,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02351960",
+   "measure": "Weight",
+   "total": 64.55,
+   "weighted": 62.8108,
+   "plain": 64.55,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02351960",
+   "measure": "Height",
+   "total": 163.25,
+   "weighted": 162.5405,
+   "plain": 163.25,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02351960",
+   "measure": "Body Mass Index",
+   "total": 24.05,
+   "weighted": 23.6273,
+   "plain": 24.055,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01831804",
+   "measure": "Age, Continuous",
+   "total": 51.2,
+   "weighted": 52.3413,
+   "plain": 51.2222,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03961555",
+   "measure": "Age, Continuous",
+   "total": 34.9,
+   "weighted": 32.7761,
+   "plain": 34.9,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00129129",
+   "measure": "Age, Continuous",
+   "total": 560.8,
+   "weighted": 359.7307,
+   "plain": 560.7667,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03262701",
+   "measure": "Bleeding On Probing",
+   "total": 53.1,
+   "weighted": 56.8795,
+   "plain": 53.0667,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01868022",
+   "measure": "Age, Continuous",
+   "total": 66.52,
+   "weighted": 63.4123,
+   "plain": 66.5222,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00560651",
+   "measure": "Cylinder",
+   "total": -2.63,
+   "weighted": -2.5266,
+   "plain": -2.6333,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT02135861",
+   "measure": "Age, Continuous",
+   "total": 66.9,
+   "weighted": 60.5917,
+   "plain": 66.9667,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03117634",
+   "measure": "Central sub field thickness (CSFT)",
+   "total": 464.85,
+   "weighted": 455.675,
+   "plain": 464.85,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT02069847",
+   "measure": "Age, Continuous",
+   "total": 70.2,
+   "weighted": 69.0733,
+   "plain": 70.3,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT02487251",
+   "measure": "Parent BMI",
+   "total": 30.39,
+   "weighted": 30.768,
+   "plain": 30.3875,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00859573",
+   "measure": "Age, Continuous",
+   "total": 32.56,
+   "weighted": 31.46,
+   "plain": 32.565,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01326728",
+   "measure": "Age, Continuous",
+   "total": 49.83,
+   "weighted": 49.4991,
+   "plain": 49.835,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03770507",
+   "measure": "Age, Continuous",
+   "total": 17.9,
+   "weighted": 16.2096,
+   "plain": 17.9,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00442611",
+   "measure": "Age, Continuous",
+   "total": 44.2,
+   "weighted": 42.44,
+   "plain": 44.2,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03707587",
+   "measure": "Age, Continuous",
+   "total": 39.79,
+   "weighted": 35.6978,
+   "plain": 39.795,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01978314",
+   "measure": "Age, Continuous",
+   "total": 46.98,
+   "weighted": 43.5818,
+   "plain": 46.98,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01018134",
+   "measure": "Age, Continuous",
+   "total": 50.66,
+   "weighted": 50.4519,
+   "plain": 50.6683,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03523962",
+   "measure": "Age, Continuous",
+   "total": 47.0,
+   "weighted": 48.5105,
+   "plain": 47.025,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03523962",
+   "measure": "Injury Severity Score (ISS)",
+   "total": 11.1,
+   "weighted": 9.7913,
+   "plain": 11.05,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01060098",
+   "measure": "Age, Continuous",
+   "total": 48.23,
+   "weighted": 49.7542,
+   "plain": 48.2333,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00782431",
+   "measure": "Age, Continuous",
+   "total": 63.8,
+   "weighted": 62.0399,
+   "plain": 63.85,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01055613",
+   "measure": "Age, Continuous",
+   "total": 31.73,
+   "weighted": 31.95,
+   "plain": 31.725,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02863926",
+   "measure": "Hgb A1C %",
+   "total": 8.52,
+   "weighted": 8.8667,
+   "plain": 8.52,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04289363",
+   "measure": "Age, Continuous",
+   "total": 42.25,
+   "weighted": 41.3485,
+   "plain": 42.25,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03599271",
+   "measure": "CT Lund Mackay Score - Total",
+   "total": 9.8,
+   "weighted": 8.76,
+   "plain": 9.8,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03043079",
+   "measure": "Age, Continuous",
+   "total": 48.6,
+   "weighted": 52.0289,
+   "plain": 48.6,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03403400",
+   "measure": "Age, Continuous",
+   "total": 79.03,
+   "weighted": 79.4638,
+   "plain": 79.03,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03403400",
+   "measure": "IPAQ-Walk",
+   "total": 1171.86,
+   "weighted": 1117.4169,
+   "plain": 1171.8567,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03403400",
+   "measure": "IPAQ-Total",
+   "total": 2385.19,
+   "weighted": 2451.2623,
+   "plain": 2385.19,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04404907",
+   "measure": "Age, Continuous",
+   "total": 24.42,
+   "weighted": 24.6092,
+   "plain": 24.425,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01473992",
+   "measure": "Age, Continuous",
+   "total": 51.9,
+   "weighted": 48.64,
+   "plain": 51.85,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01549275",
+   "measure": "Age, Continuous",
+   "total": 63.1,
+   "weighted": 64.5219,
+   "plain": 63.0,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02461966",
+   "measure": "Age, Continuous",
+   "total": 45.0,
+   "weighted": 50.136,
+   "plain": 45.46,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04540627",
+   "measure": "Age, Continuous",
+   "total": 26.86,
+   "weighted": 27.2682,
+   "plain": 26.8633,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02334982",
+   "measure": "Weight",
+   "total": 74.23,
+   "weighted": 73.9774,
+   "plain": 74.2243,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00089778",
+   "measure": "Age, Continuous",
+   "total": 55.93,
+   "weighted": 57.6727,
+   "plain": 55.9333,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01209936",
+   "measure": "Age, Continuous",
+   "total": 30.15,
+   "weighted": 35.6569,
+   "plain": 30.15,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00221403",
+   "measure": "Age, Continuous",
+   "total": 5.51,
+   "weighted": 5.6204,
+   "plain": 5.51,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00287079",
+   "measure": "Age, Continuous",
+   "total": 35.8,
+   "weighted": 36.2143,
+   "plain": 35.8,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02019927",
+   "measure": "Age, Continuous",
+   "total": 50.8,
+   "weighted": 58.1649,
+   "plain": 50.8167,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04075734",
+   "measure": "Age, Continuous",
+   "total": 23.07,
+   "weighted": 22.2167,
+   "plain": 23.0733,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04530136",
+   "measure": "Age, Continuous",
+   "total": 55.55,
+   "weighted": 55.7129,
+   "plain": 55.555,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04530136",
+   "measure": "Body Mass Index",
+   "total": 32.56,
+   "weighted": 33.4105,
+   "plain": 32.56,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02446600",
+   "measure": "Age, Continuous",
+   "total": 62.6,
+   "weighted": 63.8483,
+   "plain": 62.625,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02095340",
+   "measure": "Age, Continuous",
+   "total": 29.58,
+   "weighted": 24.7111,
+   "plain": 29.58,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01671605",
+   "measure": "Age, Continuous",
+   "total": 55.9,
+   "weighted": 58.2883,
+   "plain": 55.9,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02315625",
+   "measure": "Age, Continuous",
+   "total": 53.17,
+   "weighted": 52.9988,
+   "plain": 53.175,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00533351",
+   "measure": "Age, Continuous",
+   "total": 54.8,
+   "weighted": 58.0222,
+   "plain": 54.8,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00323622",
+   "measure": "Age, Continuous",
+   "total": 50.0,
+   "weighted": 56.1405,
+   "plain": 50.0,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00984165",
+   "measure": "Age, Continuous",
+   "total": 36.15,
+   "weighted": 39.5467,
+   "plain": 36.1525,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT05628181",
+   "measure": "Age, Continuous",
+   "total": 63.3,
+   "weighted": 70.4647,
+   "plain": 63.3,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01445535",
+   "measure": "Age, Continuous",
+   "total": 48.76,
+   "weighted": 48.084,
+   "plain": 48.76,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00666588",
+   "measure": "Age, Continuous",
+   "total": 3984.06,
+   "weighted": 3825.3454,
+   "plain": 3984.055,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03918109",
+   "measure": "Months Since Initial Onset of Tinnitus",
+   "total": 38.38,
+   "weighted": 20.7051,
+   "plain": 38.375,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04884308",
+   "measure": "SFU count",
+   "total": 35.49,
+   "weighted": 36.686,
+   "plain": 35.49,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT03252535",
+   "measure": "CAP scale",
+   "total": 105.0,
+   "weighted": 103.82,
+   "plain": 104.9667,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00073242",
+   "measure": "Fat Mass (FM), kg",
+   "total": 47.3,
+   "weighted": 49.1742,
+   "plain": 47.35,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03835780",
+   "measure": "Age, Continuous",
+   "total": 49.8,
+   "weighted": 51.6902,
+   "plain": 49.78,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00942578",
+   "measure": "Age, Continuous",
+   "total": 64.51,
+   "weighted": 65.5289,
+   "plain": 64.5067,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01853618",
+   "measure": "Age, Continuous",
+   "total": 59.6,
+   "weighted": 58.9757,
+   "plain": 59.628,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03012386",
+   "measure": "Weight",
+   "total": 85.9,
+   "weighted": 88.6577,
+   "plain": 85.975,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03012386",
+   "measure": "BMI",
+   "total": 30.615,
+   "weighted": 31.7362,
+   "plain": 30.615,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03012386",
+   "measure": "Triglycerides",
+   "total": 101.74,
+   "weighted": 96.1131,
+   "plain": 101.74,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04048135",
+   "measure": "Age, Continuous",
+   "total": 52.97,
+   "weighted": 53.2114,
+   "plain": 52.975,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT02505425",
+   "measure": "Age, Continuous",
+   "total": 60.85,
+   "weighted": 62.1757,
+   "plain": 60.85,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05376527",
+   "measure": "Age, Continuous",
+   "total": 53.5,
+   "weighted": 53.0474,
+   "plain": 53.5022,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00617162",
+   "measure": "Age, Continuous",
+   "total": 49.62,
+   "weighted": 49.92,
+   "plain": 49.615,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01675154",
+   "measure": "Triglycerides",
+   "total": 2421.0,
+   "weighted": 2330.6,
+   "plain": 2421.0,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03050814",
+   "measure": "Age, Continuous",
+   "total": 57.82,
+   "weighted": 57.2507,
+   "plain": 57.8167,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05192382",
+   "measure": "Age, Continuous",
+   "total": 50.6,
+   "weighted": 47.7352,
+   "plain": 50.6,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01891721",
+   "measure": "MCCB neurocognition composite",
+   "total": 41.76,
+   "weighted": 41.8655,
+   "plain": 41.7567,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01891721",
+   "measure": "UPSA total",
+   "total": 75.46,
+   "weighted": 75.1005,
+   "plain": 75.4567,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT05292872",
+   "measure": "Age, Continuous",
+   "total": 56.036,
+   "weighted": 55.8902,
+   "plain": 56.036,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03072160",
+   "measure": "Age, Continuous",
+   "total": 56.15,
+   "weighted": 54.3871,
+   "plain": 56.15,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01373164",
+   "measure": "Age, Continuous",
+   "total": 63.5,
+   "weighted": 66.4716,
+   "plain": 63.44,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01955564",
+   "measure": "Age, Customized",
+   "total": 28.92,
+   "weighted": 29.44,
+   "plain": 28.9171,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01028222",
+   "measure": "Age, Continuous",
+   "total": 66.8,
+   "weighted": 65.6691,
+   "plain": 66.75,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00566982",
+   "measure": "BMI",
+   "total": 24.38,
+   "weighted": 24.5701,
+   "plain": 24.38,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02587962",
+   "measure": "Age, Continuous",
+   "total": 60.08,
+   "weighted": 57.7588,
+   "plain": 60.08,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04760613",
+   "measure": "Age, Continuous",
+   "total": 59.9,
+   "weighted": 63.8333,
+   "plain": 59.9,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT00857207",
+   "measure": "Post-traumatic stress disorder checklist-military version",
+   "total": 62.6,
+   "weighted": 61.5,
+   "plain": 62.6,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03329378",
+   "measure": "Age, Continuous",
+   "total": 49.75,
+   "weighted": 51.7857,
+   "plain": 49.75,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT01712659",
+   "measure": "Age, Continuous",
+   "total": 51.93,
+   "weighted": 46.1474,
+   "plain": 51.9333,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT02106065",
+   "measure": "Zarit Burden Inventory",
+   "total": 40.47,
+   "weighted": 39.0187,
+   "plain": 40.4667,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00970320",
+   "measure": "Anal incontinence (AI)",
+   "total": 4.5,
+   "weighted": 5.832,
+   "plain": 4.5,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01537926",
+   "measure": "Age, Continuous",
+   "total": 49.15,
+   "weighted": 49.7405,
+   "plain": 49.15,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04422561",
+   "measure": "Age, Continuous",
+   "total": 38.72,
+   "weighted": 39.0656,
+   "plain": 38.72,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00416195",
+   "measure": "Age, Continuous",
+   "total": 43.1,
+   "weighted": 41.7,
+   "plain": 43.1,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01196988",
+   "measure": "Age, Continuous",
+   "total": 79.6,
+   "weighted": 91.7225,
+   "plain": 79.6,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01489020",
+   "measure": "Age, Continuous",
+   "total": 32.68,
+   "weighted": 32.0675,
+   "plain": 32.6883,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04927494",
+   "measure": "Age, Continuous",
+   "total": 37.9,
+   "weighted": 40.3716,
+   "plain": 37.9233,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03325985",
+   "measure": "Age, Continuous",
+   "total": 61.4,
+   "weighted": 64.5731,
+   "plain": 61.4,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT02409901",
+   "measure": "Age, Continuous",
+   "total": 45.24,
+   "weighted": 46.0897,
+   "plain": 45.235,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04929184",
+   "measure": "Age, Continuous",
+   "total": 20.7,
+   "weighted": 27.9379,
+   "plain": 20.725,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT01288976",
+   "measure": "Age, Continuous",
+   "total": 68.1,
+   "weighted": 71.501,
+   "plain": 68.1333,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00059475",
+   "measure": "Age Continuous",
+   "total": 47.55,
+   "weighted": 46.5116,
+   "plain": 47.55,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00704938",
+   "measure": "Age, Continuous",
+   "total": 47.25,
+   "weighted": 43.6667,
+   "plain": 47.25,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT04643158",
+   "measure": "Age, Continuous",
+   "total": 52.9,
+   "weighted": 51.4514,
+   "plain": 52.8857,
+   "sd_plain": false
+  },
+  {
+   "nct": "NCT03750461",
+   "measure": "Body mass index (BMI)",
+   "total": 28.245,
+   "weighted": 27.6375,
+   "plain": 28.245,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT04383327",
+   "measure": "Age, Continuous",
+   "total": 38.88,
+   "weighted": 37.8738,
+   "plain": 38.8883,
+   "sd_plain": true
+  },
+  {
+   "nct": "NCT00514046",
+   "measure": "Age, Continuous",
+   "total": 14.5,
+   "weighted": 14.1824,
+   "plain": 14.4956,
+   "sd_plain": false
+  }
+ ]
+}
