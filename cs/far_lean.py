@@ -121,7 +121,10 @@ def write_tree():
             '',
             '/-- BB(3) = 21: one machine takes 20 steps and halts on its 21st, and none takes longer. -/',
             'theorem bb3 : (∃ M, WF M ∧ haltsAt M 20 = true) ∧ ∀ M, WF M → ∀ k, haltsAt M k = true → k ≤ 20 :=',
-            '  ⟨⟨champion, wf_of_rules (by decide), by decide +kernel⟩, bb3_steps_le⟩', '', 'end FAR', '']
+            '  ⟨⟨champion, wf_of_rules (by decide), by decide +kernel⟩, bb3_steps_le⟩', '',
+            '-- sabotage: the replay fails without one never-halting machine, and the champion is not halted at 21',
+            'example : (explore 8 root (cyc3, tr3, far3.tail)).isSome = false := by decide +kernel',
+            'example : haltsAt champion 21 = false := by decide +kernel', '', 'end FAR', '']
     open(os.path.join(folder, 'BB3Tree.lean'), 'w').write('\n'.join(out))
 
 
