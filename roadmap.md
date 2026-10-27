@@ -56,7 +56,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [x] **CS:** translated-cycler decider (2026-10-26). 3-state holdouts 3,119 to 92, 4-state 521,462 to 20,569, 4-state run 253 s to 14 s.
 - [x] **CS:** BB(3) decided here (2026-10-26). Two-cell block n-gram CPS cleared the last 4 counters.
 - [x] **CS:** BB(4) decided here (2026-10-26). Direct FAR cleared the last 27.
-- [ ] **CS:** port the FAR certificate check to Lean or Coq so BB(4) is machine-checked, not just Python. Then try 5 states.
+- [x] **CS:** FAR certificates Lean-checked (2026-10-26). All 41 pass `decide +kernel` under one soundness theorem.
+- [ ] **CS:** Lean-check the cycle and translated-cycler deciders, so more of BB(4) is machine-checked, then add the Lean build to CI.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.

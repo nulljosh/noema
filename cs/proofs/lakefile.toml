@@ -1,0 +1,6 @@
+name = "far_certs"
+version = "0.1.0"
+defaultTargets = ["FarCerts"]
+
+[[lean_lib]]
+name = "FarCerts"
