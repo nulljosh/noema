@@ -64,6 +64,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **CS:** BB(2) in full in Lean the same way (small), then the 2-state, 3-symbol tree.
 - [x] **CS:** A386859(5) = 64,068,865,333,248 computed (`halters.c`, 2026-10-27); the halting count matches A004147(5).
 - [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
+- [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
