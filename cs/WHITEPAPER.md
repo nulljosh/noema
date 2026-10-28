@@ -38,6 +38,10 @@ The same walk records the ones each halting machine leaves. Every count from 0 t
 
 A 2-state machine on an n-cell ring can only be in 2^(n+1) configurations once the ring is turned to keep the head at cell 0, so one memoized pass over that graph settles every start. This adds a(20) to a(27) to OEIS A394183 and shows an even-n pattern, (n^2 - 3n + 8)/2, from n = 14 on. Computed, with the old terms reproduced.
 
+## Rule 110
+
+On a ring of n cells rule 110 is a map on 2^n configurations, so one walk finds every cycle. This takes OEIS A332717 and A332718 from 21 rows to 34, with every row's maximum matching A204371.
+
 ## Sorting networks
 
 `sortnet.py` finds the fewest comparators that sort n inputs by searching over the sets of 0-1 vectors a network can still output. It gets 0, 1, 3, 5, 9, 12 and 16 for n = 1 to 7, matching OEIS A003075. A reproduction.

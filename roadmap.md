@@ -50,6 +50,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
 - [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
 - [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
+- [ ] **CS (Joshua):** submit the A332718 and A332717 (rule 110) extensions to n = 34, drafted in `docs/OEIS-A332718.md` (A332717 needs the b-file `cs/b332717.txt`).
 - [ ] **CS (Joshua):** submit the A394183 (circular tape) extension to 27 terms, drafted in `docs/OEIS-A394183.md`.
 - [ ] **CS (Joshua):** submit the A399346 (Placid Platypus) extension from 37 to 130 terms, drafted in `docs/OEIS-A399346.md`.
 - [ ] **CS:** PP(131) and on: the first open n. A wider 6-state search (changing a row of the 5-state base as well as adding F) should settle more terms; a lower bound of 7 needs the 6-state halters, out of reach.
