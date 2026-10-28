@@ -50,8 +50,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
 - [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
 - [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
-- [x] **CS:** second study, optimal sorting-network sizes for n up to 7 by search, matching OEIS A003075 (`sortnet.py`, 2026-10-27).
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
+- [ ] **CS:** machine-check the halting counts in Lean: A004147(2) = 9,784 and A386859(2) = 13,504 on the BB(2) tree, with a counting theorem for the rules a run never reaches, then n = 3.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
 - [ ] **Physics:** novelty search for the triangular closed form and the 2n+1 divisibility (read the 2006 Comput. Phys. Commun. paper, dimer-on-torus divisibility papers), then an outside reader for TRIANGULAR.md. If both hold, it goes to Joshua as the lab's first breakthrough candidate, with an OEIS entry.
