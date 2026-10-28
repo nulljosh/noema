@@ -13,3 +13,7 @@ XO-6 b (Crouzet et al. 2017, AJ 153, 94, arXiv:1612.02776), ratio 3.46. The pape
 KOI-2513.01 is different. The archive's default solution for it (Cañas et al. 2023) lists a = 0.5000 au and a/R_star = 100.000, round values, while every Kepler KOI table gives 0.141 to 0.146 au for the same 19.005-day orbit. Kepler's law gives 0.135 au. That reads as a placeholder or a fit pinned at a bound, made the default; the paper is not yet read.
 
 Next: read the other single-source outliers outside Stassun et al., starting with KOI-2513.01 (ratio 50), TOI-262 b (5.1) and K2-285 e (4.3), and sort each into transcription, unit slip or a tension like XO-6 b's.
+
+## Minimum mass against true mass
+
+M sin i can never exceed M. In the composite table, 440 planets have both, and 99 show M sin i above M (5 of them limits). In 96 the two come from different papers, so the composite has paired one paper's minimum mass with another's true mass. 8 differ by more than twice their combined error: GJ 876 b posts M sin i 760.9 ± 1.0 Earth masses (Trifonov et al. 2018) beside M = 723.2 ± 1.4 (Rivera et al. 2010), and 55 Cnc e, NN Ser c, HD 82943 b, Kepler-56 c, Kepler-25 c, GJ 876 c and HD 38529 c do the same. Three pairs share a source (TOI-763 b and c, K2-266 d) and differ by 2 to 6 percent. A reader who takes the composite row as one planet's solution gets a sine above one.
