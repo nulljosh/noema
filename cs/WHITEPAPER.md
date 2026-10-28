@@ -30,6 +30,10 @@ Lean 4 checks the cycle and translated-cycler deciders once as theorems, then ap
 
 At 5 states it counts 26,751,695,615,616 halting machines, matching OEIS A004147(5) and Ligocki's separate count. Their running times add up to 64,068,865,333,248 steps, a term OEIS A386859 did not have. The halting times take 1, 6, 21, 79 and 1,207 distinct values for 1 to 5 states, which answers a question Aaronson asks in The Busy Beaver Frontier, section 5.9. `runtimes.py`, a plain walk with no deciders that shares no code with `halters.c`, gets the same spectrum and counts through 4 states. Both new numbers are computed, not proved, and wait for OEIS review. The 5-state runner-up, 23,554,764 steps, is Marxen and Buntrock's.
 
+## Placid Platypus
+
+The same walk records the ones each halting machine leaves. Every count from 0 to 73 is reachable with 5 states and 74 is not, the smallest number no 5-state machine prints, an open question in Harland's 2006 slides. With 6-state witnesses for the gaps, PP(n), the fewest states that print exactly n ones (OEIS A399346), is now known for n up to 117, where OEIS had 37. A candidate, computed, not proved in Lean.
+
 ## Sorting networks
 
 `sortnet.py` finds the fewest comparators that sort n inputs by searching over the sets of 0-1 vectors a network can still output. It gets 0, 1, 3, 5, 9, 12 and 16 for n = 1 to 7, matching OEIS A003075. A reproduction.
