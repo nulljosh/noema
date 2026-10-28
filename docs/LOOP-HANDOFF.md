@@ -1,4 +1,4 @@
-# Noema loop handoff (2026-10-27)
+# Noema loop handoff (2026-10-27, night)
 
 ## What a loop is
 
@@ -22,9 +22,9 @@ Math: SAT checked 18,069 formulas; Goldbach and Collatz stopping cover 10,000; f
 
 Biology: the pinned HBB reference, 1,332 single-base substitutions, and 256 UniProt annotations reproduced (two outside a one-base explanation, three complex ones excluded). Hb Bristol explained with sources. Eleven tests.
 
-Computer science: every 2-, 3- and 4-state machine and every 2-state 3-symbol machine is settled in Python. BB(3) = 21 and BB(2,3) = 38 are proved in full in Lean (`FAR.bb3`, `FAR.bb23`), axioms propext and Quot.sound only. `halters.c` counts every halting machine and sums the halting times. At 5 states it gives 26,751,695,615,616 halters, exactly A004147(5), and a sum of 64,068,865,333,248, a new fifth term for A386859. The OEIS edit waits on Joshua in `docs/OEIS-A386859.md`. The runtime spectrum is 1, 6, 21, 79, 1,207 distinct runtimes for 1 to 5 states, an open question in Aaronson's Busy Beaver Frontier. It has no OEIS entry yet. The 5-state run takes about 3 hours on six cores. Rerun with `./halters 5 2 47176870 3 6 I`, and keep `halters-5.json` curated.
+Computer science: every 2-, 3- and 4-state machine and every 2-state 3-symbol machine is settled in Python. BB(2) = 6, BB(3) = 21 and BB(2,3) = 38 are proved in full in Lean (`FAR.bb2`, `FAR.bb3`, `FAR.bb23`), and `Count2.lean` machine-checks A004147(2) and A386859(2) over all 20,736 two-state tables. Axioms propext and Quot.sound only. `halters.c` counts every halting machine and sums the halting times. At 5 states it gives 26,751,695,615,616 halters, exactly A004147(5), and a sum of 64,068,865,333,248, a new fifth term for A386859 (OEIS edit waits on Joshua, `docs/OEIS-A386859.md`). The runtime spectrum is 1, 6, 21, 79, 1,207 for 1 to 5 states; `runtimes.py`, a plain walk sharing no code with halters.c, agrees through 4 states (draft for Joshua in `docs/OEIS-runtime-spectrum.md`). The runner-up 23,554,764 is Marxen and Buntrock's, not ours. `sortnet.py` reproduces optimal sorting networks to 7 inputs. Novelty report: `docs/reports/Noema candidates novelty check.md`.
 
-Medicine: landmark trials recomputed from their counts; 235,860 abstracts scanned for numbers that contradict themselves. On ClinicalTrials.gov, `registry.py` checks baseline Totals: 328 equal the plain average of unequal arms, and 407 Total SDs cannot come from any arm sizes. `analyses.py` checks outcome analyses: 61 CIs in 52 trials have a limit with the wrong sign, which the posted p-value confirms. Raw downloads live in the session scratchpad and are refetched with `fetch`.
+Medicine: 235,860 abstracts scanned for numbers that contradict themselves. On ClinicalTrials.gov (details in `medicine/docs/REGISTRY.md`): 328 baseline Totals are the plain average of unequal arms; 407 Total SDs cannot come from any arm sizes, and 71 of the too-wide ones fit once the arms are read as standard errors; 61 CIs in 52 trials have a sign slip the p-value confirms; 304 outcome intervals in 97 trials are labelled SD but fit standard errors (`registry-spread.json`), and in a 20-trial paper sample 2 of 3 readable papers say SE, 1 is a mixed-units false flag. One-sided P values posted without a label explain most interval-versus-P clashes. The Salk primary source (AJPH 1955, PMID 14361811) has no open copy. Raw downloads live in the session scratchpad: `analyses.py fetch` and `fetch-arms`, `registry.py fetch`.
 
 Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
 
@@ -45,13 +45,13 @@ Continue Noema's biology lane. Read CLAUDE.md, biology/CLAUDE.md, biology/WHITEP
 CS lane:
 
 ```text
-Continue Noema's CS lane. Read CLAUDE.md, cs/CLAUDE.md, cs/README.md and ledger.md. In cs/, run python3 -m unittest discover -s tests. Next: draft an OEIS entry for the runtime spectrum (1, 6, 21, 79, 1207) for Joshua, then run halters.c on 2 states and 4 symbols with cap 3932964 and report how many nodes reach the cap before claiming anything. Every claim names its level. No universal claims from finite checks. Stop when the cycle ends.
+Continue Noema's CS lane. Read CLAUDE.md, cs/CLAUDE.md, cs/README.md and ledger.md. In cs/, run python3 -m unittest discover -s tests. Next: sorting networks at 8 inputs (19) with permutation symmetry, or a weighted-tree counting theorem in Lean so A004147(3) can be machine-checked (12^6 tables is too many to list). Every claim names its level. No universal claims from finite checks. Stop when the cycle ends.
 ```
 
 Medicine lane:
 
 ```text
-Continue Noema's medicine lane. Read CLAUDE.md, medicine/CLAUDE.md, medicine/README.md and ledger.md. Run python3 -m unittest discover -s tests. Next: hand-read a seeded sample of the 61 sign slips in registry-ci-sign.json and the 407 SD rows in registry-sd.json, and record what each one is. A mismatch with a paper is an open note until the full text is read. NCBI calls use tool=noema only. Stop when the cycle ends.
+Continue Noema's medicine lane. Read CLAUDE.md, medicine/CLAUDE.md, medicine/README.md and ledger.md. Run python3 -m unittest discover -s tests. Next: flag mixed units in the SD-label check (arms and difference on different scales), then read a seeded sample of the 61 sign slips against their papers. A mismatch with a paper is an open note until the full text is read. NCBI calls use tool=noema only. Stop when the cycle ends.
 ```
 
 Cross-lab (use when both lanes are quiet):
