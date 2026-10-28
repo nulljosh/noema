@@ -35,6 +35,7 @@ class HaltersTests(unittest.TestCase):
 
     def test_runtime_spectrum(self):  # 1, 6, 21 distinct halting times; the first gap is the Lazy Beaver (A337805)
         self.assertEqual([len(runtimes.walk(n, 2, c)) for n, c in ((1, 1), (2, 6), (3, 21))], [1, 6, 21])
+        self.assertEqual(len(runtimes.walk(2, 3, 38)), 27)  # 2 states, 3 symbols, as halters.c finds
 
     def test_python_agrees(self):
         for n, m, cap in ((2, 2, 6), (3, 2, 21), (2, 3, 38)):
