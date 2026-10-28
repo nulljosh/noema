@@ -1,6 +1,6 @@
 /* Random walk over 6-state machines for Placid Platypus witnesses. Start from seeds on stdin ("ones machine",
    5-state seeds get an unused sixth state), change one or two rows at a time, keep a change in the pool when it
-   still halts within CAP with at least LO - 50 ones, and print the first machine found for each count in [LO, HI].
+   still halts within CAP with at least KEEP ones (LO - 50 unless given), and print the first machine found for each count in [LO, HI].
    Seeds were the 5-state halters with 100 or more ones; platypus-walk.txt holds what it found, and platypus.py
    reruns every one from blank.
 
@@ -28,7 +28,7 @@ static int run(const char *m) {   /* ones on halt, -1 if no halt within CAP */
     int o = 0; for (int i = lo; i <= hi; i++) o += tape[i]; return o;
 }
 int main(int argc, char **argv) {
-    srand(atoi(argv[1])); CAP = atoi(argv[2]); int LO = atoi(argv[3]), HI = atoi(argv[4]); long it = atol(argv[5]);
+    srand(atoi(argv[1])); CAP = atoi(argv[2]); int LO = atoi(argv[3]), HI = atoi(argv[4]); long it = atol(argv[5]); int KEEP = argc > 6 ? atoi(argv[6]) : LO - 50;
     static char seen[1 << 16]; char line[200], m[64];
     while (fgets(line, sizeof line, stdin) && np < P) {
         int o; if (sscanf(line, "%d %63s", &o, m) != 2) continue;
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
         }
         int o = run(m);
         if (o < 0) continue;
-        if (o >= LO - 50) strcpy(pool[rand() % np], m);
+        if (o >= KEEP) strcpy(pool[rand() % np], m);
         if (o >= LO && o <= HI && !seen[o]) { seen[o] = 1; printf("%d %s\n", o, m); fflush(stdout); }
     }
 }
