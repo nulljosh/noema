@@ -27,6 +27,13 @@ class AnalysesTests(unittest.TestCase):
         self.assertIsNone(analyses.sign_slip(row('-21.6', '-23.52', '19.58', '<0.0001', 'Odds Ratio (OR)')))
         self.assertIsNone(analyses.sign_slip({**row('-21.6', '-23.52', '19.58'), 'ciNumSides': 'ONE_SIDED'}))
 
+    def test_spread_kind(self):  # arms of 50 and 50, spread 10: the SD half-width is 3.92, the SE one 27.7
+        rec = {'arms': {'A': ['50', '12.0', '10'], 'B': ['50', '8.0', '10']}}
+        a = {**row('4.0', '0.08', '7.92'), 'groupIds': ['A', 'B']}
+        self.assertEqual(analyses.spread_kind(rec, a), 'fits SD')
+        self.assertEqual(analyses.spread_kind(rec, {**a, 'ciLowerLimit': '-23.7', 'ciUpperLimit': '31.7'}), 'fits SE')
+        self.assertIsNone(analyses.spread_kind(rec, {**a, 'ciLowerLimit': '-6', 'ciUpperLimit': '14'}))
+
     def test_pval(self):
         self.assertEqual(analyses.pval('<0.001'), (0.0, 0.001))
         self.assertEqual([round(x, 6) for x in analyses.pval('0.05')], [0.045, 0.055])
