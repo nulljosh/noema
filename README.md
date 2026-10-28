@@ -6,6 +6,8 @@ A small lab for every STEM field, one lane at a time. Exact questions, fixed bou
 
 [noema.jaybulb.com](https://noema.jaybulb.com) · [Math](https://noema.jaybulb.com/math/) · [Biology](https://noema.jaybulb.com/biology/)
 
+![Architecture](architecture.svg)
+
 | Lab | What it studies | Run |
 |---|---|---|
 | [math](math) | Collatz first descent, Goldbach, tiny SAT formulas, three Lean lemmas, the residue tree. Python standard library only. | `cd math && python3 -m unittest discover -s tests` |

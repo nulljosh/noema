@@ -2,6 +2,8 @@
 
 How many different alkanes have n carbon atoms? An alkane is a chain or branched tree of carbons, each carbon bonded to as many hydrogens as it needs. Two alkanes are the same molecule when one tree can be turned into the other without changing which carbons touch. The count is OEIS A000602: 1, 1, 1, 2, 3, 5, 9, 18, 35, 75 for n = 1 to 10, and 366319 at n = 20.
 
+![Architecture](architecture.svg)
+
 ```sh
 python3 -m unittest discover -s tests
 python3 alkanes.py

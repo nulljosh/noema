@@ -2,6 +2,10 @@
 
 Big medical trials print their raw counts. This lane takes those counts and redoes the math, to see whether the headline number really follows from them.
 
+![Architecture](architecture.svg)
+
+How it works, in one page: [WHITEPAPER.md](WHITEPAPER.md).
+
 ```sh
 python3 -m unittest discover -s tests
 python3 trials.py

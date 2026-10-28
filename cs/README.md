@@ -2,6 +2,10 @@
 
 Busy Beaver: among all Turing machines with n states and two symbols that eventually stop, which runs longest, and which leaves the most ones on the tape?
 
+![Architecture](architecture.svg)
+
+How it works, in one page: [WHITEPAPER.md](WHITEPAPER.md).
+
 ```sh
 python3 -m unittest discover -s tests
 python3 busy.py 4

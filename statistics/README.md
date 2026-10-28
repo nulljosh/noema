@@ -2,6 +2,8 @@
 
 Two classic puzzles about chance, worked out exactly and then checked by rolling the dice a few hundred thousand times.
 
+![Architecture](architecture.svg)
+
 ```sh
 python3 -m unittest discover -s tests
 python3 chance.py

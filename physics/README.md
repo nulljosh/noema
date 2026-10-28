@@ -2,6 +2,8 @@
 
 The Ising model is a grid of tiny magnets that each point up or down and want to match their neighbours. Heat it and they scramble. Cool it and they line up. Onsager solved the infinite grid in 1944 and found the switch happens at temperature 2.269.
 
+![Architecture](architecture.svg)
+
 ```sh
 python3 -m unittest discover -s tests
 python3 ising.py       # 2x2 up to 8x8, about two seconds
