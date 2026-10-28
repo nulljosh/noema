@@ -31,7 +31,7 @@ Medicine: 235,860 abstracts scanned for numbers that contradict themselves. On C
 
 Medicine, 2026-10-28 afternoon: three more registry-wide checks over all 80,750 studies with results, each a counting rule the data cannot break. Adverse events (`ae.py`): 28 serious totals in 26 trials exceed the sum of their terms, 6 group counts in 3 trials exceed those at risk. Outcomes (`outcomes.py`): 274 participant counts in 79 trials exceed the number analysed, 62 percentages in 11 trials pass 100. Participant flow (`flow.py`): conserved everywhere except 11 cells in 4 trials. The registry enforces the per-cell rules on entry, not the group sums.
 
-Astronomy (`astronomy/`, new): Kepler's third law holds over 5,609 archive planets (median ratio 1.000, IQR 0.014 dex); 55 miss by 2x, 16 because a = (a/R*) R* (XO-6 b traced to its paper), KOI-2513.01's default solution has round placeholder values (a = 0.5000 au, a/R* = 100). M sin i exceeds M for 99 of 440 composite rows (`docs/KEPLER.md`).
+Astronomy (`astronomy/`, new): Kepler's third law holds over 5,609 archive planets (median ratio 1.000, IQR 0.014 dex); 55 miss by 2x, 16 because a = (a/R*) R* (XO-6 b traced to its paper), KOI-2513.01's default is its paper's weak grazing fit (a = 0.5 +0.2 -0.4 au, so the law's 0.135 fits inside). M sin i exceeds M for 99 of 440 composite rows (`docs/KEPLER.md`).
 
 Information engineering (`information/`, new): A(n, d) reproduced to n = 7 by exhaustive clique search; A(8,3) = 20 is slow in Python, a C search is next.
 

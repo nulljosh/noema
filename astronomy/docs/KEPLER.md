@@ -10,9 +10,9 @@ XO-6 b (Crouzet et al. 2017, AJ 153, 94, arXiv:1612.02776), ratio 3.46. The pape
 
 16 of the 55 have a equal, within 3 percent, to the archive's own a/R_star times R_star (TOI-262 b, K2-285 d and e, TOI-2274 b, K2-184 b, XO-6 b among them): the orbit size came from the transit's shape and the star's radius, not from the period and mass, so it misses Kepler whenever the transit's stellar density and the star disagree. An eccentric orbit does that, and so does a misjudged star. Many of the rest are radial-velocity planets with no transit at all, where a was published beside a stellar mass the archive later replaced (the Stassun et al. 2017 rows).
 
-KOI-2513.01 is different. The archive's default solution for it (Cañas et al. 2023) lists a = 0.5000 au and a/R_star = 100.000, round values, while every Kepler KOI table gives 0.141 to 0.146 au for the same 19.005-day orbit. Kepler's law gives 0.135 au. That reads as a placeholder or a fit pinned at a bound, made the default; the paper is not yet read.
+KOI-2513.01 is different. The archive's default solution for it (Cañas et al. 2023) lists a = 0.5000 au and a/R_star = 100.000, round values, while every Kepler KOI table gives 0.141 to 0.146 au for the same 19.005-day orbit. Kepler's law gives 0.135 au. Read on 2026-10-28 (arXiv:2302.07713, Table 9): the paper prints a = 0.5 (+0.2, -0.4) au for this grazing brown dwarf, an orbit the transit shape barely constrains, so the archive copies the paper faithfully and the law's 0.135 au sits inside the paper's lower error. Not a placeholder: a weak fit made the default solution.
 
-Next: read the other single-source outliers outside Stassun et al., starting with KOI-2513.01 (ratio 50), TOI-262 b (5.1) and K2-285 e (4.3), and sort each into transcription, unit slip or a tension like XO-6 b's.
+Next: read the other single-source outliers outside Stassun et al., starting with TOI-262 b (5.1) and K2-285 e (4.3), and sort each into transcription, unit slip or a tension like XO-6 b's.
 
 ## Minimum mass against true mass
 
