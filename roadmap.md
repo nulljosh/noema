@@ -48,11 +48,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 
 - [ ] **Math:** binary patterns in the longest-surviving residues mod 2^20.
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
-- [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
-- [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
-- [ ] **CS (Joshua):** submit the A332718 and A332717 (rule 110) extensions to n = 34, drafted in `docs/OEIS-A332718.md` (A332717 needs the b-file `cs/b332717.txt`).
-- [ ] **CS (Joshua):** submit the A394183 (circular tape) extension to 27 terms, drafted in `docs/OEIS-A394183.md`.
-- [ ] **CS (Joshua):** submit the A399346 (Placid Platypus) extension from 37 to 130 terms, drafted in `docs/OEIS-A399346.md`.
+- [ ] **CS:** OEIS. Submitted for review 2026-10-28 from Joshua's account: A386859 (a(5)), A399346 (to 130 terms), A394183 (to 27 terms). OEIS allows 3 pending edits per user, so A332718 (`docs/OEIS-A332718.md`) and the new runtime-spectrum sequence (`docs/OEIS-runtime-spectrum.md`) go in when a slot opens; the A332717 b-file needs Joshua's file upload. Entries ready in internal format in the session scratchpad (`oeisedit/`).
 - [ ] **CS:** PP(131) and on: the first open n. A wider 6-state search (changing a row of the 5-state base as well as adding F) should settle more terms; a lower bound of 7 needs the 6-state halters, out of reach.
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
 - [ ] **CS:** machine-check R(4) = 79 and A004147(4) in Lean. BB(4) = 107 is not yet proved in Lean here, and the 4-state tree is far larger, so it needs the symmetry weights proved sound first.
