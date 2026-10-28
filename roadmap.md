@@ -55,7 +55,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
 - [ ] **CS:** machine-check R(4) = 79 and A004147(4) in Lean. BB(4) = 107 is not yet proved in Lean here, and the 4-state tree is far larger, so it needs the symmetry weights proved sound first.
 - [ ] **CS:** an independent count of the 5-state halters past step 2000 that does not use halters.c deciders (now only argued complete by A004147(5) minus the two-program count to 2000).
-- [ ] **Medicine:** the 60 reverse cases (SE-labelled spreads that fit SDs), read against their papers the same way the 90 SD-labelled trials were (15 of 16 readable papers said SE).
+- [ ] **Medicine:** write the SD/SE result up as a short note a registry curator could act on (90 trials, 15 of 16 readable papers say SE), and draft it for Joshua; nothing goes to ClinicalTrials.gov without his yes.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
 - [ ] **Physics (Joshua or a browser):** read Wei, Lu and Ke, J. Math. 2022, DOI 10.1155/2022/4120166 (hexagon torus matchings by Pfaffians), the 2006 CPC triangular enumeration paper, and Fee and Granville 1991 / Ford and Jha 1993 on Wendt. All block scripts. They decide whether the triangular formula and the 2n+1 bound are new (the OEIS and arXiv pass of 2026-10-27 found neither).
