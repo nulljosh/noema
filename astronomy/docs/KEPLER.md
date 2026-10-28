@@ -16,7 +16,9 @@ TOI-262 b traces to Oddo et al. 2023 (AJ, arXiv:2301.08162v3), whose Table 14 fi
 
 The whole-paper scan (`kepler.py papers`, 16,946 archive solutions with a/R_star, P, M_star and R_star, 117 papers with five or more planets) puts most papers within 0.03 dex of the law. Five run further off: Hedges et al. 2019 (7 planets, -0.121 dex), Pelaez-Torres et al. 2024 (5, +0.087), Oddo et al. 2023 (9, +0.082), the Q1-Q8 KOI table (2,308, -0.079, its fits 17 percent short across the board) and Dressing and Charbonneau 2013 (45, -0.074). A paper-wide offset points at the fit or the star models, not at any one planet. Observed; none of the five has been read for its cause.
 
-Next: K2-285 e (Palle et al. 2019, 4.3), then read Hedges 2019 and the Q1-Q8 KOI documentation for why their fits run short.
+K2-285 (Palle et al. 2019, A&A, arXiv:1808.00575) fixes every orbit circular and reports one light-curve stellar density, 1.782 g/cm^3. With circular orbits that one density sets a/R_star for every planet from its period alone. The table's a/R_star for b (10.43) matches it; c, d and e (22.51, 32.20, 49.43) would need densities of 4.2, 5.8 and 10.5 g/cm^3 around the same star. Each printed a in au is a/R_star times R_star, so c, d and e sit 21, 34 and 63 percent beyond Kepler's law with the paper's own 0.830 solar masses. The durations still fit, because a larger a/R_star with a smaller impact parameter gives the same transit length; the outer planets' fits took that branch. Observed from the paper's own tables; an erratum was not searched.
+
+Next: read Hedges 2019 and the Q1-Q8 KOI documentation for why their fits run short.
 
 ## Minimum mass against true mass
 
