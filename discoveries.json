@@ -1,0 +1,124 @@
+{
+ "about": "Noema's results that are new or that we reported, each with its claim level from ledger.md and, where it went to an outside service, what to watch there. The Mac app reads this file from GitHub, so a new row shows up without a rebuild.",
+ "discoveries": [
+  {
+   "id": "pp",
+   "lane": "cs",
+   "title": "Placid Platypus known to n = 176",
+   "plain": "The fewest states a Turing machine needs to print exactly n ones and stop. OEIS knew it for n up to 37; every n up to 176 is now settled, each with a machine that reruns from a blank tape.",
+   "level": "candidate",
+   "date": "2026-10-28",
+   "source": "noema/cs/platypus-5.json",
+   "watch": [{"kind": "oeis", "seq": "A399346", "sent": "130-term b-file"}]
+  },
+  {
+   "id": "a386859",
+   "lane": "cs",
+   "title": "Total running time of every 5-state halter",
+   "plain": "Add up how long every halting 5-state Turing machine runs: 64,068,865,333,248 steps. Two programs that share no code agree.",
+   "level": "candidate",
+   "date": "2026-10-27",
+   "source": "noema/docs/OEIS-A386859.md",
+   "watch": [{"kind": "oeis", "seq": "A386859", "sent": "a(5) = 64068865333248"}]
+  },
+  {
+   "id": "a394183",
+   "lane": "cs",
+   "title": "Circular-tape machines extended to 27 terms",
+   "plain": "A count of 2-state machines on a loop of tape, which OEIS had to 19 terms, pushed to 27.",
+   "level": "candidate",
+   "date": "2026-10-28",
+   "source": "noema/cs/circular.c",
+   "watch": [{"kind": "oeis", "seq": "A394183", "sent": "a(20) to a(27)"}]
+  },
+  {
+   "id": "runtimes",
+   "lane": "cs",
+   "title": "How many different running times halters have",
+   "plain": "Machines with 1 to 5 states stop after 1, 6, 21, 79 and 1,207 distinct step counts. Not in OEIS; a draft waits for a free slot.",
+   "level": "candidate",
+   "date": "2026-10-27",
+   "source": "noema/docs/OEIS-runtime-spectrum.md",
+   "watch": []
+  },
+  {
+   "id": "sdse",
+   "lane": "medicine",
+   "title": "Standard errors labelled as standard deviations",
+   "plain": "292 trial results on ClinicalTrials.gov say SD but are as narrow as a standard error, which makes the treatment look surer than it is. In 15 trials the paper confirms it. Reported to the NLM help desk.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/medicine/docs/SDSE-NOTE.md",
+   "watch": [
+    {"kind": "ctgov", "nct": "NCT00427193", "outcomes": [6, 7], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT00846365", "outcomes": [1, 2], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT01040403", "outcomes": [1], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT01289990", "outcomes": [4], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT01875003", "outcomes": [2, 5, 6, 7], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT02346136", "outcomes": [6, 7], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT02720744", "outcomes": [1, 3], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT02740231", "outcomes": [2, 3, 4, 5], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT02856113", "outcomes": [1], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT03163264", "outcomes": [1, 2, 6, 7, 9, 10], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT03188666", "outcomes": [9], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT04016779", "outcomes": [2], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT04657016", "outcomes": [19], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT05107115", "outcomes": [1, 2], "key": "dispersionType", "bad": "Standard Deviation"},
+    {"kind": "ctgov", "nct": "NCT05998616", "outcomes": [2], "key": "dispersionType", "bad": "Standard Deviation"}
+   ]
+  },
+  {
+   "id": "signs",
+   "lane": "medicine",
+   "title": "Confidence limits missing a minus sign",
+   "plain": "61 intervals in 52 trials cross zero while their own p-value says they cannot. In two the paper prints the right sign. Reported to the NLM help desk.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/medicine/docs/SIGN-NOTE.md",
+   "watch": [
+    {"kind": "ctgov", "nct": "NCT00288912", "outcomes": [1], "key": "ciUpperLimit", "bad": "0.2", "fix": "-0.2"},
+    {"kind": "ctgov", "nct": "NCT03192176", "outcomes": [1], "key": "ciUpperLimit", "bad": "0.76", "fix": "-0.76"}
+   ]
+  },
+  {
+   "id": "counts",
+   "lane": "medicine",
+   "title": "Trial counts that break their own totals",
+   "plain": "Across all 80,750 trials with results: 274 outcome counts bigger than the group analysed, 28 serious adverse event totals bigger than their parts, 11 dropout tallies that do not add up. Not reported yet.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/medicine/docs/REGISTRY.md",
+   "watch": []
+  },
+  {
+   "id": "k2-285",
+   "lane": "astronomy",
+   "title": "One star, four densities",
+   "plain": "A 2019 paper on K2-285 fits four planets on circular orbits around one star, yet the outer three imply the star is 2 to 6 times denser than the paper says. Their orbits come out 21 to 63 percent too wide for Kepler's law.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/astronomy/docs/KEPLER.md",
+   "watch": []
+  },
+  {
+   "id": "oddo",
+   "lane": "astronomy",
+   "title": "A paper whose orbits run long",
+   "plain": "Oddo et al. 2023 fit ten small planets. Eight of the orbit sizes sit past Kepler's law from the paper's own numbers, three by more than 4 sigma, and one looks like a typo.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/astronomy/docs/KEPLER.md",
+   "watch": []
+  },
+  {
+   "id": "msini",
+   "lane": "astronomy",
+   "title": "Minimum masses above true masses",
+   "plain": "A planet's minimum mass can never beat its real mass, but 99 of 440 rows in NASA's combined table do, because they pair numbers from different papers.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/astronomy/docs/KEPLER.md",
+   "watch": []
+  }
+ ]
+}
