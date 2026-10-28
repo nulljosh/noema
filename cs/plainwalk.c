@@ -15,8 +15,10 @@ static int N, CAP, W;                   /* states, step cap, tape width */
 static int tr[8][M];                    /* -1 undefined, else w | mv << 1 | next << 2 (mv 1 = right) */
 static i128 halters, steps, *hist;
 static long long leaves, capped;
-static int SIG;                         /* with a third argument: also the ones left on the tape (Placid Platypus) */
-static char **wit;                      /* wit[s]: one machine that halts with exactly s ones, in bbchallenge notation */
+static int SIG, KW;                     /* with a third argument: also the ones left on the tape (Placid Platypus); a
+                                           number there keeps that many machines per count, for wider searches */
+static char **wit;                      /* wit[s * KW + i]: machines that halt with exactly s ones, in bbchallenge notation */
+static int *nwit;
 
 /* the current partial table, halting on (q, s) after writing w, as 1RB1RZ_... with --- for unused rows */
 static char *name(int hq, int hs, int hw) {
@@ -59,7 +61,7 @@ static void walk(unsigned char *tape, int lo, int hi, int pos, int q, int t, int
     if (SIG)                             /* the halting row writes 0 or 1 over the head cell */
         for (int hw = 0; hw < M; hw++) {
             int o = ones - tape[pos] + hw;
-            if (!wit[o]) wit[o] = name(q, tape[pos], hw);
+            if (nwit[o] < KW) wit[o * KW + nwit[o]++] = name(q, tape[pos], hw);
         }
     if (d == N * M - 1) return;          /* no entry left to define */
     int s = tape[pos];
@@ -79,7 +81,8 @@ static void walk(unsigned char *tape, int lo, int hi, int pos, int q, int t, int
 int main(int argc, char **argv) {
     if (argc < 3) { fprintf(stderr, "usage: plainwalk N CAP [sigma]\n"); return 1; }
     N = atoi(argv[1]); CAP = atoi(argv[2]); W = 2 * CAP + 8; SIG = argc > 3;
-    wit = calloc(CAP + 3, sizeof *wit);
+    KW = SIG && atoi(argv[3]) > 1 ? atoi(argv[3]) : 1;
+    wit = calloc((size_t)(CAP + 3) * KW, sizeof *wit); nwit = calloc(CAP + 3, sizeof *nwit);
     memset(tr, -1, sizeof tr);
     hist = calloc(CAP + 2, sizeof *hist);
     unsigned char *tape = calloc(W, 1);
@@ -91,6 +94,6 @@ int main(int argc, char **argv) {
     print128("stepsum", steps);
     printf("runtimes %d maxstep %d lazy %d leaves %lld capped %lld\n", distinct, maxstep, lazy, leaves, capped);
     for (int i = 1; i <= CAP + 1; i++) if (hist[i]) { printf("t %d ", i); print128("", hist[i]); }
-    for (int i = 0; SIG && i <= CAP + 2; i++) if (wit[i]) printf("s %d %s\n", i, wit[i]);
+    for (int i = 0; SIG && i <= CAP + 2; i++) for (int j = 0; j < nwit[i]; j++) printf("s %d %s\n", i, wit[i * KW + j]);
     return 0;
 }

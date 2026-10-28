@@ -50,8 +50,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
 - [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
 - [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
-- [ ] **CS (Joshua):** submit the A399346 (Placid Platypus) extension from 37 to 117 terms, drafted in `docs/OEIS-A399346.md`.
-- [ ] **CS:** PP(118) and on: the first open n. A wider 6-state search (more than one 5-state base per count, or two added states) should settle more terms; a lower bound of 7 needs the 6-state halters, out of reach.
+- [ ] **CS (Joshua):** submit the A399346 (Placid Platypus) extension from 37 to 130 terms, drafted in `docs/OEIS-A399346.md`.
+- [ ] **CS:** PP(131) and on: the first open n. A wider 6-state search (changing a row of the 5-state base as well as adding F) should settle more terms; a lower bound of 7 needs the 6-state halters, out of reach.
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
 - [ ] **CS:** machine-check R(4) = 79 and A004147(4) in Lean. BB(4) = 107 is not yet proved in Lean here, and the 4-state tree is far larger, so it needs the symmetry weights proved sound first.
 - [ ] **CS:** an independent count of the 5-state halters past step 2000 that does not use halters.c deciders (now only argued complete by A004147(5) minus the two-program count to 2000).
