@@ -19,7 +19,22 @@ def study(total_mean, total_sd='11.7', total_n='59'):
                 cell('BG002', total_mean, total_sd)]}]}]}]}
 
 
+def aged(mean, sd, n='74'):
+    return {'groups': [{'id': 'BG000', 'title': 'Arm'}],
+            'denoms': [{'units': 'Participants', 'counts': [{'groupId': 'BG000', 'value': n}]}],
+            'measures': [{'title': 'Age, Continuous', 'paramType': 'MEAN', 'dispersionType': 'STANDARD_DEVIATION',
+                          'unitOfMeasure': 'years', 'classes': [{'categories': [{'measurements': [
+                              {'groupId': 'BG000', 'value': mean, 'spread': sd}]}]}]}]}
+
+
 class RegistryTests(unittest.TestCase):
+    def test_age_against_eligibility(self):  # NCT03900650 posts 24.96 (74) for ages 21 to 30
+        self.assertEqual(registry.age_flags(aged('24.96', '74'), '21 Years', '30 Years')[0]['kind'], 'wide')
+        self.assertEqual(registry.age_flags(aged('24.96', '2.98'), '21 Years', '30 Years'), [])
+        self.assertEqual(registry.age_flags(aged('45.0', '5.9'), '40 Years', '50 Years')[0]['kind'], 'over cap')
+        self.assertEqual(registry.age_flags(aged('7.2', '65'), '50 Years', '80 Years')[0]['kind'], 'mean outside')
+        self.assertEqual(registry.age_flags(aged('30', '40'), '18 Years', None), [])  # one-sided limits say nothing
+
     def test_a_weighted_total_passes(self):
         row, = registry.rows(study('46.1'))
         self.assertFalse(row['far'] or row['outside'] or row['unweighted'])

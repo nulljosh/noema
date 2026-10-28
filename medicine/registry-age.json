@@ -1,0 +1,304 @@
+{
+"source": "ClinicalTrials.gov API v2, baseline tables (registry.py fetch) and eligibility ages (registry.py fetch-elig), fetched 2026-10-27 and 2026-10-28",
+"command": "python3 registry.py ages baseline.json elig.json",
+"rule": "baseline Age (years, mean and SD) per group against the trial's own minimum and maximum age (maximum + 1 year): a mean outside, or a sample SD above the Bhatia-Davis cap sqrt((m - a)(b - m) n / (n - 1)) at every rounding; wide = SD above b - a",
+"checked": "77,561 groups in 24,692 age measures with both limits posted (28,004 trials post only one limit and are skipped)",
+"tally [groups, trials]": {
+"mean outside": [
+387,
+154
+],
+"over cap": [
+199,
+138
+],
+"wide": [
+28,
+24
+]
+},
+"note": "mean outside and over cap include designs where a group is not the eligible population (caregivers, parents) and enrolment outside the posted limits; those were not read. The wide rows cannot come from any ages inside the limits.",
+"spot_check": "NCT03900650, NCT01539525 and NCT01054170 re-fetched live 2026-10-28; every cell matches",
+"wide": [
+{
+"nct": "NCT03900650",
+"group": "BG000",
+"n": 74,
+"mean": 24.96,
+"sd": 74.0,
+"cap": 4.93,
+"kind": "wide",
+"looks_like": "the arm size"
+},
+{
+"nct": "NCT01539525",
+"group": "BG000",
+"n": 145,
+"mean": 33.6,
+"sd": 109.0,
+"cap": 20.76,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT02623803",
+"group": "BG002",
+"n": 48,
+"mean": 65.7,
+"sd": 67.0,
+"cap": 27.33,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT03646513",
+"group": "BG000",
+"n": 4,
+"mean": 59.5,
+"sd": 59.0,
+"cap": 13.81,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT00090064",
+"group": "BG002",
+"n": 23,
+"mean": 40.6,
+"sd": 70.1,
+"cap": 26.81,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT01789814",
+"group": "BG001",
+"n": 12,
+"mean": 62.5,
+"sd": 80.5,
+"cap": 25.63,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT02676284",
+"group": "BG000",
+"n": 35,
+"mean": 60.8,
+"sd": 61.9,
+"cap": 25.91,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT05576155",
+"group": "BG002",
+"n": 24,
+"mean": 22.0,
+"sd": 24.0,
+"cap": 7.96,
+"kind": "wide",
+"looks_like": "the arm size"
+},
+{
+"nct": "NCT03604497",
+"group": "BG000",
+"n": 437,
+"mean": 25.2,
+"sd": 9.6,
+"cap": 2.47,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT01465022",
+"group": "BG003",
+"n": 197,
+"mean": 24.4,
+"sd": 197.0,
+"cap": 14.31,
+"kind": "wide",
+"looks_like": "the arm size"
+},
+{
+"nct": "NCT04077996",
+"group": "BG002",
+"n": 64,
+"mean": 49.42,
+"sd": 72.64,
+"cap": 31.75,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT03111381",
+"group": "BG000",
+"n": 46,
+"mean": 33.0,
+"sd": 147.0,
+"cap": 27.43,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT03111381",
+"group": "BG001",
+"n": 48,
+"mean": 33.0,
+"sd": 147.0,
+"cap": 27.42,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT03111381",
+"group": "BG002",
+"n": 94,
+"mean": 33.0,
+"sd": 146.0,
+"cap": 27.28,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT04333225",
+"group": "BG001",
+"n": 120,
+"mean": 34.53,
+"sd": 800.0,
+"cap": 26.29,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT00761956",
+"group": "BG002",
+"n": 189,
+"mean": 66.2,
+"sd": 189.0,
+"cap": 25.96,
+"kind": "wide",
+"looks_like": "the arm size"
+},
+{
+"nct": "NCT03950973",
+"group": "BG002",
+"n": 600,
+"mean": 53.45,
+"sd": 1304.0,
+"cap": 28.3,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT00603980",
+"group": "BG000",
+"n": 31,
+"mean": 38.032,
+"sd": 38.032,
+"cap": 19.29,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT02951312",
+"group": "BG004",
+"n": 12,
+"mean": 41.67,
+"sd": 58.33,
+"cap": 7.92,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT04076540",
+"group": "BG007",
+"n": 48,
+"mean": 47.7,
+"sd": 50.5,
+"cap": 23.57,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT03594123",
+"group": "BG001",
+"n": 96,
+"mean": 73.4,
+"sd": 73.0,
+"cap": 18.6,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT03594123",
+"group": "BG002",
+"n": 259,
+"mean": 74.3,
+"sd": 75.0,
+"cap": 18.52,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT01789840",
+"group": "BG001",
+"n": 7,
+"mean": 62.9,
+"sd": 76.74,
+"cap": 16.05,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT04109196",
+"group": "BG000",
+"n": 24,
+"mean": 34.8,
+"sd": 121.2,
+"cap": 34.1,
+"kind": "wide",
+"looks_like": "more than twice the mean"
+},
+{
+"nct": "NCT01390389",
+"group": "BG000",
+"n": 10,
+"mean": 61.5,
+"sd": 60.2,
+"cap": 14.39,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT01390389",
+"group": "BG001",
+"n": 9,
+"mean": 63.0,
+"sd": 50.05,
+"cap": 15.92,
+"kind": "wide",
+"looks_like": ""
+},
+{
+"nct": "NCT03630354",
+"group": "BG002",
+"n": 162,
+"mean": 62.6,
+"sd": 65.5,
+"cap": 22.62,
+"kind": "wide",
+"looks_like": "the mean again"
+},
+{
+"nct": "NCT04098302",
+"group": "BG002",
+"n": 155,
+"mean": 56.3,
+"sd": 91.0,
+"cap": 17.76,
+"kind": "wide",
+"looks_like": ""
+}
+]
+}

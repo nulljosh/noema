@@ -26,6 +26,8 @@ Outcome analyses. A difference with a lopsided interval that becomes symmetric w
 
 Spread labels. An interval for the difference between two arms has a width set by the arms. As SDs, the spreads predict one width. As standard errors, they predict one about root n times wider. Of 7,685 SD-labelled intervals that fit either, 292 in 90 trials fit standard errors, and they pile up right on that prediction. Linked papers agree. Across every flagged trial, 15 of the 16 papers that print the flagged values and name the spread call it a standard error. The 16th says SD, but its interval is not the one the registry posts. An earlier false flag from mixed units is now ruled out by a scale check. In baseline tables, 71 impossible Total SDs fit once the arm spreads are read as standard errors.
 
+Age limits. A trial's own youngest and oldest enrolment ages cap how wide its baseline age SD can be. 28 SDs in 24 trials are wider than the whole range, often the group's size or its mean typed in the SD cell.
+
 ## Claim levels
 
 Observed means the rule flagged it and a person read it. Written means an argument on paper. Literature means someone else published it. These are never blurred. Most results here are new observations, small.

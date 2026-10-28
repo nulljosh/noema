@@ -16,6 +16,7 @@ right, so `clear` keeps only arms whose sizes differ at least twofold, with no n
 the high ones that fit once the arm spreads are read as standard errors, with other factors as decoys.
 """
 import json
+import re
 import sys
 import time
 import urllib.parse
@@ -221,9 +222,79 @@ def scan(studies):
     return out
 
 
+def fetch_elig(path):
+    """Eligibility ages ([minimumAge, maximumAge]) for every trial with results, one request a second."""
+    query = {'aggFilters': 'results:with', 'pageSize': '1000', 'fields': 'NCTId,EligibilityModule'}
+    keep = {}
+    while True:
+        with urllib.request.urlopen(API + urllib.parse.urlencode(query), timeout=120) as response:
+            page = json.load(response)
+        for s in page.get('studies', []):
+            e = s['protocolSection'].get('eligibilityModule', {})
+            keep[s['protocolSection']['identificationModule']['nctId']] = [e.get('minimumAge'), e.get('maximumAge')]
+        if not page.get('nextPageToken'):
+            break
+        query['pageToken'] = page['nextPageToken']
+        time.sleep(1)
+    json.dump(keep, open(path, 'w'))
+
+
+YEARS = {'year': 1, 'years': 1, 'month': 1 / 12, 'months': 1 / 12, 'week': 7 / 365.25, 'weeks': 7 / 365.25,
+         'day': 1 / 365.25, 'days': 1 / 365.25}
+
+
+def _years(text):
+    m = re.match(r'([\d.]+)\s*(\w+)', text or '')
+    return float(m.group(1)) * YEARS[m.group(2).lower()] if m and m.group(2).lower() in YEARS else None
+
+
+def age_flags(study, lo_text, hi_text):
+    """Baseline age groups that the trial's own age limits rule out: a mean outside them, or an SD above the
+    Bhatia-Davis cap, the largest sample SD any ages inside the limits can have with that mean (to rounding).
+    'wide' marks an SD above the whole width of the range, which no mean can rescue."""
+    a, b = _years(lo_text), _years(hi_text)
+    if a is None or b is None:
+        return []
+    b += 1  # "65 Years" admits anyone up to their 66th birthday
+    n = _counts(study.get('denoms'))
+    out = []
+    for m in study.get('measures', []):
+        if (m.get('paramType') != 'MEAN' or m.get('dispersionType') != 'STANDARD_DEVIATION'
+                or not re.match(r'\s*age[\s,:(]*(continuous)?[\s)]*$', m.get('title', ''), re.I)
+                or (m.get('unitOfMeasure') or '').strip().lower() != 'years'):
+            continue
+        cats = m.get('classes', [])
+        if len(cats) != 1 or len(cats[0].get('categories', [])) != 1:
+            continue
+        for x in cats[0]['categories'][0].get('measurements', []):
+            mv, sv, k = _num(x.get('value')), _num(x.get('spread')), n.get(x.get('groupId'))
+            if not mv or not sv or not k or k < 2:
+                continue
+            (mean, tm), (sd, ts) = mv, sv
+            if mean + tm < a or mean - tm > b:
+                out.append({'group': x['groupId'], 'n': k, 'mean': mean, 'sd': sd, 'kind': 'mean outside'})
+                continue
+            best = max((v - a) * (b - v) for v in (mean - tm, mean + tm, min(max((a + b) / 2, mean - tm), mean + tm)))
+            cap = (max(best, 0) * k / (k - 1)) ** 0.5
+            if sd - ts > cap * 1.0001:
+                out.append({'group': x['groupId'], 'n': k, 'mean': mean, 'sd': sd, 'cap': round(cap, 2),
+                            'kind': 'wide' if sd - ts > b - a else 'over cap'})
+    return out
+
+
 if __name__ == '__main__':
     if sys.argv[1] == 'fetch':
         sys.exit(fetch(sys.argv[2]))
+    if sys.argv[1] == 'fetch-elig':
+        sys.exit(fetch_elig(sys.argv[2]))
+    if sys.argv[1] == 'ages':  # registry.py ages BASELINE ELIG
+        base, elig = json.load(open(sys.argv[2])), json.load(open(sys.argv[3]))
+        flags = {nct: f for nct, st in base.items() if nct in elig for f in [age_flags(st, *elig[nct][:2])] if f}
+        rows = [(nct, r) for nct, f in flags.items() for r in f]
+        tally = {k: [sum(r['kind'] == k for _, r in rows), len({nct for nct, r in rows if r['kind'] == k})]
+                 for k in ('mean outside', 'over cap', 'wide')}
+        print(json.dumps({'tally [groups, trials]': tally, 'wide': [{'nct': nct, **r} for nct, r in rows if r['kind'] == 'wide']}, indent=0))
+        sys.exit()
     studies = json.load(open(sys.argv[1]))
     out = scan(studies)
     out['studies'] = len(studies)
