@@ -4,6 +4,8 @@
     python3 kepler.py PS_JSON           # the law's scatter and the outliers, as JSON
     python3 kepler.py fetch-fits F_JSON # every published solution with a/R_star, P, M_star and R_star
     python3 kepler.py papers F_JSON     # papers whose transit a/R_star runs off the law across their planets
+    python3 kepler.py fetch-multi M_JSON
+    python3 kepler.py densities M_JSON  # one paper, one star, circular orbits: every planet must imply the same stellar density
 
 With the semi-major axis a in AU, the period P in years and the masses in solar masses, a^3 = (M_star + M_planet) P^2.
 The archive's composite table takes each value from a named reference, so a planet whose a, P and stellar mass all
@@ -34,6 +36,40 @@ def fetch_fits(path):
                   'and pl_orbper is not null and st_mass is not null and st_rad is not null', 'format': 'json'}
     with urllib.request.urlopen(TAP + urllib.parse.urlencode(q), timeout=300) as response:
         open(path, 'wb').write(response.read())
+
+
+def fetch_multi(path):
+    q = {'query': 'select hostname,pl_name,pl_refname,pl_ratdor,pl_ratdorerr1,pl_ratdorerr2,pl_orbper,pl_orbeccen '
+                  'from ps where pl_ratdor is not null and pl_orbper is not null', 'format': 'json'}
+    with urllib.request.urlopen(TAP + urllib.parse.urlencode(q), timeout=300) as response:
+        open(path, 'wb').write(response.read())
+
+
+def rho_star(ardor, period_days):
+    """Stellar density in g/cm^3 from a circular orbit's a/R_star and period: 3 pi (a/R_star)^3 / (G P^2)."""
+    return 3 * math.pi * ardor ** 3 / (6.674e-8 * (period_days * 86400) ** 2)
+
+
+def densities(rows, spread=1.5, sigmas=3):
+    """Papers that fit two or more circular planets around one star to different stellar densities (Kipping 2014's
+    multibody check), skipping catalog tables, which fit each candidate alone. Widest in sigma first."""
+    by = {}
+    for r in rows:
+        ar, p, e = r.get('pl_ratdor'), r.get('pl_orbper'), r.get('pl_orbeccen')
+        ref = re.sub(r'<[^>]*>', '', r.get('pl_refname') or '').strip()
+        if not (ar and p and ar > 0 and p > 0) or (e or 0) > 0.05 or re.search(r'KOI|TOI|Table|Catalog|ExoFOP', ref, re.I):
+            continue
+        err = max(abs(r.get('pl_ratdorerr1') or 0), abs(r.get('pl_ratdorerr2') or 0)) / ar
+        by.setdefault((ref, r['hostname']), []).append((r['pl_name'], rho_star(ar, p), err))
+    out = []
+    for (ref, host), v in by.items():
+        lo, hi = min(v, key=lambda x: x[1]), max(v, key=lambda x: x[1])
+        if len(v) < 2 or not (lo[2] and hi[2]) or hi[1] / lo[1] < spread:
+            continue
+        sig = math.log(hi[1] / lo[1]) / (3 * math.hypot(lo[2], hi[2]))  # density error is 3x a/R_star's
+        if sig > sigmas:
+            out.append([ref, host, round(hi[1] / lo[1], 2), round(sig, 1), [[n, round(d, 2)] for n, d, _ in v]])
+    return sorted(out, key=lambda o: -o[3])
 
 
 def ardor_kepler(period_days, m_star, r_star):
@@ -86,6 +122,10 @@ if __name__ == '__main__':
         fetch(sys.argv[2])
     elif sys.argv[1] == 'fetch-fits':
         fetch_fits(sys.argv[2])
+    elif sys.argv[1] == 'fetch-multi':
+        fetch_multi(sys.argv[2])
+    elif sys.argv[1] == 'densities':
+        print(json.dumps(densities(json.load(open(sys.argv[2]))), indent=0))
     elif sys.argv[1] == 'papers':
         print(json.dumps(papers(json.load(open(sys.argv[2]))), indent=0))
     else:

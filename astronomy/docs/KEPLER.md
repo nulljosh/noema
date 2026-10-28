@@ -18,6 +18,8 @@ The whole-paper scan (`kepler.py papers`, 16,946 archive solutions with a/R_star
 
 K2-285 (Palle et al. 2019, A&A, arXiv:1808.00575) fixes every orbit circular and reports one light-curve stellar density, 1.782 g/cm^3. With circular orbits that one density sets a/R_star for every planet from its period alone. The table's a/R_star for b (10.43) matches it; c, d and e (22.51, 32.20, 49.43) would need densities of 4.2, 5.8 and 10.5 g/cm^3 around the same star. Each printed a in au is a/R_star times R_star, so c, d and e sit 21, 34 and 63 percent beyond Kepler's law with the paper's own 0.830 solar masses. The durations still fit, because a larger a/R_star with a smaller impact parameter gives the same transit length; the outer planets' fits took that branch. Observed from the paper's own tables; an erratum was not searched.
 
+The same check runs archive-wide (`kepler.py densities`, Kipping's 2014 multibody idea): in one paper, every planet on a circular orbit around one star must imply one stellar density. Of 387 paper-and-star pairs with two or more such planets, five split by more than 1.5 times and 3 sigma. K2-285 is the widest at 29.6 sigma. Kepler-210 (Ioannidis et al. 2014, 5.3 sigma) is the case that paper itself used to argue for eccentric orbits. Kepler-49 and Kepler-82 (Ofir et al. 2025, 5.1 and 3.4 sigma) and K2-5 (Kruse et al. 2019, 3.1) are unread. The Kepler KOI tables split far wider, but they fit each candidate alone, so the check skips them.
+
 Next: read Hedges 2019 and the Q1-Q8 KOI documentation for why their fits run short.
 
 ## Minimum mass against true mass
