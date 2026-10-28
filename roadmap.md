@@ -4,15 +4,10 @@
 
 ## Now
 
-- [x] **Math:** the eight-step lemmas for 32k+11 and 32k+23 are Lean-checked (2026-10-26). 28 of 32 classes have a written first descent; 7, 15, 27 and 31 remain.
 - [ ] **Biology:** review `benchmarks/latest.json`, then read the two annotations no one-base change explains and the original Hb Bristol paper.
-- [x] **Both:** ship the merged site (2026-10-26). Run `./deploy.sh`, move the noema.jaybulb.com DNS from the Sites CNAME to the wrangler custom domain, and check that evidna.jaybulb.com still opens.
 
 ## Next
 
-- [x] **Math:** split classes 7, 15, 27 and 31 modulo 64 (2026-10-26, none resolve) (now the first math task). Derive the forced prefixes before computing anything, and keep the bound at one million.
-- [x] **Biology:** held-out benchmark declared and scored (`uv run heldout.py`, 2026-10-26). v0 = 0.67 balanced accuracy on 28 held-out records.
-- [x] **Biology:** inputs v1 with NM_000518.4 titles (2026-10-26): 41 held out, v0 still 0.67.
 - [ ] **Biology:** the held-out set has only four negatives. Declare, before fetching, a second source of benign labels (common HBB variants by population frequency, cited threshold) and score v0 on it.
 - [ ] **Biology:** predictor v1 from structure facts with sources (heme pocket and alpha1-beta1/beta2 interface residues from a cited paper), scored next to v0 on the same split.
 - [ ] **Biology:** add a second public gene, but only with expected cases someone else specified.
@@ -53,28 +48,16 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 
 - [ ] **Math:** binary patterns in the longest-surviving residues mod 2^20.
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
-- [x] **CS:** translated-cycler decider (2026-10-26). 3-state holdouts 3,119 to 92, 4-state 521,462 to 20,569, 4-state run 253 s to 14 s.
-- [x] **CS:** BB(3) decided here (2026-10-26). Two-cell block n-gram CPS cleared the last 4 counters.
-- [x] **CS:** BB(4) decided here (2026-10-26). Direct FAR cleared the last 27.
-- [x] **CS:** FAR certificates Lean-checked (2026-10-26). All 41 pass `decide +kernel` under one soundness theorem.
-- [x] **CS:** cycle decider proved sound in Lean and applied to the 532 cycles at 2 and 3 states; Lean build in CI (2026-10-26).
-- [x] **CS:** translated-cycler decider proved sound in Lean and applied to all 3,063 at 2 and 3 states (2026-10-26).
-- [x] **CS:** every leaf of the 3-state tree in Lean: 1,772 halters' step counts, the 92 tape-decided machines (by FAR certificates), cycles and translated cyclers. BB(3) = 21 among the listed halters.
-- [x] **CS:** prove the tree enumeration complete in Lean, which finishes BB(3) (`FAR.bb3`, 2026-10-27).
-- [ ] **CS:** BB(2) in full in Lean the same way (small), then the 2-state, 3-symbol tree.
-- [x] **CS:** A386859(5) = 64,068,865,333,248 computed (`halters.c`, 2026-10-27); the halting count matches A004147(5).
 - [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
 - [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
 - [ ] **CS:** second study, optimal sorting-network sizes for n up to 6 by search, checked against OEIS A003075.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
-- [x] **Physics:** triangular antiferromagnet ground states to 9x9 (2026-10-26), heading toward Wannier's 0.3383.
 - [ ] **Physics:** novelty search for the triangular closed form and the 2n+1 divisibility (read the 2006 Comput. Phys. Commun. paper, dimer-on-torus divisibility papers), then an outside reader for TRIANGULAR.md. If both hold, it goes to Joshua as the lab's first breakthrough candidate, with an OEIS entry.
 - [ ] **Physics:** a deeper literature search (Blote and Nightingale, dimer counts on the honeycomb torus) for the triangular counts, then an independent check by Pfaffian dimer counting, then an OEIS draft for Joshua.
 - [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
 - [ ] **Medicine:** read the ISIS-2 full text to see whether the combination's SD 5 comes from a stratified analysis, then recompute the 1954 Salk polio trial from the Francis report's own table.
 - [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
-- [x] **Hub:** cards for physics, chemistry, medicine and statistics, deployed 2026-10-26.
 
 ## Not doing
 
