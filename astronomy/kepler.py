@@ -2,6 +2,8 @@
 
     python3 kepler.py fetch PS_JSON     # the composite planet table, one row per planet (a few seconds)
     python3 kepler.py PS_JSON           # the law's scatter and the outliers, as JSON
+    python3 kepler.py fetch-fits F_JSON # every published solution with a/R_star, P, M_star and R_star
+    python3 kepler.py papers F_JSON     # papers whose transit a/R_star runs off the law across their planets
 
 With the semi-major axis a in AU, the period P in years and the masses in solar masses, a^3 = (M_star + M_planet) P^2.
 The archive's composite table takes each value from a named reference, so a planet whose a, P and stellar mass all
@@ -18,12 +20,37 @@ TAP = 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?'
 COLS = ('pl_name,pl_orbper,pl_orbsmax,st_mass,pl_bmassj,'
         'pl_orbper_reflink,pl_orbsmax_reflink,st_mass_reflink')
 MJUP = 9.5458e-4  # Jupiter mass in solar masses
+RSUN_AU = 0.0046505
 
 
 def fetch(path):
     q = {'query': 'select %s from pscomppars' % COLS, 'format': 'json'}
     with urllib.request.urlopen(TAP + urllib.parse.urlencode(q), timeout=300) as response:
         open(path, 'wb').write(response.read())
+
+
+def fetch_fits(path):
+    q = {'query': 'select pl_name,pl_refname,pl_ratdor,pl_orbper,st_mass,st_rad from ps where pl_ratdor is not null '
+                  'and pl_orbper is not null and st_mass is not null and st_rad is not null', 'format': 'json'}
+    with urllib.request.urlopen(TAP + urllib.parse.urlencode(q), timeout=300) as response:
+        open(path, 'wb').write(response.read())
+
+
+def ardor_kepler(period_days, m_star, r_star):
+    """a/R_star from the period and stellar mass by the law, for comparison with a transit fit's a/R_star."""
+    return (m_star * (period_days / 365.25) ** 2) ** (1 / 3) / (r_star * RSUN_AU)
+
+
+def papers(rows, least=5):
+    """Per paper with at least `least` planets: the median log10 of fitted a/R_star over the law's, most off first."""
+    by = {}
+    for r in rows:
+        ar, p, m, rs = (r.get(k) for k in ('pl_ratdor', 'pl_orbper', 'st_mass', 'st_rad'))
+        if ar and p and m and rs and min(ar, p, m, rs) > 0:
+            by.setdefault(re.sub(r'<[^>]*>', '', r['pl_refname']).strip(), []).append(
+                math.log10(ar / ardor_kepler(p, m, rs)))
+    out = [[ref, len(v), round(sorted(v)[len(v) // 2], 3)] for ref, v in by.items() if len(v) >= least]
+    return sorted(out, key=lambda o: -abs(o[2]))
 
 
 def ratio(period_days, a_au, m_star, m_planet_jup=0):
@@ -57,5 +84,9 @@ def study(rows):
 if __name__ == '__main__':
     if sys.argv[1] == 'fetch':
         fetch(sys.argv[2])
+    elif sys.argv[1] == 'fetch-fits':
+        fetch_fits(sys.argv[2])
+    elif sys.argv[1] == 'papers':
+        print(json.dumps(papers(json.load(open(sys.argv[2]))), indent=0))
     else:
         print(json.dumps(study(json.load(open(sys.argv[1]))), indent=0))

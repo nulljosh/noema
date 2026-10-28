@@ -20,6 +20,12 @@ class KeplerTests(unittest.TestCase):
         self.assertEqual((r['off_by_2x'], r['off_by_2x_one_source']), (1, 1))
         self.assertEqual(r['rows'][0][:2], ['bad', 8.0])
 
+    def test_papers(self):  # the Sun's own a/R_star is 215; a paper fitting 10 percent long shows +0.041 dex
+        self.assertAlmostEqual(kepler.ardor_kepler(365.25, 1.0, 1.0), 215.03, delta=0.05)
+        rows = [{'pl_refname': '<a>P</a>', 'pl_ratdor': 215.03 * f, 'pl_orbper': 365.25, 'st_mass': 1.0, 'st_rad': 1.0}
+                for f in (1.1, 1.1, 1.1, 1.0, 1.2)]
+        self.assertEqual(kepler.papers(rows), [['P', 5, 0.041]])
+
 
 if __name__ == '__main__':
     unittest.main()

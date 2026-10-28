@@ -14,7 +14,9 @@ KOI-2513.01 is different. The archive's default solution for it (Cañas et al. 2
 
 TOI-262 b traces to Oddo et al. 2023 (AJ, arXiv:2301.08162v3), whose Table 14 fits ten small planets. For nine of the ten the printed a equals a/R_star times R_star to the third digit, and the fitted a/R_star sits above the value Kepler's law gives from the same table's own period and stellar mass in eight: TOI-118 b by 4.2 sigma, TOI-198 b by 4.7, TOI-518.01 by 4.3, TOI-262 b by 2.2 (41.2 +- 8.0 against 23.9), TOI-470 b by 2.2. The quoted a errors are also far tighter than a/R_star's: TOI-262 b's 0.163 +- 0.002 au carries a 19 percent a/R_star error, about +- 0.03 au. The tenth, TOI-455 b, prints a = 0.022 au where both a/R_star R_star and the law give 0.037, which reads as a typo. Observed from the paper's own table; why its transit fits run long (eccentricity, limb darkening or priors) is not settled here, and no erratum was searched yet.
 
-Next: K2-285 e (Palle et al. 2019, 4.3), then a scan of the archive for whole papers whose a/R_star runs above the law, the way Oddo et al.'s does.
+The whole-paper scan (`kepler.py papers`, 16,946 archive solutions with a/R_star, P, M_star and R_star, 117 papers with five or more planets) puts most papers within 0.03 dex of the law. Five run further off: Hedges et al. 2019 (7 planets, -0.121 dex), Pelaez-Torres et al. 2024 (5, +0.087), Oddo et al. 2023 (9, +0.082), the Q1-Q8 KOI table (2,308, -0.079, its fits 17 percent short across the board) and Dressing and Charbonneau 2013 (45, -0.074). A paper-wide offset points at the fit or the star models, not at any one planet. Observed; none of the five has been read for its cause.
+
+Next: K2-285 e (Palle et al. 2019, 4.3), then read Hedges 2019 and the Q1-Q8 KOI documentation for why their fits run short.
 
 ## Minimum mass against true mass
 
