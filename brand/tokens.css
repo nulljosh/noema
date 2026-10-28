@@ -1,0 +1,17 @@
+/* Noema design tokens. One source for the hub and its pages; scripts/brand.py mirrors the colours for the SVGs.
+   Colour is clrs.cc: blue #0074D9 for actions and the band, aqua #7FDBFF for links, a navy page. */
+:root {
+  --bg: #000f1e; --surface: #04192e; --line: #12304d; --text: #f2f6fa; --sub: #9db0c4;
+  --blue: #0074D9; --blue-hover: #1a8cf0;      /* buttons, the frame, wires */
+  --band: #0059a8;                             /* the electric band */
+  --band-sub: #cfe6ff; --band-art: #3d9ae8; --link: #7FDBFF;
+  --ring: rgba(0, 116, 217, .55);
+  --font: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display: var(--font);
+  /* 8 point grid, with 12 for tight pairs */
+  --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px;
+  --wrap: 1120px; --r-sq: 2px; --motion: .2s ease;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .28 0 0 0 -.06'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* ordered dither: a 4x4 Bayer dot screen for any surface that wants the print look */
+  --dither: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cg fill='%233d9ae8'%3E%3Crect width='1.6' height='1.6'/%3E%3Crect x='4' y='4' width='1.6' height='1.6'/%3E%3Crect x='4' width='1.6' height='1.6' opacity='.5'/%3E%3Crect y='4' width='1.6' height='1.6' opacity='.5'/%3E%3C/g%3E%3C/svg%3E");
+}

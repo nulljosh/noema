@@ -8,6 +8,8 @@ A small lab for every STEM field, one lane at a time. Exact questions, fixed bou
 
 ![Architecture](architecture.svg)
 
+The look, in one sheet: [brand/BRAND.md](brand/BRAND.md).
+
 | Lab | What it studies | Run |
 |---|---|---|
 | [math](math) | Collatz first descent, Goldbach, tiny SAT formulas, three Lean lemmas, the residue tree. Python standard library only. | `cd math && python3 -m unittest discover -s tests` |

@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Noema. A thought, checked.</title>
 <meta name="description" content="A small lab for every STEM field. Exact questions, fixed bounds, checks that can fail, and claims that stay as small as the evidence.">
-<meta name="theme-color" content="#0a0c1c">
+<meta name="theme-color" content="#000f1e">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Dressed after Nous Research: a navy page in a thin blue frame, giant thin condensed caps, tiny caps labels,
      small square buttons, one electric blue band with halftone art in alternating rows, a terminal window over art.
      Art: Albrecht Duerer, Melencolia I (1514, public domain, via Wikimedia Commons), cut into dot masks by scripts/dither-art.py.
-     Type is the system font throughout (SF Pro), thin caps for display. -->
+     Type is Hanken Grotesk (Google Fonts, OFL) with the system font behind it, thin caps for display. Tokens: brand/tokens.css. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -68,13 +70,13 @@
     </div>
     <div class="cta"><a class="btn btn-ghost" href="https://github.com/nulljosh/labs/blob/main/noema/roadmap.md#discovery-ledger">Read the ledger</a><a class="btn btn-solid" href="https://github.com/nulljosh/labs/tree/main/noema">Source</a></div>
     <div class="cells">
-      <a class="cell" href="math/"><p class="label">Math</p><h3>Collatz, checked</h3><p>The residue tree matches two published sequences to level 24, with three lemmas proved in Lean.</p><b>Open the workbench &rarr;</b></a>
-      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/cs"><p class="label">Computer science</p><h3>Busy Beaver</h3><p>Every 3-state, 4-state and 2-state 3-symbol machine settled: the records are 21, 107 and 38 steps, with BB(3) and BB(2,3) proved in Lean. Every halting 5-state machine counted: together they run 64,068,865,333,248 steps, a new fifth term for OEIS A386859, over 1,207 distinct runtimes.</p><b>Read the study &rarr;</b></a>
-      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/physics"><p class="label">Physics</p><h3>Tiny magnets</h3><p>Frustrated magnets on a triangle grid, counted exactly for any size. The count turns out to be built from Wendt's determinant, a tool from work on Fermat's Last Theorem.</p><b>Read the study &rarr;</b></a>
-      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/chemistry"><p class="label">Chemistry</p><h3>Counting molecules</h3><p>How many alkanes you can build from up to 100 carbon atoms, matching the published counts.</p><b>Read the study &rarr;</b></a>
-      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/medicine"><p class="label">Medicine</p><h3>Trials, redone</h3><p>Famous trials recomputed from their own raw counts. A scan of 235,860 trial abstracts found about 330 percentages, 13 P values, 170 ratios, 90 differences, 17 spreads, 13 headcounts, 7 numbers needed to treat and 41 test statistics that do not match their own numbers. On ClinicalTrials.gov, 407 Total SDs cannot be right for any arm sizes, and 61 confidence intervals have a limit with the wrong sign.</p><b>Read the study &rarr;</b></a>
-      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/statistics"><p class="label">Statistics</p><h3>Chance, exactly</h3><p>The birthday problem and the coupon collector as exact fractions, checked by simulation.</p><b>Read the study &rarr;</b></a>
-      <a class="cell" href="biology/"><p class="label">Biology</p><h3>One gene, every change</h3><p>Every one-base change in human beta-globin, scored against held-out ClinVar records.</p><b>Open the study &rarr;</b></a>
+      <a class="cell" href="math/"><i class="lg" style="--g: url(brand/glyphs/math.svg)" aria-hidden="true"></i><p class="label">Math</p><h3>Collatz, checked</h3><p>The residue tree matches two published sequences to level 24, with three lemmas proved in Lean.</p><b>Open the workbench &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/cs"><i class="lg" style="--g: url(brand/glyphs/cs.svg)" aria-hidden="true"></i><p class="label">Computer science</p><h3>Busy Beaver</h3><p>Every 3-state, 4-state and 2-state 3-symbol machine settled: the records are 21, 107 and 38 steps, with BB(3) and BB(2,3) proved in Lean. Every halting 5-state machine counted: together they run 64,068,865,333,248 steps, a new fifth term for OEIS A386859, over 1,207 distinct runtimes.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/physics"><i class="lg" style="--g: url(brand/glyphs/physics.svg)" aria-hidden="true"></i><p class="label">Physics</p><h3>Tiny magnets</h3><p>Frustrated magnets on a triangle grid, counted exactly for any size. The count turns out to be built from Wendt's determinant, a tool from work on Fermat's Last Theorem.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/chemistry"><i class="lg" style="--g: url(brand/glyphs/chemistry.svg)" aria-hidden="true"></i><p class="label">Chemistry</p><h3>Counting molecules</h3><p>How many alkanes you can build from up to 100 carbon atoms, matching the published counts.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/medicine"><i class="lg" style="--g: url(brand/glyphs/medicine.svg)" aria-hidden="true"></i><p class="label">Medicine</p><h3>Trials, redone</h3><p>Famous trials recomputed from their own raw counts. A scan of 235,860 trial abstracts found about 330 percentages, 13 P values, 170 ratios, 90 differences, 17 spreads, 13 headcounts, 7 numbers needed to treat and 41 test statistics that do not match their own numbers. On ClinicalTrials.gov, 407 Total SDs cannot be right for any arm sizes, and 61 confidence intervals have a limit with the wrong sign.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="https://github.com/nulljosh/labs/tree/main/noema/statistics"><i class="lg" style="--g: url(brand/glyphs/statistics.svg)" aria-hidden="true"></i><p class="label">Statistics</p><h3>Chance, exactly</h3><p>The birthday problem and the coupon collector as exact fractions, checked by simulation.</p><b>Read the study &rarr;</b></a>
+      <a class="cell" href="biology/"><i class="lg" style="--g: url(brand/glyphs/biology.svg)" aria-hidden="true"></i><p class="label">Biology</p><h3>One gene, every change</h3><p>Every one-base change in human beta-globin, scored against held-out ClinVar records.</p><b>Open the study &rarr;</b></a>
       <div class="cell"><p class="label">Next</p><h3>More on the way</h3><p>Information engineering and astronomy are queued. A field gets a folder when its first study starts.</p></div>
     </div>
   </div>
