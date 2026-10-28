@@ -24,7 +24,7 @@ class PlatypusTests(unittest.TestCase):
         r = json.load(open(os.path.join(HERE, 'platypus-5.json')))
         self.assertEqual(r['pp'][:37], OEIS)
         self.assertEqual(r['first_not_printable_by_5_states'], 74)
-        for n in (13, 73, 74, 117):  # each witness halts with exactly n ones, using pp(n) states
+        for n in (13, 73, 74, 117, 131, 133):  # each witness halts with exactly n ones, using pp(n) states
             states, _, ones = platypus.sim(r['witness'][str(n)])
             self.assertEqual((states, ones), (r['pp'][n - 1], n))
         self.assertIn(4098, r['spectrum_5'])  # Sigma(5)

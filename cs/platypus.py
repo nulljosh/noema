@@ -6,8 +6,8 @@ The 1- to 4-state spectra come from plainwalk.c with its ones count. The 5-state
 (every halter up to step 2000, no deciders) with the 333 halters past 2000 in halters-5.json; A004147(5) minus the
 first count equals the second's weight, so no halter is missing. A 6-state witness for a missing n is a 5-state
 machine whose halting row is sent to a new state F, with every choice of F's two rows (sixstate.c), tried on up
-to 200 machines per 5-state count. Every witness is rerun from blank by sim() before it counts. Writes
-platypus-5.json.
+to 200 machines per 5-state count, plus the 6-state machines a random walk found (walk.c, platypus-walk.txt).
+Every witness is rerun from blank by sim() before it counts. Writes platypus-5.json.
 """
 import ast, json, os, subprocess, sys
 
@@ -77,6 +77,9 @@ def main():
             if int(step) < 100000: bases.append((int(b) + int(w), m.replace('---', w + 'RZ', 1)))
     S5 = set(base)
     sixes = six(sx, bases, S5)
+    for line in open(os.path.join(HERE, 'platypus-walk.txt')):  # walk.c finds; sim() below reruns each
+        o, m = line.split()
+        if int(o) not in S5: sixes.setdefault(int(o), m)
     pp, wit, n = [], {}, 1
     while True:
         k = next((k for k in (1, 2, 3, 4) if n in spec[k]), None)
