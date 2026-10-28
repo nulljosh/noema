@@ -1,6 +1,6 @@
 # Noema Medicine Technical Whitepaper
 
-**v0.2.0** | October 2026
+**v0.3.0** | October 2026
 
 The medicine lane checks published trial numbers against themselves. A paper or a registry entry often prints the same fact twice, as counts and a percent, a ratio and its arm rates, an interval and a P value. When the two cannot both be right, one of them is wrong. The lane finds those cases, then reads each one by hand.
 
@@ -23,6 +23,8 @@ Percents against counts, P values against test statistics, ratios against their 
 Baseline Totals against their arms. 407 Total SDs in 296 trials are impossible for any pooling of the arms. 328 Totals land on the plain average of the arm means, which is right only for equal arms, where chance gives about 27.
 
 Outcome analyses. A difference with a lopsided interval that becomes symmetric when one limit changes sign looks like a lost or stray minus. The P value then decides. It backs the flip 61 times in 52 trials and backs the posted interval 28 times, the rate chance alone gives. Two linked papers print the flipped interval the P value expects. One paper repeats the slip.
+
+Spread labels. An interval for the difference between two arms has a width set by the arms. As SDs, the spreads predict one width. As standard errors, they predict one about root n times wider. Of 7,921 SD-labelled intervals that fit either, 304 in 97 trials fit standard errors, and they pile up right on that prediction. In a seeded sample of 20 trials, 2 of the 3 papers that label the spread call it a standard error. The third is a false flag from mixed units. In baseline tables, 71 impossible Total SDs fit once the arm spreads are read as standard errors.
 
 ## Claim levels
 

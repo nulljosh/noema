@@ -4,6 +4,8 @@ The Ising model is a grid of tiny magnets that each point up or down and want to
 
 ![Architecture](architecture.svg)
 
+How it works, in one page: [WHITEPAPER.md](WHITEPAPER.md).
+
 ```sh
 python3 -m unittest discover -s tests
 python3 ising.py       # 2x2 up to 8x8, about two seconds

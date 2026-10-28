@@ -4,6 +4,8 @@ How many different alkanes have n carbon atoms? An alkane is a chain or branched
 
 ![Architecture](architecture.svg)
 
+How it works, in one page: [WHITEPAPER.md](WHITEPAPER.md).
+
 ```sh
 python3 -m unittest discover -s tests
 python3 alkanes.py
