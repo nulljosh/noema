@@ -12,7 +12,8 @@ plain average by luck if they fell anywhere between the arm means. `decoy` count
 average and its mirror image about the weighted mean inside the arm range, then how many land on each: missing
 data would scatter Totals to both sides alike, an AVERAGE only to the plain one. Equal analyzed counts make the plain average
 right, so `clear` keeps only arms whose sizes differ at least twofold, with no note about missing participants.
-`sd_impossible` needs no counts: it flags Total SDs that no way of pooling the arms could give.
+`sd_impossible` needs no counts: it flags Total SDs that no way of pooling the arms could give. `arms_as_sem` finds
+the high ones that fit once the arm spreads are read as standard errors, with other factors as decoys.
 """
 import json
 import sys
@@ -155,6 +156,27 @@ def sd_impossible(study):
         yield measure.get('title', ''), tm, ts, round(lo, 4), round(hi, 4), kind
 
 
+def arms_as_sem(study, scale=1.0):
+    """Measures flagged 'high' whose Total SD does fit once each arm's spread is read as a standard error,
+    SD = SE * sqrt(n). `scale` multiplies sqrt(n), so other factors can serve as decoys."""
+    high = {m for m, *_, kind in sd_impossible(study) if kind == 'high'}
+    groups = study.get('groups', [])
+    total = [g['id'] for g in groups if g.get('title', '').strip().lower() == 'total'][0] if high else None
+    ids = [g['id'] for g in groups if g['id'] != total]
+    for measure in study['measures'] if high else []:
+        if measure.get('title', '') not in high:
+            continue
+        counts = _counts(measure.get('denoms')) or _counts(study.get('denoms'))
+        if any(counts.get(i, 0) < 2 for i in ids) or sum(counts[i] for i in ids) != counts.get(total):
+            continue
+        cells = {x['groupId']: x for x in measure['classes'][0]['categories'][0].get('measurements', [])}
+        arms = [(counts[i],) + _num(cells[i]['value']) + _num(cells[i]['spread']) for i in ids]
+        lo, hi = sd_span([(n, m, mt, v * scale * n ** .5, vt * scale * n ** .5) for n, m, mt, v, vt in arms])
+        ts, tt = _num(cells[total]['spread'])
+        if ts + tt >= lo and ts - tt <= hi:
+            yield measure['title']
+
+
 EXHAUSTIVE = ('Sex: Female, Male', 'Age, Categorical', 'Ethnicity (NIH/OMB)', 'Race (NIH/OMB)')
 
 
@@ -220,4 +242,6 @@ if __name__ == '__main__':
     out['sd_impossible'], out['trials_sd_impossible'] = len(sd), len({r[0] for r in sd})
     out['sd_kinds'] = {k: sum(r[-1] == k for r in sd) for k in ('zero', 'se', 'low', 'mean', 'count', 'high')}
     out['sd_rows'] = sd
+    out['arm_sem'] = [[nct, m] for nct, study in studies.items() for m in arms_as_sem(study)]
+    out['arm_sem_decoys'] = {f: sum(1 for st in studies.values() for _ in arms_as_sem(st, f)) for f in (0.5, 0.7, 1.4, 2.0)}
     print(json.dumps(out, indent=1))

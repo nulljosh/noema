@@ -3693,5 +3693,305 @@
 9.3886,
 "high"
 ]
+],
+"arm_sem": {
+"meaning": "high Total SDs that fit once each arm spread is read as a standard error (SD = SE x sqrt(n))",
+"high_with_counts": 165,
+"fit": 71,
+"trials": 42,
+"decoy_factors": {
+"0.5": 3,
+"0.7": 12,
+"1.4": 7,
+"2.0": 4
+},
+"shuffled_totals": 7,
+"paper_check": "NCT01786109, PMID 21803011 (PMC3202649): the baseline table caption says Mean +/- SEM; the registry posts the same values as SD",
+"rows": [
+[
+"NCT00319982",
+"Age, Continuous"
+],
+[
+"NCT02616393",
+"EORTC-QLQ-C30 Questionnaire"
+],
+[
+"NCT02687919",
+"B-9 (folate)"
+],
+[
+"NCT00929734",
+"HDL-C"
+],
+[
+"NCT00911612",
+"Age Continuous"
+],
+[
+"NCT00911612",
+"Body Mass Index"
+],
+[
+"NCT03524157",
+"Intra Ocular Pressure (IOP)"
+],
+[
+"NCT01786109",
+"Age Continuous"
+],
+[
+"NCT01786109",
+"Body Mass Index"
+],
+[
+"NCT00618072",
+"Adiponectin"
+],
+[
+"NCT01686568",
+"Age, Continuous"
+],
+[
+"NCT05484778",
+"Weight"
+],
+[
+"NCT00776035",
+"Age, Continuous"
+],
+[
+"NCT00776035",
+"Homeostasis model assessment of insulin resistance"
+],
+[
+"NCT03180489",
+"Fasting Insulin"
+],
+[
+"NCT00587678",
+"Total cholesterol"
+],
+[
+"NCT00587678",
+"Low density lipoprotein cholesterol"
+],
+[
+"NCT00587678",
+"High density lipoprotein cholesterol"
+],
+[
+"NCT01253408",
+"Body Mass Index (BMI)"
+],
+[
+"NCT02896595",
+"Age, Continuous"
+],
+[
+"NCT03604172",
+"Reward-based eating"
+],
+[
+"NCT03538808",
+"Age, Continuous"
+],
+[
+"NCT03538808",
+"Stanford Expectations of Treatment Scale: Negative Subscale"
+],
+[
+"NCT00564902",
+"Contrast Sensitivity Function Photopic Distance"
+],
+[
+"NCT03273387",
+"onset of diagnosis to study"
+],
+[
+"NCT03273387",
+"SF-36 Functional Capacity"
+],
+[
+"NCT05062265",
+"Height (m)"
+],
+[
+"NCT03132220",
+"Years practicing as nurse"
+],
+[
+"NCT02734238",
+"Age, Continuous"
+],
+[
+"NCT02734238",
+"Height"
+],
+[
+"NCT02734238",
+"Weight"
+],
+[
+"NCT02734238",
+"Systolic Blood Pressure"
+],
+[
+"NCT02734238",
+"Diastolic Blood Pressure"
+],
+[
+"NCT02734238",
+"Total Testosterone"
+],
+[
+"NCT02734238",
+"Estradiol"
+],
+[
+"NCT02734238",
+"Glucose"
+],
+[
+"NCT02734238",
+"Total Cholesterol"
+],
+[
+"NCT02734238",
+"High-Density Lipoprotein Cholesterol"
+],
+[
+"NCT02734238",
+"Low-Density Lipoprotein Cholesterol"
+],
+[
+"NCT02734238",
+"Triglyceride"
+],
+[
+"NCT02734238",
+"Hematocrit"
+],
+[
+"NCT02734238",
+"Prostate-Specific Antigen"
+],
+[
+"NCT02734238",
+"Alanine Aminotransferase"
+],
+[
+"NCT03046836",
+"Age, Continuous"
+],
+[
+"NCT00523718",
+"Age, Continuous"
+],
+[
+"NCT01331148",
+"Age, Continuous"
+],
+[
+"NCT00673244",
+"Age, Continuous"
+],
+[
+"NCT01284140",
+"Acute Physiology and Chronic Health Evaluation II score"
+],
+[
+"NCT06904404",
+"Age, Continuous"
+],
+[
+"NCT02655692",
+"Age, Continuous"
+],
+[
+"NCT03386032",
+"SCORAD"
+],
+[
+"NCT03011775",
+"Age, Continuous"
+],
+[
+"NCT00282672",
+"Age, Continuous"
+],
+[
+"NCT05090423",
+"Active knee extension range of motion during slump test in ankle plantar flexion with inversion"
+],
+[
+"NCT05090423",
+"Hamstring flexibility"
+],
+[
+"NCT00139477",
+"Age, Continuous"
+],
+[
+"NCT01364584",
+"Body Mass Index (kg/m2)"
+],
+[
+"NCT01364584",
+"Lean Mass (kg)"
+],
+[
+"NCT01364584",
+"VO2peak (ml/kg/min)"
+],
+[
+"NCT01786252",
+"Age, Continuous"
+],
+[
+"NCT00708019",
+"Age, Continuous"
+],
+[
+"NCT00741936",
+"No. of days taking rescue therapy"
+],
+[
+"NCT00741936",
+"Severity of constipation"
+],
+[
+"NCT00374244",
+"Age, Continuous"
+],
+[
+"NCT01243593",
+"Weight"
+],
+[
+"NCT01834404",
+"Body Mass Index (BMI)"
+],
+[
+"NCT01834404",
+"Waist Circumference"
+],
+[
+"NCT01834404",
+"Fasting Plasma Glucose"
+],
+[
+"NCT01834404",
+"Baseline Volume to Fullness"
+],
+[
+"NCT01834404",
+"Baseline Maximum Tolerated Volume"
+],
+[
+"NCT00296244",
+"Age Continuous"
 ]
+]
+}
 }

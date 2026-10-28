@@ -34,6 +34,17 @@ class RegistryTests(unittest.TestCase):
         self.assertTrue(row['outside'] and row['far'] and not row['unweighted'])
         self.assertEqual(list(registry.rows(study('75.0', total_n='60'))), [])
 
+    def test_arms_posted_as_standard_errors(self):  # arm SDs 11.1 and 12.4 posted as SEs 1.73 and 2.92
+        def sem_study(total_sd):
+            st = study('45.6', total_sd)
+            cells = st['measures'][0]['classes'][0]['categories'][0]['measurements']
+            cells[0].update(value='45.0', spread='1.73')
+            cells[1].update(value='47.0', spread='2.92')
+            return st
+        self.assertEqual(list(registry.arms_as_sem(sem_study('11.4'))), ['Age'])
+        self.assertEqual(list(registry.arms_as_sem(sem_study('11.4'), 2.0)), [])  # a decoy factor misses
+        self.assertEqual(list(registry.arms_as_sem(sem_study('30.0'))), [])  # high, but not an SE slip
+
     def test_sd_impossible(self):
         self.assertEqual(list(registry.sd_impossible(study('46.1'))), [])  # 11.7 fits arms of 11.1 and 12.4
         (_, _, sd, lo, hi, kind), = registry.sd_impossible(study('46.1', '1.5'))
