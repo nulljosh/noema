@@ -6,4 +6,10 @@
 
 XO-6 b (Crouzet et al. 2017, AJ 153, 94, arXiv:1612.02776), ratio 3.46. The paper's Table 5 gives P = 3.7650007 days and a = 0.0815 ± 0.0077 au, and Table 6 gives M_star = 1.47 ± 0.06 and R_star = 1.93 ± 0.18 solar. The archive copies them faithfully. The 0.0815 au is a/R_star = 9.08 times R_star = 1.93 solar radii, so the orbit size comes from the transit shape and the spectroscopic radius, not from the period and mass. Kepler's law with P and M gives 0.054 au, or a/R_star = 6.0 with that radius. The two disagree because the transit's stellar density (the table's 1.0 g/cm^3) wants a star near 1.3 solar radii, not 1.93; the paper points to its own discussion of the radius. So this outlier is a known tension inside the paper, not a transcription error.
 
+## How the outliers arise
+
+16 of the 55 have a equal, within 3 percent, to the archive's own a/R_star times R_star (TOI-262 b, K2-285 d and e, TOI-2274 b, K2-184 b, XO-6 b among them): the orbit size came from the transit's shape and the star's radius, not from the period and mass, so it misses Kepler whenever the transit's stellar density and the star disagree. An eccentric orbit does that, and so does a misjudged star. Many of the rest are radial-velocity planets with no transit at all, where a was published beside a stellar mass the archive later replaced (the Stassun et al. 2017 rows).
+
+KOI-2513.01 is different. The archive's default solution for it (Cañas et al. 2023) lists a = 0.5000 au and a/R_star = 100.000, round values, while every Kepler KOI table gives 0.141 to 0.146 au for the same 19.005-day orbit. Kepler's law gives 0.135 au. That reads as a placeholder or a fit pinned at a bound, made the default; the paper is not yet read.
+
 Next: read the other single-source outliers outside Stassun et al., starting with KOI-2513.01 (ratio 50), TOI-262 b (5.1) and K2-285 e (4.3), and sort each into transcription, unit slip or a tension like XO-6 b's.
