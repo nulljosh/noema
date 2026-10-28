@@ -282,11 +282,46 @@ def age_flags(study, lo_text, hi_text):
     return out
 
 
+BRACKETS = {'<=18 years': (0, 18), 'Between 18 and 65 years': (18, 65), '>=65 years': (65, 200)}
+
+
+def bracket_flags(study, lo_text, hi_text):
+    """Standard age brackets with participants that the trial's own age limits rule out, in the Total column
+    (or the only group). 'whole' marks a bracket that holds the entire sample."""
+    a, b = _years(lo_text), _years(hi_text)
+    groups = study.get('groups') or []
+    total = [g['id'] for g in groups if g.get('title', '').strip().lower() == 'total'] or (
+        [groups[0]['id']] if len(groups) == 1 else [])
+    if not total:
+        return []
+    n = _counts(study.get('denoms')).get(total[0])
+    out = []
+    for m in study.get('measures', []):
+        if m.get('paramType') != 'COUNT_OF_PARTICIPANTS' or not re.match(r'\s*age', m.get('title', ''), re.I):
+            continue
+        for c in m.get('classes', []):
+            for k in c.get('categories', []):
+                span = BRACKETS.get(k.get('title'))
+                v = next((x.get('value') for x in k.get('measurements', []) if x.get('groupId') == total[0]), None)
+                if not span or not v or not v.isdigit() or int(v) == 0:
+                    continue
+                lo, hi = span  # a bracket is ruled out when the limits cannot reach it
+                if (b is not None and b + 1 <= lo) or (a is not None and a > hi):
+                    out.append({'bracket': k['title'], 'count': int(v), 'n': n, 'whole': n == int(v)})
+    return out
+
+
 if __name__ == '__main__':
     if sys.argv[1] == 'fetch':
         sys.exit(fetch(sys.argv[2]))
     if sys.argv[1] == 'fetch-elig':
         sys.exit(fetch_elig(sys.argv[2]))
+    if sys.argv[1] == 'brackets':  # registry.py brackets BASELINE ELIG
+        base, elig = json.load(open(sys.argv[2])), json.load(open(sys.argv[3]))
+        rows = [{'nct': nct, 'limits': elig[nct][:2], **r} for nct, st in base.items() if nct in elig
+                for r in bracket_flags(st, *elig[nct][:2])]
+        print(json.dumps({'trials': len({r['nct'] for r in rows}), 'whole': [r for r in rows if r['whole']]}, indent=0))
+        sys.exit()
     if sys.argv[1] == 'ages':  # registry.py ages BASELINE ELIG
         base, elig = json.load(open(sys.argv[2])), json.load(open(sys.argv[3]))
         flags = {nct: f for nct, st in base.items() if nct in elig for f in [age_flags(st, *elig[nct][:2])] if f}

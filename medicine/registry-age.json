@@ -300,5 +300,189 @@
 "kind": "wide",
 "looks_like": ""
 }
-]
+],
+"brackets": {
+"command": "python3 registry.py brackets baseline.json elig.json (baseline from registry.py fetch, which keeps the count measures)",
+"rule": "a standard age bracket (<=18, 18 to 65, >=65) with participants in the Total column that the trial's minimum and maximum age cannot reach",
+"trials": 123,
+"whole_sample": [
+{
+"nct": "NCT03194503",
+"limits": [
+"22 Years",
+"70 Years"
+],
+"bracket": "<=18 years",
+"count": 1512,
+"n": 1512,
+"whole": true
+},
+{
+"nct": "NCT03879642",
+"limits": [
+"1 Year",
+"6 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 43,
+"n": 43,
+"whole": true
+},
+{
+"nct": "NCT04180462",
+"limits": [
+"21 Years",
+null
+],
+"bracket": "<=18 years",
+"count": 7387,
+"n": 7387,
+"whole": true
+},
+{
+"nct": "NCT05822921",
+"limits": [
+"16 Months",
+"17 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 20,
+"n": 20,
+"whole": true
+},
+{
+"nct": "NCT03537261",
+"limits": [
+"5 Years",
+"12 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 63,
+"n": 63,
+"whole": true
+},
+{
+"nct": "NCT03698708",
+"limits": [
+"5 Years",
+"12 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 37,
+"n": 37,
+"whole": true
+},
+{
+"nct": "NCT01254669",
+"limits": [
+"11 Years",
+"15 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 200,
+"n": 200,
+"whole": true
+},
+{
+"nct": "NCT04046341",
+"limits": [
+"12 Months",
+"5 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 15,
+"n": 15,
+"whole": true
+},
+{
+"nct": "NCT03365102",
+"limits": [
+"13 Years",
+"17 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 58,
+"n": 58,
+"whole": true
+},
+{
+"nct": "NCT00796523",
+"limits": [
+null,
+"5 Days"
+],
+"bracket": "Between 18 and 65 years",
+"count": 51,
+"n": 51,
+"whole": true
+},
+{
+"nct": "NCT04105218",
+"limits": [
+"19 Years",
+"45 Years"
+],
+"bracket": "<=18 years",
+"count": 12,
+"n": 12,
+"whole": true
+},
+{
+"nct": "NCT01415453",
+"limits": [
+"18 Years",
+"60 Years"
+],
+"bracket": ">=65 years",
+"count": 1,
+"n": 1,
+"whole": true
+},
+{
+"nct": "NCT03255902",
+"limits": [
+"2 Years",
+"5 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 7,
+"n": 7,
+"whole": true
+},
+{
+"nct": "NCT07069621",
+"limits": [
+"6 Years",
+"12 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 64,
+"n": 64,
+"whole": true
+},
+{
+"nct": "NCT00868751",
+"limits": [
+"2 Years",
+"16 Years"
+],
+"bracket": "Between 18 and 65 years",
+"count": 1,
+"n": 1,
+"whole": true
+},
+{
+"nct": "NCT00923559",
+"limits": [
+null,
+"18 Months"
+],
+"bracket": "Between 18 and 65 years",
+"count": 80,
+"n": 80,
+"whole": true
+}
+],
+"note": "most partial flags are dyad designs (a parent or caregiver row beside a child); NCT03506880 is one, with a second age row at 46.75. Whole-sample rows put every participant in a bracket the limits exclude; NCT03194503 and NCT04180462 re-fetched live 2026-10-28 and match"
+}
 }

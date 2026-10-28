@@ -28,6 +28,16 @@ def aged(mean, sd, n='74'):
 
 
 class RegistryTests(unittest.TestCase):
+    def test_brackets_against_eligibility(self):  # NCT03194503: ages 22 to 70, all 1512 posted as <=18
+        st = {'groups': [{'id': 'BG000', 'title': 'Total'}],
+              'denoms': [{'units': 'Participants', 'counts': [{'groupId': 'BG000', 'value': '1512'}]}],
+              'measures': [{'title': 'Age, Categorical', 'paramType': 'COUNT_OF_PARTICIPANTS', 'classes': [{'categories': [
+                  {'title': t, 'measurements': [{'groupId': 'BG000', 'value': v}]}
+                  for t, v in (('<=18 years', '1512'), ('Between 18 and 65 years', '0'), ('>=65 years', '0'))]}]}]}
+        flag, = registry.bracket_flags(st, '22 Years', '70 Years')
+        self.assertTrue(flag['whole'] and flag['bracket'] == '<=18 years')
+        self.assertEqual(registry.bracket_flags(st, '18 Years', '70 Years'), [])  # an 18-year-old fits <=18
+
     def test_age_against_eligibility(self):  # NCT03900650 posts 24.96 (74) for ages 21 to 30
         self.assertEqual(registry.age_flags(aged('24.96', '74'), '21 Years', '30 Years')[0]['kind'], 'wide')
         self.assertEqual(registry.age_flags(aged('24.96', '2.98'), '21 Years', '30 Years'), [])
