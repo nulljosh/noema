@@ -1,4 +1,5 @@
 import FarCerts.BB2Tree
+import FarCerts.Count2
 import FarCerts.BB23Tree
 import FarCerts.BB3
 import FarCerts.BB3Tree
