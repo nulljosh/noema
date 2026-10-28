@@ -12,7 +12,9 @@ XO-6 b (Crouzet et al. 2017, AJ 153, 94, arXiv:1612.02776), ratio 3.46. The pape
 
 KOI-2513.01 is different. The archive's default solution for it (Cañas et al. 2023) lists a = 0.5000 au and a/R_star = 100.000, round values, while every Kepler KOI table gives 0.141 to 0.146 au for the same 19.005-day orbit. Kepler's law gives 0.135 au. Read on 2026-10-28 (arXiv:2302.07713, Table 9): the paper prints a = 0.5 (+0.2, -0.4) au for this grazing brown dwarf, an orbit the transit shape barely constrains, so the archive copies the paper faithfully and the law's 0.135 au sits inside the paper's lower error. Not a placeholder: a weak fit made the default solution.
 
-Next: read the other single-source outliers outside Stassun et al., starting with TOI-262 b (5.1) and K2-285 e (4.3), and sort each into transcription, unit slip or a tension like XO-6 b's.
+TOI-262 b traces to Oddo et al. 2023 (AJ, arXiv:2301.08162v3), whose Table 14 fits ten small planets. For nine of the ten the printed a equals a/R_star times R_star to the third digit, and the fitted a/R_star sits above the value Kepler's law gives from the same table's own period and stellar mass in eight: TOI-118 b by 4.2 sigma, TOI-198 b by 4.7, TOI-518.01 by 4.3, TOI-262 b by 2.2 (41.2 +- 8.0 against 23.9), TOI-470 b by 2.2. The quoted a errors are also far tighter than a/R_star's: TOI-262 b's 0.163 +- 0.002 au carries a 19 percent a/R_star error, about +- 0.03 au. The tenth, TOI-455 b, prints a = 0.022 au where both a/R_star R_star and the law give 0.037, which reads as a typo. Observed from the paper's own table; why its transit fits run long (eccentricity, limb darkening or priors) is not settled here, and no erratum was searched yet.
+
+Next: K2-285 e (Palle et al. 2019, 4.3), then a scan of the archive for whole papers whose a/R_star runs above the law, the way Oddo et al.'s does.
 
 ## Minimum mass against true mass
 
