@@ -18,6 +18,7 @@ Comments:
 
     The running times are the elements of the runtime spectrum R(n) in Aaronson, section 5.9, where he asks how many distinct runtimes there are. The machines and the step count are those of A060843 and A004147: 5-tuple machines with moves left or right, counting the halting step.
     a(n) <= A060843(n), and A337805(n) - 1 <= a(n), since every time below the Lazy Beaver number occurs.
+    a(1)..a(4) were also found by a separate plain tree walk with no non-halting deciders, cut only at BB(n).
     For n = 5, the 919 times up to 2000 all appear in a run capped at 2000 steps. The other 288 are the distinct times of the 333 halting branches that pass step 2000, each rerun from blank. The second longest time is 23554764, the runner-up found by Marxen and Buntrock (see Michel's survey). - Joshua Trommel, Oct 27 2026
 
 Example:

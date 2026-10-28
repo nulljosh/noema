@@ -1,30 +1,17 @@
 import os
 import subprocess
+import sys
 import tempfile
 import unittest
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, HERE)
+import runtimes  # noqa: E402
 
 
 def walk(n, m, cap):
     """Plain Python tree walk with no deciders, cut only by the cap."""
-    opts, hist, stack = 2 * m * (n + 1), {}, [({}, 1)]
-    while stack:
-        mach, f = stack.pop()
-        tape, pos, q, t = {}, 0, 0, 0
-        while t < cap and (q, tape.get(pos, 0)) in mach:
-            w, mv, q2 = mach[(q, tape.get(pos, 0))]
-            tape[pos], pos, q, t = w, pos + mv, q2, t + 1
-        if t == cap:
-            continue
-        s = tape.get(pos, 0)
-        hist[t + 1] = hist.get(t + 1, 0) + f * 2 * m * opts ** (n * m - len(mach) - 1)
-        k = 1 + max([x[2] for x in mach.values()] + [0])
-        for w in range(m):
-            for mv in ((1,) if not mach else (1, -1)):
-                for x in range(min(k + 1, n)):
-                    g = (n - k if x == k else 1) * (2 if not mach else 1)
-                    stack.append(({**mach, (q, s): (w, mv, x)}, f * g))
+    hist = runtimes.walk(n, m, cap)
     return sum(hist.values()), sum(k * v for k, v in hist.items())
 
 
@@ -45,6 +32,9 @@ class HaltersTests(unittest.TestCase):
         for n, cap, halt, steps in ((1, 1, 32, 32), (2, 6, 9784, 13504), (3, 21, 7571840, 13141792),
                                     (4, 107, 11140566368, 23076152576)):
             self.assertEqual(self.run_c(n, 2, cap), (halt, steps))
+
+    def test_runtime_spectrum(self):  # 1, 6, 21 distinct halting times; the first gap is the Lazy Beaver (A337805)
+        self.assertEqual([len(runtimes.walk(n, 2, c)) for n, c in ((1, 1), (2, 6), (3, 21))], [1, 6, 21])
 
     def test_python_agrees(self):
         for n, m, cap in ((2, 2, 6), (3, 2, 21), (2, 3, 38)):
