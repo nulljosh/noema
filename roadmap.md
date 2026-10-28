@@ -52,12 +52,14 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
 - [ ] **CS:** machine-check the halting counts at 3 states in Lean (A004147(3) = 7,571,840, A386859(3) = 13,141,792); the 2-state ones are done (`Count2.lean`). 12^6 tables is too many to list, so count by the tree with weights.
+- [ ] **CS:** an independent count of the 5-state halters past step 2000 that does not use halters.c deciders (now only argued complete by A004147(5) minus the two-program count to 2000).
+- [ ] **Medicine:** the 90 trials whose SD labels fit standard errors: a second paper sample once more full texts are reachable, and the 60 reverse cases.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
-- [ ] **Physics:** novelty search for the triangular closed form and the 2n+1 divisibility (read the 2006 Comput. Phys. Commun. paper, dimer-on-torus divisibility papers), then an outside reader for TRIANGULAR.md. If both hold, it goes to Joshua as the lab's first breakthrough candidate, with an OEIS entry.
-- [ ] **Physics:** a deeper literature search (Blote and Nightingale, dimer counts on the honeycomb torus) for the triangular counts, then an independent check by Pfaffian dimer counting, then an OEIS draft for Joshua.
+- [ ] **Physics (Joshua or a browser):** read Wei, Lu and Ke, J. Math. 2022, DOI 10.1155/2022/4120166 (hexagon torus matchings by Pfaffians), the 2006 CPC triangular enumeration paper, and Fee and Granville 1991 / Ford and Jha 1993 on Wendt. All block scripts. They decide whether the triangular formula and the 2n+1 bound are new (the OEIS and arXiv pass of 2026-10-27 found neither).
+- [ ] **Physics:** an independent Pfaffian (four-determinant) count of the honeycomb torus matchings by parity class for n up to 8, as a check on step 4 of TRIANGULAR.md that does not use the closed form.
 - [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
-- [ ] **Medicine:** read the ISIS-2 full text to see whether the combination's SD 5 comes from a stratified analysis, then recompute the 1954 Salk polio trial from the Francis report's own table.
+- [ ] **Medicine:** seeded sample of the 61 sign slips against their papers (RESULT and DERIVED PMIDs, PMC full text). The Salk report (AJPH 1955, PMID 14361811) and ISIS-2 have no open copy; park them.
 - [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
 
 ## Not doing
