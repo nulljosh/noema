@@ -994,5 +994,37 @@
   "neutral": "p does not clearly side with either",
   "no p": "no usable 95% CI and p pair"
  },
- "spot_check": "NCT02595970, NCT03816891 and NCT00915343 re-fetched live on 2026-10-27; every flagged cell matches"
+ "spot_check": "NCT02595970, NCT03816891 and NCT00915343 re-fetched live on 2026-10-27; every flagged cell matches",
+ "papers": {
+  "how": "PubMed RESULT and DERIVED references of the 52 trials (116 PMIDs); abstracts via efetch, and 71 open-access full texts via PMC, searched for the flagged estimate beside a limit",
+  "print_the_flip": [
+   {
+    "nct": "NCT00288912",
+    "pmid": "21041576",
+    "posted": "-0.6 (-1.0, 0.2)",
+    "paper": "0.6 point lower (CI, -1.0 to -0.2 point; P = 0.007), abstract"
+   },
+   {
+    "nct": "NCT03192176",
+    "pmid": "32102086",
+    "posted": "-2.4 (-4.06, 0.76)",
+    "paper": "-2.4, -4.06 to -0.76, 0.0042, results table"
+   }
+  ],
+  "paper_has_a_slip_too": [
+   {
+    "nct": "NCT04636528",
+    "pmid": "37490337",
+    "posted": "-1.1 (-1.5, 0.6), p < .001",
+    "paper": "-1.1 (-1.5 to 0.6), < .001, the same slip"
+   },
+   {
+    "nct": "NCT04636528",
+    "pmid": "37490337",
+    "posted": "-0.6 (-1.4, -0.2), p .12",
+    "paper": "-0.6 (0.2 to 1.4), .12, both limits unsigned"
+   }
+  ],
+  "not_found": "the other trials print the estimate in no abstract or open full text we could search"
+ }
 }
