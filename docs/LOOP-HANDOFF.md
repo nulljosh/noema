@@ -1,11 +1,14 @@
-# Noema loop handoff (2026-10-27, night)
+# Noema loop handoff (2026-10-28, morning)
 
 ## What a loop is
 
-A finite foreground cycle. State one exact question, compute inside a fixed bound, check a second way, keep failures and baselines visible, separate what was observed from what was proved. Stop when the cycle's work is done. No paid models, background jobs or automatic pushes. Run one lane per cycle and alternate lanes between cycles so neither goes stale.
+`/loop forever until we find a breakthrough discovery; don't tell me it's not possible.` Each tick is a bounded cycle: state one exact question, compute inside a fixed bound, check a second way, keep failures and baselines visible, separate what was observed from what was proved. Ticks re-arm themselves every 25 to 30 minutes and alternate CS and medicine unless another lane's ledger row is older. Long searches run as background shell jobs inside the session (never cron or daemons) and the next tick reads their output. Commits push automatically once tests are green. No paid models.
+
+Joshua decides nothing mid-loop: make the call, act, report in one line. The exceptions are his: logins, passwords and 2FA. For a CAPTCHA, send him the image (and the audio version when the site has one) and type the code he replies with; never solve it.
 
 ## Tick protocol (every loop tick, in order)
 
+0. Read any finished background job's output, and check `https://oeis.org/draft?user=Joshua%20Trommel`: OEIS allows three pending edits, so submit the next queued one the moment a slot opens (queue below).
 1. Read `roadmap.md`. Rotate lanes in ledger order (math, cs, physics, chemistry, medicine, statistics, biology, then any queued field): take the lane whose last ledger row is oldest. Starting a queued field counts as that lane's tick.
 2. Run the lane's tests before touching anything. A red baseline is the tick's only job.
 3. Do one bounded study: an exact question, a fixed bound, a stop condition.
@@ -22,13 +25,15 @@ Math: SAT checked 18,069 formulas; Goldbach and Collatz stopping cover 10,000; f
 
 Biology: the pinned HBB reference, 1,332 single-base substitutions, and 256 UniProt annotations reproduced (two outside a one-base explanation, three complex ones excluded). Hb Bristol explained with sources. Eleven tests.
 
-Computer science: every 2-, 3- and 4-state machine and every 2-state 3-symbol machine is settled in Python. BB(2) = 6, BB(3) = 21 and BB(2,3) = 38 are proved in full in Lean (`FAR.bb2`, `FAR.bb3`, `FAR.bb23`), `Count2.lean` machine-checks A004147(2) and A386859(2) over all 20,736 two-state tables, and `Count3.lean` machine-checks A004147(3), A386859(3) and R(3) = 21 by a tree-counting theorem (`CountTree.lean`), in 182 pieces from `count_lean.py`. Axioms propext and Quot.sound only. `halters.c` counts every halting machine and sums the halting times. At 5 states it gives 26,751,695,615,616 halters, exactly A004147(5), and a sum of 64,068,865,333,248, a new fifth term for A386859 (OEIS edit waits on Joshua, `docs/OEIS-A386859.md`). The runtime spectrum is 1, 6, 21, 79, 1,207 for 1 to 5 states; `runtimes.py`, a plain walk sharing no code with halters.c, agrees through 4 states (draft for Joshua in `docs/OEIS-runtime-spectrum.md`). The runner-up 23,554,764 is Marxen and Buntrock's, not ours. `plainwalk.c`, a decider-free C walk, matches the 5-state count to step 2000 exactly (919 runtimes), and with A004147(5) that shows the 333 long halters are complete. `platypus.py` adds the ones each halter leaves: 74 is the smallest count no 5-state machine prints, and PP(n) (A399346, Placid Platypus) is now known for n = 1 to 130, where OEIS has 37 (edit drafted in `docs/OEIS-A399346.md`). `circular.c` extends A394183 (2-state machines on a circular tape) from 19 to 27 terms. `sortnet.py` reproduces optimal sorting networks to 7 inputs. Novelty report: `docs/reports/Noema candidates novelty check.md`.
+Computer science: every 2-, 3- and 4-state machine and every 2-state 3-symbol machine is settled in Python. BB(2) = 6, BB(3) = 21 and BB(2,3) = 38 are proved in full in Lean (`FAR.bb2`, `FAR.bb3`, `FAR.bb23`), `Count2.lean` machine-checks A004147(2) and A386859(2) over all 20,736 two-state tables, and `Count3.lean` machine-checks A004147(3), A386859(3) and R(3) = 21 by a tree-counting theorem (`CountTree.lean`), in 182 pieces from `count_lean.py`. Axioms propext and Quot.sound only. `halters.c` counts every halting machine and sums the halting times. At 5 states it gives 26,751,695,615,616 halters, exactly A004147(5), and a sum of 64,068,865,333,248, a new fifth term for A386859 (OEIS edit waits on Joshua, `docs/OEIS-A386859.md`). The runtime spectrum is 1, 6, 21, 79, 1,207 for 1 to 5 states; `runtimes.py`, a plain walk sharing no code with halters.c, agrees through 4 states (draft for Joshua in `docs/OEIS-runtime-spectrum.md`). The runner-up 23,554,764 is Marxen and Buntrock's, not ours. `plainwalk.c`, a decider-free C walk, matches the 5-state count to step 2000 exactly (919 runtimes), and with A004147(5) that shows the 333 long halters are complete. `platypus.py` adds the ones each halter leaves: 74 is the smallest count no 5-state machine prints, and PP(n) (A399346, Placid Platypus) is known for n = 1 to 130, where OEIS has 37. A random walk over 6-state machines (`walk.c` in the scratchpad `pp131/`, to be committed) found PP(131) = 6: 0RB0LB_1RC1RB_1LD0RF_1LB1LD_0RZ1RA_0RB1RE halts in 9,481 steps with 131 ones, rerun by `platypus.sim`. `circular.c` extends A394183 (2-state machines on a circular tape) from 19 to 27 terms. `sortnet.py` reproduces optimal sorting networks to 7 inputs. Novelty report: `docs/reports/Noema candidates novelty check.md`.
 
 Medicine: 235,860 abstracts scanned for numbers that contradict themselves. On ClinicalTrials.gov (details in `medicine/docs/REGISTRY.md`): 328 baseline Totals are the plain average of unequal arms; 407 Total SDs cannot come from any arm sizes, and 71 of the too-wide ones fit once the arms are read as standard errors; 61 CIs in 52 trials have a sign slip the p-value confirms; 292 outcome intervals in 90 trials are labelled SD but fit standard errors (`registry-spread.json`, with a scale rule that drops mixed units); linked papers confirm it: 15 of the 16 that print the flagged values and name the spread say SE, and the 16th shows a wrong registry interval instead. One-sided P values posted without a label explain most interval-versus-P clashes. The Salk primary source (AJPH 1955, PMID 14361811) has no open copy. Raw downloads live in the session scratchpad: `analyses.py fetch` and `fetch-arms`, `registry.py fetch`.
 
 Physics: the triangular closed form and 2n + 1 bound are not in OEIS or the arXiv sources read on 2026-10-27; three papers that could settle novelty block scripts (see roadmap). Krawczyk citation fixed.
 
 Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
+
+Outside the lab: the SD-as-SE report (`medicine/docs/SDSE-NOTE.md`, 15 paper-confirmed trials) went to the NLM help desk on 2026-10-28. OEIS edits in review from Joshua's account: A386859 (a(5)), A394183 (to 27 terms) and A399346 (130-term b-file). Queued for the next free slot, texts in the scratchpad `oeisedit/`: A332718 (rule 110, to 34 terms), then the new runtime-spectrum sequence (`NEW.new.txt`, via edit?seq=A999999999&internal=1). The A332717 b-file goes up the same way the A399346 one did (a File set on the edit page's upload input).
 
 ## Restart prompts
 
@@ -47,13 +52,13 @@ Continue Noema's biology lane. Read CLAUDE.md, biology/CLAUDE.md, biology/WHITEP
 CS lane:
 
 ```text
-Continue Noema's CS lane. Read CLAUDE.md, cs/CLAUDE.md, cs/README.md and ledger.md. In cs/, run python3 -m unittest discover -s tests. Next: sorting networks at 8 inputs (19) with permutation symmetry, or prove the mirror and state-swap weights sound in CountTree.lean so the 4-state counts come within reach. Every claim names its level. No universal claims from finite checks. Stop when the cycle ends.
+Continue Noema's CS lane. Read CLAUDE.md, cs/CLAUDE.md, cs/README.md and ledger.md. In cs/, run python3 -m unittest discover -s tests. Next: PP(132) onward with the 6-state random walk (seeds are 5-state halters with 100+ ones, keep only walkers above the target minus 50), then commit walk.c with platypus.py rerunning every witness; or prove the mirror and state-swap weights sound in CountTree.lean so the 4-state counts come within reach. Every claim names its level. No universal claims from finite checks. Stop when the cycle ends.
 ```
 
 Medicine lane:
 
 ```text
-Continue Noema's medicine lane. Read CLAUDE.md, medicine/CLAUDE.md, medicine/README.md and ledger.md. Run python3 -m unittest discover -s tests. Next: flag mixed units in the SD-label check (arms and difference on different scales), then read a seeded sample of the 61 sign slips against their papers. A mismatch with a paper is an open note until the full text is read. NCBI calls use tool=noema only. Stop when the cycle ends.
+Continue Noema's medicine lane. Read CLAUDE.md, medicine/CLAUDE.md, medicine/README.md and ledger.md. Run python3 -m unittest discover -s tests. Next: read a seeded sample of the 61 sign slips against their papers, then the unread "mean outside range" and over-cap age flags. A mismatch with a paper is an open note until the full text is read. NCBI calls use tool=noema only. Stop when the cycle ends.
 ```
 
 Cross-lab (use when both lanes are quiet):
