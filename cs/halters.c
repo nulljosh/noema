@@ -28,6 +28,7 @@ static int dirty_lo[MAXL], dirty_hi[MAXL];
 typedef struct { int pos, q, lo, hi; long long t; uint64_t h; } Cfg;
 static Cfg cfg[MAXL];
 static u128 halters, stepsum;
+static int ONES; static char oseen[1 << 16];  // ONES=1: the ones counts halting machines leave (Placid Platypus)
 static long long nodes, leaves, capped, cycles, tcs, overflow, idx;
 static long long maxstep, lowmiss = 1 << 30;
 static uint8_t seen[1 << 16];
@@ -235,6 +236,12 @@ static void node(int l, int d, int k, u128 f) {
         halters += wgt; stepsum += wgt * (u128)(c.t + 1); leaves++;
         if (c.t + 1 > maxstep) maxstep = c.t + 1;
         if (c.t + 1 < (1 << 16)) seen[c.t + 1] = 1;
+        if (ONES && M == 2) {  // the halting row writes 0 or 1 over the head cell
+            int o = 0;
+            for (int i = c.lo; i <= c.hi; i++) o += buf[l][i];
+            o -= s;
+            if (o + 1 < (1 << 16)) oseen[o] = oseen[o + 1] = 1;
+        }
         if (c.t + 1 > 2000) {
             printf("long %lld ", c.t + 1);
             for (int a = 0; a < N; a++) { for (int b = 0; b < M; b++) if (TX[a][b] < 0) printf("---"); else printf("%d%c%c", TW[a][b], TM[a][b] > 0 ? 'R' : 'L', 'A' + TX[a][b]); printf(a < N - 1 ? "_" : " "); }
@@ -267,7 +274,7 @@ int main(int argc, char **argv) {
     N = atoi(argv[1]); M = atoi(argv[2]); CAP = atoll(argv[3]);
     SPLIT = argc > 4 ? atoi(argv[4]) : 99; K = argc > 5 ? atoi(argv[5]) : 1; I = argc > 6 ? atoi(argv[6]) : 0;
     setvbuf(stdout, NULL, _IOLBF, 0);
-    NM = N * M; if (getenv("TRIG")) TRIG = atoll(getenv("TRIG"));
+    NM = N * M; if (getenv("TRIG")) TRIG = atoll(getenv("TRIG")); ONES = getenv("ONES") != NULL;
     memset(TX, -1, sizeof TX);
     for (int l = 0; l < NM + 2; l++) buf[l] = calloc(TAPE, 1);
     brent = malloc(TAPE);
@@ -278,6 +285,7 @@ int main(int argc, char **argv) {
     long long runtimes = 0;  // distinct halting times below 2^16; whole set only in one process
     for (int i = 1; i < (1 << 16); i++) runtimes += seen[i];
     printf("runtimes_below_65536 %lld\n", runtimes);
+    if (ONES) { printf("ones"); for (int i = 0; i < (1 << 16); i++) if (oseen[i]) printf(" %d", i); printf("\n"); }
     printf("maxstep %lld lazy %lld nodes %lld leaves %lld capped %lld cycles %lld tcs %lld overflow %lld backward %lld ngram %lld\n",
            maxstep, lowmiss, nodes, leaves, capped, cycles, tcs, overflow, bws, ngs);
     return 0;

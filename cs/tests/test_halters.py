@@ -37,6 +37,12 @@ class HaltersTests(unittest.TestCase):
         self.assertEqual([len(runtimes.walk(n, 2, c)) for n, c in ((1, 1), (2, 6), (3, 21))], [1, 6, 21])
         self.assertEqual(len(runtimes.walk(2, 3, 38)), 27)  # 2 states, 3 symbols, as halters.c finds
 
+    def test_ones(self):  # ONES=1: every ones count up to Sigma(4) = 13 is left by some 4-state halter
+        env = dict(os.environ, ONES='1')
+        out = subprocess.run([self.bin, '4', '2', '107'], capture_output=True, text=True, env=env, check=True).stdout
+        line = next(l for l in out.splitlines() if l.startswith('ones'))
+        self.assertEqual(list(map(int, line.split()[1:])), list(range(14)))
+
     def test_plainwalk_agrees(self):  # the decider-free C walk, a second program for the 5-state check below 2000
         exe = os.path.join(self.dir, 'plainwalk')
         subprocess.run(['cc', '-O2', '-o', exe, os.path.join(HERE, 'plainwalk.c')], check=True)
