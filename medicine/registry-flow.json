@@ -1,0 +1,108 @@
+{
+"source": "ClinicalTrials.gov API v2, ParticipantFlowModule of every study with results, fetched 2026-10-28 by flow.py fetch",
+"columns": [
+"nct",
+"kind",
+"period",
+"group",
+"found",
+"expected"
+],
+"studies": 80750,
+"tally": {
+"reasons != not completed": 11
+},
+"trials": {
+"reasons != not completed": 4
+},
+"rows": [
+[
+"NCT04347239",
+"reasons != not completed",
+"Blinded Portion",
+"FG000",
+6,
+4
+],
+[
+"NCT04347239",
+"reasons != not completed",
+"Blinded Portion",
+"FG001",
+0,
+6
+],
+[
+"NCT04347239",
+"reasons != not completed",
+"Blinded Portion",
+"FG002",
+4,
+0
+],
+[
+"NCT04347239",
+"reasons != not completed",
+"Open Label",
+"FG000",
+1,
+0
+],
+[
+"NCT04347239",
+"reasons != not completed",
+"Open Label",
+"FG002",
+0,
+1
+],
+[
+"NCT02882282",
+"reasons != not completed",
+"Overall Study",
+"FG000",
+1,
+0
+],
+[
+"NCT02882282",
+"reasons != not completed",
+"Overall Study",
+"FG001",
+0,
+1
+],
+[
+"NCT07018999",
+"reasons != not completed",
+"Overall Study",
+"FG000",
+4,
+8
+],
+[
+"NCT07018999",
+"reasons != not completed",
+"Overall Study",
+"FG001",
+8,
+4
+],
+[
+"NCT03743194",
+"reasons != not completed",
+"Overall Study",
+"FG000",
+9,
+7
+],
+[
+"NCT03743194",
+"reasons != not completed",
+"Overall Study",
+"FG001",
+7,
+9
+]
+]
+}
