@@ -29,11 +29,19 @@ Computer science: every 2-, 3- and 4-state machine and every 2-state 3-symbol ma
 
 Medicine: 235,860 abstracts scanned for numbers that contradict themselves. On ClinicalTrials.gov (details in `medicine/docs/REGISTRY.md`): 328 baseline Totals are the plain average of unequal arms; 407 Total SDs cannot come from any arm sizes, and 71 of the too-wide ones fit once the arms are read as standard errors; 61 CIs in 52 trials have a sign slip the p-value confirms; 292 outcome intervals in 90 trials are labelled SD but fit standard errors (`registry-spread.json`, with a scale rule that drops mixed units); linked papers confirm it: 15 of the 16 that print the flagged values and name the spread say SE, and the 16th shows a wrong registry interval instead. One-sided P values posted without a label explain most interval-versus-P clashes. The Salk primary source (AJPH 1955, PMID 14361811) has no open copy. Raw downloads live in the session scratchpad: `analyses.py fetch` and `fetch-arms`, `registry.py fetch`.
 
+Medicine, 2026-10-28 afternoon: three more registry-wide checks over all 80,750 studies with results, each a counting rule the data cannot break. Adverse events (`ae.py`): 28 serious totals in 26 trials exceed the sum of their terms, 6 group counts in 3 trials exceed those at risk. Outcomes (`outcomes.py`): 274 participant counts in 79 trials exceed the number analysed, 62 percentages in 11 trials pass 100. Participant flow (`flow.py`): conserved everywhere except 11 cells in 4 trials. The registry enforces the per-cell rules on entry, not the group sums.
+
+Astronomy (`astronomy/`, new): Kepler's third law holds over 5,609 archive planets (median ratio 1.000, IQR 0.014 dex); 55 miss by 2x, 16 because a = (a/R*) R* (XO-6 b traced to its paper), KOI-2513.01's default solution has round placeholder values (a = 0.5000 au, a/R* = 100). M sin i exceeds M for 99 of 440 composite rows (`docs/KEPLER.md`).
+
+Information engineering (`information/`, new): A(n, d) reproduced to n = 7 by exhaustive clique search; A(8,3) = 20 is slow in Python, a C search is next.
+
+Earth science (`earth/`, new): Gutenberg-Richter b = 1.03 +- 0.02 (Mw, above 5.5) on USGS 2020 to 2025; the catalog has no self-contradicting rows on the fields checked.
+
 Physics: the triangular closed form and 2n + 1 bound are not in OEIS or the arXiv sources read on 2026-10-27; three papers that could settle novelty block scripts (see roadmap). Krawczyk citation fixed.
 
 Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
 
-Outside the lab: the SD-as-SE report (`medicine/docs/SDSE-NOTE.md`, 15 paper-confirmed trials) went to the NLM help desk on 2026-10-28. OEIS edits in review from Joshua's account: A386859 (a(5)), A394183 (to 27 terms) and A399346 (130-term b-file). Queued for the next free slot, texts in the scratchpad `oeisedit/`: A332718 (rule 110, to 34 terms), then the new runtime-spectrum sequence (`NEW.new.txt`, via edit?seq=A999999999&internal=1). The A332717 b-file goes up the same way the A399346 one did (a File set on the edit page's upload input).
+Outside the lab: two reports went to the NLM help desk on 2026-10-28, SD-as-SE (`medicine/docs/SDSE-NOTE.md`) and sign slips (`medicine/docs/SIGN-NOTE.md`). OEIS drafts are checked with curl on the public page https://oeis.org/draft?user=Joshua%20Trommel, so Joshua's Safari tabs stay his; open a new tab only to edit. OEIS edits in review from Joshua's account: A386859 (a(5)), A394183 (to 27 terms) and A399346 (130-term b-file). Queued for the next free slot, texts in the scratchpad `oeisedit/`: A332718 (rule 110, to 34 terms), then the new runtime-spectrum sequence (`NEW.new.txt`, via edit?seq=A999999999&internal=1). The A332717 b-file goes up the same way the A399346 one did (a File set on the edit page's upload input).
 
 ## Restart prompts
 
