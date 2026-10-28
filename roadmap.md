@@ -38,7 +38,7 @@ Every STEM field is welcome. A field gets a folder only when a tick starts its f
 | Physics | live (`physics/`) | Exact 2D Ising partition function on small periodic lattices | known exact values, Onsager limit |
 | Chemistry | live (`chemistry/`) | Count alkane structural isomers C1 to C20 by tree enumeration | OEIS A000602 |
 | Information engineering | queued | Largest binary codes A(n, d) for small n by exhaustive search | published code tables |
-| Astronomy | queued | Kepler's third law across the NASA Exoplanet Archive, with the scatter reported | the archive itself |
+| Astronomy | live (`astronomy/`) | Kepler's third law across the NASA Exoplanet Archive, with the scatter reported | the archive itself |
 | Statistics | live (`statistics/`) | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
 | Medicine | live (`medicine/`) | Recompute the headline effect and its confidence interval from the published counts of landmark trials (ISIS-2 aspirin, the 1954 Salk polio trial) | the papers' own tables |
 
