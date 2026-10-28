@@ -51,7 +51,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **CS (Joshua):** sign in to OEIS and submit the A386859 edit in `docs/OEIS-A386859.md`.
 - [ ] **CS (Joshua):** submit the runtime spectrum (1, 6, 21, 79, 1207) as a new sequence, drafted in `docs/OEIS-runtime-spectrum.md`.
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
-- [ ] **CS:** machine-check the halting counts at 3 states in Lean (A004147(3) = 7,571,840, A386859(3) = 13,141,792); the 2-state ones are done (`Count2.lean`). 12^6 tables is too many to list, so count by the tree with weights.
+- [ ] **CS:** machine-check R(4) = 79 and A004147(4) in Lean. BB(4) = 107 is not yet proved in Lean here, and the 4-state tree is far larger, so it needs the symmetry weights proved sound first.
 - [ ] **CS:** an independent count of the 5-state halters past step 2000 that does not use halters.c deciders (now only argued complete by A004147(5) minus the two-program count to 2000).
 - [ ] **Medicine:** the 90 trials whose SD labels fit standard errors: a second paper sample once more full texts are reachable, and the 60 reverse cases.
 - [ ] **Biology:** after the held-out benchmark, predict the effect class of every HBB substitution and score it only against held-out ClinVar records.

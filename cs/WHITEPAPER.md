@@ -22,7 +22,7 @@ BB(2) = 6, BB(3) = 21 and BB(4) = 107, with no holdouts left. These reproduce Li
 
 ## What is machine-checked
 
-Lean 4 checks the cycle and translated-cycler deciders once as theorems, then applies them to every case at 2 and 3 states. All 41 FAR certificates pass `decide +kernel` under one soundness theorem. A checker replays the whole tree inside Lean, so BB(2) = 6, BB(3) = 21 and BB(2,3) = 38 are proved in full. `Count2.lean` then lists all 20,736 two-state tables and proves that 9,784 halt, with halting steps adding up to 13,504: A004147(2) and A386859(2), machine-checked. No `sorry`, no `native_decide`, axioms propext and Quot.sound only.
+Lean 4 checks the cycle and translated-cycler deciders once as theorems, then applies them to every case at 2 and 3 states. All 41 FAR certificates pass `decide +kernel` under one soundness theorem. A checker replays the whole tree inside Lean, so BB(2) = 6, BB(3) = 21 and BB(2,3) = 38 are proved in full. `Count2.lean` then lists all 20,736 two-state tables and proves that 9,784 halt, with halting steps adding up to 13,504: A004147(2) and A386859(2), machine-checked. At 3 states `CountTree.lean` proves the weighted tree counts every one of the 16^6 tables, so A004147(3) = 7,571,840, A386859(3) = 13,141,792 and the 21 halting times are machine-checked too. No `sorry`, no `native_decide`, axioms propext and Quot.sound only.
 
 ## Counting halters
 
@@ -36,6 +36,6 @@ At 5 states it counts 26,751,695,615,616 halting machines, matching OEIS A004147
 
 ## Limits
 
-BB(5) was proved by the bbchallenge collaboration in Coq in 2024. This lane reads toward that, it does not claim it. Counts above 2 states are computed, not checked in Lean. No universal claim comes from a finite run.
+BB(5) was proved by the bbchallenge collaboration in Coq in 2024. This lane reads toward that, it does not claim it. Counts above 3 states are computed, not checked in Lean. No universal claim comes from a finite run.
 
 MIT License · Copyright 2026 Joshua Trommel.
