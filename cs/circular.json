@@ -1,0 +1,44 @@
+{
+ "what": "A394183: the longest halting run of any 2-state 2-symbol machine (12^4 tables) on an n-cell circular tape, over every starting tape, head at cell 0, state A",
+ "command": "cc -O2 -o circular circular.c && ./circular N [WORKERS INDEX], taking the largest max over the workers",
+ "a": [
+  4,
+  7,
+  11,
+  13,
+  21,
+  23,
+  36,
+  35,
+  55,
+  47,
+  78,
+  59,
+  105,
+  81,
+  136,
+  108,
+  171,
+  139,
+  210,
+  174,
+  253,
+  213,
+  300,
+  256,
+  351,
+  303,
+  406
+ ],
+ "new_terms_from": 20,
+ "champion_tables": {
+  "odd n >= 25 and 13..17": 1203,
+  "18..24": 14263
+ },
+ "checks": [
+  "circular.c gives all 19 OEIS terms; tests/test_circular.py checks n = 1..14",
+  "a separate brute-force simulator (OEIS-style, Brent loop check) over all 20736 tables gives a(10), a(12), a(13)",
+  "the same simulator on the champion table gives every new term from n = 20 to 26"
+ ],
+ "pattern": "every term from n = 5 fits (n+1)(n+2)/2 for odd n (as the OEIS formula says), and every even term from n = 14 fits (n^2 - 3n + 8)/2; observed, not proved"
+}

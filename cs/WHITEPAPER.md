@@ -34,6 +34,10 @@ At 5 states it counts 26,751,695,615,616 halting machines, matching OEIS A004147
 
 The same walk records the ones each halting machine leaves. Every count from 0 to 73 is reachable with 5 states and 74 is not, the smallest number no 5-state machine prints, a value we found nowhere in print. With 6-state witnesses for the gaps, PP(n), the fewest states that print exactly n ones (OEIS A399346), is now known for n up to 130, where OEIS had 37. A candidate, computed, not proved in Lean.
 
+## Circular tapes
+
+A 2-state machine on an n-cell ring can only be in 2^(n+1) configurations once the ring is turned to keep the head at cell 0, so one memoized pass over that graph settles every start. This adds a(20) to a(27) to OEIS A394183 and shows an even-n pattern, (n^2 - 3n + 8)/2, from n = 14 on. Computed, with the old terms reproduced.
+
 ## Sorting networks
 
 `sortnet.py` finds the fewest comparators that sort n inputs by searching over the sets of 0-1 vectors a network can still output. It gets 0, 1, 3, 5, 9, 12 and 16 for n = 1 to 7, matching OEIS A003075. A reproduction.
