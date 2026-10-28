@@ -156,6 +156,9 @@ def spread_kind(rec, a):
         return None
     if min(n1, n2) < 10 or not (s1 > 0 and s2 > 0):
         return None
+    est, m = num(a.get('paramValue')), [num(x[1]) for n, x in zip(g, arms)]
+    if est and None not in m and abs(est[0]) > 3 * abs(m[0][0] - m[1][0]) + est[1] + m[0][1] + m[1][1]:
+        return None  # the estimate is not on the arms' scale (units differ), so their spreads say nothing about it
     h = (hi[0] - lo[0]) / 2
     r_sd, r_se = h / (1.96 * (s1 ** 2 / n1 + s2 ** 2 / n2) ** .5), h / (1.96 * (s1 ** 2 + s2 ** 2) ** .5)
     # ponytail: a fixed window; adjusted models narrow the CI and small t widen it, both within about a quarter

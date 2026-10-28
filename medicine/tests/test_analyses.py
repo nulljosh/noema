@@ -33,6 +33,8 @@ class AnalysesTests(unittest.TestCase):
         self.assertEqual(analyses.spread_kind(rec, a), 'fits SD')
         self.assertEqual(analyses.spread_kind(rec, {**a, 'ciLowerLimit': '-23.7', 'ciUpperLimit': '31.7'}), 'fits SE')
         self.assertIsNone(analyses.spread_kind(rec, {**a, 'ciLowerLimit': '-6', 'ciUpperLimit': '14'}))
+        mixed = {'arms': {'A': ['82', '0.33', '0.21'], 'B': ['83', '0.30', '0.19']}}  # logMAR arms, a difference in lines
+        self.assertIsNone(analyses.spread_kind(mixed, {**row('0.5', '0.04', '1.0'), 'groupIds': ['A', 'B']}))
 
     def test_pval(self):
         self.assertEqual(analyses.pval('<0.001'), (0.0, 0.001))

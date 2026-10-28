@@ -1,32 +1,32 @@
 {
 "source": "ClinicalTrials.gov API v2, every outcome with an analysis and a plain one-row table, fetched 2026-10-27 by analyses.py fetch-arms",
 "outcomes": 101234,
-"rule": "two-arm 95% two-sided CI of a difference, arms of at least 10: half-width within 0.75 to 1.33 of 1.96 sqrt(s1^2/n1 + s2^2/n2) fits SD; of 1.96 sqrt(s1^2 + s2^2) fits SE",
+"rule": "two-arm 95% two-sided CI of a difference, arms of at least 10: half-width within 0.75 to 1.33 of 1.96 sqrt(s1^2/n1 + s2^2/n2) fits SD; of 1.96 sqrt(s1^2 + s2^2) fits SE; skipped when the estimate is more than 3 times the arm difference (units differ)",
 "tally": {
-"Standard Error, fits SE": 16848,
-"Standard Deviation, fits SD": 7617,
-"Standard Deviation, fits SE": 304,
-"Standard Error, fits SD": 63
+"Standard Error, fits SE": 16818,
+"Standard Deviation, fits SD": 7393,
+"Standard Deviation, fits SE": 292,
+"Standard Error, fits SD": 60
 },
-"disagree": 367,
-"trials": 126,
+"disagree": 352,
+"trials": 119,
 "spike_sd_labelled": {
 "meaning": "SD-labelled analyses binned by log2 of CI half-width over the SE prediction",
-"-1.5": 291,
-"-1.0": 45,
-"-0.5": 81,
-"0.0": 264,
-"0.5": 21,
-"1.0": 6
+"-1.5": 268,
+"-1.0": 38,
+"-0.5": 65,
+"0.0": 256,
+"0.5": 13,
+"1.0": 3
 },
 "spike_se_labelled": {
 "meaning": "SE-labelled analyses binned by log2 of CI half-width over the SD prediction",
 "-1.0": 5,
 "-0.5": 11,
-"0.0": 47,
+"0.0": 44,
 "0.5": 17,
 "1.0": 34,
-"1.5": 199
+"1.5": 198
 },
 "spot_check": "NCT02289963, NCT02856113 and NCT03337399 re-fetched live 2026-10-27; every flagged cell matches",
 "columns": [
@@ -1582,29 +1582,6 @@
 ],
 [
 "NCT00770653",
-4,
-"Standard Error",
-"fits SD",
-[
-[
-"11",
-"6.2",
-"17.5"
-],
-[
-"11",
-"6.1",
-"26.4"
-]
-],
-"3.1292",
-[
-"-17.0109",
-"23.2693"
-]
-],
-[
-"NCT00770653",
 5,
 "Standard Error",
 "fits SD",
@@ -1720,29 +1697,6 @@
 ],
 [
 "NCT00770653",
-10,
-"Standard Error",
-"fits SD",
-[
-[
-"141",
-"-0.21",
-"8.98"
-],
-[
-"135",
-"-0.04",
-"9.53"
-]
-],
-"-0.8323",
-[
-"-2.8312",
-"1.1665"
-]
-],
-[
-"NCT00770653",
 12,
 "Standard Error",
 "fits SD",
@@ -1854,29 +1808,6 @@
 [
 "-39.9915",
 "20.0459"
-]
-],
-[
-"NCT00770653",
-19,
-"Standard Error",
-"fits SD",
-[
-[
-"22",
-"11.6",
-"160.6"
-],
-[
-"20",
-"3.3",
-"115.4"
-]
-],
-"28.3988",
-[
-"-60.7193",
-"117.5169"
 ]
 ],
 [
@@ -2639,75 +2570,6 @@
 ]
 ],
 [
-"NCT00159874",
-14,
-"Standard Deviation",
-"fits SE",
-[
-[
-"38",
-"19.97",
-"5.17"
-],
-[
-"36",
-"18.69",
-"5.92"
-]
-],
-"-7.02",
-[
-"-19.13",
-"5.09"
-]
-],
-[
-"NCT00159874",
-14,
-"Standard Deviation",
-"fits SE",
-[
-[
-"38",
-"19.97",
-"5.17"
-],
-[
-"40",
-"17.93",
-"4.02"
-]
-],
-"-9.84",
-[
-"-21.60",
-"1.93"
-]
-],
-[
-"NCT00159874",
-14,
-"Standard Deviation",
-"fits SE",
-[
-[
-"36",
-"18.69",
-"5.92"
-],
-[
-"40",
-"17.93",
-"4.02"
-]
-],
-"-2.82",
-[
-"-14.75",
-"9.11"
-]
-],
-[
 "NCT01192542",
 0,
 "Standard Error",
@@ -2935,29 +2797,6 @@
 [
 "-3.76",
 "13.92"
-]
-],
-[
-"NCT02807480",
-5,
-"Standard Deviation",
-"fits SE",
-[
-[
-"27",
-"64.26",
-"10.29"
-],
-[
-"29",
-"56.29",
-"10.59"
-]
-],
-"27.35",
-[
-"4.45",
-"50.26"
 ]
 ],
 [
@@ -4111,29 +3950,6 @@
 ]
 ],
 [
-"NCT01700192",
-3,
-"Standard Deviation",
-"fits SE",
-[
-[
-"566",
-"3.83",
-"2.64"
-],
-[
-"620",
-"4.46",
-"2.80"
-]
-],
-"-15.5",
-[
-"-24.4",
-"-7.3"
-]
-],
-[
 "NCT00572039",
 0,
 "Standard Error",
@@ -4200,29 +4016,6 @@
 [
 "-9.32",
 "-3.98"
-]
-],
-[
-"NCT00945100",
-12,
-"Standard Deviation",
-"fits SE",
-[
-[
-"82",
-"0.33",
-"0.21"
-],
-[
-"83",
-"0.30",
-"0.19"
-]
-],
-"0.5",
-[
-"0.04",
-"1.0"
 ]
 ],
 [
@@ -5146,29 +4939,6 @@
 ]
 ],
 [
-"NCT03740490",
-4,
-"Standard Deviation",
-"fits SE",
-[
-[
-"216",
-"-0.005",
-"0.139"
-],
-[
-"220",
-"-0.002",
-"0.118"
-]
-],
-"-0.22",
-[
-"-0.56",
-"0.13"
-]
-],
-[
 "NCT04235504",
 0,
 "Standard Error",
@@ -5695,29 +5465,6 @@
 [
 "-0.1",
 "0.37"
-]
-],
-[
-"NCT01385995",
-4,
-"Standard Deviation",
-"fits SE",
-[
-[
-"49",
-"12",
-"3.3"
-],
-[
-"46",
-"12",
-"3.8"
-]
-],
-"13.3",
-[
-"5.2",
-"22.1"
 ]
 ],
 [
@@ -6753,29 +6500,6 @@
 [
 "-5.325",
 "1.427"
-]
-],
-[
-"NCT01045161",
-2,
-"Standard Deviation",
-"fits SE",
-[
-[
-"134",
-"0.045",
-"0.021"
-],
-[
-"132",
-"0.048",
-"0.021"
-]
-],
-"0.072",
-[
-"0.03",
-"0.12"
 ]
 ],
 [
@@ -8205,75 +7929,6 @@
 ]
 ],
 [
-"NCT02226198",
-1,
-"Standard Deviation",
-"fits SE",
-[
-[
-"13",
-"10.26",
-"5.076"
-],
-[
-"13",
-"12.47",
-"4.790"
-]
-],
-"-22.3",
-[
-"-33.5",
-"-9.1"
-]
-],
-[
-"NCT02226198",
-3,
-"Standard Deviation",
-"fits SE",
-[
-[
-"13",
-"11.59",
-"5.063"
-],
-[
-"13",
-"13.96",
-"4.790"
-]
-],
-"-20.1",
-[
-"-29.7",
-"-9.1"
-]
-],
-[
-"NCT02226198",
-5,
-"Standard Deviation",
-"fits SE",
-[
-[
-"13",
-"10.67",
-"5.144"
-],
-[
-"13",
-"13.09",
-"4.826"
-]
-],
-"-22.9",
-[
-"-33.7",
-"-10.3"
-]
-],
-[
 "NCT01154985",
 2,
 "Standard Deviation",
@@ -8480,5 +8135,6 @@
 "3.261"
 ]
 ]
-]
+],
+"paper_check": "seeded sample of 20 trials (under the earlier rule): 2 of 3 readable papers call the spread SE (PMIDs 40032809, 40892413); the third (PMID 23755872, mixed units) led to the units rule and is no longer flagged"
 }
