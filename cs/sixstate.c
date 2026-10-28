@@ -39,6 +39,7 @@ static void show(int o) {
         }
         printf(q < 5 ? "_" : "\n");
     }
+    fflush(stdout);  /* a stopped run keeps what it found */
 }
 int main(int argc, char **argv) {
     if (argc > 1) CAP = atoi(argv[1]);
