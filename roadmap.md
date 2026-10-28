@@ -39,7 +39,7 @@ Every STEM field is welcome. A field gets a folder only when a tick starts its f
 | Chemistry | live (`chemistry/`) | Count alkane structural isomers C1 to C20 by tree enumeration | OEIS A000602 |
 | Information engineering | live (`information/`) | Largest binary codes A(n, d) for small n by exhaustive search | published code tables |
 | Astronomy | live (`astronomy/`) | Kepler's third law across the NASA Exoplanet Archive, with the scatter reported | the archive itself |
-| Earth science | queued | Gutenberg-Richter b-value on the USGS earthquake catalog, then entries that contradict themselves (magnitude, depth, location) | the USGS ComCat feed |
+| Earth science | live (`earth/`) | Gutenberg-Richter b-value on the USGS earthquake catalog, then entries that contradict themselves (magnitude, depth, location) | the USGS ComCat feed |
 | Ecology | queued | Species-area and abundance laws on GBIF occurrence counts, then records that contradict their own coordinates or dates | GBIF itself |
 | Statistics | live (`statistics/`) | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
 | Medicine | live (`medicine/`) | Recompute the headline effect and its confidence interval from the published counts of landmark trials (ISIS-2 aspirin, the 1954 Salk polio trial) | the papers' own tables |
