@@ -1,6 +1,6 @@
 # Confidence limits posted with a lost minus sign: a note for ClinicalTrials.gov
 
-Second report through the NLM help desk form (https://support.nlm.nih.gov/support/create-case/), after `SDSE-NOTE.md`. Values re-fetched live on 2026-10-28. Status: drafted 2026-10-28; Joshua's CAPTCHA reply sends it.
+Second report through the NLM help desk form (https://support.nlm.nih.gov/support/create-case/), after `SDSE-NOTE.md`. Values re-fetched live on 2026-10-28. Sent 2026-10-28 ("Submitted Successfully").
 
 ## The note
 
