@@ -9,7 +9,13 @@
    "level": "candidate",
    "date": "2026-10-28",
    "source": "noema/cs/platypus-5.json",
-   "watch": [{"kind": "oeis", "seq": "A399346", "sent": "130-term b-file"}]
+   "watch": [
+    {
+     "kind": "oeis",
+     "seq": "A399346",
+     "sent": "130-term b-file"
+    }
+   ]
   },
   {
    "id": "a386859",
@@ -19,7 +25,13 @@
    "level": "candidate",
    "date": "2026-10-27",
    "source": "noema/docs/OEIS-A386859.md",
-   "watch": [{"kind": "oeis", "seq": "A386859", "sent": "a(5) = 64068865333248"}]
+   "watch": [
+    {
+     "kind": "oeis",
+     "seq": "A386859",
+     "sent": "a(5) = 64068865333248"
+    }
+   ]
   },
   {
    "id": "a394183",
@@ -29,7 +41,13 @@
    "level": "candidate",
    "date": "2026-10-28",
    "source": "noema/cs/circular.c",
-   "watch": [{"kind": "oeis", "seq": "A394183", "sent": "a(20) to a(27)"}]
+   "watch": [
+    {
+     "kind": "oeis",
+     "seq": "A394183",
+     "sent": "a(20) to a(27)"
+    }
+   ]
   },
   {
    "id": "runtimes",
@@ -50,21 +68,157 @@
    "date": "2026-10-28",
    "source": "noema/medicine/docs/SDSE-NOTE.md",
    "watch": [
-    {"kind": "ctgov", "nct": "NCT00427193", "outcomes": [6, 7], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT00846365", "outcomes": [1, 2], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT01040403", "outcomes": [1], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT01289990", "outcomes": [4], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT01875003", "outcomes": [2, 5, 6, 7], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT02346136", "outcomes": [6, 7], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT02720744", "outcomes": [1, 3], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT02740231", "outcomes": [2, 3, 4, 5], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT02856113", "outcomes": [1], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT03163264", "outcomes": [1, 2, 6, 7, 9, 10], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT03188666", "outcomes": [9], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT04016779", "outcomes": [2], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT04657016", "outcomes": [19], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT05107115", "outcomes": [1, 2], "key": "dispersionType", "bad": "Standard Deviation"},
-    {"kind": "ctgov", "nct": "NCT05998616", "outcomes": [2], "key": "dispersionType", "bad": "Standard Deviation"}
+    {
+     "kind": "ctgov",
+     "nct": "NCT00427193",
+     "outcomes": [
+      6,
+      7
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT00846365",
+     "outcomes": [
+      1,
+      2
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT01040403",
+     "outcomes": [
+      1
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT01289990",
+     "outcomes": [
+      4
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT01875003",
+     "outcomes": [
+      2,
+      5,
+      6,
+      7
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT02346136",
+     "outcomes": [
+      6,
+      7
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT02720744",
+     "outcomes": [
+      1,
+      3
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT02740231",
+     "outcomes": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT02856113",
+     "outcomes": [
+      1
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT03163264",
+     "outcomes": [
+      1,
+      2,
+      6,
+      7,
+      9,
+      10
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT03188666",
+     "outcomes": [
+      9
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT04016779",
+     "outcomes": [
+      2
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT04657016",
+     "outcomes": [
+      19
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT05107115",
+     "outcomes": [
+      1,
+      2
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT05998616",
+     "outcomes": [
+      2
+     ],
+     "key": "dispersionType",
+     "bad": "Standard Deviation"
+    }
    ]
   },
   {
@@ -76,8 +230,26 @@
    "date": "2026-10-28",
    "source": "noema/medicine/docs/SIGN-NOTE.md",
    "watch": [
-    {"kind": "ctgov", "nct": "NCT00288912", "outcomes": [1], "key": "ciUpperLimit", "bad": "0.2", "fix": "-0.2"},
-    {"kind": "ctgov", "nct": "NCT03192176", "outcomes": [1], "key": "ciUpperLimit", "bad": "0.76", "fix": "-0.76"}
+    {
+     "kind": "ctgov",
+     "nct": "NCT00288912",
+     "outcomes": [
+      1
+     ],
+     "key": "ciUpperLimit",
+     "bad": "0.2",
+     "fix": "-0.2"
+    },
+    {
+     "kind": "ctgov",
+     "nct": "NCT03192176",
+     "outcomes": [
+      1
+     ],
+     "key": "ciUpperLimit",
+     "bad": "0.76",
+     "fix": "-0.76"
+    }
    ]
   },
   {
@@ -94,7 +266,7 @@
    "id": "k2-285",
    "lane": "astronomy",
    "title": "One star, four densities",
-   "plain": "A 2019 paper on K2-285 fits four planets on circular orbits around one star, yet the outer three imply the star is 2 to 6 times denser than the paper says. Their orbits come out 21 to 63 percent too wide for Kepler's law.",
+   "plain": "A 2019 paper on K2-285 fits four planets on circular orbits around one star, yet the outer three imply the star is 2 to 6 times denser than the paper says. Of 387 papers with two or more such planets in NASA's archive, this split is the widest, at 29.6 sigma.",
    "level": "observed",
    "date": "2026-10-28",
    "source": "noema/astronomy/docs/KEPLER.md",
