@@ -1,0 +1,328 @@
+{
+"source": "ClinicalTrials.gov API v2, AdverseEventsModule of every study with results, fetched 2026-10-28 by ae.py fetch",
+"rule": "see ae.py: term affected <= at risk, <= events, <= group affected; group affected <= at risk; group serious total <= sum of serious terms",
+"studies": 80546,
+"tally": {
+"group serious > sum of terms": 28,
+"group affected > at risk": 6
+},
+"trials": {
+"group serious > sum of terms": 26,
+"group affected > at risk": 3
+},
+"rows": [
+[
+"NCT00827944",
+"group serious > sum of terms",
+[
+"EG001",
+21,
+20
+]
+],
+[
+"NCT01294748",
+"group serious > sum of terms",
+[
+"EG000",
+53,
+52
+]
+],
+[
+"NCT02527798",
+"group serious > sum of terms",
+[
+"EG000",
+5,
+4
+]
+],
+[
+"NCT05097326",
+"group serious > sum of terms",
+[
+"EG000",
+3,
+1
+]
+],
+[
+"NCT01918800",
+"group serious > sum of terms",
+[
+"EG000",
+12,
+9
+]
+],
+[
+"NCT01918800",
+"group serious > sum of terms",
+[
+"EG001",
+10,
+9
+]
+],
+[
+"NCT00444600",
+"group serious > sum of terms",
+[
+"EG001",
+46,
+45
+]
+],
+[
+"NCT00452361",
+"group affected > at risk",
+[
+"EG000",
+"other",
+78,
+21
+]
+],
+[
+"NCT00452361",
+"group affected > at risk",
+[
+"EG001",
+"other",
+18,
+10
+]
+],
+[
+"NCT05123027",
+"group serious > sum of terms",
+[
+"EG000",
+21,
+19
+]
+],
+[
+"NCT03559010",
+"group serious > sum of terms",
+[
+"EG000",
+4,
+1
+]
+],
+[
+"NCT00412841",
+"group serious > sum of terms",
+[
+"EG001",
+13,
+12
+]
+],
+[
+"NCT00329160",
+"group affected > at risk",
+[
+"EG000",
+"other",
+588,
+214
+]
+],
+[
+"NCT00326196",
+"group serious > sum of terms",
+[
+"EG000",
+23,
+21
+]
+],
+[
+"NCT03838510",
+"group serious > sum of terms",
+[
+"EG000",
+88,
+62
+]
+],
+[
+"NCT03838510",
+"group serious > sum of terms",
+[
+"EG001",
+78,
+49
+]
+],
+[
+"NCT00264004",
+"group affected > at risk",
+[
+"EG000",
+"other",
+31,
+28
+]
+],
+[
+"NCT00264004",
+"group affected > at risk",
+[
+"EG001",
+"other",
+34,
+31
+]
+],
+[
+"NCT00264004",
+"group affected > at risk",
+[
+"EG002",
+"other",
+27,
+26
+]
+],
+[
+"NCT02161133",
+"group serious > sum of terms",
+[
+"EG001",
+31,
+30
+]
+],
+[
+"NCT01804049",
+"group serious > sum of terms",
+[
+"EG001",
+52,
+51
+]
+],
+[
+"NCT04079114",
+"group serious > sum of terms",
+[
+"EG000",
+10,
+6
+]
+],
+[
+"NCT03872180",
+"group serious > sum of terms",
+[
+"EG000",
+8,
+7
+]
+],
+[
+"NCT02447328",
+"group serious > sum of terms",
+[
+"EG000",
+9,
+8
+]
+],
+[
+"NCT02250300",
+"group serious > sum of terms",
+[
+"EG001",
+17,
+16
+]
+],
+[
+"NCT02089997",
+"group serious > sum of terms",
+[
+"EG000",
+15,
+14
+]
+],
+[
+"NCT00041756",
+"group serious > sum of terms",
+[
+"EG000",
+8,
+7
+]
+],
+[
+"NCT03044730",
+"group serious > sum of terms",
+[
+"EG000",
+19,
+18
+]
+],
+[
+"NCT03493932",
+"group serious > sum of terms",
+[
+"EG000",
+13,
+1
+]
+],
+[
+"NCT00439608",
+"group serious > sum of terms",
+[
+"EG000",
+7,
+5
+]
+],
+[
+"NCT01407094",
+"group serious > sum of terms",
+[
+"EG000",
+10,
+9
+]
+],
+[
+"NCT00614445",
+"group serious > sum of terms",
+[
+"EG000",
+4,
+3
+]
+],
+[
+"NCT01050673",
+"group serious > sum of terms",
+[
+"EG001",
+5,
+4
+]
+],
+[
+"NCT00963807",
+"group serious > sum of terms",
+[
+"EG000",
+4,
+3
+]
+]
+],
+"spot_check": "NCT05097326, NCT02527798 and NCT00329160 re-fetched live 2026-10-28; every flagged cell matches"
+}
