@@ -37,6 +37,14 @@ class HaltersTests(unittest.TestCase):
         self.assertEqual([len(runtimes.walk(n, 2, c)) for n, c in ((1, 1), (2, 6), (3, 21))], [1, 6, 21])
         self.assertEqual(len(runtimes.walk(2, 3, 38)), 27)  # 2 states, 3 symbols, as halters.c finds
 
+    def test_plainwalk_agrees(self):  # the decider-free C walk, a second program for the 5-state check below 2000
+        exe = os.path.join(self.dir, 'plainwalk')
+        subprocess.run(['cc', '-O2', '-o', exe, os.path.join(HERE, 'plainwalk.c')], check=True)
+        for n, cap, halt, steps, rts in ((2, 6, 9784, 13504, 6), (3, 21, 7571840, 13141792, 21),
+                                         (4, 107, 11140566368, 23076152576, 79)):
+            out = subprocess.run([exe, str(n), str(cap)], capture_output=True, text=True, check=True).stdout.split()
+            self.assertEqual((int(out[1]), int(out[3]), int(out[5])), (halt, steps, rts))
+
     def test_python_agrees(self):
         for n, m, cap in ((2, 2, 6), (3, 2, 21), (2, 3, 38)):
             self.assertEqual(self.run_c(n, m, cap), walk(n, m, cap))

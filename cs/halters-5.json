@@ -1705,7 +1705,9 @@
  },
  "cross_checks": {
   "halters": "equals A004147(5) = 26,751,695,615,616, which OEIS credits to a separate enumeration by Shawn Ligocki (Count.py)",
-  "cap_2000_run": "a single-process run at cap 2000 gives 26,751,695,551,680 machines and 64,014,052,916,160 steps over 48,379,561 leaves; the long halters add 333 leaves, 63,936 machines and 54,812,417,088 steps, exactly the gap"
+  "cap_2000_run": "a single-process run at cap 2000 gives 26,751,695,551,680 machines and 64,014,052,916,160 steps over 48,379,561 leaves; the long halters add 333 leaves, 63,936 machines and 54,812,417,088 steps, exactly the gap",
+  "plainwalk_cap_2000": "plainwalk.c, a separate decider-free C walk sharing no code with halters.c (./plainwalk 5 2000, 14 minutes, 181,385,789 leaves), gives the same 26,751,695,551,680 machines, 64,014,052,916,160 steps and 919 runtimes up to 2000, max 1992, first gap 427",
+  "long_halters_complete": "A004147(5) (Ligocki, separate) minus the two-program count up to 2000 leaves exactly 63,936 machines halting after step 2000; the 333 long leaves, each rerun from blank by verify_long, weigh exactly that, so no long halter is missing and none is false"
  },
  "runtime_spectrum": {
   "size": 1207,

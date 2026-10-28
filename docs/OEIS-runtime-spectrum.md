@@ -39,4 +39,4 @@ Keywords: nonn,hard,more
 
 ## Note to the editor
 
-The same program gives A004147(1..5) and A386859(1..4) exactly and A337805(1..5). The step cap for n = 5 relies on S(5) = 47176870 (Coq-BB5, arXiv:2509.12337). The program was written with the help of an AI coding assistant; I checked the results as described.
+The same program gives A004147(1..5) and A386859(1..4) exactly and A337805(1..5). A second, decider-free program (plainwalk.c, sharing no code with the first) gives the same machines, steps and runtimes up to step 2000. Since A004147(5) minus that count equals the total weight of the 333 long halters, the long list is complete. The step cap for n = 5 relies on S(5) = 47176870 (Coq-BB5, arXiv:2509.12337). The program was written with the help of an AI coding assistant; I checked the results as described.
