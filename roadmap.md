@@ -42,7 +42,7 @@ Every STEM field is welcome. A field gets a folder only when a tick starts its f
 | Earth science | live (`earth/`) | Gutenberg-Richter b-value on the USGS earthquake catalog, then entries that contradict themselves (magnitude, depth, location) | the USGS ComCat feed |
 | Ecology | queued | Species-area and abundance laws on GBIF occurrence counts, then records that contradict their own coordinates or dates | GBIF itself |
 | Statistics | live (`statistics/`) | Reproduce the birthday-problem and coupon-collector exact values by computation | closed forms |
-| AI | queued | Reproduce a published benchmark number from the paper's own released predictions, then rows that contradict themselves (a score that cannot follow from its own counts, a test item in the training split) | the papers' and leaderboards' own released files |
+| AI | live (`ai/`) | Reproduce a published benchmark number from the paper's own released predictions, then rows that contradict themselves (a score that cannot follow from its own counts, a test item in the training split) | the papers' and leaderboards' own released files |
 | Medicine | live (`medicine/`) | Recompute the headline effect and its confidence interval from the published counts of landmark trials (ISIS-2 aspirin, the 1954 Salk polio trial) | the papers' own tables |
 
 ## Frontier
