@@ -4,7 +4,8 @@
 
        cc -O2 -o nbhd nbhd.c && ./nbhd CAP LO HI [DEPTH=2] < seeds.txt
 
-   Depth 3 is about 90 times the work of depth 2, so feed it few seeds at a time. */
+   Depth 3 is about 90 times the work of depth 2, so feed it few seeds at a time. Depth 0 just reruns the
+   seeds, which is how a large list of candidate machines gets filtered in one pass. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,6 +34,7 @@ static void try(const char *m) {
 }
 static int DEPTH;
 static void walk(char *m, int from, int left) {   /* every change of `left` more transitions at index `from` or later */
+    if (left < 1) return;
     for (int k = from; k < 12; k++)
         for (int v = 0; v < 28; v++) {
             char n[64]; strcpy(n, m); set(n, k, v); try(n);
@@ -44,6 +46,6 @@ int main(int argc, char **argv) {
     DEPTH = argc > 4 ? atoi(argv[4]) : 2;
     int ones; char seed[64];
     while (scanf("%d %63s", &ones, seed) == 2)
-        if (strlen(seed) == 41) walk(seed, 0, DEPTH);
+        if (strlen(seed) == 41) { try(seed); walk(seed, 0, DEPTH); }   /* DEPTH 0 reruns the seeds and nothing else */
     return 0;
 }
