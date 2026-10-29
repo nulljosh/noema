@@ -22,6 +22,9 @@ GLYPHS = {
     'biology': '<path d="M14 4c0 10 20 10 20 20S14 34 14 44M34 4c0 10-20 10-20 20s20 10 20 20"/><path d="M17 10h14M17 38h14M21 17h6M21 31h6"/>',  # the double helix
     'medicine': '<path d="M24 6v36" stroke-dasharray="2 4"/><path d="M8 16h22M14 28h28"/><path d="M19 12l4 4-4 4-4-4zM29 24l4 4-4 4-4-4z" fill="currentColor"/>',  # a forest plot
     'statistics': '<path d="M4 40h40"/><path d="M5 39c8 0 10-30 19-30s11 30 19 30"/><path d="M24 9v31" stroke-dasharray="2 4"/>',  # the bell curve and its mean
+    'astronomy': '<g transform="rotate(-20 24 24)"><ellipse cx="24" cy="24" rx="20" ry="9"/><circle cx="6" cy="24" r="3" fill="currentColor"/><circle cx="44" cy="24" r="2.5" fill="currentColor"/></g>',  # a star at one focus, a planet on the orbit
+    'earth': '<path d="M4 24h10l3-13 3 24 3-17 3 11 3-5h14"/>',  # a seismogram trace
+    'information': '<rect x="8" y="14" width="22" height="22"/><rect x="18" y="8" width="22" height="22"/><path d="M8 14 18 8M30 14 40 8M8 36 18 30M30 36 40 30"/><circle cx="8" cy="36" r="3" fill="currentColor"/><circle cx="40" cy="8" r="3" fill="currentColor"/>',  # two codewords at opposite corners of a cube
 }
 
 
@@ -54,9 +57,9 @@ def text(x, y, s, size=15, color=TEXT, weight=400, anchor='start', caps=False, s
                ' letter-spacing="%g"' % spacing if spacing else '', escape(s.upper() if caps else s)))
 
 
-def diagram(path, lane, title, rows, label):
+def diagram(path, lane, title, rows, label, lanes=False):
     W, BW, BH, G, X0 = 760, 162, 72, 24, 20
-    H = 132 + len(rows) * 124
+    H = 132 + len(rows) * 124 + (104 if lanes else 0)
     out = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (W, H, escape(label)),
            bayer_defs(), '<rect width="%d" height="%d" fill="%s"/>' % (W, H, BG), band(0, 0, W, 96),
            glyph(lane, X0, 24, 48, '#ffffff', 2.5), text(X0 + 68, 64, title, 34, '#ffffff', 200, caps=True, spacing=-.5),
@@ -76,6 +79,13 @@ def diagram(path, lane, title, rows, label):
             lines = b.split('|')
             for j, t in enumerate(lines):
                 out.append(text(x + 12, y + 42 + j * 18 - (len(lines) - 1) * 4, t, 14))
+    if lanes:  # the hub diagram ends with every live lane's glyph
+        y = 140 + len(rows) * 124
+        out.append(text(X0, y - 14, 'The lanes', 11, SUB, 600, caps=True, spacing=1.3))
+        for i, name in enumerate(GLYPHS):
+            x = X0 + i * 74
+            out.append(glyph(name, x, y, 36, TEXT, 2.2))
+            out.append(text(x + 18, y + 54, name, 8, SUB, 600, 'middle', True, .6))
     out.append('</svg>')
     open(os.path.join(ROOT, path), 'w').write(''.join(out) + '\n')
 
@@ -84,51 +94,68 @@ DIAGRAMS = [
     ('architecture.svg', 'math', 'Show your work',
      [('Every lane', ['Precise claim', 'Reproduce a|published result', 'Second, independent|check', 'Ledger row with|its claim level']),
       ('Out to people', ['ledger.md', 'Lane README|and roadmap', './deploy.sh|tests every lane', 'noema.jaybulb.com'])],
-     'Claim, reproduction, independent check and ledger row, then README, deploy and site'),
+     'Claim, reproduction, independent check and ledger row, then README, deploy and site, over ten lanes', True),
     ('cs/architecture.svg', 'cs', 'Busy Beaver',
      [('Deciding', ['busy.py grows|only reached rules', 'Deciders: cycles,|shifts, n-grams', 'FAR certificates|for the rest', 'Lean 4 kernel|checks each leaf']),
-      ('Counting halters', ['halters.c|weighted tree walk', 'Step cap set|to the proved BB', 'Long halters|rerun alone', 'Counts, step sums,|runtime spectrum'])],
-     'Busy Beaver tree to deciders to FAR certificates to Lean, and halters.c counting to cross-checks'),
+      ('Counting halters', ['halters.c|weighted tree walk', 'Step cap set|to the proved BB', 'Long halters|rerun alone', 'Counts, step sums,|runtime spectrum']),
+      ('Placid Platypus', ['Every ones count|5 states can print', 'Add a sixth state|to a 5-state base', 'Walk and neighbour|search for the rest', 'Rerun from blank|before it counts'])],
+     'Busy Beaver tree to deciders to FAR certificates to Lean, halters.c counting, and the Placid Platypus search'),
     ('medicine/architecture.svg', 'medicine', 'Trials, redone',
      [('Registry', ['ClinicalTrials.gov|API, 1 per second', 'Baseline tables,|outcome analyses', 'Checks against|themselves', 'Flags, judged|by the p-value']),
       ('Papers', ['PubMed abstracts|and PMC full text', 'Printed numbers|recomputed', 'Every flag|read by hand', 'Ledger: clear|mismatch or open'])],
      'Registry rows and papers checked against themselves, flags read by hand, then the ledger'),
     ('physics/architecture.svg', 'physics', 'Tiny magnets',
-     [('Ising', ['Count one row|at a time', 'Exact counts on|wrapped grids', 'Beale and|Onsager values', 'Triangle grid|cold states'])],
-     'Row-by-row exact counts on wrapped grids, checked against Beale and Onsager, then the triangle grid'),
+     [('Ising', ['Count one row|at a time', 'Exact counts on|wrapped grids', 'Beale and|Onsager values', 'Triangle grid|cold states']),
+      ('Nuclear data', ['NUBASE2020 against|ENSDF ground states', 'Half-lives that|disagree', 'Ground and isomer|order reversed', 'One decay mode|named twice'])],
+     'Exact Ising counts checked against Beale and Onsager, and NUBASE2020 read against the ENSDF ground states'),
     ('chemistry/architecture.svg', 'chemistry', 'Counting molecules',
      [('Alkanes', ['Polya cycle|index count', 'Brute-force|tree growth', 'Both agree with|OEIS A000602', 'Alkane isomer|counts'])],
      'Two independent alkane counts checked against OEIS A000602'),
     ('statistics/architecture.svg', 'statistics', 'Chance, exactly',
      [('Chance', ['Exact rational|arithmetic', 'Birthday and|coupon collector', 'Checked by|simulation', 'Exact values'])],
      'Exact arithmetic for classic probability problems, checked against closed forms'),
+    ('biology/architecture.svg', 'biology', 'One base at a time',
+     [('HBB', ['Annotated coding|sequence', 'Every one-base|substitution', 'Protein checked|against UniProt', 'Held-out ClinVar|benchmark'])],
+     'Every single-base change in HBB, checked against UniProt, scored on a held-out ClinVar set'),
+    ('astronomy/architecture.svg', 'astronomy', 'Orbits, checked',
+     [('Kepler', ['NASA archive|composite table', 'Third law from|mass and period', 'Flag a miss past|a factor of two', 'Read the paper|before any claim'])],
+     'Kepler third law on the NASA composite table, outliers read against their own papers'),
+    ('earth/architecture.svg', 'earth', 'Ground shaking',
+     [('Quakes', ['USGS catalog,|one magnitude type', 'Aki maximum|likelihood b', 'Completeness cut|quoted with it', 'b per type,|never mixed'])],
+     'USGS catalog to an Aki maximum-likelihood b-value, quoted per magnitude type above a completeness cut'),
+    ('information/architecture.svg', 'information', 'Best codes',
+     [('A(n, d)', ['Words as a graph|at distance d', 'Exhaustive maximum|clique search', 'Distance rechecked|pair by pair', 'Exact value|and one code'])],
+     'Largest binary codes by exhaustive clique search, distances rechecked pair by pair'),
 ]
 
 
 def sheet():
     """One page that shows the whole kit: glyphs, colours, type and spacing."""
-    W, H = 960, 584
+    PER, W = 7, 960
+    glyph_rows = -(-len(GLYPHS) // PER)
+    drop = (glyph_rows - 1) * 128  # everything under the glyph grid moves down a row at a time
+    H = 584 + drop
     out = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" aria-label="Noema brand kit: lane glyphs, colours, type and spacing">' % (W, H),
            bayer_defs(), '<rect width="%d" height="%d" fill="%s"/>' % (W, H, BG), band(0, 0, W, 200),
            text(40, 118, 'A thought, checked', 64, '#ffffff', 100, caps=True, spacing=-2),
            text(40, 160, 'Noema brand kit', 12, '#cfe6ff', 600, caps=True, spacing=1.6)]
     out.append(text(40, 244, 'Lane glyphs', 11, SUB, 600, caps=True, spacing=1.3))
     for i, name in enumerate(GLYPHS):
-        x = 40 + i * 128
-        out.append('<rect x="%d" y="260" width="112" height="112" rx="2" fill="%s" stroke="%s"/>' % (x, SURFACE, LINE))
-        out.append(glyph(name, x + 32, 276, 48, TEXT))
-        out.append(text(x + 56, 356, name, 10, SUB, 600, 'middle', True, 1.2))
-    out.append(text(40, 412, 'Colour', 11, SUB, 600, caps=True, spacing=1.3))
+        x, y = 40 + i % PER * 128, 260 + i // PER * 128
+        out.append('<rect x="%d" y="%d" width="112" height="112" rx="2" fill="%s" stroke="%s"/>' % (x, y, SURFACE, LINE))
+        out.append(glyph(name, x + 32, y + 16, 48, TEXT))
+        out.append(text(x + 56, y + 96, name, 10, SUB, 600, 'middle', True, 1.2))
+    out.append(text(40, 412 + drop, 'Colour', 11, SUB, 600, caps=True, spacing=1.3))
     for i, (c, n) in enumerate(((BG, 'page'), (SURFACE, 'surface'), (LINE, 'line'), (BLUE, 'blue'), (BAND, 'band'), (ART, 'band art'), (LINK, 'link'), (TEXT, 'text'))):
         x = 40 + i * 64
-        out.append('<rect x="%d" y="428" width="56" height="56" rx="2" fill="%s" stroke="%s"/>' % (x, c, LINE))
-        out.append(text(x, 502, n, 10, SUB, 600, caps=True, spacing=.8))
-        out.append(text(x, 518, c, 10, SUB))
-    out.append(text(560, 412, 'Type and space', 11, SUB, 600, caps=True, spacing=1.3))
-    out.append(text(560, 452, 'Hanken Grotesk', 28, TEXT, 200))
-    out.append(text(560, 476, 'Thin caps for display, 400 for reading, 600 caps labels.', 12, SUB))
+        out.append('<rect x="%d" y="%d" width="56" height="56" rx="2" fill="%s" stroke="%s"/>' % (x, 428 + drop, c, LINE))
+        out.append(text(x, 502 + drop, n, 10, SUB, 600, caps=True, spacing=.8))
+        out.append(text(x, 518 + drop, c, 10, SUB))
+    out.append(text(560, 412 + drop, 'Type and space', 11, SUB, 600, caps=True, spacing=1.3))
+    out.append(text(560, 452 + drop, 'Hanken Grotesk', 28, TEXT, 200))
+    out.append(text(560, 476 + drop, 'Thin caps for display, 400 for reading, 600 caps labels.', 12, SUB))
     for i, s in enumerate((8, 12, 16, 24, 32, 48, 64)):
-        out.append('<rect x="%d" y="%d" width="%d" height="%d" fill="%s"/>' % (560 + sum((8, 12, 16, 24, 32, 48, 64)[:i]) + i * 8, 560 - s, s, s, BLUE))
+        out.append('<rect x="%d" y="%d" width="%d" height="%d" fill="%s"/>' % (560 + sum((8, 12, 16, 24, 32, 48, 64)[:i]) + i * 8, 560 + drop - s, s, s, BLUE))
     out.append('</svg>')
     open(os.path.join(ROOT, 'brand/sheet.svg'), 'w').write(''.join(out) + '\n')
 

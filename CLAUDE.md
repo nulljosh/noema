@@ -1,6 +1,6 @@
 # Noema
 
-One lab for all of STEM. Live lanes: `math/`, `cs/`, `physics/`, `chemistry/`, `medicine/`, `statistics/`, `biology/`. New fields are listed in `roadmap.md` under Fields and get a folder only when a tick starts their first study. Each has its own short CLAUDE.md; read the side you touch.
+One lab for all of STEM. Live lanes: `math/`, `cs/`, `physics/`, `chemistry/`, `medicine/`, `statistics/`, `biology/`, `astronomy/`, `earth/`, `information/`. New fields are listed in `roadmap.md` under Fields and get a folder only when a tick starts their first study. Each has its own short CLAUDE.md; read the side you touch.
 
 - Every loop tick follows the protocol and discovery gate in `docs/LOOP-HANDOFF.md`, and logs a row in `ledger.md`.
 - Claim levels, never blurred: observed, written, machine-checked, literature.

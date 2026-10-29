@@ -6,7 +6,7 @@ The 1- to 4-state spectra come from plainwalk.c with its ones count. The 5-state
 (every halter up to step 2000, no deciders) with the 333 halters past 2000 in halters-5.json; A004147(5) minus the
 first count equals the second's weight, so no halter is missing. A 6-state witness for a missing n is a 5-state
 machine whose halting row is sent to a new state F, with every choice of F's two rows (sixstate.c), tried on up
-to 200 machines per 5-state count of 25 or more, plus the 6-state machines a random walk found (walk.c, platypus-walk.txt).
+to 200 machines per 5-state count of 25 or more, plus the 6-state machines the searches over whole tables found (walk.c and nbhd.c, both in platypus-walk.txt).
 Every witness is rerun from blank by sim() before it counts. Writes platypus-5.json.
 """
 import ast, json, os, subprocess, sys

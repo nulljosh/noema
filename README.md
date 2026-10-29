@@ -10,21 +10,34 @@ A small lab for every STEM field, one lane at a time. Exact questions, fixed bou
 
 The look, in one sheet: [brand/BRAND.md](brand/BRAND.md).
 
-| Lab | What it studies | Run |
-|---|---|---|
-| [math](math) | Collatz first descent, Goldbach, tiny SAT formulas, three Lean lemmas, the residue tree. Python standard library only. | `cd math && python3 -m unittest discover -s tests` |
-| [cs](cs) | Busy Beaver: the longest-running small Turing machines, reproduced through four states. Standard library only. | `cd cs && python3 -m unittest discover -s tests` |
-| [physics](physics) | Exact 2D Ising energy counts on wrapped grids up to 10x10, checked against Kaufman's formula. Standard library only. | `cd physics && python3 -m unittest discover -s tests` |
-| [chemistry](chemistry) | Alkane isomer counts to 100 carbons, checked against OEIS A000602. Standard library only. | `cd chemistry && python3 -m unittest discover -s tests` |
-| [medicine](medicine) | Landmark trials recomputed from their printed counts, starting with ISIS-2. Standard library only. | `cd medicine && python3 -m unittest discover -s tests` |
-| [statistics](statistics) | The birthday problem and coupon collector, exact fractions checked by simulation. Standard library only. | `cd statistics && python3 -m unittest discover -s tests` |
-| [biology](biology) | Every one-base change in human beta-globin (HBB), checked against UniProt. Python 3.13, Biopython. | `cd biology && uv run python -m unittest discover -s tests` |
+## Lanes
 
-Results so far are in the discovery ledger, [ledger.md](ledger.md). Every row so far reproduces known work, which is how each engine earns trust before it is pointed at anything new.
+Ten are live. Each is plain Python with the standard library, except biology, which needs Biopython. Tests run the same way everywhere: `cd <lane> && python3 -m unittest discover -s tests`.
 
-Every lane runs the same loop: state one question, compute inside a fixed bound, check a second way, keep failures visible, and say what was observed apart from what was proved. No model calls, no background jobs, no automatic pushes. Read [roadmap.md](roadmap.md) for what is next and [docs/LOOP-HANDOFF.md](docs/LOOP-HANDOFF.md) to restart a loop.
+| Lane | What it studies |
+|---|---|
+| [math](math) | Collatz first descent, Goldbach, tiny SAT formulas, three Lean lemmas, the residue tree |
+| [cs](cs) | Busy Beaver, the Placid Platypus sequence, and three other integer sequences past where OEIS stops |
+| [physics](physics) | Exact 2D Ising energy counts on wrapped grids, checked against Kaufman's formula |
+| [chemistry](chemistry) | Alkane isomer counts to 100 carbons, checked against OEIS A000602 |
+| [biology](biology) | Every one-base change in human beta-globin (HBB), checked against UniProt. Needs `uv run` |
+| [medicine](medicine) | Landmark trials recomputed from their printed counts, and registry results checked against themselves |
+| [statistics](statistics) | The birthday problem and coupon collector, exact fractions checked by simulation |
+| [astronomy](astronomy) | Kepler's third law on every planet in the NASA Exoplanet Archive |
+| [earth](earth) | The Gutenberg-Richter b-value on the USGS earthquake catalog |
+| [information](information) | Largest binary codes A(n, d) by exhaustive clique search |
 
-`./deploy.sh` tests every lane, assembles one site (hub, `/math`, `/biology`) and deploys it with wrangler. Git pushes do not deploy.
+## How a lane works
+
+State one question. Compute inside a fixed bound. Check it a second way with code that shares nothing with the first. Keep failures visible. Say what was observed apart from what was proved.
+
+No model calls, no background jobs, no automatic pushes.
+
+Results are in the discovery ledger, [ledger.md](ledger.md). Most rows reproduce known work, which is how an engine earns trust before it is pointed at anything new.
+
+[roadmap.md](roadmap.md) holds what is next, including the fields with no folder yet. [docs/LOOP-HANDOFF.md](docs/LOOP-HANDOFF.md) restarts a loop.
+
+`./deploy.sh` tests every lane, assembles one site and deploys it with wrangler. Git pushes do not deploy.
 
 For the plain-language background on fields like these, see [Fieldbook](../fieldbook).
 

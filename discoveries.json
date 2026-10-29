@@ -4,8 +4,8 @@
   {
    "id": "pp",
    "lane": "cs",
-   "title": "Placid Platypus known to n = 176",
-   "plain": "The fewest states a Turing machine needs to print exactly n ones and stop. OEIS knew it for n up to 37; every n up to 176 is now settled, each with a machine that reruns from a blank tape.",
+   "title": "Placid Platypus known to n = 177",
+   "plain": "The fewest states a Turing machine needs to print exactly n ones and stop. OEIS knew it for n up to 37; every n up to 177 is now settled, each with a machine that reruns from a blank tape.",
    "level": "candidate",
    "date": "2026-10-28",
    "source": "noema/cs/platypus-5.json",

@@ -1,6 +1,6 @@
 # Noema roadmap
 
-> Priority tier 5: exploratory. Each lane keeps its detailed queue in `math/roadmap.md` and `biology/roadmap.md`. This file is the order across both. Raise one study's scope at a time.
+> Priority tier 5: exploratory. Each lane keeps its own queue in `math/roadmap.md` and `biology/roadmap.md`; this file is the order across every lane. Raise one study's scope at a time.
 
 ## Now
 
@@ -52,7 +52,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Math:** binary patterns in the longest-surviving residues mod 2^20.
 - [ ] **Math:** Lean-check one whole level of the tree (every class mod 2^8 that closes does so in 13 steps), so the A100982 row becomes machine-checked rather than observed.
 - [ ] **CS:** OEIS. Submitted for review 2026-10-28 from Joshua's account: A386859 (a(5)), A399346 (to 130 terms), A394183 (to 27 terms). OEIS allows 3 pending edits per user, so A332718 (`docs/OEIS-A332718.md`) and the new runtime-spectrum sequence (`docs/OEIS-runtime-spectrum.md`) go in when a slot opens; the A332717 b-file needs Joshua's file upload. Entries ready in internal format in the session scratchpad (`oeisedit/`).
-- [ ] **CS:** PP(131) and on: the first open n. A wider 6-state search (changing a row of the 5-state base as well as adding F) should settle more terms; a lower bound of 7 needs the 6-state halters, out of reach.
+- [ ] **CS:** PP(178) and on: the first open n, with 182, 188, 204 and 205 behind it. The depth-2 neighbourhood sweep (`nbhd.c`) over every known 6-state witness is the lever that works; raising its step cap found 256 and 257, so cap and seed pool are both worth pushing. A lower bound of 7 needs the 6-state halters, out of reach.
 - [ ] **CS:** sorting networks at n = 8 (19), then 9 (25), with permutation symmetry and subsumption pruning.
 - [ ] **CS:** machine-check R(4) = 79 and A004147(4) in Lean. BB(4) = 107 is not yet proved in Lean here, and the 4-state tree is far larger, so it needs the symmetry weights proved sound first.
 - [ ] **CS:** an independent count of the 5-state halters past step 2000 that does not use halters.c deciders (now only argued complete by A004147(5) minus the two-program count to 2000).
