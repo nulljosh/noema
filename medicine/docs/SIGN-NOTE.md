@@ -1,6 +1,6 @@
 # Confidence limits posted with a lost minus sign: a note for ClinicalTrials.gov
 
-Second report through the NLM help desk form (https://support.nlm.nih.gov/support/create-case/), after `SDSE-NOTE.md`. Values re-fetched live on 2026-10-28. Sent 2026-10-28 ("Submitted Successfully"). No acknowledgement mail arrived, though the first report was acknowledged within the minute, so either NLM did not ack this one or the submission did not take. Resend only if no case number turns up.
+Second report through the NLM help desk form (https://support.nlm.nih.gov/support/create-case/), after `SDSE-NOTE.md`. Values re-fetched live on 2026-10-28. Sent 2026-10-28 ("Submitted Successfully"), acknowledged as case CAS-1718369-M9R1F3. Reply expected in 2 to 5 business days.
 
 ## The note
 
