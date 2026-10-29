@@ -1,6 +1,6 @@
 # Spreads labelled SD that are standard errors: a note for ClinicalTrials.gov
 
-Sent 2026-10-28 through the NLM help desk form ("Submitted Successfully"). The channel is the NLM help desk form at https://support.nlm.nih.gov/support/create-case/ (NLM support article KA-03685 says to report record errors there, with the NCT number, the error and the correct information, and NLM forwards them to the sponsor). The form asks for the sender's name and email, Joshua's.
+Sent 2026-10-28 through the NLM help desk form ("Submitted Successfully"). NLM acknowledged it the same minute as case CAS-1718303-N5C1S2 (created 16:39:08Z), and says to expect a reply in 2 to 5 business days. The channel is the NLM help desk form at https://support.nlm.nih.gov/support/create-case/ (NLM support article KA-03685 says to report record errors there, with the NCT number, the error and the correct information, and NLM forwards them to the sponsor). The form asks for the sender's name and email, Joshua's.
 
 ## The note
 
