@@ -1,8 +1,8 @@
-# Noema loop handoff (2026-10-28, morning)
+# Noema loop handoff (2026-10-28, evening)
 
 ## What a loop is
 
-`/loop forever until we find a breakthrough discovery; don't tell me it's not possible.` Each tick is a bounded cycle: state one exact question, compute inside a fixed bound, check a second way, keep failures and baselines visible, separate what was observed from what was proved. Ticks re-arm themselves every 25 to 30 minutes and alternate CS and medicine unless another lane's ledger row is older. Long searches run as background shell jobs inside the session (never cron or daemons) and the next tick reads their output. Commits push automatically once tests are green. No paid models.
+`/loop forever until we find a breakthrough discovery; don't tell me it's not possible.` Each tick is a bounded cycle: state one exact question, compute inside a fixed bound, check a second way, keep failures and baselines visible, separate what was observed from what was proved. Ticks re-arm themselves every 25 to 30 minutes and alternate CS and medicine unless another lane's ledger row is older. Long searches run as background shell jobs inside the session (never cron or daemons), each sized to finish in 15 to 20 minutes and flushing every result line; the next tick reads their output. Time a small sample first and assume the Mac is shared (load can sit near 90 from other sessions). Commits push automatically once tests are green. No paid models.
 
 Joshua decides nothing mid-loop: make the call, act, report in one line. The exceptions are his: logins, passwords and 2FA. For a CAPTCHA, send him the image (and the audio version when the site has one) and type the code he replies with; never solve it.
 
@@ -40,6 +40,10 @@ Earth science (`earth/`, new): Gutenberg-Richter b = 1.03 +- 0.02 (Mw, above 5.5
 Physics: the triangular closed form and 2n + 1 bound are not in OEIS or the arXiv sources read on 2026-10-27; three papers that could settle novelty block scripts (see roadmap). Krawczyk citation fixed.
 
 Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
+
+PP(177) hunt, 2026-10-28 evening: 6-state witnesses now exist for 179, 180, 181, 183 to 187, 189, 190, 207 (`platypus-walk.txt`), but 177, 178, 182 and 188 are open. `nbhd.c` (every 1- and 2-transition change of a seed) is exhausted on 92 seeds. The sixth-state extender over the 37,285 five-state bases with fewer than 25 ones runs in 2,000-base chunks (`scratchpad/pp136/chunk.sh K`); chunks 2 and 3 are done or running, bases 1 to 4,000 were only partly covered by a killed run, chunks 4 to 18 remain.
+
+Mac app (`macos/`): reads `discoveries.json` and checks OEIS and ClinicalTrials.gov live; installed at ~/Applications/Noema.app. Add a row to `discoveries.json` for each new or reported result.
 
 Outside the lab: two reports went to the NLM help desk on 2026-10-28, SD-as-SE (`medicine/docs/SDSE-NOTE.md`) and sign slips (`medicine/docs/SIGN-NOTE.md`). OEIS drafts are checked with curl on the public page https://oeis.org/draft?user=Joshua%20Trommel, so Joshua's Safari tabs stay his; open a new tab only to edit. OEIS edits in review from Joshua's account: A386859 (a(5)), A394183 (to 27 terms) and A399346 (130-term b-file). Queued for the next free slot, texts in the scratchpad `oeisedit/`: A332718 (rule 110, to 34 terms), then the new runtime-spectrum sequence (`NEW.new.txt`, via edit?seq=A999999999&internal=1). The A332717 b-file goes up the same way the A399346 one did (a File set on the edit page's upload input).
 
