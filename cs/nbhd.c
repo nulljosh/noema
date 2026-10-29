@@ -1,8 +1,10 @@
-/* Every machine one or two transitions away from each seed: for each 6-state seed on stdin ("ones machine"), try
-   all single and all paired changes of its 12 transitions (write 0/1, move L/R, next state A-F or halt) and print
+/* Every machine up to DEPTH transitions away from each seed: for each 6-state seed on stdin ("ones machine"), try
+   all changes of up to DEPTH of its 12 transitions (write 0/1, move L/R, next state A-F or halt) and print
    "ones machine" for each halter whose ones fall in [LO, HI]. platypus.sim() reruns anything kept.
 
-       cc -O2 -o nbhd nbhd.c && ./nbhd CAP LO HI < seeds.txt */
+       cc -O2 -o nbhd nbhd.c && ./nbhd CAP LO HI [DEPTH=2] < seeds.txt
+
+   Depth 3 is about 90 times the work of depth 2, so feed it few seeds at a time. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -29,17 +31,19 @@ static void try(const char *m) {
     int o = run(m);
     if (o >= LO && o <= HI) { printf("%d %s\n", o, m); fflush(stdout); }
 }
+static int DEPTH;
+static void walk(char *m, int from, int left) {   /* every change of `left` more transitions at index `from` or later */
+    for (int k = from; k < 12; k++)
+        for (int v = 0; v < 28; v++) {
+            char n[64]; strcpy(n, m); set(n, k, v); try(n);
+            if (left > 1) walk(n, k + 1, left - 1);
+        }
+}
 int main(int argc, char **argv) {
     CAP = atoi(argv[1]); LO = atoi(argv[2]); HI = atoi(argv[3]);
-    int ones; char seed[64], m[64];
-    while (scanf("%d %63s", &ones, seed) == 2) {
-        if (strlen(seed) != 41) continue;
-        for (int a = 0; a < 12; a++)
-            for (int va = 0; va < 28; va++) {
-                strcpy(m, seed); set(m, a, va); try(m);
-                for (int b = a + 1; b < 12; b++)
-                    for (int vb = 0; vb < 28; vb++) { char n[64]; strcpy(n, m); set(n, b, vb); try(n); }
-            }
-    }
+    DEPTH = argc > 4 ? atoi(argv[4]) : 2;
+    int ones; char seed[64];
+    while (scanf("%d %63s", &ones, seed) == 2)
+        if (strlen(seed) == 41) walk(seed, 0, DEPTH);
     return 0;
 }
