@@ -16,6 +16,8 @@ Keep every machine it prints, not one per ones count. A sweep prints every halte
 
 Flip the halting write before searching at all. Witnesses come in pairs, because the halting transition writes a 0 or a 1 and that single cell is the whole difference. Rewriting that one symbol on every machine already in hand costs one simulation each and gave five counts with no search.
 
+Why the holes look the way they do. Of the 145 six-state witnesses at or above 130, 142 sit next to another witness, so the printable set is almost entirely adjacent pairs. That follows from the same halting write: a machine stops by writing a 0 or a 1 on one cell, so it comes with a sibling printing one more or one fewer. A hole is then not a near miss but a count no machine straddles. Around 178 the neighbours of every machine we hold print 176 and 177, or 179 and 180, two pairs with 178 between them. Reaching it needs a machine whose halt lands on the other parity, not a longer or deeper search of the ones we have.
+
 The step cap is worth raising too, but less than either of those. It found 256, 257 and the counts near 410, which need 59,257 and 192,000 steps, and then stopped paying: at a million steps it returns nothing a 200,000 cap had not already found.
 
 178 is the first n left open, with 182, 188, 204 and 205 behind it. Those gaps may be real. A 6-state machine printing exactly 178 ones could simply not exist, and settling that needs a proof about all 6-state machines, which is BB(6)-hard. A search can only ever find witnesses.
