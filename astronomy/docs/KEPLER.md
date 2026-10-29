@@ -22,7 +22,7 @@ The same check runs archive-wide (`kepler.py densities`, Kipping's 2014 multibod
 
 Hedges et al. 2019 (arXiv:1907.08244, Table 1) is the reverse of K2-285: within each system the planets share one stellar density to three digits (K2-43 0.80, K2-168 1.24, K2-198 1.13 g/cm^3), so the multibody check passes, but that density sits 6.3, 1.75 and 2.3 times below the mass and radius the same table quotes from Dressing 2017 and Mayo 2018. The paper says its fits use those stellar values and match the literature, yet Mayo 2018 fits K2-198 b at a/R_star 42.0 against Hedges' 25.86 +- 0.95, and Dressing 2017 has K2-43 b at 13.5 against 8.0. Observed from the paper's own table. A plausible cause, not checked, is 30-minute K2 cadence fit without supersampling, which smears ingress and pulls a/R_star low (Kipping 2010).
 
-Next: read the Q1-Q8 KOI documentation for why its fits run short.
+The Q1-Q8 KOI table (Burke et al. 2014, arXiv:1312.5358) fits a/R_star free with a circular orbit by Levenberg-Marquardt on long-cadence data, with no supersampling mentioned, on KIC stars forced onto Yale-Yonsei isochrones. Matching its 2,297 planets to DR25 splits the 0.079 dex shortfall: its fitted a/R_star runs 0.038 dex below DR25's for the same planets, and its stars put the law 0.016 dex above. The four later KOI tables sit within 0.007 dex of the law and of each other. Observed; whether the later tables agree because their fits improved or because they tie a/R_star to the stars was not read.
 
 ## Minimum mass against true mass
 
