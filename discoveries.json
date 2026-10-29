@@ -291,6 +291,16 @@
    "date": "2026-10-28",
    "source": "noema/astronomy/docs/KEPLER.md",
    "watch": []
+  },
+  {
+   "id": "hedges",
+   "lane": "astronomy",
+   "title": "Three stars fit lighter than their own tables",
+   "plain": "Hedges et al. 2019 fit seven planets around three stars. Each system shares one star density, but it comes out 1.75 to 6.3 times lower than the star sizes and masses the same table quotes, and two planets miss the earlier papers it says it matches.",
+   "level": "observed",
+   "date": "2026-10-28",
+   "source": "noema/astronomy/docs/KEPLER.md",
+   "watch": []
   }
  ]
 }
