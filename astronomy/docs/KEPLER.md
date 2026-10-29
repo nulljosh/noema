@@ -20,7 +20,9 @@ K2-285 (Palle et al. 2019, A&A, arXiv:1808.00575) fixes every orbit circular and
 
 The same check runs archive-wide (`kepler.py densities`, Kipping's 2014 multibody idea): in one paper, every planet on a circular orbit around one star must imply one stellar density. Of 387 paper-and-star pairs with two or more such planets, five split by more than 1.5 times and 3 sigma. K2-285 is the widest at 29.6 sigma. Kepler-210 (Ioannidis et al. 2014, 5.3 sigma) is the case that paper itself used to argue for eccentric orbits. Kepler-49 and Kepler-82 (Ofir et al. 2025, arXiv:2410.11401) adopt each planet's own KOI-table a/R_star, so their split is the KOI tables' and expected. K2-5 (Kruse et al. 2019, arXiv:1907.10806, Table 7) also fits each candidate alone: b's a/R_star of 5.42 at 5.74 days implies a star of 0.09 g/cm^3 and c's 27.8 at 10.93 days implies 3.4, so b's fit, not the star, is the outlier. The Kepler KOI tables split far wider, but they fit each candidate alone, so the check skips them.
 
-Next: read Hedges 2019 and the Q1-Q8 KOI documentation for why their fits run short.
+Hedges et al. 2019 (arXiv:1907.08244, Table 1) is the reverse of K2-285: within each system the planets share one stellar density to three digits (K2-43 0.80, K2-168 1.24, K2-198 1.13 g/cm^3), so the multibody check passes, but that density sits 6.3, 1.75 and 2.3 times below the mass and radius the same table quotes from Dressing 2017 and Mayo 2018. The paper says its fits use those stellar values and match the literature, yet Mayo 2018 fits K2-198 b at a/R_star 42.0 against Hedges' 25.86 +- 0.95, and Dressing 2017 has K2-43 b at 13.5 against 8.0. Observed from the paper's own table. A plausible cause, not checked, is 30-minute K2 cadence fit without supersampling, which smears ingress and pulls a/R_star low (Kipping 2010).
+
+Next: read the Q1-Q8 KOI documentation for why its fits run short.
 
 ## Minimum mass against true mass
 
