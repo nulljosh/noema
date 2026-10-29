@@ -31,5 +31,15 @@ class NubaseTest(unittest.TestCase):
         self.assertEqual(nubase.swaps(flagged, [row]), [])
 
 
+    def test_duplicates(self):
+        row = lambda *m: dict({f'decay_{i + 1}': d for i, (d, _) in enumerate(m)},
+                              **{f'decay_{i + 1}_%': p for i, (_, p) in enumerate(m)}, z='88', n='135', symbol='Ra')
+        full = lambda r: {**{f'decay_{i}': '' for i in (1, 2, 3)}, **{f'decay_{i}_%': '' for i in (1, 2, 3)}, **r}
+        bulk = full(row(('A', '100'), ('14C', '0.000000089'), ('14C', '0.000000077')))
+        single = full(row(('A', '100'), ('14C', '0.000000089')))
+        self.assertEqual(nubase.duplicates([bulk])[0][0], '223Ra')
+        self.assertEqual(nubase.duplicates([single]), [])
+
+
 if __name__ == '__main__':
     unittest.main()

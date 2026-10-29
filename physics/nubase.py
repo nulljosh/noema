@@ -60,6 +60,18 @@ def halflives(nb, rows, dex=0.3, sigma=5):
     return sorted(out, reverse=True)
 
 
+def duplicates(rows):
+    """Rows whose decay_1..3 name one mode twice. The single-nuclide endpoint lists each mode once, so a
+    consumer reading decay_2 off the bulk export can pick up a second, different branching for the same mode."""
+    out = []
+    for r in rows:
+        modes = [(r[f'decay_{i}'].strip(), r[f'decay_{i}_%'].strip()) for i in (1, 2, 3) if r[f'decay_{i}'].strip()]
+        names = [d for d, _ in modes]
+        if len(set(names)) < len(names):
+            out.append((f"{int(r['z']) + int(r['n'])}{r['symbol']}", modes))
+    return out
+
+
 def swaps(nb, rows):
     """ENSDF's ground state carries NUBASE's first-isomer half-life and spin, yet NUBASE has no '&' on it."""
     out = []
@@ -86,3 +98,5 @@ if __name__ == '__main__':
         print('half-life', *h)
     for s in swaps(nb, rows):
         print('unflagged swap', *s)
+    for d in duplicates(rows):
+        print('duplicated decay mode', *d)
