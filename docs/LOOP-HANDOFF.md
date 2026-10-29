@@ -1,4 +1,4 @@
-# Noema loop handoff (2026-10-28, evening)
+# Noema loop handoff (2026-10-29, small hours)
 
 ## What a loop is
 
@@ -41,7 +41,7 @@ Physics: the triangular closed form and 2n + 1 bound are not in OEIS or the arXi
 
 Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
 
-PP(177) hunt, 2026-10-28 evening: 6-state witnesses now exist for 179, 180, 181, 183 to 187, 189, 190, 207 (`platypus-walk.txt`), but 177, 178, 182 and 188 are open. `nbhd.c` (every 1- and 2-transition change of a seed) is exhausted on 92 seeds. The sixth-state extender over the 37,285 five-state bases with fewer than 25 ones runs in 2,000-base chunks (`scratchpad/pp136/chunk.sh K`); chunks 2 and 3 are done or running, bases 1 to 4,000 were only partly covered by a killed run, chunks 4 to 18 remain.
+PP hunt, 2026-10-29 small hours: PP(n) now runs unbroken to 181 and 182 is the first open n, with 221, 222, 227, 228, 231, 232 and 246 to 251 behind it. What works is the straddle search, not more compute: witnesses come in adjacent pairs because a machine halts by writing one cell, so collect the machines printing the two counts either side of a hole and run `nbhd.c` depth 2 from them with the hole as the only window. That gave 178 in ten hits after million-step probes and general depth-2 sweeps had all come back empty. Two cheaper tricks come first: keep every machine a sweep prints rather than one per ones count (the discards are the best seeds, and one depth-1 pass over 4,339 of them gave 188 plus 23 more), and rewrite the halting write on machines already in hand, which costs one simulation each. The step cap matters least; past 200,000 it stopped paying. 182 is hard because its straddle set is only 10 machines against 178's 52, and that set is closed: depth 1 over all 22,258 pool machines and depth 2 over all 146 witnesses both return the same 10. Depth 3 on those 10 (`scratchpad/pp177/e3.sh K`, about 12 minutes a seed) is the last unexplored space near it. Sweeps must pipe through `awk '!seen[$2]++'`: an unfiltered one wrote 350,000 lines and filled the disk, killing four jobs at once.
 
 Mac app (`macos/`): reads `discoveries.json` and checks OEIS and ClinicalTrials.gov live; installed at ~/Applications/Noema.app. Add a row to `discoveries.json` for each new or reported result.
 
