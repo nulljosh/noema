@@ -33,6 +33,23 @@ class BenchTest(unittest.TestCase):
         self.assertEqual(c['unknown'], ['z'])
         self.assertEqual(c['missing'], ['b'])
 
+    def test_exception_only_files_are_not_checkable(self):
+        """The newer schema lists only exceptions, so a task attempted and failed appears nowhere."""
+        self.assertTrue(bench.enumerative(results([], ['a'], [])))
+        self.assertFalse(bench.enumerative({'no_generation': [], 'no_logs': [], 'resolved': ['a']}))
+
+    def test_survey_sorts_every_submission(self):
+        every = {
+            'good': results([], ['a', 'b'], ['a']),
+            'short': results([], ['a'], []),
+            'exceptions-only': {'no_generation': [], 'no_logs': [], 'resolved': ['a']},
+            'missing-file': {'error': 'HTTP Error 404: Not Found'},
+        }
+        clean, flagged, opaque, absent = bench.survey(every, ['a', 'b'])
+        self.assertEqual((clean, list(flagged), opaque, absent),
+                         (['good'], ['short'], ['exceptions-only'], ['missing-file']))
+        self.assertEqual(flagged['short']['missing'], ['b'])
+
 
 if __name__ == '__main__':
     unittest.main()
