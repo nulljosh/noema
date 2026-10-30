@@ -68,3 +68,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 ## Not doing
 
 Riemann stays literature-only. No structure prediction, model training, autonomous experiments or instrument control. No universal claim from a finite check.
+
+## Ingested 2026-10-30
+- [ ] OEIS A394183 (Jason Yuen commented 2026-10-29): the link https://github.com/nulljosh/labs/blob/main/noema/cs/circular.c goes to a 404 because noema left labs. Point it at the nulljosh/noema repo path (edit the draft at https://oeis.org/draft/A394183; Joshua submits). Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/noema-1.png
+- [ ] ClinicalTrials.gov replied on the SD/SE note (CAS-1718303-N5C1S2, "posted results label standard errors as Standard Deviation, 15 trials"): they say accuracy concerns go to the responsible parties, so contact each trial's Results Point of Contact. Draft per-trial notes from medicine/docs/SDSE-NOTE.md for Joshua to send. Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/new-note-1.png
