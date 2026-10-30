@@ -1,4 +1,4 @@
-# Noema loop handoff (2026-10-29, small hours)
+# Noema loop handoff (2026-10-30, morning)
 
 ## What a loop is
 
@@ -39,13 +39,15 @@ Earth science (`earth/`, new): Gutenberg-Richter b = 1.03 +- 0.02 (Mw, above 5.5
 
 Physics: the triangular closed form and 2n + 1 bound are not in OEIS or the arXiv sources read on 2026-10-27; three papers that could settle novelty block scripts (see roadmap). Krawczyk citation fixed.
 
-Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-27).
+Both sites now deploy as one from `./deploy.sh` (last deploy 2026-10-30, after the labs link fix).
 
 PP hunt, 2026-10-29 small hours: PP(n) now runs unbroken to 181 and 182 is the first open n, with 221, 222, 227, 228, 231, 232 and 246 to 251 behind it. What works is the straddle search, not more compute: witnesses come in adjacent pairs because a machine halts by writing one cell, so collect the machines printing the two counts either side of a hole and run `nbhd.c` depth 2 from them with the hole as the only window. That gave 178 in ten hits after million-step probes and general depth-2 sweeps had all come back empty. Two cheaper tricks come first: keep every machine a sweep prints rather than one per ones count (the discards are the best seeds, and one depth-1 pass over 4,339 of them gave 188 plus 23 more), and rewrite the halting write on machines already in hand, which costs one simulation each. The step cap matters least; past 200,000 it stopped paying. 182 is hard because its straddle set is only 10 machines against 178's 52, and that set is closed: depth 1 over all 22,258 pool machines and depth 2 over all 146 witnesses both return the same 10. Depth 3 on those 10 (`scratchpad/pp177/e3.sh K`, about 12 minutes a seed) is the last unexplored space near it. Sweeps must pipe through `awk '!seen[$2]++'`: an unfiltered one wrote 350,000 lines and filled the disk, killing four jobs at once.
 
+Repo links: after the labs split (2026-10-29) every link in the repo points at github.com/nulljosh/noema, fixed 2026-10-30 across the landing, proofs, OEIS drafts, Mac app, `discoveries.json` and the Evidna page.
+
 Mac app (`macos/`): reads `discoveries.json` and checks OEIS and ClinicalTrials.gov live; installed at ~/Applications/Noema.app. Add a row to `discoveries.json` for each new or reported result.
 
-Outside the lab: two reports went to the NLM help desk on 2026-10-28, SD-as-SE (`medicine/docs/SDSE-NOTE.md`) and sign slips (`medicine/docs/SIGN-NOTE.md`). OEIS drafts are checked with curl on the public page https://oeis.org/draft?user=Joshua%20Trommel, so Joshua's Safari tabs stay his; open a new tab only to edit. OEIS edits in review from Joshua's account: A386859 (a(5)), A394183 (to 27 terms) and A399346 (130-term b-file). Queued for the next free slot, texts in the scratchpad `oeisedit/`: A332718 (rule 110, to 34 terms), then the new runtime-spectrum sequence (`NEW.new.txt`, via edit?seq=A999999999&internal=1). The A332717 b-file goes up the same way the A399346 one did (a File set on the edit page's upload input).
+Outside the lab: two reports went to the NLM help desk on 2026-10-28, SD-as-SE (`medicine/docs/SDSE-NOTE.md`) and sign slips (`medicine/docs/SIGN-NOTE.md`). OEIS drafts are checked with curl on the public page https://oeis.org/draft?user=Joshua%20Trommel, so Joshua's Safari tabs stay his; open a new tab only to edit. OEIS edits in review from Joshua's account: A386859 (a(5)), A394183 (to 27 terms; the draft link now points at nulljosh/noema and a reply went to Jason Yuen on 2026-10-30) and A399346 (130-term b-file). Queued for the next free slot, texts in the scratchpad `oeisedit/`: A332718 (rule 110, to 34 terms), then the new runtime-spectrum sequence (`NEW.new.txt`, via edit?seq=A999999999&internal=1). The A332717 b-file goes up the same way the A399346 one did (a File set on the edit page's upload input).
 
 ## Restart prompts
 
