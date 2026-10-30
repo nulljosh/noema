@@ -32,7 +32,7 @@ NCT number, outcome measure (in posted order, from 1), paper PMID:
 
 The 16th, NCT04581200, says SD in its paper (PMID 38957856), but there the posted interval for the difference, 0.09 (-0.57 to 0.74), is not the paper's 0.02 (-0.11 to 0.15), so one of the posted cells is wrong either way.
 
-The other 74 trials have no readable paper that settles it. They are listed, with each analysis, at https://github.com/nulljosh/labs/blob/main/noema/medicine/registry-spread.json, and the method is at https://github.com/nulljosh/labs/blob/main/noema/medicine/docs/REGISTRY.md.
+The other 74 trials have no readable paper that settles it. They are listed, with each analysis, at https://github.com/nulljosh/noema/blob/main/medicine/registry-spread.json, and the method is at https://github.com/nulljosh/noema/blob/main/medicine/docs/REGISTRY.md.
 
 A reader who takes these spreads as SDs will think the outcome is far less variable than it is.
 

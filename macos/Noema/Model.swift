@@ -108,7 +108,7 @@ final class Store: ObservableObject {
     @Published var status: [String: Status] = [:]   // keyed by "discovery id/watch index"
     @Published var checked: Date?
 
-    static let remote = URL(string: "https://raw.githubusercontent.com/nulljosh/labs/main/noema/discoveries.json")!
+    static let remote = URL(string: "https://raw.githubusercontent.com/nulljosh/noema/main/discoveries.json")!
 
     init(preview: [Discovery]? = nil) {
         if let preview { discoveries = preview; return }

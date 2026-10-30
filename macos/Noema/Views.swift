@@ -215,7 +215,7 @@ struct Detail: View {
                     }
                 }
 
-                Button { open(URL(string: "https://github.com/nulljosh/labs/blob/main/\(d.source)")!) } label: {
+                Button { open(URL(string: "https://github.com/nulljosh/noema/blob/main/\(d.source)")!) } label: {
                     Label("Read the work", systemImage: "arrow.up.right")
                         .font(.system(size: 14, weight: .semibold)).foregroundStyle(Theme.link)
                 }

@@ -29,7 +29,7 @@ Links:
 
     Scott Aaronson, <a href="https://www.scottaaronson.com/papers/bb.pdf">The Busy Beaver Frontier</a>, SIGACT News 51 (2020), section 5.9.
     Pascal Michel, <a href="https://arxiv.org/abs/0906.3749">The Busy Beaver Competition: a historical survey</a>, arXiv:0906.3749.
-    Joshua Trommel, <a href="https://github.com/nulljosh/labs/blob/main/noema/cs/halters.c">C program</a> and <a href="https://github.com/nulljosh/labs/blob/main/noema/cs/halters-5.json">5-state output</a>.
+    Joshua Trommel, <a href="https://github.com/nulljosh/noema/blob/main/cs/halters.c">C program</a> and <a href="https://github.com/nulljosh/noema/blob/main/cs/halters-5.json">5-state output</a>.
 
 Cross-references:
 

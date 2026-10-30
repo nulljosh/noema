@@ -2,7 +2,7 @@
 
 # Evidna
 
-![Version](https://img.shields.io/badge/version-0.1.0-9e4f36) ![License](https://img.shields.io/badge/license-MIT-53694b) ![Tests](https://github.com/nulljosh/labs/actions/workflows/noema-biology.yml/badge.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-9e4f36) ![License](https://img.shields.io/badge/license-MIT-53694b) ![Tests](https://github.com/nulljosh/noema/actions/workflows/biology.yml/badge.svg)
 
 [Explore the lab](https://noema.jaybulb.com/biology/)
 
@@ -23,8 +23,8 @@ A SQLite notebook keeps hypotheses, source-labelled observations, and revisions.
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and Git. The pinned public reference is already included, so analysis works without a model, account, or network after dependency installation.
 
 ```sh
-git clone https://github.com/nulljosh/labs
-cd labs/noema/biology
+git clone https://github.com/nulljosh/noema
+cd noema/biology
 uv sync --locked
 uv run evidna.py analyze
 uv run evidna.py analyze --variant 'c.21G>A'

@@ -8,7 +8,7 @@
    "plain": "The fewest states a Turing machine needs to print exactly n ones and stop. OEIS knew it for n up to 37; every n up to 181 is now settled, each with a machine that reruns from a blank tape.",
    "level": "candidate",
    "date": "2026-10-28",
-   "source": "noema/cs/platypus-5.json",
+   "source": "cs/platypus-5.json",
    "watch": [
     {
      "kind": "oeis",
@@ -24,7 +24,7 @@
    "plain": "Add up how long every halting 5-state Turing machine runs: 64,068,865,333,248 steps. Two programs that share no code agree.",
    "level": "candidate",
    "date": "2026-10-27",
-   "source": "noema/docs/OEIS-A386859.md",
+   "source": "docs/OEIS-A386859.md",
    "watch": [
     {
      "kind": "oeis",
@@ -40,7 +40,7 @@
    "plain": "A count of 2-state machines on a loop of tape, which OEIS had to 19 terms, pushed to 27.",
    "level": "candidate",
    "date": "2026-10-28",
-   "source": "noema/cs/circular.c",
+   "source": "cs/circular.c",
    "watch": [
     {
      "kind": "oeis",
@@ -56,7 +56,7 @@
    "plain": "Machines with 1 to 5 states stop after 1, 6, 21, 79 and 1,207 distinct step counts. Not in OEIS; a draft waits for a free slot.",
    "level": "candidate",
    "date": "2026-10-27",
-   "source": "noema/docs/OEIS-runtime-spectrum.md",
+   "source": "docs/OEIS-runtime-spectrum.md",
    "watch": []
   },
   {
@@ -66,7 +66,7 @@
    "plain": "292 trial results on ClinicalTrials.gov say SD but are as narrow as a standard error, which makes the treatment look surer than it is. In 15 trials the paper confirms it. Reported to the NLM help desk.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/medicine/docs/SDSE-NOTE.md",
+   "source": "medicine/docs/SDSE-NOTE.md",
    "watch": [
     {
      "kind": "ctgov",
@@ -228,7 +228,7 @@
    "plain": "61 intervals in 52 trials cross zero while their own p-value says they cannot. In two the paper prints the right sign. Reported to the NLM help desk.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/medicine/docs/SIGN-NOTE.md",
+   "source": "medicine/docs/SIGN-NOTE.md",
    "watch": [
     {
      "kind": "ctgov",
@@ -259,7 +259,7 @@
    "plain": "Across all 80,750 trials with results: 274 outcome counts bigger than the group analysed, 28 serious adverse event totals bigger than their parts, 11 dropout tallies that do not add up. Not reported yet.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/medicine/docs/REGISTRY.md",
+   "source": "medicine/docs/REGISTRY.md",
    "watch": []
   },
   {
@@ -269,7 +269,7 @@
    "plain": "A 2019 paper on K2-285 fits four planets on circular orbits around one star, yet the outer three imply the star is 2 to 6 times denser than the paper says. Of 387 papers with two or more such planets in NASA's archive, this split is the widest, at 29.6 sigma.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/astronomy/docs/KEPLER.md",
+   "source": "astronomy/docs/KEPLER.md",
    "watch": []
   },
   {
@@ -279,7 +279,7 @@
    "plain": "Oddo et al. 2023 fit ten small planets. Eight of the orbit sizes sit past Kepler's law from the paper's own numbers, three by more than 4 sigma, and one looks like a typo.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/astronomy/docs/KEPLER.md",
+   "source": "astronomy/docs/KEPLER.md",
    "watch": []
   },
   {
@@ -289,7 +289,7 @@
    "plain": "A planet's minimum mass can never beat its real mass, but 99 of 440 rows in NASA's combined table do, because they pair numbers from different papers.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/astronomy/docs/KEPLER.md",
+   "source": "astronomy/docs/KEPLER.md",
    "watch": []
   },
   {
@@ -299,7 +299,7 @@
    "plain": "Hedges et al. 2019 fit seven planets around three stars. Each system shares one star density, but it comes out 1.75 to 6.3 times lower than the star sizes and masses the same table quotes, and two planets miss the earlier papers it says it matches.",
    "level": "observed",
    "date": "2026-10-28",
-   "source": "noema/astronomy/docs/KEPLER.md",
+   "source": "astronomy/docs/KEPLER.md",
    "watch": []
   }
  ]

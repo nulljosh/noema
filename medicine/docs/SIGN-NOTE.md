@@ -13,7 +13,7 @@ Two posted results on ClinicalTrials.gov have a confidence limit whose minus sig
 
 One more for the sponsor to check, which the paper cannot settle because it prints the same values: NCT04636528, outcome measure 6 (Least Pain Level) posts -1.1 (-1.5 to 0.6) with p < .001, and outcome measure 2 (Worst Pain Level) posts -0.6 (-1.4 to -0.2) with p = 0.12. Each interval disagrees with its own p-value (PMID 37490337).
 
-These came from a check of every posted two-sided interval for a difference, flagging intervals that become symmetric about the estimate when one limit changes sign and whose p-value agrees only with the flipped interval. The full list of 61 such intervals in 52 trials is at https://github.com/nulljosh/labs/blob/main/noema/medicine/registry-ci-sign.json.
+These came from a check of every posted two-sided interval for a difference, flagging intervals that become symmetric about the estimate when one limit changes sign and whose p-value agrees only with the flipped interval. The full list of 61 such intervals in 52 trials is at https://github.com/nulljosh/noema/blob/main/medicine/registry-ci-sign.json.
 
 Thank you,
 Joshua Trommel
