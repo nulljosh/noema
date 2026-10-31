@@ -8,8 +8,6 @@ A small lab for every STEM field, one lane at a time. Exact questions, fixed bou
 
 ![Architecture](architecture.svg)
 
-The look, in one sheet: [brand/BRAND.md](brand/BRAND.md).
-
 ## Lanes
 
 Ten are live. Each is plain Python with the standard library, except biology, which needs Biopython. Tests run the same way everywhere: `cd <lane> && python3 -m unittest discover -s tests`.
@@ -42,3 +40,5 @@ Results are in the discovery ledger, [ledger.md](ledger.md). Most rows reproduce
 For the plain-language background on fields like these, see [Fieldbook](../fieldbook).
 
 Independent and unaffiliated with Anthropic or Apple. MIT.
+
+The look, in one sheet: [brand/BRAND.md](brand/BRAND.md).
