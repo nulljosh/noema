@@ -1,7 +1,5 @@
 <img src="landing/logo.svg" width="80" alt="Noema icon">
 
-# Noema
-
 A small lab for every STEM field, one lane at a time. Exact questions, fixed bounds, checks that can fail, and claims that stay as small as the evidence.
 
 [noema.jaybulb.com](https://noema.jaybulb.com) · [Math](https://noema.jaybulb.com/math/) · [Biology](https://noema.jaybulb.com/biology/)
