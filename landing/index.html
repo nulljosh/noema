@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="hero.css?v=1">
 <script src="hero.js?v=1" defer></script>
+<style>/* footer glyph band (footer-band.js) */ .word-band{color:var(--link);position:relative;width:100%;margin:32px 0 0;height:clamp(120px,16vw,220px)} .word-canvas{position:absolute;inset:0;width:100%;height:100%;display:none} .word-band.live .word-canvas{display:block}</style>
 </head>
 <body>
 
@@ -136,7 +137,9 @@ L=8  2^64 states  C peak at T=2.362 (Onsager 2.269)  Kaufman err 1.4e-16  1.22s
     <div class="glyph-row shade"><svg><use href="#g-square"/></svg><svg><use href="#g-solid"/></svg><svg><use href="#g-hourglass"/></svg><svg><use href="#g-compass"/></svg><svg><use href="#g-scales"/></svg><svg><use href="#g-bell"/></svg><svg><use href="#g-sphere"/></svg><svg><use href="#g-comet"/></svg></div>
     <div class="glyph-row cut"><svg><use href="#g-square"/></svg><svg><use href="#g-solid"/></svg><svg><use href="#g-hourglass"/></svg><svg><use href="#g-compass"/></svg><svg><use href="#g-scales"/></svg><svg><use href="#g-bell"/></svg><svg><use href="#g-sphere"/></svg><svg><use href="#g-comet"/></svg></div>
   </div>
+  <div class="word-band" aria-hidden="true"><canvas class="word-canvas"></canvas></div>
   <p class="legal">&copy; 2026 Joshua Trommel &middot; MIT License &middot; Art: D&uuml;rer, <i>Melencolia I</i>, 1514 &middot; Observations are not proofs.</p>
 </footer>
+<script src="footer-band.js" defer></script>
 </body>
 </html>
