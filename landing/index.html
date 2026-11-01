@@ -11,10 +11,11 @@
 <!-- Dressed after Nous Research: a navy page in a thin blue frame, giant thin condensed caps, tiny caps labels,
      small square buttons, one electric blue band with halftone art in alternating rows, a terminal window over art.
      Art: Albrecht Duerer, Melencolia I (1514, public domain, via Wikimedia Commons), cut into dot masks by scripts/dither-art.py.
-     Type is Hanken Grotesk (Google Fonts, OFL) with the system font behind it, thin caps for display. Tokens: brand/tokens.css. -->
+     Type is the system font, bold caps for display. Tokens: brand/tokens.css. -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..700&display=swap">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="hero.css?v=1">
+<script src="hero.js?v=1" defer></script>
 </head>
 <body>
 
@@ -30,7 +31,8 @@
 
 <main id="top">
 <section class="hero">
-  <div class="wrap center">
+  <div class="hero-bg" aria-hidden="true" inert><div class="nwall" id="nwall"></div></div>
+  <div class="wrap center hero-copy">
     <p class="label">Open lab &middot; MIT license</p>
     <h1 class="display">Prove it</h1>
     <p class="def"><b>noema</b> <i>(noun, from Greek &nu;&oacute;&eta;&mu;&alpha;)</i>: a thought. Not the act of thinking, but what the thinking lands on.</p>

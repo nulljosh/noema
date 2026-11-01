@@ -9,10 +9,10 @@ a:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
 /* the thin blue frame around the whole window */
 @media (min-width: 900px) { body::after { content: ""; position: fixed; inset: 0; border: 3px solid var(--blue); border-radius: 10px; pointer-events: none; z-index: 30; } }
 
-.display { font-family: var(--display); font-weight: 100; text-transform: uppercase; line-height: .9; letter-spacing: -.03em; text-wrap: balance; }
+.display { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: .9; letter-spacing: -.03em; text-wrap: balance; }
 h1.display { font-size: clamp(72px, 15vw, 240px); }
 h2.display { font-size: clamp(48px, 8.5vw, 140px); }
-h3 { font-family: var(--display); font-weight: 300; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
+h3 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
 .label { font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--sub); margin-bottom: var(--sp-4); }
 
 .btn { height: 36px; padding: 0 var(--sp-4); border-radius: var(--r-sq); display: inline-flex; align-items: center; font-weight: 600; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: background var(--motion); }
@@ -30,7 +30,7 @@ h3 { font-family: var(--display); font-weight: 300; font-size: clamp(26px, 2.6vw
 .nav .mark { display: block; width: 36px; height: 36px; }
 .bar { display: flex; align-items: center; gap: var(--sp-3); max-width: 560px; margin: 0 var(--sp-4); height: 40px; padding: 0 var(--sp-3); border: 1px solid var(--blue); border-radius: 4px; background: var(--surface); font-size: 13px; text-decoration: none; color: var(--sub); }
 @media (min-width: 592px) { .bar { margin: 0 auto; } }
-.bar b { color: var(--text); font-weight: 500; }
+.bar b { color: var(--text); font-weight: 600; }
 .bar span:last-child { margin-left: auto; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
 .bar:hover { border-color: var(--blue-hover); }
 
@@ -85,7 +85,7 @@ a.cell:hover { background: var(--surface); }
 .foot { padding: var(--sp-8) var(--sp-5) var(--sp-5); border-top: 1px solid var(--line); margin-top: var(--sp-9); overflow: hidden; }
 .foot-top { max-width: var(--wrap); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--sp-7); }
 .foot-brand { display: grid; gap: var(--sp-2); align-content: start; }
-.foot-brand b { font-weight: 200; font-size: 40px; line-height: 44px; text-transform: uppercase; letter-spacing: -.02em; }
+.foot-brand b { font-weight: 800; font-size: 40px; line-height: 44px; text-transform: uppercase; letter-spacing: -.02em; }
 .foot-brand p { color: var(--sub); }
 .foot-cols { display: flex; flex-wrap: wrap; gap: var(--sp-8); }
 .foot-cols div { display: grid; gap: var(--sp-2); align-content: start; }
