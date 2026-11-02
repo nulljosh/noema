@@ -72,4 +72,3 @@ Riemann stays literature-only. No structure prediction, model training, autonomo
 ## Ingested 2026-10-30
 - [ ] Was the ClinicalTrials.gov lost-minus-sign note dealt with? Not yet: the PRS Results Team replied (case CAS-1718369, tracking 019948000036024) that it is under review and they will get back. Wait for their answer. (screenshot: notes/attachments/2026-10-30/noema-2.png)
 - [ ] ClinicalTrials.gov replied on the SD/SE note (CAS-1718303-N5C1S2, "posted results label standard errors as Standard Deviation, 15 trials"): they say accuracy concerns go to the responsible parties, so contact each trial's Results Point of Contact. Draft per-trial notes from medicine/docs/SDSE-NOTE.md for Joshua to send. Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/new-note-1.png
-- [ ] (blocked: naming is Joshua's pick, 2026-11-01) Find a better name, labs-like
