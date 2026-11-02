@@ -15,6 +15,12 @@ class ChanceTests(unittest.TestCase):
         self.assertAlmostEqual(float(chance.birthday(23)), 0.507297, places=6)
         self.assertEqual(chance.birthday(366), 1)  # pigeonhole
 
+    def test_three_share_a_birthday(self):
+        self.assertEqual(chance.first_triple_over_half(), 88)  # the published answer
+        self.assertLess(chance.triple_birthday(87), Fraction(1, 2))
+        self.assertEqual(chance.triple_birthday(731), 1)  # pigeonhole: 2 per day fills 730
+        self.assertEqual(chance.triple_birthday(3, 2), Fraction(1, 4))  # 3 people, 2 days: all on one day, 2 of 8
+
     def test_coupon_exact(self):
         self.assertEqual(chance.coupon_mean(6), Fraction(147, 10))  # a die: 14.7 rolls
         self.assertAlmostEqual(float(chance.coupon_mean(50)), 224.9603, places=4)

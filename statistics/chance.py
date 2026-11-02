@@ -4,6 +4,7 @@
 """
 import random
 from fractions import Fraction
+from math import factorial
 
 
 def birthday(n, days=365):
@@ -17,6 +18,29 @@ def birthday(n, days=365):
 def first_over_half(days=365):
     n = 1
     while birthday(n, days) <= Fraction(1, 2):
+        n += 1
+    return n
+
+
+def triple_birthday(n, days=365):
+    """Exact chance that some birthday is shared by at least three of n people.
+    Count the complement: k days hold a pair, n - 2k days hold one person, nobody else shares."""
+    if n > 2 * days:
+        return Fraction(1)
+    none = 0
+    for k in range(n // 2 + 1):
+        singles = n - 2 * k
+        if k + singles > days:
+            continue
+        ways = factorial(days) // (factorial(k) * factorial(singles) * factorial(days - k - singles))  # choose the pair days and single days
+        ways *= factorial(n) // 2 ** k  # assign people: n! over 2! for each pair
+        none += ways
+    return 1 - Fraction(none, days ** n)
+
+
+def first_triple_over_half(days=365):
+    n = 3
+    while triple_birthday(n, days) <= Fraction(1, 2):
         n += 1
     return n
 
@@ -43,6 +67,7 @@ def simulate_coupon(n, trials, rng):
 
 if __name__ == "__main__":
     rng = random.Random(2026)
+    print(f"three share a birthday: first n over 1/2 = {first_triple_over_half()}, P(88) = {float(triple_birthday(88)):.6f}")
     print(f"birthday: first n over 1/2 = {first_over_half()}, P(23) = {float(birthday(23)):.6f}, "
           f"simulated {simulate_birthday(23, 100_000, rng):.4f}")
     for n in (6, 50):
