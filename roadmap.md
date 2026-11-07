@@ -74,4 +74,4 @@ Riemann stays literature-only. No structure prediction, model training, autonomo
 - [ ] ClinicalTrials.gov replied on the SD/SE note (CAS-1718303-N5C1S2, "posted results label standard errors as Standard Deviation, 15 trials"): they say accuracy concerns go to the responsible parties, so contact each trial's Results Point of Contact. Draft per-trial notes from medicine/docs/SDSE-NOTE.md for Joshua to send. Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/new-note-1.png
 
 ## Ingested 2026-11-06
-- [ ] OEIS drafts A386859 and A394183 sat a week without being proposed for review. If ready, click "These changes are ready for review by an OEIS Editor" on each draft page. A399346 also got a server comment on 2026-11-06, unread.
+- [ ] OEIS drafts A386859, A394183 and A399346 sat a week without being proposed for review. If ready, click "These changes are ready for review by an OEIS Editor" on each draft page.
