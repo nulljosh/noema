@@ -16,6 +16,6 @@ Birthday problem: with 23 people the chance that two share a birthday is 50.7297
 
 ## Next
 
-The birthday problem's harder cousin: the chance that three people share a birthday, where the smallest group past a half is 88, computed exactly and checked against the published value.
+Done 2026-11-08: `birthday3.py` computes the chance that three people share a birthday as an exact fraction, two independent ways. The smallest group past a half is 88, at 51.1 percent, and 87 people fall just short at 49.9.
 
 MIT License · Copyright 2026 Joshua Trommel.

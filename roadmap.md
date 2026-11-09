@@ -64,7 +64,7 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [x] **Chemistry:** alcohols and stereoisomers counted two ways (A000598, A000625, A000628), 2026-11-08.
 - [ ] **Chemistry:** extend the A000628 check past its 38 published terms with a brute force of steric unrooted trees, since the formula has only the b-file behind it there.
 - [ ] **Medicine:** seeded sample of the 61 sign slips against their papers (RESULT and DERIVED PMIDs, PMC full text). The Salk report (AJPH 1955, PMID 14361811) and ISIS-2 have no open copy; park them.
-- [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
+- [x] **Statistics:** the three-way birthday problem, exact two ways, 88 confirmed, 2026-11-08.
 
 ## Not doing
 
