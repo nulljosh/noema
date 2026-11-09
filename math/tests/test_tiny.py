@@ -15,9 +15,17 @@ class PigeonholeTests(unittest.TestCase):
         self.assertTrue(dpll(clauses[1:])[0])
 
     def test_search_nodes_are_two_factorial_minus_one(self):
-        # Observed for this branching order only, up to six holes. Not a theorem here.
+        # Proved for this order in docs/RESEARCH.md (T(h) = h T(h-1) + h - 1), checked to six holes.
         for h in range(1, 7):
             self.assertEqual(dpll(pigeonhole(h)[1])[1], 2 * factorial(h) - 1, h)
+
+
+    def test_the_count_depends_on_the_branching_order(self):
+        clauses = pigeonhole(4)[1]
+        self.assertEqual(dpll(clauses, lambda c: c[0][-1])[1], 47)
+        self.assertEqual(dpll(clauses, lambda c: -c[0][0])[1], 47)
+        self.assertEqual(dpll(clauses, lambda c: c[-1][0])[1], 121)
+        self.assertEqual(dpll(clauses, lambda c: min(c, key=len)[0])[1], 63)
 
 
 class PrimeGapTests(unittest.TestCase):

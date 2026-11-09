@@ -143,3 +143,13 @@ The algebraic eight-step predictions for remainders 11 and 23 matched every chec
 Lean 4.35.0 checked the universally quantified exact three-step lemma for 4k+1 with k >= 1. The definition includes the actual ordinary Collatz iteration and all earlier steps. The proof uses standard Lean logic, no new axiom, no Collatz assumption, no unfinished proof and no finite-case enumeration. Both direct checking with warnings as errors and lake build succeeded locally. Its dependency report lists only propext and Quot.sound. The written eight-step lemmas have not yet been checked in Lean.
 
 The downloadable Noema.lean and proof-check.json identify exactly what was checked. Lean verification of one lemma is not verification of the Python corpus, the entire whitepaper, other written arguments, or a termination theorem.
+
+## DPLL on pigeonhole: 2 h! - 1
+
+Claim level: written proof, machine-checked to six holes. It covers one branching order, the first literal of the first clause, on the clause order `tiny.py` emits.
+
+Let T(h) be the nodes for h holes and h + 1 pigeons. Pigeon 0's clause comes first, so the search walks its h options. Setting option j true forces every other pigeon out of hole j, which leaves the same problem with h - 1 holes. Pigeon 0's other variables now appear only negated, so they can never conflict and never change the search. Setting option j false keeps pigeon 0's clause first with one literal fewer. After h - 1 falses the last option is a unit, so that node simply becomes the root of the smaller problem.
+
+That is h - 1 branching nodes, h - 1 true subtrees, and one more subtree sharing its root: T(h) = (h - 1) + h T(h - 1), with T(1) = 1. Then T(h) = 2 h! - 1, since (h - 1) + h (2 (h - 1)! - 1) = 2 h! - 1.
+
+Other orders, observed only. Last literal of the first clause, and trying the false value first, give the same counts to six holes. To five holes the formula breaks elsewhere: first literal of the last clause gives 1, 3, 17, 121, 1117; most frequent literal gives 1, 3, 17, 103, 749; first literal of a shortest clause gives 1, 3, 11, 63, 483. Forty random relabelings at five holes took 267 to 437 nodes against 239. Whether 2 h! - 1 is the minimum over all orders is open.

@@ -32,8 +32,8 @@ def pigeonhole(holes):
     return pigeons * holes, clauses
 
 
-def dpll(clauses):
-    """(satisfiable, search nodes). Branches on the first literal left after unit propagation."""
+def dpll(clauses, pick=lambda current: current[0][0]):
+    """(satisfiable, search nodes). By default branches on the first literal left after unit propagation."""
     nodes = [0]
 
     def solve(current):
@@ -47,7 +47,7 @@ def dpll(clauses):
             if unit is None:
                 break
             current = [[x for x in c if x != -unit] for c in current if unit not in c]
-        literal = current[0][0]
+        literal = pick(current)
         for choice in (literal, -literal):
             if solve([[x for x in c if x != -choice] for c in current if choice not in c]):
                 return True

@@ -16,7 +16,6 @@
 
 ## Later
 
-- [ ] **Math:** does 2 h! - 1 hold for DPLL on pigeonhole under other branching orders, and can it be proved for this one?
 - [ ] **Math:** read Barina's 2025 verification methods and reproduce one tiny congruence-class example before trusting any literature lead.
 - [ ] **Biology:** evidence-file fingerprints, so observations cannot inform a revision until the file checks out.
 - [ ] **Biology:** test the workbench on Safari, Android hardware and a screen reader.
