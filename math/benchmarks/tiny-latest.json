@@ -1,0 +1,96 @@
+{
+ "pigeonhole": [
+  {
+   "holes": 1,
+   "variables": 2,
+   "clauses": 3,
+   "sat": false,
+   "dpll_nodes": 1,
+   "exhaustive_sat": false
+  },
+  {
+   "holes": 2,
+   "variables": 6,
+   "clauses": 9,
+   "sat": false,
+   "dpll_nodes": 3,
+   "exhaustive_sat": false
+  },
+  {
+   "holes": 3,
+   "variables": 12,
+   "clauses": 22,
+   "sat": false,
+   "dpll_nodes": 11,
+   "exhaustive_sat": false
+  },
+  {
+   "holes": 4,
+   "variables": 20,
+   "clauses": 45,
+   "sat": false,
+   "dpll_nodes": 47
+  },
+  {
+   "holes": 5,
+   "variables": 30,
+   "clauses": 81,
+   "sat": false,
+   "dpll_nodes": 239
+  },
+  {
+   "holes": 6,
+   "variables": 42,
+   "clauses": 133,
+   "sat": false,
+   "dpll_nodes": 1439
+  }
+ ],
+ "prime_gaps": [
+  {
+   "window": [
+    1000,
+    91000
+   ],
+   "start": 31397,
+   "end": 31469,
+   "gap": 72
+  },
+  {
+   "window": [
+    100000,
+    190000
+   ],
+   "start": 155921,
+   "end": 156007,
+   "gap": 86
+  },
+  {
+   "window": [
+    1000000,
+    1090000
+   ],
+   "start": 1053863,
+   "end": 1053953,
+   "gap": 90
+  },
+  {
+   "window": [
+    10000000,
+    10090000
+   ],
+   "start": 10052071,
+   "end": 10052191,
+   "gap": 120
+  },
+  {
+   "window": [
+    100000000,
+    100090000
+   ],
+   "start": 100058683,
+   "end": 100058851,
+   "gap": 168
+  }
+ ]
+}
