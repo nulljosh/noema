@@ -61,7 +61,8 @@ Each tick adds the sharpest next question its result raised. Prune anything that
 - [ ] **Physics:** the 3x3 and 4x4 Ising rows are missing from OEIS. Draft an entry for Joshua to review before anything is submitted.
 - [ ] **Physics (Joshua or a browser):** read Wei, Lu and Ke, J. Math. 2022, DOI 10.1155/2022/4120166 (hexagon torus matchings by Pfaffians), the 2006 CPC triangular enumeration paper, and Fee and Granville 1991 / Ford and Jha 1993 on Wendt. All block scripts. They decide whether the triangular formula and the 2n+1 bound are new (the OEIS and arXiv pass of 2026-10-27 found neither).
 - [ ] **Physics:** an independent Pfaffian (four-determinant) count of the honeycomb torus matchings by parity class for n up to 8, as a check on step 4 of TRIANGULAR.md that does not use the closed form.
-- [ ] **Chemistry:** count stereoisomers or alcohols next (OEIS A000628, A000598) with the same two-method check.
+- [x] **Chemistry:** alcohols and stereoisomers counted two ways (A000598, A000625, A000628), 2026-11-08.
+- [ ] **Chemistry:** extend the A000628 check past its 38 published terms with a brute force of steric unrooted trees, since the formula has only the b-file behind it there.
 - [ ] **Medicine:** seeded sample of the 61 sign slips against their papers (RESULT and DERIVED PMIDs, PMC full text). The Salk report (AJPH 1955, PMID 14361811) and ISIS-2 have no open copy; park them.
 - [ ] **Statistics:** the birthday problem's hard cousin, the chance that three people share a birthday (smallest n past a half is 88), computed exactly and checked against the published value.
 

@@ -16,6 +16,6 @@ The two agree for n = 1 to 12. The formula runs to n = 100, and every value matc
 
 ## Next
 
-Stereoisomers or alcohols (OEIS A000628, A000598), with the same two-method check.
+Done 2026-11-08: `alcohols.py` counts alcohols (A000598), alcohols with stereoisomers (A000625) and alkanes with stereoisomers (A000628). The first two are also brute forced to 12 carbons.
 
 MIT License · Copyright 2026 Joshua Trommel.
