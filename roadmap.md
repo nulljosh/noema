@@ -71,3 +71,10 @@ Riemann stays literature-only. No structure prediction, model training, autonomo
 - [ ] ClinicalTrials.gov replied on the SD/SE note (CAS-1718303-N5C1S2, "posted results label standard errors as Standard Deviation, 15 trials"): they say accuracy concerns go to the responsible parties, so contact each trial's Results Point of Contact. Draft per-trial notes from medicine/docs/SDSE-NOTE.md for Joshua to send. Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/new-note-1.png
 
 ## Ingested 2026-11-06
+
+## Ingested 2026-11-09
+- [ ] CI at 80620c1: the `proof` job failed in noema cs and noema math (2026-11-09) because elan could not download Lean 4.35.0 from releases.lean-lang.org. Rerun to see if it was a passing download failure. Cause beyond the download error is not proven.
+
+## Ingested 2026-11-13
+- [ ] Check for stale stuff.
+- [ ] See if we need to reply to any of the websites we submitted to. Joshua got a few emails asking to update stale links, and thinks they may be addressed already. Nothing from them in Mail for 2026-11-09 to 11-13.
