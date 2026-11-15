@@ -91,3 +91,6 @@ Compared against Brilliant, Perplexity, Wolfram|Alpha, Papers by ReadCube, NASA,
 | Step-by-step "how it was checked" view per result (claim, first method, second method, literature) | Wolfram|Alpha, Brilliant | M | open |
 | Sections by field with "See all" in the Mac app sidebar | NASA | S | open |
 | Share image per result (og card) | all | S | hub done 2026-11-24 |
+
+## Ingested 2026-11-14
+- [ ] (Note "Noema") Needs a better name. (Same note: "check macOS emails, we need a shortcut or skill for handling these": the `mail-ingest` skill covers that.)
