@@ -95,3 +95,6 @@ Compared against Brilliant, Perplexity, Wolfram|Alpha, Papers by ReadCube, NASA,
 
 ## Ingested 2026-11-14
 - [ ] (Note "Noema") Needs a better name. (Same note: "check macOS emails, we need a shortcut or skill for handling these": the `mail-ingest` skill covers that.)
+
+## Ingested 2026-11-16
+- [ ] (Note "Noema") Needs a more original brand kit/design system; the blue is kind of redundant. README does not need the website URL.
