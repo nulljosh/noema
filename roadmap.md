@@ -85,7 +85,7 @@ Compared against Brilliant, Perplexity, Wolfram|Alpha, Papers by ReadCube, NASA,
 
 | Gap | Seen in | Size | Status |
 |---|---|---|---|
-| Source chips on every result (OEIS, Lean, ClinicalTrials.gov, paper DOI) that open the primary source | Perplexity, ReadCube | S | open |
+| Source chips on every result (OEIS, Lean, ClinicalTrials.gov, paper DOI) that open the primary source | Perplexity, ReadCube | S | landing done 2026-11-24; Mac app next |
 | Copyable identifiers (A-number, NCT, PMID, DOI) with one-click copy in the Mac app detail | ReadCube | S | open |
 | One live visual per field on the landing (a small chart or diagram drawn from the lane's own numbers) | Brilliant, WorldData | M | open |
 | Step-by-step "how it was checked" view per result (claim, first method, second method, literature) | Wolfram|Alpha, Brilliant | M | open |
