@@ -45,6 +45,13 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(registry.age_flags(aged('7.2', '65'), '50 Years', '80 Years')[0]['kind'], 'mean outside')
         self.assertEqual(registry.age_flags(aged('30', '40'), '18 Years', None), [])  # one-sided limits say nothing
 
+    def test_age_in_the_limits_own_unit(self):  # NCT00847145: 365 to 394 days, mean 12.3 posted as years
+        self.assertEqual(registry.unit_slip(aged('12.3', '0.5'), '365 Days', '394 Days'), {'own': 'day', 'fits': ['month'], 'means': [12.3]})
+        slip = registry.unit_slip(aged('26.5', '5.4'), '173 Days', '187 Days')  # NCT03071575: a mean that fits as
+        self.assertEqual(slip['fits'], [])  # weeks, but an SD of 5.4 weeks cannot fit a two-week window: mothers' ages
+        self.assertIsNone(registry.unit_slip(aged('7.2', '65'), '50 Years', '80 Years'))  # limits in years: no claim
+        self.assertIsNone(registry.unit_slip(aged('0.5', '0.1'), '1 Month', '2 Years'))  # nothing outside
+
     def test_a_weighted_total_passes(self):
         row, = registry.rows(study('46.1'))
         self.assertFalse(row['far'] or row['outside'] or row['unweighted'])

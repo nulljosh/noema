@@ -63,7 +63,14 @@ h3 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 2.6vw
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-7); max-width: 900px; margin: var(--sp-6) auto 0; text-align: left; color: var(--sub); }
 .cells { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: var(--sp-8); text-align: left; }
 .cell { display: block; background: var(--bg); padding: var(--sp-5) var(--sp-5) var(--sp-6); text-decoration: none; transition: background var(--motion); }
-a.cell:hover { background: var(--surface); }
+.cell { position: relative; }
+.cell:has(.stretch:hover) { background: var(--surface); }
+.cell h3 a { color: inherit; text-decoration: none; }
+.stretch::after { content: ""; position: absolute; inset: 0; }
+.src { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--sp-4); }
+.src a { font-size: 11px; line-height: 16px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--sub); text-decoration: none; }
+.src a:hover { color: var(--link); border-color: var(--link); }
+@media (pointer: coarse) { .src a { padding: 10px 12px; } }
 .cell h3 { font-size: 24px; }
 .lg { display: block; width: 32px; height: 32px; margin-bottom: var(--sp-5); background: var(--link); -webkit-mask: var(--g) center / contain no-repeat; mask: var(--g) center / contain no-repeat; }
 .cell p:not(.label) { margin-top: var(--sp-3); color: var(--sub); }

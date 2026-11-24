@@ -282,6 +282,30 @@ def age_flags(study, lo_text, hi_text):
     return out
 
 
+SUBYEAR = {'day': 1 / 365.25, 'week': 7 / 365.25, 'month': 1 / 12}
+
+
+def unit_slip(study, lo_text, hi_text):
+    """For a trial whose age limits are posted in days, weeks or months: the units in which every baseline age mean
+    that falls outside the limits (posted as years) would fit inside them. 'own' is the limits' own unit.
+    None when the limits are in years or nothing falls outside."""
+    units = [re.match(r'[\d.]+\s*(\w+?)s?$', t or '') for t in (lo_text, hi_text)]
+    units = [m.group(1).lower() for m in units if m]
+    own = next((u for u in reversed(units) if u in SUBYEAR), None)
+    a, b = _years(lo_text), _years(hi_text)
+    out = [r for r in age_flags(study, lo_text, hi_text) if r['kind'] == 'mean outside']
+    if own is None or a is None or b is None or not out:
+        return None
+    lo, hi = a - 15 / 365.25, b
+
+    def fit(r, f):  # the mean inside the limits and the SD under the Bhatia-Davis cap, both read in unit f
+        m, s, n = r['mean'] * f, r['sd'] * f, r['n']
+        hi_f = hi + f  # the upper limit admits anyone up to one more unit
+        return lo <= m <= hi_f and s <= ((m - lo) * (hi_f - m) * n / (n - 1)) ** 0.5 * 1.0001 + f / 20
+    fits = sorted(u for u, f in SUBYEAR.items() if all(fit(r, f) for r in out))
+    return {'own': own, 'fits': fits, 'means': [r['mean'] for r in out]}
+
+
 BRACKETS = {'<=18 years': (0, 18), 'Between 18 and 65 years': (18, 65), '>=65 years': (65, 200)}
 
 
@@ -321,6 +345,14 @@ if __name__ == '__main__':
         rows = [{'nct': nct, 'limits': elig[nct][:2], **r} for nct, st in base.items() if nct in elig
                 for r in bracket_flags(st, *elig[nct][:2])]
         print(json.dumps({'trials': len({r['nct'] for r in rows}), 'whole': [r for r in rows if r['whole']]}, indent=0))
+        sys.exit()
+    if sys.argv[1] == 'units':  # registry.py units BASELINE ELIG
+        base, elig = json.load(open(sys.argv[2])), json.load(open(sys.argv[3]))
+        rows = {nct: u for nct, st in base.items() if nct in elig for u in [unit_slip(st, *elig[nct][:2])] if u}
+        own = {n: u for n, u in rows.items() if u['own'] in u['fits']}
+        print(json.dumps({'flagged': len(rows), 'own_unit_fits': len(own),
+                          'only_own_unit': sum(u['fits'] == [u['own']] for u in own.values()),
+                          'rows': {n: {**u, 'limits': elig[n][:2]} for n, u in sorted(own.items())}}, indent=0))
         sys.exit()
     if sys.argv[1] == 'ages':  # registry.py ages BASELINE ELIG
         base, elig = json.load(open(sys.argv[2])), json.load(open(sys.argv[3]))
