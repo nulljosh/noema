@@ -1,0 +1,16 @@
+# Local spec for Xcode 15 on macOS 13 (Dad's Mac): same targets, an older project format.
+include: [project.yml]
+options:
+  projectFormat: xcode15_0
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+targets:
+  Noema:
+    settings:
+      base:
+        PRODUCT_NAME: Noema
+  NoemaTests:
+    settings:
+      base:
+        PRODUCT_NAME: NoemaTests

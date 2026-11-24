@@ -8,6 +8,33 @@ struct Discovery: Decodable, Identifiable, Hashable {
 
 struct Catalog: Decodable { let discoveries: [Discovery] }
 
+/// One row of ../ledger.json, itself generated from every ledger*.md: everything the lab has found, newest first.
+struct Finding: Decodable, Identifiable, Hashable {
+    let id, date, lane, title, claim, level, kind, check, literature, status, file: String
+    let ids: [Ref]
+
+    /// The six claim classes, strongest first; `kind` is one of them.
+    static let kinds = ["machine-checked", "written", "candidate", "literature", "observed", "note"]
+
+    var source: URL { URL(string: "https://github.com/nulljosh/noema/blob/main/\(file)")! }
+
+    func matches(_ q: String) -> Bool {
+        q.isEmpty || [title, claim, lane, level, check, literature, status].contains { $0.localizedCaseInsensitiveContains(q) }
+            || ids.contains { $0.id.localizedCaseInsensitiveContains(q) }
+    }
+}
+
+/// An identifier named in a ledger row (OEIS A-number, NCT, PMID, PMC, DOI, arXiv), with its public page.
+struct Ref: Decodable, Hashable {
+    let kind, id, url: String
+    var name: String {
+        ["oeis": "OEIS", "nct": "ClinicalTrials.gov", "pmid": "PubMed", "pmc": "PubMed Central", "doi": "DOI",
+         "arxiv": "arXiv"][kind] ?? kind
+    }
+}
+
+struct Ledger: Decodable { let rows: [Finding] }
+
 /// Something we sent to an outside service, and what to look for there to tell whether it landed.
 struct Watch: Decodable, Hashable {
     let kind: String          // "oeis" or "ctgov"
@@ -105,17 +132,31 @@ enum Check {
 @MainActor
 final class Store: ObservableObject {
     @Published var discoveries: [Discovery] = []
+    @Published var findings: [Finding] = []
     @Published var status: [String: Status] = [:]   // keyed by "discovery id/watch index"
     @Published var checked: Date?
 
     static let remote = URL(string: "https://raw.githubusercontent.com/nulljosh/noema/main/discoveries.json")!
+    static let remoteLedger = URL(string: "https://raw.githubusercontent.com/nulljosh/noema/main/ledger.json")!
 
-    init(preview: [Discovery]? = nil) {
-        if let preview { discoveries = preview; return }
+    init(preview: [Discovery]? = nil, findings: [Finding]? = nil) {
+        if let preview { discoveries = preview; self.findings = findings ?? []; return }
         if let url = Bundle.main.url(forResource: "discoveries", withExtension: "json"),
            let data = try? Data(contentsOf: url), let c = try? JSONDecoder().decode(Catalog.self, from: data) {
             discoveries = c.discoveries
         }
+        if let url = Bundle.main.url(forResource: "ledger", withExtension: "json"),
+           let data = try? Data(contentsOf: url), let l = try? JSONDecoder().decode(Ledger.self, from: data) {
+            self.findings = l.rows
+        }
+    }
+
+    /// Fields in the order the lab lists them, then any new one.
+    var lanes: [String] {
+        let order = ["math", "cs", "physics", "chemistry", "medicine", "statistics", "biology", "astronomy", "earth",
+                     "information", "ai"]
+        let present = Set(findings.map(\.lane) + discoveries.map(\.lane))
+        return order.filter(present.contains) + present.subtracting(order).sorted()
     }
 
     func statuses(_ d: Discovery) -> [Status] { d.watch.indices.map { status["\(d.id)/\($0)"] ?? .checking } }
@@ -126,16 +167,19 @@ final class Store: ObservableObject {
         if let data = try? await Self.get(Self.remote), let c = try? JSONDecoder().decode(Catalog.self, from: data) {
             discoveries = c.discoveries
         }
+        if let data = try? await Self.get(Self.remoteLedger), let l = try? JSONDecoder().decode(Ledger.self, from: data) {
+            findings = l.rows
+        }
         for d in discoveries { for i in d.watch.indices { status["\(d.id)/\(i)"] = .checking } }
         let drafts = (try? await Self.get(URL(string: "https://oeis.org/draft?user=Joshua%20Trommel")!)).map { String(decoding: $0, as: UTF8.self) }
-        await withTaskGroup(of: (String, Status).self) { group in
-            for d in discoveries {
-                for (i, w) in d.watch.enumerated() {
-                    group.addTask { ("\(d.id)/\(i)", await Self.check(w, drafts: drafts)) }
-                }
-            }
-            for await (k, s) in group { status[k] = s }
+        let watches = discoveries.flatMap { d in d.watch.enumerated().map { ("\(d.id)/\($0.offset)", $0.element) } }
+        let results = await withTaskGroup(of: (String, Status).self) { group -> [(String, Status)] in
+            for (k, w) in watches { group.addTask { (k, await Self.check(w, drafts: drafts)) } }
+            var out: [(String, Status)] = []
+            for await r in group { out.append(r) }
+            return out
         }
+        for (k, s) in results { status[k] = s }
         checked = Date()
     }
 

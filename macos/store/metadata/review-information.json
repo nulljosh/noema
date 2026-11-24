@@ -1,0 +1,7 @@
+{
+  "contactEmail": "info@jaybulb.com",
+  "contactFirstName": "Joshua",
+  "contactLastName": "Trommel",
+  "demoAccountRequired": false,
+  "notes": "Noema is a reader for an open science lab's results. Open the app and it lists every finding the lab has logged, by field, with its claim level (observed, written proof, machine-checked, reproduced). Click any finding for the full claim, how it was checked, and the public identifiers it names (OEIS sequences, ClinicalTrials.gov studies, PubMed papers), each with a copy button and a link. Reported shows the results the lab sent to OEIS and ClinicalTrials.gov, checked live against those public sites; Check now (Command-R) runs the checks again. No sign-in. The app only reads public pages (GitHub, oeis.org, clinicaltrials.gov) and stores nothing. Contact phone: on the account."
+}

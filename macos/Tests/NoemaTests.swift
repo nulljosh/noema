@@ -29,23 +29,52 @@ final class NoemaTests: XCTestCase {
         XCTAssertNil(Check.summary([], []))
     }
 
+    // The ledger the app bundles decodes, and the library scopes split it the way the sidebar says.
+    func testLedger() throws {
+        let url = URL(fileURLWithPath: #filePath).deletingLastPathComponent().appendingPathComponent("../../ledger.json")
+        let rows = try JSONDecoder().decode(Ledger.self, from: Data(contentsOf: url)).rows
+        XCTAssertGreaterThan(rows.count, 100)
+        XCTAssertEqual(Set(rows.map(\.id)).count, rows.count, "ids are unique")
+        XCTAssertTrue(rows.allSatisfy { Finding.kinds.contains($0.kind) })
+        let proved = rows.filter { Scope.proved.holds($0) }
+        XCTAssertTrue(proved.allSatisfy { $0.kind == "machine-checked" || $0.kind == "written" })
+        XCTAssertTrue(rows.contains { $0.ids.contains { $0.id == "A386859" } })
+        XCTAssertTrue(rows.first { $0.ids.contains { $0.id == "A386859" } }!.matches("a386859"))
+        XCTAssertFalse(rows[0].matches("zzzz-not-in-any-row"))
+    }
+
     // Renders the window to PNG without launching the app, for a look before anyone sees it.
+    // TEST_RUNNER_SHOT=<png> TEST_RUNNER_CATALOG=<discoveries.json> TEST_RUNNER_LEDGER=<ledger.json>
+    // optional TEST_RUNNER_SCOPE=reported|proved|candidates|<lane>, TEST_RUNNER_PICK=<id>, TEST_RUNNER_LOOK=light|dark,
+    // TEST_RUNNER_QUERY=<text>.
     @MainActor func testShot() throws {
-        guard let out = ProcessInfo.processInfo.environment["SHOT"] else { throw XCTSkip("set TEST_RUNNER_SHOT") }
-        let url = URL(fileURLWithPath: ProcessInfo.processInfo.environment["CATALOG"]!)
-        let all = try JSONDecoder().decode(Catalog.self, from: Data(contentsOf: url)).discoveries
-        let store = Store(preview: all)
+        let env = ProcessInfo.processInfo.environment
+        guard let out = env["SHOT"] else { throw XCTSkip("set TEST_RUNNER_SHOT") }
+        let all = try JSONDecoder().decode(Catalog.self, from: Data(contentsOf: URL(fileURLWithPath: env["CATALOG"]!))).discoveries
+        let rows = try JSONDecoder().decode(Ledger.self, from: Data(contentsOf: URL(fileURLWithPath: env["LEDGER"]!))).rows
+        let store = Store(preview: all, findings: rows)
         for d in all {
             for (i, w) in d.watch.enumerated() {
                 store.status["\(d.id)/\(i)"] = w.kind == "oeis" ? .review : .wrong((w.outcomes ?? []).count, of: (w.outcomes ?? []).count)
             }
         }
         store.checked = Date()
-        let pick = ProcessInfo.processInfo.environment["PICK"]
-        let view = ContentView(lane: nil, picked: pick).environmentObject(store).frame(width: 1180, height: 760)
+        let scope: Scope = switch env["SCOPE"] ?? "" {
+        case "": .all
+        case "reported": .reported
+        case "proved": .proved
+        case "candidates": .candidates
+        case let l: .lane(l)
+        }
+        let dark = env["LOOK"] != "light"
+        let view = ContentView(scope: scope, picked: env["PICK"], query: env["QUERY"] ?? "").environmentObject(store)
+            .environment(\.colorScheme, dark ? .dark : .light)
+            .frame(width: 1280, height: 800)
         let r = ImageRenderer(content: view)
         r.scale = 2
-        let rep = NSBitmapImageRep(cgImage: try XCTUnwrap(r.cgImage))
+        var image: CGImage?
+        NSAppearance(named: dark ? .darkAqua : .aqua)!.performAsCurrentDrawingAppearance { image = r.cgImage }
+        let rep = NSBitmapImageRep(cgImage: try XCTUnwrap(image))
         try rep.representation(using: .png, properties: [:])!.write(to: URL(fileURLWithPath: out))
     }
 }
