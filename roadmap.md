@@ -78,3 +78,16 @@ Riemann stays literature-only. No structure prediction, model training, autonomo
 ## Ingested 2026-11-13
 - [ ] Check for stale stuff.
 - [ ] See if we need to reply to any of the websites we submitted to. Joshua got a few emails asking to update stale links, and thinks they may be addressed already. Nothing from them in Mail for 2026-11-09 to 11-13.
+
+## UI gaps (mobbin pass 2026-11-24)
+
+Compared against Brilliant, Perplexity, Wolfram|Alpha, Papers by ReadCube, NASA, Academia.edu and WorldData App Store screens. One row per minor release; landing and Mac app together.
+
+| Gap | Seen in | Size | Status |
+|---|---|---|---|
+| Source chips on every result (OEIS, Lean, ClinicalTrials.gov, paper DOI) that open the primary source | Perplexity, ReadCube | S | open |
+| Copyable identifiers (A-number, NCT, PMID, DOI) with one-click copy in the Mac app detail | ReadCube | S | open |
+| One live visual per field on the landing (a small chart or diagram drawn from the lane's own numbers) | Brilliant, WorldData | M | open |
+| Step-by-step "how it was checked" view per result (claim, first method, second method, literature) | Wolfram|Alpha, Brilliant | M | open |
+| Sections by field with "See all" in the Mac app sidebar | NASA | S | open |
+| Share image per result (og card) | all | S | hub done 2026-11-24 |
