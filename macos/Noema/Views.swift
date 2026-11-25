@@ -133,7 +133,7 @@ struct ContentView: View {
                         }
                         if (scope == .reported ? reports.count : findings.count) == 0 {
                             Text(query.isEmpty ? "Nothing here yet." : "Nothing matches \u{201C}\(query)\u{201D}.")
-                                .font(.system(size: 13)).foregroundStyle(Theme.sub).padding(.top, 32)
+                                .font(.body).foregroundStyle(Theme.sub).padding(.top, 32)
                         }
                     }
                     .padding(.horizontal, 12).padding(.bottom, 16)
@@ -179,13 +179,13 @@ struct ListHeader: View {
                 Text("\(count) \(noun)\(count == 1 ? "" : "s")").font(.system(size: 12).monospacedDigit()).foregroundStyle(Theme.sub)
             }
             HStack(spacing: 8) {
-                Image(systemName: "magnifyingglass").font(.system(size: 12)).foregroundStyle(Theme.sub)
+                Image(systemName: "magnifyingglass").font(.callout).foregroundStyle(Theme.sub)
                 if Scroll<EmptyView>.flat {
-                    Text(query.isEmpty ? "Search claims, sequences, trials" : query).font(.system(size: 13))
+                    Text(query.isEmpty ? "Search claims, sequences, trials" : query).font(.body)
                         .foregroundStyle(query.isEmpty ? Theme.sub : Theme.text)
                     Spacer()
                 } else {
-                    TextField("Search claims, sequences, trials", text: $query).textFieldStyle(.plain).font(.system(size: 13))
+                    TextField("Search claims, sequences, trials", text: $query).textFieldStyle(.plain).font(.body)
                     if !query.isEmpty {
                         Button { query = "" } label: { Image(systemName: "xmark.circle.fill").foregroundStyle(Theme.sub) }
                             .buttonStyle(.plain).help("Clear the search")
@@ -209,10 +209,10 @@ struct Sidebar: View {
         VStack(alignment: .leading, spacing: 2) {
             HStack(spacing: 8) {
                 Image("Mark", bundle: Bundle(for: Store.self)).resizable().frame(width: 20, height: 20).foregroundStyle(Theme.blue)
-                Text("Noema").font(.system(size: 17, weight: .bold))
+                Text("Noema").font(.system(.title2, weight: .bold))
             }
             .padding(.horizontal, 12).padding(.bottom, 2)
-            Text("A thought, checked").font(.system(size: 12)).foregroundStyle(Theme.sub)
+            Text("A thought, checked").font(.callout).foregroundStyle(Theme.sub)
                 .padding(.horizontal, 12).padding(.bottom, 20)
 
             section("Library")
@@ -228,7 +228,7 @@ struct Sidebar: View {
             Spacer(minLength: 16)
             VStack(alignment: .leading, spacing: 8) {
                 Text(store.checked.map { "Reports checked \($0.formatted(date: .omitted, time: .shortened))" } ?? "Checking reports live")
-                    .font(.system(size: 12)).foregroundStyle(Theme.sub)
+                    .font(.callout).foregroundStyle(Theme.sub)
                 Button { Task { await store.refresh() } } label: {
                     Label("Check now", systemImage: "arrow.clockwise")
                         .font(.system(size: 14, weight: .semibold)).foregroundStyle(.white)
@@ -243,15 +243,15 @@ struct Sidebar: View {
     }
 
     func section(_ s: String) -> some View {
-        Text(s.uppercased()).font(.system(size: 11, weight: .semibold)).kerning(0.6).foregroundStyle(Theme.sub)
+        Text(s.uppercased()).font(.system(.subheadline, weight: .semibold)).kerning(0.6).foregroundStyle(Theme.sub)
             .padding(.horizontal, 12).padding(.bottom, 4)
     }
 
     func item(_ s: Scope, _ name: String, _ icon: String, _ n: Int) -> some View {
         let on = scope == s
         return HStack(spacing: 10) {
-            Image(systemName: icon).font(.system(size: 13)).frame(width: 18).foregroundStyle(on ? Theme.blue : Theme.sub)
-            Text(name).font(.system(size: 13, weight: on ? .semibold : .regular))
+            Image(systemName: icon).font(.body).frame(width: 18).foregroundStyle(on ? Theme.blue : Theme.sub)
+            Text(name).font(.system(.body, weight: on ? .semibold : .regular))
             Spacer()
             Text("\(n)").font(.system(size: 12).monospacedDigit()).foregroundStyle(Theme.sub)
         }
@@ -267,7 +267,7 @@ struct Pill: View {
     let text: String
     let color: Color
     var body: some View {
-        Text(text).font(.system(size: 11, weight: .semibold))
+        Text(text).font(.system(.subheadline, weight: .semibold))
             .foregroundStyle(color)
             .padding(.horizontal, 8).frame(height: 22)
             .background(color.opacity(0.14), in: Capsule())
@@ -290,8 +290,8 @@ struct FindingRow: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 6) {
                 if let lead {
-                    Image(systemName: Theme.glyph(lead)).font(.system(size: 11)).foregroundStyle(Theme.sub)
-                    Text(Theme.laneName(lead).uppercased()).font(.system(size: 10, weight: .semibold)).kerning(0.6)
+                    Image(systemName: Theme.glyph(lead)).font(.subheadline).foregroundStyle(Theme.sub)
+                    Text(Theme.laneName(lead).uppercased()).font(.system(.caption, weight: .semibold)).kerning(0.6)
                         .foregroundStyle(Theme.sub)
                 }
                 Spacer()
@@ -315,14 +315,14 @@ struct ReportRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 6) {
-                Image(systemName: Theme.glyph(d.lane)).font(.system(size: 11)).foregroundStyle(Theme.sub)
-                Text(Theme.laneName(d.lane).uppercased()).font(.system(size: 10, weight: .semibold)).kerning(0.6)
+                Image(systemName: Theme.glyph(d.lane)).font(.subheadline).foregroundStyle(Theme.sub)
+                Text(Theme.laneName(d.lane).uppercased()).font(.system(.caption, weight: .semibold)).kerning(0.6)
                     .foregroundStyle(Theme.sub)
                 Spacer()
                 if let s = store.summary(d) { Pill(text: s.label, color: Theme.color(s)) }
             }
             Text(d.title).font(.system(size: 14, weight: .semibold)).fixedSize(horizontal: false, vertical: true)
-            Text(d.plain).font(.system(size: 12)).foregroundStyle(Theme.sub).lineLimit(2)
+            Text(d.plain).font(.callout).foregroundStyle(Theme.sub).lineLimit(2)
         }
         .padding(12)
         .background(on ? Theme.raised : .clear, in: RoundedRectangle(cornerRadius: 10))
@@ -337,7 +337,7 @@ struct Card<Content: View>: View {
     @ViewBuilder let content: Content
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title).font(.system(size: 13, weight: .semibold)).foregroundStyle(Theme.sub)
+            Text(title).font(.system(.body, weight: .semibold)).foregroundStyle(Theme.sub)
             VStack(alignment: .leading, spacing: 0) { content }
                 .background(Theme.surface, in: RoundedRectangle(cornerRadius: 12))
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Theme.line))
@@ -359,7 +359,7 @@ struct RefRow: View {
         HStack(spacing: 12) {
             VStack(alignment: .leading, spacing: 2) {
                 Text(id).font(.system(size: 14, weight: .semibold, design: .monospaced)).textSelection(.enabled)
-                Text(name).font(.system(size: 12)).foregroundStyle(Theme.sub)
+                Text(name).font(.callout).foregroundStyle(Theme.sub)
             }
             Spacer(minLength: 12)
             Button {
@@ -368,7 +368,7 @@ struct RefRow: View {
                 copied = true
                 Task { try? await Task.sleep(nanoseconds: 1_400_000_000); copied = false }
             } label: {
-                Image(systemName: copied ? "checkmark" : "doc.on.doc").font(.system(size: 13))
+                Image(systemName: copied ? "checkmark" : "doc.on.doc").font(.body)
                     .foregroundStyle(copied ? Theme.green : Theme.sub).frame(width: 28, height: 28).contentShape(Rectangle())
             }
             .buttonStyle(.plain).help("Copy \(id)").accessibilityLabel("Copy \(id)")
@@ -403,11 +403,11 @@ struct FindingDetail: View {
         DetailFrame {
             VStack(alignment: .leading, spacing: 12) {
                 Label(Theme.laneName(f.lane), systemImage: Theme.glyph(f.lane))
-                    .font(.system(size: 13, weight: .semibold)).foregroundStyle(Theme.sub)
-                Text(f.title).font(.system(size: 26, weight: .bold)).fixedSize(horizontal: false, vertical: true)
+                    .font(.system(.body, weight: .semibold)).foregroundStyle(Theme.sub)
+                Text(f.title).font(.system(.largeTitle, weight: .bold)).fixedSize(horizontal: false, vertical: true)
                 HStack(spacing: 8) { Pill(text: name, color: color); Pill(text: day(f.date), color: Theme.sub) }
             }
-            Text(f.claim).font(.system(size: 15)).lineSpacing(5).foregroundStyle(Theme.text.opacity(0.92))
+            Text(f.claim).font(.title3).lineSpacing(5).foregroundStyle(Theme.text.opacity(0.92))
                 .fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
 
             let steps = [("Claim level", f.level), ("Second check", f.check), ("Literature", f.literature), ("Status", f.status)]
@@ -416,8 +416,8 @@ struct FindingDetail: View {
                 ForEach(Array(steps.enumerated()), id: \.offset) { i, s in
                     if i > 0 { Hairline() }
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(s.0.uppercased()).font(.system(size: 10, weight: .semibold)).kerning(0.6).foregroundStyle(Theme.sub)
-                        Text(s.1).font(.system(size: 13)).fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
+                        Text(s.0.uppercased()).font(.system(.caption, weight: .semibold)).kerning(0.6).foregroundStyle(Theme.sub)
+                        Text(s.1).font(.body).fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
                     }
                     .padding(.horizontal, 16).padding(.vertical, 12).frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -450,20 +450,20 @@ struct ReportDetail: View {
         DetailFrame {
             VStack(alignment: .leading, spacing: 12) {
                 Label(Theme.laneName(d.lane), systemImage: Theme.glyph(d.lane))
-                    .font(.system(size: 13, weight: .semibold)).foregroundStyle(Theme.sub)
-                Text(d.title).font(.system(size: 26, weight: .bold)).fixedSize(horizontal: false, vertical: true)
+                    .font(.system(.body, weight: .semibold)).foregroundStyle(Theme.sub)
+                Text(d.title).font(.system(.largeTitle, weight: .bold)).fixedSize(horizontal: false, vertical: true)
                 HStack(spacing: 8) {
                     Pill(text: Theme.kind(d.level).0, color: Theme.kind(d.level).1)
                     Pill(text: day(d.date), color: Theme.sub)
                 }
             }
-            Text(d.plain).font(.system(size: 15)).lineSpacing(5).foregroundStyle(Theme.text.opacity(0.92))
+            Text(d.plain).font(.title3).lineSpacing(5).foregroundStyle(Theme.text.opacity(0.92))
                 .fixedSize(horizontal: false, vertical: true).textSelection(.enabled)
 
             if d.watch.isEmpty {
                 Card(title: "Not reported yet") {
                     Text("This one lives in the lab for now. Nothing outside has been asked to change.")
-                        .font(.system(size: 13)).foregroundStyle(Theme.sub).padding(16)
+                        .font(.body).foregroundStyle(Theme.sub).padding(16)
                 }
             }
             ForEach(["oeis", "ctgov"], id: \.self) { kind in
