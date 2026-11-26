@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: com.heyitsmejosh
   deploymentTarget:
     macOS: "13.0"
+    iOS: "17.0"
 settings:
   base:
     SWIFT_VERSION: "5.9"
@@ -29,6 +30,26 @@ targets:
         CODE_SIGN_ENTITLEMENTS: Noema/Noema.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ENABLE_HARDENED_RUNTIME: YES
+  NoemaiOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: Noema
+        excludes:
+          - Noema.entitlements
+      - path: ../discoveries.json
+        buildPhase: resources
+      - path: ../ledger.json
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.heyitsmejosh.noema.ios
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Noema
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
   NoemaTests:
     type: bundle.unit-test
     platform: macOS
@@ -49,3 +70,7 @@ schemes:
         NoemaTests: [test]
     test:
       targets: [NoemaTests]
+  NoemaiOS:
+    build:
+      targets:
+        NoemaiOS: all

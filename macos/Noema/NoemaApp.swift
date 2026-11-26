@@ -9,8 +9,11 @@ struct NoemaApp: App {
             ContentView()
                 .environmentObject(store)
                 .task { await store.refresh() }
+                #if os(macOS)
                 .frame(minWidth: 960, minHeight: 600)
+                #endif
         }
+        #if os(macOS)
         .windowStyle(.hiddenTitleBar)
         .defaultSize(width: 1180, height: 760)
         .commands {
@@ -18,5 +21,6 @@ struct NoemaApp: App {
                 Button("Check Now") { Task { await store.refresh() } }.keyboardShortcut("r")
             }
         }
+        #endif
     }
 }

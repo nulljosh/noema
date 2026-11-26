@@ -1,5 +1,9 @@
-import AppKit
 import SwiftUI
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
 
 /// Colours from noema/brand/tokens.css (clrs.cc). Dark is the navy page; light is white with cool greys.
 enum Theme {
@@ -10,9 +14,15 @@ enum Theme {
     static let purple = dyn(0x8E0AA1, 0xF07FFF)
 
     static func dyn(_ light: UInt32, _ dark: UInt32) -> Color {
-        Color(nsColor: NSColor(name: nil) { a in
+        #if os(macOS)
+        return Color(nsColor: NSColor(name: nil) { a in
             NSColor(hex: a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? dark : light)
         })
+        #else
+        return Color(uiColor: UIColor(dynamicProvider: { t in
+            UIColor(hex: t.userInterfaceStyle == .dark ? dark : light)
+        }))
+        #endif
     }
 
     static func glyph(_ lane: String) -> String {
@@ -59,6 +69,7 @@ struct Scroll<Content: View>: View {
     }
 }
 
+#if os(macOS)
 extension NSColor {
     convenience init(hex: UInt32) {
         self.init(srgbRed: CGFloat(hex >> 16 & 0xFF) / 255, green: CGFloat(hex >> 8 & 0xFF) / 255, blue: CGFloat(hex & 0xFF) / 255, alpha: 1)
@@ -68,6 +79,17 @@ extension NSColor {
 extension Color {
     init(hex: UInt32) { self.init(nsColor: NSColor(hex: hex)) }
 }
+#else
+extension UIColor {
+    convenience init(hex: UInt32) {
+        self.init(red: CGFloat(hex >> 16 & 0xFF) / 255, green: CGFloat(hex >> 8 & 0xFF) / 255, blue: CGFloat(hex & 0xFF) / 255, alpha: 1)
+    }
+}
+
+extension Color {
+    init(hex: UInt32) { self.init(uiColor: UIColor(hex: hex)) }
+}
+#endif
 
 /// What the middle column lists.
 enum Scope: Hashable {
@@ -112,51 +134,100 @@ struct ContentView: View {
     }
 
     var body: some View {
+        #if os(macOS)
         HStack(spacing: 0) {
             Sidebar(scope: $scope).frame(width: 240)
             Theme.line.frame(width: 1)
-            VStack(spacing: 0) {
-                ListHeader(title: scope.title, count: scope == .reported ? reports.count : findings.count,
-                           noun: scope == .reported ? "report" : "finding", query: $query)
-                Scroll {
-                    LazyVStack(spacing: 4) {
-                        if scope == .reported {
-                            ForEach(reports) { d in
-                                ReportRow(d: d, on: d.id == (reports.first { $0.id == picked } ?? reports.first)?.id)
-                                    .onTapGesture { picked = d.id }
-                            }
-                        } else {
-                            ForEach(findings) { f in
-                                FindingRow(f: f, lead: scope.isLane ? nil : f.lane, on: f.id == currentFinding?.id)
-                                    .onTapGesture { picked = f.id }
-                            }
-                        }
-                        if (scope == .reported ? reports.count : findings.count) == 0 {
-                            Text(query.isEmpty ? "Nothing here yet." : "Nothing matches \u{201C}\(query)\u{201D}.")
-                                .font(.body).foregroundStyle(Theme.sub).padding(.top, 32)
-                        }
-                    }
-                    .padding(.horizontal, 12).padding(.bottom, 16)
-                }
-            }
-            .frame(width: 360)
-            .background(Theme.surface)
+            listColumn
+                .frame(width: 360)
+                .background(Theme.surface)
             Theme.line.frame(width: 1)
-            Group {
-                if scope == .reported {
-                    if let d = reports.first(where: { $0.id == picked }) ?? reports.first { ReportDetail(d: d).id(d.id) } else { Spacer() }
-                } else if let f = currentFinding {
-                    FindingDetail(f: f).id(f.id)
-                } else {
-                    Spacer()
-                }
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            detailColumn
         }
         .background(Theme.bg)
         .foregroundStyle(Theme.text)
         .ignoresSafeArea()
         .onChange(of: scope) { _ in picked = nil }
+        #else
+        NavigationSplitView {
+            Sidebar(scope: $scope)
+        } content: {
+            listColumn
+                .background(Theme.surface)
+        } detail: {
+            detailColumn
+        }
+        .background(Theme.bg)
+        .foregroundStyle(Theme.text)
+        .onChange(of: scope) { _ in picked = nil }
+        #endif
+    }
+
+    var listColumn: some View {
+        VStack(spacing: 0) {
+            ListHeader(title: scope.title, count: scope == .reported ? reports.count : findings.count,
+                       noun: scope == .reported ? "report" : "finding", query: $query)
+            rows
+        }
+    }
+
+    /// Phones and iPads use a List so the NavigationSplitView can push the detail on selection; the Mac keeps its scroll list.
+    var rows: some View {
+        #if os(macOS)
+        Scroll {
+            LazyVStack(spacing: 4) {
+                if scope == .reported {
+                    ForEach(reports) { d in
+                        ReportRow(d: d, on: d.id == (reports.first { $0.id == picked } ?? reports.first)?.id)
+                            .onTapGesture { picked = d.id }
+                    }
+                } else {
+                    ForEach(findings) { f in
+                        FindingRow(f: f, lead: scope.isLane ? nil : f.lane, on: f.id == currentFinding?.id)
+                            .onTapGesture { picked = f.id }
+                    }
+                }
+                if (scope == .reported ? reports.count : findings.count) == 0 {
+                    Text(query.isEmpty ? "Nothing here yet." : "Nothing matches \u{201C}\(query)\u{201D}.")
+                        .font(.body).foregroundStyle(Theme.sub).padding(.top, 32)
+                }
+            }
+            .padding(.horizontal, 12).padding(.bottom, 16)
+        }
+        #else
+        List(selection: $picked) {
+            if scope == .reported {
+                ForEach(reports) { d in
+                    ReportRow(d: d, on: d.id == (reports.first { $0.id == picked } ?? reports.first)?.id).tag(d.id)
+                }
+            } else {
+                ForEach(findings) { f in
+                    FindingRow(f: f, lead: scope.isLane ? nil : f.lane, on: f.id == currentFinding?.id).tag(f.id)
+                }
+            }
+            if (scope == .reported ? reports.count : findings.count) == 0 {
+                Text(query.isEmpty ? "Nothing here yet." : "Nothing matches \u{201C}\(query)\u{201D}.")
+                    .font(.body).foregroundStyle(Theme.sub).padding(.top, 32)
+            }
+        }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .listRowBackground(Color.clear)
+        .listRowSeparator(.hidden)
+        #endif
+    }
+
+    var detailColumn: some View {
+        Group {
+            if scope == .reported {
+                if let d = reports.first(where: { $0.id == picked }) ?? reports.first { ReportDetail(d: d).id(d.id) } else { Spacer() }
+            } else if let f = currentFinding {
+                FindingDetail(f: f).id(f.id)
+            } else {
+                Spacer()
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     var currentFinding: Finding? { findings.first { $0.id == picked } ?? findings.first }
@@ -196,7 +267,12 @@ struct ListHeader: View {
             .background(Theme.bg, in: RoundedRectangle(cornerRadius: 8))
             .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(Theme.line))
         }
-        .padding(.horizontal, 24).padding(.top, 48).padding(.bottom, 16)
+        .padding(.horizontal, 24).padding(.bottom, 16)
+        #if os(macOS)
+        .padding(.top, 48)
+        #else
+        .padding(.top, 12)
+        #endif
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
@@ -206,14 +282,9 @@ struct Sidebar: View {
     @Binding var scope: Scope
 
     var body: some View {
+        #if os(macOS)
         VStack(alignment: .leading, spacing: 2) {
-            HStack(spacing: 8) {
-                Image("Mark", bundle: Bundle(for: Store.self)).resizable().frame(width: 20, height: 20).foregroundStyle(Theme.blue)
-                Text("Noema").font(.system(.title2, weight: .bold))
-            }
-            .padding(.horizontal, 12).padding(.bottom, 2)
-            Text("A thought, checked").font(.callout).foregroundStyle(Theme.sub)
-                .padding(.horizontal, 12).padding(.bottom, 20)
+            brand
 
             section("Library")
             item(.all, "Everything", "tray.full", store.findings.count)
@@ -226,20 +297,56 @@ struct Sidebar: View {
                 item(.lane(l), Theme.laneName(l), Theme.glyph(l), store.findings.filter { $0.lane == l }.count)
             }
             Spacer(minLength: 16)
-            VStack(alignment: .leading, spacing: 8) {
-                Text(store.checked.map { "Reports checked \($0.formatted(date: .omitted, time: .shortened))" } ?? "Checking reports live")
-                    .font(.callout).foregroundStyle(Theme.sub)
-                Button { Task { await store.refresh() } } label: {
-                    Label("Check now", systemImage: "arrow.clockwise")
-                        .font(.system(size: 14, weight: .semibold)).foregroundStyle(.white)
-                        .frame(maxWidth: .infinity, minHeight: 36)
-                        .background(Theme.blue, in: Capsule())
-                }
-                .buttonStyle(.plain).help("Reload the ledger and check every report again (⌘R)")
-            }
-            .padding(12)
+            footer
         }
         .padding(.top, 52).padding(.horizontal, 8).padding(.bottom, 8)
+        #else
+        let current = $scope
+        let selection = Binding<Scope?>(get: { current.wrappedValue }, set: { if let s = $0 { current.wrappedValue = s } })
+        List(selection: selection) {
+            brand
+
+            section("Library")
+            item(.all, "Everything", "tray.full", store.findings.count)
+            item(.reported, "Reported", "paperplane", store.discoveries.count)
+            item(.proved, "Proved", "checkmark.seal", store.findings.filter { Scope.proved.holds($0) }.count)
+            item(.candidates, "Candidates", "sparkles", store.findings.filter { Scope.candidates.holds($0) }.count)
+
+            section("Fields").padding(.top, 16)
+            ForEach(store.lanes, id: \.self) { l in
+                item(.lane(l), Theme.laneName(l), Theme.glyph(l), store.findings.filter { $0.lane == l }.count)
+            }
+            footer
+        }
+        .listStyle(.sidebar)
+        #endif
+    }
+
+    var brand: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            HStack(spacing: 8) {
+                Image("Mark", bundle: Bundle(for: Store.self)).resizable().frame(width: 20, height: 20).foregroundStyle(Theme.blue)
+                Text("Noema").font(.system(.title2, weight: .bold))
+            }
+            .padding(.horizontal, 12).padding(.bottom, 2)
+            Text("A thought, checked").font(.callout).foregroundStyle(Theme.sub)
+                .padding(.horizontal, 12).padding(.bottom, 20)
+        }
+    }
+
+    var footer: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(store.checked.map { "Reports checked \($0.formatted(date: .omitted, time: .shortened))" } ?? "Checking reports live")
+                .font(.callout).foregroundStyle(Theme.sub)
+            Button { Task { await store.refresh() } } label: {
+                Label("Check now", systemImage: "arrow.clockwise")
+                    .font(.system(size: 14, weight: .semibold)).foregroundStyle(.white)
+                    .frame(maxWidth: .infinity, minHeight: 36)
+                    .background(Theme.blue, in: Capsule())
+            }
+            .buttonStyle(.plain).help("Reload the ledger and check every report again (⌘R)")
+        }
+        .padding(12)
     }
 
     func section(_ s: String) -> some View {
@@ -260,6 +367,7 @@ struct Sidebar: View {
         .contentShape(Rectangle())
         .onTapGesture { scope = s }
         .accessibilityAddTraits(.isButton)
+        .tag(s)
     }
 }
 
@@ -363,8 +471,12 @@ struct RefRow: View {
             }
             Spacer(minLength: 12)
             Button {
+                #if os(macOS)
                 NSPasteboard.general.clearContents()
                 NSPasteboard.general.setString(id, forType: .string)
+                #else
+                UIPasteboard.general.string = id
+                #endif
                 copied = true
                 Task { try? await Task.sleep(nanoseconds: 1_400_000_000); copied = false }
             } label: {
