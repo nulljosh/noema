@@ -45,6 +45,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.heyitsmejosh.noema.ios
         GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_NAME: Noema
         INFOPLIST_KEY_CFBundleDisplayName: Noema
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
