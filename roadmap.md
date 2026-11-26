@@ -85,7 +85,7 @@ Riemann stays literature-only. No structure prediction, model training, autonomo
 ## State 2026-11-26
 
 - **OEIS:** A399346 (rev #36), A332718 (rev #7, 34 terms) and the new runtime spectrum A402754 are all proposed. That is the 3-edit limit, so the A332717 b-file and the Ising 3x3 and 4x4 rows wait for a slot.
-- **Landing:** hero now matches Keyrate and Plank (live result under the buttons, claim chips drifting at three depths), SF on Apple and self-hosted Inter elsewhere, no clipping at phone width. Deployed. Last A+ gap: one live visual per field.
+- **Landing:** hero now matches Keyrate and Plank (live result under the buttons, claim chips drifting at three depths), SF on Apple and self-hosted Inter elsewhere, no clipping at phone width. Deployed, plus one small captioned chart per field from each lane's own numbers (`viz.js`). No known gaps left.
 - **Apps:** `macos/` has a `NoemaiOS` target (iOS 17+, same SwiftUI views, 1024 icon, name Noema). Builds and runs in the simulator; no store record or TestFlight build yet.
 
 ## UI gaps (mobbin pass 2026-11-24)
@@ -96,7 +96,7 @@ Compared against Brilliant, Perplexity, Wolfram|Alpha, Papers by ReadCube, NASA,
 |---|---|---|---|
 | Source chips on every result (OEIS, Lean, ClinicalTrials.gov, paper DOI) that open the primary source | Perplexity, ReadCube | S | landing done 2026-11-24; Mac app next |
 | Copyable identifiers (A-number, NCT, PMID, DOI) with one-click copy in the Mac app detail | ReadCube | S | open |
-| One live visual per field on the landing (a small chart or diagram drawn from the lane's own numbers) | Brilliant, WorldData | M | open |
+| One live visual per field on the landing (a small chart or diagram drawn from the lane's own numbers) | Brilliant, WorldData | M | done 2026-11-26 (`landing/viz.js`, 11 charts, each captioned) |
 | Step-by-step "how it was checked" view per result (claim, first method, second method, literature) | Wolfram|Alpha, Brilliant | M | open |
 | Sections by field with "See all" in the Mac app sidebar | NASA | S | open |
 | Share image per result (og card) | all | S | hub done 2026-11-24 |
