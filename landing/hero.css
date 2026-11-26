@@ -1,21 +1,24 @@
-/* Hero: Noema's ledger behind the copy. One card per result, its check rerunning and passing; blended into the
-   navy, parallax in hero.js. */
+/* Hero, after Keyrate and Plank: the real thing under the buttons. One result from Noema's ledger reruns its check and
+   passes; claim chips and numbers from the lab drift around it at three depths. Navy stays Noema's own. */
 .hero { position: relative; isolation: isolate; overflow: hidden; min-height: 100svh; display: grid; align-items: center; padding: var(--sp-8) 0; }
 .hero-copy { position: relative; z-index: 2; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 64% 58% at 50% 52%, var(--bg) 56%, transparent 100%); }
-.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 28%; z-index: 1; pointer-events: none; background: linear-gradient(transparent, var(--bg)); }
-.hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; transform: translate3d(0, var(--py, 0), 0); will-change: transform; }
-.nwall { height: 100%; max-width: 1440px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 228px; gap: 22px; align-content: center; opacity: .8; text-align: left; }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%; z-index: 1; pointer-events: none; background: linear-gradient(transparent, var(--bg)); }
+.hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.fl { position: absolute; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--sub); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap;
+  translate: 0 calc(var(--py, 0px) * var(--k)); rotate: var(--r); opacity: var(--o); animation: fl-bob var(--t) ease-in-out infinite alternate; }
+.fl.n { text-transform: none; letter-spacing: 0; font-size: 15px; font-variant-numeric: tabular-nums; color: var(--text); }
+.fl.lv { color: var(--link); }
+@keyframes fl-bob { to { transform: translate3d(0, -10px, 0); } }
+.nwall { width: min(620px, 100%); margin: var(--sp-6) auto 0; text-align: left; }
 .nc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
 .nc-hd { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--sub); }
 .nc-hd .lv { font-style: normal; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--link); letter-spacing: .06em; }
 .nc b { font-size: 18px; line-height: 23px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
-.nc p { font-size: 13px; line-height: 19px; color: var(--sub); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.nc-ck { margin-top: auto; display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--sub); }
+.nc p { font-size: 13px; line-height: 19px; color: var(--sub); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.nc-ck { margin-top: 4px; display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--sub); }
 .nc-ck em { font-style: normal; font-weight: 600; white-space: nowrap; }
 .nc-ck.ok em { color: var(--link); }
 .nc-bar { flex: 1; height: 4px; border-radius: 2px; background: var(--line); overflow: hidden; }
 .nc-bar i { display: block; height: 100%; width: 0; background: var(--blue); transition: width 1.6s ease; }
-@media (max-width: 900px) { .nwall { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .nwall { grid-template-columns: 1fr; padding: 16px; grid-auto-rows: 200px; align-content: space-between; opacity: .5; } .hero::before { background: radial-gradient(ellipse 120% 46% at 50% 50%, var(--bg) 62%, transparent 100%); } }
-@media (prefers-reduced-motion: reduce) { .nc-bar i { transition: none; } }
+@media (max-width: 560px) { .fl.x { display: none; } .nwall { margin-top: var(--sp-5); } }
+@media (prefers-reduced-motion: reduce) { .nc-bar i { transition: none; } .fl { animation: none; } }
