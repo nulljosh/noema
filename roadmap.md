@@ -82,6 +82,12 @@ Riemann stays literature-only. No structure prediction, model training, autonomo
 - [ ] Check for stale stuff.
 - [ ] See if we need to reply to any of the websites we submitted to. Joshua got a few emails asking to update stale links, and thinks they may be addressed already. Nothing from them in Mail for 2026-11-09 to 11-13.
 
+## State 2026-11-26
+
+- **OEIS:** A399346 (rev #36), A332718 (rev #7, 34 terms) and the new runtime spectrum A402754 are all proposed. That is the 3-edit limit, so the A332717 b-file and the Ising 3x3 and 4x4 rows wait for a slot.
+- **Landing:** hero now matches Keyrate and Plank (live result under the buttons, claim chips drifting at three depths), SF on Apple and self-hosted Inter elsewhere, no clipping at phone width. Deployed. Last A+ gap: one live visual per field.
+- **Apps:** `macos/` has a `NoemaiOS` target (iOS 17+, same SwiftUI views, 1024 icon, name Noema). Builds and runs in the simulator; no store record or TestFlight build yet.
+
 ## UI gaps (mobbin pass 2026-11-24)
 
 Compared against Brilliant, Perplexity, Wolfram|Alpha, Papers by ReadCube, NASA, Academia.edu and WorldData App Store screens. One row per minor release; landing and Mac app together.
